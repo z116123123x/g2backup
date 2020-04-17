@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+import '../style/main.scss'
+
 Vue.use(VueRouter)
 
   const routes = [
