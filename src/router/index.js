@@ -2,11 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
-import '../style/main.scss'
-
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -21,6 +19,15 @@ Vue.use(VueRouter)
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
     }
+  },
+  {
+    path: "/components",
+    name: "Components",
+    component: function () {
+
+      return import("../views/Components.vue")
+    }
+
   }
 ]
 
