@@ -1,24 +1,8 @@
-# dd106_g2
+# DD106_G2 專題
 
-## Project setup
-```
-npm install
-```
+## 使用套件
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 1、Vue-cli
+### 2、SCSS
+### 3、router
+### 4、eslintrc
