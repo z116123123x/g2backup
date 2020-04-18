@@ -1,0 +1,63 @@
+#nav {
+
+    align-items: center;
+
+    padding: 0px 1%;
+
+    height: 60px;
+
+    .logo {
+
+        display: inline-flex;
+
+        padding: 15px 0;
+
+        height: 30px;
+    }
+
+    ul {
+
+        display: flex;
+        float: right;
+        align-items: center;
+
+        .dropdown {
+
+            .title {
+
+                display: flex;
+                align-items: center;
+
+                .page {
+
+                    position: relative;
+                    text-align: center;
+
+                    height: 60px;
+                    line-height: 60px;
+                    width: 100px;
+
+                    text-decoration-line: none;
+
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    color: $min-color;
+
+                    &:hover::after {
+
+                        content: "";
+                        position: absolute;
+
+                        left: 0px;
+                        bottom: 0px;
+
+                        height: 2px;
+                        width: 100%;
+
+                        background: $min-color;
+                    }
+                }
+            }
+        }
+    }
+}

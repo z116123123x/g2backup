@@ -1,8 +1,12 @@
 <template>
   <div class="components">
     <p>/components/btn-more.vue</p>
+    <br>
     <ButtonMore />
+    <br>
+    <br>
     <p>/layout/footer.vue</p>
+    <br>
     <Footer />
   </div>
 </template>
