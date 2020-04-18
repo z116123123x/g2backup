@@ -1,0 +1,27 @@
+.bg {
+
+    position: relative;
+
+    margin-top: 150px;
+
+    padding-bottom: 8%;
+
+    background: rgba(255, 211, 193, 1);
+
+    .img {
+
+        position: absolute;
+
+        bottom: 0px;
+        left: 0px;
+        
+        padding-bottom: 20%;
+
+        height: 0px;
+        width: 100%;
+
+        background-image: url(../assets/footer_mountain.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
