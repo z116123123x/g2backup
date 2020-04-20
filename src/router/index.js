@@ -1,14 +1,14 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
     path: '/about',
@@ -16,34 +16,30 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/About.vue')
-    }
+    component: function() {
+      return import(/* webpackChunkName: "about" */ '../views/About.vue');
+    },
   },
   {
-    path: "/components",
-    name: "Components",
-    component: function () {
-
-      return import("../views/Components.vue")
-    }
-
+    path: '/components',
+    name: 'Components',
+    component: function() {
+      return import('../views/Components.vue');
+    },
   },
   {
-    path: "/blog",
-    name: "Blog",
-    component: function () {
-
-      return import("../views/Blog.vue")
-    }
-
+    path: '/blog-landing',
+    name: 'Blog-landing',
+    component: function() {
+      return import('../views/Blog-landing.vue');
+    },
   },
-]
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

@@ -17,7 +17,7 @@
         </li>
         <li class="dropdown">
           <div class="title">
-            <router-link class="page" to="/blog">Components</router-link>
+            <router-link class="page" to="/blog-landing">Components</router-link>
           </div>
         </li>
       </ul>
@@ -26,7 +26,7 @@
   </div>
 </template>
 <script>
-import "@/style/main.scss";
+import '@/style/main.scss';
 
 export default {};
 </script>
