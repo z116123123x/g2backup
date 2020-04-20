@@ -28,7 +28,16 @@ const routes = [
       return import("../views/Components.vue")
     }
 
-  }
+  },
+  {
+    path: "/blog",
+    name: "Blog",
+    component: function () {
+
+      return import("../views/Blog.vue")
+    }
+
+  },
 ]
 
 const router = new VueRouter({

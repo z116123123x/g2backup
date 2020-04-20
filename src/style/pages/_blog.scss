@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  > div:nth-child(1) {
+    border: 1px solid black;
+    padding: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    * {
+      padding: 10px;
+    }
+  }
+  > div:nth-child(2) {
+    padding: 50px;
+    border: 1px solid black;
+  }
+}
