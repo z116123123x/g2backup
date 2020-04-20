@@ -15,6 +15,11 @@
             <router-link class="page" to="/components">Components</router-link>
           </div>
         </li>
+        <li class="dropdown">
+          <div class="title">
+            <router-link class="page" to="/blog">Components</router-link>
+          </div>
+        </li>
       </ul>
     </nav>
     <router-view />
