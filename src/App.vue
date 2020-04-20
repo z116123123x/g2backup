@@ -7,7 +7,7 @@
       <ul>
         <li class="dropdown">
           <div class="title">
-            <router-link class="page" to="/about">知識百科</router-link>
+            <router-link class="page" to="/book">知識百科</router-link>
           </div>
         </li>
         <li class="dropdown">
@@ -17,7 +17,7 @@
         </li>
         <li class="dropdown">
           <div class="title">
-            <router-link class="page" to="/blog-landing">Components</router-link>
+            <router-link class="page" to="/blog-landing">果農日誌</router-link>
           </div>
         </li>
         <li class="dropdown">
