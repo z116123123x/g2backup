@@ -1,35 +1,9 @@
 <template>
   <div class="hello">
-    <header>
-      <div id="header">
-        <a href="#">
-          <img id="headerLOGO" src="../assets/headerLOGO.svg" />
-        </a>
-        <div id="memberStatus">
-          <a href>
-            <img src="../assets/headFarmer.svg" />
-          </a>
-          <a href>果農</a>
-          <a href>登出</a>
-        </div>
-        <a href="#">
-          <img id="headCart" src="../assets/headerCart.svg" />
-        </a>
-        <a id="hamburger_a" href="#">
-          <div
-            class="hamburger hamburger--collapse hamburger_set"
-            aria-label="Menu"
-            role="button"
-            aria-controls="navigation"
-          >
-            <div class="hamburger-box">
-              <div class="hamburger-inner"></div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </header>
     <main>
+      <div id="mainLOGO">
+        <img src="../assets/LOGO.svg" alt="" />
+      </div>
       <div id="knowledge_container">
         <div>
           <div class="knowledge_page tab1 -on">
@@ -53,8 +27,8 @@
             </div>
           </div>
         </div>
-        <div id="knowledge_button" class="button">
-          <a href="#">Learn more</a>
+        <div class="btn-bg homebtn knowledge_button">
+          <button class="btn-more">learn more</button>
         </div>
         <div id="knowledge_title">
           <img src="../assets/knowledgetitle.svg" alt />
@@ -92,14 +66,57 @@
             </div>
           </div>
         </div>
-        <div class="button">
-          <a href="#">Learn more</a>
+        <div class="btn-bg homebtn">
+          <button class="btn-more">learn more</button>
+        </div>
+      </div>
+      <div id="blog_container">
+        <div id="blog_title">
+          <img src="../assets/blogtitle.svg" alt="" />
+        </div>
+        <div id="blog_page">
+          <div class="blog_tags_area">
+            <h2>Tags</h2>
+            <div>
+              <img src="../assets/tagspic.svg" alt="" />
+              <span>果農心得</span>
+            </div>
+            <div>
+              <img src="../assets/tagspic.svg" alt="" />
+              <span>水果產品</span>
+            </div>
+            <div>
+              <img src="../assets/tagspic.svg" alt="" />
+              <span>旅遊日誌</span>
+            </div>
+            <div>
+              <img src="../assets/tagspic.svg" alt="" />
+              <span>水果知識</span>
+            </div>
+          </div>
+          <div class="btn-bg homebtn" style="background-color: #f5c652 ;">
+            <button class="btn-more">
+              learn more
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="member_container">
+        <div id="member_title">
+          <img src="../assets/membertitle.svg" alt="" />
+        </div>
+        <div id="member_page">
+          <img src="../assets/memberpic.png" alt="" />
+        </div>
+        <div class="btn-bg homebtn">
+          <button class="btn-more">
+            learn more
+          </button>
         </div>
       </div>
     </main>
   </div>
 </template>
-
 <script>
 import "../home";
 
