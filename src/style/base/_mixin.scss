@@ -1,0 +1,9 @@
+@mixin font-size {
+    
+    html {
+
+        font-size: $font-size;
+    }
+}
+
+@include font-size();

@@ -1,5 +1,20 @@
-#nav {
+// SCSS 的出口
 
-    color: red;
-    font-size: 20px;
-}
+// base
+@import "./base/reset";
+@import "./base/var";
+@import "./base/mixin";
+
+// layout
+@import "./layout/header";
+@import "./layout/footer";
+
+// components
+@import "./components/btn-more";
+
+// pages
+@import "./pages/index";
+@import "./pages/book";
+@import "./pages/blog-landing";
+@import "./pages/shop";
+@import "./pages/member";
