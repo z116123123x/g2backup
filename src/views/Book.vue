@@ -2,13 +2,18 @@
     <main>
         <section id="Page_horizen">
             <div id="outter">
-                <!-- 左 -->
-                <div id="book_left" class="bk">
-                    <div>
-                        <div></div>
+                <!-- 左page -->
+                <div id="book_left">
+                    <div class="bk_left">
+                        <div class="bk_left_img">
+                            <img src="../assets/book_img/bookRighPage_img1t.svg" />
+                        </div>
+                        <div class="bk_right_img">
+                            <img src="../assets/book_img/bookRightPage_img2.svg" />
+                        </div>
                     </div>
                 </div>
-                <!-- 右 -->
+                <!-- 右page -->
                 <div class="book_middle"></div>
                 <div id="book_right">
                     <!-- 標籤 -->
@@ -27,22 +32,22 @@
                         <div class="Book">
                             <!-- 左切換按鈕 -->
                             <div class="Change_Button">
-                                <div class="page"></div>
-                                <div class="page"></div>
-                                <div class="page"></div>
+                                <div class="pagepaper"></div>
+                                <div class="pagepaper"></div>
+                                <div class="pagepaper"></div>
                             </div>
                             <!-- bookcontent書籍內容 -->
                             <div id="bk_content">
                                 <!-- <div class="bk_ct"></div>
                                 <div class="bk_ct_R"></div>
                                 <div class="bk_ct"></div>
-                                <div class="bk_ct"></div> -->
+                                <div class="bk_ct"></div>-->
                             </div>
                             <!-- 右切換按鈕 -->
                             <div class="Change_Button">
-                                <div class="page"></div>
-                                <div class="page"></div>
-                                <div class="page"></div>
+                                <div class="pagepaper"></div>
+                                <div class="pagepaper"></div>
+                                <div class="pagepaper"></div>
                             </div>
                         </div>
                     </div>

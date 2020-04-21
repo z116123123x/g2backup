@@ -1,3 +1,4 @@
+
 #Page_horizen {
    overflow-y:scroll;
    overflow-x:hidden;
@@ -6,24 +7,78 @@
    position:absolute;
    width:100vh;
    height:100vw;
-
+   
    #outter {
       transform: rotate(90deg) translateY(-100vh);
       transform-origin: top left;
       white-space:nowrap;
 
-
-
       #book_left {
          border: 1px solid blue;
          box-sizing: border-box;
-         padding-top: 20px;
          width: 100vw;
          height: 100vh;
          display:inline-block;
          position:relative;
          background-color: $bg-color;
          vertical-align: top;
+
+         .bk_left{
+            border: 1px solid orangered;
+            box-sizing: border-box;
+            display:inline-block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+           
+           
+            .bk_left_img{
+               width: 40vw;
+               height: auto;
+               border: 1px solid red;
+               box-sizing: border-box;
+               display:inline-block;
+               position: relative;
+
+               &::before{
+                  content: "";
+                  position: absolute;
+                  left: 10%;
+                  top: 20%;
+                  background-image: url("../assets/book_img/knowledge_sign.svg");
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  width: 24vw;
+                  height: 0;
+                  padding-bottom:100%;
+
+               }
+
+                img{
+                   width: 100%;
+                   border: 1px solid purple;
+
+                }
+            }
+            .bk_right_img{
+               border: 1px solid green;
+               box-sizing: border-box;
+               display:inline-block;
+               width: 43%;
+               position: absolute;
+               left: 30%;
+               top: 10%;
+
+
+                img{
+                   width: 100%;
+                   height: auto;
+                   border: 1px solid purple;
+
+                }
+            }
+         }
       }
       .book_middle{
          border: 1px solid blue;
@@ -117,7 +172,7 @@
             width: 3%;
             height: 85vh;
 
-            .page {
+            .pagepaper {
                border: 1px solid green;
                box-sizing: border-box;
                display: inline-block;
