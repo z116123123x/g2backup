@@ -25,13 +25,18 @@
             <router-link class="page" to="/shop">水果市集</router-link>
           </div>
         </li>
+        <li class="dropdown">
+          <div class="title">
+            <router-link class="page" to="/member">會員中心</router-link>
+          </div>
+        </li>
       </ul>
     </nav>
     <router-view />
   </div>
 </template>
 <script>
-import '@/style/main.scss';
+import "@/style/main.scss";
 
 export default {};
 </script>

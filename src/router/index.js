@@ -23,23 +23,30 @@ const routes = [
   {
     path: '/components',
     name: 'Components',
-    component: function() {
+    component: function () {
       return import('../views/Components.vue');
     },
   },
   {
     path: '/blog-landing',
     name: 'Blog-landing',
-    component: function() {
+    component: function () {
       return import('../views/Blog-landing.vue');
     },
   },
   {
     path: '/shop',
     name: 'Shop',
-    component: function() {
+    component: function () {
       return import('../views/Shop.vue');
-    },
+    }
+  },
+  {
+    path: '/member',
+    name: 'Member',
+    component: function () {
+      return import('../views/Member.vue');
+    }
   },
 ];
 
