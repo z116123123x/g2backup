@@ -1,0 +1,26 @@
+
+    .loginBox {
+        width: 600px;
+        height: 400px;
+        background-color: #DCE07A;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px;
+    }
+
+    .loginInput {
+        margin: auto;
+        position: relative;
+        left: 0;
+        top: 40%;
+        right: 0;
+        bottom: 0;
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        line-height: 40px;
+    }
