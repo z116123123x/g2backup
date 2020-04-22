@@ -1,6 +1,13 @@
 import $ from "jquery";
 import * as THREE from "three";
-import { gsap, TweenMax, Power1, Power3, TimelineMax, TimeLite } from "gsap";
+import {
+    gsap,
+    TweenMax,
+    Power1,
+    Power3,
+    TimelineMax,
+    TimeLite
+} from "gsap";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 
 import cloudWhite from "@/assets/cloudWhite.png";
@@ -32,8 +39,8 @@ import waterpearline01 from "@/assets/waterpearline.png";
 import fruitbox01 from "@/assets/fruitbox.png";
 import fruitboxline01 from "@/assets/fruitboxline.png";
 
-$(function() {
-    $("div.tab").on("click", function(e) {
+$(function () {
+    $("div.tab").on("click", function () {
         /* 將頁籤列表移除所有 -on，再將指定的加上 -on */
         $(this)
             .closest("#knowledge_container")
@@ -47,9 +54,9 @@ $(function() {
     });
 });
 
-$(function() {
+$(function () {
     // hamburger icon 的切換
-    $("div.hamburger").on("click", function() {
+    $("div.hamburger").on("click", function () {
         $(this).toggleClass("is-active");
     });
 });
@@ -85,8 +92,6 @@ function init() {
     var texturecloud7 = new THREE.TextureLoader().load(cloudsmoke);
     var materialcloudlight = new THREE.TextureLoader().load(cloudlight01);
     var materialcloudlight2 = new THREE.TextureLoader().load(cloudlight02);
-
-    console.log(texturecloud1);
 
     var geometry = new THREE.PlaneGeometry(300, 160);
     var materialcloud1 = new THREE.MeshBasicMaterial({
@@ -676,7 +681,7 @@ function init() {
                 ease: Power3.easeInOut,
 
                 duration: 3000,
-                onUpdate: function() {
+                onUpdate: function () {
                     camera.lookAt(0, 800, 0);
                 },
                 x: 0,
@@ -690,7 +695,7 @@ function init() {
                 ease: Power3.easeInOut,
 
                 duration: 2000,
-                onUpdate: function() {
+                onUpdate: function () {
                     camera.lookAt(camera.position.x, 100, camera.position.z);
                 },
                 x: 22,
@@ -703,7 +708,7 @@ function init() {
             camera.position, {
                 ease: Power1.easeInOut,
                 duration: 1500,
-                onUpdate: function() {
+                onUpdate: function () {
                     camera.lookAt(camera.position.x, 100, camera.position.z);
                 },
                 x: 22,
@@ -747,7 +752,7 @@ function init() {
             camera.position, {
                 ease: Power1.easeInOut,
                 duration: 2000,
-                onUpdate: function() {
+                onUpdate: function () {
                     camera.lookAt(camera.position.x, 100, camera.position.z);
                 },
                 x: -200,
@@ -788,7 +793,7 @@ function init() {
             camera.position, {
                 ease: Power1.easeInOut,
                 duration: 3000,
-                onUpdate: function() {
+                onUpdate: function () {
                     camera.lookAt(camera.position.x, 100, camera.position.z);
                 },
                 x: 180,
@@ -821,7 +826,7 @@ function init() {
             camera.position, {
                 ease: Power1.easeInOut,
                 duration: 4000,
-                onUpdate: function() {
+                onUpdate: function () {
                     camera.lookAt(camera.position.x, 100, camera.position.z);
                 },
 
@@ -853,7 +858,7 @@ function init() {
             camera.position, {
                 ease: Power1.easeInOut,
                 duration: 3000,
-                onUpdate: function() {
+                onUpdate: function () {
                     camera.lookAt(camera.position.x, 100, camera.position.z);
                 },
 
@@ -867,7 +872,7 @@ function init() {
             camera.position, {
                 ease: Power1.easeInOut,
                 duration: 3000,
-                onUpdate: function() {
+                onUpdate: function () {
                     camera.lookAt(camera.position.x, 100, camera.position.z);
                 },
 
@@ -881,7 +886,7 @@ function init() {
             camera.position, {
                 ease: Power1.easeInOut,
                 duration: 3000,
-                onUpdate: function() {
+                onUpdate: function () {
                     camera.lookAt(0, 800, 0);
                 },
 
@@ -892,20 +897,20 @@ function init() {
             26500
         );
 
+    // Set timeline time to scrollTop
+    function update() {
+        tl.time(window.pageYOffset + triggerOffset);
+        requestId = null;
+    }
+
     // Only update on animation frames
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         if (!requestId) {
             requestId = requestAnimationFrame(update);
         }
     });
 
     update();
-
-    // Set timeline time to scrollTop
-    function update() {
-        tl.time(window.pageYOffset + triggerOffset);
-        requestId = null;
-    }
 }
 
 function render() {
@@ -914,7 +919,7 @@ function render() {
     renderer.setClearColor(new THREE.Color("rgb(255, 212, 195)"), 1);
 }
 
-window.addEventListener("resize", function() {
+window.addEventListener("resize", function () {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
