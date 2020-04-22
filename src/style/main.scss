@@ -6,7 +6,7 @@
 @import "./base/mixin";
 
 // layout
-@import "./layout/header";
+@import "./layout/navbar";
 @import "./layout/footer";
 
 // components
@@ -14,7 +14,6 @@
 
 // pages
 @import "./pages/style";
-@import "./pages/index";
 @import "./pages/book";
 @import "./pages/blog-landing";
 @import "./pages/shop";
