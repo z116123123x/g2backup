@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="這是 ./components/HelloWorld.vue 範例頁面"/>
+    <HelloWorld />
   </div>
 </template>
 
