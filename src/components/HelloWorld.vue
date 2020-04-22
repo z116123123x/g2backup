@@ -27,9 +27,7 @@
             </div>
           </div>
         </div>
-        <div class="btn-bg homebtn knowledge_button">
-          <button class="btn-more">learn more</button>
-        </div>
+        <BtnMore />
         <div id="knowledge_title">
           <img src="../assets/knowledgetitle.svg" alt />
         </div>
@@ -66,9 +64,7 @@
             </div>
           </div>
         </div>
-        <div class="btn-bg homebtn">
-          <button class="btn-more">learn more</button>
-        </div>
+        <BtnMore />
       </div>
       <div id="blog_container">
         <div id="blog_title">
@@ -94,11 +90,7 @@
               <span>水果知識</span>
             </div>
           </div>
-          <div class="btn-bg homebtn" style="background-color: #f5c652 ;">
-            <button class="btn-more">
-              learn more
-            </button>
-          </div>
+          <BtnMore />
         </div>
       </div>
       <div id="member_container">
@@ -108,19 +100,20 @@
         <div id="member_page">
           <img src="../assets/memberpic.png" alt="" />
         </div>
-        <div class="btn-bg homebtn">
-          <button class="btn-more">
-            learn more
-          </button>
-        </div>
+        <BtnMore />
       </div>
     </main>
   </div>
 </template>
 <script>
-import "../home";
+import "@/home";
+import BtnMore from "@/components/btn-more";
 
 export default {
   name: "HelloWorld",
+  components: {
+
+    BtnMore
+  }
 };
 </script>

@@ -381,7 +381,6 @@
               <div class="card_price">
                 <span class="money">550</span>
               </div>
-
               <div class="buy">
                 <a href="#" class="card_btn">加入購物籃</a>
                 <a href="#" class="card_btn">直接購買</a>
