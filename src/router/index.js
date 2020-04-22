@@ -51,7 +51,15 @@ const routes = [
     name: 'Member',
     component: function () {
       return import('../views/Member.vue');
-    }
+    },
+    children: [{
+
+      path: "test",
+      component: function () {
+
+        return import("@/views/Shop.vue");
+      }
+    }]
   },
 ];
 
