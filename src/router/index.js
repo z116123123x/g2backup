@@ -61,6 +61,13 @@ const routes = [
       }
     }]
   },
+  {
+    path: '/adminLogin',
+    name: 'AdminLogin',
+    component: function () {
+      return import('../views/AdminLogin.vue');
+    }
+  },
 ];
 
 const router = new VueRouter({
