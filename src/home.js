@@ -60,6 +60,7 @@ $(function () {
         $(this).toggleClass("is-active");
     });
 });
+
 gsap.registerPlugin(MotionPathPlugin);
 let renderer, scene, camera;
 
@@ -665,7 +666,10 @@ function init() {
     // scene.add(spotHelper)
 
     // 將渲染出來的畫面放到網頁上的 DOM
-    document.body.appendChild(renderer.domElement);
+    const div = document.getElementById("test");
+
+    div.appendChild(renderer.domElement);
+    // document.body.appendChild(renderer.domElement);
 
     // var controls = new THREE.OrbitControls(camera, renderer.domElement);
     // controls.target.set(0, 0.5, 0); //控制焦點

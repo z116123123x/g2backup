@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div id="test" class="hello">
     <main>
       <div id="mainLOGO">
         <img src="../assets/LOGO.svg" alt="" />
@@ -106,7 +106,6 @@
   </div>
 </template>
 <script>
-import "@/home";
 import BtnMore from "@/components/btn-more";
 
 export default {
