@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav id="nav">
-      <router-link to="/">
+      <router-link @click="reload" to="/">
         <img class="logo" src="./assets/navbar_logo.svg" alt="logo" />
       </router-link>
       <ul>
@@ -32,7 +32,11 @@
         </li>
         <li class="dropdown">
           <div class="title">
+<<<<<<< HEAD
             <router-link class="page" to="/adminLogin">後台</router-link>
+=======
+            <router-link class="page" to="/blog-post">Components</router-link>
+>>>>>>> f0815b5b5992a4b3358a6386ffa87ecec55c21c1
           </div>
         </li>
       </ul>
