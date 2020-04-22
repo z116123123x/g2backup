@@ -34,6 +34,13 @@ const routes = [
       return import('../views/Blog-landing.vue');
     },
   },
+  {
+    path: '/blog-post',
+    name: 'Blog-post',
+    component: function() {
+      return import('../views/Blog-post.vue');
+    },
+  },
 ];
 
 const router = new VueRouter({

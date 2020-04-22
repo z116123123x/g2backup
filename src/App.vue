@@ -20,6 +20,11 @@
             <router-link class="page" to="/blog-landing">Components</router-link>
           </div>
         </li>
+        <li class="dropdown">
+          <div class="title">
+            <router-link class="page" to="/blog-post">Components</router-link>
+          </div>
+        </li>
       </ul>
     </nav>
     <router-view />
