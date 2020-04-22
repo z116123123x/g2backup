@@ -1,17 +1,13 @@
 // SCSS 的出口
-
 // base
 @import "./base/reset";
 @import "./base/var";
 @import "./base/mixin";
-
 // layout
 @import "./layout/navbar";
 @import "./layout/footer";
-
 // components
 @import "./components/btn-more";
-
 // pages
 @import "./pages/style";
 @import "./pages/book";
