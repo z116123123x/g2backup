@@ -35,6 +35,11 @@ const routes = [
     },
   },
   {
+    path: '/blog-post',
+    name: 'Blog-post',
+    component: function() {
+      return import('../views/Blog-post.vue');
+    },
     path: '/shop',
     name: 'Shop',
     component: function () {
@@ -46,6 +51,21 @@ const routes = [
     name: 'Member',
     component: function () {
       return import('../views/Member.vue');
+    },
+    children: [{
+
+      path: "test",
+      component: function () {
+
+        return import("@/views/Shop.vue");
+      }
+    }]
+  },
+  {
+    path: '/adminLogin',
+    name: 'AdminLogin',
+    component: function () {
+      return import('../views/AdminLogin.vue');
     }
   },
 ];
