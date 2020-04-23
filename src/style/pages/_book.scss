@@ -1,20 +1,21 @@
-
 #Page_horizen {
-   overflow-y:scroll;
-   overflow-x:hidden;
+   overflow-y: scroll;
+   overflow-x: hidden;
    transform: rotate(270deg) translateX(-100%);
    transform-origin: top left;
-   position:absolute;
-   width:100vh;
-   height:100vw;
-   
+   position: absolute;
+   width: 100vh;
+   height: 100vw;
+
+   &::-webkit-scrollbar {
+      display: none;
+   }
+
    #outter {
       transform: rotate(90deg) translateY(-100vh);
       transform-origin: top left;
-      white-space:nowrap;
-      &::-webkit-scrollbar{
-         display: none;
-      }
+      white-space: nowrap;
+
 
       // 左page
       #book_left {
@@ -22,30 +23,30 @@
          box-sizing: border-box;
          width: 100vw;
          height: 100vh;
-         display:inline-block;
-         position:relative;
+         display: inline-block;
+         position: relative;
          background-color: $bg-color;
          vertical-align: top;
 
-         .bk_left{
+         .bk_left {
             //border: 1px solid orangered;
             box-sizing: border-box;
-            display:inline-block;
+            display: inline-block;
             position: relative;
             left: 50%;
             top: 40%;
-            transform: translate(-50%,-50%);
-           
-           
-            .bk_left_img{
+            transform: translate(-50%, -50%);
+
+
+            .bk_left_img {
                width: 40vw;
                height: auto;
                //border: 1px solid red;
                box-sizing: border-box;
-               display:inline-block;
+               display: inline-block;
                position: relative;
 
-               &::before{
+               &::before {
                   content: "";
                   position: absolute;
                   left: 10%;
@@ -55,43 +56,45 @@
                   background-size: contain;
                   width: 13vw;
                   height: 0;
-                  padding-bottom:100%;
+                  padding-bottom: 100%;
 
                }
 
-                img{
-                   width: 100%;
+               img {
+                  width: 100%;
                   //  border: 1px solid purple;
 
-                }
+               }
             }
-            .bk_right_img{
+
+            .bk_right_img {
                // border: 1px solid green;
                box-sizing: border-box;
-               display:inline-block;
+               display: inline-block;
                width: 45%;
                position: absolute;
                left: 28%;
                top: 4%;
 
 
-                img{
-                   width: 100%;
-                   height: auto;
+               img {
+                  width: 100%;
+                  height: auto;
                   //  border: 1px solid purple;
 
-                }
+               }
             }
          }
       }
+
       //middle
-      .book_middle{
+      .book_middle {
          // border: 1px solid blue;
          box-sizing: border-box;
          width: 15vw;
          height: 100vh;
-         display:inline-block;
-         position:relative;
+         display: inline-block;
+         position: relative;
          background-color: $min-color;
          vertical-align: top;
       }
@@ -104,8 +107,8 @@
          padding-top: 20px;
          width: 100vw;
          height: 100vh;
-         display:inline-block;
-         position:relative;
+         display: inline-block;
+         position: relative;
          background-color: $min-color;
          vertical-align: top;
 
@@ -133,6 +136,7 @@
             height: 35px;
             padding: 10px;
             text-align: center;
+            font-size: 1.6rem;
 
          }
 
@@ -152,24 +156,29 @@
                padding: 10px;
                text-align: center;
                transform: translate(0, 10px);
-               font-size: 1rem;
+               font-size: 1.6rem;
 
-               &:nth-child(1){
+               &:nth-child(1) {
                   background-color: #f38e8e;
                }
-               &:nth-child(2){
+
+               &:nth-child(2) {
                   background-color: #f6d16b;
                }
-               &:nth-child(3){
+
+               &:nth-child(3) {
                   background-color: #e19b6b;
                }
-               &:nth-child(4){
+
+               &:nth-child(4) {
                   background-color: #87b0e7;
                }
-               &:nth-child(5){
+
+               &:nth-child(5) {
                   background-color: #c5ce7c;
                }
-               &:hover{
+
+               &:hover {
                   transform: translate(0, 0px);
                }
 
@@ -210,7 +219,7 @@
                display: inline-block;
                width: 33%;
                height: 100%;
-              
+
 
             }
 
@@ -226,7 +235,7 @@
             position: relative;
 
             &::before {
-               content: "";   
+               content: "";
                position: absolute;
                left: 50%;
                transform: translateX(-50%);
@@ -238,7 +247,7 @@
             }
 
             &::after {
-               content: "";   
+               content: "";
                position: absolute;
                left: 50%;
                transform: translateX(-50%);
@@ -259,19 +268,23 @@
                height: 100%;
                vertical-align: top;
             }
-            .bk_ct_left{
-               .fruit_start{
+
+            .bk_ct_left {
+               font-size: 0;
+
+               .fruit_start {
                   border: 1px solid red;
                   box-sizing: border-box;
                   display: inline-block;
                   width: 100%;
-                  height: 40%;
+                  height: 50%;
+
 
                   h1 {
                      border: 1px solid red;
                      writing-mode: vertical-lr;
                      letter-spacing: 0.6rem;
-                     font-size: 3rem;
+                     font-size: 4rem;
                      font-weight: bolder;
                      color: #f38e8e;
                      position: relative;
@@ -280,61 +293,124 @@
                   }
 
                }
-               .fruit_intro{
+
+               .fruit_intro {
                   border: 1px solid red;
                   box-sizing: border-box;
                   display: block;
                   width: 100%;
-                  height: 51%;
+                  height: 50%;
 
-                  p{
-                     border: 1px solid blue;
+                  h2 {
+                     font-size: 1.6rem;
+                     font-weight: bold;
+                     padding-left: 10px;
+                     margin: 0 0 0 10px;
+                  }
+
+                  p {
+                     //border: 1px solid blue;
                      font-size: 1.4rem;
-                     padding:  0 10px 10px;
-                     white-space:pre-wrap;
-                     line-height: 2;
+                     padding: 10px;
+                     margin-left: 10px;
+                     white-space: pre-wrap;
+                     line-height: 1.8;
                      vertical-align: top;
                      // 欄寬
                      column-width: 15rem;
-                    
+
                      box-sizing: border-box;
                      display: inline-block;
-                     width: 100%;
-                     height: 100%;
-                    
+                     width: 95%;
+                     height: 95%;
+
 
                   }
 
                }
             }
-            .bk_ct_right{
+
+            .bk_ct_right {
+               font-size: 0;
+
+               h2 {
+                  padding-left: 10px;
+                  font-size: 1.6rem;
+                  font-weight: bold;
+                  margin: 40px 0 10px 15px ;
+               }
 
 
-
-               .fruit_time{
+               //水果產季週期
+               .fruit_time {
                   // border: 1px solid red;
                   background-color: $min-color;
                   box-sizing: border-box;
-                  display:block;
+                  display: block;
                   width: 100%;
-                  height: 9%;
-                  margin-top: 50px;
-                  ul{
+                  height: 10%;
+
+                  ul {
                      display: flex;
 
-                     li{
+                     li {
                         border: 1px solid white;
                         color: $min-color;
                         background-color: #ffd0bf;
-                        padding: 5px 0 ;
+                        padding: 5px 0;
                         width: 10%;
-                        height: 15px;
-                        font-size: 0.8rem;
+                        height: 10px;
+                        font-size: 1.2rem;
                         text-align: center;
-                       
+
 
                      }
                   }
+
+               }
+
+               //農知識
+               .fruit_QA {
+                  //border: 3px solid pink;
+                  width: 100%;
+                  height: 90%;
+
+                  //影片
+                  .fruit_video{
+                     height: 35%;
+                     border: 1px solid green;
+                  }
+
+                  h2 {
+                     padding-left: 10px;
+                     //border: 1px solid purple;
+                     font-size: 1.6rem;
+                     font-weight: bolder;
+                     display: inline-block;
+                     margin: 20px 0 0 15px;
+
+                  }
+
+                  p {
+                      //border: 1px solid blue;
+                      font-size: 1.4rem;
+                      padding: 10px 10px 10px 20px;
+                      white-space: pre-wrap;
+                      line-height: 1.8;
+                      // 欄寬
+                     // column-width: 15rem;
+ 
+                      box-sizing: border-box;
+                      display: block;
+                      width: 50%;
+                      height: 40%;
+
+                      position: relative;
+                      right: 0;
+ 
+ 
+                  }
+
 
                }
             }
