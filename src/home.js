@@ -41,6 +41,8 @@ import fruitboxline01 from "@/assets/fruitboxline.png";
 
 window.addEventListener("load", () => {
 
+    const home = document.getElementById("home");
+
     $(function () {
         $("div.tab").on("click", function () {
             /* 將頁籤列表移除所有 -on，再將指定的加上 -on */
@@ -930,6 +932,8 @@ window.addEventListener("load", () => {
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
+
+    home.addEventListener("click", init);
 
     init();
     render();
