@@ -18,45 +18,106 @@
           <div class="hamburger-inner"></div>
         </div>
       </div>
-      <ul class="nav_back">
-        <li class="dropdown">
-          <div class="title">
-            <router-link class="page" to="/book">知識百科</router-link>
-          </div>
-        </li>
-        <li class="dropdown">
-          <div class="title">
-            <router-link class="page" to="/components">Components</router-link>
-          </div>
-        </li>
-        <li class="dropdown">
-          <div class="title">
-            <router-link class="page" to="/blog-landing">果農日誌</router-link>
-          </div>
-        </li>
-        <li class="dropdown">
-          <div class="title">
-            <router-link class="page" to="/shop">水果市集</router-link>
-          </div>
-        </li>
-        <li class="dropdown">
-          <div class="title">
-            <router-link class="page" to="/member/information"
-              >會員中心</router-link
-            >
-          </div>
-        </li>
-        <li class="dropdown">
-          <div class="title">
-            <router-link class="page" to="/adminLogin">後台</router-link>
-          </div>
-        </li>
-        <li class="dropdown">
-          <div class="title">
-            <router-link class="page" to="/adminLogin">後台</router-link>
-          </div>
-        </li>
-      </ul>
+      <div class="nav_back">
+        <ul>
+          <li class="dropdown">
+            <div class="title">
+              <router-link class="page" to="/book">
+                <div class="title_pic">
+                  <img src="@/assets/knowledge.svg" alt="" />
+                </div>
+                <div class="title_text">
+                  <h1>知識百科</h1>
+                  <br />
+                  <p style="margin-top:10px;">台灣產季水果介紹，</p>
+                  <p>在地小農知識心得分享，</p>
+                  <p>盡在知識百科。</p>
+                </div>
+              </router-link>
+            </div>
+          </li>
+          <li class="dropdown">
+            <div class="title">
+              <router-link class="page" to="/book">
+                <div class="title_pic">
+                  <img src="@/assets/knowledge.svg" alt="" />
+                </div>
+                <div class="title_text">
+                  <h1>知識百科</h1>
+                  <br />
+                  <p style="margin-top:10px;">台灣產季水果介紹，</p>
+                  <p>在地小農知識心得分享，</p>
+                  <p>盡在知識百科。</p>
+                </div>
+              </router-link>
+            </div>
+          </li>
+          <li class="dropdown">
+            <div class="title">
+              <router-link class="page" to="/book">
+                <div class="title_pic">
+                  <img src="@/assets/market.svg" alt="" />
+                </div>
+                <div class="title_text">
+                  <h1>知識百科</h1>
+                  <br />
+                  <p style="margin-top:10px;">台灣產季水果介紹，</p>
+                  <p>在地小農知識心得分享，</p>
+                  <p>盡在知識百科。</p>
+                </div>
+              </router-link>
+            </div>
+          </li>
+          <li class="dropdown">
+            <div class="title">
+              <router-link class="page" to="/book">
+                <div class="title_pic">
+                  <img src="@/assets/blog.svg" alt="" />
+                </div>
+                <div class="title_text">
+                  <h1>知識百科</h1>
+                  <br />
+                  <p style="margin-top:10px;">台灣產季水果介紹，</p>
+                  <p>在地小農知識心得分享，</p>
+                  <p>盡在知識百科。</p>
+                </div>
+              </router-link>
+            </div>
+          </li>
+          <li class="dropdown">
+            <div class="title">
+              <router-link class="page" to="/book">
+                <div class="title_pic">
+                  <img src="@/assets/membercenter.svg" alt="" />
+                </div>
+                <div class="title_text">
+                  <h1>知識百科</h1>
+                  <br />
+                  <p style="margin-top:10px;">台灣產季水果介紹，</p>
+                  <p>在地小農知識心得分享，</p>
+                  <p>盡在知識百科。</p>
+                </div>
+              </router-link>
+            </div>
+          </li>
+          <li class="dropdown">
+            <div class="title">
+              <router-link class="page" to="/book">
+                <div class="title_pic">
+                  <img src="@/assets/knowledge.svg" alt="" />
+                </div>
+                <div class="title_text">
+                  <h1>知識百科</h1>
+                  <br />
+                  <p style="margin-top:10px;">台灣產季水果介紹，</p>
+                  <p>在地小農知識心得分享，</p>
+                  <p>盡在知識百科。</p>
+                </div>
+              </router-link>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
     <router-view />
   </div>

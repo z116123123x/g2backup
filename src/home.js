@@ -53,8 +53,8 @@ window.addEventListener("load", () => {
     // hamburger icon 的切換
     $("div.hamburger").on("click", function() {
       $(this).toggleClass("is-active");
-      $("nav#nav").toggleClass("is-active");
-      $("ul.nav_back").toggleClass("is-active");
+
+      $("div.nav_back").slideToggle();
     });
   });
 
