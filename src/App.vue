@@ -4,7 +4,21 @@
       <router-link id="home" to="/">
         <img class="logo" src="@/assets/navbar_logo.svg" alt="logo" />
       </router-link>
-      <ul>
+
+      <div class="member_status">
+        <span class="farmer_pic"></span>
+        <span>果農</span>
+        <a href="">登出</a>
+      </div>
+      <div class="cart">
+        <span></span>
+      </div>
+      <div class="hamburger hamburger--elastic">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+      <ul class="nav_back">
         <li class="dropdown">
           <div class="title">
             <router-link class="page" to="/book">知識百科</router-link>
@@ -27,7 +41,9 @@
         </li>
         <li class="dropdown">
           <div class="title">
-            <router-link class="page" to="/member/information">會員中心</router-link>
+            <router-link class="page" to="/member/information"
+              >會員中心</router-link
+            >
           </div>
         </li>
         <li class="dropdown">

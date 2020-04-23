@@ -111,8 +111,7 @@ import BtnMore from "@/components/btn-more";
 export default {
   name: "HelloWorld",
   components: {
-
-    BtnMore
-  }
+    BtnMore,
+  },
 };
 </script>
