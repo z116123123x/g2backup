@@ -81,7 +81,7 @@
                                         </div>
                                         <p>梅子和李子都是植物學中薔薇科李屬中的植物，在「種」的位階上還有李、桃、杏等水果相互區分。因為梅子是亞洲特有種，西方並沒有為梅創造單字，稱它為是亞洲李Asian plum。</p>
                                         <div class="fruit_img">
-                                            <!-- <img src="../assets/book_img/spring/plum05.jpg"> -->
+                                            <img src="../assets/book_img/spring/plum/plum05.jpg">
                                         </div>
                                     </div>
                                 </div>
