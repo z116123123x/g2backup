@@ -14,8 +14,8 @@
 
             <div class="info">
                 <ul>
-                    <li><a href="#">個人資料修改</a></li>
-                    <li><a href="#">訂單管理</a></li>
+                    <li><router-link to="/member/information">個人資料修改</router-link></li>
+                    <li><router-link to="/member/order">訂單管理</router-link></li>
                     <li><a href="#">追蹤名單管理</a></li>
                 </ul>
             </div>
@@ -26,17 +26,5 @@
             </div>
         </aside>
         <router-view />
-        <Information />
     </div>
 </template>
-<script>
-import Information from "../views/Info";
-
-export default {
-    
-    components: {
-
-        Information,
-    }
-}
-</script>
