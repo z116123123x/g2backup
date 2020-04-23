@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <nav id="nav">
-      <router-link @click="reload" to="/">
-        <img class="logo" src="./assets/navbar_logo.svg" alt="logo" />
+      <router-link to="/">
+        <img class="logo" src="@/assets/navbar_logo.svg" alt="logo" />
       </router-link>
       <ul>
         <li class="dropdown">
