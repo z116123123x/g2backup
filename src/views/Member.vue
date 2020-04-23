@@ -30,7 +30,7 @@
     </div>
 </template>
 <script>
-import Information from "../views/Info";
+import Information from "../views/track";
 
 export default {
     
