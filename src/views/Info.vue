@@ -35,7 +35,6 @@
                         <div class="correct">
                             <p>確定</p>
                         </div>
-                        <div></div>
                     </div>
                 </div>
             </div>
