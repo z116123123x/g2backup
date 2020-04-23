@@ -2,7 +2,7 @@
   <div id="app">
     <nav id="nav">
       <router-link to="/">
-        <img class="logo" src="./assets/navbar_logo.svg" alt="logo" />
+        <img class="logo" src="@/assets/navbar_logo.svg" alt="logo" />
       </router-link>
       <ul>
         <li class="dropdown">
