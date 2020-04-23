@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav id="nav">
-      <router-link to="/">
+      <router-link id="home" to="/">
         <img class="logo" src="@/assets/navbar_logo.svg" alt="logo" />
       </router-link>
       <ul>
