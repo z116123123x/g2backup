@@ -35,6 +35,11 @@ const routes = [
     },
   },
   {
+    path: '/blog-post',
+    name: 'Blog-post',
+    component: function() {
+      return import('../views/Blog-post.vue');
+    },
     path: '/shop',
     name: 'Shop',
     component: function () {
@@ -46,6 +51,37 @@ const routes = [
     name: 'Member',
     component: function () {
       return import('../views/Member.vue');
+    },
+    children: [{
+
+      path: "information",
+      component: function () {
+
+        return import("@/views/Information.vue");
+      }
+    },
+    {
+
+      path: "order",
+      component: () => {
+
+        return import("@/views/Order.vue");
+      }
+
+    }]
+  },
+  {
+    path: '/adminLogin',
+    name: 'AdminLogin',
+    component: function () {
+      return import('../views/AdminLogin.vue');
+    }
+  },
+  {
+    path: '/adminLogin',
+    name: 'AdminLogin',
+    component: function () {
+      return import('../views/AdminLogin.vue');
     }
   },
 ];
