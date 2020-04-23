@@ -27,7 +27,7 @@
         </li>
         <li class="dropdown">
           <div class="title">
-            <router-link class="page" to="/member">會員中心</router-link>
+            <router-link class="page" to="/member/information">會員中心</router-link>
           </div>
         </li>
         <li class="dropdown">

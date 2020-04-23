@@ -54,11 +54,20 @@ const routes = [
     },
     children: [{
 
-      path: "test",
+      path: "information",
       component: function () {
 
-        return import("@/views/Shop.vue");
+        return import("@/views/Information.vue");
       }
+    },
+    {
+
+      path: "order",
+      component: () => {
+
+        return import("@/views/Order.vue");
+      }
+
     }]
   },
   {
