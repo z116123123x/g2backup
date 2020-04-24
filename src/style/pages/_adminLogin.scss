@@ -1,26 +1,188 @@
+:root {
+    --bgColor: #FBF8EF;
+    --inputColor: #007552;
+    --outlineColor: rgba(220, 224, 122, 0.884);
+    --beamColor: rgba(247, 200, 69, 0.788);
+    --spacer: 1rem;
+}
 
-    .loginBox {
-        width: 600px;
-        height: 400px;
-        background-color: #DCE07A;
-        margin: auto;
+.adminLoginBody{
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.adminLoginBody {
+    display: grid;
+    place-items: center;
+    background: var(--bgColor);
+
+    &.show-password {
+        --bgColor: black;
+        --inputColor: #FBF8EF;
+        --outlineColor: var(--beamColor);
+    }
+
+    .titleImg {
+        position: relative;
+        max-width: 120px;
+        display: flex;
+        top: -1%;
+        left: 35%;
+    }
+}
+
+.adminLoginForm {
+    transform: translate3d(0, 0, 0);
+    padding: var(--spacer);
+
+    >.adminLoginBody+.adminLoginBody {
+        margin-top: var(--spacer);
+    }
+}
+
+.form-item {
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    >.adminLoginBody+.adminLoginBody {
+        margin-top: 0.5rem;
+    }
+}
+
+
+
+.adminLoginLabel,
+.adminLoginInput,
+.adminLoginBtn {
+    font-size: 1rem;
+    font-family: monospace;
+    color: var(--inputColor);
+
+    &:focus {
+        outline: 3px solid var(--outlineColor);
+        outline-offset: 2px;
+    }
+
+    &::-moz-focus-inner {
+        border: none;
+    }
+
+    &[id="password"] {
+        color: black;
+    }
+}
+
+.adminLoginBtn {
+    border: none;
+}
+
+[id="submit"] {
+    cursor: pointer;
+    margin: calc(var(--spacer) * 2) 0 0 2px;
+    padding: 0.75rem 1.25rem;
+    color: var(--bgColor);
+    background-color: var(--inputColor);
+    box-shadow: 4px 4px 0 rgba(247, 207, 99, 0.842);
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.adminLoginInput {
+    padding: .75rem 1rem 0.75rem 0.75rem;
+    width: 100%;
+    border: 2px solid transparent;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px black, inset 6px 6px 0 rgba(247, 208, 99, 0.705), 3px 3px 0 rgba(247, 207, 99, 0.842);
+    -webkit-appearance: none;
+
+    &:focus {
+        outline-offset: 1px;
+    }
+
+    .show-password & {
+        box-shadow: inset 0 0 0 2px black;
+        border: 2px dashed white;
+
+        &:focus {
+            outline: none;
+            border-color: var(--beamColor);
+        }
+    }
+}
+
+[id="eyeball"] {
+    --size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    right: -0.8rem;
+    border: none;
+    background-color: transparent;
+    transform: translateY(-50%);
+
+    &:active {
+        transform: translateY(calc(-50% + 1px));
+    }
+}
+
+.eye {
+    width: var(--size);
+    height: var(--size);
+    border: 2px solid var(--inputColor);
+    border-radius: calc(var(--size) / 1.5) 0;
+    transform: rotate(45deg);
+
+    &:before,
+    &:after {
+        content: '';
         position: absolute;
-        left: 0;
         top: 0;
         right: 0;
         bottom: 0;
-        border-radius: 10px;
+        left: 0;
+        margin: auto;
+        border-radius: 100%;
     }
 
-    .loginInput {
-        margin: auto;
-        position: relative;
-        left: 0;
-        top: 40%;
-        right: 0;
-        bottom: 0;
-        width: 200px;
-        height: 100px;
-        border: 1px solid black;
-        line-height: 40px;
+    &:before {
+        width: 35%;
+        height: 35%;
+        background-color: var(--inputColor);
     }
+
+    &:after {
+        width: 65%;
+        height: 65%;
+        border: 2px solid var(--inputColor);
+        border-radius: 100%;
+    }
+}
+
+[id="beam"] {
+    position: absolute;
+    top: 50%;
+    right: .3rem;
+    clip-path: polygon(100% 50%, 100% 50%, 0 0, 0 100%);
+    width: 100vw;
+    height: 25vw;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    transition: transform 200ms ease-out;
+    transform-origin: 100% 50%;
+    transform: translateY(-50%) rotate(var(--beamDegrees, 0));
+    pointer-events: none;
+
+    .show-password & {
+        background: var(--beamColor);
+    }
+}

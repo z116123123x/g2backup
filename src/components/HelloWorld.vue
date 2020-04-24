@@ -64,7 +64,7 @@
             </div>
           </div>
         </div>
-        <BtnMore />
+        <BtnMore msg="前往購物" />
       </div>
       <div id="blog_container">
         <div id="blog_title">
@@ -111,8 +111,7 @@ import BtnMore from "@/components/btn-more";
 export default {
   name: "HelloWorld",
   components: {
-
-    BtnMore
-  }
+    BtnMore,
+  },
 };
 </script>

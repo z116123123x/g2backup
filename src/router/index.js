@@ -4,8 +4,7 @@ import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'Home',
     component: Home,
@@ -16,8 +15,8 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: function() {
-      return import(/* webpackChunkName: "about" */ '../views/Book.vue');
+    component: function () {
+      return import( /* webpackChunkName: "about" */ '../views/Book.vue');
     },
   },
   {
@@ -37,15 +36,18 @@ const routes = [
   {
     path: '/blog-post',
     name: 'Blog-post',
-    component: function() {
+    component: function () {
       return import('../views/Blog-post.vue');
-    },
+    }
+  },
+  {
+
     path: '/shop',
     name: 'Shop',
     component: function () {
       return import('../views/Shop.vue');
     }
-  },
+  }, 
   {
     path: '/member',
     name: 'Member',
@@ -54,21 +56,22 @@ const routes = [
     },
     children: [{
 
-      path: "information",
-      component: function () {
+        path: "information",
+        component: function () {
 
-        return import("@/views/Information.vue");
+          return import("@/views/Information.vue");
+        }
+      },
+      {
+
+        path: "order",
+        component: () => {
+
+          return import("@/views/Order.vue");
+        }
+
       }
-    },
-    {
-
-      path: "order",
-      component: () => {
-
-        return import("@/views/Order.vue");
-      }
-
-    }]
+    ]
   },
   {
     path: '/adminLogin',
@@ -78,10 +81,10 @@ const routes = [
     }
   },
   {
-    path: '/adminLogin',
-    name: 'AdminLogin',
+    path: '/adminManage',
+    name: 'AdminManage',
     component: function () {
-      return import('../views/AdminLogin.vue');
+      return import('../views/AdminManage.vue');
     }
   },
 ];
