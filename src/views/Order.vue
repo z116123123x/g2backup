@@ -82,6 +82,18 @@
                             <p>訂單已完成，可以給評價囉!</p>
                         </div>
                         <div class="star">
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>                              
                             <p>不想給了</p>
                             <p>送出</p>
                         </div>

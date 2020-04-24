@@ -70,6 +70,15 @@ const routes = [{
           return import("@/views/Order.vue");
         }
 
+      },
+      {
+
+        path: "track",
+        component: () => {
+
+          return import("@/views/track.vue");
+        }
+
       }
     ]
   },

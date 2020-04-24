@@ -17,26 +17,21 @@ div.contain {
         display: block;
         height: 90.3%;
         text-align: center;
+        margin-left: 40px;
   
         >.trackcard {
-            display: block;
+            display: inline-block;
             margin-top: 40px;
-            margin-left: 20px;
-            margin-right: 20px;
             line-height: 2;
           >.cardfront {
-            position: absolute;
             border: 3px solid #007552;
             background-color: white;
-            width: 17%;
-            z-index: 2;
-            >.front_top{
-                display: inline-block;
-            }
+            box-shadow: 10px -9px #007552;
+            width: 27%;
             >.front_bottom{
                 display: inline-block;
                 text-align: start;
-                padding: 50px 0px;
+                padding: 50px 9px;
             }
             .front_button{
                 display: block;
@@ -48,19 +43,58 @@ div.contain {
                 }
             }
           }
-          >.cardback{
-              position: absolute;
-              z-index: 1;
-              display: block;
-              background-color: #007552;
-              left: 230px;
-              top: 92px;
-              width: 258px;
-              height: 335px;
-          }
   
         }
+        .pagination_block {
+          display: inline-block;
+          margin-top: 20px;
   
+          >ul.pagination {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+  
+            >li {
+              display: inline-block;
+  
+              >a {
+                display: inline-block;
+                text-decoration: none;
+  
+                border: 1px solid #007552;
+                /* 留意 */
+                border-right: 0;
+                /* 留意：將全部的右邊框都移除 */
+  
+                text-align: center;
+                padding: 5px 10px;
+                font-size: 1rem;
+                color: black;
+              }
+  
+              >a.-on {
+                background-color: #FFD3C1;
+                color: #007552;
+              }
+  
+              >a:hover {
+                background-color: #FFD3C1;
+                color: #007552;
+              }
+            }
+  
+            >li:first-child>a {
+              display: inline-block;
+              border-radius: 5px 0 0 5px;
+            }
+  
+            >li:last-child>a {
+              border-right: 1px solid #007552;
+              border-radius: 0 5px 5px 0;
+            }
+          }
+        }
         
       }
     }
