@@ -33,7 +33,9 @@
                             <!-- 左切換按鈕 -->
                             <div class="Change_Button">
                                 <div class="pagepaper"></div>
-                                <div class="pagepaper"></div>
+                                <div class="pagepaper">
+                                    <div class="page_button Pbutton_right"></div>
+                                </div>
                                 <div class="pagepaper"></div>
                             </div>
                             <!-- bookcontent書籍內容 -->
@@ -41,7 +43,11 @@
                                 <div class="bk_ct bk_ct_left">
                                     <div class="fruit_start">
                                         <h1>梅子</h1>
-                                        <div class="fruit_start_img"></div>
+                                        <div class="fruit_start_img">
+                                            <div class="img_content">
+                                                <img src="../assets/book_img/spring/plum/plum04.jpg" alt="">
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="fruit_intro">
                                         <!-- <h2>梅子介紹</h2> -->
@@ -68,20 +74,21 @@
                                         </ul>
                                         <div class="fruit_timeline"></div>
                                     </div>
-                                    <div class="fruit_QA">
+                                    <div class="fruit_video">
+                                        <video autoplay controls>
+                                            <source src="../assets/video/plum.mp4" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                    <div class="fruit_Q">
                                         <h2>農知識</h2>
                                         <h2 style="margin-left:40px;">為什麼梅子和李子的英文都是plum？</h2>
-                                        <div class="fruit_video">
-                                            <video autoplay controls>
-                                                <source
-                                                    src="../assets/video/plum.mp4"
-                                                    type="video/mp4"
+                                        <div class="fruit_A">
+                                            <p>梅子和李子都是植物學中薔薇科李屬中的植物，在「種」的位階上還有李、桃、杏等水果相互區分。因為梅子是亞洲特有種，西方並沒有為梅創造單字，稱它為是亞洲李Asian plum。</p>
+                                            <div class="fruit_img">
+                                                <img
+                                                    src="../assets/book_img/spring/plum/plum05.jpg"
                                                 />
-                                            </video>
-                                        </div>
-                                        <p>梅子和李子都是植物學中薔薇科李屬中的植物，在「種」的位階上還有李、桃、杏等水果相互區分。因為梅子是亞洲特有種，西方並沒有為梅創造單字，稱它為是亞洲李Asian plum。</p>
-                                        <div class="fruit_img">
-                                            <img src="../assets/book_img/spring/plum/plum05.jpg">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +96,9 @@
                             <!-- 右切換按鈕 -->
                             <div class="Change_Button">
                                 <div class="pagepaper"></div>
-                                <div class="pagepaper"></div>
+                                <div class="pagepaper">
+                                    <div class="page_button Pbutton_left"></div>
+                                </div>
                                 <div class="pagepaper"></div>
                             </div>
                         </div>
