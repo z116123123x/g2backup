@@ -6,10 +6,10 @@
                 <div id="book_left">
                     <div class="bk_left">
                         <div class="bk_left_img">
-                            <img src="../assets/book_img/bookRighPage_img1t.svg" />
+                            <img src="@/assets/book_img/bookRighPage_img1t.svg" />
                         </div>
                         <div class="bk_right_img">
-                            <img src="../assets/book_img/bookRightPage_img2.svg" />
+                            <img src="@/assets/book_img/bookRightPage_img2.svg" />
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                                         <h1>梅子</h1>
                                         <div class="fruit_start_img">
                                             <div class="img_content">
-                                                <img src="../assets/book_img/spring/plum/plum04.jpg" alt="">
+                                                <img src="@/assets/book_img/spring/plum/plum04.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -76,7 +76,7 @@
                                     </div>
                                     <div class="fruit_video">
                                         <video autoplay controls>
-                                            <source src="../assets/video/plum.mp4" type="video/mp4" />
+                                            <source src="@/assets/video/plum.mp4" type="video/mp4" />
                                         </video>
                                     </div>
                                     <div class="fruit_Q">
@@ -86,7 +86,7 @@
                                             <p>梅子和李子都是植物學中薔薇科李屬中的植物，在「種」的位階上還有李、桃、杏等水果相互區分。因為梅子是亞洲特有種，西方並沒有為梅創造單字，稱它為是亞洲李Asian plum。</p>
                                             <div class="fruit_img">
                                                 <img
-                                                    src="../assets/book_img/spring/plum/plum05.jpg"
+                                                    src="@/assets/book_img/spring/plum/plum05.jpg"
                                                 />
                                             </div>
                                         </div>
@@ -112,7 +112,7 @@
     </main>
 </template>
 <script>
-import Footer from "../layout/footer";
+import Footer from "@/layout/footer";
 export default {
     components: {
         Footer
