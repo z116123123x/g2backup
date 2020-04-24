@@ -21,11 +21,11 @@
         </select>
       </label>
       <label for="">
-      <textarea name="" id="" cols="90" rows="30"></textarea>
+        <textarea name="" id="" cols="90" rows="30"></textarea>
       </label>
       <div>
-      <input type="button" value="取消">
-      <input type="button" value="傳送">
+        <input type="button" value="取消" />
+        <input type="button" value="傳送" />
       </div>
     </form>
   </div>
