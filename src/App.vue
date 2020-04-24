@@ -4,7 +4,6 @@
       <router-link id="home" to="/">
         <img class="logo" src="@/assets/navbar_logo.svg" alt="logo" />
       </router-link>
-
       <div class="member_status">
         <span class="farmer_pic"></span>
         <span>果農</span>
