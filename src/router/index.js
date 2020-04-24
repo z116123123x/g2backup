@@ -81,10 +81,10 @@ const routes = [{
     }
   },
   {
-    path: '/adminLogin',
-    name: 'AdminLogin',
+    path: '/adminManage',
+    name: 'AdminManage',
     component: function () {
-      return import('../views/AdminLogin.vue');
+      return import('../views/AdminManage.vue');
     }
   },
 ];
