@@ -122,7 +122,5 @@
   </div>
 </template>
 <script>
-import "@/style/main.scss";
-
 export default {};
 </script>
