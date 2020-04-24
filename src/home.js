@@ -55,6 +55,12 @@ window.addEventListener("load", () => {
       $(this).toggleClass("is-active");
 
       $("div.nav_back").slideToggle();
+      if ($("div.hamburger").hasClass("is-active")) {
+        $("a.pages").on("click", function() {
+          $("div.nav_back").sliderToggle();
+        });
+        $(this).removeClass("is-active");
+      }
     });
   });
 

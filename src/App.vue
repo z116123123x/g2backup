@@ -19,7 +19,7 @@
       </div>
       <div class="nav_back">
         <ul>
-          <li class="dropdown">
+          <li class="dropdown dropdown1">
             <div class="title">
               <router-link class="page" to="/book">
                 <div class="title_pic">
