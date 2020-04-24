@@ -20,7 +20,7 @@
 
       // 左page
       #book_left {
-         border: 1px solid blue;
+         //border: 1px solid blue;
          box-sizing: border-box;
          width: 100vw;
          height: 100vh;
@@ -103,21 +103,32 @@
       // 右page
 
       #book_right {
-         border: 1px solid blue;
+         //border: 1px solid blue;
          box-sizing: border-box;
          padding-top: 20px;
          width: 100vw;
          height: 100vh;
          display: inline-block;
          position: relative;
-         background-color: rgba(14, 116, 83, .7);
+         background-color: #438b6d;
          vertical-align: top;
+
+         &::before {
+            content: "";
+            position: absolute;
+            left: -10%;
+            width: 40%;
+            height: 40%;
+            background-image: url("../assets/book_img/flower_middle.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+         }
 
          .bookContain {
             margin-top: 30px;
 
             .book_tag {
-               border: 1px solid rgb(43, 255, 0);
+               // border: 1px solid rgb(43, 255, 0);
                box-sizing: border-box;
                position: relative;
                left: 50%;
@@ -132,6 +143,7 @@
                   box-sizing: border-box;
                   border-radius: 10px 10px 0 0;
                   position: absolute;
+                  top: 10px;
                   left: 5%;
                   width: 70px;
                   height: 35px;
@@ -139,6 +151,9 @@
                   text-align: center;
                   font-size: 1.6rem;
 
+                  &:hover {
+                     top: 0;
+                  }
                }
 
                ul.tag {
@@ -148,7 +163,7 @@
                   right: 1%;
 
                   li {
-                     border: 1px solid green;
+                     //border: 1px solid green;
                      background-color: $bg-color;
                      box-sizing: border-box;
                      border-radius: 10px 10px 0 0;
@@ -193,7 +208,7 @@
             }
 
             .Book {
-               border: 1px solid purple;
+               border: 1px solid $min-color;
                background: #fcfbf7;
                box-sizing: border-box;
                display: inline-block;
@@ -205,7 +220,7 @@
                transform: translateX(-50%);
                z-index: 2;
 
-               //切換按鈕
+               //切換按鈕 切換按鈕 切換按鈕
                .Change_Button {
                   border: 0.5px solid $min-color;
                   box-sizing: border-box;
@@ -220,7 +235,58 @@
                      display: inline-block;
                      width: 33%;
                      height: 100%;
+                     position: relative;
 
+                     .Pbutton_right {
+
+                        &:hover{
+                           background-color: #ffe29e ;
+                        }
+
+                        &::before {
+                           content: "";
+                           position: absolute;
+                           top: 50%;
+                           left: 50%;
+                           transform: translate(-50%, -50%);
+                           background-image: url("../assets/book_img/turn_leftpage.svg");
+                           width: 30px;
+                           height: 40px;
+                        }
+                     }
+
+                     .Pbutton_left {
+
+                        &:hover{
+                           background-color: #ffe29e ;
+                        }
+
+                        &::before {
+                           content: "";
+                           position: absolute;
+                           top: 30%;
+                           left: 0%;
+
+                          transform: translateY(-50%);
+                           background-image: url("../assets/book_img/turn_leftpage.svg");
+                           width: 30px;
+                           height: 40px;
+                           transform: rotate(180deg);
+                        }
+                     }
+
+                     .page_button {
+                        width: 2.5vw;
+                        height: 100px;
+                        border: 2px solid $min-color;
+                        background-color: #f3c352ee;
+                        position: relative;
+                        top: 45%;
+                        transform: translateY(-50%);
+                        left: -1vw;
+                        z-index: 33;
+
+                     }
 
                   }
 
@@ -228,7 +294,8 @@
 
                // bookcontent書籍內容
                #bk_content {
-                  border: 1px solid yellow;
+                  // font-size: 0;
+                  border: 1px solid $min-color;
                   box-sizing: border-box;
                   display: inline-block;
                   width: 94%;
@@ -238,13 +305,15 @@
                   &::before {
                      content: "";
                      position: absolute;
+                     z-index: 2;
                      left: 50%;
                      transform: translateX(-50%);
-                     // top: 10%;
+                     top: -3px;
                      background-image: url("../assets/book_img/booktop.svg");
                      background-repeat: no-repeat;
                      width: 7%;
                      height: 10%;
+
                   }
 
                   &::after {
@@ -252,15 +321,18 @@
                      position: absolute;
                      left: 50%;
                      transform: translateX(-50%);
-                     bottom: -10%;
-                     background-image: url("../assets/book_img/bookbottom.svg");
-                     background-repeat: no-repeat;
+                     bottom: -3%;
+                     background-color: rgba(255, 208, 191, 1);
+                     -webkit-clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
+                     clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
+                     // background-image: url("../assets/book_img/bookbottom.svg");
+                     // background-repeat: no-repeat;
                      width: 7%;
                      height: 10%;
                   }
 
                   .bk_ct {
-                     border: 1px solid blue;
+                     // border: 1px solid blue;
                      box-sizing: border-box;
                      position: relative;
                      top: 0;
@@ -274,29 +346,100 @@
                      font-size: 0;
 
                      .fruit_start {
-                        border: 1px solid red;
+                        // border: 1px solid red;
                         box-sizing: border-box;
                         display: inline-block;
                         width: 100%;
                         height: 45%;
 
-
                         h1 {
-                           border: 1px solid red;
+                           display: inline-block;
+                           //border: 1px solid red;
                            writing-mode: vertical-lr;
                            letter-spacing: 0.6rem;
                            font-size: 5rem;
                            font-weight: bolder;
                            color: #f38e8e;
                            position: relative;
-                           left: 2%;
+                           left: 5%;
                            top: 45%;
+                           z-index: 2;
+
+                           &::before {
+                              content: "";
+                              position: absolute;
+                              top: -30px;
+                              left: -10px;
+                              width: 50px;
+                              height: 50px;
+                              background-image: url("../assets/book_img/flower.svg");
+                           }
+
+                           &::after {
+                              content: "";
+                              position: absolute;
+                              bottom: -30px;
+                              left: 20px;
+                              width: 30px;
+                              height: 30px;
+                              background-image: url("../assets/book_img/flower.svg");
+                           }
+                        }
+
+                        .fruit_start_img {
+                           //border: 1px solid red;
+                           display: inline-block;
+                           width: 180px;
+                           height: 170px;
+                           vertical-align: top;
+                           background-image: url("../assets/book_img/fruit_start01.svg");
+                           background-repeat: no-repeat;
+                           background-size: contain;
+                           position: relative;
+                           left: 40%;
+                           top: 55%;
+                           transform: translate(-50%, -50%);
+                           transition: .5s;
+
+                           &:hover {
+                              width: 170px;
+                              height: 160px;
+                           }
+
+                           &:hover .img_content {
+                              width: 140px;
+                              padding-top: 140px;
+                           }
+
+
+
+                           .img_content {
+                              //border: 1px solid red;
+                              display: block;
+                              width: 130px;
+                              padding-top: 130px;
+                              border-radius: 50%;
+                              position: relative;
+                              top: 50%;
+                              left: 47%;
+                              transform: translate(-50%, -50%);
+                              overflow: hidden;
+                              transition: 1s;
+
+                              img {
+                                 position: absolute;
+                                 top: 0;
+                                 height: 100%;
+
+                              }
+
+                           }
                         }
 
                      }
 
                      .fruit_intro {
-                        border: 1px solid red;
+                        //  border: 1px solid red;
                         box-sizing: border-box;
                         display: block;
                         width: 100%;
@@ -312,7 +455,7 @@
                         p {
                            //border: 1px solid blue;
                            font-size: 1.4rem;
-                           padding: 10px;
+                           padding: 12px;
                            margin-left: 10px;
                            white-space: pre-wrap;
                            line-height: 1.8;
@@ -344,13 +487,14 @@
                         z-index: -1;
                         -webkit-clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
                         clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
-                        background-color:rgba(255,208,191,1);
+                        background-color: rgba(255, 208, 191, 1);
                      }
 
                      h2 {
-                        padding-left: 10px;
+                        //border: 1px solid red;
                         font-size: 1.6rem;
                         font-weight: bold;
+                        color: $min-color;
                         margin: 20px 0 10px 15px;
                      }
 
@@ -378,9 +522,10 @@
                               text-align: center;
                            }
                         }
-                        .fruit_timeline{
+
+                        .fruit_timeline {
                            background-color: #f38e8e;
-                           border-radius:10px;
+                           border-radius: 10px;
                            width: 100px;
                            height: 10px;
                            position: relative;
@@ -389,59 +534,71 @@
 
                      }
 
-                     //農知識
-                     .fruit_QA {
-                        //border: 3px solid pink;
-                        width: 100%;
-                        height: 90%;
+                     //影片
+                     .fruit_video {
+                        height: 35%;
+                        margin-top: 20px;
 
-                        //影片
-                        .fruit_video {
-                           height: 35%;
-                           border: 1px solid green;
-                           text-align: center;
+                        //border: 1px solid green;
+                        box-sizing: border-box;
+                        text-align: center;
 
-                           >video {
-                              // width: 280px;
-                              height: 100%;
-                           }
-
+                        >video {
+                           height: 100%;
                         }
 
+                     }
+
+                     //農知識
+                     .fruit_Q {
+                        //border: 1px solid green;
+                        width: 100%;
+
                         h2 {
-                           padding-left: 10px;
                            //border: 1px solid purple;
                            font-size: 1.6rem;
                            font-weight: bolder;
                            display: inline-block;
-                           margin: 20px 0 10px 15px;
+                           margin: 20px 10px 0px 15px;
 
                         }
 
-                        p {
-                           //border: 1px solid blue;
-                           font-size: 1.4rem;
-                           padding: 20px 0px 10px 25px;
-                           white-space: pre-wrap;
-                           line-height: 1.8;
-                           // 欄寬
-                           // column-width: 15rem;
+                        .fruit_A {
+                           padding: 10px 15px;
 
-                           box-sizing: border-box;
-                           display: block;
-                           width: 50%;
-                           height: 40%;
+                           //border: 1px solid purple;
+                           p {
+                              // border: 1px solid blue;
+                              font-size: 1.4rem;
+                              white-space: pre-wrap;
+                              line-height: 1.8;
+                              vertical-align: top;
+                              // 欄寬
 
-                           position: relative;
-                           right: 0;
+                              box-sizing: border-box;
+                              display: inline-block;
+                              width: 50%;
+                              height: 40%;
+
+
+                           }
+
+                           .fruit_img {
+                              //border: 1px solid green;
+                              display: inline-block;
+                              width: 30%;
+                              height: auto;
+                              margin: 1% 8%;
+
+                              img {
+                                 position: relative;
+                                 width: 100%;
+                              }
+
+                           }
+
 
                         }
-
-                        .fruit_img{
-                           border: 1px solid green;
-                           display: inline-block;
-                        }
-
 
                      }
                   }
@@ -454,7 +611,6 @@
          }
 
       }
-
 
    }
 }
