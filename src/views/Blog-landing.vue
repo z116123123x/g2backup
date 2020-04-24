@@ -1,78 +1,66 @@
 <template>
-  <div class="container">
-    <div>
+  <div style="padding-top:3%;">
+    <img style="width:100%" src="..\assets\blog-img\blog-bar.png" /><br />
+    <div class="blog-landing-container">
       <div>
-        <img
-          style="width: 100%;"
-          src="https://picsum.photos/800/600?random=1"
-        />
         <div>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
-          eligendi unde reiciendis natus officiis doloribus culpa, velit
-          obcaecati, autem ipsum incidunt soluta iure, aspernatur nihil rerum?
-          Labore iste tenetur dicta?
+          <img style="padding:10px" src="..\assets\blog-img\blog-logo.png" />
         </div>
-        <div>author</div>
-      </div>
-      <div>
-        <img
-          style="width: 100%;"
-          src="https://picsum.photos/800/600?random=2"
-        />
         <div>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
-          eligendi unde reiciendis natus officiis doloribus culpa, velit
-          obcaecati, autem ipsum incidunt soluta iure, aspernatur nihil rerum?
-          Labore iste tenetur dicta?
+          <div>
+            <div>
+              <img src="..\assets\blog-img\blog-dot.png" alt="" />
+              <span> </span>
+              <span> 旅遊</span>
+            </div>
+            <div>
+              <img src="..\assets\blog-img\blog-dot.png" alt="" />
+              <span> </span>
+              <span> 水果知識</span>
+            </div>
+            <div>
+              <img src="..\assets\blog-img\blog-dot.png" alt="" />
+              <span> </span>
+              <span> 農民樂</span>
+            </div>
+          </div>
+          <div>
+            <span>20019/12/16 - 2020/06/05</span>
+          </div>
         </div>
-        <div>author</div>
-      </div>
-      <div>
-        <img
-          style="width: 100%;"
-          src="https://picsum.photos/800/600?random=3"
-        />
-        <div>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
-          eligendi unde reiciendis natus officiis doloribus culpa, velit
-          obcaecati, autem ipsum incidunt soluta iure, aspernatur nihil rerum?
-          Labore iste tenetur dicta?
-        </div>
-        <div>author</div>
-      </div>
-      <div>
-        <img
-          style="width: 100%;"
-          src="https://picsum.photos/800/600?random=4"
-        />
-        <div>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
-          eligendi unde reiciendis natus officiis doloribus culpa, velit
-          obcaecati, autem ipsum incidunt soluta iure, aspernatur nihil rerum?
-          Labore iste tenetur dicta?
-        </div>
-        <div>author</div>
-      </div>
-    </div>
-    <div>
-      <div style="line-height: 1.5;"><input /></div>
-      <h3 style="line-height: 1.5;  font-size: 25px;">hot</h3>
-      <div style="line-height: 1.5;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam molestiae
-        quasi reiciendis iste tempora repellendus cum quia quod, vero iure
-        facere voluptates. Nulla facilis asperiores ab! Dolore similique quasi
-        voluptates?
-      </div>
-      <h3 style="line-height: 1.5;   font-size: 25px;">title</h3>
-      <div style="line-height: 1.5;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam molestiae
-        quasi reiciendis iste tempora repellendus cum quia quod, vero iure
-        facere voluptates. Nulla facilis asperiores ab! Dolore similique quasi
-        voluptates?
       </div>
     </div>
   </div>
 </template>
 <style lang="scss">
-
+.blog-landing-container {
+  padding-top: 1%;
+  width: 95%;
+  margin-left: 2.5%;
+  > div:nth-child(1) {
+    width: 95%;
+    margin-left: 2.5%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    font-size: 20px;
+    > div:nth-child(2) {
+      gap: 10px;
+      justify-items: center;
+      display: grid;
+      position: relative;
+      top: 30%;
+      height: 60%;
+      grid-template-columns: 1fr;
+      > div:nth-child(1) {
+        display: grid;
+        grid-template-columns: 0.9fr 1.4fr 1fr;
+        border-bottom: solid #007552 1px;
+      }
+      > div:nth-child(2) {
+        border-bottom: solid #007552 1px;
+        text-align: center;
+      }
+    }
+  }
+}
 </style>
