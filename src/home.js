@@ -53,15 +53,16 @@ window.addEventListener("load", () => {
     // hamburger icon 的切換
     $("div.hamburger").on("click", function() {
       $(this).toggleClass("is-active");
-
       $("div.nav_back").slideToggle();
-      if ($("div.hamburger").hasClass("is-active")) {
-        $("a.pages").on("click", function() {
-          $("div.nav_back").sliderToggle();
-        });
-        $(this).removeClass("is-active");
-      }
     });
+  });
+  $(function() {
+    if ($("div.hamburger").hasClass("is-active") == false) {
+      $("a.page").on("click", function() {
+        $("div.nav_back").slideToggle();
+        $("div.hamburger").removeClass("is-active");
+      });
+    }
   });
 
   gsap.registerPlugin(MotionPathPlugin);
@@ -972,7 +973,6 @@ window.addEventListener("load", () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
-
   home.addEventListener("click", init);
   home.addEventListener("click", render);
   init();
