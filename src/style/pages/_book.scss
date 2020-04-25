@@ -471,7 +471,8 @@
                            line-height: 1.8;
                            vertical-align: top;
                            // 欄寬
-                           column-width: 15rem;
+                           //column-width: 15rem;
+                           column-count: 2; 
 
                            box-sizing: border-box;
                            display: inline-block;
@@ -619,6 +620,7 @@
                      border: 1px solid blue;
                      box-sizing: border-box;
                      width: 50%;
+                     //display: none;
 
                      h2 {
                         //border: 1px solid red;
@@ -704,8 +706,9 @@
                               white-space: pre-wrap;
                               line-height: 1.8;
                               vertical-align: top;
-                              // 欄寬
-                              column-width: 15rem;
+                              
+                              //欄位數
+                              column-count: 2; 
    
                               box-sizing: border-box;
                               display: inline-block;
