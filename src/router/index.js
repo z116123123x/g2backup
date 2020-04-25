@@ -58,15 +58,47 @@ const routes = [
     ]
   },
   {
-    path: '/admin',
-    name: 'AdminLogin',
+    path: "/admin",
+    name: "AdminLogin",
     component: () => import("@/views/AdminLogin.vue"),
   },
   {
-    path: '/admin/adminManage',
-    name: 'AdminManage',
-    component: () => import("@/views/AdminManage.vue"),
-  },
+    path: "/manage",
+    name: "Manage",
+    component: () => import("@/views/Admin.vue"),
+    children: [
+      {
+        path: "manage",
+        name: "Manage",
+        component: () => import("@/views/AdminManage.vue"),
+      },
+      {
+        path: "fan",
+        name: "Fan",
+        component: () => import("@/views/AdminFanManage.vue"),
+      },
+      {
+        path: "seller",
+        name: "Seller",
+        component: () => import("@/views/AdminSellerManage.vue"),
+      },
+      {
+        path: "ency",
+        name: "Ency",
+        component: () => import("@/views/AdminEncyManage.vue"),
+      },
+      {
+        path: "blog",
+        name: "Blog",
+        component: () => import("@/views/AdminBlog.vue"),
+      },
+      {
+        path: "comment",
+        name: "Comment",
+        component: () => import("@/views/AdminComment.vue"),
+      }
+    ]
+  }
 ];
 
 const router = new VueRouter({
