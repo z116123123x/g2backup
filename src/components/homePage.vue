@@ -2,7 +2,7 @@
   <div id="test" class="hello">
     <main>
       <div id="mainLOGO">
-        <img src="../assets/LOGO.svg" alt="" />
+        <img src="../assets/LOGO.svg" alt />
       </div>
       <div id="knowledge_container">
         <div>
@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <BtnMore />
+        <ButtonMore />
         <div id="knowledge_title">
           <img src="../assets/knowledgetitle.svg" alt />
         </div>
@@ -64,54 +64,47 @@
             </div>
           </div>
         </div>
-        <BtnMore />
+        <ButtonMore msg="前往購物" />
       </div>
       <div id="blog_container">
         <div id="blog_title">
-          <img src="../assets/blogtitle.svg" alt="" />
+          <img src="../assets/blogtitle.svg" alt />
         </div>
         <div id="blog_page">
           <div class="blog_tags_area">
             <h2>Tags</h2>
             <div>
-              <img src="../assets/tagspic.svg" alt="" />
+              <img src="../assets/tagspic.svg" alt />
               <span>果農心得</span>
             </div>
             <div>
-              <img src="../assets/tagspic.svg" alt="" />
+              <img src="../assets/tagspic.svg" alt />
               <span>水果產品</span>
             </div>
             <div>
-              <img src="../assets/tagspic.svg" alt="" />
+              <img src="../assets/tagspic.svg" alt />
               <span>旅遊日誌</span>
             </div>
             <div>
-              <img src="../assets/tagspic.svg" alt="" />
+              <img src="../assets/tagspic.svg" alt />
               <span>水果知識</span>
             </div>
           </div>
-          <BtnMore />
+          <ButtonMore />
         </div>
       </div>
       <div id="member_container">
         <div id="member_title">
-          <img src="../assets/membertitle.svg" alt="" />
+          <img src="../assets/membertitle.svg" alt />
         </div>
         <div id="member_page">
-          <img src="../assets/memberpic.png" alt="" />
+          <img src="../assets/memberpic.png" alt />
         </div>
-        <BtnMore />
+        <ButtonMore />
       </div>
     </main>
   </div>
 </template>
 <script>
-import BtnMore from "@/components/btn-more";
-
-export default {
-  name: "HelloWorld",
-  components: {
-    BtnMore,
-  },
-};
+export default {};
 </script>
