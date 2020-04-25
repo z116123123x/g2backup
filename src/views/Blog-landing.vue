@@ -134,9 +134,52 @@
               <div>howhowhasnofriend</div>
               <div>2020-4-14 12:00</div>
             </div>
-            <div>這炒飯好吃?我賣水果欸!?鳳梨炒飯?</div>
-            <img src="@/assets/blog-img/blog-report.png" alt="">
+            <div style="font-size:15px;">這炒飯好吃?我賣水果欸!?鳳梨炒飯?</div>
+            <img src="@/assets/blog-img/blog-report.png" alt="" />
           </div>
+          <div>
+            <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+            <div>
+              <div>howhowhasnofriend</div>
+              <div>2020-4-14 12:00</div>
+            </div>
+            <div style="font-size:15px;">這炒飯好吃?我賣水果欸!?鳳梨炒飯?</div>
+            <img src="@/assets/blog-img/blog-report.png" alt="" />
+          </div>
+          <div>
+            <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+            <div>
+              <div>howhowhasnofriend</div>
+              <div>2020-4-14 12:00</div>
+            </div>
+            <div style="font-size:15px;">這炒飯好吃?我賣水果欸!?鳳梨炒飯?</div>
+            <img src="@/assets/blog-img/blog-report.png" alt="" />
+          </div>
+          <div>
+            <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+            <div>
+              <div>howhowhasnofriend</div>
+              <div>2020-4-14 12:00</div>
+            </div>
+            <div style="font-size:15px;">這炒飯好吃?我賣水果欸!?鳳梨炒飯?</div>
+            <img src="@/assets/blog-img/blog-report.png" alt="" />
+          </div>
+          <div>
+            <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+            <div>
+              <div>howhowhasnofriend</div>
+              <div>2020-4-14 12:00</div>
+            </div>
+            <div style="font-size:15px;">這炒飯好吃?我賣水果欸!?鳳梨炒飯?</div>
+            <img src="@/assets/blog-img/blog-report.png" alt="" />
+          </div>
+        </div>
+        <div>
+          <form action="" method="get">
+            <label style="font-size:20px;" for=""> 留言: 
+              <textarea style="margin-left:3%" name="" id="" cols="40" rows="7"></textarea>
+            </label>
+          </form>
         </div>
       </div>
     </div>
@@ -220,6 +263,7 @@
   }
   > div:nth-child(2) {
     //文章區
+    padding-bottom: 10%;
     background-color: #fbf8ef;
     > div:nth-child(1) {
       display: grid;
@@ -270,20 +314,38 @@
         flex-wrap: wrap;
       }
     }
-    > div:nth-child(4) {//留言區
+    > div:nth-child(4) {
+      //留言區
       display: grid;
       grid-template-columns: 1fr;
       > div {
+        padding-left: 20px;
         display: grid;
+        background-color: #fff;
+        margin-left: 10%;
+        margin-right: 15%;
+        margin-top: 2%;
         grid-template-columns: 10% 20% 60% 10%;
         align-items: center;
-        >div:nth-child(2){
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
+        > div:nth-child(2) {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 3px;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 30px;
+            border-right: solid 1px #a0a0a0;
+            height: 20px;
+          }
+        }
       }
-      }
-      
-      
+    }
+    >div:nth-child(5){
+      padding-top: 50px;
+      padding-left: 10%;
     }
   }
 }
