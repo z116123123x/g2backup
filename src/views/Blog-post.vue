@@ -34,13 +34,21 @@
       <div>
         <!--main-->
         <div>
+          <!--search area-->
           <div>
             <img src="@/assets/blog-img/post/basket.png" alt="" />
           </div>
           <div>
             <div>
               <form action="" method="get">
-                <input style="padding:10px;border:#007552 solid 2px;border-radius:50px;" placeholder="水果知識" type="text" />
+                <input
+                  style="padding:5px 0px 5px 30px;border:#007552 solid 2px;border-radius:50px;width:80%;font-size:15px;"
+                  placeholder="水果知識"
+                  type="text"
+                />
+                <img
+                  style="position: relative;right:40px;bottom:3px;"
+                  src="@/assets/blog-img/post/magnifier.png"/>
               </form>
             </div>
             <div>
@@ -50,6 +58,9 @@
             </div>
           </div>
         </div>
+        <img
+          style="padding:20px 0px 20px 20px;width:88%;position:relative;right:20px;"
+          src="@/assets/blog-img/blog-bendingbar2.png"/>
       </div>
       <div>
         <!-- tags&leaderblard-->
@@ -93,25 +104,34 @@
 }
 
 .blog-post-container2 {
+  border: solid #007552 2px;
+  width: 90%;
+  margin-left: 2%;
   display: grid;
   grid-template-columns: 1fr 0.3fr;
-  padding-top: 5%;
-  padding-left: 6%;
+  padding-top: 2%;
+  padding-left: 3%;
   > div:nth-child(1) {
     //main
     > div:nth-child(1) {
       display: grid;
       grid-template-columns: 0.3fr 1fr;
-      >div:nth-child(2){//input//search
+      > div:nth-child(2) {
+        //input//search
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         align-items: end;
-        >div:nth-child(1){
+        > div:nth-child(1) {
           //search input
         }
-        >div:nth-child(2){
+        > div:nth-child(2) {
           //keyword
+          padding-left: 20px;
           align-self: center;
+          > span {
+            padding-right: 10px;
+            color: #808080;
+          }
         }
       }
     }
