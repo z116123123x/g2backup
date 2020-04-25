@@ -1,24 +1,7 @@
 canvas {
   position: fixed;
-  width: 100%;
-}
-
-#header {
-  height: 100%;
-  width: 450px;
-  float: right;
-}
-
-#header > a:nth-child(1) {
-  width: 25%;
-  height: 100%;
-  display: inline-block;
-  vertical-align: top;
-}
-
-#headerLOGO {
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 #memberStatus {
@@ -81,13 +64,13 @@ main {
 }
 
 #mainLOGO {
-  display: inline-block;
   width: 300px;
   height: 200px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: inline-block;
 }
 
 #knowledge_container {

@@ -1,6 +1,6 @@
 import $ from "jquery";
 import * as THREE from "three";
-import { gsap, TweenMax, Power1, Power3, TimelineMax, TimeLite } from "gsap";
+import { gsap, TweenMax, Power1, Power3, TimelineMax, Linear } from "gsap";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 
 import cloudWhite from "@/assets/cloudWhite.png";
@@ -76,7 +76,7 @@ window.addEventListener("load", () => {
       60,
       window.innerWidth / window.innerHeight,
       0.1,
-      3000
+      2800
     );
 
     camera.position.set(0, 800, 1500);
@@ -172,10 +172,18 @@ window.addEventListener("load", () => {
     cloud1.position.set(180, 680, 1200);
     scene.add(cloud1);
 
+    TweenMax.to(cloud1.position, 40, {
+      x: 400,
+      repeat: -1,
+      yoyo: true,
+      ease: Linear.easeIn,
+    });
+
     let cloud2 = new THREE.Mesh(
       new THREE.PlaneGeometry(240, 140),
       materialcloud2
     );
+
     cloud2.position.set(280, 750, -1100);
     scene.add(cloud2);
 
@@ -200,12 +208,27 @@ window.addEventListener("load", () => {
     cloud5.position.set(-200, 690, 1100);
     scene.add(cloud5);
 
+    TweenMax.to(cloud5.position, 30, {
+      x: -300,
+      repeat: -1,
+      yoyo: true,
+      ease: Linear.easeIn,
+    });
+
     let cloud6 = new THREE.Mesh(
       new THREE.PlaneGeometry(360, 240),
       materialcloud2
     );
     cloud6.position.set(-350, 950, 1000);
     scene.add(cloud6);
+
+    TweenMax.to(cloud6.position, 40, {
+      x: -300,
+      repeat: -1,
+      yoyo: true,
+      ease: Linear.easeIn,
+    });
+
     let cloudlight = new THREE.Mesh(
       new THREE.PlaneGeometry(120, 90),
       materialcloudlight
@@ -219,6 +242,13 @@ window.addEventListener("load", () => {
     cloud7.position.set(-350, 650, 1150);
     scene.add(cloud7);
 
+    TweenMax.to(cloud7.position, 40, {
+      x: -100,
+      repeat: -1,
+      yoyo: true,
+      ease: Linear.easeIn,
+    });
+
     let cloud8 = new THREE.Mesh(
       new THREE.PlaneGeometry(220, 150),
       materialcloud1
@@ -226,12 +256,26 @@ window.addEventListener("load", () => {
     cloud8.position.set(-220, 680, 900);
     scene.add(cloud8);
 
+    TweenMax.to(cloud8.position, 30, {
+      x: -320,
+      repeat: -1,
+      yoyo: true,
+      ease: Linear.easeIn,
+    });
+
     let cloud9 = new THREE.Mesh(
       new THREE.PlaneGeometry(2020, 1250),
       materialcloud2
     );
     cloud9.position.set(0, 200, 300);
     scene.add(cloud9);
+
+    TweenMax.to(cloud9.position, 40, {
+      x: 400,
+      repeat: -1,
+      yoyo: true,
+      ease: Linear.easeIn,
+    });
 
     let cloud10 = new THREE.Mesh(
       new THREE.PlaneGeometry(360, 240),
@@ -246,6 +290,13 @@ window.addEventListener("load", () => {
     );
     cloud11.position.set(-1200, 900, 0);
     scene.add(cloud11);
+
+    TweenMax.to(cloud11.position, 30, {
+      x: -900,
+      repeat: -1,
+      yoyo: true,
+      ease: Linear.easeIn,
+    });
 
     let cloud12 = new THREE.Mesh(
       new THREE.PlaneGeometry(280, 150),
@@ -267,6 +318,13 @@ window.addEventListener("load", () => {
     );
     cloud14.position.set(670, 860, 300);
     scene.add(cloud14);
+
+    TweenMax.to(cloud14.position, 30, {
+      x: 400,
+      repeat: -1,
+      yoyo: true,
+      ease: Linear.easeIn,
+    });
 
     let cloudlight2 = new THREE.Mesh(
       new THREE.PlaneGeometry(180, 140),
@@ -398,7 +456,7 @@ window.addEventListener("load", () => {
     knowledgehead.position.set(22, 31, -449);
 
     scene.add(knowledgehead);
-    var knowledgeheadtween = TweenMax.fromTo(
+    TweenMax.fromTo(
       knowledgehead.position,
       1,
       {
@@ -487,7 +545,7 @@ window.addEventListener("load", () => {
     shopfruit.position.set(-250, 25, -100);
     scene.add(shopfruit);
 
-    var shopfruittween = TweenMax.fromTo(
+    TweenMax.fromTo(
       shopfruit.position,
       1,
       {
@@ -610,7 +668,7 @@ window.addEventListener("load", () => {
     blogwatermelon.position.set(153, 60, -115);
     scene.add(blogwatermelon);
 
-    var blogwatermelon = TweenMax.fromTo(
+    TweenMax.fromTo(
       blogwatermelon.position,
       1,
       {
@@ -714,8 +772,16 @@ window.addEventListener("load", () => {
           ease: Power3.easeInOut,
 
           duration: 3000,
+
           onUpdate: function() {
             camera.lookAt(0, 800, 0);
+            if (window.pageYOffset > 500) {
+              $("div#mainLOGO").fadeOut();
+              $("img.logo").fadeIn();
+            } else {
+              $("div#mainLOGO").fadeIn();
+              $("img.logo").fadeOut();
+            }
           },
           x: 0,
           y: 900,
