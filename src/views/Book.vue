@@ -34,18 +34,26 @@
                             <div class="Change_Button">
                                 <div class="pagepaper"></div>
                                 <div class="pagepaper">
-                                    <div class="page_button Pbutton_right"></div>
+                                    <div class="page_button Pbutton_left"></div>
                                 </div>
                                 <div class="pagepaper"></div>
                             </div>
+
                             <!-- bookcontent書籍內容 -->
                             <div id="bk_content">
+                                <!-- fruit_index -->
+                                <!-- <div class="bk_ct"></div> -->
+
+                                <!-- fruit_knowledge -->
                                 <div class="bk_ct bk_ct_left">
                                     <div class="fruit_start">
                                         <h1>梅子</h1>
                                         <div class="fruit_start_img">
                                             <div class="img_content">
-                                                <img src="../assets/book_img/spring/plum/plum04.jpg" alt="">
+                                                <img
+                                                    src="../assets/book_img/spring/plum/plum04.jpg"
+                                                    alt
+                                                />
                                             </div>
                                         </div>
                                     </div>
@@ -75,8 +83,8 @@
                                         <div class="fruit_timeline"></div>
                                     </div>
                                     <div class="fruit_video">
-                                        <video autoplay controls>
-                                            <source src="../assets/video/plum.mp4" type="video/mp4" />
+                                        <video controls>
+                                            <source src="@/assets/video/plum.mp4" type="video/mp4" />
                                         </video>
                                     </div>
                                     <div class="fruit_Q">
@@ -92,12 +100,40 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- knowledge_blog -->
+                                <div class="bk_ct bk_ct_left_2">
+                                    <h2>果農日誌</h2>
+                                    <div class="bk_blog_line1"></div>
+                                    <div class="bk_blog_line2"></div>
+                                    <div id="bk_blog_knowledge">
+                                        <p>2020-04-26</p>
+                                        <h3>“酸澀到芳香，望梅止渴？”</h3>
+                                        <div class="bk_blog_reporter">
+                                            <div class="bk_blog_rpt_img">
+                                                <img src="" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="bk_blog_img">
+                                           <img src="@/assets/book_img/spring/plum/plum03.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div id="bk_blog_content">
+                                        <p>白石湖是大台北難得仍保存農業風味的鄉村地區，當地多產白色沉積砂岩石塊故而得名，近年轉型成為休閒農業區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，絡繹不絕的人潮湧入內湖一帶的草莓園。我們一早就來到莓圃休閒農園，是個擁有果園、菜園和庭園咖啡等多元場域，其中溫室草莓園吸引家長帶著孩子體驗採果樂，不用擔心腳底褲管沾到泥巴。特別提醒台北內湖的莓園幾乎是假日上午11點開放，當天採摘到一定數量便掛上「本日已採完」的告示牌，若想採草莓的朋友建議早點排隊。
+                                        </p>
+                                    </div>
+                                    <button>
+                                        <a href>前往農民日誌</a>
+                                    </button>
+                                </div>
+                                <!-- knowledge_market -->
+                                <div class="bk_ct bk_ct_right_2"></div>
                             </div>
+
                             <!-- 右切換按鈕 -->
                             <div class="Change_Button">
                                 <div class="pagepaper"></div>
                                 <div class="pagepaper">
-                                    <div class="page_button Pbutton_left"></div>
+                                    <div class="page_button Pbutton_right"></div>
                                 </div>
                                 <div class="pagepaper"></div>
                             </div>
@@ -113,6 +149,8 @@
 </template>
 <script>
 import Footer from "../layout/footer";
+import "@/book";
+
 export default {
     components: {
         Footer

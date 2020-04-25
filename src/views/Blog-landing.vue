@@ -1,25 +1,25 @@
 <template>
   <div style="padding-top:3%;">
-    <img style="width:100%" src="..\assets\blog-img\blog-bar.png" /><br />
+    <img style="width:100%" src="@/assets/blog-img/blog-bar.png" /><br />
     <div class="blog-landing-container">
       <div>
         <div>
-          <img style="padding:10px" src="..\assets\blog-img\blog-logo.png" />
+          <img style="padding:10px" src="@/assets/blog-img/blog-logo.png" />
         </div>
         <div>
           <div>
             <div>
-              <img src="..\assets\blog-img\blog-dot.png" alt="" />
+              <img src="@/assets/blog-img/blog-dot.png" alt="" />
               <span> </span>
               <span> 旅遊</span>
             </div>
             <div>
-              <img src="..\assets\blog-img\blog-dot.png" alt="" />
+              <img src="@/assets/blog-img/blog-dot.png" alt="" />
               <span> </span>
               <span> 水果知識</span>
             </div>
             <div>
-              <img src="..\assets\blog-img\blog-dot.png" alt="" />
+              <img src="@/assets/blog-img/blog-dot.png" alt="" />
               <span> </span>
               <span> 農民樂</span>
             </div>
