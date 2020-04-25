@@ -5,6 +5,7 @@ $color2: #007552;
 $color3: #f7c845;
 $color4: #fbf8ef;
 $color5: #ffa978;
+
 //大本體
 .wrapper {
   // border: 1px solid red;
@@ -35,19 +36,23 @@ $color5: #ffa978;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
   .search_logo {
     transform: translate(60px, 57px);
   }
-  div {
-  }
+
+  div {}
+
   .market {
     transform: translate(-20px, -50px);
   }
 }
+
 //搜尋列表
 .search-wrapper {
   display: flex;
   justify-content: space-around;
+
   .search-section {
     height: 41px;
     width: 616px;
@@ -55,13 +60,16 @@ $color5: #ffa978;
     background-color: white;
     border-radius: 20px;
     transform: translateY(-20px);
+
     .searchbar {
       .searchbar_main {
         display: flex;
+
         .searchbar-input {
           padding-left: 10px;
           display: flex;
           width: 100%;
+
           .searchbar-input_input {
             border: none;
             background-color: transparent;
@@ -69,6 +77,7 @@ $color5: #ffa978;
             padding: 0;
           }
         }
+
         .search_btn {
           height: 34px;
           padding: 0 15px;
@@ -80,15 +89,17 @@ $color5: #ffa978;
           overflow: hidden;
           border: none;
           background-color: transparent;
-          .search_icon {
-          }
+
+          .search_icon {}
         }
       }
     }
+
     .hot-words {
       .hot-words_list {
         padding-left: 10px;
         margin-top: 11px;
+
         .hot-words_item {
           font-size: 14px;
           text-decoration: none;
@@ -103,6 +114,7 @@ $color5: #ffa978;
 //條件篩選aside
 .shop_container {
   font-size: 0;
+
   .filter-panel {
     background-color: #007552;
     color: white;
@@ -110,45 +122,55 @@ $color5: #ffa978;
     position: relative;
     float: left;
     height: 100vh;
+
     .mountain {
       position: absolute;
       top: -25px;
     }
+
     .filter-status {
       display: flex;
       background-color: #f7c845;
       padding: 20px 0;
       width: 160px;
+
       .filter-status_text {
         font-size: 16px;
         font-weight: bold;
         letter-spacing: 0.5px;
       }
     }
+
     .filter-group {
       border-bottom: 1px solid white;
       padding: 20px 0;
+
       //   @include ts-center(16, 18);
       .filter-group_header {
         margin-bottom: 10px;
       }
+
       .folding-items {
+
         // display: flex;
         // justify-content: flex-end;
         // flex-direction: column;
         .checkbox-filter {
           padding: 8px 0;
           line-height: 20px;
+
           .checkbox {
             .checkbox__control {
               //   display: flex;
               //   justify-content: center;
             }
+
             input {
               margin: 0 10px 0 0;
               width: 20px;
               height: 20px;
             }
+
             .checkbox_label {
               @include ts-center(16);
             }
@@ -170,10 +192,12 @@ $color5: #ffa978;
   color: white;
   position: relative;
   height: 100vh;
+
   .mountain {
     position: absolute;
     top: -25px;
   }
+
   .hot_commodity_filter-status {
     display: flex;
     background-color: #f7c845;
@@ -181,16 +205,18 @@ $color5: #ffa978;
     width: 160px;
     position: relative;
     right: 10px;
-    img {
-    }
+
+    img {}
+
     .hot_commoditystatus_text {
       display: flex;
       align-items: center;
     }
   }
-  div {
-  }
+
+  div {}
 }
+
 //商品容器
 .search-item-result_items {
   display: flex;
@@ -198,52 +224,63 @@ $color5: #ffa978;
   // border: $border;
   justify-content: space-around;
   width: 900px;
+
   //商品卡
   .commodity {
     border: 2px solid #007552;
     font-size: 0;
     margin: 20px 0;
-    .card_img_box {
-    }
+
+    .card_img_box {}
+
     .card_content {
       padding: 10px;
+
       .commodity_title {
         font-size: 18px;
 
-        .commodity_title_text {
-        }
+        .commodity_title_text {}
       }
     }
+
     .card_tag {
       display: flex;
       align-items: center;
+
       .tag_icon {
         margin-right: 10px;
       }
+
       .card_tag_text {
         font-size: 14px;
         color: #a9a9a9;
         line-height: 24px;
       }
     }
+
     .card_price {
       font-size: 16px;
       text-align: right;
+
       .money {
         line-height: 30px;
       }
+
       .money::before {
         content: "$";
         padding: 0 5px;
       }
+
       .money::after {
         content: " / 包";
       }
     }
+
     .buy {
       display: flex;
       justify-content: space-around;
       margin: 10px 0;
+
       .card_btn {
         font-size: 16px;
         border: 1px solid #007552;
@@ -253,10 +290,11 @@ $color5: #ffa978;
     }
   }
 }
+
 //圖片相關
 .blog_line_box {
   text-align: center;
   margin: 25px 0;
-  .blog_line {
-  }
+
+  .blog_line {}
 }
