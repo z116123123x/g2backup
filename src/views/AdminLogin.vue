@@ -45,6 +45,6 @@
 </template>
 
 <script>
-import "@/adminLogin";
+import "@/js/adminLogin";
 export default {};
 </script>

@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <BtnMore />
+        <ButtonMore />
         <div id="knowledge_title">
           <img src="../assets/knowledgetitle.svg" alt />
         </div>
@@ -64,7 +64,7 @@
             </div>
           </div>
         </div>
-        <BtnMore msg="前往購物" />
+        <ButtonMore msg="前往購物" />
       </div>
       <div id="blog_container">
         <div id="blog_title">
@@ -90,7 +90,7 @@
               <span>水果知識</span>
             </div>
           </div>
-          <BtnMore />
+          <ButtonMore />
         </div>
       </div>
       <div id="member_container">
@@ -100,18 +100,18 @@
         <div id="member_page">
           <img src="../assets/memberpic.png" alt="" />
         </div>
-        <BtnMore />
+        <ButtonMore />
       </div>
     </main>
   </div>
 </template>
 <script>
-import BtnMore from "@/components/btn-more";
+// import BtnMore from "@/components/btn-more";
 
 export default {
-  name: "HelloWorld",
-  components: {
-    BtnMore,
-  },
+//   name: "HelloWorld",
+//   components: {
+//     BtnMore,
+//   },
 };
 </script>
