@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top:3%;">
+  <div style="padding-top:5%;">
     <img style="width:100%" src="../assets/blog-img/blog-bar.png" /><br />
     <div class="blog-landing-container">
       <div>
@@ -98,10 +98,29 @@
             </div>
           </div>
           <div>
-            <img style="margin-top:30%;width:80%" src="@/assets/blog-img/blog-trapimg1.png" />
-            <img style="width:80%;" src="@/assets/blog-img/blog-trapimg2.png" />
-            <img style="width:80%;" src="@/assets/blog-img/blog-trapimg3.png" />
-            <img style="width:80%;" src="@/assets/blog-img/blog-trapimg4.png" />
+            <img
+              style="width:80%;margin-top:20px;"
+              src="@/assets/blog-img/blog-trapimg1.png"
+            />
+            <img
+              style="width:80%;margin-top:20px;"
+              src="@/assets/blog-img/blog-trapimg2.png"
+            />
+            <img
+              style="width:80%;margin-top:20px;"
+              src="@/assets/blog-img/blog-trapimg3.png"
+            />
+            <img
+              style="width:80%;margin-top:20px;"
+              src="@/assets/blog-img/blog-trapimg4.png"
+            />
+          </div>
+        </div>
+        <div>
+          <div>
+            <span style="margin-right:5px"> 留言5筆 </span>
+            <img src="@/assets/blog-img/blog-thumb.png" alt="" />
+            <span style="color:#62bc5a"> 301 </span>
           </div>
         </div>
       </div>
@@ -149,12 +168,14 @@
   display: grid;
   grid-template-columns: 0.3fr 1fr;
   > div:nth-child(1) {
+    //會員區
     background-color: #ecdeb6;
     border-right: solid #007552 2px;
     > div:nth-child(1) {
+      //蓬蓬姨
       text-align: center;
       display: grid;
-      grid-template-columns: 0.5fr 1fr 1fr;
+      grid-template-columns: 0.5fr 1.2fr 1fr;
       padding: 20px;
       padding-top: 30%;
       > div:nth-child(2) {
@@ -183,10 +204,11 @@
     }
   }
   > div:nth-child(2) {
+    //文章區
     > div:nth-child(1) {
       display: grid;
       grid-template-columns: 1fr;
-      border: goldenrod 3px solid;
+      // border: goldenrod 3px solid;
       padding: 50px;
     }
     > div:nth-child(2) {
@@ -209,12 +231,27 @@
         }
       }
       > div:nth-child(2) {
-        border: solid 2px darkblue;
+        // border: solid 2px darkblue;
         text-align: center;
         background-image: url("../assets/blog-img/blog-trapezoid.png");
         background-size: cover;
+        padding-top: 70%;
         position: relative;
         bottom: 7%;
+      }
+    }
+    > div:nth-child(3) {
+      border-top: 2px solid #007552;
+      border-bottom: 2px solid #007552;
+      font-size: 20px;
+      padding-left: 10%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      >div:nth-child(1){
+        display: flex;
+        align-content: flex-end;
+        align-items: flex-end;
+        flex-wrap: wrap;
       }
     }
   }
