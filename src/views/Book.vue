@@ -6,10 +6,10 @@
                 <div id="book_left">
                     <div class="bk_left">
                         <div class="bk_left_img">
-                            <img src="../assets/book_img/bookRighPage_img1t.svg" />
+                            <img src="@/assets/book_img/bookRighPage_img1t.svg" />
                         </div>
                         <div class="bk_right_img">
-                            <img src="../assets/book_img/bookRightPage_img2.svg" />
+                            <img src="@/assets/book_img/bookRightPage_img2.svg" />
                         </div>
                     </div>
                 </div>
