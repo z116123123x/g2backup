@@ -15,13 +15,14 @@
             <div class="info">
                 <ul>
                     <li><router-link to="/member/information">個人資料修改</router-link></li>
-                    <li><router-link to="/member/order">訂單管理</router-link></li>
-                    <li><router-link to="/member/track">追蹤名單管理</router-link></li>
+                    <li><router-link to="/member/order">商品管理</router-link></li>
+                    <li><router-link to="/member/track">日誌管理</router-link></li>
+                    <li><router-link to="/member/track">訂單查詢</router-link></li>
                 </ul>
             </div>
             <div class="farm_button">
                 <div class="farm">
-                    <router-link to="/member/beFarm"><p>成為果農</p></router-link>
+                    <p>成為果農</p>
                 </div>
             </div>
         </aside>

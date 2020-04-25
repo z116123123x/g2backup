@@ -1,5 +1,5 @@
 div.contain {
-    height: 100vh;
+    height: 167vh;
     div.track {
       display: inline-block;
       background-color: #FBF8EF;
@@ -28,10 +28,22 @@ div.contain {
             background-color: white;
             box-shadow: 10px -9px #007552;
             width: 27%;
+            >.front_top{
+              >.frontimg{
+                width: 100px;
+                height: 100px;
+                padding: 30px;
+                text-align: center;
+                >img{
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
             >.front_bottom{
                 display: inline-block;
                 text-align: start;
-                padding: 50px 9px;
+                padding: 5px 9px;
             }
             .front_button{
                 display: block;
@@ -42,6 +54,24 @@ div.contain {
                     padding-right: 20px;
                 }
             }
+            // >.cardinfo{
+            //   display: block;
+            //   border: 3px solid #F7C845;
+            //   background-color: white;
+            //   >.top{
+            //     display: inline-block;
+            //     text-align: start;
+            //     >.imgbox{
+            //       display: inline-block;
+            //       width: 50px;
+            //       height: 50px;
+            //       >img{
+            //         width: 100%;
+            //         height: 100%;
+            //       }
+            //     }
+            //   }
+            // }
           }
   
         }
