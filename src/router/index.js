@@ -1,13 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '@/views/Home';
 
 Vue.use(VueRouter);
 
 const routes = [{
   path: '/',
   name: 'Home',
-  component: Home,
+  component: () => import("@/views/Home.vue"),
 },
 {
   path: '/book',
@@ -33,19 +32,28 @@ const routes = [{
   path: '/member',
   name: 'Member',
   component: () => import("@/views/Member.vue"),
-  children: [{
-    path: "track",
-    component: () => import("@/views/track.vue"),
-  },
-  {
-    // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
-    path: "information",
-    component: () => import("@/views/Information.vue"),
-  },
-  {
-    path: "order",
-    component: () => import("@/views/Order.vue"),
-  }
+  children: [
+    {
+      // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
+      path: "information",
+      name: "Information",
+      component: () => import("@/views/MemberInfo.vue"),
+    },
+    {
+      path: "update",
+      name: "Update",
+      component: () => import("@/views/MemberUpdate.vue"),
+    },
+    {
+      path: "order",
+      name: "Order",
+      component: () => import("@/views/MemberOrder.vue"),
+    },
+    {
+      path: "track",
+      name: "Track",
+      component: () => import("@/views/MemberTrack.vue"),
+    }
   ]
 },
 {

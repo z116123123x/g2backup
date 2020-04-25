@@ -37,7 +37,7 @@
           </li>
           <li class="dropdown">
             <div class="title">
-              <router-link class="page" to="/Shop">
+              <router-link class="page" to="/shop">
                 <div class="title_pic">
                   <img src="@/assets/market.svg" alt />
                 </div>
@@ -53,7 +53,7 @@
           </li>
           <li class="dropdown">
             <div class="title">
-              <router-link class="page" to="/Blog-landing">
+              <router-link class="page" to="/blog-landing">
                 <div class="title_pic">
                   <img src="@/assets/blog.svg" alt />
                 </div>
@@ -69,7 +69,7 @@
           </li>
           <li class="dropdown">
             <div class="title">
-              <router-link class="page" to="/Member">
+              <router-link class="page" to="/member/inforemation">
                 <div class="title_pic">
                   <img src="@/assets/membercenter.svg" alt />
                 </div>
@@ -85,7 +85,7 @@
           </li>
           <li class="dropdown">
             <div class="title">
-              <router-link class="page" to="/AdminLogin">
+              <router-link class="page" to="/adminLogin">
                 <div class="title_pic">
                   <img src="@/assets/knowledge.svg" alt />
                 </div>

@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 
 //註冊全域共用元件
