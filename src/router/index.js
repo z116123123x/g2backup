@@ -35,7 +35,10 @@ const routes = [{
   name: 'Member',
   component: () => { import("@/views/Member.vue"); },
   children: [{
-
+    path: "track",
+    component: () => { import("@/views/track.vue"); },
+  },
+  {
     // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
     path: "information",
     component: () => { import("@/views/Information.vue"); },
