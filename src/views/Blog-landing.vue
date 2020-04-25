@@ -71,9 +71,9 @@
         <div>
           <div style="justify-self:end; padding:10px 100px 0px 0px;">
             <img src="@/assets/blog-img/blog-tag.png" alt="" />
-            <span>草莓</span>
+            <span> 草莓 </span>
             <img src="@/assets/blog-img/blog-tag.png" alt="" />
-            <span>旅遊日誌</span>
+            <span> 旅遊日誌 </span>
           </div>
           <div style="font-size:15px;">2020-04-10</div>
           <div style="padding-top:10px;font-size:20px;">
@@ -81,10 +81,10 @@
               >“ 親子輕旅行 台北白石湖採草莓、踏青一日遊”</span
             >
           </div>
-          <div style="padding:30px 10px 30px 10px;">
+          <div style="padding:30px 0px 30px 0px;text-align: center;">
             <img src="@/assets/blog-img/blog-bendingbar2.png" alt="" />
           </div>
-          <div>
+          <div style="text-align: center;">
           <img src="@/assets/blog-img/blog-collection.png" alt="">
           </div>
         </div>
@@ -129,7 +129,6 @@
   width: 95%;
   margin-left: 2.5%;
   border: solid #007552 2px;
-
   margin-top: 1%;
   display: grid;
   grid-template-columns: 0.3fr 1fr;
