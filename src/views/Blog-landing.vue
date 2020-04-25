@@ -181,8 +181,8 @@
           <form action="" method="get">
             <label style="font-size:20px;" for=""> 留言: 
               <textarea style="margin-left:3%" name="" id="" cols="40" rows="7"></textarea>
-            </label>
-            <button-more></button-more>
+            </label><br>
+            <button-more style="width:90px;text-align:center;margin-top:30px;margin-left:30%;font-size:15px;" msg="送出"></button-more>
           </form>
         </div>
       </div>
@@ -191,6 +191,7 @@
 </template>
 <style lang="scss">
 .blog-landing-container {
+  
   padding-top: 1%;
   width: 95%;
   margin-left: 2.5%;
