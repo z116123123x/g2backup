@@ -39,7 +39,7 @@
           </div>
           <div>
             <span
-              style="background-color: #F8c7f1;padding:3px;font-size:15px;margin-bottom: 10px;display:inline-block;"
+              style="padding:3px;font-size:15px;margin-bottom: 10px;display:inline-block;"
               >蓬蓬草莓姨</span
             >
             <div>
@@ -77,7 +77,7 @@
           </div>
           <div style="font-size:15px;">2020-04-10</div>
           <div style="padding-top:10px;font-size:20px;">
-            <span style="background-color: #f8c7f1;"
+            <span style="background-color: #ffd3c1;"
               >“ 親子輕旅行 台北白石湖採草莓、踏青一日遊”</span
             >
           </div>
@@ -98,7 +98,10 @@
             </div>
           </div>
           <div>
-
+            <img style="margin-top:30%;width:80%" src="@/assets/blog-img/blog-trapimg1.png" />
+            <img style="width:80%;" src="@/assets/blog-img/blog-trapimg2.png" />
+            <img style="width:80%;" src="@/assets/blog-img/blog-trapimg3.png" />
+            <img style="width:80%;" src="@/assets/blog-img/blog-trapimg4.png" />
           </div>
         </div>
       </div>
@@ -170,7 +173,6 @@
       padding-top: 20%;
       justify-items: center;
       > a {
-        background-color: #f8c7f1;
         text-align: center;
         line-height: 1.5;
         margin-top: 10px;
@@ -208,7 +210,7 @@
       }
       > div:nth-child(2) {
         border: solid 2px darkblue;
-        text-align: right;
+        text-align: center;
         background-image: url("../assets/blog-img/blog-trapezoid.png");
         background-size: cover;
         position: relative;
