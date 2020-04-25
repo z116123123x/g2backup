@@ -85,8 +85,20 @@
             <img src="@/assets/blog-img/blog-bendingbar2.png" alt="" />
           </div>
           <div style="text-align: center;">
-          <img src="@/assets/blog-img/blog-collection.png" alt="">
+            <img src="@/assets/blog-img/blog-collection.png" alt="" />
           </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              白石湖是大台北難得仍保存農業風味的鄉村地區，當地多產白色沉積砂岩石塊故而得名，近年轉型成為休閒農業區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，絡繹不絕的人潮湧入內湖一帶的草莓園。我們一早就來到莓圃休閒農園，是個擁有果園、菜園和庭園咖啡等多元場域，其中溫室草莓園吸引家長帶著孩子體驗採果樂，不用擔心腳底褲管沾到泥巴。特別提醒台北內湖的莓園幾乎是假日上午11點開放，當天採摘到一定數量便掛上「本日已採完」的告示牌，若想採草莓的朋友建議早點排隊。採完草莓不過癮，還可以參加糖霜餅乾手做課程。工作人員拿出台北世大運吉祥物「熊讚」草莓餅乾，孩子們吵著也要做一隻熊讚帶回家。「我們先用軟糖霜劃出外圍形狀，從中間一圈一圈慢慢補滿，擠完糖霜後，餅乾表面可能會不平，再利用牙籤撥勻，或用手掌輕拍均勻」，大家跟著老師依樣畫葫蘆，以牙籤沾芝麻妝點眼睛、白糖霜親手描繪各自作品，創作他們心目中的熊讚。除了草莓，莓圃也提供其他蔬果的體驗，6-11月有百香果、火龍果、番茄；7-8月則有水果玉米、小番茄等，讓小朋友一整年都可以體驗小農夫的樂趣。大人們也可以坐在綠意盎然的庭園休憩用餐，享受田園悠閒的氛圍。
+            </div>
+            <div>
+              白石湖是大台北難得仍保存農業風味的鄉村地區，當地多產白色沉積砂岩石塊故而得名，近年轉型成為休閒農業區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，絡繹不絕的人潮湧入內湖一帶的草莓園。我們一早就來到莓圃休閒農園，是個擁有果園、菜園和庭園咖啡等多元場域，其中溫室草莓園吸引家長帶著孩子體驗採果樂，不用擔心腳底褲管沾到泥巴。特別提醒台北內湖的莓園幾乎是假日上午11點開放，當天採摘到一定數量便掛上「本日已採完」的告示牌，若想採草莓的朋友建議早點排隊。採完草莓不過癮，還可以參加糖霜餅乾手做課程。工作人員拿出台北世大運吉祥物「熊讚」草莓餅乾，孩子們吵著也要做一隻熊讚帶回家。「我們先用軟糖霜劃出外圍形狀，從中間一圈一圈慢慢補滿，擠完糖霜後，餅乾表面可能會不平，再利用牙籤撥勻，或用手掌輕拍均勻」，大家跟著老師依樣畫葫蘆，以牙籤沾芝麻妝點眼睛、白糖霜親手描繪各自作品，創作他們心目中的熊讚。除了草莓，莓圃也提供其他蔬果的體驗，6-11月有百香果、火龍果、番茄；7-8月則有水果玉米、小番茄等，讓小朋友一整年都可以體驗小農夫的樂趣。大人們也可以坐在綠意盎然的庭園休憩用餐，享受田園悠閒的氛圍。
+            </div>
+          </div>
+
+          <div></div>
         </div>
       </div>
     </div>
@@ -133,8 +145,8 @@
   display: grid;
   grid-template-columns: 0.3fr 1fr;
   > div:nth-child(1) {
-      background-color: #ecdeb6;
-      border-right: solid #007552 2px;
+    background-color: #ecdeb6;
+    border-right: solid #007552 2px;
     > div:nth-child(1) {
       text-align: center;
       display: grid;
@@ -168,11 +180,28 @@
     }
   }
   > div:nth-child(2) {
-    > div {
+    > div:nth-child(1) {
       display: grid;
       grid-template-columns: 1fr;
       border: goldenrod 3px solid;
       padding: 50px;
+    }
+    > div:nth-child(2) {
+      display: grid;
+      grid-template-columns: 1fr 0.7fr;
+      > div {
+        display: grid;
+        grid-template-columns: 1fr;
+        > div:nth-child(1),div:nth-child(2) {
+          font-size: 15px;
+          column-width: 20rem;
+          padding-top: 20%;
+          padding-left: 10%;
+          letter-spacing: .2rem;
+          line-height: 1.5;
+        }
+        
+      }
     }
   }
 }
