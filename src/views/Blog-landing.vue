@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top:5%;">
+  <div style="padding-top:5%;background-color: #FBF8EF;">
     <img style="width:100%" src="@/assets/blog-img/blog-bar.png" /><br />
     <div class="blog-landing-container">
       <div>
