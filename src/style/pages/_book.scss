@@ -127,6 +127,7 @@
          .bookContain {
             margin-top: 30px;
 
+            //tag
             .book_tag {
                // border: 1px solid rgb(43, 255, 0);
                box-sizing: border-box;
@@ -150,6 +151,7 @@
                   padding: 10px;
                   text-align: center;
                   font-size: 1.6rem;
+                  transition: 0.5s;
 
                   &:hover {
                      top: 0;
@@ -173,6 +175,7 @@
                      text-align: center;
                      transform: translate(0, 10px);
                      font-size: 1.6rem;
+                     transition: 0.5s;
 
                      &:nth-child(1) {
                         background-color: #f38e8e;
@@ -237,41 +240,43 @@
                      height: 100%;
                      position: relative;
 
-                     .Pbutton_right {
+                     .Pbutton_left {
 
-                        &:hover{
-                           background-color: #ffe29e ;
+                        &:hover {
+                           background-color: #ffe29e;
                         }
 
                         &::before {
                            content: "";
                            position: absolute;
                            top: 50%;
-                           left: 50%;
+                           left: 55%;
                            transform: translate(-50%, -50%);
                            background-image: url("../assets/book_img/turn_leftpage.svg");
+                           background-repeat: no-repeat;
                            width: 30px;
                            height: 40px;
                         }
                      }
 
-                     .Pbutton_left {
+                     .Pbutton_right {
 
-                        &:hover{
-                           background-color: #ffe29e ;
+                        &:hover {
+                           background-color: #ffe29e;
                         }
 
                         &::before {
                            content: "";
                            position: absolute;
                            top: 30%;
-                           left: 0%;
+                           right: 30%;
 
-                          transform: translateY(-50%);
-                           background-image: url("../assets/book_img/turn_leftpage.svg");
+                           background-image: url("../assets/book_img/turn_rightpage.svg");
+                           background-repeat: no-repeat;
                            width: 30px;
                            height: 40px;
-                           transform: rotate(180deg);
+                           transform: translateX(50%);
+
                         }
                      }
 
@@ -292,8 +297,10 @@
 
                }
 
+
                // bookcontent書籍內容
                #bk_content {
+
                   // font-size: 0;
                   border: 1px solid $min-color;
                   box-sizing: border-box;
@@ -313,6 +320,7 @@
                      background-repeat: no-repeat;
                      width: 7%;
                      height: 10%;
+
 
                   }
 
@@ -342,7 +350,9 @@
                      vertical-align: top;
                   }
 
+
                   .bk_ct_left {
+                     display: none; /////這裏
                      font-size: 0;
 
                      .fruit_start {
@@ -461,7 +471,8 @@
                            line-height: 1.8;
                            vertical-align: top;
                            // 欄寬
-                           column-width: 15rem;
+                           //column-width: 15rem;
+                           column-count: 2; 
 
                            box-sizing: border-box;
                            display: inline-block;
@@ -476,6 +487,7 @@
 
                   .bk_ct_right {
                      font-size: 0;
+                     display: none; /////這裏
 
                      &::before {
                         content: "";
@@ -603,6 +615,119 @@
                      }
                   }
 
+                  //部落格
+                  .bk_ct_left_2 {
+                     border: 1px solid blue;
+                     box-sizing: border-box;
+                     width: 50%;
+                     //display: none;
+
+                     h2 {
+                        //border: 1px solid red;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        color: $min-color;
+                        margin: 20px 0 5px;
+                        padding-left: 15px;
+                     }
+                     .bk_blog_line1{
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 2px solid $min-color;
+                        margin-bottom: 3px;
+                     }
+                     .bk_blog_line2{
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: .5px solid $min-color;
+                     }
+                     #bk_blog_knowledge{
+                        border:1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 42%;
+                        p{
+                          // border: 1px solid blue;
+                           font-size: 1.2rem;
+                           padding-left: 30px;
+                           margin-top: 5px;
+                           color: gray;
+                        }
+
+                        h3{
+                           //border: 1px solid red;
+                           font-size: 2rem;
+                           font-weight: bolder;
+                           padding-left: 15px;
+                           margin-bottom: 5px;
+                        }
+                        .bk_blog_reporter{
+                           border: 1px solid red;
+                           box-sizing: border-box;
+                           display: inline-block;
+                          vertical-align: top;
+                          margin: 0 15px;
+                           width: 40%;
+                           .bk_blog_rpt_img{
+                              border: 1px solid red;
+                              box-sizing: border-box;
+                              display: inline-block;
+                              width: 40px;
+                              height: 40px;
+                              border-radius: 50%;
+
+                           }
+                        }
+                        .bk_blog_img{
+                           //border: 1px solid purple;
+                           box-sizing: border-box;
+                           display: inline-block;
+                           height: 60%;
+                           width: 50%;
+                           overflow: hidden;
+
+                           img{
+                              width: 100%;
+                           }
+                        }
+                     }
+
+                     #bk_blog_content{
+                        border:1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 38%;
+
+                        p{
+                              border: 1px solid blue;
+                              font-size: 1.4rem;
+                              // padding: 0px;
+                              margin-left: 15px;
+                              white-space: pre-wrap;
+                              line-height: 1.8;
+                              vertical-align: top;
+                              
+                              //欄位數
+                              column-count: 2; 
+   
+                              box-sizing: border-box;
+                              display: inline-block;
+                              width: 95%;
+                              height: 100%;
+                        }
+                     }
+
+
+                  }
+
+                  //市集
+                  .bk_ct_right_2 {
+                     border: 1px solid blue;
+                     box-sizing: border-box;
+                     width: 50%;
+
+                  }
+
 
                }
 
@@ -620,4 +745,13 @@
    position: relative;
    top: -110%;
 
+}
+
+.box3 {
+   width: 100px;
+   height: 100px;
+   background-color: green;
+   position: relative;
+   top: -700px;
+   left: 0;
 }
