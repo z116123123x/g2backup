@@ -4,7 +4,7 @@ body{
 div.contain{
     width: 100%;
     margin: 0 auto;
-    height: 97.1vh;
+    height: 110vh;
     aside.left{
         display: inline-block;
         color: #007552;
@@ -12,43 +12,45 @@ div.contain{
         height: 100%;
         vertical-align: top;
         background-color: #FFD3C1;
-    }
-    aside.left>.head_portrait{
-        text-align: center;
-        line-height: 2;
-        padding-top: 20px;
-        margin-bottom: 40px;
-    }
-    aside.left>.head_portrait>.head_img_box{
-        width: 100px;
-        margin: 0 auto;
-    }
-    aside.left>.head_portrait>ul{
-        padding-right: 18px;
-    }
-    aside.left>.info{
-        margin-bottom: 40px;
-    }
-    aside.left>.info>ul>li{
-        display: inline-block;
-        text-align: start;
-        line-height: 2;
-        margin-left: 45px;
-    }
-    aside.left>.info>ul>li>a{
-        text-decoration: none;
-        color: #007552;
-    }
-    aside.left>.farm_button{
-        width: 80px;
-        color: white;
-        background-color: #007552;
-        border-radius: 5px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 5px;
-        padding-right: 15px;
-        margin-left: 50px;
-
+        >.head_portrait{
+            text-align: center;
+            line-height: 2;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            >.head_img_box{
+                width: 100px;
+                margin: 0 auto;
+            }
+            >ul{
+                padding-right: 18px;
+            }
+        }
+        >.info{
+            margin-bottom: 40px;
+            >ul{
+                >li{
+                    display: inline-block;
+                    text-align: start;
+                    line-height: 2;
+                    margin-left: 45px;
+                    >a{
+                        text-decoration: none;
+                        color: #007552;
+                    }
+                }
+            }
+        }
+        >.farm_button{
+            width: 80px;
+            color: white;
+            background-color: #007552;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 15px;
+            margin-left: 50px;
+    
+        }
     }
 }

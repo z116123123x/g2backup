@@ -1,92 +1,63 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import Home from '@/views/Home';
 
 Vue.use(VueRouter);
 
 const routes = [{
-    path: '/',
-    name: 'Home',
-    component: Home,
+  path: '/',
+  name: 'Home',
+  component: Home,
+},
+{
+  path: '/book',
+  name: 'Book',
+  component: () => import("@/views/Book.vue"),
+},
+{
+  path: '/blog-landing',
+  name: 'Blog-landing',
+  component: () => import("@/views/Blog-landing.vue"),
+},
+{
+  path: '/blog-post',
+  name: 'Blog-post',
+  component: () => import("@/views/Blog-post.vue"),
+},
+{
+  path: '/shop',
+  name: 'Shop',
+  component: () => import("@/views/Shop.vue"),
+},
+{
+  path: '/member',
+  name: 'Member',
+  component: () => import("@/views/Member.vue"),
+  children: [{
+    path: "track",
+    component: () => import("@/views/track.vue"),
   },
   {
-    path: '/book',
-    name: 'Book',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import( /* webpackChunkName: "about" */ '../views/Book.vue');
-    },
+    // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
+    path: "information",
+    component: () => import("@/views/Information.vue"),
   },
   {
-    path: '/components',
-    name: 'Components',
-    component: function () {
-      return import('../views/Components.vue');
-    },
-  },
-  {
-    path: '/blog-landing',
-    name: 'Blog-landing',
-    component: function () {
-      return import('../views/Blog-landing.vue');
-    },
-  },
-  {
-    path: '/blog-post',
-    name: 'Blog-post',
-    component: function () {
-      return import('../views/Blog-post.vue');
-    }
-  },
-  {
-
-    path: '/shop',
-    name: 'Shop',
-    component: function () {
-      return import('../views/Shop.vue');
-    }
-  }, 
-  {
-    path: '/member',
-    name: 'Member',
-    component: function () {
-      return import('../views/Member.vue');
-    },
-    children: [{
-
-        path: "information",
-        component: function () {
-
-          return import("@/views/Information.vue");
-        }
-      },
-      {
-
-        path: "order",
-        component: () => {
-
-          return import("@/views/Order.vue");
-        }
-
-      }
-    ]
-  },
-  {
-    path: '/adminLogin',
-    name: 'AdminLogin',
-    component: function () {
-      return import('../views/AdminLogin.vue');
-    }
-  },
-  {
-    path: '/adminLogin',
-    name: 'AdminLogin',
-    component: function () {
-      return import('../views/AdminLogin.vue');
-    }
-  },
+    path: "order",
+    component: () => import("@/views/Order.vue"),
+  }
+  ]
+},
+{
+  path: '/adminLogin',
+  name: 'AdminLogin',
+  component: () => import("@/views/AdminLogin.vue"),
+},
+{
+  path: '/adminManage',
+  name: 'AdminManage',
+  component: () => import("@/views/AdminManage.vue"),
+},
 ];
 
 const router = new VueRouter({
