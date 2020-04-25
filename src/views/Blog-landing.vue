@@ -199,7 +199,7 @@
     width: 95%;
     margin-left: 2.5%;
     display: grid;
-    grid-template-columns: 82% 18%;
+    grid-template-columns: 78% 22%;
     font-size: 20px;
     > div:nth-child(2) {
       gap: 10px;
