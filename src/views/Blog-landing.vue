@@ -30,33 +30,65 @@
     <div class="blog-landing-container2">
       <div>
         <div>
-          <img
-            style="width:100%;"
-            src="@/assets/blog-img/blog-someoneshead.png"
-            alt=""
-          />
-        </div>
-        <div>
-          <span
-            style="background-color: #F4ABE9;padding:3px;font-size:15px;margin-bottom: 10px;display:inline-block;"
-            >蓬蓬草莓姨</span
-          >
           <div>
-            <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
-            <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
-            <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
-            <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
-            <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
+            <img
+              style="width:100%;"
+              src="@/assets/blog-img/blog-someoneshead.png"
+              alt=""
+            />
           </div>
+          <div>
+            <span
+              style="background-color: #F8c7f1;padding:3px;font-size:15px;margin-bottom: 10px;display:inline-block;"
+              >蓬蓬草莓姨</span
+            >
+            <div>
+              <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
+              <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
+              <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
+              <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
+              <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
+            </div>
+          </div>
+          <div>
+            <span
+              style="background-color: #007552;border-radius: 20px;color:#FFF;font-size:15px;"
+              >+追蹤</span
+            >
+          </div>
+          <div style="border-bottom:1px solid #007552; padding-top:10px;"></div>
+          <div style="border-bottom:1px solid #007552; padding-top:10px;"></div>
+          <div style="border-bottom:1px solid #007552; padding-top:10px;"></div>
         </div>
         <div>
-          <span
-            style="background-color: #007552;border-radius: 20px;color:#FFF;font-size:15px;"
-            >+追蹤</span
-          >
+          <a href="">其他文章連結</a>
+          <a href="">其他文章連結</a>
+          <a href="">其他文章連結</a>
         </div>
       </div>
-      <div></div>
+
+      <div>
+        <div>
+          <div style="justify-self:end; padding:10px 100px 0px 0px;">
+            <img src="@/assets/blog-img/blog-tag.png" alt="" />
+            <span>草莓</span>
+            <img src="@/assets/blog-img/blog-tag.png" alt="" />
+            <span>旅遊日誌</span>
+          </div>
+          <div style="font-size:15px;">2020-04-10</div>
+          <div style="padding-top:10px;font-size:20px;">
+            <span style="background-color: #f8c7f1;"
+              >“ 親子輕旅行 台北白石湖採草莓、踏青一日遊”</span
+            >
+          </div>
+          <div style="padding:30px 10px 30px 10px;">
+            <img src="@/assets/blog-img/blog-bendingbar2.png" alt="" />
+          </div>
+          <div>
+          <img src="@/assets/blog-img/blog-collection.png" alt="">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -96,26 +128,52 @@
 .blog-landing-container2 {
   width: 95%;
   margin-left: 2.5%;
-  border: solid #007552 1.5px;
+  border: solid #007552 2px;
 
   margin-top: 1%;
   display: grid;
   grid-template-columns: 0.3fr 1fr;
   > div:nth-child(1) {
-    text-align: center;
-    background-color: #ecdeb6;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr;
-    padding: 20px;
-    padding-top: 30%;
-    > div:nth-child(2) {
-      padding-top: 15px;
-    }
-    > div:nth-child(3) {
-      padding-top: 25px;
-      > span {
-        padding: 10px;
+      background-color: #ecdeb6;
+      border-right: solid #007552 2px;
+    > div:nth-child(1) {
+      text-align: center;
+      display: grid;
+      grid-template-columns: 0.5fr 1fr 1fr;
+      padding: 20px;
+      padding-top: 30%;
+      > div:nth-child(2) {
+        padding-top: 0px;
       }
+      > div:nth-child(3) {
+        padding-top: 15px;
+        > span {
+          padding: 5px;
+        }
+      }
+    }
+    > div:nth-child(2) {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-top: 20%;
+      justify-items: center;
+      > a {
+        background-color: #f8c7f1;
+        text-align: center;
+        line-height: 1.5;
+        margin-top: 10px;
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+      }
+    }
+  }
+  > div:nth-child(2) {
+    > div {
+      display: grid;
+      grid-template-columns: 1fr;
+      border: goldenrod 3px solid;
+      padding: 50px;
     }
   }
 }
