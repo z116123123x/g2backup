@@ -182,6 +182,7 @@
             <label style="font-size:20px;" for=""> 留言: 
               <textarea style="margin-left:3%" name="" id="" cols="40" rows="7"></textarea>
             </label>
+            <button-more></button-more>
           </form>
         </div>
       </div>
