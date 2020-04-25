@@ -145,12 +145,7 @@
     </main>
 </template>
 <script>
-import Footer from "@/layout/footer";
-import "@/book";
+import "@/js/book";
 
-export default {
-    components: {
-        Footer
-    }
-};
+export default {};
 </script>
