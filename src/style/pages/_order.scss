@@ -1,120 +1,260 @@
-body{
-    height: auto;
-}
-div.contain{
+div.contain {
+  height: 100vh;
+  div.Order {
+    display: inline-block;
+    background-color: #FBF8EF;
+    width: 87.2%;
+    height: 100%;
 
-    div.Order{
-        display: inline-block;
-        background-color: #FBF8EF;
-        width: 87.2%;
-        height: 100%;
+    .Order_head {
+      color: #F7C845;
+      margin-top: 40px;
+      margin-left: 40px;
+      font-size: 30px;
     }
-    div.Order>.Order_head{
-        color: #F7C845;
-        margin-top: 40px;
-        margin-left: 40px;
-        font-size: 30px;
-    }
-    div.Order>.Order_bottom{
-        display: block;
-        height: 90.3%;
-        text-align: center;
-    }
-    div.Order>.Order_bottom>.Orderlist{
+
+    .Order_bottom {
+      display: block;
+      height: 90.3%;
+      text-align: center;
+
+      >.Orderlist {
         margin-top: 40px;
         line-height: 2;
-    }
-    div.Order>.Order_bottom>.Orderlist>.list_1{
-        display: inline-block;
-        border: 2px solid #F7C845;
-        background-color: white;
-        text-align: start;
 
-    }
-    div.Order>.Order_bottom>.Orderlist>.list_1>.list_th{
-        display: block;
-        background-color: #F7C845;
-        color: #007552;
-        margin-top: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    div.Order>.Order_bottom>.Orderlist>.list_1>.list_td{
-        border: 1px solid #F7C845;
-        background-color: white;
-        display: block;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    div.Order>.Order_bottom>.Orderlist>.list_1>.list_th>p{
-        display: inline-block;
-        padding:0 20px;
-    }
-    div.Order>.Order_bottom>.Orderlist>.list_1>.list_td>p{
-        display: inline-block;
-        padding:0 25px;
-    }
-    div.Order>.Order_bottom>.Orderlist>.list_1>.listnum>p , div.Order>.Order_bottom>.Orderlist>.list_1>.list_slide>p{
-        padding-left: 10px;
-        color: #007552;
-    }
-    // div.Order>.Order_bottom>.Orderlist>.list_1>span.triangle{
-    //     display: inline-block;
-    //     // border: 10px solid red;
-    //     border-left: 50px solid blue transparent;
-    //     border-right: 50px solid red transparent;
-    //     border-top: 50px solid #007552;
-    //     border-bottom: 0px solid black;
-    //     width: 0px;
-    //     height: 0px;
-    // }
+        >.list_1 {
+          display: inline-block;
+          border: 2px solid #F7C845;
+          background-color: white;
+          text-align: start;
 
-    div.pagination_block{
+          >.list_th {
+            display: block;
+            background-color: #F7C845;
+            color: #007552;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            >p {
+              display: inline-block;
+              padding: 0 20px;
+            }
+          }
+
+          >.list_td {
+            border: 1px solid #F7C845;
+            background-color: white;
+            display: block;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            >p {
+              display: inline-block;
+              padding: 0 25px;
+            }
+          }
+
+          .listnum,
+          .list_slide {
+            >p {
+              padding-left: 10px;
+              color: #007552;
+            }
+          }
+
+          .list_th2 {
+            display: block;
+            background-color: #F7C845;
+            color: #007552;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            >p {
+              display: inline-block;
+              padding: 0 27px;
+            }
+          }
+
+          .list_td2 {
+            border: 1px solid #F7C845;
+            background-color: white;
+            display: block;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            >p {
+              display: inline-block;
+              padding: 0 25px;
+            }
+          }
+
+          .list_td2:last-child {
+            border: 1px solid #F7C845;
+            background-color: white;
+            display: block;
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+
+          .listnum,
+          .list_slide {
+            >p {
+              padding-left: 10px;
+              color: #007552;
+            }
+          }
+          .total{
+            display: block;
+            background-color: #FFD3C1;
+            margin: 30px 20px;
+            >p{
+              text-align: end;
+              padding-right: 10px;
+              color: #007552;
+            }
+            >p:first-child{
+              padding-top: 10px;
+            }
+            >p:last-child{
+              padding-bottom: 10px;
+              color: #CC113C;
+            }
+          }
+          .address{
+            display: block;
+            background-color: #FFD3C1;
+            margin: 30px 20px;
+            >.address_left{
+              display: inline-block;
+              >p{
+                padding-left: 10px;
+              color: #007552;
+              }
+            }
+            >.address_right{
+              display: inline-block;
+              >p{
+                padding-left: 10px;
+                >span{
+                  padding-left: 10px;
+                  color: #CC113C;
+                }
+              }
+              
+            }
+          }
+          .Evaluation{
+            display: block;
+            background-color: #DCE07A;
+            margin: 30px 20px;
+            padding: 10px;
+            >.star{
+              display: block;
+              background-color: #FBF8EF;
+              margin: 10px 30px;
+              text-align: end;
+              >p{
+                display: inline-block;
+                margin-top: 100px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                padding: 0 10px;
+                background-color: #007552;
+                border-radius: 5px;
+                color: white;
+              }
+              >p:hover{
+                background-color: #62B45A;
+                color: white;
+              }
+              >.starimg{
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                padding-top: 30px;
+                margin-right: 20px;
+                vertical-align: top;
+                >img{
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+      .pagination_block {
         display: inline-block;
         margin-top: 20px;
+
+        >ul.pagination {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          font-size: 0;
+
+          >li {
+            display: inline-block;
+
+            >a {
+              display: inline-block;
+              text-decoration: none;
+
+              border: 1px solid #007552;
+              /* 留意 */
+              border-right: 0;
+              /* 留意：將全部的右邊框都移除 */
+
+              text-align: center;
+              padding: 5px 10px;
+              font-size: 1rem;
+              color: black;
+            }
+
+            >a.-on {
+              background-color: #FFD3C1;
+              color: #007552;
+            }
+
+            >a:hover {
+              background-color: #FFD3C1;
+              color: #007552;
+            }
+          }
+
+          >li:first-child>a {
+            display: inline-block;
+            border-radius: 5px 0 0 5px;
+          }
+
+          >li:last-child>a {
+            border-right: 1px solid #007552;
+            border-radius: 0 5px 5px 0;
+          }
+        }
       }
-      div.pagination_block > ul.pagination{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        font-size: 0;
-      }
-      div.pagination_block > ul.pagination > li{
-        display: inline-block;
-      }
-      div.pagination_block > ul.pagination > li > a{
-        display: inline-block;
-        text-decoration: none;
-        
-        border: 1px solid #007552; /* 留意 */
-        border-right: 0;           /* 留意：將全部的右邊框都移除 */
-        
-        text-align: center;
-        padding: 5px 10px;
-        font-size: 1rem;
-        color: black;
-      }
-      
-      /* 留意: 將最後一個 li 裡的 a，右邊框加回來 */
-      /* 留意: 將最後一個 li 裡的 a，加上圓角 */
-      div.pagination_block > ul.pagination > li:last-child > a{
-        border-right: 1px solid #007552;
-        border-radius: 0 5px 5px 0;
-      }
-      /* 留意: 將第一個 li 裡的 a，加上圓角 */
-      div.pagination_block > ul.pagination > li:first-child > a{
-        display: inline-block;
-        border-radius: 5px 0 0 5px;
-      }
-      
-      div.pagination_block > ul.pagination > li > a.-on{
-        background-color: #FFD3C1;
-        color: #0056b3;
-      }
-      
-      div.pagination_block > ul.pagination > li > a:hover{
-        background-color: #FFD3C1;
-        color: #007552;
-      }
+    }
+  }
+
+  // div.Order>.Order_bottom>.Orderlist>.list_1>span.triangle{
+  //     display: inline-block;
+  //     // border: 10px solid red;
+  //     border-left: 50px solid blue transparent;
+  //     border-right: 50px solid red transparent;
+  //     border-top: 50px solid #007552;
+  //     border-bottom: 0px solid black;
+  //     width: 0px;
+  //     height: 0px;
+  // }
+
+
+  /* 留意: 將最後一個 li 裡的 a，右邊框加回來 */
+  /* 留意: 將最後一個 li 裡的 a，加上圓角 */
+
+  /* 留意: 將第一個 li 裡的 a，加上圓角 */
 }
