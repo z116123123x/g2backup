@@ -118,9 +118,24 @@
         </div>
         <div>
           <div>
-            <span style="margin-right:5px"> 留言5筆 </span>
-            <img src="@/assets/blog-img/blog-thumb.png" alt="" />
-            <span style="color:#62bc5a"> 301 </span>
+            <span style="margin-right:30px;"> 留言5筆 </span>
+            <img
+              style="margin-right:10px;"
+              src="@/assets/blog-img/blog-thumb.png"
+              alt=""
+            />
+            <span style="color:#62bc5a;"> 301 </span>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+            <div>
+              <div>howhowhasnofriend</div>
+              <div>2020-4-14 12:00</div>
+            </div>
+            <div>這炒飯好吃?我賣水果欸!?鳳梨炒飯?</div>
+            <img src="@/assets/blog-img/blog-report.png" alt="">
           </div>
         </div>
       </div>
@@ -205,6 +220,7 @@
   }
   > div:nth-child(2) {
     //文章區
+    background-color: #fbf8ef;
     > div:nth-child(1) {
       display: grid;
       grid-template-columns: 1fr;
@@ -241,18 +257,33 @@
       }
     }
     > div:nth-child(3) {
+      //讚數區
       border-top: 2px solid #007552;
       border-bottom: 2px solid #007552;
       font-size: 20px;
       padding-left: 10%;
       padding-top: 20px;
       padding-bottom: 20px;
-      >div:nth-child(1){
+      > div:nth-child(1) {
         display: flex;
-        align-content: flex-end;
-        align-items: flex-end;
+        align-items: center;
         flex-wrap: wrap;
       }
+    }
+    > div:nth-child(4) {//留言區
+      display: grid;
+      grid-template-columns: 1fr;
+      > div {
+        display: grid;
+        grid-template-columns: 10% 20% 60% 10%;
+        align-items: center;
+        >div:nth-child(2){
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+      }
+      }
+      
+      
     }
   }
 }
