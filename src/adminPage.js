@@ -1,6 +1,7 @@
 import Vue from 'vue';
-import App from './App.vue';
+import App from './admin.vue';
 import router from './router';
+import "@/js/components";
 
 import "@/style/main.scss";
 

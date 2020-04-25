@@ -31,9 +31,9 @@ import waterpear01 from "@/assets/waterpear.png";
 import waterpearline01 from "@/assets/waterpearline.png";
 import fruitbox01 from "@/assets/fruitbox.png";
 import fruitboxline01 from "@/assets/fruitboxline.png";
+import { Texture } from "three";
 
 window.addEventListener("load", () => {
-  const home = document.getElementById("home");
 
   $(function() {
     $("div.tab").on("click", function() {
@@ -967,8 +967,10 @@ window.addEventListener("load", () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
 
-  home.addEventListener("click", init);
-  home.addEventListener("click", render);
+  // const home = document.getElementById("home");
+
+  // home.addEventListener("click", init);
+  // home.addEventListener("click", render);
   init();
   render();
 });

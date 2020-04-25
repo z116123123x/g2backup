@@ -1,6 +1,6 @@
 {
     "include": [
-        "src/**/*"
+        "src/**/*", "vue.config.js", "vue.config.js"
     ],
     "compilerOptions": {
         "baseUrl": ".",

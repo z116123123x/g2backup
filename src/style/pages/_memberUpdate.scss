@@ -1,0 +1,49 @@
+div.right{
+    display: inline-block;
+    color: #007552;
+    background-color: #FBF8EF;
+    width: 87.2%;
+    height: 100%;
+    vertical-align: top;
+    .right_head{
+        color: #F7C845;
+        margin-top: 40px;
+        margin-left: 40px;
+        font-size: 30px;
+    }
+    .right_bottom{
+        display: block;
+        height: 90.3%;
+        text-align: center;
+        >.bottom_form{
+            margin-top: 150px;
+            line-height: 3;
+            >.person_left{
+                display: inline-block;
+                padding:  50px 40px;
+                background-color: #F7C845;
+            }
+            >.person_right{
+                display: inline-block;
+                position: relative;
+                text-align: start;
+                background-color: white;
+                padding:  50px;
+                padding-left: 50px;
+                padding-right: 145px;
+                >label{
+                    margin-right: 10px;
+                }
+                >.submit_button{
+                    position: absolute;
+                    border-radius: 5px;
+                    background-color: #007552;
+                    color: white;
+                    padding: 0px 20px;
+                    right: 30px;
+                    bottom: 10px;
+                }
+            }
+        }
+    }
+}

@@ -11,12 +11,20 @@
 
   z-index: 999;
 
-  .logo {
-    display: inline-flex;
-    float: left;
-    padding: 15px 0;
+  #home {
 
-    height: 30px;
+    position: absolute;
+    display: inline-block;
+
+    left: 1%;
+
+    .logo {
+      display: inline-flex;
+      float: left;
+      padding: 15px 0;
+
+      height: 30px;
+    }
   }
 
   div.cart {
@@ -24,6 +32,7 @@
     line-height: 60px;
     padding-left: 20px;
     cursor: pointer;
+
     span {
       width: 40px;
       padding-bottom: 30px;
@@ -33,6 +42,7 @@
       background-image: url("./../assets/headerCart.svg");
     }
   }
+
   div.member_status {
     height: 100%;
     vertical-align: top;
@@ -48,6 +58,7 @@
       background-size: cover;
       background-image: url("./../assets/headFarmer.svg");
     }
+
     span:nth-child(2) {
       padding-left: 10px;
     }
@@ -76,6 +87,7 @@
       box-sizing: border-box;
       list-style: none;
       text-align: center;
+
       li {
         &:hover div.title_pic img {
           transform: scale(1.5);
@@ -86,14 +98,17 @@
 
         height: 200px;
         padding: 40px 0;
+
         div.title {
           width: 100%;
           height: 100%;
+
           a {
             display: block;
             width: 100%;
             height: 100%;
             text-align: left;
+
             div.title_pic {
               display: inline-block;
 
@@ -111,11 +126,13 @@
                 transition: all 1s;
               }
             }
+
             div.title_text {
               display: inline-block;
               width: 50%;
               height: 100%;
               vertical-align: middle;
+
               h1 {
                 margin-top: 10px;
                 font-size: 2.5rem;
@@ -225,13 +242,17 @@
   line-height: 60px;
   padding: 10px 20px;
 }
+
 .hamburger:hover {
   opacity: 0.7;
 }
+
 .hamburger.is-active:hover {
   opacity: 0.7;
 }
+
 .hamburger.is-active {
+
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
@@ -251,6 +272,7 @@
   top: 50%;
   margin-top: -2px;
 }
+
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
@@ -263,14 +285,17 @@
   transition-duration: 0.15s;
   transition-timing-function: ease;
 }
+
 .hamburger-inner::before,
 .hamburger-inner::after {
   content: "";
   display: block;
 }
+
 .hamburger-inner::before {
   top: -10px;
 }
+
 .hamburger-inner::after {
   bottom: -10px;
 }
@@ -281,10 +306,12 @@
     transition-duration: 0.275s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
+
   .hamburger-inner::before {
     top: 10px;
     transition: opacity 0.125s 0.275s ease;
   }
+
   .hamburger-inner::after {
     top: 20px;
     transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -296,10 +323,12 @@
     transform: translate3d(0, 10px, 0) rotate(135deg);
     transition-delay: 0.075s;
   }
+
   .hamburger-inner::before {
     transition-delay: 0s;
     opacity: 0;
   }
+
   .hamburger-inner::after {
     transform: translate3d(0, -20px, 0) rotate(-270deg);
     transition-delay: 0.075s;
