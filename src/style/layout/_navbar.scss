@@ -1,9 +1,9 @@
 #nav {
   position: fixed;
-  top: 0;
+  display: flex;
   align-items: center;
+  justify-content: flex-end;
   box-sizing: border-box;
-  text-align: right;
   padding: 0px 1%;
 
   height: 60px;
@@ -28,15 +28,15 @@
   }
 
   div.cart {
-    display: inline-flex;
-    line-height: 60px;
-    padding-left: 20px;
-    cursor: pointer;
 
-    span {
+    padding: 0px 10px;
+
+    .page {
+
+      display: inline-block;
+
       width: 40px;
       padding-bottom: 30px;
-      margin-top: 15px;
       background-position: center;
       background-size: cover;
       background-image: url("./../assets/headerCart.svg");
@@ -44,11 +44,11 @@
   }
 
   div.member_status {
-    height: 100%;
-    vertical-align: top;
-    display: inline-block;
+
+    display: flex;
     font-size: 1.6rem;
-    padding-top: 15px;
+
+    align-items: center;
 
     span:nth-child(1) {
       display: inline-block;
@@ -59,12 +59,10 @@
       background-image: url("./../assets/headFarmer.svg");
     }
 
-    span:nth-child(2) {
-      padding-left: 10px;
-    }
+    span {
 
-    a {
-      padding-left: 10px;
+      padding: 0px 10px;
+      cursor: pointer;
     }
   }
 
@@ -226,6 +224,7 @@
 }
 
 .hamburger {
+  display: flex;
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -237,10 +236,9 @@
   border: 0;
   margin: 0;
   overflow: visible;
-  display: inline-block;
   vertical-align: top;
   line-height: 60px;
-  padding: 10px 20px;
+  padding: 0 20px;
 }
 
 .hamburger:hover {
