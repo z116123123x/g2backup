@@ -7,9 +7,9 @@
 @import "./layout/navbar";
 @import "./layout/footer";
 // components
-@import "./components/btn-more";
+@import "./components/buttonMore";
 // pages
-@import "./pages/style";
+@import "./pages/home";
 
 @import "./pages/book";
 
@@ -19,7 +19,9 @@
 @import "./pages/shop";
 
 @import "./pages/member";
-@import "./pages/memberNavbar";
-@import "./pages/order";
+@import "./pages/memberUpdate";
+@import "./pages/memberOrder";
+@import "./pages/memberTrack";
 
 @import "./pages/adminLogin";
+@import "./pages/adminManage";

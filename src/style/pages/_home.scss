@@ -2,6 +2,11 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
+}
+
+#test {
+  height: 33000px;
 }
 
 #memberStatus {
@@ -73,35 +78,39 @@ main {
   display: inline-block;
 }
 
-#knowledge_container {
-  display: inline-block;
-  width: 700px;
-  height: 750px;
-  position: absolute;
-  top: 7000px;
-  left: 5%;
+#mainText {
+  position: fixed;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #666;
   text-align: center;
+  display: none;
 }
 
-#knowledge_container > div:nth-child(1) {
-  height: 550px;
-  width: 500px;
+#knowledge_container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  text-align: center;
+  padding-left: 60px;
+}
+
+#knowledge_container > div:nth-child(2) {
+  position: relative;
   background-color: #007453;
   display: inline-block;
   border-radius: 5px;
-  position: relative;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.knowledge_button {
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  bottom: 5%;
+  padding: 20px 20px;
+  margin-top: 50px;
+  vertical-align: top;
+  z-index: 2;
 }
 
 .homebtn {
@@ -114,10 +123,6 @@ main {
   width: 400px;
   height: 500px;
   // background-color: #fbf8ef;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   perspective: 100px;
   display: none;
 }
@@ -145,7 +150,7 @@ main {
   transform: rotateY(15deg);
 }
 
-.aa {
+.knowledge_page_back {
   position: absolute;
   height: 100%;
   width: 95%;
@@ -154,13 +159,13 @@ main {
   background-color: #efefef;
 }
 
-.aa > div {
+.knowledge_page_back > div {
   margin-top: 200px;
 }
 
 #knowledge_title {
   position: absolute;
-  top: 5%;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -170,31 +175,45 @@ main {
   width: 200px;
 }
 
-.spring_tab {
+.season {
   position: absolute;
+  left: 0px;
+  display: inline-block;
+
+  width: 60px;
+  height: 400px;
+  margin-top: 50px;
+  z-index: 1;
+}
+
+.spring_tab {
+  display: inline-block;
+  position: absolute;
+  right: -10px;
   cursor: pointer;
   background-color: #ff7c74;
-  top: 10%;
-  left: 9%;
   border-radius: 5px 0 0 5px;
   font-size: 20px;
+  padding: 20px 0px;
+  padding-left: 10px;
+  padding-right: 15px;
   font-weight: 800;
-  padding: 4% 2%;
-  padding-right: 6%;
   transition: all 0.5s;
+  text-align: center;
 }
 
 .summer_tab {
   position: absolute;
+  top: 65px;
+  right: -10px;
   cursor: pointer;
   background-color: #f6d16b;
-  top: 22%;
-  left: 9%;
   border-radius: 5px 0 0 5px;
   font-size: 20px;
   font-weight: 800;
-  padding: 4% 2%;
-  padding-right: 6%;
+  padding: 20px 0px;
+  padding-left: 10px;
+  padding-right: 15px;
   transition: all 0.5s;
 }
 
@@ -202,13 +221,14 @@ main {
   position: absolute;
   cursor: pointer;
   background-color: #ff9444;
-  top: 34%;
-  left: 9%;
+  top: 130px;
+  right: -10px;
   border-radius: 5px 0 0 5px;
   font-size: 20px;
   font-weight: 800;
-  padding: 4% 2%;
-  padding-right: 6%;
+  padding: 20px 0px;
+  padding-left: 10px;
+  padding-right: 15px;
   transition: all 0.5s;
 }
 
@@ -216,13 +236,14 @@ main {
   position: absolute;
   cursor: pointer;
   background-color: #9aa4ff;
-  top: 46%;
-  left: 9%;
+  top: 195px;
+  right: -10px;
   border-radius: 5px 0 0 5px;
   font-size: 20px;
   font-weight: 800;
-  padding: 4% 2%;
-  padding-right: 6%;
+  padding: 20px 0px;
+  padding-left: 10px;
+  padding-right: 15px;
   transition: all 0.5s;
 }
 
@@ -234,15 +255,16 @@ div.knowledge_page.-on {
 .summer_tab.-on,
 .fall_tab.-on,
 .winter_tab.-on {
-  left: 8%;
+  right: 0px;
 }
 
 #market_container {
   display: inline-block;
-
-  position: absolute;
-  top: 10500px;
-  left: 7%;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
@@ -257,7 +279,7 @@ div.knowledge_page.-on {
   padding: 20px 20px;
   box-sizing: border-box;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .market_pic {
@@ -290,6 +312,10 @@ div.knowledge_page.-on {
 
 #market_title {
   z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #market_title > img {
@@ -384,11 +410,13 @@ button.plus_number {
 }
 
 #blog_container {
+  display: none;
   width: 550px;
   height: 640px;
-  position: absolute;
-  top: 15000px;
-  right: 12%;
+  position: fixed;
+  top: 45%;
+  left: 73%;
+  transform: translate(-50%, -50%);
 
   text-align: center;
 }
@@ -448,14 +476,18 @@ button.plus_number {
 }
 
 #member_container {
-  position: absolute;
-  top: 30500px;
+  display: none;
+  position: fixed;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
 #member_title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   width: 200px;
   margin: 0 auto;
 }
@@ -465,16 +497,16 @@ button.plus_number {
 }
 
 #member_page {
-  width: 600px;
-  height: 550px;
+  width: 100%;
+
   background-color: #f7c852;
   box-sizing: border-box;
-  padding-top: 70px;
-  margin-top: 40px;
+  padding: 50px;
+  margin-top: 50px;
 }
 
 #member_page > img {
-  width: 80%;
+  width: 500px;
   display: block;
   margin: 0 auto;
 }

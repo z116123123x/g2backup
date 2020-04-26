@@ -33,38 +33,6 @@ import fruitbox01 from "@/assets/fruitbox.png";
 import fruitboxline01 from "@/assets/fruitboxline.png";
 
 window.addEventListener("load", () => {
-  const home = document.getElementById("home");
-
-  $(function() {
-    $("div.tab").on("click", function() {
-      /* 將頁籤列表移除所有 -on，再將指定的加上 -on */
-      $(this)
-        .closest("#knowledge_container")
-        .find("div.tab")
-        .removeClass("-on");
-      $(this).addClass("-on");
-
-      /* 找到對應的頁籤內容，加上 -on 來顯示 */
-      $("div.knowledge_page").removeClass("-on");
-      $("div.knowledge_page." + $(this).attr("data-target")).addClass("-on");
-    });
-  });
-  $(function() {
-    // hamburger icon 的切換
-    $("div.hamburger").on("click", function() {
-      $(this).toggleClass("is-active");
-      $("div.nav_back").slideToggle();
-    });
-  });
-  $(function() {
-    if ($("div.hamburger").hasClass("is-active") == false) {
-      $("a.page").on("click", function() {
-        $("div.nav_back").slideToggle();
-        $("div.hamburger").removeClass("is-active");
-      });
-    }
-  });
-
   gsap.registerPlugin(MotionPathPlugin);
   let renderer, scene, camera;
 
@@ -87,68 +55,72 @@ window.addEventListener("load", () => {
 
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    // var texturecloud1 = new THREE.TextureLoader().load('@/assets/cloudWhite.png');
-    var texturecloud1 = new THREE.TextureLoader().load(cloudWhite);
-    var texturecloud2 = new THREE.TextureLoader().load(cloud2White);
-    var texturecloud3 = new THREE.TextureLoader().load(cloudGreen);
-    var texturecloud4 = new THREE.TextureLoader().load(cloud2Green);
-    var texturecloud5 = new THREE.TextureLoader().load(cloudSkin);
-    var texturecloud6 = new THREE.TextureLoader().load(cloudPink);
-    var texturecloud7 = new THREE.TextureLoader().load(cloudsmoke);
-    var materialcloudlight = new THREE.TextureLoader().load(cloudlight01);
-    var materialcloudlight2 = new THREE.TextureLoader().load(cloudlight02);
+    let loader = new THREE.TextureLoader();
+
+    loader.load(cloudWhite);
+    loader.load(cloud2White);
+    loader.load(cloudGreen);
+    loader.load(cloud2Green);
+    loader.load(cloudSkin);
+    loader.load(cloudPink);
+    loader.load(cloudsmoke);
+    loader.load(cloudlight01);
+    loader.load(cloudlight02);
 
     var geometry = new THREE.PlaneGeometry(300, 160);
     var materialcloud1 = new THREE.MeshBasicMaterial({
-      map: texturecloud1,
+      map: loader.load(cloudWhite),
       transparent: true,
       depthWrite: false,
       alphaTest: 0.7,
     });
+    materialcloud1.map.minFilter = THREE.LinearFilter;
     var materialcloud2 = new THREE.MeshBasicMaterial({
-      map: texturecloud2,
+      map: loader.load(cloud2White),
       transparent: true,
       depthWrite: false,
       alphaTest: 0.2,
     });
+    materialcloud2.map.minFilter = THREE.LinearFilter;
     var materialcloud3 = new THREE.MeshBasicMaterial({
-      map: texturecloud3,
+      map: loader.load(cloudGreen),
       transparent: true,
       depthWrite: false,
       alphaTest: 0,
     });
+    materialcloud3.map.minFilter = THREE.LinearFilter;
     var materialcloud4 = new THREE.MeshBasicMaterial({
-      map: texturecloud4,
+      map: loader.load(cloud2Green),
       transparent: true,
       depthWrite: false,
       alphaTest: 0.8,
     });
+    materialcloud4.map.minFilter = THREE.LinearFilter;
     var materialcloud5 = new THREE.MeshBasicMaterial({
-      map: texturecloud5,
+      map: loader.load(cloudSkin),
       transparent: true,
       depthWrite: false,
       alphaTest: 0.5,
-      // alphaTest: 0,
-      // blending: THREE.CustomBlending,
-      // // blendSrc: THREE.OneFactor,
-      // blendDst: THREE.OneMinusSrcAlphaFactor,
     });
+    materialcloud5.map.minFilter = THREE.LinearFilter;
     var materialcloud6 = new THREE.MeshBasicMaterial({
-      map: texturecloud6,
+      map: loader.load(cloudPink),
       transparent: true,
       depthWrite: false,
       alphaTest: 0.6,
     });
+    materialcloud6.map.minFilter = THREE.LinearFilter;
 
     var materialcloud7 = new THREE.MeshBasicMaterial({
-      map: texturecloud7,
+      map: loader.load(cloudsmoke),
       transparent: true,
       depthWrite: false,
       alphaTest: 0.8,
     });
+    materialcloud7.map.minFilter = THREE.LinearFilter;
 
     var materialcloudlight = new THREE.MeshBasicMaterial({
-      map: materialcloudlight,
+      map: loader.load(cloudlight01),
       transparent: true,
       depthWrite: false,
       alphaTest: 0,
@@ -158,7 +130,7 @@ window.addEventListener("load", () => {
     });
 
     var materialcloudlight2 = new THREE.MeshBasicMaterial({
-      map: materialcloudlight2,
+      map: loader.load(cloudlight02),
       transparent: true,
       depthWrite: false,
       alphaTest: 0,
@@ -416,11 +388,12 @@ window.addEventListener("load", () => {
     //台灣
     const planeGeometry = new THREE.PlaneGeometry(600, 900);
     const planeMaterial = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(taiwan),
+      map: loader.load(taiwan),
       transparent: true,
       depthWrite: false,
       opacity: 0.5,
     });
+    planeMaterial.map.minFilter = THREE.LinearFilter;
     let plane = new THREE.Mesh(planeGeometry, planeMaterial);
     plane.rotation.x = -0.5 * Math.PI;
     plane.position.set(0, 0, 0);
@@ -429,7 +402,7 @@ window.addEventListener("load", () => {
 
     // const planeGeometry1 = new THREE.PlaneGeometry(430, 500);
     // const planeMaterial1 = new THREE.MeshLambertMaterial({
-    //     map: THREE.ImageUtils.loadTexture('treemont.png'),
+    //     map: loader.load('treemont.png'),
     //     transparent: true,
     //     depthWrite: false,
     //     opacity: 0.9,
@@ -443,11 +416,12 @@ window.addEventListener("load", () => {
     //知識百科
     const planeGeometryknowledgehead = new THREE.PlaneGeometry(50, 35);
     const planeMaterialknowledgehead = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(knowledgeHead),
+      map: loader.load(knowledgeHead),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialknowledgehead.map.minFilter = THREE.LinearFilter;
     var knowledgehead = new THREE.Mesh(
       planeGeometryknowledgehead,
       planeMaterialknowledgehead
@@ -475,11 +449,12 @@ window.addEventListener("load", () => {
 
     const planeGeometryknowledge = new THREE.PlaneGeometry(160, 120);
     const planeMaterialknowledge = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(knowledge01),
+      map: loader.load(knowledge01),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialknowledge.map.minFilter = THREE.LinearFilter;
     var knowledge = new THREE.Mesh(
       planeGeometryknowledge,
       planeMaterialknowledge
@@ -488,14 +463,16 @@ window.addEventListener("load", () => {
     knowledge.position.set(30, 30, -380);
 
     scene.add(knowledge);
+
     //會員中心
     const planeGeometrymember = new THREE.PlaneGeometry(100, 180);
     const planeMaterialmember = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(memberLeft),
+      map: loader.load(memberLeft),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialmember.map.minFilter = THREE.LinearFilter;
     var member = new THREE.Mesh(planeGeometrymember, planeMaterialmember);
     member.rotation.x = -0.5 * Math.PI;
     member.position.set(-180, 30, 200);
@@ -503,11 +480,12 @@ window.addEventListener("load", () => {
 
     const planeGeometrymemberRight = new THREE.PlaneGeometry(100, 180);
     const planeMaterialmemberRight = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(memberRight01),
+      map: loader.load(memberRight01),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialmemberRight.map.minFilter = THREE.LinearFilter;
     var memberRight = new THREE.Mesh(
       planeGeometrymemberRight,
       planeMaterialmemberRight
@@ -520,11 +498,12 @@ window.addEventListener("load", () => {
 
     const planeGeometryshop = new THREE.PlaneGeometry(160, 140);
     const planeMaterialshop = new THREE.MeshBasicMaterial({
-      map: THREE.ImageUtils.loadTexture(market01),
+      map: loader.load(market01),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialshop.map.minFilter = THREE.LinearFilter;
     var shop = new THREE.Mesh(planeGeometryshop, planeMaterialshop);
     shop.rotation.x = -0.5 * Math.PI;
     shop.position.set(-200, 30, -80);
@@ -532,11 +511,12 @@ window.addEventListener("load", () => {
 
     const planeGeometryshopfruit = new THREE.PlaneGeometry(160, 140);
     const planeMaterialshopfruit = new THREE.MeshBasicMaterial({
-      map: THREE.ImageUtils.loadTexture(marketfruit03),
+      map: loader.load(marketfruit03),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialshopfruit.map.minFilter = THREE.LinearFilter;
     var shopfruit = new THREE.Mesh(
       planeGeometryshopfruit,
       planeMaterialshopfruit
@@ -564,11 +544,12 @@ window.addEventListener("load", () => {
 
     const planeGeometrymarketfruit02 = new THREE.PlaneGeometry(100, 70);
     const planeMaterialmarketfruit02 = new THREE.MeshBasicMaterial({
-      map: THREE.ImageUtils.loadTexture(marketfruit04),
+      map: loader.load(marketfruit04),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialmarketfruit02.map.minFilter = THREE.LinearFilter;
     var marketfruit02 = new THREE.Mesh(
       planeGeometrymarketfruit02,
       planeMaterialmarketfruit02
@@ -580,11 +561,12 @@ window.addEventListener("load", () => {
     //山
     const planeGeometrymont01 = new THREE.PlaneGeometry(130, 130);
     const planeMaterialmont01 = new THREE.MeshBasicMaterial({
-      map: THREE.ImageUtils.loadTexture(mont001),
+      map: loader.load(mont001),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialmont01.map.minFilter = THREE.LinearFilter;
     var mont01 = new THREE.Mesh(planeGeometrymont01, planeMaterialmont01);
     mont01.rotation.x = -0.5 * Math.PI;
     mont01.position.set(-20, 40, -60);
@@ -592,11 +574,12 @@ window.addEventListener("load", () => {
 
     const planeGeometrymont02 = new THREE.PlaneGeometry(170, 130);
     const planeMaterialmont02 = new THREE.MeshBasicMaterial({
-      map: THREE.ImageUtils.loadTexture(mont002),
+      map: loader.load(mont002),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialmont02.map.minFilter = THREE.LinearFilter;
     var mont02 = new THREE.Mesh(planeGeometrymont02, planeMaterialmont02);
     mont02.rotation.x = -0.5 * Math.PI;
     mont02.position.set(110, 40, -240);
@@ -604,11 +587,12 @@ window.addEventListener("load", () => {
 
     const planeGeometrymont03 = new THREE.PlaneGeometry(80, 40);
     const planeMaterialmont03 = new THREE.MeshBasicMaterial({
-      map: THREE.ImageUtils.loadTexture(mont003),
+      map: loader.load(mont003),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialmont03.map.minFilter = THREE.LinearFilter;
     var mont03 = new THREE.Mesh(planeGeometrymont03, planeMaterialmont03);
     mont03.rotation.x = -0.5 * Math.PI;
     mont03.position.set(240, 40, -340);
@@ -618,11 +602,12 @@ window.addEventListener("load", () => {
 
     const planeGeometrytree01 = new THREE.PlaneGeometry(80, 70);
     const planeMaterialtree01 = new THREE.MeshBasicMaterial({
-      map: THREE.ImageUtils.loadTexture(tree001),
+      map: loader.load(tree001),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialtree01.map.minFilter = THREE.LinearFilter;
     var tree01 = new THREE.Mesh(planeGeometrytree01, planeMaterialtree01);
     tree01.rotation.x = -0.5 * Math.PI;
     tree01.position.set(0, 40, -300);
@@ -630,11 +615,12 @@ window.addEventListener("load", () => {
 
     const planeGeometrytree02 = new THREE.PlaneGeometry(70, 90);
     const planeMaterialtree02 = new THREE.MeshBasicMaterial({
-      map: THREE.ImageUtils.loadTexture(tree002),
+      map: loader.load(tree002),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialtree02.map.minFilter = THREE.LinearFilter;
     var tree02 = new THREE.Mesh(planeGeometrytree02, planeMaterialtree02);
     tree02.rotation.x = -0.5 * Math.PI;
     tree02.position.set(130, 40, -360);
@@ -643,11 +629,12 @@ window.addEventListener("load", () => {
     //部落格
     const planeGeometryblog = new THREE.PlaneGeometry(130, 160);
     const planeMaterialblog = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(blog01),
+      map: loader.load(blog01),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialblog.map.minFilter = THREE.LinearFilter;
     var blog = new THREE.Mesh(planeGeometryblog, planeMaterialblog);
     blog.rotation.x = -0.5 * Math.PI;
     blog.position.set(180, 50, -100);
@@ -655,11 +642,12 @@ window.addEventListener("load", () => {
 
     const planeGeometryblogwatermelon = new THREE.PlaneGeometry(60, 40);
     const planeMaterialblogwatermelon = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(blogwatermelon01),
+      map: loader.load(blogwatermelon01),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialblogwatermelon.map.minFilter = THREE.LinearFilter;
     var blogwatermelon = new THREE.Mesh(
       planeGeometryblogwatermelon,
       planeMaterialblogwatermelon
@@ -688,11 +676,12 @@ window.addEventListener("load", () => {
     //水梨
     const planeGeometrywaterpear = new THREE.PlaneGeometry(40, 30);
     const planeMaterialwaterpear = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(waterpear01),
+      map: loader.load(waterpear01),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialwaterpear.map.minFilter = THREE.LinearFilter;
     var waterpear = new THREE.Mesh(
       planeGeometrywaterpear,
       planeMaterialwaterpear
@@ -703,11 +692,12 @@ window.addEventListener("load", () => {
 
     const planeGeometrywaterpearline = new THREE.PlaneGeometry(180, 140);
     const planeMaterialwaterpearline = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(waterpearline01),
+      map: loader.load(waterpearline01),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialwaterpearline.map.minFilter = THREE.LinearFilter;
     var waterpearline = new THREE.Mesh(
       planeGeometrywaterpearline,
       planeMaterialwaterpearline
@@ -719,11 +709,12 @@ window.addEventListener("load", () => {
     //箱子
     const planeGeometryfruitbox = new THREE.PlaneGeometry(40, 40);
     const planeMaterialfruitbox = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(fruitbox01),
+      map: loader.load(fruitbox01),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialfruitbox.map.minFilter = THREE.LinearFilter;
     var fruitbox = new THREE.Mesh(planeGeometryfruitbox, planeMaterialfruitbox);
     fruitbox.rotation.x = -0.5 * Math.PI;
     fruitbox.position.set(90, 50, -50);
@@ -731,11 +722,12 @@ window.addEventListener("load", () => {
 
     const planeGeometryfruitboxline = new THREE.PlaneGeometry(110, 80);
     const planeMaterialfruitboxline = new THREE.MeshLambertMaterial({
-      map: THREE.ImageUtils.loadTexture(fruitboxline01),
+      map: loader.load(fruitboxline01),
       transparent: true,
       depthWrite: false,
       opacity: 0.9,
     });
+    planeMaterialfruitboxline.map.minFilter = THREE.LinearFilter;
     var fruitboxline = new THREE.Mesh(
       planeGeometryfruitboxline,
       planeMaterialfruitboxline
@@ -777,10 +769,8 @@ window.addEventListener("load", () => {
             camera.lookAt(0, 800, 0);
             if (window.pageYOffset > 500) {
               $("div#mainLOGO").fadeOut();
-              $("img.logo").fadeIn();
             } else {
               $("div#mainLOGO").fadeIn();
-              $("img.logo").fadeOut();
             }
           },
           x: 0,
@@ -812,6 +802,7 @@ window.addEventListener("load", () => {
           onUpdate: function() {
             camera.lookAt(camera.position.x, 100, camera.position.z);
           },
+
           x: 22,
           y: 300,
           z: -420,
@@ -893,7 +884,7 @@ window.addEventListener("load", () => {
             curviness: 1,
           },
         },
-        11500
+        13500
       )
       .to(
         camera.position,
@@ -907,7 +898,7 @@ window.addEventListener("load", () => {
           y: 300,
           z: -100,
         },
-        11500
+        13500
       )
       .to(
         fruitbox.position,
@@ -929,7 +920,7 @@ window.addEventListener("load", () => {
             curviness: 1,
           },
         },
-        16500
+        19500
       )
       .to(
         camera.position,
@@ -944,7 +935,7 @@ window.addEventListener("load", () => {
           y: 300,
           z: 200,
         },
-        16500
+        19500
       )
       .to(
         member.position,
@@ -954,7 +945,7 @@ window.addEventListener("load", () => {
 
           x: -250,
         },
-        18500
+        20500
       )
       .to(
         memberRight.position,
@@ -964,7 +955,7 @@ window.addEventListener("load", () => {
 
           x: 50,
         },
-        18500
+        20500
       )
       .to(
         camera.position,
@@ -979,7 +970,7 @@ window.addEventListener("load", () => {
           y: 900,
           z: 200,
         },
-        22500
+        25500
       )
       .to(
         camera.position,
@@ -994,7 +985,7 @@ window.addEventListener("load", () => {
           y: 900,
           z: 0,
         },
-        22500
+        25500
       )
       .to(
         camera.position,
@@ -1009,7 +1000,7 @@ window.addEventListener("load", () => {
           y: 900,
           z: 1400,
         },
-        26500
+        28500
       );
 
     // Set timeline time to scrollTop
@@ -1022,6 +1013,33 @@ window.addEventListener("load", () => {
     window.addEventListener("scroll", function() {
       if (!requestId) {
         requestId = requestAnimationFrame(update);
+      }
+
+      if (window.pageYOffset > 1000 && window.pageYOffset < 2000) {
+        $("div#mainText").fadeIn();
+      } else {
+        $("div#mainText").fadeOut();
+      }
+
+      if (window.pageYOffset > 5500 && window.pageYOffset < 7500) {
+        $("#knowledge_container").fadeIn();
+      } else {
+        $("#knowledge_container").fadeOut();
+      }
+      if (window.pageYOffset > 10000 && window.pageYOffset < 13000) {
+        $("#market_container").fadeIn();
+      } else {
+        $("#market_container").fadeOut();
+      }
+      if (window.pageYOffset > 16000 && window.pageYOffset < 19000) {
+        $("#blog_container").fadeIn();
+      } else {
+        $("#blog_container").fadeOut();
+      }
+      if (window.pageYOffset > 22500 && window.pageYOffset < 25000) {
+        $("#member_container").fadeIn();
+      } else {
+        $("#member_container").fadeOut();
       }
     });
 
@@ -1039,8 +1057,41 @@ window.addEventListener("load", () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
+
+  const home = document.getElementById("home");
+
   home.addEventListener("click", init);
   home.addEventListener("click", render);
   init();
   render();
+
+  $(function() {
+    $("div.tab").on("click", function() {
+      /* 將頁籤列表移除所有 -on，再將指定的加上 -on */
+      $(this)
+        .closest(".season")
+        .find("div.tab")
+        .removeClass("-on");
+      $(this).addClass("-on");
+
+      /* 找到對應的頁籤內容，加上 -on 來顯示 */
+      $("div.knowledge_page").removeClass("-on");
+      $("div.knowledge_page." + $(this).attr("data-target")).addClass("-on");
+    });
+  });
+  $(function() {
+    // hamburger icon 的切換
+    $("div.hamburger").on("click", function() {
+      $(this).toggleClass("is-active");
+      $("div.nav_back").slideToggle();
+    });
+  });
+  $(function() {
+    if ($("div.hamburger").hasClass("is-active") == false) {
+      $("a.page").on("click", function() {
+        $("div.nav_back").slideToggle();
+        $("div.hamburger").removeClass("is-active");
+      });
+    }
+  });
 });
