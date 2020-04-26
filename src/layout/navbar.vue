@@ -6,10 +6,10 @@
     <div class="member_status">
       <span class="farmer_pic"></span>
       <span>果農</span>
-      <a href>登出</a>
+      <span>登出</span>
     </div>
     <div class="cart">
-      <span></span>
+      <router-link class="page" to="/main/member/shopping"></router-link>
     </div>
     <div class="hamburger hamburger--elastic">
       <div class="hamburger-box">
