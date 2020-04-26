@@ -1,0 +1,36 @@
+.shopping {
+
+    flex-grow: 1;
+    box-sizing: border-box;
+
+    .content {
+
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+
+        .step-box {
+
+            height: 250px;
+
+            border: 1px solid red;
+        }
+
+        .form {
+
+            flex-grow: 1;
+            border: 1px solid blue;
+
+            .form-content {
+
+                display: flex;
+
+                .title {
+
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
