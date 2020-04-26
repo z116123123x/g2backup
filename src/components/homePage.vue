@@ -1,6 +1,7 @@
 <template>
   <div id="test" class="hello">
     <main>
+      <button id="scroll_btn"></button>
       <div id="mainLOGO">
         <img src="../assets/LOGO.svg" alt />
       </div>
@@ -37,14 +38,14 @@
           </div>
         </div>
 
-        <div id="knowledge_title">
-          <img src="../assets/knowledgetitle.svg" alt />
-        </div>
+        <button class="home_title">
+          知識百科
+        </button>
       </div>
       <div id="market_container">
-        <div id="market_title">
-          <img src="../assets/markettitle.svg" alt />
-        </div>
+        <button class="home_title">
+          水果市集
+        </button>
         <div id="market_page">
           <div class="market_pic">
             <img src="../assets/marketitem01.png" alt />
@@ -71,9 +72,9 @@
         </div>
       </div>
       <div id="blog_container">
-        <div id="blog_title">
-          <img src="../assets/blogtitle.svg" alt />
-        </div>
+        <button class="home_title">
+          果農日誌
+        </button>
         <div id="blog_page">
           <div class="blog_tags_area">
             <h2>Tags</h2>
@@ -94,13 +95,12 @@
               <span>水果知識</span>
             </div>
           </div>
-          <ButtonMore class="homebtn" />
         </div>
       </div>
       <div id="member_container">
-        <div id="member_title">
-          <img src="../assets/membertitle.svg" alt />
-        </div>
+        <button class="home_title">
+          果農日誌
+        </button>
         <div id="member_page">
           <img src="../assets/memberpic.png" alt />
         </div>

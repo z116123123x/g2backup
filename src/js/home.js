@@ -1011,6 +1011,8 @@ window.addEventListener("load", () => {
 
     // Only update on animation frames
     window.addEventListener("scroll", function() {
+      console.log(window.pageYOffset);
+
       if (!requestId) {
         requestId = requestAnimationFrame(update);
       }
@@ -1093,5 +1095,61 @@ window.addEventListener("load", () => {
         $("div.hamburger").removeClass("is-active");
       });
     }
+  });
+
+  $(function() {
+    function stopScrolling(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+    function btnStop() {
+      $("#scroll_btn").prop("disabled", false);
+      $("html").off("scroll mousewheel touchmove", stopScrolling);
+    }
+
+    $("#scroll_btn").on("click", function() {
+      if (window.pageYOffset >= 0 && window.pageYOffset < 7400) {
+        $(this).prop("disabled", true);
+        $("html").animate({ scrollTop: 7499 }, 7400 - window.pageYOffset);
+        setTimeout(btnStop, 7400 - window.pageYOffset);
+
+        $("html").on("scroll mousewheel touchmove", stopScrolling);
+      }
+      if (window.pageYOffset >= 7399 && window.pageYOffset < 12900) {
+        $(this).prop("disabled", true);
+        $("html").animate({ scrollTop: 12999 }, 12900 - window.pageYOffset);
+        setTimeout(btnStop, 12900 - window.pageYOffset);
+
+        $("html").on("scroll mousewheel touchmove", stopScrolling);
+      }
+      if (window.pageYOffset >= 12899 && window.pageYOffset < 18900) {
+        $(this).prop("disabled", true);
+        $("html").animate({ scrollTop: 18999 }, 18900 - window.pageYOffset);
+        setTimeout(btnStop, 18900 - window.pageYOffset);
+
+        $("html").on("scroll mousewheel touchmove", stopScrolling);
+      }
+      if (window.pageYOffset >= 18899 && window.pageYOffset < 24900) {
+        $(this).prop("disabled", true);
+        $("html").animate({ scrollTop: 24999 }, 24900 - window.pageYOffset);
+        setTimeout(btnStop, 18900 - window.pageYOffset);
+
+        $("html").on("scroll mousewheel touchmove", stopScrolling);
+      }
+      if (window.pageYOffset >= 24899 && window.pageYOffset < 32200) {
+        $(this).prop("disabled", true);
+        $("html").animate({ scrollTop: 33000 }, 32200 - window.pageYOffset);
+        setTimeout(btnStop, 32200 - window.pageYOffset);
+
+        $("html").on("scroll mousewheel touchmove", stopScrolling);
+      }
+      if (window.pageYOffset > 32000) {
+        $(this).prop("disabled", true);
+        $("html").animate({ scrollTop: 0 }, 5000);
+        setTimeout(btnStop, 5000);
+        $("html").on("scroll mousewheel touchmove", stopScrolling);
+      }
+    });
   });
 });

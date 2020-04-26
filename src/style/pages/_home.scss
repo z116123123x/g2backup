@@ -9,6 +9,16 @@ canvas {
   height: 33000px;
 }
 
+#scroll_btn {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  background-color: #0e7453;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
 #memberStatus {
   width: 45%;
   height: 100%;
@@ -108,7 +118,7 @@ main {
   display: inline-block;
   border-radius: 5px;
   padding: 20px 20px;
-  margin-top: 50px;
+  margin-top: 40px;
   vertical-align: top;
   z-index: 2;
 }
@@ -163,16 +173,67 @@ main {
   margin-top: 200px;
 }
 
-#knowledge_title {
+.home_title {
+  padding: 10px 10px;
+  color: #333;
+  box-sizing: border-box;
+
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 48%;
   transform: translateX(-50%);
+  cursor: pointer;
+  font-size: 3.5rem;
+  transition: all 0.5s;
+  background-color: #fbf8ef;
+  outline: none;
+  border: 2px solid #666;
   z-index: 2;
-}
 
-#knowledge_title > img {
-  width: 200px;
+  &::before {
+    position: absolute;
+    content: "";
+    transition: all 0.5s;
+    bottom: -19px;
+    height: 15px;
+    width: 100%;
+    left: 7px;
+    transform: skewX(45deg);
+    background-color: #f7c852;
+    border: 2px solid #666;
+    border-top: none;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    transition: all 0.5s;
+    right: -19px;
+    height: 100%;
+    width: 15px;
+    bottom: -10px;
+    transform: skewY(45deg);
+    background-color: #f7c852;
+    border: 2px solid #666;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  &:active {
+    margin-left: 10px;
+    margin-top: 10px;
+    &::before {
+      bottom: -9px;
+      height: 5px;
+      left: 3px;
+    }
+
+    &::after {
+      right: -10px;
+      width: 6px;
+      bottom: -4px;
+    }
+  }
 }
 
 .season {
@@ -279,7 +340,7 @@ div.knowledge_page.-on {
   padding: 20px 20px;
   box-sizing: border-box;
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .market_pic {
@@ -308,18 +369,6 @@ div.knowledge_page.-on {
 .market_intro > h3 {
   text-align: left;
   font-size: 20px;
-}
-
-#market_title {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#market_title > img {
-  width: 200px;
 }
 
 .market_tags {
@@ -411,34 +460,18 @@ button.plus_number {
 
 #blog_container {
   display: none;
-  width: 550px;
-  height: 640px;
   position: fixed;
-  top: 45%;
-  left: 73%;
+  top: 50%;
+  left: 75%;
   transform: translate(-50%, -50%);
-
   text-align: center;
 }
 
 #blog_page {
-  width: 450px;
-  height: 540px;
   background-color: #007453;
-  bottom: 0;
-  position: absolute;
   border-radius: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#blog_title {
-  width: 200px;
-  position: absolute;
-  top: 50px;
-  z-index: 2;
-  left: 50%;
-  transform: translateX(-50%);
+  padding: 20px 20px;
+  margin-top: 40px;
 }
 
 .blog_tags_area {
@@ -482,18 +515,6 @@ button.plus_number {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-#member_title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  margin: 0 auto;
-}
-
-#member_title > img {
-  width: 100%;
 }
 
 #member_page {
