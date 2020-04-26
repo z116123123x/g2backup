@@ -1102,48 +1102,39 @@ window.addEventListener("load", () => {
       return false;
     }
     function btnStop() {
-      $("#scroll_btn").prop("disabled", false);
+      $("#scroll_btn").attr("disabled", false);
       $("html").off("scroll mousewheel touchmove", stopScrolling);
     }
 
     $("#scroll_btn").on("click", function() {
+      $("#scroll_btn").attr("disabled", true);
+
       if (window.pageYOffset >= 0 && window.pageYOffset < 7400) {
-        $(this).prop("disabled", true);
-        $("html").animate({ scrollTop: 7499 }, 7400 - window.pageYOffset);
+        $("html").animate({ scrollTop: 7400 }, 7400 - window.pageYOffset);
         setTimeout(btnStop, 7400 - window.pageYOffset);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
-      }
-      if (window.pageYOffset >= 7399 && window.pageYOffset < 12900) {
-        $(this).prop("disabled", true);
-        $("html").animate({ scrollTop: 12999 }, 12900 - window.pageYOffset);
+      } else if (window.pageYOffset >= 7400 && window.pageYOffset < 12900) {
+        $("html").animate({ scrollTop: 12900 }, 12900 - window.pageYOffset);
         setTimeout(btnStop, 12900 - window.pageYOffset);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
-      }
-      if (window.pageYOffset >= 12899 && window.pageYOffset < 18900) {
-        $(this).prop("disabled", true);
-        $("html").animate({ scrollTop: 18999 }, 18900 - window.pageYOffset);
+      } else if (window.pageYOffset >= 12900 && window.pageYOffset < 18900) {
+        $("html").animate({ scrollTop: 18900 }, 18900 - window.pageYOffset);
         setTimeout(btnStop, 18900 - window.pageYOffset);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
-      }
-      if (window.pageYOffset >= 18899 && window.pageYOffset < 24900) {
-        $(this).prop("disabled", true);
-        $("html").animate({ scrollTop: 24999 }, 24900 - window.pageYOffset);
-        setTimeout(btnStop, 18900 - window.pageYOffset);
+      } else if (window.pageYOffset >= 18900 && window.pageYOffset < 24900) {
+        $("html").animate({ scrollTop: 24900 }, 24900 - window.pageYOffset);
+        setTimeout(btnStop, 24900 - window.pageYOffset);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
-      }
-      if (window.pageYOffset >= 24899 && window.pageYOffset < 32200) {
-        $(this).prop("disabled", true);
-        $("html").animate({ scrollTop: 33000 }, 32200 - window.pageYOffset);
+      } else if (window.pageYOffset >= 24900 && window.pageYOffset < 31900) {
+        $("html").animate({ scrollTop: 33000 }, 33000 - window.pageYOffset);
         setTimeout(btnStop, 32200 - window.pageYOffset);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
-      }
-      if (window.pageYOffset > 32000) {
-        $(this).prop("disabled", true);
+      } else if (window.pageYOffset > 32000) {
         $("html").animate({ scrollTop: 0 }, 5000);
         setTimeout(btnStop, 5000);
         $("html").on("scroll mousewheel touchmove", stopScrolling);
