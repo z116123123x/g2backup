@@ -1011,8 +1011,6 @@ window.addEventListener("load", () => {
 
     // Only update on animation frames
     window.addEventListener("scroll", function() {
-      console.log(window.pageYOffset);
-
       if (!requestId) {
         requestId = requestAnimationFrame(update);
       }
