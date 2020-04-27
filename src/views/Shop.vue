@@ -99,16 +99,9 @@
 
       <div class="shop_container">
         <aside class="filter-panel">
-          <img
-            src="../assets/market_choose_right_mountain_only.svg"
-            class="mountain"
-          />
+          <img src="../assets/market_choose_right_mountain_only.svg" class="mountain" />
           <div class="filter-status">
-            <img
-              src="../assets/icon/filter.svg"
-              width="20px"
-              style="margin-right: 10px;"
-            />
+            <img src="../assets/icon/filter.svg" width="20px" style="margin-right: 10px;" />
             <div class="filter-status_text">條件篩選</div>
           </div>
           <form class="filter-group">
@@ -164,16 +157,9 @@
         </aside>
 
         <aside class="hot_commodity">
-          <img
-            src="../assets/market_choose_right_mountain_only.svg"
-            class="mountain"
-          />
+          <img src="../assets/market_choose_right_mountain_only.svg" class="mountain" />
           <div class="hot_commodity_filter-status">
-            <img
-              src="../assets/icon/podium.svg"
-              width="30px"
-              style="margin-right: 10px;"
-            />
+            <img src="../assets/icon/podium.svg" width="30px" style="margin-right: 10px;" />
             <div class="hot_commoditystatus_text">明星商品</div>
           </div>
           <div class="hot_commodity_group">
@@ -275,13 +261,7 @@
               </div>
 
               <div class="card_tag">
-                <img
-                  src="../assets/icon/tag.svg"
-                  alt
-                  width="16px"
-                  height="16px"
-                  class="tag_icon"
-                />
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
                 <span class="card_tag_text">24hr宅配到府</span>
               </div>
 
@@ -297,11 +277,7 @@
           </div>
           <div class="commodity">
             <div class="card_img_box">
-              <img
-                src="../assets/ia_300000017.jpg"
-                width="270px"
-                height="100%"
-              />
+              <img src="../assets/ia_300000017.jpg" width="270px" height="100%" />
             </div>
 
             <div class="card_content">
@@ -310,13 +286,7 @@
               </div>
 
               <div class="card_tag">
-                <img
-                  src="../assets/icon/tag.svg"
-                  alt
-                  width="16px"
-                  height="16px"
-                  class="tag_icon"
-                />
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
                 <span class="card_tag_text">24hr宅配到府</span>
               </div>
 
@@ -332,11 +302,7 @@
           </div>
           <div class="commodity">
             <div class="card_img_box">
-              <img
-                src="../assets/ia_300000017.jpg"
-                width="270px"
-                height="100%"
-              />
+              <img src="../assets/ia_300000017.jpg" width="270px" height="100%" />
             </div>
 
             <div class="card_content">
@@ -345,13 +311,7 @@
               </div>
 
               <div class="card_tag">
-                <img
-                  src="../assets/icon/tag.svg"
-                  alt
-                  width="16px"
-                  height="16px"
-                  class="tag_icon"
-                />
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
                 <span class="card_tag_text">24hr宅配到府</span>
               </div>
 
@@ -367,11 +327,7 @@
           </div>
           <div class="commodity">
             <div class="card_img_box">
-              <img
-                src="../assets/ia_300000017.jpg"
-                width="270px"
-                height="100%"
-              />
+              <img src="../assets/ia_300000017.jpg" width="270px" height="100%" />
             </div>
 
             <div class="card_content">
@@ -380,13 +336,7 @@
               </div>
 
               <div class="card_tag">
-                <img
-                  src="../assets/icon/tag.svg"
-                  alt
-                  width="16px"
-                  height="16px"
-                  class="tag_icon"
-                />
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
                 <span class="card_tag_text">24hr宅配到府</span>
               </div>
 
@@ -402,11 +352,7 @@
           </div>
           <div class="commodity">
             <div class="card_img_box">
-              <img
-                src="../assets/ia_300000017.jpg"
-                width="270px"
-                height="100%"
-              />
+              <img src="../assets/ia_300000017.jpg" width="270px" height="100%" />
             </div>
 
             <div class="card_content">
@@ -415,13 +361,7 @@
               </div>
 
               <div class="card_tag">
-                <img
-                  src="../assets/icon/tag.svg"
-                  alt
-                  width="16px"
-                  height="16px"
-                  class="tag_icon"
-                />
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
                 <span class="card_tag_text">24hr宅配到府</span>
               </div>
 
@@ -437,11 +377,7 @@
           </div>
           <div class="commodity">
             <div class="card_img_box">
-              <img
-                src="../assets/ia_300000017.jpg"
-                width="270px"
-                height="100%"
-              />
+              <img src="../assets/ia_300000017.jpg" width="270px" height="100%" />
             </div>
 
             <div class="card_content">
@@ -450,13 +386,7 @@
               </div>
 
               <div class="card_tag">
-                <img
-                  src="../assets/icon/tag.svg"
-                  alt
-                  width="16px"
-                  height="16px"
-                  class="tag_icon"
-                />
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
                 <span class="card_tag_text">24hr宅配到府</span>
               </div>
 
@@ -472,11 +402,7 @@
           </div>
           <div class="commodity">
             <div class="card_img_box">
-              <img
-                src="../assets/ia_300000017.jpg"
-                width="270px"
-                height="100%"
-              />
+              <img src="../assets/ia_300000017.jpg" width="270px" height="100%" />
             </div>
 
             <div class="card_content">
@@ -485,13 +411,7 @@
               </div>
 
               <div class="card_tag">
-                <img
-                  src="../assets/icon/tag.svg"
-                  alt
-                  width="16px"
-                  height="16px"
-                  class="tag_icon"
-                />
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
                 <span class="card_tag_text">24hr宅配到府</span>
               </div>
 
@@ -507,11 +427,7 @@
           </div>
           <div class="commodity">
             <div class="card_img_box">
-              <img
-                src="../assets/ia_300000017.jpg"
-                width="270px"
-                height="100%"
-              />
+              <img src="../assets/ia_300000017.jpg" width="270px" height="100%" />
             </div>
 
             <div class="card_content">
@@ -520,13 +436,7 @@
               </div>
 
               <div class="card_tag">
-                <img
-                  src="../assets/icon/tag.svg"
-                  alt
-                  width="16px"
-                  height="16px"
-                  class="tag_icon"
-                />
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
                 <span class="card_tag_text">24hr宅配到府</span>
               </div>
 
@@ -542,11 +452,7 @@
           </div>
           <div class="commodity">
             <div class="card_img_box">
-              <img
-                src="../assets/ia_300000017.jpg"
-                width="270px"
-                height="100%"
-              />
+              <img src="../assets/ia_300000017.jpg" width="270px" height="100%" />
             </div>
 
             <div class="card_content">
@@ -555,13 +461,7 @@
               </div>
 
               <div class="card_tag">
-                <img
-                  src="../assets/icon/tag.svg"
-                  alt
-                  width="16px"
-                  height="16px"
-                  class="tag_icon"
-                />
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
                 <span class="card_tag_text">24hr宅配到府</span>
               </div>
 
