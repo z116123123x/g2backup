@@ -1089,6 +1089,7 @@ window.addEventListener("load", () => {
     $("div.hamburger").on("click", function() {
       $(this).toggleClass("is-active");
       $("div.nav_back").slideToggle();
+      $("#nav").toggleClass("is-active");
     });
   });
   $(function() {

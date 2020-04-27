@@ -320,14 +320,15 @@
               height: 10%;
             }
 
-            .bk_ct {
+            //middle
+            .book_middle {
               // border: 1px solid blue;
               box-sizing: border-box;
-              position: relative;
-              top: 0;
+              width: 15vw;
+              height: 100vh;
               display: inline-block;
-              width: 50%;
-              height: 100%;
+              position: relative;
+              background-color: #438b6d;
               vertical-align: top;
             }
 
@@ -451,222 +452,4097 @@
 
                   box-sizing: border-box;
                   display: inline-block;
-                  width: 95%;
-                  height: 95%;
-                }
-              }
-            }
-
-            .bk_ct_right {
-              font-size: 0;
-              display: none; /////這裏
-
-              &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 150%;
-                height: 100%;
-                z-index: -1;
-                -webkit-clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
-                clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
-                background-color: rgba(255, 208, 191, 1);
-              }
-
-              h2 {
-                //border: 1px solid red;
-                font-size: 1.6rem;
-                font-weight: bold;
-                color: $min-color;
-                margin: 20px 0 10px 15px;
-              }
-
-              //水果產季週期
-              .fruit_time {
-                // border: 1px solid red;
-                background-color: #ba3f2b;
-                box-sizing: border-box;
-                display: block;
-                width: 100%;
-                height: 10%;
-
-                ul {
-                  display: flex;
-
-                  li {
-                    border: 1px solid white;
-                    color: white;
-                    background-color: #f38e8e;
-                    padding: 5px 0;
-                    width: 10%;
-                    height: 10px;
-                    font-size: 1.2rem;
-                    text-align: center;
-                  }
-                }
-
-                .fruit_timeline {
-                  background-color: #f38e8e;
-                  border-radius: 10px;
-                  width: 100px;
-                  height: 10px;
+                  width: 94%;
+                  height: 80vh;
                   position: relative;
-                  top: 25%;
-                }
-              }
 
-              //影片
-              .fruit_video {
-                height: 35%;
-                margin-top: 20px;
-
-                //border: 1px solid green;
-                box-sizing: border-box;
-                text-align: center;
-
-                > video {
-                  height: 100%;
-                }
-              }
-
-              //農知識
-              .fruit_Q {
-                //border: 1px solid green;
-                width: 100%;
-
-                h2 {
-                  //border: 1px solid purple;
-                  font-size: 1.6rem;
-                  font-weight: bolder;
-                  display: inline-block;
-                  margin: 20px 10px 0px 15px;
-                }
-
-                .fruit_A {
-                  padding: 10px 15px;
-
-                  //border: 1px solid purple;
-                  p {
-                    // border: 1px solid blue;
-                    font-size: 1.4rem;
-                    white-space: pre-wrap;
-                    line-height: 1.8;
-                    vertical-align: top;
-                    // 欄寬
-
-                    box-sizing: border-box;
-                    display: inline-block;
-                    width: 50%;
-                    height: 40%;
+                  //page_top_img
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    z-index: 2;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -3px;
+                    background-image: url("../assets/book_img/booktop.svg");
+                    background-repeat: no-repeat;
+                    width: 7%;
+                    height: 10%;
                   }
 
-                  .fruit_img {
-                    //border: 1px solid green;
-                    display: inline-block;
-                    width: 30%;
-                    height: auto;
-                    margin: 1% 8%;
+                  //page_bottom_img
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -3%;
+                    background-color: rgba(255, 208, 191, 1);
+                    -webkit-clip-path: polygon(
+                      0 58%,
+                      100% 58%,
+                      65% 100%,
+                      29% 100%
+                    );
+                    clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
+                    // background-image: url("../assets/book_img/bookbottom.svg");
+                    // background-repeat: no-repeat;
+                    width: 7%;
+                    height: 10%;
+                    // z-index: -2;
+                  }
 
-                    img {
-                      position: relative;
-                      width: 100%;
+                  //fruit_index
+                  .fruit_index {
+                    //border: 1px solid blue;
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+                    // padding: 20px;
+                    position: relative;
+                    display: none;
+
+                    &::before {
+                      content: "";
+                      position: absolute;
+                      top: 20px;
+                      width: 300px;
+                      height: 50px;
+                      background-image: url("../assets/book_img/content.svg");
+                      background-repeat: no-repeat;
+                    }
+
+                    .bk_content {
+                      //border: 1px solid red;
+                      display: inline-block;
+                      box-sizing: border-box;
+                      vertical-align: top;
+                      text-align: center;
+                      transition: 0.5s;
+
+                      &:nth-child(1) {
+                        background-color: #f38e8e8a;
+                        position: relative;
+                        transition: 2s;
+
+                        &:hover {
+                          background-color: #ff1e1e8a;
+
+                          &::after {
+                            content: "";
+                            width: 100%;
+                            height: 30%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-image: url("../assets/book_img/bk_ct_flowers.svg");
+                          }
+                        }
+                      }
+
+                      &:nth-child(2) {
+                        background-color: #f6d16b8a;
+                        position: relative;
+
+                        &:hover {
+                          background-color: #ffbf108a;
+
+                          &::after {
+                            content: "";
+                            width: 100%;
+                            height: 30%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-image: url("../assets/book_img/bk_ct_binbos.svg");
+                          }
+                        }
+                      }
+
+                      &:nth-child(3) {
+                        background-color: #e19b6b8a;
+                        position: relative;
+
+                        // transition: ease-in;
+                        &:hover {
+                          background-color: #ff71138a;
+
+                          &::after {
+                            content: "";
+                            width: 100%;
+                            height: 30%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-image: url("../assets/book_img/bk_ct_leafs.svg");
+                          }
+                        }
+                      }
+
+                      &:nth-child(4) {
+                        background-color: #87b0e78a;
+                        position: relative;
+
+                        &:hover {
+                          background-color: #177bfd8a;
+
+                          &::after {
+                            content: "";
+                            width: 100%;
+                            height: 30%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-image: url("../assets/book_img/bk_ct_snows.svg");
+                          }
+                        }
+                      }
+
+                      &:nth-child(5) {
+                        background-color: #c4ce7c8a;
+                        position: relative;
+
+                        &:hover {
+                          background-color: #e1fc198a;
+
+                          &::after {
+                            content: "";
+                            width: 100%;
+                            height: 30%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-image: url("../assets/book_img/bk_ct_leafs_years.svg");
+                          }
+                        }
+                      }
+
+                      width: 20%;
+                      height: 100%;
+
+                      h5 {
+                        // border: 1px solid red;
+                        font-size: 1.6rem;
+                        color: $min-color;
+                        font-weight: bolder;
+                        margin: 50% 0 10% 0;
+                      }
+
+                      .bk_content_img {
+                        //border: 1px solid red;
+                        width: 40px;
+                        height: 40px;
+                        margin: 0 auto;
+
+                        img {
+                          height: 100%;
+                        }
+                      }
+
+                      ul {
+                        //border: 1px solid green;
+                        margin-top: 10%;
+
+                        li {
+                          // border: 1px solid red;
+
+                          font-size: 1.4rem;
+                          font-weight: bolder;
+                          padding: 10px;
+
+                          &:hover {
+                            color: $min-color;
+                            width: 30%;
+                            margin: 0 auto;
+                            background-color: #f3c452;
+                          }
+                        }
+                      }
                     }
                   }
-                }
-              }
-            }
 
-            //部落格
-            .bk_ct_left_2 {
-              border: 1px solid blue;
-              box-sizing: border-box;
-              width: 50%;
-              //display: none;
-
-              h2 {
-                //border: 1px solid red;
-                font-size: 1.6rem;
-                font-weight: bold;
-                color: $min-color;
-                margin: 20px 0 5px;
-                padding-left: 15px;
-              }
-              .bk_blog_line1 {
-                width: 100%;
-                box-sizing: border-box;
-                border: 2px solid $min-color;
-                margin-bottom: 3px;
-              }
-              .bk_blog_line2 {
-                width: 100%;
-                box-sizing: border-box;
-                border: 0.5px solid $min-color;
-              }
-              #bk_blog_knowledge {
-                border: 1px solid red;
-                box-sizing: border-box;
-                width: 100%;
-                height: 42%;
-                p {
-                  // border: 1px solid blue;
-                  font-size: 1.2rem;
-                  padding-left: 30px;
-                  margin-top: 5px;
-                  color: gray;
-                }
-
-                h3 {
-                  //border: 1px solid red;
-                  font-size: 2rem;
-                  font-weight: bolder;
-                  padding-left: 15px;
-                  margin-bottom: 5px;
-                }
-                .bk_blog_reporter {
-                  border: 1px solid red;
-                  box-sizing: border-box;
-                  display: inline-block;
-                  vertical-align: top;
-                  margin: 0 15px;
-                  width: 40%;
-                  .bk_blog_rpt_img {
+                  .bk_Spring {
                     border: 1px solid red;
                     box-sizing: border-box;
-                    display: inline-block;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                  }
-                }
-                .bk_blog_img {
-                  //border: 1px solid purple;
-                  box-sizing: border-box;
-                  display: inline-block;
-                  height: 60%;
-                  width: 50%;
-                  overflow: hidden;
-
-                  img {
                     width: 100%;
+                    height: 100%;
+                    display: none;
+
+                    //個別季節目錄
+                    .bk_season_index {
+                      //border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 100%;
+                      height: 100%;
+                      position: relative;
+                      display: none;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 5%;
+                        background-color: rgba(255, 208, 191, 1);
+                      }
+
+                      .bk_season {
+                        //border: 1px solid blue;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 20%;
+                        height: 100%;
+                        background-color: #f38e8ea8;
+                        vertical-align: top;
+                        text-align: center;
+
+                        h5 {
+                          //border: 1px solid purple;
+                          font-size: 1.6rem;
+                          font-weight: bolder;
+                          color: black;
+                          margin: 50% auto 10%;
+                          background-color: #f3c452;
+                          width: 40%;
+                          padding: 10px;
+                        }
+
+                        .bk_season_img {
+                          width: 30px;
+                          height: 30px;
+                          margin: 0 auto 10px;
+
+                          img {
+                            height: 100%;
+                          }
+                        }
+                      }
+
+                      .bk_season_pic {
+                        // border: 1px solid green;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        text-align: center;
+                        width: 80%;
+                        height: 100%;
+                        padding: 5%;
+
+                        .bk_season_pic1 {
+                          border: 5px solid #f38e8ea8;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 150px;
+                          height: 150px;
+                          border-radius: 50%;
+                          overflow: hidden;
+                          position: relative;
+                          top: 40%;
+                          transform: translateY(-50%);
+                          margin: 10px;
+                          transition: 1s;
+
+                          &:hover img {
+                            height: 120%;
+                          }
+
+                          &:hover span {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            display: block;
+                            font-size: 2rem;
+                            background-color: #f3c452;
+                            padding: 5px;
+                          }
+
+                          img {
+                            height: 100%;
+                            transition: 1s;
+                          }
+
+                          span {
+                            display: none;
+                            animation-delay: 2s;
+                          }
+                        }
+                      }
+                    }
+
+                    .bk_ct {
+                      // border: 1px solid blue;
+                      box-sizing: border-box;
+                      position: relative;
+                      top: 0;
+                      display: inline-block;
+                      width: 50%;
+                      height: 100%;
+                      vertical-align: top;
+                    }
+
+                    //spring spring spring
+                    .bk_ct_left {
+                      display: none; /////這裏
+                      font-size: 0;
+
+                      .fruit_start {
+                        // border: 1px solid red;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 100%;
+                        height: 45%;
+
+                        h1 {
+                          display: inline-block;
+                          //border: 1px solid red;
+                          writing-mode: vertical-lr;
+                          letter-spacing: 0.6rem;
+                          font-size: 5rem;
+                          font-weight: bolder;
+                          color: #f38e8e;
+                          position: relative;
+                          left: 5%;
+                          top: 45%;
+                          z-index: 2;
+
+                          &::before {
+                            content: "";
+                            position: absolute;
+                            top: -30px;
+                            left: -10px;
+                            width: 50px;
+                            height: 50px;
+                            background-image: url("../assets/book_img/flower.svg");
+                          }
+
+                          &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -30px;
+                            left: 20px;
+                            width: 30px;
+                            height: 30px;
+                            background-image: url("../assets/book_img/flower.svg");
+                          }
+                        }
+
+                        .fruit_start_img {
+                          //border: 1px solid red;
+                          display: inline-block;
+                          width: 180px;
+                          height: 170px;
+                          vertical-align: top;
+                          background-image: url("../assets/book_img/fruit_start01.svg");
+                          background-repeat: no-repeat;
+                          background-size: contain;
+                          position: relative;
+                          left: 40%;
+                          top: 55%;
+                          transform: translate(-50%, -50%);
+                          transition: 0.5s;
+
+                          &:hover {
+                            width: 170px;
+                            height: 160px;
+                          }
+
+                          &:hover .img_content {
+                            width: 140px;
+                            padding-top: 140px;
+                          }
+
+                          .img_content {
+                            //border: 1px solid red;
+                            display: block;
+                            width: 130px;
+                            padding-top: 130px;
+                            border-radius: 50%;
+                            position: relative;
+                            top: 50%;
+                            left: 47%;
+                            transform: translate(-50%, -50%);
+                            overflow: hidden;
+                            transition: 1s;
+
+                            img {
+                              position: absolute;
+                              top: 0;
+                              height: 100%;
+                            }
+                          }
+                        }
+                      }
+
+                      .fruit_intro {
+                        //  border: 1px solid red;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 55%;
+
+                        // h2 {
+                        //    font-size: 1.6rem;
+                        //    font-weight: bold;
+                        //    padding-left: 10px;
+                        //    margin: 0 0 0 10px;
+                        // }
+
+                        p {
+                          //border: 1px solid blue;
+                          font-size: 1.4rem;
+                          padding: 12px;
+                          margin-left: 10px;
+                          white-space: pre-wrap;
+                          line-height: 1.8;
+                          vertical-align: top;
+                          // 欄寬
+                          //column-width: 15rem;
+                          column-count: 2;
+
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 95%;
+                          height: 95%;
+                        }
+                      }
+                    }
+
+                    .bk_ct_right {
+                      font-size: 0;
+                      display: none; /////這裏
+
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 150%;
+                        height: 100%;
+                        z-index: -1;
+                        -webkit-clip-path: polygon(
+                          34% 0%,
+                          100% 0,
+                          100% 100%,
+                          0 100%
+                        );
+                        clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
+                        background-color: rgba(255, 208, 191, 1);
+                      }
+
+                      h2 {
+                        //border: 1px solid red;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        color: $min-color;
+                        margin: 20px 0 10px 15px;
+                      }
+
+                      //水果產季週期
+                      .fruit_time {
+                        // border: 1px solid red;
+                        background-color: #ba3f2b;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 10%;
+
+                        ul {
+                          display: flex;
+
+                          li {
+                            border: 1px solid white;
+                            color: white;
+                            background-color: #f38e8e;
+                            padding: 5px 0;
+                            width: 10%;
+                            height: 10px;
+                            font-size: 1.2rem;
+                            text-align: center;
+                          }
+                        }
+
+                        .fruit_timeline {
+                          background-color: #f38e8e;
+                          border-radius: 10px;
+                          width: 100px;
+                          height: 10px;
+                          position: relative;
+                          top: 25%;
+                        }
+                      }
+
+                      //影片
+                      .fruit_video {
+                        height: 35%;
+                        margin-top: 20px;
+
+                        //border: 1px solid green;
+                        box-sizing: border-box;
+                        text-align: center;
+
+                        > video {
+                          height: 100%;
+                        }
+                      }
+
+                      //農知識
+                      .fruit_Q {
+                        //border: 1px solid green;
+                        width: 100%;
+
+                        h2 {
+                          //border: 1px solid purple;
+                          font-size: 1.6rem;
+                          font-weight: bolder;
+                          display: inline-block;
+                          margin: 20px 10px 0px 15px;
+                        }
+
+                        .fruit_A {
+                          padding: 10px 15px;
+
+                          //border: 1px solid purple;
+                          p {
+                            // border: 1px solid blue;
+                            font-size: 1.4rem;
+                            white-space: pre-wrap;
+                            line-height: 1.8;
+                            vertical-align: top;
+                            // 欄寬
+
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 50%;
+                            height: 40%;
+                          }
+
+                          .fruit_img {
+                            //border: 1px solid green;
+                            display: inline-block;
+                            width: 30%;
+                            height: auto;
+                            margin: 1% 8%;
+
+                            img {
+                              position: relative;
+                              width: 100%;
+                            }
+                          }
+                        }
+                      }
+                    }
+
+                    //部落格
+                    .bk_ct_left_2 {
+                      display: none;
+                      // border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 50%;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        z-index: -1;
+                        background-color: rgba(255, 208, 191, 1);
+                      }
+
+                      //display: none;
+                      a {
+                        text-decoration: none;
+
+                        &:hover h2 {
+                          color: #5fbc55;
+                        }
+
+                        h2 {
+                          //border: 1px solid red;
+                          font-size: 1.6rem;
+                          font-weight: bold;
+                          color: $min-color;
+                          margin: 20px 0 5px;
+                          padding-left: 15px;
+                        }
+                      }
+
+                      .bk_blog_line1 {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 2px solid $min-color;
+                        margin-bottom: 3px;
+                      }
+
+                      .bk_blog_line2 {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 0.5px solid $min-color;
+                      }
+
+                      //blog內容開始
+                      #bk_blog_knowledge {
+                        //border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 42%;
+
+                        p {
+                          // border: 1px solid blue;
+                          font-size: 1.2rem;
+                          padding-left: 30px;
+                          margin-top: 10px;
+                          color: gray;
+                        }
+
+                        h3 {
+                          //border: 1px solid red;
+                          font-size: 2rem;
+                          font-weight: bolder;
+                          padding-left: 15px;
+                          margin-bottom: 10px;
+                          position: relative;
+                          z-index: 1;
+
+                          &::before {
+                            content: "";
+                            width: 50%;
+                            height: 20px;
+                            background-color: #f38e8e6c;
+                            position: absolute;
+                            z-index: -1;
+                          }
+                        }
+
+                        //reporter
+                        .bk_blog_reporter {
+                          //border: 1px solid red;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          vertical-align: top;
+                          margin: 0 15px;
+                          width: 40%;
+
+                          .bk_blog_rpt_img {
+                            // border: 1px solid red;
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img {
+                              width: 100%;
+                            }
+                          }
+
+                          .bk_blog_rpt_name {
+                            //border: 1px solid red;
+                            display: inline-block;
+                            vertical-align: top;
+
+                            margin-left: 10px;
+
+                            a {
+                              //border: 1px solid red;
+                              color: black;
+                              padding: 0;
+
+                              font-size: 1.4rem;
+                              text-decoration: none;
+
+                              &:hover {
+                                text-decoration: underline;
+                              }
+                            }
+
+                            .bk_blog_star {
+                              margin-top: 5px;
+                              height: 15px;
+                              overflow: hidden;
+
+                              img {
+                                height: 100%;
+                              }
+                            }
+                          }
+
+                          .bk_blog_rpt_button {
+                            //border: 1px solid red;
+                            display: inline-block;
+                            vertical-align: top;
+
+                            button {
+                              // border: 1px solid red;
+                              margin-left: 10px;
+                              display: inline-block;
+                              border-radius: 10px;
+                              color: white;
+                              background-color: $min-color;
+                            }
+                          }
+                        }
+
+                        //標籤
+                        .bk_blog_tag {
+                          //border: 1px solid blue;
+                          display: block;
+                          width: 100%;
+                          margin-top: 20%;
+
+                          .bk_blog_tag1 {
+                            width: 20px;
+                            height: 20px;
+                            color: #a0a0a0;
+                            margin-bottom: 10px;
+
+                            img {
+                              width: 100%;
+                            }
+                          }
+                        }
+
+                        .bk_blog_img {
+                          //border: 1px solid purple;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          height: 60%;
+                          width: 50%;
+                          overflow: hidden;
+
+                          img {
+                            width: 100%;
+                          }
+                        }
+
+                        .bk_blog_line3 {
+                          width: 90%;
+                          margin: 20px auto 0;
+                        }
+                      }
+
+                      //部落格文章
+                      #bk_blog_content {
+                        //border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 40%;
+
+                        p {
+                          //border: 1px solid blue;
+                          font-size: 1.4rem;
+                          // padding: 0px;
+                          margin-left: 15px;
+                          white-space: pre-wrap;
+                          line-height: 1.8;
+                          vertical-align: top;
+
+                          //欄位數
+                          column-count: 2;
+
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 95%;
+                          height: 100%;
+                        }
+                      }
+                    }
+
+                    //市集
+                    .bk_ct_right_2 {
+                      display: none;
+                      //border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 50%;
+                      position: relative;
+
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        top: 45%;
+                        transform: translate(-50%, -50%);
+                        width: 100px;
+                        height: 70px;
+                        background-image: url("../assets/book_img/bk_market_line.svg");
+                        background-repeat: no-repeat;
+                      }
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        z-index: -1;
+                        background-color: rgba(255, 208, 191, 1);
+                      }
+
+                      a {
+                        text-decoration: none;
+
+                        &:hover h2 {
+                          color: #5fbc55;
+                        }
+
+                        h2 {
+                          //border: 1px solid red;
+                          font-size: 1.6rem;
+                          font-weight: bold;
+                          color: $min-color;
+                          margin: 20px 0 5px;
+                          padding-left: 15px;
+                        }
+                      }
+
+                      .bk_product {
+                        // border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 35%;
+                        text-align: center;
+                        margin-top: 30px;
+
+                        .bk_product_img {
+                          // border: 1px solid red;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 150px;
+                          height: 150px;
+
+                          img {
+                            width: 100%;
+                          }
+                        }
+
+                        .bk_pd1 {
+                          position: relative;
+                          left: -15%;
+                          top: 10%;
+
+                          &::before {
+                            content: "";
+                            width: 150px;
+                            height: 150px;
+                            background-color: #f38e8e;
+                            position: absolute;
+                            left: -20%;
+                            top: -10%;
+                            z-index: -1;
+                          }
+                        }
+
+                        .bk_pd_description {
+                          //border: 1px solid blue;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          position: relative;
+                          top: 10%;
+                          left: -10%;
+
+                          h4 {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            text-align: left;
+                          }
+
+                          p {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #f38e8e;
+                            margin-top: 10px;
+                            text-align: left;
+                          }
+
+                          button {
+                            width: 100px;
+                            height: 30px;
+                            background-color: $bg-color;
+                            border: 1px solid $min-color;
+                            position: relative;
+
+                            a {
+                              text-decoration: none;
+                              font-size: 1.2rem;
+                              font-weight: bold;
+                              color: black;
+                            }
+                          }
+                        }
+
+                        .bk_pd2 {
+                          //border: 1px solid red;
+                          position: relative;
+                          right: -5%;
+
+                          &::after {
+                            content: "";
+                            width: 140px;
+                            height: 150px;
+                            background-color: #f38e8e;
+                            position: absolute;
+                            right: -30%;
+                            bottom: -10%;
+                            z-index: -1;
+                          }
+                        }
+
+                        .bk_pd_description2 {
+                          //border: 1px solid blue;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          margin-left: 20%;
+
+                          h4 {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            text-align: left;
+                          }
+
+                          p {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #f38e8e;
+                            margin-top: 10px;
+                            text-align: left;
+                          }
+
+                          button {
+                            width: 100px;
+                            height: 30px;
+                            background-color: $bg-color;
+                            border: 1px solid $min-color;
+                            position: relative;
+
+                            a {
+                              text-decoration: none;
+                              font-size: 1.2rem;
+                              font-weight: bold;
+                              color: black;
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
-                }
-              }
 
-              #bk_blog_content {
-                border: 1px solid red;
-                box-sizing: border-box;
-                width: 100%;
-                height: 38%;
+                  .bk_Summer {
+                    //border: 1px solid red;
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+                    display: none; //koko!!
 
-                p {
-                  border: 1px solid blue;
-                  font-size: 1.4rem;
-                  // padding: 0px;
-                  margin-left: 15px;
-                  white-space: pre-wrap;
-                  line-height: 1.8;
-                  vertical-align: top;
+                    //個別季節目錄
+                    .bk_season_index {
+                      //border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 100%;
+                      height: 100%;
+                      position: relative;
+                      display: none;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 5%;
+                        background-color: rgba(255, 208, 191, 1);
+                      }
+
+                      .bk_season {
+                        //border: 1px solid blue;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 20%;
+                        height: 100%;
+                        background-color: #ffe59f;
+                        vertical-align: top;
+                        text-align: center;
+
+                        h5 {
+                          //border: 1px solid purple;
+                          font-size: 1.6rem;
+                          font-weight: bolder;
+                          color: black;
+                          margin: 50% auto 10%;
+                          background-color: #f3c452;
+                          width: 40%;
+                          padding: 10px;
+                        }
+
+                        .bk_season_img {
+                          width: 30px;
+                          height: 30px;
+                          margin: 0 auto 10px;
+
+                          img {
+                            height: 100%;
+                          }
+                        }
+                      }
+
+                      .bk_season_pic {
+                        // border: 1px solid green;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        text-align: center;
+                        width: 80%;
+                        height: 100%;
+                        padding: 5%;
+
+                        .bk_season_pic1 {
+                          border: 5px solid #f6d16b;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 150px;
+                          height: 150px;
+                          border-radius: 50%;
+                          overflow: hidden;
+                          position: relative;
+                          top: 40%;
+                          transform: translateY(-50%);
+                          margin: 10px;
+                          transition: 1s;
+
+                          &:hover img {
+                            height: 120%;
+                          }
+
+                          &:hover span {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            display: block;
+                            font-size: 2rem;
+                            background-color: #f3c452;
+                            padding: 5px;
+                          }
+
+                          img {
+                            height: 100%;
+                            transition: 1s;
+                          }
+
+                          span {
+                            display: none;
+                            animation-delay: 2s;
+                          }
+                        }
+                      }
+                    }
+
+                    .bk_ct {
+                      // border: 1px solid blue;
+                      box-sizing: border-box;
+                      position: relative;
+                      top: 0;
+                      display: inline-block;
+                      width: 50%;
+                      height: 100%;
+                      vertical-align: top;
+                    }
+
+                    //summer summer summer
+                    .bk_ct_left {
+                      display: none; /////這裏
+                      font-size: 0;
+
+                      .fruit_start {
+                        // border: 1px solid red;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 100%;
+                        height: 45%;
+
+                        h1 {
+                          display: inline-block;
+                          //border: 1px solid red;
+                          writing-mode: vertical-lr;
+                          letter-spacing: 0.6rem;
+                          font-size: 5rem;
+                          font-weight: bolder;
+                          color: #f6d16b;
+                          position: relative;
+                          left: 5%;
+                          top: 45%;
+                          z-index: 2;
+
+                          &::before {
+                            content: "";
+                            position: absolute;
+                            top: -40px;
+                            left: -10px;
+                            width: 50px;
+                            height: 50px;
+                            background-image: url("../assets/book_img/binbo.svg");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            z-index: -1;
+                          }
+
+                          &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -25px;
+                            left: 30px;
+                            width: 30px;
+                            height: 30px;
+                            background-image: url("../assets/book_img/binbo.svg");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            z-index: -1;
+                            opacity: 0.5;
+                          }
+                        }
+
+                        .fruit_start_img {
+                          //border: 1px solid red;
+                          display: inline-block;
+                          width: 180px;
+                          height: 170px;
+                          vertical-align: top;
+                          background-image: url("../assets/book_img/fruit_start01.svg");
+                          background-repeat: no-repeat;
+                          background-size: contain;
+                          position: relative;
+                          left: 40%;
+                          top: 55%;
+                          transform: translate(-50%, -50%);
+                          transition: 0.5s;
+
+                          &:hover {
+                            width: 170px;
+                            height: 160px;
+                          }
+
+                          &:hover .img_content {
+                            width: 140px;
+                            padding-top: 140px;
+                          }
+
+                          .img_content {
+                            //border: 1px solid red;
+                            display: block;
+                            width: 130px;
+                            padding-top: 130px;
+                            border-radius: 50%;
+                            position: relative;
+                            top: 50%;
+                            left: 47%;
+                            transform: translate(-50%, -50%);
+                            overflow: hidden;
+                            transition: 1s;
+
+                            img {
+                              position: absolute;
+                              top: 0;
+                              height: 100%;
+                            }
+                          }
+                        }
+                      }
+
+                      .fruit_intro {
+                        //  border: 1px solid red;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 55%;
+
+                        // h2 {
+                        //    font-size: 1.6rem;
+                        //    font-weight: bold;
+                        //    padding-left: 10px;
+                        //    margin: 0 0 0 10px;
+                        // }
+
+                        p {
+                          //border: 1px solid blue;
+                          font-size: 1.4rem;
+                          padding: 12px;
+                          margin-left: 10px;
+                          white-space: pre-wrap;
+                          line-height: 1.8;
+                          vertical-align: top;
+                          // 欄寬
+                          //column-width: 15rem;
+                          column-count: 2;
+
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 95%;
+                          height: 95%;
+                        }
+                      }
+                    }
+
+                    .bk_ct_right {
+                      font-size: 0;
+                      display: none; /////這裏
+
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 150%;
+                        height: 100%;
+                        z-index: -1;
+                        -webkit-clip-path: polygon(
+                          34% 0%,
+                          100% 0,
+                          100% 100%,
+                          0 100%
+                        );
+                        clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
+                        background-color: #ffe8aa;
+                      }
+
+                      h2 {
+                        //border: 1px solid red;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        color: $min-color;
+                        margin: 20px 0 10px 15px;
+                      }
+
+                      //水果產季週期
+                      .fruit_time {
+                        // border: 1px solid red;
+                        background-color: #ddbe36;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 10%;
+
+                        ul {
+                          display: flex;
+
+                          li {
+                            border: 1px solid white;
+                            color: #808080;
+                            background-color: #f6d16b;
+                            padding: 5px 0;
+                            width: 10%;
+                            height: 10px;
+                            font-size: 1.2rem;
+                            text-align: center;
+                          }
+                        }
+
+                        .fruit_timeline {
+                          background-color: #f6d16b;
+                          border-radius: 10px;
+                          width: 100px;
+                          height: 10px;
+                          position: relative;
+                          top: 25%;
+                        }
+                      }
+
+                      //影片
+                      .fruit_video {
+                        height: 35%;
+                        margin-top: 20px;
+
+                        //border: 1px solid green;
+                        box-sizing: border-box;
+                        text-align: center;
+
+                        > video {
+                          height: 100%;
+                        }
+                      }
+
+                      //農知識
+                      .fruit_Q {
+                        //border: 1px solid green;
+                        width: 100%;
+
+                        h2 {
+                          //border: 1px solid purple;
+                          font-size: 1.6rem;
+                          font-weight: bolder;
+                          display: inline-block;
+                          margin: 20px 10px 0px 15px;
+                        }
+
+                        .fruit_A {
+                          padding: 10px 15px;
+
+                          //border: 1px solid purple;
+                          p {
+                            // border: 1px solid blue;
+                            font-size: 1.4rem;
+                            white-space: pre-wrap;
+                            line-height: 1.8;
+                            vertical-align: top;
+                            // 欄寬
+
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 50%;
+                            height: 40%;
+                          }
+
+                          .fruit_img {
+                            //border: 1px solid green;
+                            display: inline-block;
+                            width: 30%;
+                            height: auto;
+                            margin: 1% 8%;
+
+                            img {
+                              position: relative;
+                              width: 100%;
+                            }
+                          }
+                        }
+                      }
+                    }
+
+                    //部落格
+                    .bk_ct_left_2 {
+                      display: none; //這裡！！！！
+                      // border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 50%;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        z-index: -1;
+                        background-color: #f6d16b;
+                      }
+
+                      a {
+                        text-decoration: none;
+
+                        &:hover h2 {
+                          color: #5fbc55;
+                        }
+
+                        h2 {
+                          //border: 1px solid red;
+                          font-size: 1.6rem;
+                          font-weight: bold;
+                          color: $min-color;
+                          margin: 20px 0 5px;
+                          padding-left: 15px;
+                        }
+                      }
+
+                      .bk_blog_line1 {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 2px solid $min-color;
+                        margin-bottom: 3px;
+                      }
+
+                      .bk_blog_line2 {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 0.5px solid $min-color;
+                      }
+
+                      //blog內容開始
+                      #bk_blog_knowledge {
+                        //border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 42%;
+
+                        p {
+                          // border: 1px solid blue;
+                          font-size: 1.2rem;
+                          padding-left: 30px;
+                          margin-top: 10px;
+                          color: gray;
+                        }
+
+                        h3 {
+                          //border: 1px solid red;
+                          font-size: 2rem;
+                          font-weight: bolder;
+                          padding-left: 15px;
+                          margin-bottom: 10px;
+                          position: relative;
+                          z-index: 1;
+
+                          &::before {
+                            content: "";
+                            width: 50%;
+                            height: 20px;
+                            background-color: #f38e8e6c;
+                            position: absolute;
+                            z-index: -1;
+                          }
+                        }
+
+                        //reporter
+                        .bk_blog_reporter {
+                          //border: 1px solid red;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          vertical-align: top;
+                          margin: 0 15px;
+                          width: 40%;
+
+                          .bk_blog_rpt_img {
+                            // border: 1px solid red;
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img {
+                              width: 100%;
+                            }
+                          }
+
+                          .bk_blog_rpt_name {
+                            //border: 1px solid red;
+                            display: inline-block;
+                            vertical-align: top;
+
+                            margin-left: 10px;
+
+                            a {
+                              //border: 1px solid red;
+                              color: black;
+                              padding: 0;
+
+                              font-size: 1.4rem;
+                              text-decoration: none;
+
+                              &:hover {
+                                text-decoration: underline;
+                              }
+                            }
+
+                            .bk_blog_star {
+                              margin-top: 5px;
+                              height: 15px;
+                              overflow: hidden;
+
+                              img {
+                                height: 100%;
+                              }
+                            }
+                          }
+
+                          .bk_blog_rpt_button {
+                            //border: 1px solid red;
+                            display: inline-block;
+                            vertical-align: top;
+
+                            button {
+                              // border: 1px solid red;
+                              margin-left: 10px;
+                              display: inline-block;
+                              border-radius: 10px;
+                              color: white;
+                              background-color: $min-color;
+                            }
+                          }
+                        }
+
+                        //標籤
+                        .bk_blog_tag {
+                          //border: 1px solid blue;
+                          display: block;
+                          width: 100%;
+                          margin-top: 20%;
+
+                          .bk_blog_tag1 {
+                            width: 20px;
+                            height: 20px;
+                            color: #a0a0a0;
+                            margin-bottom: 10px;
+
+                            img {
+                              width: 100%;
+                            }
+                          }
+                        }
+
+                        .bk_blog_img {
+                          //border: 1px solid purple;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          height: 60%;
+                          width: 50%;
+                          overflow: hidden;
+
+                          img {
+                            width: 100%;
+                          }
+                        }
+
+                        .bk_blog_line3 {
+                          width: 90%;
+                          margin: 20px auto 0;
+                        }
+                      }
+
+                      //部落格文章
+                      #bk_blog_content {
+                        //border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 40%;
+
+                        p {
+                          //border: 1px solid blue;
+                          font-size: 1.4rem;
+                          // padding: 0px;
+                          margin-left: 15px;
+                          white-space: pre-wrap;
+                          line-height: 1.8;
+                          vertical-align: top;
+
+                          //欄位數
+                          column-count: 2;
+
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 95%;
+                          height: 100%;
+                        }
+                      }
+                    }
+
+                    //市集
+                    .bk_ct_right_2 {
+                      display: none; //這裏
+                      //border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 50%;
+                      position: relative;
+
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        top: 45%;
+                        transform: translate(-50%, -50%);
+                        width: 100px;
+                        height: 70px;
+                        background-image: url("../assets/book_img/bk_market_line.svg");
+                        background-repeat: no-repeat;
+                      }
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        z-index: -1;
+                        background-color: #f6d16b;
+                      }
+
+                      a {
+                        text-decoration: none;
+
+                        &:hover h2 {
+                          color: #5fbc55;
+                        }
+
+                        h2 {
+                          //border: 1px solid red;
+                          font-size: 1.6rem;
+                          font-weight: bold;
+                          color: $min-color;
+                          margin: 20px 0 5px;
+                          padding-left: 15px;
+                        }
+                      }
+
+                      .bk_product {
+                        // border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 35%;
+                        text-align: center;
+                        margin-top: 30px;
+
+                        .bk_product_img {
+                          // border: 1px solid red;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 150px;
+                          height: 150px;
+
+                          img {
+                            width: 100%;
+                          }
+                        }
+
+                        .bk_pd1 {
+                          position: relative;
+                          left: -15%;
+                          top: 10%;
+
+                          &::before {
+                            content: "";
+                            width: 150px;
+                            height: 150px;
+                            background-color: #f6d16b;
+                            position: absolute;
+                            left: -20%;
+                            top: -10%;
+                            z-index: -1;
+                          }
+                        }
+
+                        .bk_pd_description {
+                          //border: 1px solid blue;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          position: relative;
+                          top: 10%;
+                          left: -10%;
+
+                          h4 {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            text-align: left;
+                          }
+
+                          p {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #e7b939;
+                            margin-top: 10px;
+                            text-align: left;
+                          }
+
+                          button {
+                            width: 100px;
+                            height: 30px;
+                            background-color: $bg-color;
+                            border: 1px solid $min-color;
+                            position: relative;
+
+                            a {
+                              text-decoration: none;
+                              font-size: 1.2rem;
+                              font-weight: bold;
+                              color: black;
+                            }
+                          }
+                        }
+
+                        .bk_pd2 {
+                          //border: 1px solid red;
+                          position: relative;
+                          right: -5%;
+
+                          &::after {
+                            content: "";
+                            width: 140px;
+                            height: 150px;
+                            background-color: #f6d16b;
+                            position: absolute;
+                            right: -30%;
+                            bottom: -10%;
+                            z-index: -1;
+                          }
+                        }
+
+                        .bk_pd_description2 {
+                          //border: 1px solid blue;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          margin-left: 20%;
+
+                          h4 {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            text-align: left;
+                          }
+
+                          p {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #e7b939;
+                            margin-top: 10px;
+                            text-align: left;
+                          }
+
+                          button {
+                            width: 100px;
+                            height: 30px;
+                            background-color: $bg-color;
+                            border: 1px solid $min-color;
+                            position: relative;
+
+                            a {
+                              text-decoration: none;
+                              font-size: 1.2rem;
+                              font-weight: bold;
+                              color: black;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  .bk_Fall {
+                    //border: 1px solid red;
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+
+                    display: none; //這裏
+
+                    //個別季節目錄
+                    .bk_season_index {
+                      //border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 100%;
+                      height: 100%;
+                      position: relative;
+                      display: none;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 5%;
+                        background-color: #e19b6b;
+                      }
+
+                      .bk_season {
+                        //border: 1px solid blue;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 20%;
+                        height: 100%;
+                        background-color: #ffa970;
+                        vertical-align: top;
+                        text-align: center;
+
+                        h5 {
+                          //border: 1px solid purple;
+                          font-size: 1.6rem;
+                          font-weight: bolder;
+                          color: black;
+                          margin: 50% auto 10%;
+                          background-color: #ffda83;
+                          width: 40%;
+                          padding: 10px;
+                        }
+
+                        .bk_season_img {
+                          width: 30px;
+                          height: 30px;
+                          margin: 0 auto 10px;
+
+                          img {
+                            height: 100%;
+                          }
+                        }
+                      }
+
+                      .bk_season_pic {
+                        // border: 1px solid green;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        text-align: center;
+                        width: 80%;
+                        height: 100%;
+                        padding: 5%;
+
+                        .bk_season_pic1 {
+                          border: 5px solid #e19b6b;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 150px;
+                          height: 150px;
+                          border-radius: 50%;
+                          overflow: hidden;
+                          position: relative;
+                          top: 40%;
+                          transform: translateY(-50%);
+                          margin: 10px;
+                          transition: 1s;
+
+                          &:hover img {
+                            height: 120%;
+                          }
+
+                          &:hover span {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            display: block;
+                            font-size: 2rem;
+                            background-color: #f3c452;
+                            padding: 5px;
+                          }
+
+                          img {
+                            height: 100%;
+                            transition: 1s;
+                          }
+
+                          span {
+                            display: none;
+                            animation-delay: 2s;
+                          }
+                        }
+                      }
+                    }
+
+                    .bk_ct {
+                      // border: 1px solid blue;
+                      box-sizing: border-box;
+                      position: relative;
+                      top: 0;
+                      display: inline-block;
+                      width: 50%;
+                      height: 100%;
+                      vertical-align: top;
+                    }
+
+                    //fall fall fall
+                    .bk_ct_left {
+                      display: none; /////這裏
+                      font-size: 0;
+
+                      .fruit_start {
+                        // border: 1px solid red;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 100%;
+                        height: 45%;
+
+                        h1 {
+                          display: inline-block;
+                          //border: 1px solid red;
+                          writing-mode: vertical-lr;
+                          letter-spacing: 0.6rem;
+                          font-size: 5rem;
+                          font-weight: bolder;
+                          color: #e19b6b;
+                          position: relative;
+                          left: 5%;
+                          top: 45%;
+                          z-index: 2;
+
+                          &::before {
+                            content: "";
+                            position: absolute;
+                            top: -40px;
+                            left: -10px;
+                            width: 50px;
+                            height: 50px;
+                            background-image: url("../assets/book_img/leaf.svg");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            z-index: -1;
+                            opacity: 0.8;
+                          }
+
+                          &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -20px;
+                            left: 20px;
+                            width: 30px;
+                            height: 30px;
+                            background-image: url("../assets/book_img/leaf.svg");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            z-index: -1;
+                            opacity: 0.8;
+                          }
+                        }
+
+                        .fruit_start_img {
+                          //border: 1px solid red;
+                          display: inline-block;
+                          width: 180px;
+                          height: 170px;
+                          vertical-align: top;
+                          background-image: url("../assets/book_img/fruit_start01.svg");
+                          background-repeat: no-repeat;
+                          background-size: contain;
+                          position: relative;
+                          left: 40%;
+                          top: 55%;
+                          transform: translate(-50%, -50%);
+                          transition: 0.5s;
+
+                          &:hover {
+                            width: 170px;
+                            height: 160px;
+                          }
+
+                          &:hover .img_content {
+                            width: 140px;
+                            padding-top: 140px;
+                          }
+
+                          .img_content {
+                            //border: 1px solid red;
+                            display: block;
+                            width: 130px;
+                            padding-top: 130px;
+                            border-radius: 50%;
+                            position: relative;
+                            top: 50%;
+                            left: 47%;
+                            transform: translate(-50%, -50%);
+                            overflow: hidden;
+                            transition: 1s;
+
+                            img {
+                              position: absolute;
+                              top: 0;
+                              height: 100%;
+                            }
+                          }
+                        }
+                      }
+
+                      .fruit_intro {
+                        //  border: 1px solid red;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 55%;
+
+                        // h2 {
+                        //    font-size: 1.6rem;
+                        //    font-weight: bold;
+                        //    padding-left: 10px;
+                        //    margin: 0 0 0 10px;
+                        // }
+
+                        p {
+                          //border: 1px solid blue;
+                          font-size: 1.4rem;
+                          padding: 12px;
+                          margin-left: 10px;
+                          white-space: pre-wrap;
+                          line-height: 1.8;
+                          vertical-align: top;
+                          // 欄寬
+                          //column-width: 15rem;
+                          column-count: 2;
+
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 95%;
+                          height: 95%;
+                        }
+                      }
+                    }
+
+                    .bk_ct_right {
+                      font-size: 0;
+                      display: none; /////這裏
+
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 150%;
+                        height: 100%;
+                        z-index: -1;
+                        -webkit-clip-path: polygon(
+                          34% 0%,
+                          100% 0,
+                          100% 100%,
+                          0 100%
+                        );
+                        clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
+                        background-color: #ffc49d;
+                      }
+
+                      h2 {
+                        //border: 1px solid red;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        color: $min-color;
+                        margin: 20px 0 10px 15px;
+                      }
+
+                      //水果產季週期
+                      .fruit_time {
+                        // border: 1px solid red;
+                        background-color: #704a17;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 10%;
+
+                        ul {
+                          display: flex;
+
+                          li {
+                            border: 1px solid white;
+                            color: white;
+                            background-color: #e19b6b;
+                            padding: 5px 0;
+                            width: 10%;
+                            height: 10px;
+                            font-size: 1.2rem;
+                            text-align: center;
+                          }
+                        }
+
+                        .fruit_timeline {
+                          background-color: #e19b6b;
+                          border-radius: 10px;
+                          width: 100px;
+                          height: 10px;
+                          position: relative;
+                          top: 25%;
+                        }
+                      }
+
+                      //影片
+                      .fruit_video {
+                        height: 35%;
+                        margin-top: 20px;
+
+                        //border: 1px solid green;
+                        box-sizing: border-box;
+                        text-align: center;
+
+                        > video {
+                          height: 100%;
+                        }
+                      }
+
+                      //農知識
+                      .fruit_Q {
+                        //border: 1px solid green;
+                        width: 100%;
+
+                        h2 {
+                          //border: 1px solid purple;
+                          font-size: 1.6rem;
+                          font-weight: bolder;
+                          display: inline-block;
+                          margin: 20px 10px 0px 15px;
+                        }
+
+                        .fruit_A {
+                          padding: 10px 15px;
+
+                          //border: 1px solid purple;
+                          p {
+                            // border: 1px solid blue;
+                            font-size: 1.4rem;
+                            white-space: pre-wrap;
+                            line-height: 1.8;
+                            vertical-align: top;
+                            // 欄寬
+
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 50%;
+                            height: 40%;
+                          }
+
+                          .fruit_img {
+                            //border: 1px solid green;
+                            display: inline-block;
+                            width: 30%;
+                            height: auto;
+                            margin: 1% 8%;
+
+                            img {
+                              position: relative;
+                              width: 100%;
+                            }
+                          }
+                        }
+                      }
+                    }
+
+                    //部落格
+                    .bk_ct_left_2 {
+                      display: none;
+                      // border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 50%;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        z-index: -1;
+                        background-color: #e19b6b;
+                      }
+
+                      //display: none;
+                      a {
+                        text-decoration: none;
+
+                        &:hover h2 {
+                          color: #5fbc55;
+                        }
+
+                        h2 {
+                          //border: 1px solid red;
+                          font-size: 1.6rem;
+                          font-weight: bold;
+                          color: $min-color;
+                          margin: 20px 0 5px;
+                          padding-left: 15px;
+                        }
+                      }
+
+                      .bk_blog_line1 {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 2px solid $min-color;
+                        margin-bottom: 3px;
+                      }
+
+                      .bk_blog_line2 {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 0.5px solid $min-color;
+                      }
+
+                      //blog內容開始
+                      #bk_blog_knowledge {
+                        //border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 42%;
+
+                        p {
+                          // border: 1px solid blue;
+                          font-size: 1.2rem;
+                          padding-left: 30px;
+                          margin-top: 10px;
+                          color: gray;
+                        }
+
+                        h3 {
+                          //border: 1px solid red;
+                          font-size: 2rem;
+                          font-weight: bolder;
+                          padding-left: 15px;
+                          margin-bottom: 10px;
+                          position: relative;
+                          z-index: 1;
+
+                          &::before {
+                            content: "";
+                            width: 50%;
+                            height: 20px;
+                            background-color: #f38e8e6c;
+                            position: absolute;
+                            z-index: -1;
+                          }
+                        }
+
+                        //reporter
+                        .bk_blog_reporter {
+                          //border: 1px solid red;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          vertical-align: top;
+                          margin: 0 15px;
+                          width: 40%;
+
+                          .bk_blog_rpt_img {
+                            // border: 1px solid red;
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img {
+                              width: 100%;
+                            }
+                          }
+
+                          .bk_blog_rpt_name {
+                            //border: 1px solid red;
+                            display: inline-block;
+                            vertical-align: top;
+
+                            margin-left: 10px;
+
+                            a {
+                              //border: 1px solid red;
+                              color: black;
+                              padding: 0;
+
+                              font-size: 1.4rem;
+                              text-decoration: none;
+
+                              &:hover {
+                                text-decoration: underline;
+                              }
+                            }
+
+                            .bk_blog_star {
+                              margin-top: 5px;
+                              height: 15px;
+                              overflow: hidden;
+
+                              img {
+                                height: 100%;
+                              }
+                            }
+                          }
+
+                          .bk_blog_rpt_button {
+                            //border: 1px solid red;
+                            display: inline-block;
+                            vertical-align: top;
+
+                            button {
+                              // border: 1px solid red;
+                              margin-left: 10px;
+                              display: inline-block;
+                              border-radius: 10px;
+                              color: white;
+                              background-color: $min-color;
+                            }
+                          }
+                        }
+
+                        //標籤
+                        .bk_blog_tag {
+                          //border: 1px solid blue;
+                          display: block;
+                          width: 100%;
+                          margin-top: 20%;
+
+                          .bk_blog_tag1 {
+                            width: 20px;
+                            height: 20px;
+                            color: #a0a0a0;
+                            margin-bottom: 10px;
+
+                            img {
+                              width: 100%;
+                            }
+                          }
+                        }
+
+                        .bk_blog_img {
+                          //border: 1px solid purple;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          height: 60%;
+                          width: 50%;
+                          overflow: hidden;
+
+                          img {
+                            width: 100%;
+                          }
+                        }
+
+                        .bk_blog_line3 {
+                          width: 90%;
+                          margin: 20px auto 0;
+                        }
+                      }
+
+                      //部落格文章
+                      #bk_blog_content {
+                        //border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 40%;
+
+                        p {
+                          //border: 1px solid blue;
+                          font-size: 1.4rem;
+                          // padding: 0px;
+                          margin-left: 15px;
+                          white-space: pre-wrap;
+                          line-height: 1.8;
+                          vertical-align: top;
+
+                          //欄位數
+                          column-count: 2;
+
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 95%;
+                          height: 100%;
+                        }
+                      }
+                    }
+
+                    //市集
+                    .bk_ct_right_2 {
+                      display: none; //koko
+                      //border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 50%;
+                      position: relative;
+
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        top: 45%;
+                        transform: translate(-50%, -50%);
+                        width: 100px;
+                        height: 70px;
+                        background-image: url("../assets/book_img/bk_market_line.svg");
+                        background-repeat: no-repeat;
+                      }
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        z-index: -1;
+                        background-color: #e19b6b;
+                      }
+
+                      a {
+                        text-decoration: none;
+
+                        &:hover h2 {
+                          color: #5fbc55;
+                        }
+
+                        h2 {
+                          //border: 1px solid red;
+                          font-size: 1.6rem;
+                          font-weight: bold;
+                          color: $min-color;
+                          margin: 20px 0 5px;
+                          padding-left: 15px;
+                        }
+                      }
+
+                      .bk_product {
+                        // border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 35%;
+                        text-align: center;
+                        margin-top: 30px;
+
+                        .bk_product_img {
+                          // border: 1px solid red;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 150px;
+                          height: 150px;
+
+                          img {
+                            width: 100%;
+                          }
+                        }
+
+                        .bk_pd1 {
+                          position: relative;
+                          left: -15%;
+                          top: 10%;
+
+                          &::before {
+                            content: "";
+                            width: 150px;
+                            height: 150px;
+                            background-color: #e19b6b;
+                            position: absolute;
+                            left: -20%;
+                            top: -10%;
+                            z-index: -1;
+                          }
+                        }
+
+                        .bk_pd_description {
+                          //border: 1px solid blue;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          position: relative;
+                          top: 10%;
+                          left: -10%;
+
+                          h4 {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            text-align: left;
+                          }
+
+                          p {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #e19b6b;
+                            margin-top: 10px;
+                            text-align: left;
+                          }
+
+                          button {
+                            width: 100px;
+                            height: 30px;
+                            background-color: $bg-color;
+                            border: 1px solid $min-color;
+                            position: relative;
+
+                            a {
+                              text-decoration: none;
+                              font-size: 1.2rem;
+                              font-weight: bold;
+                              color: black;
+                            }
+                          }
+                        }
+
+                        .bk_pd2 {
+                          //border: 1px solid red;
+                          position: relative;
+                          right: -5%;
+
+                          &::after {
+                            content: "";
+                            width: 140px;
+                            height: 150px;
+                            background-color: #e19b6b;
+                            position: absolute;
+                            right: -30%;
+                            bottom: -10%;
+                            z-index: -1;
+                          }
+                        }
+
+                        .bk_pd_description2 {
+                          //border: 1px solid blue;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          margin-left: 20%;
+
+                          h4 {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            text-align: left;
+                          }
+
+                          p {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #e19b6b;
+                            margin-top: 10px;
+                            text-align: left;
+                          }
+
+                          button {
+                            width: 100px;
+                            height: 30px;
+                            background-color: $bg-color;
+                            border: 1px solid $min-color;
+                            position: relative;
+
+                            a {
+                              text-decoration: none;
+                              font-size: 1.2rem;
+                              font-weight: bold;
+                              color: black;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  .bk_Winter {
+                    //border: 1px solid red;
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+                    display: none;
+
+                    //個別季節目錄
+                    .bk_season_index {
+                      //border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 100%;
+                      height: 100%;
+                      position: relative;
+                      display: none;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 5%;
+                        background-color: #87b0e7;
+                      }
+
+                      .bk_season {
+                        //border: 1px solid blue;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 20%;
+                        height: 100%;
+                        background-color: #94c3ff;
+                        vertical-align: top;
+                        text-align: center;
+
+                        h5 {
+                          //border: 1px solid purple;
+                          font-size: 1.6rem;
+                          font-weight: bolder;
+                          color: black;
+                          margin: 50% auto 10%;
+                          background-color: #f3c452;
+                          width: 40%;
+                          padding: 10px;
+                        }
+
+                        .bk_season_img {
+                          width: 30px;
+                          height: 30px;
+                          margin: 0 auto 10px;
+
+                          img {
+                            height: 100%;
+                          }
+                        }
+                      }
+
+                      .bk_season_pic {
+                        // border: 1px solid green;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        text-align: center;
+                        width: 80%;
+                        height: 100%;
+                        padding: 5%;
+
+                        .bk_season_pic1 {
+                          border: 5px solid #87b0e7;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 150px;
+                          height: 150px;
+                          border-radius: 50%;
+                          overflow: hidden;
+                          position: relative;
+                          top: 40%;
+                          transform: translateY(-50%);
+                          margin: 10px;
+                          transition: 1s;
+
+                          &:hover img {
+                            height: 120%;
+                          }
+
+                          &:hover span {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            display: block;
+                            font-size: 2rem;
+                            background-color: #f3c452;
+                            padding: 5px;
+                          }
+
+                          img {
+                            height: 100%;
+                            transition: 1s;
+                          }
+
+                          span {
+                            display: none;
+                            animation-delay: 2s;
+                          }
+                        }
+                      }
+                    }
+
+                    .bk_ct {
+                      // border: 1px solid blue;
+                      box-sizing: border-box;
+                      position: relative;
+                      top: 0;
+                      display: inline-block;
+                      width: 50%;
+                      height: 100%;
+                      vertical-align: top;
+                    }
+
+                    //winter winter
+                    .bk_ct_left {
+                      display: none; /////這裏
+                      font-size: 0;
+
+                      .fruit_start {
+                        // border: 1px solid red;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 100%;
+                        height: 45%;
+
+                        h1 {
+                          display: inline-block;
+                          //border: 1px solid red;
+                          writing-mode: vertical-lr;
+                          letter-spacing: 0.6rem;
+                          font-size: 5rem;
+                          font-weight: bolder;
+                          color: #87b0e7;
+                          position: relative;
+                          left: 5%;
+                          top: 45%;
+                          z-index: 2;
+
+                          &::before {
+                            content: "";
+                            position: absolute;
+                            top: -40px;
+                            left: -10px;
+                            width: 50px;
+                            height: 50px;
+                            background-image: url("../assets/book_img/snow.svg");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            z-index: -1;
+                            opacity: 0.6;
+                          }
+
+                          &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -20px;
+                            left: 20px;
+                            width: 30px;
+                            height: 30px;
+                            background-image: url("../assets/book_img/snow.svg");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            z-index: -1;
+                            opacity: 0.6;
+                          }
+                        }
+
+                        .fruit_start_img {
+                          //border: 1px solid red;
+                          display: inline-block;
+                          width: 180px;
+                          height: 170px;
+                          vertical-align: top;
+                          background-image: url("../assets/book_img/fruit_start01.svg");
+                          background-repeat: no-repeat;
+                          background-size: contain;
+                          position: relative;
+                          left: 40%;
+                          top: 55%;
+                          transform: translate(-50%, -50%);
+                          transition: 0.5s;
+
+                          &:hover {
+                            width: 170px;
+                            height: 160px;
+                          }
+
+                          &:hover .img_content {
+                            width: 140px;
+                            padding-top: 140px;
+                          }
+
+                          .img_content {
+                            //border: 1px solid red;
+                            display: block;
+                            width: 130px;
+                            padding-top: 130px;
+                            border-radius: 50%;
+                            position: relative;
+                            top: 50%;
+                            left: 47%;
+                            transform: translate(-50%, -50%);
+                            overflow: hidden;
+                            transition: 1s;
+
+                            img {
+                              position: absolute;
+                              top: 0;
+                              height: 100%;
+                            }
+                          }
+                        }
+                      }
+
+                      .fruit_intro {
+                        //  border: 1px solid red;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 55%;
+
+                        // h2 {
+                        //    font-size: 1.6rem;
+                        //    font-weight: bold;
+                        //    padding-left: 10px;
+                        //    margin: 0 0 0 10px;
+                        // }
+
+                        p {
+                          //border: 1px solid blue;
+                          font-size: 1.4rem;
+                          padding: 12px;
+                          margin-left: 10px;
+                          white-space: pre-wrap;
+                          line-height: 1.8;
+                          vertical-align: top;
+                          // 欄寬
+                          //column-width: 15rem;
+                          column-count: 2;
+
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 95%;
+                          height: 95%;
+                        }
+                      }
+                    }
+
+                    .bk_ct_right {
+                      font-size: 0;
+                      display: none; /////這裏
+
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 150%;
+                        height: 100%;
+                        z-index: -1;
+                        -webkit-clip-path: polygon(
+                          34% 0%,
+                          100% 0,
+                          100% 100%,
+                          0 100%
+                        );
+                        clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
+                        background-color: #c6dfff;
+                      }
+
+                      h2 {
+                        //border: 1px solid red;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        color: $min-color;
+                        margin: 20px 0 10px 15px;
+                      }
+
+                      //水果產季週期
+                      .fruit_time {
+                        // border: 1px solid red;
+                        background-color: #2465bb;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 10%;
+
+                        ul {
+                          display: flex;
+
+                          li {
+                            border: 1px solid white;
+                            color: white;
+                            background-color: #87b0e7;
+                            padding: 5px 0;
+                            width: 10%;
+                            height: 10px;
+                            font-size: 1.2rem;
+                            text-align: center;
+                          }
+                        }
+
+                        .fruit_timeline {
+                          background-color: #87b0e7;
+                          border-radius: 10px;
+                          width: 100px;
+                          height: 10px;
+                          position: relative;
+                          top: 25%;
+                        }
+                      }
+
+                      //影片
+                      .fruit_video {
+                        height: 35%;
+                        margin-top: 20px;
+
+                        //border: 1px solid green;
+                        box-sizing: border-box;
+                        text-align: center;
+
+                        > video {
+                          height: 100%;
+                        }
+                      }
+
+                      //農知識
+                      .fruit_Q {
+                        //border: 1px solid green;
+                        width: 100%;
+
+                        h2 {
+                          //border: 1px solid purple;
+                          font-size: 1.6rem;
+                          font-weight: bolder;
+                          display: inline-block;
+                          margin: 20px 10px 0px 15px;
+                        }
+
+                        .fruit_A {
+                          padding: 10px 15px;
+
+                          //border: 1px solid purple;
+                          p {
+                            // border: 1px solid blue;
+                            font-size: 1.4rem;
+                            white-space: pre-wrap;
+                            line-height: 1.8;
+                            vertical-align: top;
+                            // 欄寬
+
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 50%;
+                            height: 40%;
+                          }
+
+                          .fruit_img {
+                            //border: 1px solid green;
+                            display: inline-block;
+                            width: 30%;
+                            height: auto;
+                            margin: 1% 8%;
+
+                            img {
+                              position: relative;
+                              width: 100%;
+                            }
+                          }
+                        }
+                      }
+                    }
+
+                    //部落格
+                    .bk_ct_left_2 {
+                      display: none;
+                      // border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 50%;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        z-index: -1;
+                        background-color: #87b0e7;
+                      }
+
+                      a {
+                        text-decoration: none;
+
+                        &:hover h2 {
+                          color: #5fbc55;
+                        }
+
+                        h2 {
+                          //border: 1px solid red;
+                          font-size: 1.6rem;
+                          font-weight: bold;
+                          color: $min-color;
+                          margin: 20px 0 5px;
+                          padding-left: 15px;
+                        }
+                      }
+
+                      .bk_blog_line1 {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 2px solid $min-color;
+                        margin-bottom: 3px;
+                      }
+
+                      .bk_blog_line2 {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 0.5px solid $min-color;
+                      }
+
+                      //blog內容開始
+                      #bk_blog_knowledge {
+                        //border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 42%;
+
+                        p {
+                          // border: 1px solid blue;
+                          font-size: 1.2rem;
+                          padding-left: 30px;
+                          margin-top: 10px;
+                          color: gray;
+                        }
+
+                        h3 {
+                          //border: 1px solid red;
+                          font-size: 2rem;
+                          font-weight: bolder;
+                          padding-left: 15px;
+                          margin-bottom: 10px;
+                          position: relative;
+                          z-index: 1;
+
+                          &::before {
+                            content: "";
+                            width: 50%;
+                            height: 20px;
+                            background-color: #f38e8e6c;
+                            position: absolute;
+                            z-index: -1;
+                          }
+                        }
+
+                        //reporter
+                        .bk_blog_reporter {
+                          //border: 1px solid red;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          vertical-align: top;
+                          margin: 0 15px;
+                          width: 40%;
+
+                          .bk_blog_rpt_img {
+                            // border: 1px solid red;
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img {
+                              width: 100%;
+                            }
+                          }
+
+                          .bk_blog_rpt_name {
+                            //border: 1px solid red;
+                            display: inline-block;
+                            vertical-align: top;
+
+                            margin-left: 10px;
+
+                            a {
+                              //border: 1px solid red;
+                              color: black;
+                              padding: 0;
+
+                              font-size: 1.4rem;
+                              text-decoration: none;
+
+                              &:hover {
+                                text-decoration: underline;
+                              }
+                            }
+
+                            .bk_blog_star {
+                              margin-top: 5px;
+                              height: 15px;
+                              overflow: hidden;
+
+                              img {
+                                height: 100%;
+                              }
+                            }
+                          }
+
+                          .bk_blog_rpt_button {
+                            //border: 1px solid red;
+                            display: inline-block;
+                            vertical-align: top;
+
+                            button {
+                              // border: 1px solid red;
+                              margin-left: 10px;
+                              display: inline-block;
+                              border-radius: 10px;
+                              color: white;
+                              background-color: $min-color;
+                            }
+                          }
+                        }
+
+                        //標籤
+                        .bk_blog_tag {
+                          //border: 1px solid blue;
+                          display: block;
+                          width: 100%;
+                          margin-top: 20%;
+
+                          .bk_blog_tag1 {
+                            width: 20px;
+                            height: 20px;
+                            color: #a0a0a0;
+                            margin-bottom: 10px;
+
+                            img {
+                              width: 100%;
+                            }
+                          }
+                        }
+
+                        .bk_blog_img {
+                          //border: 1px solid purple;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          height: 60%;
+                          width: 50%;
+                          overflow: hidden;
+
+                          img {
+                            width: 100%;
+                          }
+                        }
+
+                        .bk_blog_line3 {
+                          width: 90%;
+                          margin: 20px auto 0;
+                        }
+                      }
+
+                      //部落格文章
+                      #bk_blog_content {
+                        //border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 40%;
+
+                        p {
+                          //border: 1px solid blue;
+                          font-size: 1.4rem;
+                          // padding: 0px;
+                          margin-left: 15px;
+                          white-space: pre-wrap;
+                          line-height: 1.8;
+                          vertical-align: top;
+
+                          //欄位數
+                          column-count: 2;
+
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 95%;
+                          height: 100%;
+                        }
+                      }
+                    }
+
+                    //市集
+                    .bk_ct_right_2 {
+                      display: none;
+                      //border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 50%;
+                      position: relative;
+
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        top: 45%;
+                        transform: translate(-50%, -50%);
+                        width: 100px;
+                        height: 70px;
+                        background-image: url("../assets/book_img/bk_market_line.svg");
+                        background-repeat: no-repeat;
+                      }
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        z-index: -1;
+                        background-color: #87b0e7;
+                      }
+
+                      a {
+                        text-decoration: none;
+
+                        &:hover h2 {
+                          color: #5fbc55;
+                        }
+
+                        h2 {
+                          //border: 1px solid red;
+                          font-size: 1.6rem;
+                          font-weight: bold;
+                          color: $min-color;
+                          margin: 20px 0 5px;
+                          padding-left: 15px;
+                        }
+                      }
+
+                      .bk_product {
+                        // border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 35%;
+                        text-align: center;
+                        margin-top: 30px;
+
+                        .bk_product_img {
+                          // border: 1px solid red;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 150px;
+                          height: 150px;
+
+                          img {
+                            width: 100%;
+                          }
+                        }
+
+                        .bk_pd1 {
+                          position: relative;
+                          left: -15%;
+                          top: 10%;
+
+                          &::before {
+                            content: "";
+                            width: 150px;
+                            height: 150px;
+                            background-color: #87b0e7;
+                            position: absolute;
+                            left: -20%;
+                            top: -10%;
+                            z-index: -1;
+                          }
+                        }
+
+                        .bk_pd_description {
+                          //border: 1px solid blue;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          position: relative;
+                          top: 10%;
+                          left: -10%;
+
+                          h4 {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            text-align: left;
+                          }
+
+                          p {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #87b0e7;
+                            margin-top: 10px;
+                            text-align: left;
+                          }
+
+                          button {
+                            width: 100px;
+                            height: 30px;
+                            background-color: $bg-color;
+                            border: 1px solid $min-color;
+                            position: relative;
+
+                            a {
+                              text-decoration: none;
+                              font-size: 1.2rem;
+                              font-weight: bold;
+                              color: black;
+                            }
+                          }
+                        }
+
+                        .bk_pd2 {
+                          //border: 1px solid red;
+                          position: relative;
+                          right: -5%;
+
+                          &::after {
+                            content: "";
+                            width: 140px;
+                            height: 150px;
+                            background-color: #87b0e7;
+                            position: absolute;
+                            right: -30%;
+                            bottom: -10%;
+                            z-index: -1;
+                          }
+                        }
+
+                        .bk_pd_description2 {
+                          //border: 1px solid blue;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          margin-left: 20%;
+
+                          h4 {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            text-align: left;
+                          }
+
+                          p {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #87b0e7;
+                            margin-top: 10px;
+                            text-align: left;
+                          }
+
+                          button {
+                            width: 100px;
+                            height: 30px;
+                            background-color: $bg-color;
+                            border: 1px solid $min-color;
+                            position: relative;
+
+                            a {
+                              text-decoration: none;
+                              font-size: 1.2rem;
+                              font-weight: bold;
+                              color: black;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  .bk_allyears {
+                    //border: 1px solid red;
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+                    display: none;
+
+                    //個別季節目錄
+                    .bk_season_index {
+                      //border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 100%;
+                      height: 100%;
+                      position: relative;
+                      display: none;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 5%;
+                        background-color: #c5ce7c;
+                      }
+
+                      .bk_season {
+                        //border: 1px solid blue;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 20%;
+                        height: 100%;
+                        background-color: #c5ce7c;
+                        vertical-align: top;
+                        text-align: center;
+
+                        h5 {
+                          //border: 1px solid purple;
+                          font-size: 1.6rem;
+                          font-weight: bolder;
+                          color: black;
+                          margin: 50% auto 10%;
+                          background-color: #fadc97;
+                          width: 40%;
+                          padding: 10px;
+                        }
+
+                        .bk_season_img {
+                          width: 30px;
+                          height: 30px;
+                          margin: 0 auto 10px;
+
+                          img {
+                            height: 100%;
+                          }
+                        }
+                      }
+
+                      .bk_season_pic {
+                        // border: 1px solid green;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        text-align: center;
+                        width: 80%;
+                        height: 100%;
+                        padding: 5%;
+
+                        .bk_season_pic1 {
+                          border: 5px solid #c5ce7c;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 150px;
+                          height: 150px;
+                          border-radius: 50%;
+                          overflow: hidden;
+                          position: relative;
+                          top: 40%;
+                          transform: translateY(-50%);
+                          margin: 10px;
+                          transition: 1s;
+
+                          &:hover img {
+                            height: 120%;
+                          }
+
+                          &:hover span {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            display: block;
+                            font-size: 2rem;
+                            background-color: #f3c452;
+                            padding: 5px;
+                          }
+
+                          img {
+                            height: 100%;
+                            transition: 1s;
+                          }
+
+                          span {
+                            display: none;
+                            animation-delay: 2s;
+                          }
+                        }
+                      }
+                    }
+
+                    .bk_ct {
+                      // border: 1px solid blue;
+                      box-sizing: border-box;
+                      position: relative;
+                      top: 0;
+                      display: inline-block;
+                      width: 50%;
+                      height: 100%;
+                      vertical-align: top;
+                    }
+
+                    //spring spring spring
+                    .bk_ct_left {
+                      display: none; /////這裏
+                      font-size: 0;
+
+                      .fruit_start {
+                        // border: 1px solid red;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 100%;
+                        height: 45%;
+
+                        h1 {
+                          display: inline-block;
+                          //border: 1px solid red;
+                          writing-mode: vertical-lr;
+                          letter-spacing: 0.6rem;
+                          font-size: 5rem;
+                          font-weight: bolder;
+                          color: #c5ce7c;
+                          position: relative;
+                          left: 5%;
+                          top: 45%;
+                          z-index: 2;
+
+                          &::before {
+                            content: "";
+                            position: absolute;
+                            top: -40px;
+                            left: -10px;
+                            width: 50px;
+                            height: 50px;
+                            background-image: url("../assets/book_img/leaf_year.svg");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            z-index: -1;
+                          }
+
+                          &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -20px;
+                            left: 20px;
+                            width: 30px;
+                            height: 30px;
+                            background-image: url("../assets/book_img/leaf_year.svg");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            z-index: -1;
+                          }
+                        }
+
+                        .fruit_start_img {
+                          //border: 1px solid red;
+                          display: inline-block;
+                          width: 180px;
+                          height: 170px;
+                          vertical-align: top;
+                          background-image: url("../assets/book_img/fruit_start01.svg");
+                          background-repeat: no-repeat;
+                          background-size: contain;
+                          position: relative;
+                          left: 40%;
+                          top: 55%;
+                          transform: translate(-50%, -50%);
+                          transition: 0.5s;
+
+                          &:hover {
+                            width: 170px;
+                            height: 160px;
+                          }
+
+                          &:hover .img_content {
+                            width: 140px;
+                            padding-top: 140px;
+                          }
+
+                          .img_content {
+                            //border: 1px solid red;
+                            display: block;
+                            width: 130px;
+                            padding-top: 130px;
+                            border-radius: 50%;
+                            position: relative;
+                            top: 50%;
+                            left: 47%;
+                            transform: translate(-50%, -50%);
+                            overflow: hidden;
+                            transition: 1s;
+
+                            img {
+                              position: absolute;
+                              top: 0;
+                              height: 100%;
+                            }
+                          }
+                        }
+                      }
+
+                      .fruit_intro {
+                        //  border: 1px solid red;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 55%;
+
+                        // h2 {
+                        //    font-size: 1.6rem;
+                        //    font-weight: bold;
+                        //    padding-left: 10px;
+                        //    margin: 0 0 0 10px;
+                        // }
+
+                        p {
+                          //border: 1px solid blue;
+                          font-size: 1.4rem;
+                          padding: 12px;
+                          margin-left: 10px;
+                          white-space: pre-wrap;
+                          line-height: 1.8;
+                          vertical-align: top;
+                          // 欄寬
+                          //column-width: 15rem;
+                          column-count: 2;
+
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 95%;
+                          height: 95%;
+                        }
+                      }
+                    }
+
+                    .bk_ct_right {
+                      font-size: 0;
+                      display: none; /////這裏
+
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 150%;
+                        height: 100%;
+                        z-index: -1;
+                        -webkit-clip-path: polygon(
+                          34% 0%,
+                          100% 0,
+                          100% 100%,
+                          0 100%
+                        );
+                        clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
+                        background-color: #d0d3b1;
+                      }
+
+                      h2 {
+                        //border: 1px solid red;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        color: $min-color;
+                        margin: 20px 0 10px 15px;
+                      }
+
+                      //水果產季週期
+                      .fruit_time {
+                        // border: 1px solid red;
+                        background-color: #577c41;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        height: 10%;
+
+                        ul {
+                          display: flex;
+
+                          li {
+                            border: 1px solid white;
+                            color: white;
+                            background-color: #c5ce7c;
+                            padding: 5px 0;
+                            width: 10%;
+                            height: 10px;
+                            font-size: 1.2rem;
+                            text-align: center;
+                          }
+                        }
+
+                        .fruit_timeline {
+                          background-color: #c5ce7c;
+                          border-radius: 10px;
+                          width: 100px;
+                          height: 10px;
+                          position: relative;
+                          top: 25%;
+                        }
+                      }
+
+                      //影片
+                      .fruit_video {
+                        height: 35%;
+                        margin-top: 20px;
+
+                        //border: 1px solid green;
+                        box-sizing: border-box;
+                        text-align: center;
+
+                        > video {
+                          height: 100%;
+                        }
+                      }
+
+                      //農知識
+                      .fruit_Q {
+                        //border: 1px solid green;
+                        width: 100%;
+
+                        h2 {
+                          //border: 1px solid purple;
+                          font-size: 1.6rem;
+                          font-weight: bolder;
+                          display: inline-block;
+                          margin: 20px 10px 0px 15px;
+                        }
+
+                        .fruit_A {
+                          padding: 10px 15px;
+
+                          //border: 1px solid purple;
+                          p {
+                            // border: 1px solid blue;
+                            font-size: 1.4rem;
+                            white-space: pre-wrap;
+                            line-height: 1.8;
+                            vertical-align: top;
+                            // 欄寬
+
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 50%;
+                            height: 40%;
+                          }
+
+                          .fruit_img {
+                            //border: 1px solid green;
+                            display: inline-block;
+                            width: 30%;
+                            height: auto;
+                            margin: 1% 8%;
+
+                            img {
+                              position: relative;
+                              width: 100%;
+                            }
+                          }
+                        }
+                      }
+                    }
+
+                    //部落格
+                    .bk_ct_left_2 {
+                      display: none;
+                      // border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 50%;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        z-index: -1;
+                        background-color: #c5ce7c;
+                      }
+
+                      //display: none;
+                      a {
+                        text-decoration: none;
+
+                        &:hover h2 {
+                          color: #5fbc55;
+                        }
+
+                        h2 {
+                          //border: 1px solid red;
+                          font-size: 1.6rem;
+                          font-weight: bold;
+                          color: $min-color;
+                          margin: 20px 0 5px;
+                          padding-left: 15px;
+                        }
+                      }
+
+                      .bk_blog_line1 {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 2px solid $min-color;
+                        margin-bottom: 3px;
+                      }
+
+                      .bk_blog_line2 {
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 0.5px solid $min-color;
+                      }
+
+                      //blog內容開始
+                      #bk_blog_knowledge {
+                        //border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 42%;
+
+                        p {
+                          // border: 1px solid blue;
+                          font-size: 1.2rem;
+                          padding-left: 30px;
+                          margin-top: 10px;
+                          color: gray;
+                        }
+
+                        h3 {
+                          //border: 1px solid red;
+                          font-size: 2rem;
+                          font-weight: bolder;
+                          padding-left: 15px;
+                          margin-bottom: 10px;
+                          position: relative;
+                          z-index: 1;
+
+                          &::before {
+                            content: "";
+                            width: 50%;
+                            height: 20px;
+                            background-color: #f38e8e6c;
+                            position: absolute;
+                            z-index: -1;
+                          }
+                        }
+
+                        //reporter
+                        .bk_blog_reporter {
+                          //border: 1px solid red;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          vertical-align: top;
+                          margin: 0 15px;
+                          width: 40%;
+
+                          .bk_blog_rpt_img {
+                            // border: 1px solid red;
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img {
+                              width: 100%;
+                            }
+                          }
+
+                          .bk_blog_rpt_name {
+                            //border: 1px solid red;
+                            display: inline-block;
+                            vertical-align: top;
+
+                            margin-left: 10px;
+
+                            a {
+                              //border: 1px solid red;
+                              color: black;
+                              padding: 0;
+
+                              font-size: 1.4rem;
+                              text-decoration: none;
+
+                              &:hover {
+                                text-decoration: underline;
+                              }
+                            }
+
+                            .bk_blog_star {
+                              margin-top: 5px;
+                              height: 15px;
+                              overflow: hidden;
+
+                              img {
+                                height: 100%;
+                              }
+                            }
+                          }
+
+                          .bk_blog_rpt_button {
+                            //border: 1px solid red;
+                            display: inline-block;
+                            vertical-align: top;
+
+                            button {
+                              // border: 1px solid red;
+                              margin-left: 10px;
+                              display: inline-block;
+                              border-radius: 10px;
+                              color: white;
+                              background-color: $min-color;
+                            }
+                          }
+                        }
+
+                        //標籤
+                        .bk_blog_tag {
+                          //border: 1px solid blue;
+                          display: block;
+                          width: 100%;
+                          margin-top: 20%;
+
+                          .bk_blog_tag1 {
+                            width: 20px;
+                            height: 20px;
+                            color: #a0a0a0;
+                            margin-bottom: 10px;
+
+                            img {
+                              width: 100%;
+                            }
+                          }
+                        }
+
+                        .bk_blog_img {
+                          //border: 1px solid purple;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          height: 60%;
+                          width: 50%;
+                          overflow: hidden;
+
+                          img {
+                            width: 100%;
+                          }
+                        }
+
+                        .bk_blog_line3 {
+                          width: 90%;
+                          margin: 20px auto 0;
+                        }
+                      }
+
+                      //部落格文章
+                      #bk_blog_content {
+                        //border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 40%;
+
+                        p {
+                          //border: 1px solid blue;
+                          font-size: 1.4rem;
+                          // padding: 0px;
+                          margin-left: 15px;
+                          white-space: pre-wrap;
+                          line-height: 1.8;
+                          vertical-align: top;
+
+                          //欄位數
+                          column-count: 2;
+
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 95%;
+                          height: 100%;
+                        }
+                      }
+                    }
+
+                    //市集
+                    .bk_ct_right_2 {
+                      display: none;
+                      //border: 1px solid blue;
+                      box-sizing: border-box;
+                      width: 50%;
+                      position: relative;
+
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        top: 45%;
+                        transform: translate(-50%, -50%);
+                        width: 100px;
+                        height: 70px;
+                        background-image: url("../assets/book_img/bk_market_line.svg");
+                        background-repeat: no-repeat;
+                      }
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 30px;
+                        z-index: -1;
+                        background-color: #c5ce7c;
+                      }
+
+                      a {
+                        text-decoration: none;
+
+                        &:hover h2 {
+                          color: #5fbc55;
+                        }
+
+                        h2 {
+                          //border: 1px solid red;
+                          font-size: 1.6rem;
+                          font-weight: bold;
+                          color: $min-color;
+                          margin: 20px 0 5px;
+                          padding-left: 15px;
+                        }
+                      }
+
+                      .bk_product {
+                        // border: 1px solid red;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 35%;
+                        text-align: center;
+                        margin-top: 30px;
+
+                        .bk_product_img {
+                          // border: 1px solid red;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          width: 150px;
+                          height: 150px;
+
+                          img {
+                            width: 100%;
+                          }
+                        }
+
+                        .bk_pd1 {
+                          position: relative;
+                          left: -15%;
+                          top: 10%;
+
+                          &::before {
+                            content: "";
+                            width: 150px;
+                            height: 150px;
+                            background-color: #c5ce7c;
+                            position: absolute;
+                            left: -20%;
+                            top: -10%;
+                            z-index: -1;
+                          }
+                        }
+
+                        .bk_pd_description {
+                          //border: 1px solid blue;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          position: relative;
+                          top: 10%;
+                          left: -10%;
+
+                          h4 {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            text-align: left;
+                          }
+
+                          p {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #959976;
+                            margin-top: 10px;
+                            text-align: left;
+                          }
+
+                          button {
+                            width: 100px;
+                            height: 30px;
+                            background-color: $bg-color;
+                            border: 1px solid $min-color;
+                            position: relative;
+
+                            a {
+                              text-decoration: none;
+                              font-size: 1.2rem;
+                              font-weight: bold;
+                              color: black;
+                            }
+                          }
+                        }
+
+                        .bk_pd2 {
+                          //border: 1px solid red;
+                          position: relative;
+                          right: -5%;
+
+                          &::after {
+                            content: "";
+                            width: 140px;
+                            height: 150px;
+                            background-color: #c5ce7c;
+                            position: absolute;
+                            right: -30%;
+                            bottom: -10%;
+                            z-index: -1;
+                          }
+                        }
+
+                        .bk_pd_description2 {
+                          //border: 1px solid blue;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          margin-left: 20%;
+
+                          h4 {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            text-align: left;
+                          }
+
+                          p {
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: #959976;
+                            margin-top: 10px;
+                            text-align: left;
+                          }
+
+                          button {
+                            width: 100px;
+                            height: 30px;
+                            background-color: $bg-color;
+                            border: 1px solid $min-color;
+                            position: relative;
+
+                            a {
+                              text-decoration: none;
+                              font-size: 1.2rem;
+                              font-weight: bold;
+                              color: black;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
 
                   //欄位數
                   column-count: 2;
@@ -693,7 +4569,7 @@
 }
 
 #book_footer {
-  background-color: red;
+  //background-color: red;
   position: relative;
   top: -110%;
 }
