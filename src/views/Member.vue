@@ -28,3 +28,15 @@
         <router-view />
     </div>
 </template>
+<script>
+import Information from "../views/track";
+
+export default {
+    
+    components: {
+
+        Information,
+    }
+}
+</script>
+</template>

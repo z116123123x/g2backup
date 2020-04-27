@@ -1,0 +1,84 @@
+div.contain {
+    height: 100vh;
+    div.track {
+      display: inline-block;
+      background-color: #FBF8EF;
+      width: 87.2%;
+      height: 100%;
+  
+      .track_head {
+        color: #F7C845;
+        margin-top: 40px;
+        margin-left: 40px;
+        font-size: 30px;
+      }
+  
+      .track_bottom {
+        display: block;
+        height: 90.3%;
+        text-align: center;
+  
+        >.trackcard {
+            display: block;
+            margin-top: 40px;
+            margin-left: 20px;
+            margin-right: 20px;
+            line-height: 2;
+          >.cardfront {
+            position: absolute;
+            border: 3px solid #007552;
+            background-color: white;
+            width: 17%;
+            z-index: 2;
+            >.front_top{
+                display: inline-block;
+            }
+            >.front_bottom{
+                display: inline-block;
+                text-align: start;
+                padding: 50px 0px;
+            }
+            .front_button{
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                >p{
+                    display: inline-block;
+                    padding-right: 20px;
+                }
+            }
+          }
+          >.cardback{
+              position: absolute;
+              z-index: 1;
+              display: block;
+              background-color: #007552;
+              left: 230px;
+              top: 92px;
+              width: 258px;
+              height: 335px;
+          }
+  
+        }
+  
+        
+      }
+    }
+  
+    // div.Order>.Order_bottom>.Orderlist>.list_1>span.triangle{
+    //     display: inline-block;
+    //     // border: 10px solid red;
+    //     border-left: 50px solid blue transparent;
+    //     border-right: 50px solid red transparent;
+    //     border-top: 50px solid #007552;
+    //     border-bottom: 0px solid black;
+    //     width: 0px;
+    //     height: 0px;
+    // }
+  
+  
+    /* 留意: 將最後一個 li 裡的 a，右邊框加回來 */
+    /* 留意: 將最後一個 li 裡的 a，加上圓角 */
+  
+    /* 留意: 將第一個 li 裡的 a，加上圓角 */
+  }
