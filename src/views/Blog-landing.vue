@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top:3%;">
+  <div style="padding-top:5%;background-color: #FBF8EF;box-sizing: border-box;">
     <img style="width:100%" src="@/assets/blog-img/blog-bar.png" /><br />
     <div class="blog-landing-container">
       <div>
@@ -179,10 +179,20 @@
         </div>
         <div>
           <form action="" method="get">
-            <label style="font-size:20px;" for=""> 留言: 
-              <textarea style="margin-left:3%" name="" id="" cols="40" rows="7"></textarea>
-            </label><br>
-            <button-more style="width:90px;text-align:center;margin-top:30px;margin-left:30%;font-size:15px;" msg="送出"></button-more>
+            <label style="font-size:20px;" for="">
+              留言:
+              <textarea
+                style="margin-left:3%"
+                name=""
+                id=""
+                cols="40"
+                rows="7"
+              ></textarea> </label
+            ><br />
+            <button-more
+              style="width:90px;text-align:center;margin-top:30px;margin-left:30%;font-size:15px;"
+              msg="送出"
+            ></button-more>
           </form>
         </div>
       </div>
@@ -191,7 +201,6 @@
 </template>
 <style lang="scss">
 .blog-landing-container {
-  
   padding-top: 1%;
   width: 95%;
   margin-left: 2.5%;
@@ -278,27 +287,30 @@
     }
     > div:nth-child(2) {
       display: grid;
-      grid-template-columns: 1fr 0.5fr;
+      grid-template-columns: 1fr 0.4fr;
       gap: 5%;
       > div:nth-child(1) {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-rows: 50%;
         padding-bottom: 20%;
         > div:nth-child(1),
         div:nth-child(2) {
           font-size: 15px;
-          column-width: 20rem;
-          padding-top: 20%;
+          column-count: 2;
+          padding-top: 10%;
           padding-left: 10%;
-          letter-spacing: 0.2rem;
-          line-height: 1.5;
+          letter-spacing: 0.3rem;
+          line-height: 1.8;
           column-gap: 5rem;
+        }
+        > div:nth-child(2) {
+          padding-top: 0px;
         }
       }
       > div:nth-child(2) {
         // border: solid 2px darkblue;
         text-align: center;
-        background-image: url("../assets/blog-img/blog-trapezoid.png");
+        background-image: url('../assets/blog-img/blog-trapezoid.png');
         background-size: cover;
         padding-top: 70%;
         position: relative;
@@ -338,7 +350,7 @@
           gap: 3px;
           position: relative;
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             top: 0px;
             right: 30px;
@@ -348,7 +360,7 @@
         }
       }
     }
-    >div:nth-child(5){
+    > div:nth-child(5) {
       padding-top: 50px;
       padding-left: 10%;
     }
