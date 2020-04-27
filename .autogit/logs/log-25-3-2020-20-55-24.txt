@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sat Apr 25 2020 20:55:24 GMT+0800 (台北標準時間)
+------------------------------------------------------
+
+Modified files:
+* src/style/pages/_blog-landing.scss
+* src/style/pages/_blog-post.scss
+* src/views/Blog-landing.vue
+* src/views/Blog-post.vue
+
+
+Created files:
+* .autogit/logs/log-25-3-2020-17-55-31.txt
+
+
+Deleted files:
+
+
+Renamed files:
