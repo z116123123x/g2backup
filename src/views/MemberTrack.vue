@@ -9,8 +9,26 @@
             <div class="trackcard">
                 <div class="cardfront">
                     <div class="front_top">
+                        <div class="closeimg">
+                            <img src="@/assets/icon/close.svg" alt="">
+                        </div>
                         <div class="frontimg">
                             <img src="@/assets/ia_2300000010.jpg" alt="">
+                        </div>
+                        <div class="star">
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <span>(2134)</span>                            
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -49,8 +67,26 @@
             <div class="trackcard">
                 <div class="cardfront">
                     <div class="front_top">
+                        <div class="closeimg">
+                            <img src="@/assets/icon/close.svg" alt="">
+                        </div>
                         <div class="frontimg">
                             <img src="@/assets/ia_2300000010.jpg" alt="">
+                        </div>
+                        <div class="star">
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div> 
+                            <span>(2134)</span>                             
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -75,8 +111,26 @@
             <div class="trackcard">
                 <div class="cardfront">
                     <div class="front_top">
+                        <div class="closeimg">
+                            <img src="@/assets/icon/close.svg" alt="">
+                        </div>
                         <div class="frontimg">
                             <img src="@/assets/ia_2300000010.jpg" alt="">
+                        </div>
+                        <div class="star">
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>                              
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -101,8 +155,26 @@
             <div class="trackcard">
                 <div class="cardfront">
                     <div class="front_top">
+                        <div class="closeimg">
+                            <img src="@/assets/icon/close.svg" alt="">
+                        </div>
                         <div class="frontimg">
                             <img src="@/assets/ia_2300000010.jpg" alt="">
+                        </div>
+                        <div class="star">
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>                              
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -127,8 +199,26 @@
             <div class="trackcard">
                 <div class="cardfront">
                     <div class="front_top">
+                        <div class="closeimg">
+                            <img src="@/assets/icon/close.svg" alt="">
+                        </div>
                         <div class="frontimg">
                             <img src="@/assets/ia_2300000010.jpg" alt="">
+                        </div>
+                        <div class="star">
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>                              
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -153,8 +243,26 @@
             <div class="trackcard">
                 <div class="cardfront">
                     <div class="front_top">
+                        <div class="closeimg">
+                            <img src="@/assets/icon/close.svg" alt="">
+                        </div>
                         <div class="frontimg">
                             <img src="@/assets/ia_2300000010.jpg" alt="">
+                        </div>
+                        <div class="star">
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>  
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>                              
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
