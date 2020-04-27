@@ -1056,13 +1056,9 @@
                 </div>
             </div>
         </section>
-        <section id="book_footer">
+        <!-- <section id="book_footer">
             <Footer />
-        </section>
+        </section> -->
     </main>
 </template>
 <script>
-import "@/js/book";
-
-export default {};
-</script>
