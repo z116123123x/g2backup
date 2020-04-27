@@ -1,45 +1,51 @@
 <template>
   <div id="test" class="hello">
     <main>
+      <button id="scroll_btn"></button>
       <div id="mainLOGO">
         <img src="../assets/LOGO.svg" alt />
       </div>
+      <div id="mainText">
+        以「水果王國」名聞全世界的台灣，水果種類豐富，一年四季皆可嚐到新鮮可口的水果，但多數人可能不知道這些水果的產地、產季、甚至是色香味等等，因此希望能藉由我們的網站帶大家認識台灣獨特的水果文化。
+      </div>
       <div id="knowledge_container">
+        <div class="season">
+          <div class="spring_tab tab -on" data-target="tab1">春</div>
+          <div class="summer_tab tab" data-target="tab2">夏</div>
+          <div class="fall_tab tab" data-target="tab3">秋</div>
+          <div class="winter_tab tab" data-target="tab4">冬</div>
+        </div>
         <div>
           <div class="knowledge_page tab1 -on">
-            <div class="aa">
+            <div class="knowledge_page_back">
               <div>1</div>
             </div>
           </div>
           <div class="knowledge_page tab2">
-            <div class="aa">
+            <div class="knowledge_page_back">
               <div>2</div>
             </div>
           </div>
           <div class="knowledge_page tab3">
-            <div class="aa">
+            <div class="knowledge_page_back">
               <div>3</div>
             </div>
           </div>
           <div class="knowledge_page tab4">
-            <div class="aa">
+            <div class="knowledge_page_back">
               <div>4</div>
             </div>
           </div>
         </div>
-        <ButtonMore />
-        <div id="knowledge_title">
-          <img src="../assets/knowledgetitle.svg" alt />
-        </div>
-        <div class="spring_tab tab -on" data-target="tab1">春</div>
-        <div class="summer_tab tab" data-target="tab2">夏</div>
-        <div class="fall_tab tab" data-target="tab3">秋</div>
-        <div class="winter_tab tab" data-target="tab4">冬</div>
+
+        <button class="home_title">
+          知識百科
+        </button>
       </div>
       <div id="market_container">
-        <div id="market_title">
-          <img src="../assets/markettitle.svg" alt />
-        </div>
+        <button class="home_title">
+          水果市集
+        </button>
         <div id="market_page">
           <div class="market_pic">
             <img src="../assets/marketitem01.png" alt />
@@ -64,12 +70,11 @@
             </div>
           </div>
         </div>
-        <ButtonMore msg="前往購物" />
       </div>
       <div id="blog_container">
-        <div id="blog_title">
-          <img src="../assets/blogtitle.svg" alt />
-        </div>
+        <button class="home_title">
+          果農日誌
+        </button>
         <div id="blog_page">
           <div class="blog_tags_area">
             <h2>Tags</h2>
@@ -90,17 +95,15 @@
               <span>水果知識</span>
             </div>
           </div>
-          <ButtonMore />
         </div>
       </div>
       <div id="member_container">
-        <div id="member_title">
-          <img src="../assets/membertitle.svg" alt />
-        </div>
+        <button class="home_title">
+          果農日誌
+        </button>
         <div id="member_page">
           <img src="../assets/memberpic.png" alt />
         </div>
-        <ButtonMore />
       </div>
     </main>
   </div>
