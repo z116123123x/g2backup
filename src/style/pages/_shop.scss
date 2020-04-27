@@ -31,7 +31,7 @@ $color5: #ffa978;
 
 //輪播商品
 .show_item {
-  // background-color: #ffd3c1;
+  background-color: #ffd3c1;
   height: 1080px;
   display: flex;
   justify-content: space-between;
@@ -148,6 +148,7 @@ $color5: #ffa978;
       //   @include ts-center(16, 18);
       .filter-group_header {
         margin-bottom: 10px;
+        font-size: 16px;
       }
 
       .folding-items {
@@ -158,22 +159,17 @@ $color5: #ffa978;
         .checkbox-filter {
           padding: 8px 0;
           line-height: 20px;
-
-          .checkbox {
-            .checkbox__control {
-              //   display: flex;
-              //   justify-content: center;
-            }
-
-            input {
-              margin: 0 10px 0 0;
-              width: 20px;
-              height: 20px;
-            }
-
-            .checkbox_label {
-              @include ts-center(16);
-            }
+          .checkbox__control {
+            //   display: flex;
+            //   justify-content: center;
+          }
+          input {
+            margin: 0 10px 0 0;
+            width: 20px;
+            height: 20px;
+          }
+          .checkbox_label {
+            @include ts-center(16);
           }
         }
       }
@@ -183,16 +179,13 @@ $color5: #ffa978;
 
 //明星商品aside
 .hot_commodity {
-  float: right;
-  width: 150px;
   height: 100vh;
   float: right;
   width: 150px;
   background-color: #007552;
   color: white;
   position: relative;
-  height: 100vh;
-
+  
   .mountain {
     position: absolute;
     top: -25px;
@@ -211,10 +204,89 @@ $color5: #ffa978;
     .hot_commoditystatus_text {
       display: flex;
       align-items: center;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
     }
   }
-
-  div {}
+  
+  .hot_commodity_group {
+    .hot_commodity_items {
+      width: 150px;
+      display: flex;
+      height: 60px;
+      border-bottom: 1px solid white;
+      background-color: white;
+      overflow: hidden;
+      transition: all 0.5s linear;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        width: 40px;
+        background-color: #007552;
+      }
+      img {
+        width: 110px;
+        // max-height: 60px;
+        // height: 60px;
+        overflow: hidden;
+        object-fit: cover;
+        vertical-align: baseline;
+      }
+      &:hover {
+        transform: translateX(-25px);
+        width: 175px;
+        img {
+          opacity: 0.5;
+          width: 135px;
+        }
+      }
+    }
+  }
+  .hot_commodity_seller {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border: 1px solid white;
+    background-color: $color2;
+    transition: all 0.5s linear;
+    overflow: hidden;
+    a {
+      .seller_box {
+        display: inline-flex;
+        margin-right: 5px;
+        .img {
+        }
+      }
+    }
+    .seller_content {
+      display: flex;
+      justify-content: center;
+      p {
+        @include ts-center(14);
+      }
+      .track-btn {
+        margin-left: 5px;
+        color: white;
+        background-color: $color3;
+        @include ts-center(14);
+        border-radius: 14px;
+        display: none;
+        padding: 3px;
+      }
+    }
+    &:hover {
+      transform: translateX(-25px);
+      width: 175px;
+      display: flex;
+    }
+    &:hover .track-btn {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 //商品容器
@@ -289,6 +361,50 @@ $color5: #ffa978;
       }
     }
   }
+}
+
+//頁面navbar
+.Page_navigation {
+  display: flex;
+  justify-content: center;
+  .pagination {
+    display: inline-flex;
+    .page-item {
+      .page-link {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        text-decoration: none;
+        border: 1px solid $color2;
+        border-left-width: 0;
+        min-width: 30px;
+        min-height: 40px;
+        color: $color2;
+      }
+      .page-link:hover {
+        font-size: 20px;
+        background-color: $color1;
+      }
+    }
+    .page-left {
+      margin-right: 20px;
+    }
+    .page-right {
+      margin-left: 20px;
+    }
+  }
+  .page-left:hover {
+    opacity: 0.5;
+  }
+  .page-right:hover {
+    opacity: 0.5;
+  }
+}
+//頁面navbar第一頁左邊邊框
+.pageborder {
+  border-left: 1px solid $color2;
 }
 
 //圖片相關

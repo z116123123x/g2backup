@@ -163,7 +163,7 @@
                   display: inline-flex;
                   position: absolute;
                   right: 1%;
-
+                 
                   li {
                      // border: 1px solid green;
                      background-color: $bg-color;
@@ -176,6 +176,9 @@
                      transform: translate(0, 10px);
                      font-size: 1.6rem;
                      transition: 0.5s;
+
+                    
+                     }
 
                      &:nth-child(1) {
                         background-color: #f38e8e;
@@ -215,7 +218,6 @@
                background: #fcfbf7;
                box-sizing: border-box;
                display: inline-block;
-               height: 80vh;
                width: 80%;
                margin: 0 auto;
                position: relative;
@@ -332,7 +334,7 @@
                      position: absolute;
                      left: 50%;
                      transform: translateX(-50%);
-                     bottom: -3%;
+                     bottom: -4%;
                      background-color: rgba(255, 208, 191, 1);
                      -webkit-clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
                      clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
@@ -341,6 +343,7 @@
                      width: 7%;
                      height: 10%;
                      // z-index: -2;
+
                   }
 
                   //fruit_index
@@ -524,17 +527,15 @@
                   }
 
                   .bk_Spring {
-                     border: 1px solid red;
+                     //border: 1px solid red;
                      box-sizing: border-box;
                      width: 100%;
                      height: 100%;
-                     display: none;
-
-
+                     //display: none;
 
                      //個別季節目錄
                      .bk_season_index {
-                        //border: 1px solid blue;
+                        border: 1px solid blue;
                         box-sizing: border-box;
                         width: 100%;
                         height: 100%;
@@ -656,7 +657,7 @@
 
                      //spring spring spring
                      .bk_ct_left {
-                        display: none; /////這裏
+                        //display: none; /////這裏
                         font-size: 0;
 
                         .fruit_start {
@@ -665,6 +666,18 @@
                            display: inline-block;
                            width: 100%;
                            height: 45%;
+
+
+                           @keyframes rotation {
+                              0% {
+                                 transform: rotate(0deg);
+                              }
+
+                              100% {
+                                 transform: rotate(360deg);
+                              }
+                           }
+
 
                            h1 {
                               display: inline-block;
@@ -687,6 +700,12 @@
                                  width: 50px;
                                  height: 50px;
                                  background-image: url("../assets/book_img/flower.svg");
+                                 background-repeat: no-repeat;
+                                 background-size: contain;
+                                 animation-name: rotation;
+                                 animation-duration: 2.5s;
+                                 animation-iteration-count: infinite;
+
                               }
 
                               &::after {
@@ -697,8 +716,16 @@
                                  width: 30px;
                                  height: 30px;
                                  background-image: url("../assets/book_img/flower.svg");
+                                 background-repeat: no-repeat;
+                                 background-size: contain;
+                                 animation-name: rotation;
+                                 animation-duration: 2s;
+                                 animation-iteration-count: infinite;
+                                 animation-direction: alternate-reverse;
+                                 animation-delay: 1s;
                               }
                            }
+
 
                            .fruit_start_img {
                               //border: 1px solid red;
@@ -714,6 +741,8 @@
                               top: 55%;
                               transform: translate(-50%, -50%);
                               transition: .5s;
+
+
 
                               &:hover {
                                  width: 170px;
@@ -753,21 +782,16 @@
                         }
 
                         .fruit_intro {
-                           //  border: 1px solid red;
+                           border: 1px solid red;
                            box-sizing: border-box;
                            display: block;
                            width: 100%;
                            height: 55%;
 
-                           // h2 {
-                           //    font-size: 1.6rem;
-                           //    font-weight: bold;
-                           //    padding-left: 10px;
-                           //    margin: 0 0 0 10px;
-                           // }
+
 
                            p {
-                              //border: 1px solid blue;
+                              border: 1px solid blue;
                               font-size: 1.4rem;
                               padding: 12px;
                               margin-left: 10px;
@@ -777,6 +801,8 @@
                               // 欄寬
                               //column-width: 15rem;
                               column-count: 2;
+                              overflow-x: scroll;
+                              white-space: break-all;
 
                               box-sizing: border-box;
                               display: inline-block;
@@ -791,7 +817,7 @@
 
                      .bk_ct_right {
                         font-size: 0;
-                        display: none; /////這裏
+                        //display: none; /////這裏
 
                         &::before {
                            content: "";
@@ -852,15 +878,15 @@
 
                         //影片
                         .fruit_video {
-                           height: 35%;
                            margin-top: 20px;
 
-                           //border: 1px solid green;
+                           border: 1px solid green;
                            box-sizing: border-box;
                            text-align: center;
 
                            >video {
-                              height: 100%;
+                              width: auto;
+                              height: 190px;
                            }
 
                         }
@@ -884,7 +910,7 @@
 
                               //border: 1px solid purple;
                               p {
-                                 // border: 1px solid blue;
+                                 border: 1px solid blue;
                                  font-size: 1.4rem;
                                  white-space: pre-wrap;
                                  line-height: 1.8;
@@ -4236,7 +4262,7 @@
                            width: 100%;
                            height: 30px;
                            z-index: -1;
-                           background-color:#c5ce7c;
+                           background-color: #c5ce7c;
                         }
 
                         //display: none;
@@ -4662,11 +4688,3 @@
 
 }
 
-.box3 {
-   width: 100px;
-   height: 100px;
-   background-color: green;
-   position: relative;
-   top: -700px;
-   left: 0;
-}
