@@ -1058,10 +1058,10 @@ window.addEventListener("load", () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
 
-  const home = document.getElementById("home");
+  // const home = document.getElementById("home");
 
-  home.addEventListener("click", init);
-  home.addEventListener("click", render);
+  // home.addEventListener("click", init);
+  // home.addEventListener("click", render);
   init();
   render();
 

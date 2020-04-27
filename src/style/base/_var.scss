@@ -6,6 +6,12 @@ $gray: rgb(128, 128, 128);
 $orange: rgb(255, 169, 120);
 $orange-light: rgb(255, 211, 193);
 
+@font-face {
+
+    font-family: myFont;
+    src: url("./jf-openhuninn.ttf");
+}
+
 // 文字
 $font-size: 10px;
 
