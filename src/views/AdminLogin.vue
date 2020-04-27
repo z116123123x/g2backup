@@ -38,7 +38,7 @@
           </div>
         </div>
         <button class="adminLoginBtn" id="submit">登入</button>
-        <router-link class="adminLoginBtn" to="/manage/manage">進入</router-link>
+        <router-link class="adminLoginBtn" to="/center/manage">進入</router-link>
       </form>
     </div>
   </div>
