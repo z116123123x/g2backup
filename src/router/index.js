@@ -65,7 +65,7 @@ const routes = [
   {
     path: "/manage",
     name: "Manage",
-    component: () => import("@/views/Admin.vue"),
+    component: () => import("@/views/AdminCenter.vue"),
     children: [
       {
         path: "manage",
