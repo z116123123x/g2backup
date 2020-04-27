@@ -1056,18 +1056,18 @@
                 </div>
             </div>
         </section>
-        <section id="book_footer">
+        <!-- <section id="book_footer">
             <Footer />
-        </section>
+        </section> -->
     </main>
 </template>
 <script>
-import Footer from "@/layout/footer";
+// import Footer from "@/layout/footer";
 import "@/book";
 
 export default {
     components: {
-        Footer
+        // Footer
     }
 };
 </script>

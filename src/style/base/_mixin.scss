@@ -10,17 +10,25 @@
 // 目前有 medium（max-width: 1200px）、small（max-width: 768px）
 @mixin rwd($breakpoint) {
 
-    @if $breakpoint == medium {
-        @media all and (max-width: $medium) {
+    @if $breakpoint == large {
+        @media all and (max-width: $large) {
             @content;
         }
     }
 
+    @else if $breakpoint == medium {
+        @media all and (max-width: $medium) {
+            @content;
+        }
+    }
     @else if $breakpoint == small {
         @media all and (max-width: $small) {
             @content;
         }
     }
+
+   
+
 }
 
 // 請使用 rem 來套用文字大小
