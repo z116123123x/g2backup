@@ -1,40 +1,59 @@
 <template>
+  <div>
+    <h1 class="manageTitle">管理員 管理中心</h1>
 
-  <div id="adminManageBody">
-<div class="container">
-  <div class="row">
-<header class="header">
-  header 區域
-</header>
+    <button class="addAdmin">新增管理員</button>
 
-<div class="main_content">
-  <aside class="aside">
-    <h1>側邊欄區域</h1>
-    <ul>
-      <li>列表1</li>
-      <li>列表2</li>
-    </ul>
-  </aside>
-  <main class="main">
-    <h1>主內容標題</h1>
-    <p>內容段落</p>
-    <p>內容段落</p>
-    <p>內容段落</p>
-   
+    <main class="msMainContent">
 
-  </main>
-</div>
+      <section>
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>編號</th>
+                <th>帳號</th>
+                <th>狀態</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              <tr>
+                <td>xxxxx</td>
+                <td>admin001</td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>xxxxx</td>
+                <td>admin002</td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>xxxxx</td>
+                <td>admin003</td>
+                <td> </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-<footer class="footer">
-  footer 區域
-</footer>
-    
-</div>
+    </main>
   </div>
-
-</div>
-
-
-
 </template>
+
+    
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+// <script>
+// export default {
+// $(window).on("load resize ", function() {
+//   var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+//   $('.tbl-header').css({'padding-right':scrollWidth});
+// }).resize();
+// }
+// </script>
 

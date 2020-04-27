@@ -1062,12 +1062,3 @@
     </main>
 </template>
 <script>
-// import Footer from "@/layout/footer";
-import "@/book";
-
-export default {
-    components: {
-        // Footer
-    }
-};
-</script>
