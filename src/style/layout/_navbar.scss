@@ -27,11 +27,9 @@
   }
 
   div.cart {
-
     padding: 0px 10px;
 
     .page {
-
       display: inline-block;
 
       width: 40px;
@@ -43,7 +41,6 @@
   }
 
   div.member_status {
-
     display: flex;
     font-size: 1.6rem;
 
@@ -59,7 +56,6 @@
     }
 
     span {
-
       padding: 0px 10px;
       cursor: pointer;
     }
@@ -72,7 +68,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 1080px;
+
     background: linear-gradient(#fdd998, #85a392);
 
     ul {
@@ -221,23 +217,23 @@
     // }
   }
 
-.hamburger {
-  display: flex;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible;
-  vertical-align: top;
-  line-height: 60px;
-  padding: 0 20px;
-}
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    vertical-align: top;
+    line-height: 60px;
+    padding: 0 20px;
+  }
 
   .hamburger:hover {
     opacity: 0.7;
