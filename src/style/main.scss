@@ -7,9 +7,9 @@
 @import "./layout/navbar";
 @import "./layout/footer";
 // components
-@import "./components/btn-more";
+@import "./components/buttonMore";
 // pages
-@import "./pages/style";
+@import "./pages/home";
 
 @import "./pages/book";
 
@@ -26,6 +26,10 @@
 @import "./pages/track";
 @import "./pages/beFarm";
 @import "./pages/FarmMember";
+@import "./pages/memberUpdate";
+@import "./pages/memberOrder";
+@import "./pages/memberTrack";
+@import "./pages/memberShopping";
 
 @import "./pages/adminLogin";
 @import "./pages/adminManage";

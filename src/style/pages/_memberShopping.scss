@@ -1,0 +1,71 @@
+.shopping {
+
+    flex-grow: 1;
+    box-sizing: border-box;
+
+    .content {
+
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+
+        .step-box {
+
+            height: 250px;
+        }
+
+        .form {
+
+            flex-grow: 1;
+
+            .form-content {
+
+                display: flex;
+                flex-direction: column;
+
+                padding: 0 5%;
+
+                box-sizing: border-box;
+
+                .title {
+
+                    font-size: 1.6rem;
+                    line-height: 2;
+                }
+
+                .tr {
+
+                    display: flex;
+
+                    .td {
+
+                        flex-grow: 2;
+
+                        font-size: 1.6rem;
+                        line-height: 2;
+
+                        text-align: center;
+
+                        border-right: 1px solid $min-color;
+                        border-top: 1px solid $min-color;
+                        border-bottom: 1px solid $min-color;
+                        background: $orange-light;
+
+                        &.check-box {
+
+                            flex-grow: .5;
+
+                            border-left: 1px solid $min-color;
+                        }
+
+                        &.amount {
+
+                            flex-grow: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

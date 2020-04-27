@@ -6,8 +6,8 @@
 
 <script>
 // @ is an alias to /src
-import homePage from "@/components/homePage";
 import "@/js/home";
+import homePage from "@/components/homePage";
 
 export default {
   name: "Home",

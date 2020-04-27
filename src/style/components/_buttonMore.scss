@@ -1,0 +1,26 @@
+.btn-bg {
+
+    display: inline-flex;
+
+    background-color: $min-color;
+
+    .btn-more {
+
+        color: $min-color;
+
+        transform: translate(-5px, -5px);
+    
+        height: 40px;
+        width: 235px;
+    
+        border: 1px solid $min-color;
+        background-color: $bg-color;
+
+        transition: .5s;
+
+        &:hover {
+
+            transform: translate(0, 0);
+        }
+    }
+}

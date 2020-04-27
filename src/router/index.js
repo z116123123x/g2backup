@@ -1,90 +1,109 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '@/views/Home';
 
 Vue.use(VueRouter);
 
-const routes = [{
-  path: '/',
-  name: 'Home',
-  component: Home,
-},
-{
-  path: '/book',
-  name: 'Book',
-  component: () => import("@/views/Book.vue"),
-},
-{
-  path: '/blog-landing',
-  name: 'Blog-landing',
-  component: () => import("@/views/Blog-landing.vue"),
-},
-{
-  path: '/blog-post',
-  name: 'Blog-post',
-  component: () => import("@/views/Blog-post.vue"),
-},
-{
-  path: '/shop',
-  name: 'Shop',
-  component: () => import("@/views/Shop.vue"),
-},
-{
-  path: '/member',
-  name: 'Member',
-  component: () => import("@/views/Member.vue"),
-  children: [{
-    path: "track",
-    component: () => import("@/views/track.vue"),
+const routes = [
+  {
+    path: '/main',
+    name: 'Home',
+    component: () => import("@/views/Home.vue"),
   },
   {
-    // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
-    path: "information",
-    component: () => import("@/views/Information.vue"),
+    path: '/main/book',
+    name: 'Book',
+    component: () => import("@/views/Book.vue"),
   },
   {
-    path: "order",
-    component: () => import("@/views/Order.vue"),
+    path: '/main/blog-landing',
+    name: 'Blog-landing',
+    component: () => import("@/views/Blog-landing.vue"),
   },
   {
-    path: "beFarm",
-    component: () => import("@/views/beFarm.vue"),
+    path: '/main/blog-post',
+    name: 'Blog-post',
+    component: () => import("@/views/Blog-post.vue"),
+  },
+  {
+    path: '/main/shop',
+    name: 'Shop',
+    component: () => import("@/views/Shop.vue"),
+  },
+  {
+    path: '/main/member',
+    name: 'Member',
+    component: () => import("@/views/Member.vue"),
+    children: [
+      {
+        // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
+        path: "information",
+        name: "Information",
+        component: () => import("@/views/MemberInfo.vue"),
+      },
+      {
+        path: "update",
+        name: "Update",
+        component: () => import("@/views/MemberUpdate.vue"),
+      },
+      {
+        path: "order",
+        name: "Order",
+        component: () => import("@/views/MemberOrder.vue"),
+      },
+      {
+        path: "track",
+        name: "Track",
+        component: () => import("@/views/MemberTrack.vue"),
+      },
+      {
+        path: "shopping",
+        name: "Shopping",
+        component: () => import("@/views/MemberShopping.vue"),
+      }
+    ]
+  },
+  {
+    path: "/admin",
+    name: "AdminLogin",
+    component: () => import("@/views/AdminLogin.vue"),
+  },
+  {
+    path: "/center",
+    name: "Center",
+    component: () => import("@/views/AdminCenter.vue"),
+    children: [
+      {
+        path: "manage",
+        name: "Manage",
+        component: () => import("@/views/AdminManage.vue"),
+      },
+      {
+        path: "fan",
+        name: "Fan",
+        component: () => import("@/views/AdminFanManage.vue"),
+      },
+      {
+        path: "seller",
+        name: "Seller",
+        component: () => import("@/views/AdminSellerManage.vue"),
+      },
+      {
+        path: "ency",
+        name: "Ency",
+        component: () => import("@/views/AdminEncyManage.vue"),
+      },
+      {
+        path: "blog",
+        name: "Blog",
+        component: () => import("@/views/AdminBlog.vue"),
+      },
+      {
+        path: "comment",
+        name: "Comment",
+        component: () => import("@/views/AdminComment.vue"),
+      }
+    ]
   }
-  ]
-},
-// {
-//   path: '/FarmMember',
-//   name: 'FarmMember',
-//   component: () => import("@/views/FarmMember.vue"),
-//   children: [{
-//     path: "track",
-//     component: () => import("@/views/track.vue"),
-//   },
-//   {
-//     // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
-//     path: "information",
-//     component: () => import("@/views/Information.vue"),
-//   },
-//   {
-//     path: "order",
-//     component: () => import("@/views/Order.vue"),
-//   },
-//   {
-//     path: "beFarm",
-//     component: () => import("@/views/beFarm.vue"),
-//   }
-//   ]
-// },
-{
-  path: '/adminLogin',
-  name: 'AdminLogin',
-  component: () => import("@/views/AdminLogin.vue"),
-},
-{
-  path: '/adminManage',
-  name: 'AdminManage',
-  component: () => import("@/views/AdminManage.vue"),
-},
 ];
 
 const router = new VueRouter({
