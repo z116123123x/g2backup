@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top:5%;">
+  <div style="padding-top:5%;background-color: #FBF8EF;">
     <img style="width:100%" src="@/assets/blog-img/blog-bar.png" /><br />
     <div class="blog-landing-container">
       <div>
@@ -181,7 +181,8 @@
           <form action="" method="get">
             <label style="font-size:20px;" for=""> 留言: 
               <textarea style="margin-left:3%" name="" id="" cols="40" rows="7"></textarea>
-            </label>
+            </label><br>
+            <button-more style="width:90px;text-align:center;margin-top:30px;margin-left:30%;font-size:15px;" msg="送出"></button-more>
           </form>
         </div>
       </div>
@@ -190,6 +191,7 @@
 </template>
 <style lang="scss">
 .blog-landing-container {
+  
   padding-top: 1%;
   width: 95%;
   margin-left: 2.5%;
@@ -197,7 +199,7 @@
     width: 95%;
     margin-left: 2.5%;
     display: grid;
-    grid-template-columns: 82% 18%;
+    grid-template-columns: 78% 22%;
     font-size: 20px;
     > div:nth-child(2) {
       gap: 10px;

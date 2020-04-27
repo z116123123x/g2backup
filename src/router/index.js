@@ -54,6 +54,11 @@ const routes = [
         path: "track",
         name: "Track",
         component: () => import("@/views/MemberTrack.vue"),
+      },
+      {
+        path: "shopping",
+        name: "Shopping",
+        component: () => import("@/views/MemberShopping.vue"),
       }
     ]
   },
@@ -63,8 +68,6 @@ const routes = [
     component: () => import("@/views/AdminLogin.vue"),
   },
   {
-    path: "/manage",
-    name: "Manage",
     component: () => import("@/views/AdminCenter.vue"),
     children: [
       {
