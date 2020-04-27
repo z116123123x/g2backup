@@ -16,10 +16,10 @@
             <router-link to="/manage/ency">知識百科管理</router-link>
           </li>
           <li>
-            <router-link to="/manage/comment">果農日誌管理</router-link>
+            <router-link to="/manage/blog">果農日誌管理</router-link>
           </li>
           <li>
-            <router-link to="/manage/blog">日誌留言管理</router-link>
+            <router-link to="/manage/comment">日誌留言管理</router-link>
           </li>
         </ul>
       </aside>
