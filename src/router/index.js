@@ -68,6 +68,8 @@ const routes = [
     component: () => import("@/views/AdminLogin.vue"),
   },
   {
+    path: "/center",
+    name: "Center",
     component: () => import("@/views/AdminCenter.vue"),
     children: [
       {

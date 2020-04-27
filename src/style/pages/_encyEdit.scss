@@ -29,14 +29,12 @@ $contentSize:12px;
         height: 100%;
         box-sizing: border-box;
 
-
         .manageTitle {
             color: $maintitleColor;
             font-size: $maintitleSize;
-            margin: 10px;
-            
+            margin: 50px !important;
         }
-
+        
         .msSideBar {
             // margin: auto;
             color: $title1Color;
