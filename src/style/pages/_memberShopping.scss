@@ -13,22 +13,160 @@
         .step-box {
 
             height: 250px;
-
-            border: 1px solid red;
         }
 
         .form {
 
             flex-grow: 1;
-            border: 1px solid blue;
 
             .form-content {
 
                 display: flex;
+                flex-direction: column;
+
+                padding: 0 5%;
+
+                box-sizing: border-box;
 
                 .title {
 
                     font-size: 1.6rem;
+                    line-height: 2;
+                }
+
+                .tr {
+
+                    display: flex;
+                    align-items: center;
+
+                    line-height: 75px;
+
+                    &.head-bar {
+
+                        line-height: 32px;
+                        background: $orange-light;
+                    }
+
+                    .td {
+
+                        font-size: 1.6rem;
+
+                        text-align: center;
+
+                        border-right: 1px solid $min-color;
+                        border-top: 1px solid $min-color;
+                        border-bottom: 1px solid $min-color;
+
+                        box-sizing: border-box;
+
+                        &.check-box {
+
+                            width: 5%;
+
+                            border-left: 1px solid $min-color;
+                        }
+
+                        &.img {
+
+                            width: 150px;
+                        }
+
+                        &.name {
+
+                            // width: 200px;
+                            flex-grow: 1;
+                        }
+
+                        &.seller {
+
+                            width: 150px;
+                        }
+
+                        &.price {
+
+                            width: 100px;
+                        }
+
+                        &.amount {
+
+                            width: 75px;
+
+                            .input {
+
+                                display: flex;
+                                align-items: center;
+
+                                padding: 15px;
+
+                                height: 45px;
+                                width: 50px;
+
+                                input {
+
+                                    margin: 0;
+                                    padding: 0;
+
+                                    height: 40px;
+                                    width: 35px;
+
+                                    text-align: center;
+
+                                    border-top: 1px solid $min-color;
+                                    border-left: 1px solid $min-color;
+                                    border-bottom: 1px solid $min-color;
+                                    box-sizing: border-box;
+
+                                    &::-webkit-inner-spin-button {
+
+                                        -webkit-appearance: none;
+                                    }
+                                }
+
+                                .button {
+
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    padding: 0;
+                                    margin: 0;
+
+                                    height: 40px;
+                                    width: 12.75px;
+
+                                    box-sizing: border-box;
+
+                                    button {
+
+                                        padding: 0px;
+                                        margin: 0px;
+
+                                        height: 50%;
+                                        width: 12.75px;
+
+                                        background: transparent;
+                                        border: 1px solid $min-color;
+
+                                        box-sizing: border-box;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.subtotal {
+
+                            width: 100px;
+                        }
+
+                        &.operating {
+
+                            width: 200px;
+                        }
+
+                        img {
+
+                            max-width: 100px;
+                        }
+                    }
                 }
             }
         }

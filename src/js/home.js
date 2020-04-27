@@ -1087,12 +1087,18 @@ window.addEventListener("load", () => {
     });
   });
   $(function() {
-    if ($("div.hamburger").hasClass("is-active") == false) {
-      $("a.page").on("click", function() {
+    $("a.page").on("click", function() {
+      if ($("div.hamburger").hasClass("is-active") == true) {
         $("div.nav_back").slideToggle();
         $("div.hamburger").removeClass("is-active");
-      });
-    }
+      }
+    });
+    $("img.logo").on("click", function() {
+      if ($("div.hamburger").hasClass("is-active") == true) {
+        $("div.nav_back").slideToggle();
+        $("div.hamburger").removeClass("is-active");
+      }
+    });
   });
 
   $(function() {
