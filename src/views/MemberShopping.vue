@@ -80,8 +80,8 @@ export default {
     total: function() {
       let sum = 0;
 
-      for (let i = 0; i < this.arr.length; i++) {
-        sum += this.arr[i].amount * this.arr[i].price;
+      for (let i = 0; i < this.cart.length; i++) {
+        sum += this.cart[i].amount * this.cart[i].price;
       }
 
       return sum;
@@ -92,20 +92,20 @@ export default {
       item.amount++;
     },
     subAmount: function(item) {
-
-      if(item.amount <= 1){
-
+      if (item.amount <= 1) {
         item.amount = 1;
-
-      }else {
-
+      } else {
         item.amount--;
       }
     },
-    checkbox: function(item){
-
-      this.cart.push(item);
-    } 
+    checkbox: function(item) {
+      let index = this.cart.indexOf(item);
+      if (index < 0) {
+        this.cart.push(item);
+      } else {
+        this.cart.splice(index, 1);
+      }
+    }
   }
 };
 </script>
