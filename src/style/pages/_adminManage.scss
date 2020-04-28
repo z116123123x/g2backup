@@ -26,8 +26,7 @@ $btnColor: #fbf8ef;
   .msFrame {
     color: $contentColor;
     display: flex;
-    // flex-flow: row wrap;
-    max-width: 100%;
+    max-width: 80%;
     height: 100%;
     box-sizing: border-box;
 
@@ -47,7 +46,6 @@ $btnColor: #fbf8ef;
     }
 
     .msSideBar {
-      // margin: auto;
       color: $title1Color;
       display: flex;
       background: $sidebarBgColor;
@@ -60,46 +58,168 @@ $btnColor: #fbf8ef;
       line-height: 3rem;
     }
 
-    .msMainContent {
+    .AdminMainContent {
       margin: 0 auto;
       color: $contentColor;
       display: flex;
-      flex-flow: row wrap;
       font-size: $contentSize;
       max-width: 60%;
-      height: auto;
+      height: 65%;
       box-sizing: border-box;
       justify-content: center;
       left: 280px;
-      top: 200px;
-      border: 1px solid #000;
+      top: 190px;
+      // border: 1px solid #000;
 
-      table {
-        width: 100%;
-        table-layout: fixed;
-      }
-      .tbl-header {
-        background: $maintitleColor;
-      }
-      .tbl-content {
-        background-color: #fff;
-        height: 300px;
-        overflow-x: auto;
-        margin-top: 0px;
-      }
-      th {
-        padding: 20px 15px;
-        text-align: left;
-        color: $contentColor;
-        text-transform: uppercase;
-      }
-      td {
-        padding: 15px;
-        text-align: left;
-        vertical-align: middle;
-        color: $contentColor;
+      .tableSection {
+
+        .amt-header {
+          display: flex;
+          background: $maintitleColor;
+        }
+
+        .amt-content {
+          background-color: #fff;
+          height: 80%;
+          overflow-x: auto;
+          margin-top: 0px;
+        }
+
+        .AdminmanageTab {
+          width: 70%;
+          table-layout: fixed;
+
+        }
+
+        th {
+          padding: 20px 20px;
+          text-align: left;
+          color: $contentColor;
+        }
+
+        td {
+          padding: 20px;
+          text-align: left;
+          vertical-align: middle;
+          color: $contentColor;
+
+          .statusBtn[type=checkbox] {
+            height: 0;
+            width: 0;
+            visibility: hidden;
+          }
+
+          .statusBtnLabel {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 35px;
+            height: 19px;
+            background: rgb(161, 161, 161);
+            display: block;
+            border-radius: 100px;
+            position: relative;
+            top: -6px;
+          }
+
+          .statusBtnLabel:after {
+            content: '';
+            position: absolute;
+            top: 1.5px;
+            left: 2px;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            border-radius: 90px;
+            transition: 0.3s;
+          }
+
+          .statusBtn:checked+.statusBtnLabel {
+            background: #62B45A;
+          }
+
+          .statusBtn:checked+.statusBtnLabel:after {
+            left: calc(100% - 2px);
+            transform: translateX(-100%);
+          }
+
+          .statusBtnLabel:active:after {
+            width: 20px;
+          }
+
+
+
+        }
+
       }
     }
+  }
+}
+
+.addAdmin {
+  background: $btnBgcolor;
+  color: $btnColor;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  margin-left: 50px;
+}
+
+.msSideBar {
+  // margin: auto;
+  color: $title1Color;
+  display: flex;
+  background: $sidebarBgColor;
+  width: 220px;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  font-size: $title1Size;
+  line-height: 3rem;
+}
+
+.msMainContent {
+  margin: 0 auto;
+  color: $contentColor;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: $contentSize;
+  max-width: 60%;
+  height: auto;
+  box-sizing: border-box;
+  justify-content: center;
+  left: 280px;
+  top: 200px;
+  border: 1px solid #000;
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .tbl-header {
+    background: $maintitleColor;
+  }
+
+  .tbl-content {
+    background-color: #fff;
+    height: 300px;
+    overflow-x: auto;
+    margin-top: 0px;
+  }
+
+  th {
+    padding: 20px 15px;
+    text-align: left;
+    color: $contentColor;
+    text-transform: uppercase;
+  }
+
+  td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    color: $contentColor;
   }
 }
 
@@ -119,19 +239,4 @@ $btnColor: #fbf8ef;
 //   width: 100%;
 //   display: block;
 // }
-
-// }
-
-/* for custom scrollbar for webkit browser*/
-
-/* for custom scrollbar for webkit browser*/
-
-// ::-webkit-scrollbar {
-//     width: 6px;
-// }
-// ::-webkit-scrollbar-track {
-//     -webkit-box-shadow: inset 0 0 6px rgba(207, 201, 201, 0.034);
-// }
-// ::-webkit-scrollbar-thumb {
-//     -webkit-box-shadow: inset 0 0 6px rgba(223, 223, 223, 0.171);
 // }
