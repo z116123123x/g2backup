@@ -29,6 +29,19 @@ $contentSize:12px;
         height: 100%;
         box-sizing: border-box;
 
+        .msSideBar {
+          // margin: auto;
+          color: $title1Color;
+          display: flex;
+          background: $sidebarBgColor;
+          width: 220px;
+          height: 100%;
+          box-sizing: border-box;
+          align-items: center;
+          justify-content: center;
+          font-size: $title1Size;
+          line-height: 3rem;
+      }
 
         .addEncy {
             background: $btnBgcolor;
