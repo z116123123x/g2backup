@@ -123,31 +123,19 @@
                       </div>
                       <div class="bk_season_pic">
                         <div class="bk_season_pic1">
-                          <img
-                            src="@/assets/book_img/spring/plum/plum04.jpg"
-                            alt
-                          />
+                          <img src="@/assets/book_img/spring/plum/plum04.jpg" alt />
                           <span>梅子</span>
                         </div>
                         <div class="bk_season_pic1">
-                          <img
-                            src="@/assets/book_img/spring/plum/plum04.jpg"
-                            alt
-                          />
+                          <img src="@/assets/book_img/spring/plum/plum04.jpg" alt />
                           <span>李子</span>
                         </div>
                         <div class="bk_season_pic1">
-                          <img
-                            src="@/assets/book_img/spring/plum/plum04.jpg"
-                            alt
-                          />
+                          <img src="@/assets/book_img/spring/plum/plum04.jpg" alt />
                           <span>桃子</span>
                         </div>
                         <div class="bk_season_pic1">
-                          <img
-                            src="@/assets/book_img/spring/plum/plum04.jpg"
-                            alt
-                          />
+                          <img src="@/assets/book_img/spring/plum/plum04.jpg" alt />
                           <span>琵琶</span>
                         </div>
                       </div>
@@ -158,18 +146,13 @@
                         <h1>梅子</h1>
                         <div class="fruit_start_img">
                           <div class="img_content">
-                            <img
-                              src="@/assets/book_img/spring/plum/plum04.jpg"
-                              alt
-                            />
+                            <img src="@/assets/book_img/spring/plum/plum04.jpg" alt />
                           </div>
                         </div>
                       </div>
                       <div class="fruit_intro">
                         <!-- <h2>梅子介紹</h2> -->
-                        <p>
-                          梅子是亞洲特有的果樹，除了灣、日本和韓國之外，其他地區很少栽種。梅子的風味以清酸稱絕，滿口生津而別有風味，和一般水果講求香、甜有所不同。梅子所含的果酸較多，如果生食未成熟的青梅會造成腸胃不適，經過醃漬、曝晒加工之後更適合食用。梅子的加工品項多樣，除梅乾、蜜餞、脆梅、梅醬等，也能用來釀酒。梅子內有豐富檸檬酸、蘋果酸等有機酸，蛋白質的含量更是草莓、柑桔的兩倍以上。台灣的梅子主要栽種在中央山脈兩側，以南投信義鄉、水里鄉的產量最多，信義鄉更有「梅子鄉」的雅稱。
-                        </p>
+                        <p>梅子是亞洲特有的果樹，除了灣、日本和韓國之外，其他地區很少栽種。梅子的風味以清酸稱絕，滿口生津而別有風味，和一般水果講求香、甜有所不同。梅子所含的果酸較多，如果生食未成熟的青梅會造成腸胃不適，經過醃漬、曝晒加工之後更適合食用。梅子的加工品項多樣，除梅乾、蜜餞、脆梅、梅醬等，也能用來釀酒。梅子內有豐富檸檬酸、蘋果酸等有機酸，蛋白質的含量更是草莓、柑桔的兩倍以上。台灣的梅子主要栽種在中央山脈兩側，以南投信義鄉、水里鄉的產量最多，信義鄉更有「梅子鄉」的雅稱。</p>
                       </div>
                     </div>
                     <div class="bk_ct bk_ct_right">
@@ -194,10 +177,7 @@
                       </div>
                       <div class="fruit_video">
                         <video controls>
-                          <source
-                            src="@/assets/video/plum.mp4"
-                            type="video/mp4"
-                          />
+                          <source src="@/assets/video/plum.mp4" type="video/mp4" />
                         </video>
                       </div>
                       <div class="fruit_Q">
@@ -211,9 +191,7 @@
                             plum。
                           </p>
                           <div class="fruit_img">
-                            <img
-                              src="@/assets/book_img/spring/plum/plum05.jpg"
-                            />
+                            <img src="@/assets/book_img/spring/plum/plum05.jpg" />
                           </div>
                         </div>
                       </div>
@@ -264,9 +242,7 @@
                         </div>
                       </div>
                       <div id="bk_blog_content">
-                        <p>
-                          白石湖是大台北難得仍保存農業風味的鄉村地區，當地多產白色沉積砂岩石塊故而得名，近年轉型成為休閒農業區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，絡繹不絕的人潮湧入內湖一帶的草莓園。我們一早就來到莓圃休閒農園，是個擁有果園、菜園和庭園咖啡等多元場域，其中溫室草莓園吸引家長帶著孩子體驗採果樂，不用擔心腳底褲管沾到泥巴。特別提醒台北內湖的莓園幾乎是假日上午11點開放，當天採摘到一定數量便掛上「本日已採完」的告示牌，若想採草莓的朋友建議早點排隊。
-                        </p>
+                        <p>白石湖是大台北難得仍保存農業風味的鄉村地區，當地多產白色沉積砂岩石塊故而得名，近年轉型成為休閒農業區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，絡繹不絕的人潮湧入內湖一帶的草莓園。我們一早就來到莓圃休閒農園，是個擁有果園、菜園和庭園咖啡等多元場域，其中溫室草莓園吸引家長帶著孩子體驗採果樂，不用擔心腳底褲管沾到泥巴。特別提醒台北內湖的莓園幾乎是假日上午11點開放，當天採摘到一定數量便掛上「本日已採完」的告示牌，若想採草莓的朋友建議早點排隊。</p>
                       </div>
                     </div>
                     <!-- knowledge_market -->
@@ -314,8 +290,11 @@
                 </div>
               </div>
             </div>
-        </section>
-    </main>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </template>
 <script>
 import "@/js/book";
