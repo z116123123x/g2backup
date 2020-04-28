@@ -314,14 +314,8 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- <section id="book_footer">
-            <Footer />
-        </section>-->
-  </main>
+        </section>
+    </main>
 </template>
 <script>
 import "@/js/book";

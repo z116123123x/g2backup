@@ -7,16 +7,15 @@ $orange: rgb(255, 169, 120);
 $orange-light: rgb(255, 211, 193);
 
 @font-face {
-
-    font-family: myFont;
-    src: url("./jf-openhuninn.ttf");
+  font-family: myFont;
+  src: url('./jf-openhuninn.ttf');
 }
 
 // 文字
 $font-size: 10px;
 
 // RWD
-$large:1199px;
+$large: 1199px;
 $medium: 991px;
 $small: 767px;
 $mobile: 574px;

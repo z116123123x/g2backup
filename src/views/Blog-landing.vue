@@ -35,16 +35,17 @@
         <div>
           <div>
             <img
-              style="width:100%;"
               src="@/assets/blog-img/blog-someoneshead.png"
-              alt=""
+              class="blog-landing-aunt"
             />
           </div>
           <div>
-            <span
-              style="padding:3px;font-size:15px;margin-bottom: 10px;display:inline-block;"
-              >蓬蓬草莓姨</span
-            >
+            <div>
+              <span
+                style="padding:3px;font-size:15px;margin-bottom: 10px;display:inline-block;"
+                >蓬蓬草莓姨</span
+              >
+            </div>
             <div>
               <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
               <img style="width: 20px;" src="@/assets/blog-img/blog-star.png" />
@@ -54,14 +55,11 @@
             </div>
           </div>
           <div>
-            <span
-              style="background-color: #007552;border-radius: 20px;color:#FFF;font-size:15px;"
-              >+追蹤</span
-            >
+            <span>+追蹤</span>
           </div>
-          <div style="border-bottom:1px solid #007552; padding-top:10px;"></div>
-          <div style="border-bottom:1px solid #007552; padding-top:10px;"></div>
-          <div style="border-bottom:1px solid #007552; padding-top:10px;"></div>
+          <div class="blog-landing-greenline"></div>
+          <div class="blog-landing-greenline"></div>
+          <div class="blog-landing-greenline"></div>
         </div>
         <div>
           <a href="">其他文章連結</a>
@@ -79,7 +77,7 @@
             <span> 旅遊日誌 </span>
           </div>
           <div style="font-size:15px;">2020-04-10</div>
-          <div style="padding-top:10px;font-size:20px;">
+          <div style="padding-top:10px;font-size:30px;">
             <span style="background-color: #ffd3c1;"
               >“ 親子輕旅行 台北白石湖採草莓、踏青一日遊”</span
             >
@@ -209,6 +207,18 @@
     margin-left: 2.5%;
     display: grid;
     grid-template-columns: 78% 22%;
+    @media (max-width: 992px) {
+      & {
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 10%;
+      }
+    }
+    @media (max-width: 768px) {
+      & {
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 10%;
+      }
+    }
     font-size: 20px;
     > div:nth-child(2) {
       gap: 10px;
@@ -235,14 +245,20 @@
 .blog-landing-container2 {
   width: 95%;
   margin-left: 2.5%;
-  border: solid #007552 2px;
+  border: solid #007552 5px;
   margin-top: 1%;
   display: grid;
   grid-template-columns: 0.3fr 1fr;
+  @media (max-width: 1300px) {
+    & {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.08fr 1fr;
+    }
+  }
   > div:nth-child(1) {
     //會員區
     background-color: #ecdeb6;
-    border-right: solid #007552 2px;
+    border-right: solid #007552 5px;
     > div:nth-child(1) {
       //蓬蓬姨
       text-align: center;
@@ -250,13 +266,55 @@
       grid-template-columns: 0.5fr 1.2fr 1fr;
       padding: 20px;
       padding-top: 30%;
+      .blog-landing-aunt {
+        width: 100%;
+      }
+      @media (max-width: 1300px) {
+        & {
+          padding-top: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          // border: olive solid 20px;
+          .blog-landing-aunt {
+            width: 100%;
+          }
+        }
+      }
       > div:nth-child(2) {
         padding-top: 0px;
+        display: grid;
+        grid-template-rows: 1fr 0.5fr;
+        @media (max-width: 1300px) {
+          & {
+            padding: 0px 20px;
+          }
+        }
+        > div:nth-child(1) {
+          align-self: end;
+          // background-color: #000;
+        }
+        > div:nth-child(2) {
+          align-self: start;
+        }
       }
       > div:nth-child(3) {
         padding-top: 15px;
         > span {
-          padding: 5px;
+          padding: 5px 10px;
+          background-color: #007552;
+          border-radius: 20px;
+          color: #fff;
+          font-size: 15px;
+        }
+      }
+      .blog-landing-greenline {
+        border-bottom: 1px solid #007552;
+        padding-top: 10px;
+        @media (max-width: 1300px) {
+          & {
+            display: none;
+          }
         }
       }
     }
@@ -264,6 +322,11 @@
       display: grid;
       grid-template-columns: 1fr;
       padding-top: 20%;
+      @media (max-width: 1300px) {
+        & {
+          padding: 0%;
+        }
+      }
       justify-items: center;
       > a {
         text-align: center;
