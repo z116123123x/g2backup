@@ -18,22 +18,37 @@
         <div class="knowledge_page_parent">
           <div class="knowledge_page tab1 -on">
             <div class="knowledge_page_back">
-              <div>1</div>
+              <div class="knowledge_page_title">水果介紹</div>
+              <div class="knowledge_page_content">
+                <p>
+                  以「水果王國」名聞全世界的台灣，水果種類豐富，一年四季皆可嚐到新鮮可口的水果，但多數人可能不知道這些水果的產地、產季、甚至是色香味等等，因此希望能藉由我們的網站帶大家認識台灣獨特的水果文化。
+                </p>
+                <div class="knowledge_page_content_spring"></div>
+              </div>
             </div>
           </div>
           <div class="knowledge_page tab2">
             <div class="knowledge_page_back">
-              <div>2</div>
+              <div class="knowledge_page_title">水果市集</div>
+              <div class="knowledge_page_content">
+                <div class="knowledge_page_content_summer">
+                  <div>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="knowledge_page tab3">
             <div class="knowledge_page_back">
-              <div>3</div>
+              <div class="knowledge_page_title">果農日誌</div>
+              <div class="knowledge_page_content"></div>
             </div>
           </div>
           <div class="knowledge_page tab4">
             <div class="knowledge_page_back">
-              <div>4</div>
+              <div class="knowledge_page_title">水果目錄</div>
+              <div class="knowledge_page_content"></div>
             </div>
           </div>
         </div>
