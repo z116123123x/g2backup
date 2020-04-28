@@ -1,0 +1,38 @@
+#index_front_container {
+  background: linear-gradient(#ffd4c3, #007453);
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  perspective: 200px;
+  position: relative;
+  .front_LOGO {
+    padding-top: 100px;
+    padding-bottom: 150px;
+    img {
+      width: 300px;
+    }
+  }
+  .front_button {
+    button {
+      color: #666;
+      font-size: 5rem;
+      font-weight: 800;
+      outline: none;
+      border: 3px solid #f7c852;
+      background-color: #ffd4c3;
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+    }
+    .back_button {
+      margin-left: 300px;
+    }
+  }
+  .front_container_cloud {
+    .front_page_cloud {
+      width: 100%;
+      transform: translateZ(100px) translateY(-70px);
+      height: 300px;
+    }
+  }
+}

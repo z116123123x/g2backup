@@ -31,6 +31,7 @@ import waterpear01 from "@/assets/waterpear.png";
 import waterpearline01 from "@/assets/waterpearline.png";
 import fruitbox01 from "@/assets/fruitbox.png";
 import fruitboxline01 from "@/assets/fruitboxline.png";
+import { Tween } from "gsap/gsap-core";
 
 window.addEventListener("load", () => {
   gsap.registerPlugin(MotionPathPlugin);
@@ -1015,7 +1016,7 @@ window.addEventListener("load", () => {
         requestId = requestAnimationFrame(update);
       }
 
-      if (window.pageYOffset > 1000 && window.pageYOffset < 2000) {
+      if (window.pageYOffset > 800 && window.pageYOffset < 1300) {
         $("div#mainText").fadeIn();
       } else {
         $("div#mainText").fadeOut();
@@ -1053,14 +1054,14 @@ window.addEventListener("load", () => {
   }
 
   window.addEventListener("resize", function() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
     if (window.innerWidth <= 1199) {
       camera.fov = 80;
     } else {
       camera.fov = 60;
     }
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
   });
 
   // const home = document.getElementById("home");
@@ -1122,28 +1123,40 @@ window.addEventListener("load", () => {
       $("#scroll_btn").attr("disabled", true);
 
       if (window.pageYOffset >= 0 && window.pageYOffset < 7400) {
-        $("html").animate({ scrollTop: 7400 }, 7400 - window.pageYOffset);
-        setTimeout(btnStop, 7400 - window.pageYOffset);
+        $("html").animate({ scrollTop: 7400 }, (7400 - window.pageYOffset) / 2);
+        setTimeout(btnStop, (7400 - window.pageYOffset) / 2);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset >= 7400 && window.pageYOffset < 12900) {
-        $("html").animate({ scrollTop: 12900 }, 12900 - window.pageYOffset);
-        setTimeout(btnStop, 12900 - window.pageYOffset);
+        $("html").animate(
+          { scrollTop: 12900 },
+          (12900 - window.pageYOffset) / 2
+        );
+        setTimeout(btnStop, (12900 - window.pageYOffset) / 2);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset >= 12900 && window.pageYOffset < 18900) {
-        $("html").animate({ scrollTop: 18900 }, 18900 - window.pageYOffset);
-        setTimeout(btnStop, 18900 - window.pageYOffset);
+        $("html").animate(
+          { scrollTop: 18900 },
+          (18900 - window.pageYOffset) / 2
+        );
+        setTimeout(btnStop, (18900 - window.pageYOffset) / 2);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset >= 18900 && window.pageYOffset < 24900) {
-        $("html").animate({ scrollTop: 24900 }, 24900 - window.pageYOffset);
+        $("html").animate(
+          { scrollTop: 24900 },
+          (24900 - window.pageYOffset) / 2
+        );
         setTimeout(btnStop, 24900 - window.pageYOffset);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset >= 24900 && window.pageYOffset < 31900) {
-        $("html").animate({ scrollTop: 33000 }, 33000 - window.pageYOffset);
-        setTimeout(btnStop, 32200 - window.pageYOffset);
+        $("html").animate(
+          { scrollTop: 33000 },
+          (33000 - window.pageYOffset) / 2
+        );
+        setTimeout(btnStop, (33000 - window.pageYOffset) / 2);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset > 32000) {

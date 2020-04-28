@@ -1,16 +1,16 @@
 <template>
-    <div class="contain">
-        <aside class="left">
-            <div class="head_portrait">
-                <div class="head_img_box">
-                    <img src="../assets/navbar_account_img.svg" alt="">
-                </div>
-                <ul>
-                    <li>設定頭像</li>
-                    <li class="nick">暱稱</li>
-                    <li class="fans">身分別:果粉</li>
-                </ul>
-            </div>
+  <div class="contain">
+    <aside class="left">
+      <div class="head_portrait">
+        <div class="head_img_box">
+          <img src="../assets/navbar_account_img.svg" alt />
+        </div>
+        <ul>
+          <li>設定頭像</li>
+          <li class="nick">暱稱</li>
+          <li class="fans">身分別:果粉</li>
+        </ul>
+      </div>
 
             <div class="info">
                 <ul>
@@ -31,7 +31,8 @@
                 </div>
             </div>
         </aside>
-        <router-view />
-        
+        <keep-alive>
+          <router-view />
+        </keep-alive>
     </div>
 </template>
