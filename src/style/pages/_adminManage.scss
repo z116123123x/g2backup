@@ -26,7 +26,8 @@ $btnColor: #fbf8ef;
   .msFrame {
     color: $contentColor;
     display: flex;
-    max-width: 80%;
+    // max-width: 80%;
+    max-width: 100%;
     height: 100%;
     box-sizing: border-box;
 
@@ -46,16 +47,17 @@ $btnColor: #fbf8ef;
     }
 
     .msSideBar {
-      color: $title1Color;
-      display: flex;
-      background: $sidebarBgColor;
-      width: 220px;
-      height: 100%;
-      box-sizing: border-box;
-      align-items: center;
-      justify-content: center;
-      font-size: $title1Size;
-      line-height: 3rem;
+        // margin: auto;
+        color: $title1Color;
+        display: flex;
+        background: $sidebarBgColor;
+        width: 220px;
+        height: 100%;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        font-size: $title1Size;
+        line-height: 3rem;
     }
 
     .AdminMainContent {
@@ -72,7 +74,6 @@ $btnColor: #fbf8ef;
       // border: 1px solid #000;
 
       .tableSection {
-
         .amt-header {
           display: flex;
           background: $maintitleColor;
@@ -85,10 +86,10 @@ $btnColor: #fbf8ef;
           margin-top: 0px;
         }
 
-        .AdminmanageTab {
+        .adminManageTab {
+
           width: 70%;
           table-layout: fixed;
-
         }
 
         th {
@@ -103,7 +104,7 @@ $btnColor: #fbf8ef;
           vertical-align: middle;
           color: $contentColor;
 
-          .statusBtn[type=checkbox] {
+          .statusBtn[type='checkbox'] {
             height: 0;
             width: 0;
             visibility: hidden;
@@ -133,11 +134,11 @@ $btnColor: #fbf8ef;
             transition: 0.3s;
           }
 
-          .statusBtn:checked+.statusBtnLabel {
-            background: #62B45A;
+          .statusBtn:checked + .statusBtnLabel {
+            background: #62b45a;
           }
 
-          .statusBtn:checked+.statusBtnLabel:after {
+          .statusBtn:checked + .statusBtnLabel:after {
             left: calc(100% - 2px);
             transform: translateX(-100%);
           }
@@ -145,11 +146,7 @@ $btnColor: #fbf8ef;
           .statusBtnLabel:active:after {
             width: 20px;
           }
-
-
-
         }
-
       }
     }
   }
@@ -196,11 +193,9 @@ $btnColor: #fbf8ef;
     width: 100%;
     table-layout: fixed;
   }
-
   .tbl-header {
     background: $maintitleColor;
   }
-
   .tbl-content {
     background-color: #fff;
     height: 300px;

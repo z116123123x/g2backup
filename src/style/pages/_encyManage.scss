@@ -29,12 +29,19 @@ $contentSize:12px;
         height: 100%;
         box-sizing: border-box;
 
-        .manageTitle {
-            color: $maintitleColor;
-            font-size: $maintitleSize;
-            margin: 50px;
-            
-        }
+        .msSideBar {
+          // margin: auto;
+          color: $title1Color;
+          display: flex;
+          background: $sidebarBgColor;
+          width: 220px;
+          height: 100%;
+          box-sizing: border-box;
+          align-items: center;
+          justify-content: center;
+          font-size: $title1Size;
+          line-height: 3rem;
+      }
 
         .addEncy {
             background: $btnBgcolor;
@@ -57,7 +64,7 @@ $contentSize:12px;
             margin-left: 280px;
             margin-top: 190px;
             
-            border: 1px solid #000;
+            // border: 1px solid #000;
         }
 
         .EncytableSection {

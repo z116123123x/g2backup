@@ -29,14 +29,6 @@ $contentSize:12px;
         height: 100%;
         box-sizing: border-box;
 
-
-        .manageTitle {
-            color: $maintitleColor;
-            font-size: $maintitleSize;
-            margin: 10px;
-            
-        }
-
         .msSideBar {
             // margin: auto;
             color: $title1Color;
@@ -50,46 +42,71 @@ $contentSize:12px;
             font-size: $title1Size;
             line-height: 3rem;
         }
-
-        .msMainContent {
-            margin: 0 auto; 
+        
+        .blogReportMainContent {
+            margin: 0 auto;
             color: $contentColor;
             display: flex;
             flex-flow: row wrap;
             font-size: $contentSize;
-            width: 70%;
-            height: 60%;
+            // width: 80%;
+            height: 65%;
             box-sizing: border-box;
             justify-content: center;
-            left: 280px;
-            top: 200px;
-            
-            border: 1px solid #000;
+            margin-left: 50px;
+            top: 120px;
+            // border: 1px solid #000;
         }
+
+
+        .blogReportTableSection {
+
+            .br-header {
+                display: flex;
+                background: $maintitleColor;
+            }
+
+            .br-content {
+                display: flex;
+                background-color: #fff;
+                height: 80%;
+                overflow-x: auto;
+                margin-top: 0px;
+            }
+
+            .blogReportManageTab {
+                // width: auto;
+                table-layout: fixed;
+
+            }
+
+            th {
+                width: 80px;
+                padding: 20px 10px 20px 20px;
+                text-align: left;
+                color: $contentColor;
+
+                &:last-child {
+                    padding-left: 5%;
+                }
+            }
+
+            td {
+                width: 80px;
+                padding: 10px 10px 10px 20px;
+                text-align: left;
+                vertical-align: middle;
+                color: $contentColor;
+
+                &:last-child {
+                    padding-left: 5%;
+
+                }
+
+
+            }
+
+        }
+
     }
 }
-
-
-
-
-
-
-
-// @media (max-width: 767px){
-// // header.header{
-// //   max-width: 100%;
-// // }
-// .main_content{
-//  max-width: 100%;
-//   }
-// .aside{
-//   max-width: 100%;
-//   margin-bottom:10px;
-
-// }
-// .main{
-//   width: 100%;
-//   display: block;
-// }
-
-// }
