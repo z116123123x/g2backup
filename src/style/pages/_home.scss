@@ -62,23 +62,22 @@ canvas {
       opacity: 0.9;
       text-align: center;
       padding-left: 60px;
+      .knowledge_page_parent {
+        position: relative;
+        background-color: #007453;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 20px 20px;
+        margin-top: 40px;
+        vertical-align: top;
+        z-index: 2;
+      }
 
       @include rwd(large) {
         left: 50%;
       }
     }
   }
-}
-
-#knowledge_container > div:nth-child(2) {
-  position: relative;
-  background-color: #007453;
-  display: inline-block;
-  border-radius: 5px;
-  padding: 20px 20px;
-  margin-top: 40px;
-  vertical-align: top;
-  z-index: 2;
 }
 
 .homebtn {

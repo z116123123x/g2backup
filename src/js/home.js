@@ -1053,14 +1053,14 @@ window.addEventListener("load", () => {
   }
 
   window.addEventListener("resize", function() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
     if (window.innerWidth <= 1199) {
       camera.fov = 80;
     } else {
       camera.fov = 60;
     }
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
   });
 
   // const home = document.getElementById("home");

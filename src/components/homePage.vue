@@ -15,7 +15,7 @@
           <div class="fall_tab tab" data-target="tab3">秋</div>
           <div class="winter_tab tab" data-target="tab4">冬</div>
         </div>
-        <div>
+        <div class="knowledge_page_parent">
           <div class="knowledge_page tab1 -on">
             <div class="knowledge_page_back">
               <div>1</div>
