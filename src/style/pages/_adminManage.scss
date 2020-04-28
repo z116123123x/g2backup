@@ -72,7 +72,6 @@ $btnColor: #fbf8ef;
       // border: 1px solid #000;
 
       .tableSection {
-
         .amt-header {
           display: flex;
           background: $maintitleColor;
@@ -88,7 +87,6 @@ $btnColor: #fbf8ef;
         .AdminmanageTab {
           width: 70%;
           table-layout: fixed;
-
         }
 
         th {
@@ -103,7 +101,7 @@ $btnColor: #fbf8ef;
           vertical-align: middle;
           color: $contentColor;
 
-          .statusBtn[type=checkbox] {
+          .statusBtn[type='checkbox'] {
             height: 0;
             width: 0;
             visibility: hidden;
@@ -133,11 +131,11 @@ $btnColor: #fbf8ef;
             transition: 0.3s;
           }
 
-          .statusBtn:checked+.statusBtnLabel {
-            background: #62B45A;
+          .statusBtn:checked + .statusBtnLabel {
+            background: #62b45a;
           }
 
-          .statusBtn:checked+.statusBtnLabel:after {
+          .statusBtn:checked + .statusBtnLabel:after {
             left: calc(100% - 2px);
             transform: translateX(-100%);
           }
@@ -145,11 +143,7 @@ $btnColor: #fbf8ef;
           .statusBtnLabel:active:after {
             width: 20px;
           }
-
-
-
         }
-
       }
     }
   }
@@ -196,11 +190,9 @@ $btnColor: #fbf8ef;
     width: 100%;
     table-layout: fixed;
   }
-
   .tbl-header {
     background: $maintitleColor;
   }
-
   .tbl-content {
     background-color: #fff;
     height: 300px;

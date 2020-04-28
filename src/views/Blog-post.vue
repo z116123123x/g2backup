@@ -477,12 +477,77 @@
       </div>
       <div>
         <!-- tags&leaderblard-->
-        <img src="@/assets/blog-img/post/tags-header.png" alt="" />
-        <img src="@/assets/blog-img/post/experience.png" alt="" />
-        <img src="@/assets/blog-img/post/product.png" alt="" />
-        <img src="@/assets/blog-img/post/log.png" alt="" />
-        <img src="@/assets/blog-img/post/knowledge.png" alt="" />
-        <img src="@/assets/blog-img/post/tag-footer.png" alt="" />
+        <div>
+          <img src="@/assets/blog-img/post/tags-header.png" alt="" />
+          <img src="@/assets/blog-img/post/experience.png" alt="" />
+          <img src="@/assets/blog-img/post/product.png" alt="" />
+          <img src="@/assets/blog-img/post/log.png" alt="" />
+          <img src="@/assets/blog-img/post/knowledge.png" alt="" />
+          <img src="@/assets/blog-img/post/tag-footer.png" alt="" />
+        </div>
+        <div class="blogPostLeaderBoard">
+          <div>1</div>
+          <div>2020-04-08</div>
+          <div>親子輕旅行 台北白石湖採草莓、 踏青一日遊</div>
+          <div>
+            <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+          </div>
+          <div>蓬蓬草苺姨</div>
+          <div>
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+          </div>
+          <div>
+            <img src="@/assets/blog-img/blog-thumb.png" alt="" /><span
+              >300</span
+            >
+          </div>
+        </div>
+        <div class="blogPostLeaderBoard">
+          <div>2</div>
+          <div>2020-04-08</div>
+          <div>親子輕旅行 台北白石湖採草莓、 踏青一日遊</div>
+          <div>
+            <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+          </div>
+          <div>蓬蓬草苺姨</div>
+          <div>
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+          </div>
+          <div>
+            <img src="@/assets/blog-img/blog-thumb.png" alt="" /><span
+              >300</span
+            >
+          </div>
+        </div>
+        <div class="blogPostLeaderBoard">
+          <div>3</div>
+          <div>2020-04-08</div>
+          <div>親子輕旅行 台北白石湖採草莓、 踏青一日遊</div>
+          <div>
+            <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+          </div>
+          <div>蓬蓬草苺姨</div>
+          <div>
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+            <img style="" src="@/assets/blog-img/blog-star.png" />
+          </div>
+          <div>
+            <img src="@/assets/blog-img/blog-thumb.png" alt="" /><span
+              >300</span
+            >
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -569,16 +634,81 @@
   }
   > div:nth-child(2) {
     //tags&leaderboard
-    text-align: right;
-    position: relative;
-    left: 2px;
-    top: 1%;
-    >img:nth-child(2),img:nth-child(3),img:nth-child(4),img:nth-child(5){
-      position: relative;
-      transition: 10s;
-      &:hover{
-        width: calc(100% + 20px );
-        right: 20px;
+    display: grid;
+    // border: chocolate 3px solid;
+    grid-template-rows: 6fr 1fr 1fr 1fr;
+    height: 30%;
+    > div:nth-child(1) {
+      // border: chocolate 3px solid;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      left: 2px;
+      top: 1%;
+      > img:nth-child(2),
+      img:nth-child(3),
+      img:nth-child(4),
+      img:nth-child(5) {
+        position: relative;
+        transition: 0.5s;
+        &:hover {
+          right: 20px;
+        }
+      }
+    }
+    > div:nth-child(2),
+    > div:nth-child(3),
+    > div:nth-child(4) {
+      padding-top: 10px;
+      padding-bottom: 15px;
+      display: grid;
+      grid-template-columns: 1fr 0.5fr 1fr 1fr;
+      grid-template-rows: 0.5fr 1.2fr 0.4fr 0.4fr;
+      align-items: start;
+      border-bottom: #a0a0a0 solid 1px;
+      // border: chocolate 3px solid;
+      grid-template-areas:
+        'aa1 aa2 aa2 aa2'
+        'aa1 aa3 aa3 aa3'
+        'aa1 aa4 aa5 aa7'
+        'aa1 aa4 aa6 aa7';
+      > div:nth-child(1) {
+        grid-area: aa1;
+        font-size: 80px;
+        text-align: center;
+        align-self: center;
+      }
+      > div:nth-child(2) {
+        grid-area: aa2;
+        color: #a0a0a0;
+        padding-left: 10px;
+      }
+      > div:nth-child(3) {
+        grid-area: aa3;
+        font-size: 20px;
+        padding: 0px 10px;
+      }
+      > div:nth-child(4) {
+        grid-area: aa4;
+      }
+      > div:nth-child(5) {
+        font-size: 15px;
+        grid-area: aa5;
+      }
+      > div:nth-child(6) {
+        grid-area: aa6;
+      }
+      > div:nth-child(7) {
+        grid-area: aa7;
+        > img:nth-child(1) {
+          padding-top: 5px;
+          padding-right: 5px;
+        }
+        > span:nth-child(2) {
+          color: #62bc5a;
+          position: relative;
+          top: 5px;
+        }
       }
     }
   }
