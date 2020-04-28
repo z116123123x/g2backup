@@ -1122,28 +1122,40 @@ window.addEventListener("load", () => {
       $("#scroll_btn").attr("disabled", true);
 
       if (window.pageYOffset >= 0 && window.pageYOffset < 7400) {
-        $("html").animate({ scrollTop: 7400 }, 7400 - window.pageYOffset);
-        setTimeout(btnStop, 7400 - window.pageYOffset);
+        $("html").animate({ scrollTop: 7400 }, (7400 - window.pageYOffset) / 2);
+        setTimeout(btnStop, (7400 - window.pageYOffset) / 2);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset >= 7400 && window.pageYOffset < 12900) {
-        $("html").animate({ scrollTop: 12900 }, 12900 - window.pageYOffset);
-        setTimeout(btnStop, 12900 - window.pageYOffset);
+        $("html").animate(
+          { scrollTop: 12900 },
+          (12900 - window.pageYOffset) / 2
+        );
+        setTimeout(btnStop, (12900 - window.pageYOffset) / 2);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset >= 12900 && window.pageYOffset < 18900) {
-        $("html").animate({ scrollTop: 18900 }, 18900 - window.pageYOffset);
-        setTimeout(btnStop, 18900 - window.pageYOffset);
+        $("html").animate(
+          { scrollTop: 18900 },
+          (18900 - window.pageYOffset) / 2
+        );
+        setTimeout(btnStop, (18900 - window.pageYOffset) / 2);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset >= 18900 && window.pageYOffset < 24900) {
-        $("html").animate({ scrollTop: 24900 }, 24900 - window.pageYOffset);
+        $("html").animate(
+          { scrollTop: 24900 },
+          (24900 - window.pageYOffset) / 2
+        );
         setTimeout(btnStop, 24900 - window.pageYOffset);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset >= 24900 && window.pageYOffset < 31900) {
-        $("html").animate({ scrollTop: 33000 }, 33000 - window.pageYOffset);
-        setTimeout(btnStop, 32200 - window.pageYOffset);
+        $("html").animate(
+          { scrollTop: 33000 },
+          (33000 - window.pageYOffset) / 2
+        );
+        setTimeout(btnStop, (33000 - window.pageYOffset) / 2);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset > 32000) {

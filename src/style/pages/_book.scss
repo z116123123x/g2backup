@@ -1,990 +1,646 @@
 #Page_horizen {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  transform: rotate(270deg) translateX(-100%);
-  transform-origin: top left;
-  position: relative;
-  width: 100vh;
-  height: 100vw;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   transform: rotate(270deg) translateX(-100%);
+   transform-origin: top left;
+   position: relative;
+   width: 100vh;
+   height: 100vw;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+   &::-webkit-scrollbar {
+      display: none;
+   }
 
-  #outter {
-    transform: rotate(90deg) translateY(-100vh);
-    transform-origin: top left;
-    white-space: nowrap;
+   #outter {
+      transform: rotate(90deg) translateY(-100vh);
+      transform-origin: top left;
+      white-space: nowrap;
 
-    // 左page
-    #book_left {
-      //border: 1px solid blue;
-      box-sizing: border-box;
-      width: 100vw;
-      height: 100vh;
-      display: inline-block;
-      position: relative;
-      background-color: $bg-color;
-      vertical-align: top;
+      // 左page
+      #book_left {
+         //border: 1px solid blue;
+         box-sizing: border-box;
+         width: 100vw;
+         height: 100vh;
+         display: inline-block;
+         position: relative;
+         background-color: $bg-color;
+         vertical-align: top;
 
-      .bk_left {
-        //border: 1px solid orangered;
-        box-sizing: border-box;
-        display: inline-block;
-        position: relative;
-        left: 50%;
-        top: 40%;
-        transform: translate(-50%, -50%);
-
-        .bk_left_img {
-          width: 40vw;
-          height: auto;
-          //border: 1px solid red;
-          box-sizing: border-box;
-          display: inline-block;
-          position: relative;
-
-          &::before {
-            content: "";
-            position: absolute;
-            left: 10%;
-            top: 20%;
-            background-image: url("../assets/book_img/knowledge_sign.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 13vw;
-            height: 0;
-            padding-bottom: 100%;
-          }
-
-          img {
-            width: 100%;
-            //  border: 1px solid purple;
-          }
-        }
-
-        .bk_right_img {
-          // border: 1px solid green;
-          box-sizing: border-box;
-          display: inline-block;
-          width: 45%;
-          position: absolute;
-          left: 28%;
-          top: 4%;
-
-          img {
-            width: 100%;
-            height: auto;
-            //  border: 1px solid purple;
-          }
-        }
-      }
-    }
-
-    //middle
-    .book_middle {
-      // border: 1px solid blue;
-      box-sizing: border-box;
-      width: 15vw;
-      height: 100vh;
-      display: inline-block;
-      position: relative;
-      background-color: rgba(14, 116, 83, 0.7);
-      vertical-align: top;
-    }
-
-    // 右page
-
-    #book_right {
-      //border: 1px solid blue;
-      box-sizing: border-box;
-      padding-top: 20px;
-      width: 100vw;
-      height: 100vh;
-      display: inline-block;
-      position: relative;
-      background-color: #438b6d;
-      vertical-align: top;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: -10%;
-        width: 40%;
-        height: 40%;
-        background-image: url("../assets/book_img/flower_middle.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      .bookContain {
-        margin-top: 30px;
-
-        //tag
-        .book_tag {
-          // border: 1px solid rgb(43, 255, 0);
-          box-sizing: border-box;
-          position: relative;
-          left: 50%;
-          transform: translate(-50%);
-          height: 35px;
-          width: 70%;
-
-          .index {
-            // border: 1px solid red;
-            background-color: #485349;
-            color: white;
-            box-sizing: border-box;
-            border-radius: 10px 10px 0 0;
-            position: absolute;
-            top: 10px;
-            left: 5%;
-            width: 70px;
-            height: 35px;
-            padding: 10px;
-            text-align: center;
-            font-size: 1.6rem;
-            transition: 0.5s;
-
-            &:hover {
-              top: 0;
-            }
-          }
-
-          ul.tag {
-            // border: 1px solid red;
-            display: inline-flex;
-            position: absolute;
-            right: 1%;
-
-            li {
-              // border: 1px solid green;
-              background-color: $bg-color;
-              box-sizing: border-box;
-              border-radius: 10px 10px 0 0;
-              width: 70px;
-              height: 35px;
-              padding: 10px;
-              text-align: center;
-              transform: translate(0, 10px);
-              font-size: 1.6rem;
-              transition: 0.5s;
-
-              &:nth-child(1) {
-                background-color: #f38e8e;
-              }
-
-              &:nth-child(2) {
-                background-color: #f6d16b;
-              }
-
-              &:nth-child(3) {
-                background-color: #e19b6b;
-              }
-
-              &:nth-child(4) {
-                background-color: #87b0e7;
-              }
-
-              &:nth-child(5) {
-                background-color: #c5ce7c;
-              }
-
-              &:hover {
-                transform: translate(0, 0px);
-              }
-
-              &.tag1 {
-                transform: translate(0, 0px);
-              }
-            }
-          }
-        }
-
-        .Book {
-          border: 1px solid $min-color;
-          background: #fcfbf7;
-          box-sizing: border-box;
-          display: inline-block;
-          height: 80vh;
-          width: 80%;
-          margin: 0 auto;
-          position: relative;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: 2;
-
-          //切換按鈕 切換按鈕 切換按鈕
-          .Change_Button {
-            border: 0.5px solid $min-color;
+         .bk_left {
+            //border: 1px solid orangered;
             box-sizing: border-box;
             display: inline-block;
-            width: 3%;
-            height: 80vh;
-            vertical-align: top;
-
-            .pagepaper {
-              border: 0.5px solid $min-color;
-              box-sizing: border-box;
-              display: inline-block;
-              width: 33%;
-              height: 100%;
-              position: relative;
-
-              .Pbutton_left {
-                &:hover {
-                  background-color: #ffe29e;
-                }
-
-                &::before {
-                  content: "";
-                  position: absolute;
-                  top: 50%;
-                  left: 55%;
-                  transform: translate(-50%, -50%);
-                  background-image: url("../assets/book_img/turn_leftpage.svg");
-                  background-repeat: no-repeat;
-                  width: 30px;
-                  height: 40px;
-                }
-              }
-
-              .Pbutton_right {
-                &:hover {
-                  background-color: #ffe29e;
-                }
-
-                &::before {
-                  content: "";
-                  position: absolute;
-                  top: 30%;
-                  right: 30%;
-
-                  background-image: url("../assets/book_img/turn_rightpage.svg");
-                  background-repeat: no-repeat;
-                  width: 30px;
-                  height: 40px;
-                  transform: translateX(50%);
-                }
-              }
-
-              .page_button {
-                width: 2.5vw;
-                height: 100px;
-                border: 2px solid $min-color;
-                background-color: #f3c352ee;
-                position: relative;
-                top: 45%;
-                transform: translateY(-50%);
-                left: -1vw;
-                z-index: 33;
-              }
-            }
-          }
-
-          // bookcontent書籍內容
-          #bk_content {
-            // font-size: 0;
-            border: 1px solid $min-color;
-            box-sizing: border-box;
-            display: inline-block;
-            width: 94%;
-            height: 80vh;
             position: relative;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
 
-            &::before {
-              content: "";
-              position: absolute;
-              z-index: 2;
-              left: 50%;
-              transform: translateX(-50%);
-              top: -3px;
-              background-image: url("../assets/book_img/booktop.svg");
-              background-repeat: no-repeat;
-              width: 7%;
-              height: 10%;
-            }
+            .bk_left_img {
+               width: 40vw;
+               height: auto;
+               //border: 1px solid red;
+               box-sizing: border-box;
+               display: inline-block;
+               position: relative;
 
-            &::after {
-              content: "";
-              position: absolute;
-              left: 50%;
-              transform: translateX(-50%);
-              bottom: -3%;
-              background-color: rgba(255, 208, 191, 1);
-              -webkit-clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
-              clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
-              // background-image: url("../assets/book_img/bookbottom.svg");
-              // background-repeat: no-repeat;
-              width: 7%;
-              height: 10%;
-            }
-
-            //middle
-            .book_middle {
-              // border: 1px solid blue;
-              box-sizing: border-box;
-              width: 15vw;
-              height: 100vh;
-              display: inline-block;
-              position: relative;
-              background-color: #438b6d;
-              vertical-align: top;
-            }
-
-            .bk_ct_left {
-              display: none; /////這裏
-              font-size: 0;
-
-              .fruit_start {
-                // border: 1px solid red;
-                box-sizing: border-box;
-                display: inline-block;
-                width: 100%;
-                height: 45%;
-
-                h1 {
-                  display: inline-block;
-                  //border: 1px solid red;
-                  writing-mode: vertical-lr;
-                  letter-spacing: 0.6rem;
-                  font-size: 5rem;
-                  font-weight: bolder;
-                  color: #f38e8e;
-                  position: relative;
-                  left: 5%;
-                  top: 45%;
-                  z-index: 2;
-
-                  &::before {
-                    content: "";
-                    position: absolute;
-                    top: -30px;
-                    left: -10px;
-                    width: 50px;
-                    height: 50px;
-                    background-image: url("../assets/book_img/flower.svg");
-                  }
+               &::before {
+                  content: "";
+                  position: absolute;
+                  left: 10%;
+                  top: 20%;
+                  background-image: url("../assets/book_img/knowledge_sign.svg");
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  width: 13vw;
+                  height: 0;
+                  padding-bottom: 100%;
                }
 
-               ul.tag {
-                  // border: 1px solid red;
-                  display: inline-flex;
-                  position: absolute;
-                  right: 1%;
+               img {
+                  width: 100%;
+                  //  border: 1px solid purple;
+               }
+            }
 
-                  li {
-                     // border: 1px solid green;
-                     background-color: $bg-color;
+            .bk_right_img {
+               // border: 1px solid green;
+               box-sizing: border-box;
+               display: inline-block;
+               width: 45%;
+               position: absolute;
+               left: 28%;
+               top: 4%;
+
+               img {
+                  width: 100%;
+                  height: auto;
+                  //  border: 1px solid purple;
+               }
+            }
+         }
+      }
+
+      //middle
+      .book_middle {
+         // border: 1px solid blue;
+         box-sizing: border-box;
+         width: 15vw;
+         height: 100vh;
+         display: inline-block;
+         position: relative;
+         background-color: rgba(14, 116, 83, 0.7);
+         vertical-align: top;
+      }
+
+      // 右page
+
+      #book_right {
+         //border: 1px solid blue;
+         box-sizing: border-box;
+         padding-top: 20px;
+         width: 100vw;
+         height: 100vh;
+         display: inline-block;
+         position: relative;
+         background-color: #438b6d;
+         vertical-align: top;
+
+         &::before {
+            content: "";
+            position: absolute;
+            left: -10%;
+            width: 40%;
+            height: 40%;
+            background-image: url("../assets/book_img/flower_middle.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+         }
+
+         .bookContain {
+            margin-top: 30px;
+            //border: 1px solid red;
+
+            .bkbk_content {
+               //border: 1px solid black;
+               box-sizing: border-box;
+               display: block;
+               width: 70%;
+               margin: 0 auto;
+
+               //tag
+               .book_tag {
+                  //border: 1px solid rgb(43, 255, 0);
+                  box-sizing: border-box;
+                  position: relative;
+                  left: 50%;
+                  transform: translate(-50%);
+                  height: 35px;
+                  width: 100%;
+
+                  .index {
+                     //border: 1px solid red;
+                     background-color: #485349;
+                     color: white;
                      box-sizing: border-box;
                      border-radius: 10px 10px 0 0;
+                     position: absolute;
+                     top: 10px;
+                     left: 5%;
                      width: 70px;
                      height: 35px;
                      padding: 10px;
                      text-align: center;
-                     transform: translate(0, 10px);
                      font-size: 1.6rem;
                      transition: 0.5s;
 
-                     &:nth-child(1) {
-                        background-color: #f38e8e;
-                     }
-
-                     &:nth-child(2) {
-                        background-color: #f6d16b;
-                     }
-
-                     &:nth-child(3) {
-                        background-color: #e19b6b;
-                     }
-
-                     &:nth-child(4) {
-                        background-color: #87b0e7;
-                     }
-
-                     &:nth-child(5) {
-                        background-color: #c5ce7c;
-                     }
-
                      &:hover {
-                        transform: translate(0, 0px);
-                     }
 
-
-                     &.tag1 {
-                        transform: translate(0, 0px);
+                        top: 0;
                      }
                   }
 
+                  ul.tag {
+                     //border: 1px solid red;
+                     display: inline-flex;
+                     position: absolute;
+                     right: 3%;
 
+                     li {
+                        //border: 1px solid green;
+                        background-color: $bg-color;
+                        box-sizing: border-box;
+                        border-radius: 10px 10px 0 0;
+                        width: 70px;
+                        height: 35px;
+                        padding: 10px;
+                        text-align: center;
+                        transform: translate(0, 10px);
+                        font-size: 1.6rem;
+                        transition: 0.5s;
 
+                        &:nth-child(1) {
+                           background-color: #f38e8e;
+                        }
+
+                        &:nth-child(2) {
+                           background-color: #f6d16b;
+                        }
+
+                        &:nth-child(3) {
+                           background-color: #e19b6b;
+                        }
+
+                        &:nth-child(4) {
+                           background-color: #87b0e7;
+                        }
+
+                        &:nth-child(5) {
+                           background-color: #c5ce7c;
+                        }
+
+                        &:hover {
+                           transform: translate(0, 0px);
+                        }
+
+                        &.tag1 {
+                           transform: translate(0, 0px);
+                        }
+                     }
+
+                     //r-991
+                     @include rwd(medium) {
+                        li {
+                           width: 55px;
+
+                        }
+                     }
+                  }
+
+                  // @include rwd(medium) {
+                  //    ul.tag {
+                  //       right: 0%;
+                  //    }
+                  // }
                }
-            }
-         }
 
-         .Book {
-            border: 1px solid $min-color;
-            background: #fcfbf7;
-            box-sizing: border-box;
-            display: inline-block;
-            width: 80%;
-            margin: 0 auto;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-
-            //切換按鈕 切換按鈕 切換按鈕
-            .Change_Button {
-               border: 0.5px solid $min-color;
-               box-sizing: border-box;
-               display: inline-block;
-               width: 3%;
-               height: 80vh;
-               vertical-align: top;
-
-               .pagepaper {
-                  border: 0.5px solid $min-color;
+               .Book {
+                  border: 1px solid $min-color;
+                  background: #fcfbf7;
                   box-sizing: border-box;
                   display: inline-block;
-                  width: 33%;
-                  height: 100%;
-                  position: relative;
-
-                  .Pbutton_left {
-
-                     &:hover {
-                        background-color: #ffe29e;
-                     }
-
-                     &::before {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        left: 55%;
-                        transform: translate(-50%, -50%);
-                        background-image: url("../assets/book_img/turn_leftpage.svg");
-                        background-repeat: no-repeat;
-                        width: 30px;
-                        height: 40px;
-                     }
-                  }
-
-                  .Pbutton_right {
-
-                     &:hover {
-                        background-color: #ffe29e;
-                     }
-
-                     &::before {
-                        content: "";
-                        position: absolute;
-                        top: 30%;
-                        right: 30%;
-
-                        background-image: url("../assets/book_img/turn_rightpage.svg");
-                        background-repeat: no-repeat;
-                        width: 30px;
-                        height: 40px;
-                        transform: translateX(50%);
-
-                     }
-                  }
-
-                  .page_button {
-                     width: 2.5vw;
-                     height: 100px;
-                     border: 2px solid $min-color;
-                     background-color: #f3c352ee;
-                     position: relative;
-                     top: 45%;
-                     transform: translateY(-50%);
-                     left: -1vw;
-                     z-index: 33;
-
-                  }
-
-               }
-
-            }
-
-
-            // bookcontent書籍內容
-            #bk_content {
-
-               // font-size: 0;
-               border: 1px solid $min-color;
-               box-sizing: border-box;
-               display: inline-block;
-               width: 94%;
-               height: 80vh;
-               position: relative;
-
-
-               //page_top_img
-               &::before {
-                  content: "";
-                  position: absolute;
-                  z-index: 2;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  top: -3px;
-                  background-image: url("../assets/book_img/booktop.svg");
-                  background-repeat: no-repeat;
-                  width: 7%;
-                  height: 10%;
-
-
-               }
-
-               //page_bottom_img
-               &::after {
-                  content: "";
-                  position: absolute;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  bottom: -4%;
-                  background-color: rgba(255, 208, 191, 1);
-                  -webkit-clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
-                  clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
-                  // background-image: url("../assets/book_img/bookbottom.svg");
-                  // background-repeat: no-repeat;
-                  width: 7%;
-                  height: 10%;
-                  // z-index: -2;
-
-               }
-
-               //fruit_index
-               .fruit_index {
-                  //border: 1px solid blue;
-                  box-sizing: border-box;
                   width: 100%;
-                  height: 100%;
-                  // padding: 20px;
+                  margin: 0 auto;
                   position: relative;
-                  display: none;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  z-index: 2;
 
+                  //切換按鈕 切換按鈕 切換按鈕
+                  .Change_Button {
+                     border: 0.5px solid $min-color;
+                     box-sizing: border-box;
+                     display: inline-block;
+                     width: 3%;
+                     height: 80vh;
+                     vertical-align: top;
+
+                     .pagepaper {
+                        border: 0.5px solid $min-color;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        width: 33%;
+                        height: 100%;
+                        position: relative;
+
+                        .Pbutton_left {
+
+                           &:hover {
+                              background-color: #ffe29e;
+                           }
+
+                           &::before {
+                              content: "";
+                              position: absolute;
+                              top: 50%;
+                              left: 55%;
+                              transform: translate(-50%, -50%);
+                              background-image: url("../assets/book_img/turn_leftpage.svg");
+                              background-repeat: no-repeat;
+                              width: 30px;
+                              height: 40px;
+                           }
+                        }
+
+                        .Pbutton_right {
+
+                           &:hover {
+                              background-color: #ffe29e;
+                           }
+
+                           &::before {
+                              content: "";
+                              position: absolute;
+                              top: 30%;
+                              right: 30%;
+
+                              background-image: url("../assets/book_img/turn_rightpage.svg");
+                              background-repeat: no-repeat;
+                              width: 30px;
+                              height: 40px;
+                              transform: translateX(50%);
+                           }
+                        }
+
+                        .page_button {
+                           width: 2.5vw;
+                           height: 100px;
+                           border: 2px solid $min-color;
+                           background-color: #f3c352ee;
+                           position: relative;
+                           top: 45%;
+                           transform: translateY(-50%);
+                           left: -1vw;
+                           z-index: 33;
+
+                        }
+                     }
+                  }
+               }
+
+
+               // bookcontent書籍內容
+               #bk_content {
+
+                  // font-size: 0;
+                  border: 1px solid $min-color;
+                  box-sizing: border-box;
+                  display: inline-block;
+                  width: 94%;
+                  height: 80vh;
+                  position: relative;
+
+
+                  //page_top_img
                   &::before {
                      content: "";
                      position: absolute;
-                     top: 20px;
-                     width: 300px;
-                     height: 50px;
-                     background-image: url("../assets/book_img/content.svg");
+                     z-index: 2;
+                     left: 50%;
+                     transform: translateX(-50%);
+                     top: -2px;
+                     background-image: url("../assets/book_img/booktop.svg");
                      background-repeat: no-repeat;
+                     width: 7%;
+                     height: 10%;
+
 
                   }
 
-                  .bk_content {
-                     //border: 1px solid red;
-                     display: inline-block;
-                     box-sizing: border-box;
-                     vertical-align: top;
-                     text-align: center;
-                     transition: .5s;
+                  //page_bottom_img
+                  &::after {
+                     content: "";
+                     position: absolute;
+                     left: 50%;
+                     transform: translateX(-50%);
+                     bottom: -4%;
+                     background-color: rgba(255, 208, 191, 1);
+                     -webkit-clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
+                     clip-path: polygon(0 58%, 100% 58%, 65% 100%, 29% 100%);
+                     // background-image: url("../assets/book_img/bookbottom.svg");
+                     // background-repeat: no-repeat;
+                     width: 7%;
+                     height: 10%;
+                     // z-index: -2;
 
-                     &:nth-child(1) {
-                        background-color: #f38e8e8a;
-                        position: relative;
-                        transition: 2s;
-
-                        &:hover {
-                           background-color: #ff1e1e8a;
-
-                           &::after {
-                              content: "";
-                              width: 100%;
-                              height: 30%;
-                              position: absolute;
-                              bottom: 0;
-                              left: 0;
-                              background-image: url("../assets/book_img/bk_ct_flowers.svg");
-
-
-                           }
-                        }
-                     }
-
-                     &:nth-child(2) {
-                        background-color: #f6d16b8a;
-                        position: relative;
-
-                        &:hover {
-
-                           background-color: #ffbf108a;
-
-                           &::after {
-                              content: "";
-                              width: 100%;
-                              height: 30%;
-                              position: absolute;
-                              bottom: 0;
-                              left: 0;
-                              background-image: url("../assets/book_img/bk_ct_binbos.svg");
-
-                           }
-                        }
-                     }
-
-                     &:nth-child(3) {
-                        background-color: #e19b6b8a;
-                        position: relative;
-
-                        // transition: ease-in;
-                        &:hover {
-                           background-color: #ff71138a;
-
-                           &::after {
-                              content: "";
-                              width: 100%;
-                              height: 30%;
-                              position: absolute;
-                              bottom: 0;
-                              left: 0;
-                              background-image: url("../assets/book_img/bk_ct_leafs.svg");
-
-                           }
-                        }
-                     }
-
-                     &:nth-child(4) {
-                        background-color: #87b0e78a;
-                        position: relative;
-
-                        &:hover {
-                           background-color: #177bfd8a;
-
-                           &::after {
-                              content: "";
-                              width: 100%;
-                              height: 30%;
-                              position: absolute;
-                              bottom: 0;
-                              left: 0;
-                              background-image: url("../assets/book_img/bk_ct_snows.svg");
-
-                           }
-                        }
-                     }
-
-                     &:nth-child(5) {
-                        background-color: #c4ce7c8a;
-                        position: relative;
-
-                        &:hover {
-                           background-color: #e1fc198a;
-
-                           &::after {
-                              content: "";
-                              width: 100%;
-                              height: 30%;
-                              position: absolute;
-                              bottom: 0;
-                              left: 0;
-                              background-image: url("../assets/book_img/bk_ct_leafs_years.svg");
-
-                           }
-                        }
-                     }
-
-                     width: 20%;
-                     height: 100%;
-
-                     h5 {
-                        // border: 1px solid red;
-                        font-size: 1.6rem;
-                        color: $min-color;
-                        font-weight: bolder;
-                        margin: 50% 0 10% 0;
-                     }
-
-                     .bk_content_img {
-                        //border: 1px solid red;
-                        width: 40px;
-                        height: 40px;
-                        margin: 0 auto;
-
-                        img {
-                           height: 100%;
-                        }
-                      }
-                     }
-
-                     ul {
-                        //border: 1px solid green;
-                        margin-top: 10%;
-
-                        li {
-                           // border: 1px solid red;
-
-                           font-size: 1.4rem;
-                           font-weight: bolder;
-                           padding: 10px;
-
-                           &:hover {
-                              color: $min-color;
-                              width: 30%;
-                              margin: 0 auto;
-                              background-color: #f3c452;
-
-                           }
-
-                        }
-                     }
                   }
-               }
 
-               .bk_Spring {
-                  //border: 1px solid red;
-                  box-sizing: border-box;
-                  width: 100%;
-                  height: 100%;
-                  //display: none;
-
-                  //個別季節目錄
-                  .bk_season_index {
-                     border: 1px solid blue;
+                  //fruit_index---水果目錄
+                  .fruit_index {
+                     //border: 1px solid blue;
                      box-sizing: border-box;
                      width: 100%;
                      height: 100%;
+                     // padding: 20px;
                      position: relative;
                      display: none;
 
-                     &::after {
+                     &::before {
                         content: "";
                         position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 5%;
-                        background-color: rgba(255, 208, 191, 1);
+                        top: 20px;
+                        width: 300px;
+                        height: 50px;
+                        background-image: url("../assets/book_img/content.svg");
+                        background-repeat: no-repeat;
+
                      }
-                      //影片
-                      .fruit_video {
-                        height: 35%;
-                        margin-top: 20px;
-                        
-                     .bk_season {
-                        //border: 1px solid blue;
-                        box-sizing: border-box;
+
+                     .bk_content {
+                        //border: 1px solid red;
                         display: inline-block;
-                        width: 20%;
-                        height: 100%;
-                        background-color: #f38e8ea8;
+                        box-sizing: border-box;
                         vertical-align: top;
                         text-align: center;
+                        transition: .5s;
 
-                        h5 {
-                           //border: 1px solid purple;
-                           font-size: 1.6rem;
-                           font-weight: bolder;
-                           color: black;
-                           margin: 50% auto 10%;
-                           background-color: #f3c452;
-                           width: 40%;
-                           padding: 10px;
-
-                        }
-
-                        .bk_season_img {
-                           width: 30px;
-                           height: 30px;
-                           margin: 0 auto 10px;
-
-                           img {
-                              height: 100%;
-                           }
-                        }
-                     }
-
-                     .bk_season_pic {
-                        // border: 1px solid green;
-                        box-sizing: border-box;
-                        display: inline-block;
-                        text-align: center;
-                        width: 80%;
-                        height: 100%;
-                        padding: 5%;
-
-                        .bk_season_pic1 {
-                           border: 5px solid #f38e8ea8;
-                           box-sizing: border-box;
-                           display: inline-block;
-                           width: 150px;
-                           height: 150px;
-                           border-radius: 50%;
-                           overflow: hidden;
+                        &:nth-child(1) {
+                           background-color: #f38e8e8a;
                            position: relative;
-                           top: 40%;
-                           transform: translateY(-50%);
-                           margin: 10px;
-                           transition: 1s;
-
-
-                           &:hover img {
-                              height: 120%;
-
-                           }
-
-                           &:hover span {
-                              position: absolute;
-                              top: 50%;
-                              left: 50%;
-                              transform: translate(-50%, -50%);
-                              display: block;
-                              font-size: 2rem;
-                              background-color: #f3c452;
-                              padding: 5px;
-
-
-                           }
-
-                           img {
-                              height: 100%;
-                              transition: 1s;
-                           }
-
-                           span {
-                              display: none;
-                              animation-delay: 2s;
-                           }
-
-                        }
-                     }
-
-                  }
-
-
-                  .bk_ct {
-                     // border: 1px solid blue;
-                     box-sizing: border-box;
-                     position: relative;
-                     top: 0;
-                     display: inline-block;
-                     width: 50%;
-                     height: 100%;
-                     vertical-align: top;
-                  }
-
-                  //spring spring spring
-                  .bk_ct_left {
-                     //display: none; /////這裏
-                     font-size: 0;
-
-                     .fruit_start {
-                        // border: 1px solid red;
-                        box-sizing: border-box;
-                        display: inline-block;
-                        width: 100%;
-                        height: 45%;
-
-                        @keyframes rotation {
-                           0% {
-                              transform: rotate(0deg);
-                           }
-
-                           100% {
-                              transform: rotate(360deg);
-                           }
-                        }
-
-
-                        h1 {
-                           display: inline-block;
-                           //border: 1px solid red;
-                           writing-mode: vertical-lr;
-                           letter-spacing: 0.6rem;
-                           font-size: 5rem;
-                           font-weight: bolder;
-                           color: #f38e8e;
-                           position: relative;
-                           left: 5%;
-                           top: 45%;
-                           z-index: 2;
-
-                           &::before {
-                              content: "";
-                              position: absolute;
-                              top: -30px;
-                              left: -10px;
-                              width: 50px;
-                              height: 50px;
-                              background-image: url("../assets/book_img/flower.svg");
-                              background-repeat: no-repeat;
-                              background-size: contain;
-                              animation-name: rotation;
-                              animation-duration: 2.5s;
-                              animation-iteration-count: infinite;
-
-                           }
-
-                           &::after {
-                              content: "";
-                              position: absolute;
-                              bottom: -30px;
-                              left: 20px;
-                              width: 30px;
-                              height: 30px;
-                              background-image: url("../assets/book_img/flower.svg");
-                              background-repeat: no-repeat;
-                              background-size: contain;
-                              animation-name: rotation;
-                              animation-duration: 2s;
-                              animation-iteration-count: infinite;
-                              animation-direction: alternate-reverse;
-                              animation-delay: 1s;
-                           }
-                        }
-
-
-                        .fruit_start_img {
-                           //border: 1px solid red;
-                           display: inline-block;
-                           width: 180px;
-                           height: 170px;
-                           vertical-align: top;
-                           background-image: url("../assets/book_img/fruit_start01.svg");
-                           background-repeat: no-repeat;
-                           background-size: contain;
-                           position: relative;
-                           left: 40%;
-                           top: 55%;
-                           transform: translate(-50%, -50%);
-                           transition: .5s;
-
-
+                           transition: 2s;
 
                            &:hover {
-                              width: 170px;
-                              height: 160px;
+                              background-color: #ff1e1e8a;
+
+                              &::after {
+                                 content: "";
+                                 width: 100%;
+                                 height: 30%;
+                                 position: absolute;
+                                 bottom: 0;
+                                 left: 0;
+                                 background-image: url("../assets/book_img/bk_ct_flowers.svg");
+
+
+                              }
+                           }
+                        }
+
+                        &:nth-child(2) {
+                           background-color: #f6d16b8a;
+                           position: relative;
+
+                           &:hover {
+                              background-color: #ffbf108a;
+
+                              &::after {
+                                 content: "";
+                                 width: 100%;
+                                 height: 30%;
+                                 position: absolute;
+                                 bottom: 0;
+                                 left: 0;
+                                 background-image: url("../assets/book_img/bk_ct_binbos.svg");
+
+                              }
+                           }
+                        }
+
+                        &:nth-child(3) {
+                           background-color: #e19b6b8a;
+                           position: relative;
+
+                           // transition: ease-in;
+                           &:hover {
+                              background-color: #ff71138a;
+
+                              &::after {
+                                 content: "";
+                                 width: 100%;
+                                 height: 30%;
+                                 position: absolute;
+                                 bottom: 0;
+                                 left: 0;
+                                 background-image: url("../assets/book_img/bk_ct_leafs.svg");
+
+                              }
+                           }
+                        }
+
+                        &:nth-child(4) {
+                           background-color: #87b0e78a;
+                           position: relative;
+
+                           &:hover {
+                              background-color: #177bfd8a;
+
+                              &::after {
+                                 content: "";
+                                 width: 100%;
+                                 height: 30%;
+                                 position: absolute;
+                                 bottom: 0;
+                                 left: 0;
+                                 background-image: url("../assets/book_img/bk_ct_snows.svg");
+
+                              }
+                           }
+                        }
+
+                        &:nth-child(5) {
+                           background-color: #c4ce7c8a;
+                           position: relative;
+
+                           &:hover {
+                              background-color: #e1fc198a;
+
+                              &::after {
+                                 content: "";
+                                 width: 100%;
+                                 height: 30%;
+                                 position: absolute;
+                                 bottom: 0;
+                                 left: 0;
+                                 background-image: url("../assets/book_img/bk_ct_leafs_years.svg");
+
+                              }
+                           }
+                        }
+
+                        width: 20%;
+                        height: 100%;
+
+                        h5 {
+                           // border: 1px solid red;
+                           font-size: 1.6rem;
+                           color: $min-color;
+                           font-weight: bolder;
+                           margin: 50% 0 10% 0;
+                        }
+
+                        .bk_content_img {
+                           //border: 1px solid red;
+                           width: 40px;
+                           height: 40px;
+                           margin: 0 auto;
+
+                           img {
+                              height: 100%;
+                           }
+                        }
+
+                        ul {
+                           //border: 1px solid green;
+                           margin-top: 10%;
+
+                           li {
+                              // border: 1px solid red;
+
+                              font-size: 1.4rem;
+                              font-weight: bolder;
+                              padding: 10px;
+
+                              &:hover {
+                                 color: $min-color;
+                                 width: 30%;
+                                 margin: 0 auto;
+                                 background-color: #f3c452;
+
+                              }
+                           }
+                        }
+                     }
+                  }
+
+                  .bk_Spring {
+                     border: 1px solid red;
+                     box-sizing: border-box;
+                     width: 100%;
+                     height: 100%;
+                     //display: none;
+
+                     //個別季節目錄
+                     .bk_season_index {
+
+                        border: 1px solid blue;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        display: none;
+
+                        &::after {
+                           content: "";
+                           position: absolute;
+                           bottom: 0;
+                           left: 0;
+                           width: 100%;
+                           height: 5%;
+                           background-color: rgba(255, 208, 191, 1);
+                        }
+
+                        .bk_season {
+                           //border: 1px solid blue;
+                           box-sizing: border-box;
+                           display: inline-block;
+                           width: 20%;
+                           height: 100%;
+                           background-color: #f38e8ea8;
+                           vertical-align: top;
+                           text-align: center;
+
+                           h5 {
+                              //border: 1px solid purple;
+                              font-size: 1.6rem;
+                              font-weight: bolder;
+                              color: black;
+                              margin: 50% auto 10%;
+                              background-color: #f3c452;
+                              width: 40%;
+                              padding: 10px;
+
                            }
 
-                           &:hover .img_content {
-                              width: 140px;
-                              padding-top: 140px;
-                           }
-
-
-
-                           .img_content {
-                              //border: 1px solid red;
-                              display: block;
-                              width: 130px;
-                              padding-top: 130px;
-                              border-radius: 50%;
-                              position: relative;
-                              top: 50%;
-                              left: 47%;
-                              transform: translate(-50%, -50%);
-                              overflow: hidden;
-                              transition: 1s;
+                           .bk_season_img {
+                              width: 30px;
+                              height: 30px;
+                              margin: 0 auto 10px;
 
                               img {
-                                 position: absolute;
-                                 top: 0;
                                  height: 100%;
+                              }
+                           }
+                        }
 
+                        .bk_season_pic {
+                           // border: 1px solid green;
+                           box-sizing: border-box;
+                           display: inline-block;
+                           text-align: center;
+                           width: 80%;
+                           height: 100%;
+                           padding: 5%;
+
+                           .bk_season_pic1 {
+                              border: 5px solid #f38e8ea8;
+                              box-sizing: border-box;
+                              display: inline-block;
+                              width: 150px;
+                              height: 150px;
+                              border-radius: 50%;
+                              overflow: hidden;
+                              position: relative;
+                              top: 40%;
+                              transform: translateY(-50%);
+                              margin: 10px;
+                              transition: 1s;
+
+                              &:hover img {
+                                 height: 120%;
+
+                              }
+
+                              &:hover span {
+                                 position: absolute;
+                                 top: 50%;
+                                 left: 50%;
+                                 transform: translate(-50%, -50%);
+                                 display: block;
+                                 font-size: 2rem;
+                                 background-color: #f3c452;
+                                 padding: 5px;
+
+
+                              }
+
+                              img {
+                                 height: 100%;
+                                 transition: 1s;
+                              }
+
+                              span {
+                                 display: none;
+                                 animation-delay: 2s;
                               }
 
                            }
@@ -992,326 +648,558 @@
 
                      }
 
-                     .fruit_intro {
-                        border: 1px solid red;
+
+                     .bk_ct {
+                        border: 1px solid blue;
                         box-sizing: border-box;
-                        display: block;
-                        width: 100%;
-                        height: 55%;
+                        position: relative;
+                        top: 0;
+                        display: inline-block;
+                        width: 50%;
+                        height: 100%;
+                        vertical-align: top;
+                     }
 
+                     //spring spring spring
+                     .bk_ct_left {
+                        //display: none; /////這裏
+                        font-size: 0;
 
-
-                        p {
-                           border: 1px solid blue;
-                           font-size: 1.4rem;
-                           padding: 12px;
-                           margin-left: 10px;
-                           white-space: pre-wrap;
-                           line-height: 1.8;
-                           vertical-align: top;
-                           // 欄寬
-                           //column-width: 15rem;
-                           column-count: 2;
-                           overflow-x: scroll;
-                           white-space: break-all;
-
+                        .fruit_start {
+                           //border: 1px solid red;
                            box-sizing: border-box;
                            display: inline-block;
-                           width: 95%;
-                           height: 95%;
+                           width: 100%;
+                           height: 45%;
 
 
-                        }
+                           @keyframes rotation {
+                              0% {
+                                 transform: rotate(0deg);
+                              }
 
-                     }
-                  }
-
-                  .bk_ct_right {
-                     font-size: 0;
-                     //display: none; /////這裏
-
-                     &::before {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        width: 150%;
-                        height: 100%;
-                        z-index: -1;
-                        -webkit-clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
-                        clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
-                        background-color: rgba(255, 208, 191, 1);
-                     }
-
-                     h2 {
-                        //border: 1px solid red;
-                        font-size: 1.6rem;
-                        font-weight: bold;
-                        color: $min-color;
-                        margin: 20px 0 10px 15px;
-                     }
+                              100% {
+                                 transform: rotate(360deg);
+                              }
+                           }
 
 
-                     //水果產季週期
-                     .fruit_time {
-                        // border: 1px solid red;
-                        background-color: #ba3f2b;
-                        box-sizing: border-box;
-                        display: block;
-                        width: 100%;
-                        height: 10%;
+                           h1 {
+                              display: inline-block;
+                              //border: 1px solid red;
+                              writing-mode: vertical-lr;
+                              letter-spacing: 0.6rem;
+                              font-size: 5rem;
+                              font-weight: bolder;
+                              color: #f38e8e;
+                              position: relative;
+                              left: 5%;
+                              top: 45%;
+                              z-index: 2;
 
-                        ul {
-                           display: flex;
+                              &::before {
+                                 content: "";
+                                 position: absolute;
+                                 top: -30px;
+                                 left: -10px;
+                                 width: 50px;
+                                 height: 50px;
+                                 background-image: url("../assets/book_img/flower.svg");
+                                 background-repeat: no-repeat;
+                                 background-size: contain;
+                                 animation-name: rotation;
+                                 animation-duration: 2.5s;
+                                 animation-iteration-count: infinite;
 
-                           li {
-                              border: 1px solid white;
-                              color: white;
-                              background-color: #f38e8e;
-                              padding: 5px 0;
-                              width: 10%;
-                              height: 10px;
-                              font-size: 1.2rem;
-                              text-align: center;
+                              }
+
+                              &::after {
+                                 content: "";
+                                 position: absolute;
+                                 bottom: -30px;
+                                 left: 20px;
+                                 width: 30px;
+                                 height: 30px;
+                                 background-image: url("../assets/book_img/flower.svg");
+                                 background-repeat: no-repeat;
+                                 background-size: contain;
+                                 animation-name: rotation;
+                                 animation-duration: 2s;
+                                 animation-iteration-count: infinite;
+                                 animation-direction: alternate-reverse;
+                                 animation-delay: 1s;
+                              }
+                           }
+
+
+                           .fruit_start_img {
+                              //border: 1px solid red;
+                              display: inline-block;
+                              width: 180px;
+                              height: 170px;
+                              vertical-align: top;
+                              background-image: url("../assets/book_img/fruit_start01.svg");
+                              background-repeat: no-repeat;
+                              background-size: contain;
+                              position: relative;
+                              left: 40%;
+                              top: 55%;
+                              transform: translate(-50%, -50%);
+                              transition: .5s;
+
+
+
+                              &:hover {
+                                 width: 170px;
+                                 height: 160px;
+                              }
+
+
+                              &:hover .img_content {
+                                 width: 140px;
+                                 padding-top: 140px;
+                              }
+
+
+
+
+
+                              .img_content {
+                                 // border: 1px solid red;
+                                 display: block;
+                                 width: 130px;
+                                 padding-top: 130px;
+                                 border-radius: 50%;
+                                 position: relative;
+                                 top: 50%;
+                                 left: 47%;
+                                 transform: translate(-50%, -50%);
+                                 overflow: hidden;
+                                 transition: 1s;
+
+                                 img {
+                                    position: absolute;
+                                    top: 0;
+                                    height: 100%;
+
+                                 }
+
+                              }
+
+                              @include rwd(medium) {
+                                 &:hover .img_content {
+                                    width: 110px;
+                                    padding-top: 110px;
+                                 }
+
+                                 .img_content {
+                                    width: 105px;
+                                    padding-top: 105px;
+                                 }
+                              }
+
+                           }
+
+                           @include rwd(medium) {
+                              .fruit_start_img {
+                                 width: 150px;
+                                 height: 140px;
+
+                                 &:hover {
+                                    width: 140px;
+                                    height: 130px;
+                                 }
+                              }
                            }
                         }
 
-                        .fruit_timeline {
-                           background-color: #f38e8e;
-                           border-radius: 10px;
-                           width: 100px;
-                           height: 10px;
-                           position: relative;
-                           top: 25%;
-                        }
+                        .fruit_intro {
+                           //border: 1px solid red;
+                           box-sizing: border-box;
+                           display: block;
+                           width: 100%;
+                           height: 55%;
 
-                     }
 
-                     //影片
-                     .fruit_video {
-                        margin-top: 20px;
 
-                        border: 1px solid green;
-                        box-sizing: border-box;
-                        text-align: center;
-
-                        >video {
-                           width: auto;
-                           height: 190px;
-                        }
-                      }
-                     }
-
-                     //農知識
-                     .fruit_Q {
-                        //border: 1px solid green;
-                        width: 100%;
-
-                        h2 {
-                           //border: 1px solid purple;
-                           font-size: 1.6rem;
-                           font-weight: bolder;
-                           display: inline-block;
-                           margin: 20px 10px 0px 15px;
-
-                        }
-
-                        .fruit_A {
-                           padding: 10px 15px;
-
-                           //border: 1px solid purple;
                            p {
                               border: 1px solid blue;
                               font-size: 1.4rem;
+                              padding: 15px;
                               white-space: pre-wrap;
                               line-height: 1.8;
-                              vertical-align: top;
                               // 欄寬
+                              //column-width: 15rem;
+                              column-count: 2;
+                              overflow-x: auto;
+                              white-space: break-all;
 
                               box-sizing: border-box;
                               display: inline-block;
-                              width: 50%;
-                              height: 40%;
+                              width: 100%;
+                              height: 100%;
+                           }
+                        }
 
-                    //部落格
-                    .bk_ct_left_2 {
-                      display: none;
-                      // border: 1px solid blue;
-                      box-sizing: border-box;
-                      width: 50%;
-
-                      &::after {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-
-                           .fruit_img {
-                              //border: 1px solid green;
-                              display: inline-block;
-                              width: 30%;
-                              height: auto;
-                              margin: 1% 8%;
-
-                              img {
-                                 position: relative;
-                                 width: 100%;
-                              }
+                        @include rwd (medium) {
+                           p {
+                              column-count: 1;
 
                            }
-
-                        h3 {
-                          //border: 1px solid red;
-                          font-size: 2rem;
-                          font-weight: bolder;
-                          padding-left: 15px;
-                          margin-bottom: 10px;
-                          position: relative;
-                          z-index: 1;
-
-                          &::before {
-                            content: "";
-                            width: 50%;
-                            height: 20px;
-                            background-color: #f38e8e6c;
-                            position: absolute;
-                            z-index: -1;
-                          }
                         }
-                     }
-                  }
 
-                  //部落格
-                  .bk_ct_left_2 {
-                     display: none;
-                     // border: 1px solid blue;
-                     box-sizing: border-box;
-                     width: 50%;
-
-                     &::after {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-
-                        width: 100%;
-                        height: 30px;
-                        z-index: -1;
-                        background-color: rgba(255, 208, 191, 1);
                      }
 
-                     //display: none;
-                     a {
-                        text-decoration: none;
+                     .bk_ct_right {
+                        font-size: 0;
+                        //display: none; /////這裏
 
-                        &:hover h2 {
-                           color: #5fbc55;
+                        &::before {
+                           content: "";
+                           position: absolute;
+                           top: 0;
+                           right: 0;
+                           width: 150%;
+                           height: 100%;
+                           z-index: -1;
+                           -webkit-clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
+                           clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
+                           background-color: rgba(255, 208, 191, 1);
                         }
-                      }
-                    }
 
-                    //市集
-                    .bk_ct_right_2 {
-                      display: none;
-                      //border: 1px solid blue;
-                      box-sizing: border-box;
-                      width: 50%;
-                      position: relative;
-
-                      &::before {
-                        content: "";
-                        position: absolute;
-                        left: 50%;
-                        top: 45%;
-                        transform: translate(-50%, -50%);
-                        width: 100px;
-                        height: 70px;
-                        background-image: url("../assets/book_img/bk_market_line.svg");
-                        background-repeat: no-repeat;
-                      }
-
-                      &::after {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
- 
                         h2 {
                            //border: 1px solid red;
                            font-size: 1.6rem;
                            font-weight: bold;
                            color: $min-color;
-                           margin: 20px 0 5px;
+                           margin: 20px 0 10px;
                            padding-left: 15px;
-
                         }
 
-                     }
 
-                     .bk_blog_line1 {
-                        width: 100%;
-                        box-sizing: border-box;
-                        border: 2px solid $min-color;
-                        margin-bottom: 3px;
-                     }
-
-                     .bk_blog_line2 {
-                        width: 100%;
-                        box-sizing: border-box;
-                        border: .5px solid $min-color;
-                     }
-
-                     //blog內容開始
-                     #bk_blog_knowledge {
-                        //border: 1px solid red;
-                        box-sizing: border-box;
-                        width: 100%;
-                        height: 42%;
-
-                        p {
-                           // border: 1px solid blue;
-                           font-size: 1.2rem;
-                           padding-left: 30px;
-                           margin-top: 10px;
-                           color: gray;
-                        }
-
-                        h3 {
+                        //水果產季週期
+                        .fruit_time {
                            //border: 1px solid red;
-                           font-size: 2rem;
-                           font-weight: bolder;
-                           padding-left: 15px;
-                           margin-bottom: 10px;
-                           position: relative;
-                           z-index: 1;
+                           background-color: #ba3f2b;
+                           box-sizing: border-box;
+                           display: block;
+                           width: 100%;
+                           height: 10%;
 
-                           &::before {
-                              content: "";
-                              width: 50%;
-                              height: 20px;
-                              background-color: #f38e8e6c;
-                              position: absolute;
-                              z-index: -1;
+                           ul {
+                              display: flex;
+                              flex-wrap: nowrap;
+
+                              li {
+                                 border: 1px solid white;
+                                 color: white;
+                                 background-color: #f38e8e;
+                                 padding: 5px 0;
+                                 width: 10%;
+                                 height: 10px;
+                                 font-size: 1.2rem;
+                                 text-align: center;
+                              }
+                           }
+
+                           .fruit_timeline {
+                              background-color: #f38e8e;
+                              border-radius: 10px;
+                              width: 100px;
+                              height: 10px;
+                              position: relative;
+                              top: 25%;
+                           }
+
+                        }
+
+                        //影片
+                        .fruit_video {
+                           margin-top: 20px;
+                           border: 1px solid green;
+                           box-sizing: border-box;
+                           text-align: center;
+
+                           >video {
+                              width: auto;
+                              height: 150px;
+                           }
+
+                        }
+
+                        //農知識
+                        .fruit_Q {
+                           border: 1px solid green;
+                           width: 100%;
+
+                           .fruit_question {
+                              //border: 1px solid red;
+                              box-sizing: border-box;
+                              padding: 0;
+
+                              h2 {
+                                 //border: 1px solid purple;
+                                 font-weight: bolder;
+                                 display: inline-block;
+                                 margin-top: 20px;
+
+                              }
+
+                              @include rwd (medium) {
+                                 h2 {
+                                    display: block;
+                                    margin: 5px;
+                                 }
+                              }
+                           }
+
+                           @include rwd (medium) {
+                              .fruit_question {
+                                 padding-top: 10px;
+                              }
+                           }
+
+
+                           .fruit_A {
+                              border: 1px solid red;
+                              width: 100%;
+
+                              p {
+                                 border: 1px solid blue;
+                                 font-size: 1.4rem;
+                                 white-space: pre-wrap;
+                                 line-height: 1.8;
+                                 vertical-align: top;
+                                 padding-left: 15px;
+                                 // 欄寬
+
+                                 box-sizing: border-box;
+                                 display: inline-block;
+                                 width: 50%;
+                                 height: 40%;
+
+                              }
+
+                              @include rwd(medium) {
+                                 p {
+                                    overflow-y: auto;
+                                 }
+                              }
+
+                              .fruit_img {
+                                 border: 1px solid green;
+                                 display: inline-block;
+                                 width: 180px;
+                                 height: auto;
+                                 position: relative;
+                                 margin: 5px;
+
+
+                                 img {
+
+                                    width: 100%;
+                                 }
+
+                              }
+
+                              @include rwd (medium) {
+                                 width: 150px;
+                              }
+
 
                            }
+
+                        }
+                     }
+
+                     //部落格
+                     .bk_ct_left_2 {
+                        display: none;
+                        // border: 1px solid blue;
+                        box-sizing: border-box;
+                        width: 50%;
+
+                        &::after {
+                           content: "";
+                           position: absolute;
+                           left: 0;
+                           bottom: 0;
+
+                           width: 100%;
+                           height: 30px;
+                           z-index: -1;
+                           background-color: rgba(255, 208, 191, 1);
                         }
 
-                        //reporter
-                        .bk_blog_reporter {
+                        //display: none;
+                        a {
+                           text-decoration: none;
+
+                           &:hover h2 {
+                              color: #5fbc55;
+                           }
+
+                           h2 {
+                              //border: 1px solid red;
+                              font-size: 1.6rem;
+                              font-weight: bold;
+                              color: $min-color;
+                              margin: 20px 0 5px;
+                              padding-left: 15px;
+
+                           }
+
+                        }
+
+                        .bk_blog_line1 {
+                           width: 100%;
+                           box-sizing: border-box;
+                           border: 2px solid $min-color;
+                           margin-bottom: 3px;
+                        }
+
+                        .bk_blog_line2 {
+                           width: 100%;
+                           box-sizing: border-box;
+                           border: .5px solid $min-color;
+                        }
+
+                        //blog內容開始
+                        #bk_blog_knowledge {
                            //border: 1px solid red;
                            box-sizing: border-box;
-                           display: inline-block;
-                           vertical-align: top;
-                           margin: 0 15px;
-                           width: 40%;
+                           width: 100%;
+                           height: 42%;
 
-                           .bk_blog_rpt_img {
-                              // border: 1px solid red;
+                           p {
+                              // border: 1px solid blue;
+                              font-size: 1.2rem;
+                              padding-left: 30px;
+                              margin-top: 10px;
+                              color: gray;
+                           }
+
+                           h3 {
+                              //border: 1px solid red;
+                              font-size: 2rem;
+                              font-weight: bolder;
+                              padding-left: 15px;
+                              margin-bottom: 10px;
+                              position: relative;
+                              z-index: 1;
+
+                              &::before {
+                                 content: "";
+                                 width: 50%;
+                                 height: 20px;
+                                 background-color: #f38e8e6c;
+                                 position: absolute;
+                                 z-index: -1;
+
+                              }
+                           }
+
+                           //reporter
+                           .bk_blog_reporter {
+                              //border: 1px solid red;
                               box-sizing: border-box;
                               display: inline-block;
-                              width: 40px;
-                              height: 40px;
-                              border-radius: 50%;
+                              vertical-align: top;
+                              margin: 0 15px;
+                              width: 40%;
+
+                              .bk_blog_rpt_img {
+                                 // border: 1px solid red;
+                                 box-sizing: border-box;
+                                 display: inline-block;
+                                 width: 40px;
+                                 height: 40px;
+                                 border-radius: 50%;
+                                 overflow: hidden;
+
+                                 img {
+                                    width: 100%;
+                                 }
+                              }
+
+                              .bk_blog_rpt_name {
+
+                                 //border: 1px solid red;
+                                 display: inline-block;
+                                 vertical-align: top;
+
+                                 margin-left: 10px;
+
+                                 a {
+                                    //border: 1px solid red;
+                                    color: black;
+                                    padding: 0;
+
+                                    font-size: 1.4rem;
+                                    text-decoration: none;
+
+                                    &:hover {
+                                       text-decoration: underline;
+
+                                    }
+                                 }
+
+                                 .bk_blog_star {
+                                    margin-top: 5px;
+                                    height: 15px;
+                                    overflow: hidden;
+
+                                    img {
+                                       height: 100%;
+                                    }
+                                 }
+
+
+                              }
+
+                              .bk_blog_rpt_button {
+                                 //border: 1px solid red;
+                                 display: inline-block;
+                                 vertical-align: top;
+
+                                 button {
+                                    // border: 1px solid red;
+                                    margin-left: 10px;
+                                    display: inline-block;
+                                    border-radius: 10px;
+                                    color: white;
+                                    background-color: $min-color;
+                                 }
+                              }
+
+                           }
+
+                           //標籤
+                           .bk_blog_tag {
+                              //border: 1px solid blue;
+                              display: block;
+                              width: 100%;
+                              margin-top: 20%;
+
+                              .bk_blog_tag1 {
+                                 width: 20px;
+                                 height: 20px;
+                                 color: #a0a0a0;
+                                 margin-bottom: 10px;
+
+                                 img {
+                                    width: 100%;
+                                 }
+                              }
+
+                           }
+
+                           .bk_blog_img {
+                              //border: 1px solid purple;
+                              box-sizing: border-box;
+                              display: inline-block;
+                              height: 60%;
+                              width: 50%;
                               overflow: hidden;
 
                               img {
@@ -1319,390 +1207,260 @@
                               }
                            }
 
-                           .bk_blog_rpt_name {
-
-                              //border: 1px solid red;
-                              display: inline-block;
-                              vertical-align: top;
-
-                              margin-left: 10px;
-
-                              a {
-                                 //border: 1px solid red;
-                                 color: black;
-                                 padding: 0;
-
-                                 font-size: 1.4rem;
-                                 text-decoration: none;
-
-                                 &:hover {
-                                    text-decoration: underline;
-
-                                 }
-                              }
-
-                              .bk_blog_star {
-                                 margin-top: 5px;
-                                 height: 15px;
-                                 overflow: hidden;
-
-                                 img {
-                                    height: 100%;
-                                 }
-                              }
-
-                        h2 {
-                          //border: 1px solid purple;
-                          font-size: 1.6rem;
-                          font-weight: bolder;
-                          display: inline-block;
-                          margin: 20px 10px 0px 15px;
-                        }
-
-                           .bk_blog_rpt_button {
-                              //border: 1px solid red;
-                              display: inline-block;
-                              vertical-align: top;
-
-                              button {
-                                 // border: 1px solid red;
-                                 margin-left: 10px;
-                                 display: inline-block;
-                                 border-radius: 10px;
-                                 color: white;
-                                 background-color: $min-color;
-                              }
-                           }
-
-                        }
-
-                        //標籤
-                        .bk_blog_tag {
-                           //border: 1px solid blue;
-                           display: block;
-                           width: 100%;
-                           margin-top: 20%;
-
-                           .bk_blog_tag1 {
-                              width: 20px;
-                              height: 20px;
-                              color: #a0a0a0;
-                              margin-bottom: 10px;
-                      //display: none;
-                      a {
-                        text-decoration: none;
-
-
-                        }
-
-                        .bk_blog_img {
-                           //border: 1px solid purple;
-                           box-sizing: border-box;
-                           display: inline-block;
-                           height: 60%;
-                           width: 50%;
-                           overflow: hidden;
-
-                           img {
-                              width: 100%;
+                           .bk_blog_line3 {
+                              width: 90%;
+                              margin: 20px auto 0;
                            }
                         }
-                      }
 
-                        .bk_blog_line3 {
-                           width: 90%;
-                           margin: 20px auto 0;
-                        }
-                     }
-
-                     //部落格文章
-                     #bk_blog_content {
-                        //border: 1px solid red;
-                        box-sizing: border-box;
-                        width: 100%;
-                        height: 40%;
-
-                        p {
-                           //border: 1px solid blue;
-                           font-size: 1.4rem;
-                           // padding: 0px;
-                           margin-left: 15px;
-                           white-space: pre-wrap;
-                           line-height: 1.8;
-                           vertical-align: top;
-
-                           //欄位數
-                           column-count: 2;
-
-                           box-sizing: border-box;
-                           display: inline-block;
-                           width: 95%;
-                           height: 100%;
-                        }
-
-                     }
-
-                  }
-
-                  //市集
-                  .bk_ct_right_2 {
-                     display: none;
-                     //border: 1px solid blue;
-                     box-sizing: border-box;
-                     width: 50%;
-                     position: relative;
-
-                     &::before {
-                        content: "";
-                        position: absolute;
-                        left: 50%;
-                        top: 45%;
-                        transform: translate(-50%, -50%);
-                        width: 100px;
-                        height: 70px;
-                        background-image: url("../assets/book_img/bk_market_line.svg");
-                        background-repeat: no-repeat;
-                     }
-
-                     &::after {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-
-                        width: 100%;
-                        height: 30px;
-                        z-index: -1;
-                        background-color: rgba(255, 208, 191, 1);
-                     }
-
-                     a {
-                        text-decoration: none;
-
-                        &:hover h2 {
-                           color: #5fbc55;
-                        }
-
-                        h2 {
+                        //部落格文章
+                        #bk_blog_content {
                            //border: 1px solid red;
-                           font-size: 1.6rem;
-                           font-weight: bold;
-                           color: $min-color;
-                           margin: 20px 0 5px;
-                           padding-left: 15px;
+                           box-sizing: border-box;
+                           width: 100%;
+                           height: 40%;
+
+                           p {
+                              //border: 1px solid blue;
+                              font-size: 1.4rem;
+                              // padding: 0px;
+                              margin-left: 15px;
+                              white-space: pre-wrap;
+                              line-height: 1.8;
+                              vertical-align: top;
+
+                              //欄位數
+                              column-count: 2;
+
+                              box-sizing: border-box;
+                              display: inline-block;
+                              width: 95%;
+                              height: 100%;
+                           }
+
+                           //blog內容開始
+                           #bk_blog_knowledge {
+                              //border: 1px solid red;
+                              box-sizing: border-box;
+                              width: 100%;
+                              height: 42%;
+
+                              p {
+                                 // border: 1px solid blue;
+                                 font-size: 1.2rem;
+                                 padding-left: 30px;
+                                 margin-top: 10px;
+                                 color: gray;
+                              }
+
+
+                           }
+
+
                         }
 
                      }
 
-                     .bk_product {
-                        // border: 1px solid red;
+                     //市集
+                     .bk_ct_right_2 {
+                        display: none;
+                        //border: 1px solid blue;
                         box-sizing: border-box;
-                        width: 100%;
-                        height: 35%;
-                        text-align: center;
-                        margin-top: 30px;
+                        width: 50%;
+                        position: relative;
 
-                        .bk_product_img {
+                        &::before {
+                           content: "";
+                           position: absolute;
+                           left: 50%;
+                           top: 45%;
+                           transform: translate(-50%, -50%);
+                           width: 100px;
+                           height: 70px;
+                           background-image: url("../assets/book_img/bk_market_line.svg");
+                           background-repeat: no-repeat;
+                        }
+
+                        &::after {
+                           content: "";
+                           position: absolute;
+                           left: 0;
+                           bottom: 0;
+
+                           width: 100%;
+                           height: 30px;
+                           z-index: -1;
+                           background-color: rgba(255, 208, 191, 1);
+                        }
+
+                        a {
+                           text-decoration: none;
+
+                           &:hover h2 {
+                              color: #5fbc55;
+                           }
+
+                           h2 {
+                              //border: 1px solid red;
+                              font-size: 1.6rem;
+                              font-weight: bold;
+                              color: $min-color;
+                              margin: 20px 0 5px;
+                              padding-left: 15px;
+                           }
+
+                        }
+
+                        .bk_product {
                            // border: 1px solid red;
                            box-sizing: border-box;
-                           display: inline-block;
-                           width: 150px;
-                           height: 150px;
+                           width: 100%;
+                           height: 35%;
+                           text-align: center;
+                           margin-top: 30px;
 
-                           img {
-                              width: 100%;
-                           }
-
-                        }
-
-                        .bk_pd1 {
-                           position: relative;
-                           left: -15%;
-                           top: 10%;
-
-                           &::before {
-                              content: "";
+                           .bk_product_img {
+                              // border: 1px solid red;
+                              box-sizing: border-box;
+                              display: inline-block;
                               width: 150px;
                               height: 150px;
-                              background-color: #f38e8e;
-                              position: absolute;
-                              left: -20%;
-                              top: -10%;
-                              z-index: -1;
+
+                              img {
+                                 width: 100%;
+                              }
 
                            }
 
-                        }
-
-                        .bk_pd_description {
-                           //border: 1px solid blue;
-                           box-sizing: border-box;
-                           display: inline-block;
-                           position: relative;
-                           top: 10%;
-                           left: -10%;
-
-                           h4 {
-                              font-size: 1.4rem;
-                              font-weight: bold;
-                              text-align: left;
-                           }
-
-                           p {
-                              font-size: 1.4rem;
-                              font-weight: bold;
-                              color: #f38e8e;
-                              margin-top: 10px;
-                              text-align: left;
-                           }
-
-                           button {
-                              width: 100px;
-                              height: 30px;
-                              background-color: $bg-color;
-                              border: 1px solid $min-color;
+                           .bk_pd1 {
                               position: relative;
+                              left: -15%;
+                              top: 10%;
 
-                              a {
-                                 text-decoration: none;
-                                 font-size: 1.2rem;
+                              &::before {
+                                 content: "";
+                                 width: 150px;
+                                 height: 150px;
+                                 background-color: #f38e8e;
+                                 position: absolute;
+                                 left: -20%;
+                                 top: -10%;
+                                 z-index: -1;
+
+                              }
+
+                           }
+
+                           .bk_pd_description {
+                              //border: 1px solid blue;
+                              box-sizing: border-box;
+                              display: inline-block;
+                              position: relative;
+                              top: 10%;
+                              left: -10%;
+
+                              h4 {
+                                 font-size: 1.4rem;
                                  font-weight: bold;
-                                 color: black;
+                                 text-align: left;
+                              }
+
+                              p {
+                                 font-size: 1.4rem;
+                                 font-weight: bold;
+                                 color: #f38e8e;
+                                 margin-top: 10px;
+                                 text-align: left;
+                              }
+
+                              button {
+                                 width: 100px;
+                                 height: 30px;
+                                 background-color: $bg-color;
+                                 border: 1px solid $min-color;
+                                 position: relative;
+
+                                 a {
+                                    text-decoration: none;
+                                    font-size: 1.2rem;
+                                    font-weight: bold;
+                                    color: black;
+                                 }
+
+                              }
+
+                           }
+
+                           .bk_pd2 {
+                              //border: 1px solid red;
+                              position: relative;
+                              right: -5%;
+
+
+                              &::after {
+                                 content: "";
+                                 width: 140px;
+                                 height: 150px;
+                                 background-color: #f38e8e;
+                                 position: absolute;
+                                 right: -30%;
+                                 bottom: -10%;
+                                 z-index: -1;
+                              }
+
+                           }
+
+                           .bk_pd_description2 {
+                              //border: 1px solid blue;
+                              box-sizing: border-box;
+                              display: inline-block;
+                              margin-left: 20%;
+
+                              h4 {
+                                 font-size: 1.4rem;
+                                 font-weight: bold;
+                                 text-align: left;
+                              }
+
+                              p {
+                                 font-size: 1.4rem;
+                                 font-weight: bold;
+                                 color: #f38e8e;
+                                 margin-top: 10px;
+                                 text-align: left;
+                              }
+
+                              button {
+                                 width: 100px;
+                                 height: 30px;
+                                 background-color: $bg-color;
+                                 border: 1px solid $min-color;
+                                 position: relative;
+
+                                 a {
+                                    text-decoration: none;
+                                    font-size: 1.2rem;
+                                    font-weight: bold;
+                                    color: black;
+                                 }
+
                               }
 
                            }
 
                         }
 
-                        .bk_pd2 {
-                           //border: 1px solid red;
-                           position: relative;
-                           right: -5%;
-
-
-                           &::after {
-                              content: "";
-                              width: 140px;
-                              height: 150px;
-                              background-color: #f38e8e;
-                              position: absolute;
-                              right: -30%;
-                              bottom: -10%;
-                              z-index: -1;
-                           }
-
-                        }
-
-                        .bk_pd_description2 {
-                           //border: 1px solid blue;
-                           box-sizing: border-box;
-                           display: inline-block;
-                           margin-left: 20%;
-
-                           h4 {
-                              font-size: 1.4rem;
-                              font-weight: bold;
-                              text-align: left;
-                           }
-
-                           p {
-                              font-size: 1.4rem;
-                              font-weight: bold;
-                              color: #f38e8e;
-                              margin-top: 10px;
-                              text-align: left;
-                           }
-
-                           button {
-                              width: 100px;
-                              height: 30px;
-                              background-color: $bg-color;
-                              border: 1px solid $min-color;
-                              position: relative;
-
-                              a {
-                                 text-decoration: none;
-                                 font-size: 1.2rem;
-                                 font-weight: bold;
-                                 color: black;
-                              }
-
-                        .bk_pd_description {
-                          //border: 1px solid blue;
-                          box-sizing: border-box;
-                          display: inline-block;
-                          position: relative;
-                          top: 10%;
-                          left: -10%;
-
-                          h4 {
-                            font-size: 1.4rem;
-                            font-weight: bold;
-                            text-align: left;
-                          }
-
-                          p {
-                            font-size: 1.4rem;
-                            font-weight: bold;
-                            color: #959976;
-                            margin-top: 10px;
-                            text-align: left;
-                          }
-
-                          button {
-                            width: 100px;
-                            height: 30px;
-                            background-color: $bg-color;
-                            border: 1px solid $min-color;
-                            position: relative;
-
-                            a {
-                              text-decoration: none;
-                              font-size: 1.2rem;
-                              font-weight: bold;
-                              color: black;
-                            }
-                          }
-                        }
-
-                        .bk_pd2 {
-                          //border: 1px solid red;
-                          position: relative;
-                          right: -5%;
-
-                          &::after {
-                            content: "";
-                            width: 140px;
-                            height: 150px;
-                            background-color: #c5ce7c;
-                            position: absolute;
-                            right: -30%;
-                            bottom: -10%;
-                            z-index: -1;
-                          }
-                        }  
                      }
-
                   }
                }
             }
-
-            //市集
-            .bk_ct_right_2 {
-              border: 1px solid blue;
-              box-sizing: border-box;
-              width: 50%;
-            }
-          }
-        }
+         }
       }
    }
 
-
-#book_footer {
-
-   //background-color: red;
-   position: relative;
-   top: -110%;
-
+   #book_footer {
+      //background-color: red;
+      position: relative;
+      top: -110%;
+   }
 }

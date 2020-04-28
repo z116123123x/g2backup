@@ -3,8 +3,7 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: '/main',
     name: 'Home',
     component: () => import("@/views/Home.vue"),
@@ -33,8 +32,7 @@ const routes = [
     path: '/main/member',
     name: 'Member',
     component: () => import("@/views/Member.vue"),
-    children: [
-      {
+    children: [{
         // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
         path: "information",
         name: "Information",
@@ -59,8 +57,23 @@ const routes = [
         path: "shopping",
         name: "Shopping",
         component: () => import("@/views/MemberShopping.vue"),
-      }
+      },
+      {
+        path: "checkInfo",
+        name: "CheckInfo",
+        component: () => import("@/views/MemberCheckInfo.vue"),
+      },
+      {
+        path: "farmRegistered",
+        name: "FarmRegistered",
+        component: () => import("@/views/FarmRegistered.vue"),
+      },
     ]
+  },
+  {
+    path: "/farm",
+    name: "Farm",
+    component: () => import("@/views/FarmMember.vue"),
   },
   {
     path: "/admin",
@@ -71,8 +84,7 @@ const routes = [
     path: "/center",
     name: "Center",
     component: () => import("@/views/AdminCenter.vue"),
-    children: [
-      {
+    children: [{
         path: "manage",
         name: "Manage",
         component: () => import("@/views/AdminManage.vue"),
