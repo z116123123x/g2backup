@@ -2,7 +2,7 @@
     <div class="right">
         <div class="right_head">
             <div class="right_head_text">
-                <h2>個人資料修改</h2>
+                <h2>個人資料</h2>
             </div>
         </div>
         <div class="right_bottom">
