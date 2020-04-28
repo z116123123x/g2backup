@@ -538,6 +538,7 @@
   margin-left: 4%;
   display: grid;
   grid-template-columns: 1fr 0.3fr;
+  gap: 20px;
   padding-top: 2%;
   padding-bottom: 2%;
   padding-left: 3%;
@@ -572,6 +573,14 @@
     position: relative;
     left: 2px;
     top: 1%;
+    >img:nth-child(2),img:nth-child(3),img:nth-child(4),img:nth-child(5){
+      position: relative;
+      transition: 10s;
+      &:hover{
+        width: calc(100% + 20px );
+        right: 20px;
+      }
+    }
   }
 }
 .blog-post-section1 {
@@ -664,11 +673,11 @@
     }
   }
   > div:nth-child(1) {
-    width: calc(100% - 13px);
+    width: calc(100% - 12px);
   }
   > div:nth-child(2) {
-    margin-left: 3px;
-    width: calc(100% - 13px);
+    margin-left: 2px;
+    width: calc(100% - 12px);
   }
   > div:nth-child(3) {
     margin-left: 3px;
