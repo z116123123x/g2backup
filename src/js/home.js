@@ -1056,6 +1056,11 @@ window.addEventListener("load", () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
+    if (window.innerWidth <= 1199) {
+      camera.fov = 80;
+    } else {
+      camera.fov = 60;
+    }
   });
 
   // const home = document.getElementById("home");
@@ -1084,6 +1089,7 @@ window.addEventListener("load", () => {
     $("div.hamburger").on("click", function() {
       $(this).toggleClass("is-active");
       $("div.nav_back").slideToggle();
+      $("#nav").toggleClass("is-active");
     });
   });
   $(function() {

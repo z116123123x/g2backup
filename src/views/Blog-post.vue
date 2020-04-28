@@ -60,7 +60,7 @@
           </div>
         </div>
         <img
-          style="padding:20px 0px 20px 20px;width:88%;position:relative;right:20px;"
+          style="padding:20px 0px 20px 20px;width:100%;position:relative;right:20px;"
           src="@/assets/blog-img/blog-bendingbar2.png"
         />
         <p style="font-size:20px;">"水果日誌" 最新日誌</p>
@@ -451,9 +451,38 @@
             </div>
           </div>
         </div>
+        <ul class="page">
+          <li>
+            <img
+              style="width:95%;"
+              src="@/assets/blog-img/post/arrow-left.png"
+            />
+          </li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>
+            <img
+              style="width:95%;"
+              src="@/assets/blog-img/post/arrow-right.png"
+            />
+          </li>
+        </ul>
       </div>
       <div>
         <!-- tags&leaderblard-->
+        <img src="@/assets/blog-img/post/tags-header.png" alt="" />
+        <img src="@/assets/blog-img/post/experience.png" alt="" />
+        <img src="@/assets/blog-img/post/product.png" alt="" />
+        <img src="@/assets/blog-img/post/log.png" alt="" />
+        <img src="@/assets/blog-img/post/knowledge.png" alt="" />
+        <img src="@/assets/blog-img/post/tag-footer.png" alt="" />
       </div>
     </div>
   </div>
@@ -462,7 +491,7 @@
 <style lang="scss">
 .tri {
   //select
-  background: url("../assets/blog-img/post/triangle.png");
+  background: url('../assets/blog-img/post/triangle.png');
   background-repeat: no-repeat;
   background-position: 95% 60%;
   font-size: 15px;
@@ -508,7 +537,8 @@
   width: 90%;
   margin-left: 4%;
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
+  grid-template-columns: 1fr 0.3fr;
+  gap: 20px;
   padding-top: 2%;
   padding-bottom: 2%;
   padding-left: 3%;
@@ -539,6 +569,18 @@
   }
   > div:nth-child(2) {
     //tags&leaderboard
+    text-align: right;
+    position: relative;
+    left: 2px;
+    top: 1%;
+    >img:nth-child(2),img:nth-child(3),img:nth-child(4),img:nth-child(5){
+      position: relative;
+      transition: 10s;
+      &:hover{
+        width: calc(100% + 20px );
+        right: 20px;
+      }
+    }
   }
 }
 .blog-post-section1 {
@@ -553,7 +595,7 @@
     > div:nth-child(1) {
       position: relative;
       &::before {
-        content: "";
+        content: '';
         z-index: 2;
         position: absolute;
         top: 30px;
@@ -562,7 +604,7 @@
         width: 80%;
       }
       &::after {
-        content: "";
+        content: '';
         z-index: 2;
         position: absolute;
         bottom: 15%;
@@ -609,13 +651,13 @@
 }
 .blog-post-section2 {
   display: grid;
-  height: 420px;
+  // height: 550px;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 20px;
   > div {
     border: solid #007552 2px;
     display: grid;
-    grid-template-rows: 50% 35% 15%;
+    grid-template-rows: 1fr 0.5fr 0.3fr;
     > div:nth-child(2) {
       border-bottom: solid #a0a0a0 1px;
       padding: 5px;
@@ -631,15 +673,45 @@
     }
   }
   > div:nth-child(1) {
-    width: calc(100% - 13px);
+    width: calc(100% - 12px);
   }
   > div:nth-child(2) {
     margin-left: 2px;
-    width: calc(100% - 13px);
+    width: calc(100% - 12px);
   }
   > div:nth-child(3) {
-    margin-left: 4px;
-    width: calc(100% - 13px);
+    margin-left: 3px;
+    width: calc(100% - 7px);
+  }
+}
+.page {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding-top: 20px;
+  > li {
+    font-size: 15px;
+    padding: 10px;
+  }
+  > li:nth-child(2) {
+    border: solid #007552 2px;
+  }
+  > li:nth-child(1n + 2) {
+    // border: solid #007552 2px;
+    border-top: solid #007552 2px;
+    border-right: solid #007552 2px;
+    border-bottom: solid #007552 2px;
+  }
+  > li:nth-child(11) {
+    border: none;
+  }
+  > li:nth-child(2) {
+    background-color: #ffd3c1;
+    color: #007552;
+  }
+  > li:nth-child(1) {
+    text-align: right;
   }
 }
 </style>
