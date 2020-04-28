@@ -1,4 +1,3 @@
-/* eslint-disable vue/no-dupe-keys */
 <template>
   <div class="shopping">
     <div class="content">
@@ -40,8 +39,9 @@
             <div class="td subtotal">$ {{item.amount * item.price}}</div>
             <div class="td operating">商品詳細 刪除</div>
           </div>
+          <p class="total">總金額 {{total}} 元</p>
         </div>
-        <p>{{total}}</p>
+        <router-link to="/main/member/checkInfo" type="button" class="btn">進行結帳</router-link>
       </div>
     </div>
   </div>

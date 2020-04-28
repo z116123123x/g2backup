@@ -16,8 +16,6 @@
       transform-origin: top left;
       white-space: nowrap;
 
-
-
       // 左page
       #book_left {
          //border: 1px solid blue;
@@ -38,7 +36,6 @@
             top: 40%;
             transform: translate(-50%, -50%);
 
-
             .bk_left_img {
                width: 40vw;
                height: auto;
@@ -58,13 +55,11 @@
                   width: 13vw;
                   height: 0;
                   padding-bottom: 100%;
-
                }
 
                img {
                   width: 100%;
                   //  border: 1px solid purple;
-
                }
             }
 
@@ -77,12 +72,10 @@
                left: 28%;
                top: 4%;
 
-
                img {
                   width: 100%;
                   height: auto;
                   //  border: 1px solid purple;
-
                }
             }
          }
@@ -96,7 +89,7 @@
          height: 100vh;
          display: inline-block;
          position: relative;
-         background-color: #438b6d;
+         background-color: rgba(14, 116, 83, 0.7);
          vertical-align: top;
       }
 
@@ -162,6 +155,7 @@
                      transition: 0.5s;
 
                      &:hover {
+
                         top: 0;
                      }
                   }
@@ -171,8 +165,6 @@
                      display: inline-flex;
                      position: absolute;
                      right: 3%;
-
-
 
                      li {
                         //border: 1px solid green;
@@ -211,7 +203,6 @@
                            transform: translate(0, 0px);
                         }
 
-
                         &.tag1 {
                            transform: translate(0, 0px);
                         }
@@ -231,7 +222,6 @@
                   //       right: 0%;
                   //    }
                   // }
-
                }
 
                .Book {
@@ -299,7 +289,6 @@
                               width: 30px;
                               height: 40px;
                               transform: translateX(50%);
-
                            }
                         }
 
@@ -315,9 +304,8 @@
                            z-index: 33;
 
                         }
-
                      }
-
+                  }
                   }
 
 
@@ -437,7 +425,6 @@
                                  }
                               }
                            }
-
                            &:nth-child(3) {
                               background-color: #e19b6b8a;
                               position: relative;
@@ -496,7 +483,6 @@
                                     background-image: url("../assets/book_img/bk_ct_leafs_years.svg");
 
                                  }
-
                               }
                            }
 
@@ -520,7 +506,6 @@
                               img {
                                  height: 100%;
                               }
-
                            }
 
                            ul {
@@ -541,7 +526,6 @@
                                     background-color: #f3c452;
 
                                  }
-
                               }
                            }
                         }
@@ -556,6 +540,7 @@
 
                         //個別季節目錄
                         .bk_season_index {
+
                            border: 1px solid blue;
                            box-sizing: border-box;
                            width: 100%;
@@ -572,7 +557,6 @@
                               height: 5%;
                               background-color: rgba(255, 208, 191, 1);
                            }
-
 
                            .bk_season {
                               //border: 1px solid blue;
@@ -629,7 +613,6 @@
                                  transform: translateY(-50%);
                                  margin: 10px;
                                  transition: 1s;
-
 
                                  &:hover img {
                                     height: 120%;
@@ -827,7 +810,6 @@
                                     }
                                  }
                               }
-
                            }
 
                            .fruit_intro {
@@ -855,8 +837,8 @@
                                  display: inline-block;
                                  width: 100%;
                                  height: 100%;
-
                               }
+                           }
 
                               @include rwd (medium) {
                                  p {
@@ -1252,9 +1234,20 @@
                                  height: 100%;
                               }
 
-                           }
+                              //blog內容開始
+                              #bk_blog_knowledge {
+                                 //border: 1px solid red;
+                                 box-sizing: border-box;
+                                 width: 100%;
+                                 height: 42%;
 
-                        }
+                                 p {
+                                    // border: 1px solid blue;
+                                    font-size: 1.2rem;
+                                    padding-left: 30px;
+                                    margin-top: 10px;
+                                    color: gray;
+                                 }
 
                         //市集
                         .bk_ct_right_2 {
@@ -1456,17 +1449,12 @@
 
 
          }
-
       }
-
    }
-
 }
-
 
 #book_footer {
    //background-color: red;
    position: relative;
    top: -110%;
-
 }

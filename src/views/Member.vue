@@ -22,10 +22,16 @@
             </div>
             <div class="farm_button">
                 <div class="farm">
-                    <p>切換為果農</p>
+                    <router-link to="/main/member/farmRegistered"><p>成為果農</p></router-link>
+                </div>
+            </div>
+            <div class="farm_button">
+                <div class="farm">
+                    <router-link to="/farm"><p>切換果農</p></router-link>
                 </div>
             </div>
         </aside>
         <router-view />
+        
     </div>
 </template>

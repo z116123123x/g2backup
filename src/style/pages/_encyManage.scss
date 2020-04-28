@@ -29,43 +29,83 @@ $contentSize:12px;
         height: 100%;
         box-sizing: border-box;
 
-
         .manageTitle {
             color: $maintitleColor;
             font-size: $maintitleSize;
-            margin: 10px;
+            margin: 50px;
             
         }
 
-        .msSideBar {
-            // margin: auto;
-            color: $title1Color;
-            display: flex;
-            background: $sidebarBgColor;
-            width: 220px;
-            height: 100%;
-            box-sizing: border-box;
-            align-items: center;
-            justify-content: center;
-            font-size: $title1Size;
-            line-height: 3rem;
-        }
+        .addEncy {
+            background: $btnBgcolor;
+            color: $btnColor;
+            border-radius: 10px;
+            width: 80px;
+            height: 30px;
+            margin-left: 50px;
+          }
 
-        .msMainContent {
-            margin: 0 auto; 
+        .EncyMainContent {
+            margin: 0 auto;
             color: $contentColor;
             display: flex;
-            flex-flow: row wrap;
             font-size: $contentSize;
-            width: 70%;
-            height: 60%;
+            max-width: 60%;
+            height: 65%;
             box-sizing: border-box;
             justify-content: center;
-            left: 280px;
-            top: 200px;
+            margin-left: 280px;
+            margin-top: 190px;
             
             border: 1px solid #000;
         }
+
+        .EncytableSection {
+
+            .enct-header {
+              display: flex;
+              background: $maintitleColor;
+            }
+      
+            .enct-content {
+                display: flex;
+              background-color: #fff;
+              height: 80%;
+              overflow-x: auto;
+              margin-top: 0px;
+            }
+      
+            .EncymanageTab {
+                
+              width: 70%;
+              table-layout: fixed;
+              
+            }
+      
+            th {
+              padding: 20px 20px;
+              text-align: left;
+              color: $contentColor;
+              &:last-child {
+                padding-left: 10%; 
+              }
+            }
+      
+            td {
+              padding: 20px;
+              text-align: left;
+              vertical-align: middle;
+              color: $contentColor;
+              &:last-child {
+                padding-left: 10%; 
+              }
+
+              .editImg {
+                  width: 15px;
+              }
+          }
+          
+          }
     }
 }
 
