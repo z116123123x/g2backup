@@ -1,8 +1,10 @@
 <template>
-    <main>
+    <main >
+
         <section id="Page_horizen">
             <div id="outter">
                 <!-- 左page -->
+                <div id="tripper"></div>
                 <div id="book_left">
                     <div class="bk_left">
                         <div class="bk_left_img">
@@ -313,9 +315,6 @@
                 </div>
             </div>
         </section>
-        <!-- <section id="book_footer">
-            <Footer />
-        </section>-->
     </main>
 </template>
 <script>
