@@ -50,11 +50,11 @@ $contentSize:12px;
             display: flex;
             flex-flow: row wrap;
             font-size: $contentSize;
-            width: 60%;
+            // width: 80%;
             height: 65%;
             box-sizing: border-box;
             justify-content: center;
-            left: 280px;
+            margin-left: 50px;
             top: 120px;
             // border: 1px solid #000;
         }
