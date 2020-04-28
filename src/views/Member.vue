@@ -27,7 +27,7 @@
             </div>
             <div class="farm_button">
                 <div class="farm">
-                    <router-link to="/farm"><p>切換果農</p></router-link>
+                    <router-link to="/farm/info"><p>切換果農</p></router-link>
                 </div>
             </div>
         </aside>
