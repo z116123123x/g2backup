@@ -26,7 +26,8 @@ $btnColor: #fbf8ef;
   .msFrame {
     color: $contentColor;
     display: flex;
-    max-width: 80%;
+    // max-width: 80%;
+    max-width: 100%;
     height: 100%;
     box-sizing: border-box;
 
@@ -46,6 +47,7 @@ $btnColor: #fbf8ef;
     }
 
     .msSideBar {
+      // margin: auto;
       color: $title1Color;
       display: flex;
       background: $sidebarBgColor;
@@ -62,40 +64,63 @@ $btnColor: #fbf8ef;
       margin: 0 auto;
       color: $contentColor;
       display: flex;
+      // flex-flow: row wrap;
       font-size: $contentSize;
-      max-width: 60%;
+      // width: 80%;
+      max-width: 100%;
       height: 65%;
       box-sizing: border-box;
       justify-content: center;
-      left: 280px;
-      top: 190px;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 30px;
+      // border: 1px solid #000;
+
+      // margin: 0 auto;
+      // color: $contentColor;
+      // display: flex;
+      // font-size: $contentSize;
+      // max-width: 70%;
+      // // width: 100%;
+      // height: 65%;
+      // box-sizing: border-box;
+      // justify-content: center;
+      // left: 280px;
+      // top: 190px;
+      // // margin-left: 50px;
+      // // margin-top: 50px;
       // border: 1px solid #000;
 
       .tableSection {
+        // width: 520px;
+
         .amt-header {
           display: flex;
           background: $maintitleColor;
         }
 
         .amt-content {
+          display: flex;
           background-color: #fff;
           height: 80%;
           overflow-x: auto;
           margin-top: 0px;
         }
 
-        .AdminmanageTab {
-          width: 70%;
+        .adminManageTab {
+          // width: 70%;
           table-layout: fixed;
         }
 
         th {
+          width: 150px;
           padding: 20px 20px;
           text-align: left;
           color: $contentColor;
         }
 
         td {
+          width: 150px;
           padding: 20px;
           text-align: left;
           vertical-align: middle;
@@ -131,11 +156,11 @@ $btnColor: #fbf8ef;
             transition: 0.3s;
           }
 
-          .statusBtn:checked + .statusBtnLabel {
+          .statusBtn:checked+.statusBtnLabel {
             background: #62b45a;
           }
 
-          .statusBtn:checked + .statusBtnLabel:after {
+          .statusBtn:checked+.statusBtnLabel:after {
             left: calc(100% - 2px);
             transform: translateX(-100%);
           }
@@ -149,69 +174,6 @@ $btnColor: #fbf8ef;
   }
 }
 
-.addAdmin {
-  background: $btnBgcolor;
-  color: $btnColor;
-  border-radius: 10px;
-  width: 80px;
-  height: 30px;
-  margin-left: 50px;
-}
-
-.msSideBar {
-  // margin: auto;
-  color: $title1Color;
-  display: flex;
-  background: $sidebarBgColor;
-  width: 220px;
-  height: 100%;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  font-size: $title1Size;
-  line-height: 3rem;
-}
-
-.msMainContent {
-  margin: 0 auto;
-  color: $contentColor;
-  display: flex;
-  flex-flow: row wrap;
-  font-size: $contentSize;
-  max-width: 60%;
-  height: auto;
-  box-sizing: border-box;
-  justify-content: center;
-  left: 280px;
-  top: 200px;
-  border: 1px solid #000;
-
-  table {
-    width: 100%;
-    table-layout: fixed;
-  }
-  .tbl-header {
-    background: $maintitleColor;
-  }
-  .tbl-content {
-    background-color: #fff;
-    height: 300px;
-    overflow-x: auto;
-    margin-top: 0px;
-  }
-  th {
-    padding: 20px 15px;
-    text-align: left;
-    color: $contentColor;
-    text-transform: uppercase;
-  }
-  td {
-    padding: 15px;
-    text-align: left;
-    vertical-align: middle;
-    color: $contentColor;
-  }
-}
 
 // @media (max-width: 767px){
 // // header.header{

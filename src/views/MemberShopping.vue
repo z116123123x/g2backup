@@ -1,4 +1,3 @@
-/* eslint-disable vue/no-dupe-keys */
 <template>
   <div class="shopping">
     <div class="content">
@@ -20,7 +19,7 @@
           </div>
           <div class="tr" v-for="item in arr" :key="item.id">
             <div class="td check-box">
-              <input type="checkbox" name="choose" />
+              <input @change="checkbox(item)" type="checkbox" name="choose" />
             </div>
             <div class="td img">
               <img src="@/assets/shop/item_001.png" />
@@ -40,8 +39,9 @@
             <div class="td subtotal">$ {{item.amount * item.price}}</div>
             <div class="td operating">商品詳細 刪除</div>
           </div>
+          <p class="total">總金額 {{total}} 元</p>
         </div>
-        <p>{{total}}</p>
+        <router-link to="/main/member/checkInfo" type="button" class="btn">進行結帳</router-link>
       </div>
     </div>
   </div>
@@ -72,15 +72,16 @@ export default {
           price: 1000,
           amount: 1
         }
-      ]
+      ],
+      cart: []
     };
   },
   computed: {
     total: function() {
       let sum = 0;
 
-      for (let i = 0; i < this.arr.length; i++) {
-        sum += this.arr[i].amount * this.arr[i].price;
+      for (let i = 0; i < this.cart.length; i++) {
+        sum += this.cart[i].amount * this.cart[i].price;
       }
 
       return sum;
@@ -91,7 +92,19 @@ export default {
       item.amount++;
     },
     subAmount: function(item) {
-      item.amount--;
+      if (item.amount <= 1) {
+        item.amount = 1;
+      } else {
+        item.amount--;
+      }
+    },
+    checkbox: function(item) {
+      let index = this.cart.indexOf(item);
+      if (index < 0) {
+        this.cart.push(item);
+      } else {
+        this.cart.splice(index, 1);
+      }
     }
   }
 };

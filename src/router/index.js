@@ -65,7 +65,22 @@ const routes = [
         name: 'Shopping',
         component: () => import('@/views/MemberShopping.vue'),
       },
+      {
+        path: 'checkInfo',
+        name: 'CheckInfo',
+        component: () => import('@/views/MemberCheckInfo.vue'),
+      },
+      {
+        path: 'farmRegistered',
+        name: 'FarmRegistered',
+        component: () => import('@/views/FarmRegistered.vue'),
+      },
     ],
+  },
+  {
+    path: '/farm',
+    name: 'Farm',
+    component: () => import('@/views/FarmMember.vue'),
   },
   {
     path: '/admin',

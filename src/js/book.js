@@ -1,6 +1,7 @@
 import {
     TweenMax
 } from "gsap";
+// import ScrollMagic from ""
 
 
 window.addEventListener("load", () => {

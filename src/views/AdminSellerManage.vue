@@ -2,10 +2,10 @@
   <div>
     <h1 class="manageTitle">果農 管理中心</h1>
 
-    <main class="msMainContent">
-      <section>
-        <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
+    <main class="sellerMainContent">
+      <section class="aSellerTableSection">
+        <div class="ast-header">
+          <table class="sellerManageTab" cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
                 <th>編號</th>
@@ -16,21 +16,21 @@
             </thead>
           </table>
         </div>
-        <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
+        <div class="ast-content">
+          <table class="sellerManageTab" cellpadding="0" cellspacing="0" border="0">
             <tbody>
               <tr>
                 <td>xxxxx</td>
                 <td>我是帳號</td>
                 <td>我是信箱</td>
-                <td></td>
+                <td><input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label></td>
           
               </tr>
               <tr>
                  <td>xxxxx</td>
                 <td>我是帳號</td>
                 <td>我是信箱</td>
-                <td></td>
+                <td><input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label></td>
               </tr>
               <tr>
                 <td>xxxxx</td>
