@@ -31,6 +31,7 @@ import waterpear01 from "@/assets/waterpear.png";
 import waterpearline01 from "@/assets/waterpearline.png";
 import fruitbox01 from "@/assets/fruitbox.png";
 import fruitboxline01 from "@/assets/fruitboxline.png";
+import { Tween } from "gsap/gsap-core";
 
 window.addEventListener("load", () => {
   gsap.registerPlugin(MotionPathPlugin);
@@ -1015,7 +1016,7 @@ window.addEventListener("load", () => {
         requestId = requestAnimationFrame(update);
       }
 
-      if (window.pageYOffset > 1000 && window.pageYOffset < 2000) {
+      if (window.pageYOffset > 800 && window.pageYOffset < 1300) {
         $("div#mainText").fadeIn();
       } else {
         $("div#mainText").fadeOut();

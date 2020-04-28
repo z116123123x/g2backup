@@ -33,27 +33,56 @@
               <div class="knowledge_page_content">
                 <div class="knowledge_page_content_summer">
                   <div>
-                    <span></span>
+                    <div></div>
                   </div>
                 </div>
+                <span>
+                  <img src="../assets/tagspic.svg" alt="" />
+                  <span>知識類</span>
+                </span>
               </div>
             </div>
           </div>
           <div class="knowledge_page tab3">
             <div class="knowledge_page_back">
               <div class="knowledge_page_title">果農日誌</div>
-              <div class="knowledge_page_content"></div>
+              <div
+                class="knowledge_page_content knowledge_page_content_fall"
+              ></div>
             </div>
           </div>
           <div class="knowledge_page tab4">
             <div class="knowledge_page_back">
               <div class="knowledge_page_title">水果目錄</div>
-              <div class="knowledge_page_content"></div>
+              <div class="knowledge_page_content">
+                <div class="knowledge_page_content_winter">
+                  <h2>
+                    <span>春</span>
+                    <span style="float:right;">Page.1</span>
+                  </h2>
+                  <h2>
+                    <span>夏</span>
+                    <span style="float:right;">Page.12</span>
+                  </h2>
+                  <h2>
+                    <span>秋</span>
+                    <span style="float:right;">Page.23</span>
+                  </h2>
+                  <h2>
+                    <span>冬</span>
+                    <span style="float:right;">Page.34</span>
+                  </h2>
+                  <h2>
+                    <span>長年</span>
+                    <span style="float:right;">Page.45</span>
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <button class="home_title">
+        <button class="home_title" style="left:53%;">
           知識百科
         </button>
       </div>
