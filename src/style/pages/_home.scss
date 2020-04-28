@@ -7,109 +7,67 @@ canvas {
 
 #test {
   height: 33000px;
-}
+  main {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    #scroll_btn {
+      position: fixed;
+      right: 40px;
+      bottom: 40px;
+      background-color: #0e7453;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+    #mainLOGO {
+      width: 300px;
+      height: 200px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+    }
+    #mainText {
+      position: fixed;
+      width: 40%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      line-height: 3rem;
+      color: #666;
+      text-align: center;
+      display: none;
+      box-sizing: border-box;
 
-#scroll_btn {
-  position: fixed;
-  right: 40px;
-  bottom: 40px;
-  background-color: #0e7453;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
+      @include rwd(large) {
+        width: 80%;
+      }
+      @include rwd(medium) {
+        width: 100%;
+        padding: 0 10px;
+      }
+    }
+    #knowledge_container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      opacity: 0.9;
+      text-align: center;
+      padding-left: 60px;
 
-#memberStatus {
-  width: 45%;
-  height: 100%;
-  display: inline-block;
-  box-sizing: border-box;
-  padding-left: 15%;
-}
-
-#memberStatus > a:nth-child(1) {
-  width: 25%;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-#memberStatus > a:nth-child(1) {
-  height: 100%;
-  padding: 0;
-}
-
-#memberStatus > a:nth-child(1) > img {
-  height: 100%;
-  width: 30px;
-}
-
-#header > a:nth-child(3) {
-  width: 10%;
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-}
-
-#headCart {
-  width: 30px;
-  height: 100%;
-}
-
-.hamburger_set {
-  vertical-align: middle;
-}
-
-#hamburger_a {
-  display: inline-block;
-  width: 15%;
-  height: 100%;
-  text-align: center;
-}
-
-main {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 4;
-}
-
-#mainLOGO {
-  width: 300px;
-  height: 200px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: inline-block;
-}
-
-#mainText {
-  position: fixed;
-  width: 40%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  line-height: 3rem;
-  color: #666;
-  text-align: center;
-  display: none;
-}
-
-#knowledge_container {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  opacity: 0.9;
-  text-align: center;
-  padding-left: 60px;
+      @include rwd(large) {
+        left: 50%;
+      }
+    }
+  }
 }
 
 #knowledge_container > div:nth-child(2) {
@@ -135,6 +93,14 @@ main {
   // background-color: #fbf8ef;
   perspective: 100px;
   display: none;
+  @include rwd(large) {
+    width: 320px;
+    height: 400px;
+  }
+  @include rwd(medium) {
+  }
+  @include rwd(small) {
+  }
 }
 
 // .knowledge_page::before {
@@ -323,10 +289,14 @@ div.knowledge_page.-on {
   display: inline-block;
   display: none;
   position: fixed;
+  opacity: 0.9;
   top: 50%;
   left: 20%;
   transform: translate(-50%, -50%);
   text-align: center;
+  @include rwd(large) {
+    left: 50%;
+  }
 }
 
 #market_page {
@@ -459,12 +429,16 @@ button.plus_number {
 }
 
 #blog_container {
+  opacity: 0.9;
   display: none;
   position: fixed;
   top: 50%;
   left: 75%;
   transform: translate(-50%, -50%);
   text-align: center;
+  @include rwd(large) {
+    left: 50%;
+  }
 }
 
 #blog_page {
@@ -481,6 +455,10 @@ button.plus_number {
 
   margin: 0 auto;
   margin-top: 70px;
+  @include rwd(large) {
+    width: 320px;
+    margin-top: 40px;
+  }
 }
 
 .blog_tags_area > h2 {
@@ -509,6 +487,7 @@ button.plus_number {
 }
 
 #member_container {
+  opacity: 0.9;
   display: none;
   position: fixed;
   top: 50%;
@@ -524,10 +503,16 @@ button.plus_number {
   box-sizing: border-box;
   padding: 50px;
   margin-top: 50px;
+  @include rwd(large) {
+    padding: 20px;
+  }
 }
 
 #member_page > img {
   width: 500px;
   display: block;
   margin: 0 auto;
+  @include rwd(large) {
+    width: 320px;
+  }
 }
