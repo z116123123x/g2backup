@@ -19,7 +19,7 @@
           </div>
           <div class="tr" v-for="item in arr" :key="item.id">
             <div class="td check-box">
-              <input type="checkbox" name="choose" />
+              <input @change="checkbox(item)" type="checkbox" name="choose" />
             </div>
             <div class="td img">
               <img src="@/assets/shop/item_001.png" />
@@ -72,7 +72,8 @@ export default {
           price: 1000,
           amount: 1
         }
-      ]
+      ],
+      cart: []
     };
   },
   computed: {
@@ -91,8 +92,20 @@ export default {
       item.amount++;
     },
     subAmount: function(item) {
-      item.amount--;
-    }
+
+      if(item.amount <= 1){
+
+        item.amount = 1;
+
+      }else {
+
+        item.amount--;
+      }
+    },
+    checkbox: function(item){
+
+      this.cart.push(item);
+    } 
   }
 };
 </script>
