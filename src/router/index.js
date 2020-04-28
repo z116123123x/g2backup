@@ -77,10 +77,33 @@ const routes = [
       },
     ],
   },
+
   {
-    path: '/farm',
-    name: 'Farm',
-    component: () => import('@/views/FarmMember.vue'),
+    path: "/farm",
+    name: "Farm",
+    component: () => import("@/views/FarmMember.vue"),
+    children:[{
+      path:"info",
+      name:"Info",
+      component:() => import("@/views/FarmMemberInfo.vue"),
+
+    },
+    {
+      path: "update",
+      name: "Update",
+      component: () => import("@/views/FarmMemberupdate.vue"),
+    },
+    {
+      path: "order",
+      name: "Order",
+      component: () => import("@/views/FarmMemberOrder.vue"),
+    },
+    {
+      path: "Product",
+      name: "Product",
+      component: () => import("@/views/FarmMemberProductUpdate.vue"),
+    },
+  ]
   },
   {
     path: '/admin',

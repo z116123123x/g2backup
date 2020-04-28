@@ -1,0 +1,122 @@
+div.right {
+    display: inline-block;
+    color: #007552;
+    background-color: #FBF8EF;
+    width: 87.2%;
+    height: 100vh;
+    vertical-align: top;
+
+    .right_head {
+        color: #F7C845;
+        margin-top: 40px;
+        margin-left: 40px;
+        font-size: 30px;
+    }
+
+    .right_bottom {
+        display: block;
+        height: auto;
+        text-align: center;
+
+        >.top_card {
+            display: inline-block;
+            border: 3px solid #007552;
+            box-shadow: 5px 5px #007552;
+            background-color: white;
+            text-align: start;
+            width: 550px;
+            height: 300px;
+            margin: auto;
+            background-image: url(../assets/membercard3.png);
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: 600px;
+            overflow: hidden;
+
+            >.card {
+                display: block;
+                padding-top: 20px;
+                padding-right: 40px;
+                padding-left: 40px;
+
+                >.up {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-bottom: 20px;
+
+                    >.imgbox {
+                        display: inline-block;
+                        width: 100px;
+                        height: 100px;
+                        margin-right: 20px;
+
+                        >img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    >.uptext {
+                        display: inline-block;
+                        text-align: start;
+                        line-height: 2;
+                        vertical-align: top;
+
+                        >.underline {
+                            border-bottom: 1px solid #007552;
+                            width: 200px;
+                            height: 26px;
+                        }
+                    }
+
+                }
+
+                >.down {
+                    display: inline-block;
+
+                    >.downtext {
+                        >p {
+                            line-height: 2;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        >.bottom_form {
+            margin-top: 125px;
+            line-height: 3;
+
+            >.person_left {
+                display: inline-block;
+                padding: 50px 40px;
+                background-color: #F7C845;
+            }
+
+            >.person_right {
+                display: inline-block;
+                position: relative;
+                text-align: start;
+                background-color: white;
+                padding: 50px;
+                padding-left: 50px;
+                padding-right: 145px;
+
+                >label {
+                    margin-right: 10px;
+                }
+
+                >.submit_button {
+                    position: absolute;
+                    border-radius: 5px;
+                    background-color: #007552;
+                    color: white;
+                    padding: 0px 20px;
+                    right: 30px;
+                    bottom: 10px;
+                }
+            }
+        }
+    }
+}
