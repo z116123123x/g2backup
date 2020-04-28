@@ -2,10 +2,10 @@
   <div>
     <h1 class="manageTitle">果農日誌 管理中心 -- 日誌檢舉處理</h1>
 
-    <main class="msMainContent">
-      <section>
-        <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
+    <main class="blogReportMainContent">
+      <section class="blogReportTableSection">
+        <div class="br-header">
+          <table class="blogReportManageTab" cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
                 <th>檢舉編號</th>
@@ -18,35 +18,33 @@
             </thead>
           </table>
         </div>
-        <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
+        <div class="br-content">
+          <table class="blogReportManageTab" cellpadding="0" cellspacing="0" border="0">
             <tbody>
               <tr>
                 <td>xxxxx</td>
-                <td>xxxx</td>
-                <td>事由</td>
-                <td>某某某</td>
-                <td></td>
-                <td></td>
-          
-              </tr>
-              <tr>
-                 <td>xxxxx</td>
-                <td>xxxx</td>
-                <td>事由</td>
-                <td>某某某</td>
-                <td></td>
-                <td></td>
+                <td>xxxxx</td>
+                <td>色情內容</td>
+                <td>xxx</td>
+                <td>2020-04-28</td>
+                <td>已刪除</td>
               </tr>
               <tr>
                 <td>xxxxx</td>
-                <td>xxxx</td>
-                <td>事由</td>
-                <td>某某某</td>
-                <td></td>
-                <td></td>
+                <td>xxxxx</td>
+                <td>色情內容</td>
+                <td>xxx</td>
+                <td>2020-04-28</td>
+                <td>已刪除</td>
               </tr>
-              
+              <tr>
+                <td>xxxxx</td>
+                <td>xxxxx</td>
+                <td>色情內容</td>
+                <td>xxx</td>
+                <td>2020-04-28</td>
+                <td>已刪除</td>
+              </tr>
             </tbody>
           </table>
         </div>

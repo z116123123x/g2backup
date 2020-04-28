@@ -7,7 +7,7 @@
     <main class="AdminMainContent">
       <section class="tableSection">
         <div class="amt-header">
-          <table class="AdminmanageTab" cellpadding="0" cellspacing="0" border="0">
+          <table class="adminManageTab" cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
                 <th>編號</th>
@@ -19,7 +19,7 @@
         </div>
 
         <div class="amt-content">
-          <table class="AdminmanageTab" cellpadding="0" cellspacing="0" border="0">
+          <table class="adminManageTab" cellpadding="0" cellspacing="0" border="0">
             <tbody>
               <tr>
                 <td>xxxxx</td>
