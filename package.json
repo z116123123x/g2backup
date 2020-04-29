@@ -1,28 +1,28 @@
 {
-    "name": "dd106_g2",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint"
-    },
-    "dependencies": {
-        "gsap": "^3.2.6",
-        "jquery": "^3.5.0",
-        "three": "^0.115.0",
-        "three-js": "^79.0.0",
-        "vue": "^2.6.11",
-        "vue-router": "^3.1.6"
-    },
-    "devDependencies": {
-        "@vue/cli-plugin-eslint": "~4.3.0",
-        "@vue/cli-plugin-router": "~4.3.0",
-        "@vue/cli-service": "~4.3.0",
-        "eslint": "^6.7.2",
-        "eslint-plugin-vue": "^6.2.2",
-        "node-sass": "^4.12.0",
-        "sass-loader": "^8.0.2",
-        "vue-template-compiler": "^2.6.11"
-    }
+  "name": "dd106_g2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "gsap": "^3.2.6",
+    "jquery": "^3.5.0",
+    "three": "^0.115.0",
+    "three-js": "^79.0.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-plugin-router": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  }
 }

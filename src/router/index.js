@@ -1,92 +1,109 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
-const routes = [{
-    path: '/',
+const routes = [
+  {
+    path: '/main',
     name: 'Home',
-    component: Home,
+    component: () => import("@/views/Home.vue"),
   },
   {
-    path: '/book',
+    path: '/main/book',
     name: 'Book',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import( /* webpackChunkName: "about" */ '../views/Book.vue');
-    },
+    component: () => import("@/views/Book.vue"),
   },
   {
-    path: '/components',
-    name: 'Components',
-    component: function () {
-      return import('../views/Components.vue');
-    },
-  },
-  {
-    path: '/blog-landing',
+    path: '/main/blog-landing',
     name: 'Blog-landing',
-    component: function () {
-      return import('../views/Blog-landing.vue');
-    },
+    component: () => import("@/views/Blog-landing.vue"),
   },
   {
-    path: '/blog-post',
+    path: '/main/blog-post',
     name: 'Blog-post',
-    component: function () {
-      return import('../views/Blog-post.vue');
-    }
+    component: () => import("@/views/Blog-post.vue"),
   },
   {
-
-    path: '/shop',
+    path: '/main/shop',
     name: 'Shop',
-    component: function () {
-      return import('../views/Shop.vue');
-    }
-  }, 
+    component: () => import("@/views/Shop.vue"),
+  },
   {
-    path: '/member',
+    path: '/main/member',
     name: 'Member',
-    component: function () {
-      return import('../views/Member.vue');
-    },
-    children: [{
-
+    component: () => import("@/views/Member.vue"),
+    children: [
+      {
+        // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
         path: "information",
-        component: function () {
-
-          return import("@/views/Information.vue");
-        }
+        name: "Information",
+        component: () => import("@/views/MemberInfo.vue"),
       },
       {
-
+        path: "update",
+        name: "Update",
+        component: () => import("@/views/MemberUpdate.vue"),
+      },
+      {
         path: "order",
-        component: () => {
-
-          return import("@/views/Order.vue");
-        }
-
+        name: "Order",
+        component: () => import("@/views/MemberOrder.vue"),
+      },
+      {
+        path: "track",
+        name: "Track",
+        component: () => import("@/views/MemberTrack.vue"),
+      },
+      {
+        path: "shopping",
+        name: "Shopping",
+        component: () => import("@/views/MemberShopping.vue"),
       }
     ]
   },
   {
-    path: '/adminLogin',
-    name: 'AdminLogin',
-    component: function () {
-      return import('../views/AdminLogin.vue');
-    }
+    path: "/admin",
+    name: "AdminLogin",
+    component: () => import("@/views/AdminLogin.vue"),
   },
   {
-    path: '/adminLogin',
-    name: 'AdminLogin',
-    component: function () {
-      return import('../views/AdminLogin.vue');
-    }
-  },
+    path: "/center",
+    name: "Center",
+    component: () => import("@/views/AdminCenter.vue"),
+    children: [
+      {
+        path: "manage",
+        name: "Manage",
+        component: () => import("@/views/AdminManage.vue"),
+      },
+      {
+        path: "fan",
+        name: "Fan",
+        component: () => import("@/views/AdminFanManage.vue"),
+      },
+      {
+        path: "seller",
+        name: "Seller",
+        component: () => import("@/views/AdminSellerManage.vue"),
+      },
+      {
+        path: "ency",
+        name: "Ency",
+        component: () => import("@/views/AdminEncyManage.vue"),
+      },
+      {
+        path: "blog",
+        name: "Blog",
+        component: () => import("@/views/AdminBlog.vue"),
+      },
+      {
+        path: "comment",
+        name: "Comment",
+        component: () => import("@/views/AdminComment.vue"),
+      }
+    ]
+  }
 ];
 
 const router = new VueRouter({
