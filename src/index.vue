@@ -18,10 +18,10 @@
 export default {
   methods: {
     goIndexPage: () => {
-      window.location.href = "/main";
+      window.location.href = "./main";
     },
     goAdminPage: () => {
-      window.location.href = "/admin";
+      window.location.href = "./admin";
     },
   },
 };
