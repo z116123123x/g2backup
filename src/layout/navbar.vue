@@ -1,7 +1,7 @@
 <template>
   <nav id="nav">
     <router-link id="home" to="/main">
-      <img class="logo" src="@/assets/navbar_logo.svg" alt="logo" />
+      <img class="logo" src="@/assets/headerLOGO.svg" alt="logo" />
     </router-link>
     <div class="member_status">
       <span class="farmer_pic"></span>

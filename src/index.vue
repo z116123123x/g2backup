@@ -2,7 +2,7 @@
   <div id="app">
     <div id="index_front_container">
       <div class="front_LOGO">
-        <img src="@/assets/navbar_logo.svg" alt="" />
+        <img src="@/assets/headerLOGO.svg" alt="" />
       </div>
       <div class="front_button">
         <button @click="goIndexPage">前台</button>

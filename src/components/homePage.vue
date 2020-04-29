@@ -1,7 +1,7 @@
 <template>
   <div id="test" class="hello">
-    <main>
-      <button id="scroll_btn"></button>
+    <main id="home_main">
+      <button id="scroll_btn">&#9660;</button>
       <div id="mainLOGO">
         <img src="../assets/LOGO.svg" alt />
       </div>
@@ -81,15 +81,18 @@
             </div>
           </div>
         </div>
-
-        <button class="home_title" style="left:53%;">
-          知識百科
-        </button>
+        <router-link to="/main/book">
+          <button class="home_title" style="left:53%;">
+            知識百科
+          </button>
+        </router-link>
       </div>
       <div id="market_container">
-        <button class="home_title">
-          水果市集
-        </button>
+        <router-link to="/main/shop">
+          <button class="home_title">
+            水果市集
+          </button>
+        </router-link>
         <div id="market_page">
           <div class="market_pic">
             <img src="../assets/marketitem01.png" alt />
@@ -97,17 +100,10 @@
           <div class="market_intro">
             <h3>蜜焦乾 零添加</h3>
             <div class="market_tags">
-              <img src="../assets/tagspic.svg" alt />
+              <img src="@/assets/blog-img/blog-tag.png" alt />
               <a href>24小時宅配到府</a>
             </div>
-            <div class="number_price">
-              <input class="input_number" type="text" value="1" min="0" />
-              <span class="input_number_select">
-                <button class="plus_number">+</button>
-                <button class="minus_number">-</button>
-              </span>
-              <span>$ 250/包</span>
-            </div>
+
             <div class="pay_cart">
               <button>加入購物籃</button>
               <button>直接購買</button>
@@ -116,9 +112,11 @@
         </div>
       </div>
       <div id="blog_container">
-        <button class="home_title">
-          果農日誌
-        </button>
+        <router-link to="/main/blog-landing">
+          <button class="home_title">
+            果農日誌
+          </button>
+        </router-link>
         <div id="blog_page">
           <div class="blog_tags_area">
             <h2>Tags</h2>
@@ -142,14 +140,19 @@
         </div>
       </div>
       <div id="member_container">
-        <button class="home_title">
-          果農日誌
-        </button>
+        <router-link to="/main/member/information">
+          <button class="home_title">
+            會員中心
+          </button>
+        </router-link>
         <div id="member_page">
           <img src="../assets/memberpic.png" alt />
         </div>
       </div>
     </main>
+    <div class="home_footer">
+      <p>Copyright © 2012 Apple Inc. All rights reserved</p>
+    </div>
   </div>
 </template>
 <script>
