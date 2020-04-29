@@ -46,6 +46,7 @@ $btnColor: #fbf8ef;
       margin-left: 50px;
     }
 
+
     .msSideBar {
       // margin: auto;
       color: $title1Color;
@@ -58,6 +59,21 @@ $btnColor: #fbf8ef;
       justify-content: center;
       font-size: $title1Size;
       line-height: 3rem;
+
+      a {
+        text-decoration:none;
+        color: $title1Color;
+        &:hover {
+          color: $title2Color;
+          position: relative;
+          top: 1px;
+          left: 1px;
+        }
+      }
+
+
+
+
     }
 
     .AdminMainContent {
