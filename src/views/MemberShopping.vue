@@ -5,18 +5,6 @@
       <div class="form">
         <div class="form-content">
           <p class="title">購物籃明細：</p>
-          <!-- <div class="tr head-bar">
-            <div class="td check-box">
-              <input type="checkbox" name="choose" />
-            </div>
-            <div class="td img">圖片</div>
-            <div class="td name">名稱</div>
-            <div class="td seller">賣家</div>
-            <div class="td price">單價</div>
-            <div class="td amount">數量</div>
-            <div class="td subtotal">小計</div>
-            <div class="td operating">操作</div>
-          </div>-->
           <div v-for="data in arr" :key="data.seller">
             <p style="font-size:16px;line-height:2;">果農：{{data.seller}}</p>
             <div class="tr head-bar">
@@ -25,7 +13,6 @@
               </div>
               <div class="td img">圖片</div>
               <div class="td name">名稱</div>
-              <!-- <div class="td seller">賣家</div> -->
               <div class="td price">單價</div>
               <div class="td amount">數量</div>
               <div class="td subtotal">小計</div>
@@ -35,8 +22,8 @@
               <div class="td check-box">
                 <input
                   :value="data.seller + item.id"
-                  v-model="aa"
-                  @change="checkbox(aa, data, item)"
+                  v-model="status"
+                  @change="checkbox(data, item)"
                   type="checkbox"
                 />
               </div>
@@ -44,7 +31,6 @@
                 <img src="@/assets/shop/item_001.png" />
               </div>
               <div class="td name">{{item.name}}</div>
-              <!-- <div class="td seller">{{item.seller}}</div> -->
               <div class="td price">$ {{item.price}}</div>
               <div class="td amount">
                 <div class="input">
@@ -91,7 +77,7 @@ export default {
         }
       ],
       cart: [],
-      aa: []
+      status: []
     };
   },
   computed: {
@@ -110,12 +96,11 @@ export default {
 
       const name = data.seller + item.id;
 
-      for (let i = 0; i < this.aa.length; i++) {
-        if (this.aa[i] == name) {
+      for (let i = 0; i < this.status.length; i++) {
+        if (this.status[i] == name) {
           data.total += item.price;
         }
       }
-      // data.total += item.amount * item.price;
     },
     subAmount: function(data, item) {
       if (item.amount <= 1) {
@@ -125,15 +110,14 @@ export default {
 
         const name = data.seller + item.id;
 
-        for (let i = 0; i < this.aa.length; i++) {
-          if (this.aa[i] == name) {
+        for (let i = 0; i < this.status.length; i++) {
+          if (this.status[i] == name) {
             data.total -= item.price;
           }
         }
       }
     },
-    checkbox: function(aa, data, item) {
-      // console.log(aa);
+    checkbox: function(data, item) {
 
       let index = this.cart.indexOf(item);
 
