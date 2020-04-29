@@ -43,13 +43,22 @@ $contentSize:12px;
       line-height: 3rem;
     }
 
-    .addEncy {
+    .editEncy {
       background: $btnBgcolor;
       color: $btnColor;
       border-radius: 10px;
       width: 80px;
       height: 30px;
       margin-left: 50px;
+      a {
+        text-decoration:none;
+        color: $title3Color;
+
+        &:active {
+          text-decoration:none;
+        }
+        
+      }
     }
 
     .msSideBar {

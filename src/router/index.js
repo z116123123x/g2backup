@@ -82,10 +82,10 @@ const routes = [
     path: "/farm",
     name: "Farm",
     component: () => import("@/views/FarmMember.vue"),
-    children:[{
-      path:"info",
-      name:"Info",
-      component:() => import("@/views/FarmMemberInfo.vue"),
+    children: [{
+      path: "info",
+      name: "Info",
+      component: () => import("@/views/FarmMemberInfo.vue"),
 
     },
     {
@@ -103,7 +103,7 @@ const routes = [
       name: "Product",
       component: () => import("@/views/FarmMemberProductUpdate.vue"),
     },
-  ]
+    ]
   },
   {
     path: '/admin',
@@ -119,6 +119,15 @@ const routes = [
         path: 'manage',
         name: 'Manage',
         component: () => import('@/views/AdminManage.vue'),
+        children: [
+          {
+            path: 'addAdmin',
+            name: 'AddAdmin',
+            component: () => import('@/views/AddAdmin.vue'),
+
+          }],
+
+
       },
       {
         path: 'fan',
@@ -134,6 +143,13 @@ const routes = [
         path: 'ency',
         name: 'Ency',
         component: () => import('@/views/AdminEncyManage.vue'),
+        children: [
+          {
+            path: 'encyEdit',
+            name: 'EncyEdit',
+            component: () => import('@/views/AdminEncyEdit.vue'),
+
+          }],
       },
       {
         path: 'blog',

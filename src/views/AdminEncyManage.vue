@@ -2,8 +2,8 @@
   <div>
     <h1 class="manageTitle">知識百科 管理中心 -- 百科內容新增/修改</h1>
 
-    <input class="addEncy" type="submit" value="新增百科內容" />
-
+     <button class="editEncy"><router-link class="" to="/center/ency/AdminEncyEdit">新增百科內容</router-link></button>
+    
     <main class="EncyMainContent">
 
     <section class="EncytableSection">
