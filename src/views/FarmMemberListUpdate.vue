@@ -1,13 +1,13 @@
 <template>
-    <div class="listUpdate">
-        <div class="listUpdate_head">
-            <div class="listUpdate_right_head_text">
-                <span>商品管理</span>
-                <span class="new">商品內容新增/修改</span>
+    <div class="FarmListUpdate">
+        <div class="FarmListUpdate_head">
+            <div class="FarmListUpdate_head_text">
+                <span>訂單管理</span>
+                <span class="new">查看 xxxxx 訂單詳情</span>
             </div>
         </div>
-        <div class="listUpdate_bottom">
-            <div class="listUpdate">
+        <div class="FarmListUpdate_bottom">
+            <div class="FarmListUpdatelist">
                 <div class="list_1">
                     <div class="listnum">
                         <p>訂單編號: xxxxx</p>
@@ -22,7 +22,11 @@
                         <p>2020-04-17</p>
                         <p>$1380</p>
                         <p>已付款</p>
-                        <p>完成</p>
+                        <select name="country">
+                            <option value="1">完成</option>
+                            <option value="2">未完成</option>
+                            <option value="3">選項3</option>
+                        </select>
                     </div>
                     <span class="triangle"></span>
                     <div class="list_slide">
@@ -78,28 +82,25 @@
                             <p>宅配到府<span>(運送編號:28800118667)</span></p>
                         </div>
                     </div>
-                    <div class="Evaluation">
-                        <div class="Evaluation_top">
-                            <p>訂單已完成，可以給評價囉!</p>
-                        </div>
-                        <div class="star">
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>                              
-                            <p>不想給了</p>
-                            <p>送出</p>
-                        </div>
-                    </div>
                 </div>
+            </div>
+
+
+            <div class="pagination_block">
+                <ul class="pagination">
+                    <li><a href="#">&lt;</a></li>
+                    <li><a href="#" class="-on">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">&gt;</a></li>
+                </ul>
             </div>
         </div>
     </div>

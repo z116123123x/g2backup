@@ -22,7 +22,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                         <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     
                     <div class="list_td">
@@ -32,7 +32,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
@@ -41,7 +41,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
@@ -50,7 +50,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
@@ -59,7 +59,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
@@ -68,7 +68,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
@@ -77,7 +77,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
@@ -86,7 +86,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
@@ -95,7 +95,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
@@ -104,7 +104,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
@@ -113,7 +113,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
@@ -122,7 +122,7 @@
                         <p>某某某</p>
                         <p>已付款</p>
                         <p>完成</p>
-                        <p>詳細資訊</p>
+                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
                     </div>
 
                 </div>
