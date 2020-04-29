@@ -41,8 +41,18 @@ window.addEventListener("load", () => {
     scene = new THREE.Scene();
 
     // 相機設定與 OrbitControls
+
+    let camerafov = 60;
+
+    if (window.innerWidth <= 574) {
+      camerafov = 90;
+    } else if (window.innerWidth <= 1199) {
+      camerafov = 80;
+    } else {
+      camerafov = 60;
+    }
     camera = new THREE.PerspectiveCamera(
-      60,
+      camerafov,
       window.innerWidth / window.innerHeight,
       0.1,
       2800
@@ -1061,6 +1071,7 @@ window.addEventListener("load", () => {
 
     update();
   }
+  init();
 
   function render() {
     requestAnimationFrame(render);
@@ -1069,7 +1080,9 @@ window.addEventListener("load", () => {
   }
 
   window.addEventListener("resize", function() {
-    if (window.innerWidth <= 1199) {
+    if (window.innerWidth <= 574) {
+      camera.fov = 90;
+    } else if (window.innerWidth <= 1199) {
       camera.fov = 80;
     } else {
       camera.fov = 60;
@@ -1083,7 +1096,7 @@ window.addEventListener("load", () => {
 
   // home.addEventListener("click", init);
   // home.addEventListener("click", render);
-  init();
+
   render();
 
   $(function() {

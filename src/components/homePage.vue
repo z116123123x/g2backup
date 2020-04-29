@@ -151,7 +151,7 @@
       </div>
     </main>
     <div class="home_footer">
-      <p>Copyright © 2012 Apple Inc. All rights reserved</p>
+      <p>Copyright © 2020 台灣果語 rights reserved</p>
     </div>
   </div>
 </template>

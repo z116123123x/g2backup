@@ -40,6 +40,11 @@ canvas {
       left: 50%;
       transform: translate(-50%, -50%);
       display: inline-block;
+
+      @include rwd(mobile) {
+        width: 225px;
+        height: 150px;
+      }
     }
     #mainText {
       position: fixed;
@@ -80,6 +85,9 @@ canvas {
         margin-top: 50px;
         vertical-align: top;
         z-index: 2;
+        @include rwd(mobile) {
+          margin-top: 40px;
+        }
       }
 
       @include rwd(large) {
@@ -105,6 +113,10 @@ canvas {
     width: 320px;
     height: 400px;
   }
+  @include rwd(mobile) {
+    width: 280px;
+    height: 350px;
+  }
 }
 
 // .knowledge_page::before {
@@ -128,6 +140,10 @@ canvas {
   background-color: #efefef;
   border: 1px solid #007453;
   transform: rotateY(15deg);
+  @include rwd(mobile) {
+    height: 96%;
+    top: 2%;
+  }
 }
 
 .knowledge_page_back {
@@ -158,12 +174,20 @@ canvas {
   margin: 0 20px;
   margin-top: 20px;
   position: relative;
+
+  @include rwd(mobile) {
+    height: 60%;
+  }
   p {
     font-size: 2rem;
     line-height: 2.5rem;
     margin-top: 20px;
     box-sizing: border-box;
     padding: 0 10px;
+
+    @include rwd(mobile) {
+      font-size: 1.4rem;
+    }
   }
 
   .knowledge_page_content_spring {
@@ -214,6 +238,10 @@ canvas {
         @include rwd(large) {
           line-height: 70px;
         }
+        @include rwd(mobile) {
+          line-height: 37px;
+          font-size: 1.6rem;
+        }
       }
     }
   }
@@ -227,6 +255,9 @@ canvas {
       width: 50px;
       vertical-align: middle;
       height: 100%;
+      @include rwd(mobile) {
+        width: 30px;
+      }
     }
     span {
       display: inline-block;
@@ -234,6 +265,15 @@ canvas {
       width: unset;
       vertical-align: middle;
       padding-left: 20px;
+      height: 100%;
+      line-height: 87px;
+
+      @include rwd(medium) {
+        line-height: 70px;
+      }
+      @include rwd(mobile) {
+        line-height: 52px;
+      }
     }
   }
 }
@@ -255,6 +295,9 @@ canvas {
   z-index: 2;
   font-weight: 600;
   font-family: "Noto Serif TC", serif;
+  @include rwd(mobile) {
+    font-size: 2.5rem;
+  }
 
   &::before {
     position: absolute;
@@ -413,6 +456,10 @@ div.knowledge_page.-on {
   box-sizing: border-box;
   border-radius: 5px;
   margin-top: 40px;
+  @include rwd(mobile) {
+    width: 320px;
+    height: 400px;
+  }
 }
 
 .market_pic {
@@ -510,6 +557,10 @@ button.plus_number {
   height: 25%;
   text-align: left;
   margin-top: 50px;
+  @include rwd(mobile) {
+    margin-top: 20px;
+    height: 30%;
+  }
 }
 
 .pay_cart > button:nth-child(2) {
@@ -557,6 +608,9 @@ button.plus_number {
   border-radius: 5px;
   padding: 20px 20px;
   margin-top: 40px;
+  @include rwd(mobile) {
+    margin-top: 30px;
+  }
 }
 
 .blog_tags_area {
@@ -569,6 +623,9 @@ button.plus_number {
   @include rwd(large) {
     width: 320px;
     margin-top: 40px;
+  }
+  @include rwd(mobile) {
+    width: 280px;
   }
 }
 
@@ -631,6 +688,9 @@ button.plus_number {
   margin: 0 auto;
   @include rwd(large) {
     width: 320px;
+  }
+  @include rwd(mobile) {
+    width: 280px;
   }
 }
 
