@@ -34,6 +34,13 @@ const routes = [
     name: 'Shop',
     component: () => import('@/views/Shop.vue'),
   },
+
+  {
+    path: '/loginmember',
+    name: 'loginmember',
+    component: () => import('@/views/login.vue'),
+  },
+
   {
     path: '/main/member',
     name: 'Member',
@@ -102,6 +109,26 @@ const routes = [
       path: "Product",
       name: "Product",
       component: () => import("@/views/FarmMemberProductUpdate.vue"),
+    },
+    {
+      path: "blog",
+      name: "Blog",
+      component: () => import("@/views/FarmMemberBlog.vue"),
+    },
+    {
+      path: "blogupdate",
+      name: "BlogUpdate",
+      component: () => import("@/views/FarmMemberBlogUpdate.vue"),
+    },
+    {
+      path: "list",
+      name: "List",
+      component: () => import("@/views/FarmMemberList.vue"),
+    },
+    {
+      path: "listupdate",
+      name: "ListUpdate",
+      component: () => import("@/views/FarmMemberListUpdate.vue"),
     },
   ]
   },

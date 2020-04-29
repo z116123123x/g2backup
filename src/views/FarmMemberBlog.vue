@@ -1,106 +1,107 @@
 <template>
-    <div class="FarmOrder">
-        <div class="FarmOrder_head">
-            <div class="FarmOrder_head_text">
-                <h2>商品管理</h2>
+    <div class="FarmBlog">
+        <div class="FarmBlog_head">
+            <div class="FarmBlog_head_text">
+                <h2>日誌管理</h2>
             </div>
         </div>
         <div class="plusbutton">
             <div class="plus">
-                <router-link to="/farm/product"><p>新增商品</p></router-link>
+                <router-link to="/farm/blogupdate"><p>新增商品</p></router-link>
                 
             </div>
         </div>
-        <div class="FarmOrder_bottom">
+        <div class="FarmBlog_bottom">
             <div class="list_1">
                     <div class="list_th">
-                        <p class="num">商品編號</p>
-                        <p class="name">名稱</p>
-                        <p class="price">價格</p>
-                        <p class="time">上傳時間</p>
-                        <p class="puton">上架狀態</p>
+                        <p class="num">日誌編號</p>
+                        <p class="name">標題</p>
+                        <p class="price">內容</p>
+                        <p class="time">發文時間</p>
+                        <p class="puton">狀態</p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
+                        <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
+                    </div>
+                    
+                    <div class="list_td">
+                        <p>xxxx</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
+                        <p>出發囉！賞螢採梅尋浪...  </p>
+                        <p>台南梅嶺，這是一個有... </p>
                         <p>2020-04-16 11:22</p>
                         <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
