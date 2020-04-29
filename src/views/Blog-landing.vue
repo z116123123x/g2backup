@@ -312,7 +312,8 @@
     border-right: solid #007552 5px;
     @media (max-width: 1300px) {
       & {
-        border-right: solid #007552 0px;
+    border-right: solid #007552 0px;
+        border-bottom: solid #007552 5px;
       }
     }
     > div:nth-child(1) {

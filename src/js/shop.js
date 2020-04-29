@@ -62,7 +62,7 @@ window.addEventListener("load", () => {
   });
   //觸發按鈕效果
   $(".card_btn").hover(function() {
-    // var c_btn = $(this);
+    // var cBtn = $(this);
     TweenMax.to(c_btn, 0.3, {
       css: {
         backgroundColor: "#ffa978",
