@@ -20,7 +20,7 @@
       <ul>
         <li class="dropdown">
           <div class="title">
-            <router-link class="page" to="/main/book">
+            <router-link class="page" to="/main/book/bookIndex">
               <div class="title_pic">
                 <img src="@/assets/knowledge.svg" alt />
               </div>
