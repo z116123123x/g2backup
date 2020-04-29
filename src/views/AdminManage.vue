@@ -2,7 +2,11 @@
   <div>
     <h1 class="manageTitle">管理員 管理中心</h1>
 
-    <input class="addAdmin" type="submit" value="新增管理員" />
+  
+
+    <button class="addAdmin"><router-link class="" to="/center/addAdmin">新增管理員</router-link></button>
+    
+    
 
     <main class="AdminMainContent">
       <section class="tableSection">
