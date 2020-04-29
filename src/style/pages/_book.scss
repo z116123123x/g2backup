@@ -99,6 +99,35 @@
 
                }
             }
+            @keyframes jump{
+               0%{
+                  bottom: 10px;
+               }
+              
+               50%{
+                  bottom: 20px;
+               }
+               100%{
+                  bottom: 0px;
+               }
+              
+            }
+            
+            &::after{
+               content: "";
+               position: absolute;
+               width: 60px;
+               height: 60px;
+               background-image: url("../assets/book_img/scroll.svg");
+               background-repeat: no-repeat;
+               background-size: contain;
+               bottom: 10px;
+               left: 50%;
+
+               animation-name: jump;
+               animation-duration: 1.5s;
+               animation-iteration-count: infinite;
+            }
          }
 
          //middle
@@ -142,7 +171,7 @@
                //border: 1px solid red;
 
                .bkbk_content {
-                  border: 1px solid black;
+                  //border: 1px solid black;
                   box-sizing: border-box;
                   display: block;
                   width: 70%;
@@ -180,7 +209,7 @@
                         }
 
                         .book_link {
-
+                        
                            color: $bg-color;
                            text-decoration: none;
                         }
@@ -217,18 +246,38 @@
 
                            &:nth-child(2) {
                               background-color: #f6d16b;
+                              .book_link {
+
+                                 color: black;
+                                 text-decoration: none;
+                              }
                            }
 
                            &:nth-child(3) {
                               background-color: #e19b6b;
+                              .book_link {
+
+                                 color: black;
+                                 text-decoration: none;
+                              }
                            }
 
                            &:nth-child(4) {
                               background-color: #87b0e7;
+                              .book_link {
+
+                                 color: black;
+                                 text-decoration: none;
+                              }
                            }
 
                            &:nth-child(5) {
                               background-color: #c5ce7c;
+                              .book_link {
+
+                                 color: black;
+                                 text-decoration: none;
+                              }
                            }
 
                            &:hover {

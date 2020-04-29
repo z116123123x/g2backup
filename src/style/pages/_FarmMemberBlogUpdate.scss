@@ -1,0 +1,151 @@
+div.BlogUpdate {
+    display: inline-block;
+    color: #007552;
+    background-color: #FBF8EF;
+    width: 87.2%;
+    height: 100vh;
+    vertical-align: top;
+
+    .BlogUpdate_right_head {
+        color: #F7C845;
+        margin-top: 40px;
+        margin-left: 40px;
+        font-size: 30px;
+
+        >.BlogUpdate_right_head_text {
+            span.new {
+                margin-left: 10px;
+                color: #FFD3C1;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .BlogUpdate_right_bottom {
+        display: block;
+        height: auto;
+        text-align: center;
+
+        >.bottom_form {
+            
+            margin-top: 150px;
+            line-height: 3;
+
+            >.person_left {
+                display: inline-block;
+                background-color: #F7C845;
+                vertical-align: top;
+                >ul {
+                    display: block;
+                    padding-left: 40px;
+                        padding-right: 40px;
+                    >.p_num {
+                        padding-top: 50px;
+                    }
+
+                    >.p_text {
+                        padding-bottom: 3px;
+                    }
+                    >.p_price{
+                        padding-bottom: 56px;
+                    }
+
+                    >.p_img {
+                        padding-bottom: 56px;
+                    }
+                }
+
+            }
+
+            >.person_right {
+                display: inline-block;
+                position: relative;
+                text-align: start;
+                background-color: white;
+                color: black;
+                padding: 50px;
+                padding-left: 50px;
+                padding-right: 100px;
+                >.tag{
+                    display: block;
+                    color: black;
+                    >.tap1{
+                        display: inline-block;
+                        background-color: #E2E2E2;
+                        border-radius: 20px;
+                        text-align: center;
+                        width: 60px;
+                        padding: 0;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                    }
+                    >.tap2{
+                        display: inline-block;
+                        display: inline-block;
+                        background-color: #E2E2E2;
+                        border-radius: 20px;
+                        text-align: center;
+                        width: 60px;
+                        padding: 0;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                    }
+                    >.tap3{
+                        display: inline-block;
+                        display: inline-block;
+                        background-color: #E2E2E2;
+                        border-radius: 20px;
+                        text-align: center;
+                        width: 60px;
+                        padding: 0;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                    }
+                    >.tap4{
+                        display: inline-block;
+                        display: inline-block;
+                        background-color: #E2E2E2;
+                        border-radius: 20px;
+                        text-align: center;
+                        width: 60px;
+                        padding: 0;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                    }
+                    >.tap5{
+                        display: inline-block;
+                        display: inline-block;
+                        background-color: #E2E2E2;
+                        border-radius: 20px;
+                        text-align: center;
+                        width: 60px;
+                        padding: 0;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                >.submit_button {
+                    position: absolute;
+                    right: 30px;
+                    bottom: 10px;
+                    >.cancel{
+                        display: inline-block;
+                        border-radius: 10px;
+                    background-color: #007552;
+                    color: white;
+                    padding: 0px 20px;
+                        margin-right: 20px;
+                    }
+                    >.correct{
+                        display: inline-block;
+                        border-radius: 10px;
+                    background-color: #007552;
+                    color: white;
+                    padding: 0px 20px;
+                    }
+                }
+            }
+        }
+    }
+}

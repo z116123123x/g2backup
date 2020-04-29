@@ -14,6 +14,7 @@
 
             <div class="info">
                 <ul>
+                  <li><router-link to="/main/member/information">果粉首頁</router-link></li>
                     <li><router-link to="/main/member/update">個人資料修改</router-link></li>
                     <li><router-link to="/main/member/order">訂單管理</router-link></li>
                     <li><router-link to="/main/member/track">追蹤名單管理</router-link></li>

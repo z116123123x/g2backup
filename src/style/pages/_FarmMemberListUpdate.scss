@@ -1,0 +1,243 @@
+div.FarmListUpdate {
+  display: inline-block;
+  background-color: #FBF8EF;
+  width: 87.2%;
+  height: 100vh;
+
+  .FarmListUpdate_head {
+    color: #F7C845;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 30px;
+    >.FarmListUpdate_head_text{
+      >span.new{
+        color: #FFA978;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .FarmListUpdate_bottom {
+    display: block;
+    height: auto;
+    text-align: center;
+
+    >.FarmListUpdatelist {
+      margin-top: 40px;
+      line-height: 2;
+
+      >.list_1 {
+        display: inline-block;
+        border: 2px solid #F7C845;
+        background-color: white;
+        text-align: start;
+
+        >.list_th {
+          display: block;
+          background-color: #F7C845;
+          color: #007552;
+          margin-top: 20px;
+          margin-left: 20px;
+          margin-right: 20px;
+
+          >p {
+            display: inline-block;
+            padding: 0 20px;
+          }
+        }
+
+        >.list_td {
+          border: 1px solid #F7C845;
+          background-color: white;
+          display: block;
+          margin-bottom: 20px;
+          margin-left: 20px;
+          margin-right: 20px;
+
+          >p {
+            display: inline-block;
+            padding: 0 25px;
+          }
+        }
+
+        .listnum,
+        .list_slide {
+          >p {
+            padding-left: 10px;
+            color: #007552;
+          }
+        }
+
+        .list_th2 {
+          display: block;
+          background-color: #F7C845;
+          color: #007552;
+          margin-top: 20px;
+          margin-left: 20px;
+          margin-right: 20px;
+
+          >p {
+            display: inline-block;
+            padding: 0 27px;
+          }
+        }
+
+        .list_td2 {
+          border: 1px solid #F7C845;
+          background-color: white;
+          display: block;
+          margin-left: 20px;
+          margin-right: 20px;
+
+          >p {
+            display: inline-block;
+            padding: 0 25px;
+          }
+        }
+
+        .list_td2:last-child {
+          border: 1px solid #F7C845;
+          background-color: white;
+          display: block;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        .listnum,
+        .list_slide {
+          >p {
+            padding-left: 10px;
+            color: #007552;
+          }
+        }
+        .total{
+          display: block;
+          background-color: #FFD3C1;
+          margin: 30px 20px;
+          >p{
+            text-align: end;
+            padding-right: 10px;
+            color: #007552;
+          }
+          >p:first-child{
+            padding-top: 10px;
+          }
+          >p:last-child{
+            padding-bottom: 10px;
+            color: #CC113C;
+          }
+        }
+        .address{
+          display: block;
+          background-color: #FFD3C1;
+          margin: 30px 20px;
+          >.address_left{
+            display: inline-block;
+            >p{
+              padding-left: 10px;
+            color: #007552;
+            }
+          }
+          >.address_right{
+            display: inline-block;
+            >p{
+              padding-left: 10px;
+              >span{
+                padding-left: 10px;
+                color: #CC113C;
+              }
+            }
+            
+          }
+        }
+      }
+
+    }
+
+    .pagination_block {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      margin-left: 100px;
+
+      >ul.pagination {
+          list-style: none;
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          font-size: 0;
+          text-align: center;
+
+          >li {
+              display: inline-block;
+
+              >a {
+                  display: inline-block;
+                  text-decoration: none;
+
+                  border: 1px solid #007552;
+                  /* 留意 */
+                  /* 留意：將全部的右邊框都移除 */
+
+                  text-align: center;
+                  padding: 5px 10px;
+                  font-size: 1rem;
+                  color: black;
+              }
+
+              >a.-on {
+                  background-color: #FFD3C1;
+                  color: #007552;
+              }
+
+              >a:hover {
+                  background-color: #FFD3C1;
+                  color: #007552;
+              }
+          }
+
+          >li:first-child>a {
+              display: inline-block;
+              margin-right: 10px;
+              background-color: #007552;
+              color: white;
+          }
+
+          >li:first-child>a:hover {
+              background-color: #007552;
+              color: white;
+          }
+
+          >li:last-child>a {
+              border-right: 1px solid #007552;
+              margin-left: 10px;
+              background-color: #007552;
+              color: white;
+          }
+
+          >li:last-child>a:hover {
+              background-color: #007552;
+              color: white;
+          }
+      }
+  }
+  }
+}
+
+// div.Order>.Order_bottom>.Orderlist>.list_1>span.triangle{
+//     display: inline-block;
+//     // border: 10px solid red;
+//     border-left: 50px solid blue transparent;
+//     border-right: 50px solid red transparent;
+//     border-top: 50px solid #007552;
+//     border-bottom: 0px solid black;
+//     width: 0px;
+//     height: 0px;
+// }
+
+
+/* 留意: 將最後一個 li 裡的 a，右邊框加回來 */
+/* 留意: 將最後一個 li 裡的 a，加上圓角 */
+
+/* 留意: 將第一個 li 裡的 a，加上圓角 */
