@@ -62,7 +62,7 @@ window.addEventListener("load", () => {
   });
   //觸發按鈕效果
   $(".card_btn").hover(function() {
-    var c_btn = $(this);
+    // var c_btn = $(this);
     TweenMax.to(c_btn, 0.3, {
       css: {
         backgroundColor: "#ffa978",
@@ -72,7 +72,7 @@ window.addEventListener("load", () => {
   });
   //反觸發按鈕效果
   $(".card_btn").mouseleave(function() {
-    var c_btn = $(this);
+    // var c_btn = $(this);
     TweenMax.to(c_btn, 0.3, {
       css: {
         backgroundColor: "#fbf8ef",
@@ -82,7 +82,7 @@ window.addEventListener("load", () => {
   });
   //觸發item按鈕效果
   $(".item_btn").hover(function() {
-    var i_btn = $(this);
+    // var i_btn = $(this);
     TweenMax.to(i_btn, 0.3, {
       css: {
         backgroundColor: "#ffa978",
@@ -92,7 +92,7 @@ window.addEventListener("load", () => {
   });
   //反觸發item按鈕效果
   $(".item_btn").mouseleave(function() {
-    var i_btn = $(this);
+    // var i_btn = $(this);
     TweenMax.to(i_btn, 0.3, {
       css: {
         backgroundColor: "#fbf8ef",
