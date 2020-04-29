@@ -15,30 +15,74 @@
           <div class="fall_tab tab" data-target="tab3">秋</div>
           <div class="winter_tab tab" data-target="tab4">冬</div>
         </div>
-        <div>
+        <div class="knowledge_page_parent">
           <div class="knowledge_page tab1 -on">
             <div class="knowledge_page_back">
-              <div>1</div>
+              <div class="knowledge_page_title">水果介紹</div>
+              <div class="knowledge_page_content">
+                <p>
+                  以「水果王國」名聞全世界的台灣，水果種類豐富，一年四季皆可嚐到新鮮可口的水果，但多數人可能不知道這些水果的產地、產季、甚至是色香味等等，因此希望能藉由我們的網站帶大家認識台灣獨特的水果文化。
+                </p>
+                <div class="knowledge_page_content_spring"></div>
+              </div>
             </div>
           </div>
           <div class="knowledge_page tab2">
             <div class="knowledge_page_back">
-              <div>2</div>
+              <div class="knowledge_page_title">水果市集</div>
+              <div class="knowledge_page_content">
+                <div class="knowledge_page_content_summer">
+                  <div>
+                    <div></div>
+                  </div>
+                </div>
+                <span>
+                  <img src="../assets/tagspic.svg" alt="" />
+                  <span>知識類</span>
+                </span>
+              </div>
             </div>
           </div>
           <div class="knowledge_page tab3">
             <div class="knowledge_page_back">
-              <div>3</div>
+              <div class="knowledge_page_title">果農日誌</div>
+              <div
+                class="knowledge_page_content knowledge_page_content_fall"
+              ></div>
             </div>
           </div>
           <div class="knowledge_page tab4">
             <div class="knowledge_page_back">
-              <div>4</div>
+              <div class="knowledge_page_title">水果目錄</div>
+              <div class="knowledge_page_content">
+                <div class="knowledge_page_content_winter">
+                  <h2>
+                    <span>春</span>
+                    <span style="float:right;">Page.1</span>
+                  </h2>
+                  <h2>
+                    <span>夏</span>
+                    <span style="float:right;">Page.12</span>
+                  </h2>
+                  <h2>
+                    <span>秋</span>
+                    <span style="float:right;">Page.23</span>
+                  </h2>
+                  <h2>
+                    <span>冬</span>
+                    <span style="float:right;">Page.34</span>
+                  </h2>
+                  <h2>
+                    <span>長年</span>
+                    <span style="float:right;">Page.45</span>
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <button class="home_title">
+        <button class="home_title" style="left:53%;">
           知識百科
         </button>
       </div>

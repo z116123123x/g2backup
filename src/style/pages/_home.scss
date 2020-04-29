@@ -62,23 +62,22 @@ canvas {
       opacity: 0.9;
       text-align: center;
       padding-left: 60px;
+      .knowledge_page_parent {
+        position: relative;
+        background-color: #007453;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 20px 20px;
+        margin-top: 40px;
+        vertical-align: top;
+        z-index: 2;
+      }
 
       @include rwd(large) {
         left: 50%;
       }
     }
   }
-}
-
-#knowledge_container > div:nth-child(2) {
-  position: relative;
-  background-color: #007453;
-  display: inline-block;
-  border-radius: 5px;
-  padding: 20px 20px;
-  margin-top: 40px;
-  vertical-align: top;
-  z-index: 2;
 }
 
 .homebtn {
@@ -96,10 +95,6 @@ canvas {
   @include rwd(large) {
     width: 320px;
     height: 400px;
-  }
-  @include rwd(medium) {
-  }
-  @include rwd(small) {
   }
 }
 
@@ -135,8 +130,103 @@ canvas {
   background-color: #efefef;
 }
 
-.knowledge_page_back > div {
-  margin-top: 200px;
+.knowledge_page_title {
+  font-size: 2.5rem;
+  padding: 10px 0;
+  border: 3px solid #0e7453;
+  margin: 0 20px;
+  margin-top: 30px;
+}
+.knowledge_page_content_fall {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./../assets/knowledgepagfall.svg");
+}
+.knowledge_page_content {
+  height: 70%;
+  border: 3px solid #0e7453;
+  margin: 0 20px;
+  margin-top: 20px;
+  position: relative;
+  p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+
+  .knowledge_page_content_spring {
+    opacity: 0.5;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    background-image: url("./../assets/knowledgepagespring.svg");
+    background-position: center;
+    background-size: cover;
+  }
+  .knowledge_page_content_summer {
+    height: 75%;
+    div {
+      height: 100%;
+      background-color: #f7c852;
+      padding: 0;
+
+      div {
+        display: inline-block;
+        margin-top: 9%;
+        width: 200px;
+        height: 70%;
+        background-size: cover;
+        background-position: center;
+        background-image: url("./../assets/knowledgepagesummer.png");
+      }
+    }
+  }
+  .knowledge_page_content_winter {
+    width: 100%;
+    height: 100%;
+    h2 {
+      border-bottom: 1px dotted #0e7453;
+      text-align: left;
+      box-sizing: border-box;
+
+      margin: 0 10px;
+      font-size: 2rem;
+      height: 18%;
+
+      span {
+        display: inline-block;
+        height: 100%;
+        width: unset;
+        line-height: 90px;
+        @include rwd(large) {
+          line-height: 70px;
+        }
+      }
+    }
+  }
+  span {
+    display: inline-block;
+    height: 25%;
+    width: 100%;
+    vertical-align: middle;
+    img {
+      display: inline-block;
+      width: 50px;
+      vertical-align: middle;
+      height: 100%;
+    }
+    span {
+      display: inline-block;
+      font-size: 2rem;
+      width: unset;
+      vertical-align: middle;
+      padding-left: 20px;
+    }
+  }
 }
 
 .home_title {

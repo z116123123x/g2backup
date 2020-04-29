@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <div class="book_main">
         <section id="Page_horizen">
             <div id="outter">
                 <!-- 左page -->
@@ -204,7 +204,10 @@
                                                     <h2>為什麼梅子和李子的英文都是plum？</h2>
                                                 </div>
                                                 <div class="fruit_A">
-                                                    <p>梅子和李子都是植物學中薔薇科李屬中的植物，在「種」的位階上還有李、桃、杏等水果相互區分。因為梅子是亞洲特有種，西方並沒有為梅創造單字，稱它為是亞洲李Asian plum。</p>
+                                                    <p>
+                                                        梅子和李子都是植物學中薔薇科李屬中的植物，在「種」的位階上還有李、桃、杏等水果相互區分。因為梅子是亞洲特有種，西方並沒有為梅創造單字，稱它為是亞洲李Asian
+                                                        plum。
+                                                    </p>
                                                     <div class="fruit_img">
                                                         <img
                                                             src="@/assets/book_img/spring/plum/plum05.jpg"
@@ -282,7 +285,7 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                            <div class="bk_product">
+                                            <div class="bk_product bk_product2">
                                                 <div class="bk_pd_description2">
                                                     <h4>會說話的梅精</h4>
                                                     <p>$970/罐</p>
@@ -313,14 +316,9 @@
                 </div>
             </div>
         </section>
-        <!-- <section id="book_footer">
-            <Footer />
-        </section>-->
-    </main>
+    </div>
 </template>
 <script>
 import "@/js/book";
-export default {
-    
-}
+export default {};
 </script>
