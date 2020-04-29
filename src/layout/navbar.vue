@@ -6,7 +6,7 @@
     <div class="member_status">
       <span class="farmer_pic"></span>
       <span>果農</span>
-      <span>登出</span>
+      <router-link to="/loginmember">登出</router-link>
     </div>
     <div class="cart">
       <router-link class="page" to="/main/member/shopping"></router-link>
