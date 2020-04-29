@@ -119,15 +119,11 @@ const routes = [
         path: 'manage',
         name: 'Manage',
         component: () => import('@/views/AdminManage.vue'),
-        children: [
-          {
-            path: 'addAdmin',
-            name: 'AddAdmin',
-            component: () => import('@/views/AddAdmin.vue'),
-
-          }],
-
-
+      },
+      {
+        path: 'addAdmin',
+        name: 'AddAdmin',
+        component: () => import('@/views/AddAdmin.vue'),
       },
       {
         path: 'fan',
@@ -143,13 +139,12 @@ const routes = [
         path: 'ency',
         name: 'Ency',
         component: () => import('@/views/AdminEncyManage.vue'),
-        children: [
-          {
-            path: 'encyEdit',
-            name: 'EncyEdit',
-            component: () => import('@/views/AdminEncyEdit.vue'),
+      },
+      {
+        path: 'encyEdit',
+        name: 'EncyEdit',
+        component: () => import('@/views/AdminEncyEdit.vue'),
 
-          }],
       },
       {
         path: 'blog',

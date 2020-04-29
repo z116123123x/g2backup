@@ -4,7 +4,7 @@
 
   
 
-    <button class="addAdmin"><router-link class="" to="/center/manage/AddAdmin">新增管理員</router-link></button>
+    <button class="addAdmin"><router-link class="" to="/center/addAdmin">新增管理員</router-link></button>
     
     
 
