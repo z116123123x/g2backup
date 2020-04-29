@@ -3,28 +3,27 @@
     flex-grow: 1;
     box-sizing: border-box;
 
+    overflow-y: scroll;
+
     .content {
 
         display: flex;
         flex-direction: column;
 
-        height: 100%;
-
         .step-box {
 
-            height: 250px;
+            height: 175px;
         }
 
         .form {
 
             flex-grow: 1;
+            padding: 0 5%;
 
             .form-content {
 
                 display: flex;
                 flex-direction: column;
-
-                padding: 0 5%;
 
                 box-sizing: border-box;
 
@@ -73,8 +72,8 @@
 
                         &.name {
 
-                            // width: 200px;
                             flex-grow: 1;
+                            min-width: 100px;
                         }
 
                         &.seller {
@@ -168,6 +167,31 @@
                         }
                     }
                 }
+
+                .total {
+
+                    font-size: 1.6rem;
+                    line-height: 2;
+
+                    text-align: right;
+                }
+            }
+            .btn {
+
+                float: right;
+
+                height: 40px;
+                line-height: 40px;
+                width: 120px;
+
+                text-align: center;
+                text-decoration: none;
+
+                font-size: 1.6rem;
+                color: black;
+
+                border: 1px solid $min-color;
+                background: $orange;
             }
         }
     }

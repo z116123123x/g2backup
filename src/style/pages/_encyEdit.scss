@@ -29,14 +29,7 @@ $contentSize:12px;
         height: 100%;
         box-sizing: border-box;
 
-
-        .manageTitle {
-            color: $maintitleColor;
-            font-size: $maintitleSize;
-            margin: 10px;
-            
-        }
-
+  
         .msSideBar {
             // margin: auto;
             color: $title1Color;
@@ -68,28 +61,3 @@ $contentSize:12px;
         }
     }
 }
-
-
-
-
-
-
-
-// @media (max-width: 767px){
-// // header.header{
-// //   max-width: 100%;
-// // }
-// .main_content{
-//  max-width: 100%;
-//   }
-// .aside{
-//   max-width: 100%;
-//   margin-bottom:10px;
-
-// }
-// .main{
-//   width: 100%;
-//   display: block;
-// }
-
-// }
