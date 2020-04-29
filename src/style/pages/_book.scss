@@ -1,4 +1,4 @@
-main {
+.book_main {
    width: 100vw;
    height: 100vh;
 
@@ -287,7 +287,7 @@ main {
                                  height: 40px;
                               }
                            }
-                        
+
                            .Pbutton_right {
 
                               &:hover {
@@ -307,20 +307,22 @@ main {
                                  transform: translateX(50%);
                               }
                            }
-                           @include rwd(small){
-                              .Pbutton_left::before{
-                                 width:18px;
-                                 height: 30px;  
+
+                           @include rwd(small) {
+                              .Pbutton_left::before {
+                                 width: 18px;
+                                 height: 30px;
                                  //background-color: #fff;
                               }
-                              .Pbutton_right::before{
+
+                              .Pbutton_right::before {
                                  left: -6px;
-                                 width:18px;
-                                 height: 30px;  
+                                 width: 18px;
+                                 height: 30px;
                                  //background-color: #fff;
 
                               }
-                           }                         
+                           }
 
                            .page_button {
                               width: 2.5vw;
@@ -335,17 +337,18 @@ main {
 
                            }
 
-                           @include rwd(small){
-                              .page_button{
+                           @include rwd(small) {
+                              .page_button {
                                  width: 20px;
-                                 left:-10px;
-                              
+                                 left: -10px;
+
                               }
                            }
                         }
-                       
+
                      }
-                     @include rwd(mobile){
+
+                     @include rwd(mobile) {
                         .Change_Button {
                            display: none;
                         }
@@ -353,7 +356,7 @@ main {
 
                      // bookcontent書籍內容
                      #bk_content {
-                      
+
                         // font-size: 0;
                         border: 1px solid $min-color;
                         box-sizing: border-box;
@@ -720,6 +723,7 @@ main {
                                  height: 80%;
                               }
                            }
+
                            @include rwd (mobile) {
                               .bk_ct {
                                  width: 100%;
@@ -727,16 +731,16 @@ main {
                                  height: auto;
                               }
                            }
-                         
+
 
 
                            //spring spring spring
                            .bk_ct_left {
-                              //display: none; /////這裏
+                              display: none; /////這裏
                               font-size: 0;
 
                               .fruit_start {
-                                 border: 1px solid red;
+                                 //border: 1px solid red;
                                  box-sizing: border-box;
                                  display: inline-block;
                                  width: 100%;
@@ -987,6 +991,7 @@ main {
 
                                     }
                                  }
+
                                  @include rwd (mobile) {
                                     p {
                                        column-count: 1;
@@ -1001,19 +1006,18 @@ main {
                               @include rwd(small) {
                                  .fruit_intro {
                                     height: 50%;
-                                    padding: 15px;
+                                    padding: 10px;
                                     background-color: rgba(255, 208, 191, .8);
 
                                  }
                               }
-                             
+
 
                            }
 
                            .bk_ct_right {
                               font-size: 0;
-                              //display: none; /////這裏
-
+                              display: none; /////這裏
                               &::before {
                                  content: "";
                                  position: absolute;
@@ -1034,6 +1038,11 @@ main {
                                  color: $min-color;
                                  margin: 20px 0 10px;
                                  padding-left: 15px;
+                              }
+                              @include rwd(small){
+                                 h2{
+                                    font-size: 1.8rem;
+                                 }
                               }
 
                               //水果產季週期
@@ -1080,7 +1089,7 @@ main {
                               @include rwd(small) {
                                  .fruit_time {
                                     height: 60px;
-                                  
+
                                  }
                               }
 
@@ -1109,10 +1118,23 @@ main {
                                  }
                               }
 
+                              @include rwd(mobile) {
+                                 .fruit_video {
+                                    width: 100%;
+
+                                    >video {
+                                       width: 100%;
+                                       height: auto;
+                                    }
+                                 }
+                              }
+
+
+
 
                               //農知識
                               .fruit_Q {
-                                 border: 1px solid green;
+                                 //border: 1px solid green;
                                  box-sizing: border-box;
                                  width: 100%;
 
@@ -1122,7 +1144,7 @@ main {
                                     padding: 0;
 
                                     h2 {
-                                      // border: 1px solid purple;
+                                       // border: 1px solid purple;
                                        font-weight: bolder;
                                        display: inline-block;
                                        margin-top: 20px;
@@ -1154,8 +1176,8 @@ main {
 
 
                                  .fruit_A {
-                                     border: 1px solid red;
-                                     box-sizing: border-box;
+                                    // border: 1px solid red;
+                                    box-sizing: border-box;
                                     width: 100%;
                                     max-height: 100%;
 
@@ -1164,7 +1186,7 @@ main {
 
 
                                     p {
-                                       border: 1px solid blue;
+                                       //border: 1px solid blue;
                                        font-size: 1.4rem;
                                        white-space: pre-wrap;
                                        line-height: 1.8;
@@ -1188,17 +1210,18 @@ main {
                                     }
 
                                     @include rwd(small) {
-                                       p {                       
+                                       p {
                                           font-size: 1.6rem;
 
 
                                        }
                                     }
+
                                     @include rwd(mobile) {
-                                       p {    
-                                          width: 100%;                     
-                                          column-count: 1; 
-                                          display: block;                                   
+                                       p {
+                                          width: 100%;
+                                          column-count: 1;
+                                          display: block;
                                        }
                                     }
 
@@ -1233,6 +1256,7 @@ main {
                                           display: inline-block;
                                        }
                                     }
+
                                     @include rwd (mobile) {
                                        .fruit_img {
                                           width: 100%;
@@ -1246,17 +1270,19 @@ main {
                                  @include rwd(small) {
                                     .fruit_A {
                                        margin-top: 10px;
-                                       flex-wrap:nowrap;
+                                       flex-wrap: nowrap;
                                     }
                                  }
+
                                  @include rwd(mobile) {
                                     .fruit_A {
-                                     flex-wrap:wrap;
+                                       flex-wrap: wrap;
                                     }
                                  }
 
                               }
-                              @include rwd (mobile){
+
+                              @include rwd (mobile) {
                                  height: 100%;
                               }
                            }
@@ -1275,8 +1301,8 @@ main {
 
                            //部落格
                            .bk_ct_left_2 {
-                              display: none;
-                              // border: 1px solid blue;
+                              //display: none;
+                              border: 1px solid blue;
                               box-sizing: border-box;
                               width: 50%;
 
@@ -1292,7 +1318,6 @@ main {
                                  background-color: rgba(255, 208, 191, 1);
                               }
 
-                              //display: none;
                               a {
                                  text-decoration: none;
 
@@ -1301,7 +1326,7 @@ main {
                                  }
 
                                  h2 {
-                                    //border: 1px solid red;
+                                    border: 1px solid red;
                                     font-size: 1.6rem;
                                     font-weight: bold;
                                     color: $min-color;
@@ -1309,8 +1334,15 @@ main {
                                     padding-left: 15px;
 
                                  }
+                                 @include rwd(small){
+                                    h2{
+                                       padding-left: 25px;
+                                       font-size: 1.8rem;
+                                    }
+                                 }
 
                               }
+                             
 
                               .bk_blog_line1 {
                                  width: 100%;
@@ -1330,24 +1362,28 @@ main {
                                  //border: 1px solid red;
                                  box-sizing: border-box;
                                  width: 100%;
-                                 height: 42%;
+                                 height: 45%;
+                                 display: flex;
+                                 flex-wrap: wrap;
 
                                  p {
-                                    // border: 1px solid blue;
+                                    border: 1px solid blue;
                                     font-size: 1.2rem;
-                                    padding-left: 30px;
+                                    padding-left: 20px;
                                     margin-top: 10px;
                                     color: gray;
+                                    width: 100%;
                                  }
-
+                                 
                                  h3 {
-                                    //border: 1px solid red;
+                                    border: 1px solid red;
                                     font-size: 2rem;
                                     font-weight: bolder;
                                     padding-left: 15px;
                                     margin-bottom: 10px;
                                     position: relative;
                                     z-index: 1;
+                                    width: 100%;
 
                                     &::before {
                                        content: "";
@@ -1358,19 +1394,29 @@ main {
                                        z-index: -1;
 
                                     }
+                                   
                                  }
 
+                                 @include rwd(small){
+                                    p{
+                                       font-size: 1.4rem;
+                                       padding-left: 25px;
+                                    }
+                                    h3{
+                                       padding-left: 25px;
+                                    }
+                                 }
                                  //reporter
                                  .bk_blog_reporter {
-                                    //border: 1px solid red;
+                                    border: 1px solid red;
                                     box-sizing: border-box;
                                     display: inline-block;
                                     vertical-align: top;
-                                    margin: 0 15px;
-                                    width: 40%;
+                                    margin: 0 10px 0 15px;
+                                    width: auto;
 
                                     .bk_blog_rpt_img {
-                                       // border: 1px solid red;
+                                        border: 1px solid red;
                                        box-sizing: border-box;
                                        display: inline-block;
                                        width: 40px;
@@ -1382,10 +1428,11 @@ main {
                                           width: 100%;
                                        }
                                     }
+                                  
 
                                     .bk_blog_rpt_name {
 
-                                       //border: 1px solid red;
+                                       border: 1px solid red;
                                        display: inline-block;
                                        vertical-align: top;
 
@@ -1415,29 +1462,53 @@ main {
                                           }
                                        }
 
-
                                     }
 
+
                                     .bk_blog_rpt_button {
-                                       //border: 1px solid red;
+                                       border: 1px solid red;
                                        display: inline-block;
                                        vertical-align: top;
 
                                        button {
-                                          // border: 1px solid red;
-                                          margin-left: 10px;
+                                          border: 1px solid red;
+                                          //margin-left: 10px;
                                           display: inline-block;
                                           border-radius: 10px;
                                           color: white;
                                           background-color: $min-color;
                                        }
                                     }
+                                 }
 
+                                 @include rwd(medium) {
+                                    .bk_blog_reporter {
+                                       width: 100%;
+                                    }
+                                 }
+                                 @include rwd(small) {
+                                    .bk_blog_reporter {
+                                      width: auto;
+                                      margin: 0 10px 0 25px;
+                                      .bk_blog_rpt_name{
+                                         margin:0 10px ;
+                                        a{
+                                           font-size: 1.6rem;
+                                        }
+                                      }
+                                      .bk_blog_rpt_button{
+                                         button{
+                                            font-size: 1.6rem;
+                                            border-radius: 15px;
+                                         }
+                                      }
+                                     
+                                    }
                                  }
 
                                  //標籤
                                  .bk_blog_tag {
-                                    //border: 1px solid blue;
+                                    border: 1px solid blue;
                                     display: block;
                                     width: 100%;
                                     margin-top: 20%;
@@ -1452,11 +1523,29 @@ main {
                                           width: 100%;
                                        }
                                     }
-
                                  }
 
+                                 @include rwd(medium) {
+                                    .bk_blog_tag {
+                                       display: inline-block;
+                                       width: auto;
+                                       margin: 0 0 0 10px;
+
+                                    }
+                                 }
+
+                                 @include rwd(small) {
+                                    .bk_blog_tag {
+                                      
+                                       display: block;
+                                       width: auto;
+                                       margin: 20px 0 0 0px;
+                                       font-size: 1.6rem;
+
+                                    }
+                                 }
                                  .bk_blog_img {
-                                    //border: 1px solid purple;
+                                    border: 1px solid purple;
                                     box-sizing: border-box;
                                     display: inline-block;
                                     height: 60%;
@@ -1465,6 +1554,23 @@ main {
 
                                     img {
                                        width: 100%;
+                                       height: auto;
+                                    }
+                                 }
+
+                                 @include rwd(medium) {
+                                    .bk_blog_img {
+                                       display: block;
+                                       margin: 0 auto;
+                                       width: 90%;
+                                       height: 30%;
+                                    }
+                                 }
+                                 @include rwd(small) {
+                                    .bk_blog_img {
+                                       display: inline-block;
+                                       width: 48%;
+                                       height: auto;
                                     }
                                  }
 
@@ -1472,20 +1578,36 @@ main {
                                     width: 90%;
                                     margin: 20px auto 0;
                                  }
+                                 @include rwd (medium){
+                                    .bk_blog_line3{
+                                       margin: 5px;
+                                    }
+                                 }
+                                 @include rwd (small){
+                                    .bk_blog_line3{
+                                       margin: 20px 30px 0 30px;
+                                    }
+                                 }
+                              }
+
+                              @include rwd(small){
+                                 #bk_blog_knowledge{
+                                    height: auto;
+                                 }
                               }
 
                               //部落格文章
                               #bk_blog_content {
-                                 //border: 1px solid red;
+                                 border: 1px solid red;
                                  box-sizing: border-box;
                                  width: 100%;
                                  height: 40%;
+                                 overflow-x: auto;
+                                 padding-left: 15px;
 
                                  p {
-                                    //border: 1px solid blue;
+                                    border: 1px solid blue;
                                     font-size: 1.4rem;
-                                    // padding: 0px;
-                                    margin-left: 15px;
                                     white-space: pre-wrap;
                                     line-height: 1.8;
                                     vertical-align: top;
@@ -1499,33 +1621,43 @@ main {
                                     height: 100%;
                                  }
 
-                                 //blog內容開始
-                                 #bk_blog_knowledge {
-                                    //border: 1px solid red;
-                                    box-sizing: border-box;
-                                    width: 100%;
-                                    height: 42%;
-
+                                 @include rwd (medium) {
                                     p {
-                                       // border: 1px solid blue;
-                                       font-size: 1.2rem;
-                                       padding-left: 30px;
-                                       margin-top: 10px;
-                                       color: gray;
+                                       column-count: 1;
                                     }
-
-
+                                 }
+                                 @include rwd (small) {
+                                    p {
+                                       width: 100%;
+                                       font-size: 1.6rem;
+                                       column-count: 2;
+                                       height: auto;
+                                       padding: 15px;
+                                    }
                                  }
 
+                              }
+                              @include rwd (small){
+                                 #bk_blog_content{
+                                    height: auto;
+                                    padding: 15px;
+                                 }
+                              }
 
+                           }
+                           @include rwd(small){
+                              .bk_ct_left_2 {
+                                 width: 100%;
+                                 height: auto;
                               }
 
                            }
 
+
                            //市集
                            .bk_ct_right_2 {
-                              display: none;
-                              //border: 1px solid blue;
+                              //display: none;
+                              border: 1px solid blue;
                               box-sizing: border-box;
                               width: 50%;
                               position: relative;
@@ -1569,33 +1701,45 @@ main {
                                     margin: 20px 0 5px;
                                     padding-left: 15px;
                                  }
+                                 @include rwd(small){
+                                    h2{
+                                       font-size: 1.8rem;
+                                    }
+                                 }
 
                               }
 
                               .bk_product {
-                                 // border: 1px solid red;
+                                 border: 1px solid red;
                                  box-sizing: border-box;
                                  width: 100%;
                                  height: 35%;
                                  text-align: center;
-                                 margin-top: 30px;
+                                 margin-top: 10px;
+                                 display: flex;
+                                 padding: 15px;
 
                                  .bk_product_img {
-                                    // border: 1px solid red;
+                                     border: 1px solid green;
                                     box-sizing: border-box;
                                     display: inline-block;
+
                                     width: 150px;
                                     height: 150px;
 
                                     img {
                                        width: 100%;
+                                       height: auto;
                                     }
 
                                  }
 
                                  .bk_pd1 {
+                                    //border: 1px solid red;
+                                    box-sizing: border-box;
+
                                     position: relative;
-                                    left: -15%;
+                                    left: 0%;
                                     top: 10%;
 
                                     &::before {
@@ -1604,8 +1748,8 @@ main {
                                        height: 150px;
                                        background-color: #f38e8e;
                                        position: absolute;
-                                       left: -20%;
-                                       top: -10%;
+                                       left: -10%;
+                                       top: -20%;
                                        z-index: -1;
 
                                     }
@@ -1613,12 +1757,14 @@ main {
                                  }
 
                                  .bk_pd_description {
-                                    //border: 1px solid blue;
+                                    border: 1px solid blue;
                                     box-sizing: border-box;
                                     display: inline-block;
                                     position: relative;
                                     top: 10%;
-                                    left: -10%;
+                                    left: 0%;
+                                    margin-left: 20px;
+
 
                                     h4 {
                                        font-size: 1.4rem;
@@ -1653,29 +1799,47 @@ main {
                                  }
 
                                  .bk_pd2 {
-                                    //border: 1px solid red;
+                                    border: 1px solid red;
                                     position: relative;
-                                    right: -5%;
+                                    width: 150px;
+                                    height: 150px;
 
 
                                     &::after {
                                        content: "";
-                                       width: 140px;
-                                       height: 150px;
+                                       width: 145px;
+                                       height: 140px;
                                        background-color: #f38e8e;
                                        position: absolute;
-                                       right: -30%;
+                                       right: -11%;
                                        bottom: -10%;
                                        z-index: -1;
                                     }
+                                    img{
+                                       width: 100%;
+                                    }
 
+                                 }
+                                 @include rwd(medium){
+                                    .bk_pd2{
+                                       width: 150px;
+                                       height: 150px;
+                                       right: 0px;
+
+                                       &::after{
+                                          width: 130px;
+                                          height: 150px;
+                                          
+                                       }
+                                       
+                                    }
                                  }
 
                                  .bk_pd_description2 {
-                                    //border: 1px solid blue;
+                                     border: 1px solid blue;
                                     box-sizing: border-box;
                                     display: inline-block;
-                                    margin-left: 20%;
+                                    margin-right: 20px;
 
                                     h4 {
                                        font-size: 1.4rem;
@@ -1708,9 +1872,26 @@ main {
                                     }
 
                                  }
+                                 @include rwd(medium){
+                                    .bk_pd_description2{
+                                       margin-left: 0%;
+                                    }
+                                 }
 
                               }
 
+                              .bk_product2 {
+                                 margin-top: 50px;
+                                 justify-content:flex-end;
+                              }
+                            
+                           }
+                           @include rwd(small){
+                              .bk_ct_right_2{
+                                 width: 100%;
+                                 padding: 0 25px;
+                                 height: auto;
+                              }
                            }
                         }
 
@@ -1721,8 +1902,8 @@ main {
                         }
                      }
 
-                     @include rwd(mobile){
-                        #bk_content{
+                     @include rwd(mobile) {
+                        #bk_content {
                            width: 100%;
                            height: 100vh;
 
@@ -1736,16 +1917,18 @@ main {
                      width: 80%;
                   }
                }
+
                @include rwd (small) {
                   .bkbk_content {
                      width: 90%;
                   }
                }
+
                @include rwd (mobile) {
                   .bkbk_content {
                      width: 100%;
-                     height:100vh;
-                    
+                     height: 100vh;
+
                   }
                }
             }
