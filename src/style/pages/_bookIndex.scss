@@ -168,15 +168,17 @@
 
             li {
                 // border: 1px solid red;
-
+                text-align: center;
                 font-size: 1.4rem;
                 font-weight: bolder;
                 padding: 10px;
+                color: #808080;
+
 
                 &:hover {
                     color: $min-color;
-                    width: 30%;
                     margin: 0 auto;
+                    width: 70px;
                     background-color: #f3c452;
                     border-radius: 5px;
                     cursor: default;
@@ -196,28 +198,53 @@
 
                 font-size: 3rem;
                 writing-mode: vertical-lr;
-                margin: 0;
+                margin: 3% 20px;
                 opacity: .5;
                 vertical-align: top;
                 display: inline-block;
             }
 
             .bk_content_img {
-                margin: 0;
                 display: inline-block;
                 vertical-align: top;
-                margin-top: 7%;
+                margin-top: 5%;
 
             }
 
 
             ul {
                 display: inline-block;
-                margin: 0;
-                vertical-align: top;
+                margin: 5% 20px;
+                vertical-align: middle;
 
                 li {
                     display: inline-block;
+
+                    &:hover {
+                        width: auto;
+                    }
+
+                }
+            }
+        }
+    }
+
+    @include rwd(mobile) {
+        .bk_content {
+            height: 18%;
+
+            h5 {
+                margin: 10% 20px;
+            }
+            .bk_content_img {
+                margin-top: 15%;
+            }
+            ul {
+                margin: 10% 20px;
+
+                li {
+                    padding: 5px;
+                    margin: 10% 0;
                 }
             }
         }
@@ -233,6 +260,16 @@
             width: 120px;
             height: 50px;
             background-color: #fff;
+        }
+    }
+}
+
+@include rwd (mobile) {
+    .fruit_index {
+        overflow: hidden;
+
+        &::before {
+            display: none;
         }
     }
 }
