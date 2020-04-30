@@ -62,7 +62,7 @@ $btnColor: #fbf8ef;
       color: $title1Color;
       display: flex;
       background: $sidebarBgColor;
-      width: 220px;
+      min-width: 25%;
       height: 100%;
       box-sizing: border-box;
       align-items: center;

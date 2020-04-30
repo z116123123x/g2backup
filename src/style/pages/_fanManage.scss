@@ -13,157 +13,126 @@ $title2Size: 14px;
 $contentSize:12px;
 
 
-.msContainer {
-    display: flex;
-    flex-flow: row wrap;
-    background: $bgColor;
-    height: 100vh;
-    max-width: 100%;
+
+.fanManageMainContent {
+    // margin: 0 auto;
+    // color: $contentColor;
+    // display: flex;
+    // // flex-flow: row wrap;
+    // font-size: $contentSize;
+    // max-width: 100%;
+    // height: 65%;
+    // box-sizing: border-box;
+    // justify-content: center;
+    // left: 280px;
+    // top: 120px;
+    // border: 1px solid #000;
+
     margin: 0 auto;
+    color: $contentColor;
+    display: flex;
+    // flex-flow: row wrap;
+    font-size: $contentSize;
+    // width: 80%;
+    max-width: 100%;
+    height: 65%;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
 
-    .msFrame {
-        color: $contentColor;
+}
+
+.aFanTableSection {
+
+    .aft-header {
         display: flex;
-        // flex-flow: row wrap;
-        max-width: 100%;
-        height: 100%;
-        box-sizing: border-box;
+        background: $maintitleColor;
+    }
 
-        .msSideBar {
-            // margin: auto;
-            color: $title1Color;
-            display: flex;
-            background: $sidebarBgColor;
-            width: 220px;
-            height: 100%;
-            box-sizing: border-box;
-            align-items: center;
-            justify-content: center;
-            font-size: $title1Size;
-            line-height: 3rem;
-        }
+    .aft-content {
+        display: flex;
+        background-color: #fff;
+        height: 80%;
+        overflow-x: auto;
+        margin-top: 0px;
+    }
 
-        .fanManageMainContent {
-            // margin: 0 auto;
-            // color: $contentColor;
-            // display: flex;
-            // // flex-flow: row wrap;
-            // font-size: $contentSize;
-            // max-width: 100%;
-            // height: 65%;
-            // box-sizing: border-box;
-            // justify-content: center;
-            // left: 280px;
-            // top: 120px;
-            // border: 1px solid #000;
+    .fanManageTab {
+        // width: 70%;
+        table-layout: fixed;
 
-            margin: 0 auto;
-            color: $contentColor;
-            display: flex;
-            // flex-flow: row wrap;
-            font-size: $contentSize;
-            // width: 80%;
-            max-width: 100%;
-            height: 65%;
-            box-sizing: border-box;
-            justify-content: center;
-            margin-left: 50px;
-            margin-right: 50px;
-            margin-top: 30px;
+    }
 
-        }
+    th {
+        width: 150px;
+        padding: 20px 20px;
+        text-align: left;
+        color: $contentColor;
 
-        .aFanTableSection {
-
-            .aft-header {
-                display: flex;
-                background: $maintitleColor;
-            }
-
-            .aft-content {
-                display: flex;
-                background-color: #fff;
-                height: 80%;
-                overflow-x: auto;
-                margin-top: 0px;
-            }
-
-            .fanManageTab {
-                // width: 70%;
-                table-layout: fixed;
-
-            }
-
-            th {
-                width: 150px;
-                padding: 20px 20px;
-                text-align: left;
-                color: $contentColor;
-
-                &:last-child {
-                    padding-left: 10%;
-                }
-            }
-
-            td {
-                width: 150px;
-                padding: 20px;
-                text-align: left;
-                vertical-align: middle;
-                color: $contentColor;
-
-                &:last-child {
-                    padding-left: 10%;
-
-                    .statusBtn[type=checkbox] {
-                        height: 0;
-                        width: 0;
-                        visibility: hidden;
-                    }
-
-                    .statusBtnLabel {
-                        cursor: pointer;
-                        text-indent: -9999px;
-                        width: 35px;
-                        height: 19px;
-                        background: rgb(161, 161, 161);
-                        display: block;
-                        border-radius: 100px;
-                        position: relative;
-                        top: -6px;
-                    }
-
-                    .statusBtnLabel:after {
-                        content: '';
-                        position: absolute;
-                        top: 1.5px;
-                        left: 2px;
-                        width: 15px;
-                        height: 15px;
-                        background: #fff;
-                        border-radius: 90px;
-                        transition: 0.3s;
-                    }
-
-                    .statusBtn:checked+.statusBtnLabel {
-                        background: #62B45A;
-                    }
-
-                    .statusBtn:checked+.statusBtnLabel:after {
-                        left: calc(100% - 2px);
-                        transform: translateX(-100%);
-                    }
-
-                    .statusBtnLabel:active:after {
-                        width: 20px;
-                    }
-
-
-                }
-
-
-            }
-
+        &:last-child {
+            padding-left: 10%;
         }
     }
+
+    td {
+        width: 150px;
+        padding: 20px;
+        text-align: left;
+        vertical-align: middle;
+        color: $contentColor;
+
+        &:last-child {
+            padding-left: 10%;
+
+            .statusBtn[type=checkbox] {
+                height: 0;
+                width: 0;
+                visibility: hidden;
+            }
+
+            .statusBtnLabel {
+                cursor: pointer;
+                text-indent: -9999px;
+                width: 35px;
+                height: 19px;
+                background: rgb(161, 161, 161);
+                display: block;
+                border-radius: 100px;
+                position: relative;
+                top: -6px;
+            }
+
+            .statusBtnLabel:after {
+                content: '';
+                position: absolute;
+                top: 1.5px;
+                left: 2px;
+                width: 15px;
+                height: 15px;
+                background: #fff;
+                border-radius: 90px;
+                transition: 0.3s;
+            }
+
+            .statusBtn:checked+.statusBtnLabel {
+                background: #62B45A;
+            }
+
+            .statusBtn:checked+.statusBtnLabel:after {
+                left: calc(100% - 2px);
+                transform: translateX(-100%);
+            }
+
+            .statusBtnLabel:active:after {
+                width: 20px;
+            }
+
+
+        }
+
+
+    }
+
 }
