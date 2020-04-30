@@ -1,13 +1,13 @@
 div.contain {
     height: 100vh;
 
-    div.FarmOrder {
+    div.FarmList {
         display: inline-block;
         background-color: #FBF8EF;
         width: 87.2%;
         height: 100vh;
 
-        .FarmOrder_head {
+        .FarmList_head {
             color: #F7C845;
             margin-top: 40px;
             margin-left: 40px;
@@ -26,17 +26,19 @@ div.contain {
                 text-align: center;
                 padding: 10px;
                 color: white;
-                >a{
+
+                >a {
                     text-decoration: none;
                     color: white;
                 }
             }
         }
 
-        .FarmOrder_bottom {
+        .FarmList_bottom {
             display: block;
             height: auto;
             text-align: center;
+            margin-top: 140px;
 
             >.list_1 {
 
@@ -57,31 +59,41 @@ div.contain {
                     color: #007552;
                     margin: auto;
 
-                    >.num{
+                    >.num {
                         display: inline-block;
                         box-sizing: border-box;
-                        padding: 0 21px;
+                        padding: 0 6px;
                     }
-                    >.name{
+
+                    >.name {
                         display: inline-block;
                         box-sizing: border-box;
-                        padding: 0 90px;
+                        padding: 0 50px;
                     }
-                    >.price{
+
+                    >.price {
                         display: inline-block;
                         box-sizing: border-box;
-                        padding: 0 42px;
+                        padding: 0 28px;
                     }
-                    >.time{
+
+                    >.time {
                         display: inline-block;
                         box-sizing: border-box;
-                        padding: 0 58px;
+                        padding: 0 24px;
                     }
-                    >.puton{
+
+                    >.puton {
                         display: inline-block;
                         box-sizing: border-box;
-                        padding: 0 30px;
+                        padding: 0 20px;
                     }
+
+                    >.puton2 {
+                        display: inline-block;
+                        box-sizing: border-box;
+                        padding: 0 10px;
+                    }                
                 }
 
                 >.list_td {
@@ -93,14 +105,22 @@ div.contain {
                     box-sizing: border-box;
                     min-width: 700px;
                     margin: auto;
+
                     >p {
                         display: inline-block;
-                        padding: 10px 40px;
+                        padding: 10px 23px;
+                    }
+                    >a{
+                        color: black;
+                        text-decoration: none;
+                        margin: 0px 40px;
                     }
                 }
-                >.list_td:last-child{
+
+                >.list_td:last-child {
                     border-bottom: 1px solid #F7C845;
                 }
+
             }
 
 
@@ -109,6 +129,7 @@ div.contain {
                 margin: auto;
                 margin-top: 20px;
                 margin-left: 100px;
+
                 >ul.pagination {
                     list-style: none;
                     display: inline-block;
@@ -172,6 +193,7 @@ div.contain {
             }
         }
     }
+
 
     // div.Order>.Order_bottom>.Orderlist>.list_1>span.triangle{
     //     display: inline-block;
