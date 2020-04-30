@@ -1,5 +1,6 @@
 $bgColor: #fbf8ef;
 $maintitleColor: #f7c845;
+$mainSubtitleColor: #FFA978;
 $title1Color: #007552;
 $title2Color: #62b45a;
 $title3Color: #fbf8ef;
@@ -14,65 +15,55 @@ $contentSize: 12px;
 
 $btnBgcolor: #007552;
 $btnColor: #fbf8ef;
+$btnRadius: 10px;
+$tagBGcolor: #E2E2E2;
 
 .msContainer {
-  display: flex;
-  flex-flow: row wrap;
-  background: $bgColor;
-  height: 100vh;
-  max-width: 100%;
-  margin: 0 auto;
+  // display: flex;
+  // flex-flow: row wrap;
+  // background: $bgColor;
+  // // height: 100vh;
+  // max-width: 100%;
+  // margin: 0 auto;
+  // border: 1px solid #000;
+  // box-sizing: border-box;
 
   .msFrame {
     color: $contentColor;
     display: flex;
-    // max-width: 80%;
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
+    // height: 900px;
+    // border: 1px solid blue;
     box-sizing: border-box;
-
-    .manageTitle {
-      color: $maintitleColor;
-      font-size: $maintitleSize;
-      margin: 50px;
-    }
-
-    .addAdmin {
-      background: $btnBgcolor;
-      color: $btnColor;
-      border-radius: 10px;
-      width: 80px;
-      height: 30px;
-      margin-left: 50px;
-
-      a {
-        text-decoration:none;
-        color: $title3Color;
-
-        &:active {
-          text-decoration:none;
-        }
-        
-      }
-    }
-
-
+    overflow: scroll;
+    
     .msSideBar {
       // margin: auto;
       color: $title1Color;
       display: flex;
       background: $sidebarBgColor;
-      min-width: 25%;
+      // min-width: 25%;
+      min-width: 20%;
       height: 100%;
       box-sizing: border-box;
-      align-items: center;
+      
+      // align-items: center;
       justify-content: center;
       font-size: $title1Size;
       line-height: 3rem;
+      position: fixed;
+
+      li {
+        position: relative;
+        top: 35%;
+      }
 
       a {
-        text-decoration:none;
+        // position: relative;
+        // top: 25%;
+        text-decoration: none;
         color: $title1Color;
+
         &:hover {
           color: $title2Color;
           position: relative;
@@ -85,44 +76,57 @@ $btnColor: #fbf8ef;
         }
       }
 
+    }
 
-
-
+    .manageTitle {
+      color: $maintitleColor;
+      font-size: $maintitleSize;
+      margin: 50px 0;
+    }
+    .manageSubTitle {
+      color: $mainSubtitleColor;
+      font-size: $title1Size;
+      vertical-align: bottom;
+      margin-left: 10px;
+     
     }
 
     .AdminMainContent {
       margin: 0 auto;
       color: $contentColor;
-      display: flex;
+      display: inline-block;
       // flex-flow: row wrap;
       font-size: $contentSize;
       // width: 80%;
-      max-width: 100%;
-      height: 65%;
+      width: 60%;
+      height: 100%;
       box-sizing: border-box;
       justify-content: center;
-      margin-left: 50px;
-      margin-right: 50px;
-      margin-top: 30px;
-      // border: 1px solid #000;
+      position: fixed;
+      left: 25%;
+      
+      // border: 1px solid red;
 
-      // margin: 0 auto;
-      // color: $contentColor;
-      // display: flex;
-      // font-size: $contentSize;
-      // max-width: 70%;
-      // // width: 100%;
-      // height: 65%;
-      // box-sizing: border-box;
-      // justify-content: center;
-      // left: 280px;
-      // top: 190px;
-      // // margin-left: 50px;
-      // // margin-top: 50px;
-      // border: 1px solid #000;
+
+      .addAdmin {
+        background: $btnBgcolor;
+        color: $btnColor;
+        border-radius: $btnRadius;
+        width: auto;
+        height: 35px;
+        
+        margin-bottom: 30px;
+
+        a {
+          text-decoration: none;
+          color: $title3Color;
+        }
+      }
 
       .tableSection {
         // width: 520px;
+
+        height: 65%;
 
         .amt-header {
           display: flex;
@@ -147,6 +151,10 @@ $btnColor: #fbf8ef;
           padding: 20px 20px;
           text-align: left;
           color: $contentColor;
+
+          // &:last-child {
+          //   padding-left: 10%;
+          // }
         }
 
         td {
@@ -155,6 +163,10 @@ $btnColor: #fbf8ef;
           text-align: left;
           vertical-align: middle;
           color: $contentColor;
+
+          // &:last-child {
+          //   padding-left: 10%;
+          // }
 
           .statusBtn[type='checkbox'] {
             height: 0;
@@ -177,7 +189,7 @@ $btnColor: #fbf8ef;
           .statusBtnLabel:after {
             content: '';
             position: absolute;
-            top: 1.5px;
+            top: 2px;
             left: 2px;
             width: 15px;
             height: 15px;

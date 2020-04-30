@@ -1,14 +1,12 @@
 <template>
   <div>
+
+  <main class="AdminMainContent">
     <h1 class="manageTitle">管理員 管理中心</h1>
 
+    <router-link class="" to="/center/addAdmin"><button class="addAdmin">新增管理員</button>
+    </router-link>
   
-
-    <button class="addAdmin"><router-link class="" to="/center/addAdmin">新增管理員</router-link></button>
-    
-    
-
-    <main class="AdminMainContent">
       <section class="tableSection">
         <div class="amt-header">
           <table class="adminManageTab" cellpadding="0" cellspacing="0" border="0">
