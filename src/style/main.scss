@@ -7,21 +7,52 @@
 @import "./layout/navbar";
 @import "./layout/footer";
 // components
-@import "./components/btn-more";
+@import "./components/buttonMore";
 // pages
-@import "./pages/style";
+@import "./pages/home";
+
 @import "./pages/book";
+@import "./pages/bookIndex";
+@import "./pages/bookSpring";
 
 @import "./pages/blog-landing";
 @import "./pages/blog-post";
-@import "./pages/book";
+
 @import "./pages/shop";
 
+@import "./pages/memberlogin";
 @import "./pages/member";
-@import "./pages/memberNavbar";
-@import "./pages/order";
-@import "./pages/member";
-@import "./pages/adminLogin";
-@import "./pages/track";
 
 @import "./pages/adminLogin";
+@import "./pages/Farm";
+
+@import "./pages/FarmMember";
+@import "./pages/FarmMemberInfo";
+@import "./pages/FarmMemberupdate";
+@import "./pages/FarmMemberOrder";
+@import "./pages/FarmMemberProductUpdate";
+@import "./pages/FarmMemberBlog";
+@import "./pages/FarmMemberBlogUpdate";
+@import "./pages/FarmMemberList";
+@import "./pages/FarmMemberListUpdate";
+@import "./pages/memberUpdate";
+@import "./pages/memberOrder";
+@import "./pages/memberTrack";
+@import "./pages/memberShopping";
+
+@import "./pages/adminLogin";
+@import "./pages/adminManage";
+@import "./pages/addAdmin";
+
+@import "./pages/encyManage";
+@import "./pages/encyEdit";
+
+@import "./pages/fanManage";
+@import "./pages/sellerManage";
+
+@import "./pages/index";
+
+@import "./pages/commentReport";
+@import "./pages/blogReport";
+
+

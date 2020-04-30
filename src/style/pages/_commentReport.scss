@@ -1,0 +1,113 @@
+$bgColor: #FBF8EF;
+$maintitleColor: #F7C845;
+$title1Color: #007552;
+$title2Color: #62B45A;
+$title3Color: #FBF8EF;
+
+$sidebarBgColor: #FFD3C1;
+$contentColor: #007552;
+
+$maintitleSize: 18px;
+$title1Size: 16px;
+$title2Size: 14px;
+$contentSize:12px;
+
+
+.msContainer {
+    display: flex;
+    flex-flow: row wrap;
+    background: $bgColor;
+    height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .msFrame {
+        color: $contentColor;
+        display: flex;
+        // flex-flow: row wrap;
+        max-width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+
+
+        .msSideBar {
+            // margin: auto;
+            color: $title1Color;
+            display: flex;
+            background: $sidebarBgColor;
+            width: 220px;
+            height: 100%;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            font-size: $title1Size;
+            line-height: 3rem;
+        }
+
+        .blogComReportMainContent {
+            margin: 0 auto;
+            color: $contentColor;
+            display: flex;
+            font-size: $contentSize;
+            // width: 80%;
+            max-width: 100%;
+            height: 65%;
+            box-sizing: border-box;
+            justify-content: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 30px;
+          
+            // border: 1px solid #000;
+        }
+
+
+        .blogComReportTableSection {
+            .bcr-header {
+                display: flex;
+                background: $maintitleColor;
+            }
+
+            .bcr-content {
+                display: flex;
+                background-color: #fff;
+                height: 80%;
+                overflow-x: auto;
+                margin-top: 0px;
+            }
+
+            .blogComReportManageTab {
+                // width: 70%;
+                table-layout: fixed;
+            }
+
+            th {
+                width: 80px;
+                // padding: 20px 10px 20px 20px;
+                padding: 20px 20px;
+                text-align: left;
+                color: $contentColor;
+
+                // &:last-child {
+                //     padding-left: 5%;
+                // }
+            }
+
+            td {
+                width: 80px;
+                padding: 20px;
+                // padding: 10px 10px 10px 20px;
+                text-align: left;
+                vertical-align: middle;
+                color: $contentColor;
+
+                // &:last-child {
+                //     padding-left: 5%;
+                // }
+
+
+            }
+
+        }
+    }
+}

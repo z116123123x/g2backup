@@ -1,91 +1,211 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
 const routes = [{
-    path: '/',
+    path: '/main',
     name: 'Home',
-    component: Home,
+    component: () => import('@/views/Home.vue'),
   },
   {
-    path: '/book',
+    path: '/main/book',
     name: 'Book',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import( /* webpackChunkName: "about" */ '../views/Book.vue');
-    },
-  },
-  {
-    path: '/components',
-    name: 'Components',
-    component: function () {
-      return import('../views/Components.vue');
-    },
-  },
-  {
-    path: '/blog-landing',
-    name: 'Blog-landing',
-    component: function () {
-      return import('../views/Blog-landing.vue');
-    },
-  },
-  {
-    path: '/blog-post',
-    name: 'Blog-post',
-    component: function () {
-      return import('../views/Blog-post.vue');
-    }
-  },
-  {
-
-    path: '/shop',
-    name: 'Shop',
-    component: function () {
-      return import('../views/Shop.vue');
-    }
-  }, 
-  {
-    path: '/member',
-    name: 'Member',
-    component: function () {
-      return import('../views/Member.vue');
-    },
+    component: () => import('@/views/Book.vue'),
     children: [{
+      path: "bookIndex",
+      name: "Index",
+      component: () => import("@/views/BookIndex.vue")
+    }, {
+      path: "bookSpring",
+      name: "BookSpring",
+      component: () => import("@/views/BookSpring.vue")
+    }, {
+      path: "bookSummer",
+      name: "BookSummer",
+      component: () => import("@/views/BookSummer.vue")
+    }, {
+      path: "bookFall",
+      name: "BookFall",
+      component: () => import("@/views/BookFall.vue")
+    }, {
+      path: "bookWinter",
+      name: "BookWinter",
+      component: () => import("@/views/BookWinter.vue")
+    }, {
+      path: "bookYear",
+      name: "BookYear",
+      component: () => import("@/views/BookYear.vue")
+    }]
+  },
+  {
+    path: '/main/blog-landing',
+    name: 'Blog-landing',
+    component: () => import('@/views/Blog-landing.vue'),
+  },
+  {
+    path: '/main/blog-post',
+    name: 'Blog-post',
+    component: () => import('@/views/Blog-post.vue'),
+  },
+  {
+    path: '/main/blog-post2',
+    name: 'Blog-post2',
+    component: () => import('@/views/Blog-post2.vue'),
+  },
+  {
+    path: '/main/shop',
+    name: 'Shop',
+    component: () => import('@/views/Shop.vue'),
+  },
 
-        path: "information",
-        component: function () {
+  {
+    path: '/loginmember',
+    name: 'loginmember',
+    component: () => import('@/views/login.vue'),
+  },
 
-          return import("@/views/Information.vue");
-        }
+  {
+    path: '/main/member',
+    name: 'Member',
+    component: () => import('@/views/Member.vue'),
+    children: [{
+        // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
+        path: 'information',
+        name: 'Information',
+        component: () => import('@/views/MemberInfo.vue'),
       },
       {
+        path: 'update',
+        name: 'Update',
+        component: () => import('@/views/MemberUpdate.vue'),
+      },
+      {
+        path: 'order',
+        name: 'Order',
+        component: () => import('@/views/MemberOrder.vue'),
+      },
+      {
+        path: 'track',
+        name: 'Track',
+        component: () => import('@/views/MemberTrack.vue'),
+      },
+      {
+        path: 'shopping',
+        name: 'Shopping',
+        component: () => import('@/views/MemberShopping.vue'),
+      },
+      {
+        path: 'checkInfo',
+        name: 'CheckInfo',
+        component: () => import('@/views/MemberCheckInfo.vue'),
+      },
+      {
+        path: 'farmRegistered',
+        name: 'FarmRegistered',
+        component: () => import('@/views/FarmRegistered.vue'),
+      },
+    ],
+  },
 
-        path: "order",
-        component: () => {
+  {
+    path: "/farm",
+    name: "Farm",
+    component: () => import("@/views/FarmMember.vue"),
+    children: [{
+      path: "info",
+      name: "Info",
+      component: () => import("@/views/FarmMemberInfo.vue"),
 
-          return import("@/views/Order.vue");
-        }
-
-      }
-    ]
+    },
+    {
+      path: "update",
+      name: "Update",
+      component: () => import("@/views/FarmMemberupdate.vue"),
+    },
+    {
+      path: "order",
+      name: "Order",
+      component: () => import("@/views/FarmMemberOrder.vue"),
+    },
+    {
+      path: "Product",
+      name: "Product",
+      component: () => import("@/views/FarmMemberProductUpdate.vue"),
+    },
+    {
+      path: "blog",
+      name: "Blog",
+      component: () => import("@/views/FarmMemberBlog.vue"),
+    },
+    {
+      path: "blogupdate",
+      name: "BlogUpdate",
+      component: () => import("@/views/FarmMemberBlogUpdate.vue"),
+    },
+    {
+      path: "list",
+      name: "List",
+      component: () => import("@/views/FarmMemberList.vue"),
+    },
+    {
+      path: "listupdate",
+      name: "ListUpdate",
+      component: () => import("@/views/FarmMemberListUpdate.vue"),
+    },
+  ]
   },
   {
-    path: '/adminLogin',
+    path: '/admin',
     name: 'AdminLogin',
-    component: function () {
-      return import('../views/AdminLogin.vue');
-    }
+    component: () => import('@/views/AdminLogin.vue'),
   },
   {
-    path: '/adminLogin',
-    name: 'AdminLogin',
-    component: function () {
-      return import('../views/AdminLogin.vue');
-    }
+    path: '/center',
+    name: 'Center',
+    component: () => import('@/views/AdminCenter.vue'),
+    children: [{
+        path: 'manage',
+        name: 'Manage',
+        component: () => import('@/views/AdminManage.vue'),
+      },
+      {
+        path: 'addAdmin',
+        name: 'AddAdmin',
+        component: () => import('@/views/AddAdmin.vue'),
+      },
+      {
+        path: 'fan',
+        name: 'Fan',
+        component: () => import('@/views/AdminFanManage.vue'),
+      },
+      {
+        path: 'seller',
+        name: 'Seller',
+        component: () => import('@/views/AdminSellerManage.vue'),
+      },
+      {
+        path: 'ency',
+        name: 'Ency',
+        component: () => import('@/views/AdminEncyManage.vue'),
+      },
+      {
+        path: 'encyEdit',
+        name: 'EncyEdit',
+        component: () => import('@/views/AdminEncyEdit.vue'),
+
+      },
+      {
+        path: 'blog',
+        name: 'Blog',
+        component: () => import('@/views/AdminBlog.vue'),
+      },
+      {
+        path: 'comment',
+        name: 'Comment',
+        component: () => import('@/views/AdminComment.vue'),
+      },
+    ],
   },
 ];
 
