@@ -31,18 +31,28 @@ import waterpear01 from "@/assets/waterpear.png";
 import waterpearline01 from "@/assets/waterpearline.png";
 import fruitbox01 from "@/assets/fruitbox.png";
 import fruitboxline01 from "@/assets/fruitboxline.png";
-import { Tween } from "gsap/gsap-core";
 
 window.addEventListener("load", () => {
   gsap.registerPlugin(MotionPathPlugin);
+
   let renderer, scene, camera;
 
   function init() {
     scene = new THREE.Scene();
 
     // 相機設定與 OrbitControls
+
+    let camerafov = 60;
+
+    if (window.innerWidth <= 574) {
+      camerafov = 90;
+    } else if (window.innerWidth <= 1199) {
+      camerafov = 80;
+    } else {
+      camerafov = 60;
+    }
     camera = new THREE.PerspectiveCamera(
-      60,
+      camerafov,
       window.innerWidth / window.innerHeight,
       0.1,
       2800
@@ -536,7 +546,7 @@ window.addEventListener("load", () => {
         ease: Power1.easeOut,
       },
       {
-        z: -105,
+        z: -130,
         repeat: -1,
         yoyo: true,
         ease: Power1.easeOut,
@@ -1024,6 +1034,9 @@ window.addEventListener("load", () => {
 
       if (window.pageYOffset > 5500 && window.pageYOffset < 7500) {
         $("#knowledge_container").fadeIn();
+        $(".home_title::before").css({
+          bottom: "-19px",
+        });
       } else {
         $("#knowledge_container").fadeOut();
       }
@@ -1042,10 +1055,23 @@ window.addEventListener("load", () => {
       } else {
         $("#member_container").fadeOut();
       }
+
+      if (window.pageYOffset > 30000) {
+        $(".home_footer").fadeIn();
+      } else {
+        $(".home_footer").fadeOut();
+      }
+
+      if (window.pageYOffset > 32000) {
+        $("#scroll_btn").html("&#9650;");
+      } else {
+        $("#scroll_btn").html("&#9660;");
+      }
     });
 
     update();
   }
+  init();
 
   function render() {
     requestAnimationFrame(render);
@@ -1054,7 +1080,9 @@ window.addEventListener("load", () => {
   }
 
   window.addEventListener("resize", function() {
-    if (window.innerWidth <= 1199) {
+    if (window.innerWidth <= 574) {
+      camera.fov = 90;
+    } else if (window.innerWidth <= 1199) {
       camera.fov = 80;
     } else {
       camera.fov = 60;
@@ -1068,7 +1096,7 @@ window.addEventListener("load", () => {
 
   // home.addEventListener("click", init);
   // home.addEventListener("click", render);
-  init();
+
   render();
 
   $(function() {
@@ -1148,7 +1176,7 @@ window.addEventListener("load", () => {
           { scrollTop: 24900 },
           (24900 - window.pageYOffset) / 2
         );
-        setTimeout(btnStop, 24900 - window.pageYOffset);
+        setTimeout(btnStop, (24900 - window.pageYOffset) / 2);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       } else if (window.pageYOffset >= 24900 && window.pageYOffset < 31900) {
@@ -1159,7 +1187,8 @@ window.addEventListener("load", () => {
         setTimeout(btnStop, (33000 - window.pageYOffset) / 2);
 
         $("html").on("scroll mousewheel touchmove", stopScrolling);
-      } else if (window.pageYOffset > 32000) {
+        $("#scroll_btn").html("&#9650;");
+      } else {
         $("html").animate({ scrollTop: 0 }, 5000);
         setTimeout(btnStop, 5000);
         $("html").on("scroll mousewheel touchmove", stopScrolling);
