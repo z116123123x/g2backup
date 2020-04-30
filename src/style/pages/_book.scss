@@ -114,7 +114,9 @@
             }
             
             &::after{
-               content: "";
+               content: "scroll";
+               padding: 10px;
+               font-size: 1.3rem;
                position: absolute;
                width: 60px;
                height: 60px;
@@ -127,7 +129,12 @@
                animation-name: jump;
                animation-duration: 1.5s;
                animation-iteration-count: infinite;
-            }
+               @include rwd(small){
+                  animation: none;
+                  
+                  transform: rotate(270deg);
+               }
+            }          
          }
 
          //middle
