@@ -28,7 +28,7 @@
 
       </div>
 
-      <div class="info">
+      <div class="Farminfo">
         <ul>
           <li>
             <router-link to="/farm/update">個人資料修改</router-link>
