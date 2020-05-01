@@ -26,7 +26,7 @@
                 <td>色情內容</td>
                 <td>xxx</td>
                 <td>2020-04-28</td>
-                <td><select>
+                <td><select class="comReStatus">
                     <option>未處理</option>
                     <option>已刪除</option>
                     <option>未通過</option>
@@ -38,7 +38,7 @@
                 <td>色情內容</td>
                 <td>xxx</td>
                 <td>2020-04-28</td>
-                <td><select>
+                <td><select class="comReStatus">
                     <option>未處理</option>
                     <option>已刪除</option>
                     <option>未通過</option>
@@ -50,7 +50,7 @@
                 <td>色情內容</td>
                 <td>xxx</td>
                 <td>2020-04-28</td>
-                <td><select>
+                <td><select class="comReStatus">
                     <option>未處理</option>
                     <option>已刪除</option>
                     <option>未通過</option>

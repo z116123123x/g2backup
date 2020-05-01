@@ -1,4 +1,4 @@
-.EncyEdit {
+.encyEdit {
     margin: 0 auto;
     color: $contentColor;
     display: inline-block;
@@ -27,8 +27,7 @@
     // margin-right: 4%;
 
 
-    .EncyEditTab {
-        table-layout: fixed;
+    .encyEditTab {
         display: inline-block;
         width: 100%;
         height: auto; //
@@ -49,20 +48,34 @@
             text-align: left;
             vertical-align: middle;
             color: $contentColor;
-            // background-color: #fff;
+            background-color: #fff;
             // border: 1px solid green;
 
-            #ecnyEditSubmit {
-                background-color: $btnBgcolor;
-                color: $btnColor;
-                border-radius: $btnRadius;
-                width: 60px;
-                height: 30px;
-                // position: relative;
-                // left: 80%;
-                margin-left: 85%;
+            .encyEditBtnSec {
+                display: inline-block;
+                margin-left: 70%;
+
+                #encyEditCancel, #ecnyEditSubmit {
+                    color: $btnColor;
+                    border-radius: $btnRadius;
+                    width: 60px;
+                    height: 30px;
+                }
+
+                #encyEditCancel
+                 {
+                    background-color: $title2Color;
+                    margin: 0px 5px;
+                }
                 
+                #ecnyEditSubmit {
+                    background-color: $btnBgcolor;
+                    margin: 0px 5px;
+                  
+                }
+
             }
+
 
             #encyTitle {
                 resize: none;
@@ -84,15 +97,13 @@
                 overflow: scroll;
                 padding: 10px;
             }
+            
         }
 
-        // .encyContent {}
         .encyTag {
             border-radius: 25px;
             background-color: $tagBGcolor;
             margin: 3px;
-
-
         }
 
     }
