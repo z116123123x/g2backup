@@ -1,0 +1,68 @@
+.form-content {
+
+    @mixin box {
+        
+        border: 3px solid $yellow;
+
+        padding: 1.6rem 5%;
+
+        box-sizing: border-box;
+
+        p {
+            position: relative;
+            font-size: 1.6rem;
+            line-height: 3;
+
+            &.required::before {
+
+                content: "*";
+                position: absolute;
+
+                top: 50%;
+                left: -10px;
+
+                transform: translateY(-60%);
+
+                font-size: 1.6rem;
+                line-height: 2;
+
+                color: red;
+            }
+
+            input[type="text"] {
+
+                width: 50%;
+
+                text-align: center;
+
+                border: 1.5px solid $min-color;
+
+                &:focus {
+
+                    background: rgba($min-color, .2);
+                }
+            }
+        }
+    }
+
+    .info-box {
+
+        flex-grow: 1;
+        max-height: 350px;
+
+        @include box();
+    }
+
+    .pay-box {
+
+        height: 200px;
+
+        @include box();
+    }
+
+    .btn-box {
+
+        height: 40px;
+        line-height: 40px;
+    }
+}

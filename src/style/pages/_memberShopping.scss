@@ -10,6 +10,8 @@
         display: flex;
         flex-direction: column;
 
+        height: 100%;
+
         .step-box {
 
             height: 175px;
@@ -25,6 +27,8 @@
                 display: flex;
                 flex-direction: column;
 
+                height: 100%;
+
                 box-sizing: border-box;
 
                 .seller {
@@ -37,6 +41,8 @@
                 }
 
                 .title {
+
+                    margin-top: 1.6rem;
 
                     font-size: 1.6rem;
                     line-height: 2;
