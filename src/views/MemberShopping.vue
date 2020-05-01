@@ -8,9 +8,7 @@
           <div v-for="data in arr" :key="data.seller">
             <p style="font-size:16px;line-height:2;">果農：{{data.seller}}</p>
             <div class="tr head-bar">
-              <div class="td check-box">
-                <input type="checkbox" name="choose" />
-              </div>
+              <div class="td check-box"></div>
               <div class="td img">圖片</div>
               <div class="td name">名稱</div>
               <div class="td price">單價</div>
@@ -20,12 +18,17 @@
             </div>
             <div class="tr" v-for="item in data.item" :key="item.id">
               <div class="td check-box">
-                <input
-                  :value="data.seller + item.id"
-                  v-model="status"
-                  @change="checkbox(data, item)"
-                  type="checkbox"
-                />
+                <div class="input">
+                  <input
+                    :id="'checkbox' + item.id"
+                    class="checkbox"
+                    :value="data.seller + item.id"
+                    v-model="status"
+                    @change="checkbox(data, item)"
+                    type="checkbox"
+                  />
+                  <label :for="'checkbox' + item.id"></label>
+                </div>
               </div>
               <div class="td img">
                 <img src="@/assets/shop/item_001.png" />
@@ -118,7 +121,6 @@ export default {
       }
     },
     checkbox: function(data, item) {
-
       let index = this.cart.indexOf(item);
 
       if (index < 0) {

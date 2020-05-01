@@ -38,10 +38,12 @@
                     display: flex;
                     align-items: center;
 
+                    height: 75px;
                     line-height: 75px;
 
                     &.head-bar {
 
+                        height: 32px;
                         line-height: 32px;
                         background: $orange-light;
                     }
@@ -52,17 +54,11 @@
 
                         text-align: center;
 
-                        border-right: 1px solid $min-color;
-                        border-top: 1px solid $min-color;
-                        border-bottom: 1px solid $min-color;
-
                         box-sizing: border-box;
 
                         &.check-box {
 
                             width: 5%;
-
-                            border-left: 1px solid $min-color;
                         }
 
                         &.img {
@@ -190,8 +186,7 @@
                 font-size: 1.6rem;
                 color: black;
 
-                border: 1px solid $min-color;
-                background: $orange;
+                background: rgba($orange, .75);
             }
         }
     }
