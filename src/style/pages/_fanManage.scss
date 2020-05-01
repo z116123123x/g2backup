@@ -1,46 +1,33 @@
-$bgColor: #FBF8EF;
-$maintitleColor: #F7C845;
-$title1Color: #007552;
-$title2Color: #62B45A;
-$title3Color: #FBF8EF;
-
-$sidebarBgColor: #FFD3C1;
-$contentColor: #007552;
-
-$maintitleSize: 18px;
-$title1Size: 16px;
-$title2Size: 14px;
-$contentSize:12px;
-
-
-
 .fanManageMainContent {
     // margin: 0 auto;
     // color: $contentColor;
     // display: flex;
     // // flex-flow: row wrap;
     // font-size: $contentSize;
+    // // width: 80%;
     // max-width: 100%;
     // height: 65%;
     // box-sizing: border-box;
     // justify-content: center;
-    // left: 280px;
-    // top: 120px;
-    // border: 1px solid #000;
+    // margin-left: 50px;
+    // margin-right: 50px;
+    // margin-top: 30px;
 
     margin: 0 auto;
     color: $contentColor;
-    display: flex;
+    display: inline-block;
     // flex-flow: row wrap;
     font-size: $contentSize;
     // width: 80%;
-    max-width: 100%;
-    height: 65%;
+    min-width: 70%;
+    height: 100%;
     box-sizing: border-box;
     justify-content: center;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 30px;
+    position: fixed;
+    left: 25%;
+    margin-right: 4%;
+    
+    // border: 1px solid red;
 
 }
 

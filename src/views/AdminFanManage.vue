@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1 class="manageTitle">果粉 管理中心</h1>
-
     <main class="fanManageMainContent">
-       <section class="aFanTableSection">
+      <h1 class="manageTitle">果粉 管理中心</h1>
+      <section class="aFanTableSection">
         <div class="aft-header">
           <table class="fanManageTab" cellpadding="0" cellspacing="0" border="0">
             <thead>
@@ -23,14 +22,19 @@
                 <td>xxxxx</td>
                 <td>我是帳號</td>
                 <td>我是信箱</td>
-                <td><input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label></td>
-          
+                <td>
+                  <input class="statusBtn" type="checkbox" id="switch" />
+                  <label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
               </tr>
               <tr>
-                 <td>xxxxx</td>
+                <td>xxxxx</td>
                 <td>我是帳號</td>
                 <td>我是信箱</td>
-                <td><input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label></td>
+                <td>
+                  <input class="statusBtn" type="checkbox" id="switch" />
+                  <label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
               </tr>
               <tr>
                 <td>xxxxx</td>
@@ -38,7 +42,6 @@
                 <td>我是信箱</td>
                 <td></td>
               </tr>
-              
             </tbody>
           </table>
         </div>
