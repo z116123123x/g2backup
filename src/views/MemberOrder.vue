@@ -38,24 +38,24 @@
                     <div class="list_td2">
                         <p>xxxxx</p>
                         <p>台南麻豆文旦</p>
-                        <p>$50</p>
-                        <p>10</p>
+                        <p class="td2_price">$50</p>
+                        <p class="td2_num">10</p>
                         <p>$500</p>
                     </div>
 
-                    <div class="list_td2">
+                    <div class="list_td3">
                         <p>xxxxx</p>
                         <p>本月熱賣!屏東香蕉</p>
-                        <p>$50</p>
-                        <p>10</p>
+                        <p class="td3_price">$50</p>
+                        <p class="td3_num">10</p>
                         <p>$500</p>
                     </div>
 
-                    <div class="list_td2">
+                    <div class="list_td3">
                         <p>xxxxx</p>
                         <p>保證有甜!屏東甘蔗</p>
-                        <p>$60</p>
-                        <p>10</p>
+                        <p class="td3_price">$60</p>
+                        <p class="td3_num">10</p>
                         <p>$600</p>
                     </div>
                     <div class="total">

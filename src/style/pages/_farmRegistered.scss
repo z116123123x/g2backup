@@ -1,28 +1,24 @@
-div.MemberUpdate_right {
+div.Registered{
     display: inline-block;
     color: #007552;
     background-color: #FBF8EF;
     width: 87.2%;
-    height: 100vh;
+    height: 100%;
     vertical-align: top;
-
-    .MemberUpdate_right_head {
+    >.Registered_head{
         color: #F7C845;
         margin-top: 40px;
         margin-left: 40px;
         font-size: 30px;
     }
-
-    .MemberUpdate_right_bottom {
+    >.Registered_bottom{
         display: block;
         text-align: center;
-
-        >.bottom_form {
+        >.bottom_form{
             margin-top: 180px;
             line-height: 2;
             font-size: 18px;
-            
-            >.update_left {
+            >.Registered_left{
                 vertical-align: top;
                 display: inline-block;
                 background-color: #F7C845;
@@ -41,8 +37,7 @@ div.MemberUpdate_right {
                     }
                 }
             }
-
-            >.update_right {
+            >.Registered_right{
                 display: inline-block;
                 position: relative;
                 text-align: start;
@@ -51,7 +46,7 @@ div.MemberUpdate_right {
                 padding-right: 145px;
                 height: 500px;
                 width: 260px;
-                line-height: 3.3;
+                line-height: 3.14;
                 @include rwd(medium){
                     width: 200px;
                     line-height: 3.3;
@@ -63,8 +58,7 @@ div.MemberUpdate_right {
                 >label {
                     margin-right: 10px;
                 }
-
-                >.submit_button {
+                >.submit_button{
                     position: absolute;
                     border-radius: 5px;
                     background-color: #007552;
