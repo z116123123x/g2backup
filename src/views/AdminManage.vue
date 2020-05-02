@@ -13,7 +13,9 @@
             <thead>
               <tr>
                 <th>編號</th>
+                <th>姓名</th>
                 <th>帳號</th>
+                <th>密碼</th>
                 <th>狀態</th>
               </tr>
             </thead>
@@ -25,60 +27,102 @@
             <tbody>
               <tr>
                 <td>xxxxx</td>
+                <td>嘻嘻</td>
                 <td>admin001</td>
+                <td>iamgenius1</td>
+                <td>
+                <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
+              </tr>
+            <tr>
+              <td>xxxxx</td>
+                <td>嘻嘻</td>
+                <td>admin001</td>
+                <td>iamgenius1</td>
+                <td>
+                <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
+              </tr>
+             <tr>
+                <td>xxxxx</td>
+                <td>嘻嘻</td>
+                <td>admin001</td>
+                <td>iamgenius1</td>
                 <td>
                 <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
                 </td>
               </tr>
               <tr>
                 <td>xxxxx</td>
-                <td>admin002</td>
-                <td><input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label></td>
+                <td>嘻嘻</td>
+                <td>admin001</td>
+                <td>iamgenius1</td>
+                <td>
+                <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
+              </tr>
+               <tr>
+                <td>xxxxx</td>
+                <td>嘻嘻</td>
+                <td>admin001</td>
+                <td>iamgenius1</td>
+                <td>
+                <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
+              </tr>
+               <tr>
+                <td>xxxxx</td>
+                <td>嘻嘻</td>
+                <td>admin001</td>
+                <td>iamgenius1</td>
+                <td>
+                <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
+              </tr>
+               <tr>
+               <td>xxxxx</td>
+                <td>嘻嘻</td>
+                <td>admin001</td>
+                <td>iamgenius1</td>
+                <td>
+                <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
+              </tr>
+               <tr>
+                <td>xxxxx</td>
+                <td>嘻嘻</td>
+                <td>admin001</td>
+                <td>iamgenius1</td>
+                <td>
+                <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
+              </tr>
+               <tr>
+                <td>xxxxx</td>
+                <td>嘻嘻</td>
+                <td>admin001</td>
+                <td>iamgenius1</td>
+                <td>
+                <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
+              </tr>
+               <tr>
+               <td>xxxxx</td>
+                <td>嘻嘻</td>
+                <td>admin001</td>
+                <td>iamgenius1</td>
+                <td>
+                <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
               </tr>
               <tr>
-                <td>xxxxx</td>
-                <td>admin003</td>
-                <td><input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label></td>
-              </tr>
-               <tr>
-                <td>xxxxx</td>
-                <td>admin003</td>
-                <td></td>
-              </tr>
-               <tr>
-                <td>xxxxx</td>
-                <td>admin003</td>
-                <td></td>
-              </tr>
-               <tr>
-                <td>xxxxx</td>
-                <td>admin003</td>
-                <td></td>
-              </tr>
-               <tr>
-                <td>xxxxx</td>
-                <td>admin003</td>
-                <td></td>
-              </tr>
-               <tr>
-                <td>xxxxx</td>
-                <td>admin003</td>
-                <td></td>
-              </tr>
-               <tr>
-                <td>xxxxx</td>
-                <td>admin003</td>
-                <td></td>
-              </tr>
-               <tr>
-                <td>xxxxx</td>
-                <td>admin003</td>
-                <td></td>
-              </tr>
-               <tr>
-                <td>xxxxx</td>
-                <td>admin003</td>
-                <td></td>
+               <td>xxxxx</td>
+                <td>嘻嘻</td>
+                <td>admin001</td>
+                <td>iamgenius1</td>
+                <td>
+                <input class="statusBtn" type="checkbox" id="switch" /><label class="statusBtnLabel" for="switch">Toggle</label>
+                </td>
               </tr>
             </tbody>
           </table>
