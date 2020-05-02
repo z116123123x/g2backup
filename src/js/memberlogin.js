@@ -16,7 +16,8 @@ window.addEventListener("load", function(){
  
 
 
-})
+});
+
 $('#signup').click(function() {
   $(this).hide();
 });
