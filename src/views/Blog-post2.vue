@@ -71,39 +71,52 @@
           <div>
             <div>
               <div><!--sister--></div>
+              <img src="@/assets/blog-img/post/yello-something.png" alt="" />
             </div>
-            <div>
-              <img src="@/assets/blog-img/blog-someoneshead.png" />
+            <div class="blog-post2-msg-card">
+              <div>
+                <img src="@/assets/blog-img/blog-someoneshead.png" />
+              </div>
+              <div>
+                <p>howhowhasnofriend</p>
+                <p>2020-4-14 12:00</p>
+              </div>
+              <div>
+                炒飯不好吃炒飯不好吃...
+              </div>
+              <div>
+                <img src="@/assets/blog-img/blog-report.png" />
+              </div>
             </div>
-            <div>howhowhasnofriend</div>
-            <div>2020-4-14 12:00</div>
-            <div>
-              炒飯不好吃炒飯不好吃...
+            <div class="blog-post2-msg-card">
+              <div>
+                <img src="@/assets/blog-img/blog-someoneshead.png" />
+              </div>
+              <div>
+                <p>howhowhasnofriend</p>
+                <p>2020-4-14 12:00</p>
+              </div>
+              <div>
+                炒飯不好吃炒飯不好吃...
+              </div>
+              <div>
+                <img src="@/assets/blog-img/blog-report.png" />
+              </div>
             </div>
-            <div>
-              <img src="@/assets/blog-img/blog-report.png" />
-            </div>
-            <div>
-              <img src="@/assets/blog-img/blog-someoneshead.png" />
-            </div>
-            <div>howhowhasnofriend</div>
-            <div>2020-4-14 12:00</div>
-            <div>
-              炒飯不好吃炒飯不好吃...
-            </div>
-            <div>
-              <img src="@/assets/blog-img/blog-report.png" />
-            </div>
-            <div>
-              <img src="@/assets/blog-img/blog-someoneshead.png" />
-            </div>
-            <div>howhowhasnofriend</div>
-            <div>2020-4-14 12:00</div>
-            <div>
-              炒飯不好吃炒飯不好吃...
-            </div>
-            <div>
-              <img src="@/assets/blog-img/blog-report.png" />
+            <div class="blog-post2-msg-card">
+              <div>
+                <img src="@/assets/blog-img/blog-someoneshead.png" />
+              </div>
+              <div>
+                <p>howhowhasnofriend</p>
+                <p>2020-4-14 12:00</p>
+              </div>
+              <div>
+                炒飯不好吃炒飯不好吃...
+              </div>
+              <div>
+                <img src="@/assets/blog-img/blog-report.png" />
+              </div>
             </div>
             <div>
               <form action="" method="get">
@@ -572,9 +585,10 @@
 }
 .blogPost2OuterOuter {
   border: solid #007552 5px;
-  width: 90%;
+  // background-color: #000;
+  width: 85%;
   margin-left: 3.2%;
-  padding-left: 3%;
+  padding-left: 7%;
   @media (max-width: 1300px) {
     width: 88%;
     margin-left: 2%;
@@ -584,14 +598,17 @@
 .blogPost2Outer {
   display: flex;
   flex-direction: column;
+  // background-color: #000;
 }
 .blogPost2Main {
+  // background-color: #000;
   display: grid;
-  grid-template-columns: 6fr 4.2fr;
+  grid-template-columns: 1fr 2fr;
   // column-gap: 10%;
   // width: 95%;
   // margin-left: 2.5%;
   // height: 50vw;
+  // padding-bottom: 5%;
   @media (max-width: 1300px) {
     grid-template-columns: 1fr;
   }
@@ -599,17 +616,17 @@
     // border: 4px solid #000;
     padding-top: 4%;
     // border-right: #000 2px solid;
-    padding-right: 10%;
+    // padding-right: 10%;
     display: grid;
     grid-template-columns: 1.2fr 1.6fr 1.5fr 4.5fr;
-    grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.4fr 10fr;
+    grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.4fr 5fr;
     grid-template-areas:
-      'aa1 aa1 aa1 aa1'
-      'aa2 aa2 aa2 aa2 '
-      'aa3 aa4 aa6 aa7'
-      'aa3 aa5 aa6 aa7'
-      'aa8 aa8 aa8 aa8'
-      'aa9 aa9 aa9 aa9';
+      "aa1 aa1 aa1 aa1"
+      "aa2 aa2 aa2 aa2 "
+      "aa3 aa4 aa6 aa7"
+      "aa3 aa5 aa6 aa7"
+      "aa8 aa8 aa8 aa8"
+      "aa9 aa9 aa9 aa9";
     @media (max-width: 1300px) {
       padding-right: 0%;
       grid-template-columns: 0.7fr 1fr 1fr 4.5fr;
@@ -622,12 +639,12 @@
     }
     @media (max-width: 576px) {
       grid-template-areas:
-        'aa1 aa1 aa1 aa1'
-        'aa2 aa2 aa2 aa2 '
-        'aa3 aa4 aa6 aa6'
-        'aa3 aa5 aa7 aa7'
-        'aa8 aa8 aa8 aa8'
-        'aa9 aa9 aa9 aa9';
+        "aa1 aa1 aa1 aa1"
+        "aa2 aa2 aa2 aa2 "
+        "aa3 aa4 aa6 aa6"
+        "aa3 aa5 aa7 aa7"
+        "aa8 aa8 aa8 aa8"
+        "aa9 aa9 aa9 aa9";
       grid-template-columns: 1fr 1fr 1fr 1fr;
       // border: solid 1px red;
     }
@@ -642,9 +659,10 @@
     }
     > div:nth-child(2) {
       //親子輕旅行 台北白石湖採草莓
+      white-space: nowrap;
       font-size: 30px;
       grid-area: aa2;
-      border-bottom: #007552 solid 1px;
+      border-bottom: #007552 solid 2px;
       align-self: center;
       padding-bottom: 4%;
       line-height: 1.5;
@@ -665,7 +683,7 @@
     }
     > div:nth-child(4) {
       //暱稱
-      font-size: 20px;
+      font-size: 16px;
       align-self: center;
       padding-top: 0px;
       grid-area: aa4;
@@ -680,7 +698,7 @@
     }
     > div:nth-child(6) {
       //追蹤
-      font-size: 15px;
+      font-size: 16px;
       align-self: start;
       padding-top: 20px;
       grid-area: aa6;
@@ -693,13 +711,13 @@
       > span {
         background-color: #007552;
         color: #fff;
-        padding: 3px 15px;
+        padding: 1px 15px;
         border-radius: 20px;
       }
     }
     > div:nth-child(7) {
       //tags
-      font-size: 20px;
+      font-size: 16px;
       align-self: start;
       justify-self: end;
       padding-top: 10px;
@@ -727,13 +745,13 @@
     }
     > div:nth-child(9) {
       //文章
-      font-size: 25px;
+      font-size: 16px;
       grid-area: aa9;
       column-count: 2;
       // column-gap: ;
       letter-spacing: 1.5px;
-      line-height: 1.4;
-      column-gap: 11%;
+      line-height: 1.5;
+      column-gap: 7rem;
       padding-top: 30px;
       @media (max-width: 1500px) {
         column-count: 1;
@@ -741,261 +759,57 @@
     }
   }
   > div:nth-child(2) {
-    display: grid;
-    grid-template-columns: 1fr 3fr 4fr 1fr;
-    grid-template-rows: 10fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 6fr;
-    padding-right: 10%;
-    grid-template-areas:
-      'aa1 aa1 aa1 aa1'
-      'aa2 aa3 aa5 aa6'
-      'aa2 aa4 aa5 aa6'
-      'aa7 aa8 aa10 aa11'
-      'aa7 aa9 aa10 aa11'
-      'aa12 aa13 aa15 aa16'
-      'aa12 aa14 aa15 aa16'
-      'aa17 aa17 aa17 aa17';
-    // border: #000000 solid 4px;
-    @media (max-width: 1650px) {
-      grid-template-areas:
-        'aa1 aa1 aa1 aa1'
-        'aa2 aa3 aa4 aa6'
-        'aa2 aa5 aa5 aa6'
-        'aa7 aa8 aa9 aa11'
-        'aa7 aa10 aa10 aa11'
-        'aa12 aa13 aa14 aa16'
-        'aa12 aa15 aa15 aa16'
-        'aa17 aa17 aa17 aa17';
-      padding-right: 0%;
-    }
+    padding-left: 20%;
     > div:nth-child(1) {
+        position: relative;
       //妹妹
-      grid-area: aa1;
-      width: 100%;
-      position: relative;
-      padding-top: 5%;
-      // right: 10%;
-      justify-self: center;
-      align-self: center;
       > div:nth-child(1) {
-        // border: #007552 solid 2px;
-
-        width: 100%;
         position: relative;
         // left: 10%;
-        padding-top: 100%;
-        background: url('../assets/blog-img/post/blog_aabbcc.svg') no-repeat
+        z-index: 2;
+        width: 70%;
+        padding-top: 70%;
+        background: url("../assets/blog-img/post/blog_aabbcc.svg") no-repeat
           center center;
         background-size: cover;
-        -webkit-mask: url('../assets/blog-img/post/blog_aabbcc.svg') no-repeat
+        -webkit-mask: url("../assets/blog-img/post/blog_aabbcc.svg") no-repeat
           center center;
-        mask: url('../assets/blog-img/post/blog_aabbcc.svg') no-repeat center
+        mask: url("../assets/blog-img/post/blog_aabbcc.svg") no-repeat center
           center;
       }
-    }
-    > div:nth-child(2) {
-      //留言一頭貼
-      grid-area: aa2;
-      align-self: start;
-      justify-self: end;
-      margin-top: 30px;
-      // border: red 2px solid;
-    }
-    > div:nth-child(3) {
-      //留言一ID
-      grid-area: aa3;
-      justify-self: start;
-      padding-left: 10px;
-      align-self: center;
-      margin-top: 30px;
-      font-size: 15px;
-    }
-    > div:nth-child(4) {
-      //留言一時間
-      padding-left: 10px;
-      font-size: 15px;
-      justify-self: start;
-      align-self: center;
-      grid-area: aa4;
-      @media (max-width: 1650px) {
-        margin-top: 30px;
-      }
-    }
-    > div:nth-child(5) {
-      //留言一留言
-      font-size: 20px;
-      justify-self: start;
-      align-self: center;
-      margin-top: 30px;
-      grid-area: aa5;
-      &::before {
-        content: '';
-        border-left: #a0a0a0 solid 1px;
-        position: relative;
-        right: 10%;
-      }
-      @media (max-width: 1650px) {
-        margin-top: 0px;
-        margin-left: 10px;
-        &::before {
-          display: none;
-        }
-      }
-    }
-    > div:nth-child(6) {
-      //留言一檢舉
-      align-self: center;
-      justify-self: center;
-      margin-top: 30px;
-      grid-area: aa6;
-    }
-    > div:nth-child(7) {
-      //留言二頭貼
-      align-self: start;
-      justify-self: end;
-      margin-top: 30px;
-      grid-area: aa7;
-    }
-    > div:nth-child(8) {
-      //留言二暱稱
-      justify-self: start;
-      padding-left: 10px;
-      align-self: center;
-      margin-top: 30px;
-      font-size: 15px;
-      grid-area: aa8;
-    }
-    > div:nth-child(9) {
-      //留言二時間
-      padding-left: 10px;
-      font-size: 15px;
-      justify-self: start;
-      align-self: center;
-      grid-area: aa9;
-      @media (max-width: 1650px) {
-        margin-top: 30px;
-      }
-    }
-    > div:nth-child(10) {
-      //留言二留言
-      font-size: 20px;
-      justify-self: start;
-      align-self: center;
-      margin-top: 30px;
-      grid-area: aa10;
-      &::before {
-        content: '';
-        border-left: #a0a0a0 solid 1px;
-        position: relative;
-        right: 10%;
-      }
-      @media (max-width: 1650px) {
-        margin-top: 0px;
-        margin-left: 10px;
-        &::before {
-          display: none;
-        }
-      }
-    }
-    > div:nth-child(11) {
-      //留言二檢舉
-      align-self: center;
-      justify-self: center;
-      margin-top: 30px;
-      grid-area: aa11;
-    }
-    > div:nth-child(12) {
-      //留言三頭貼
-      align-self: start;
-      justify-self: end;
-      margin-top: 30px;
-      grid-area: aa12;
-    }
-    > div:nth-child(13) {
-      //留言三暱稱
-      justify-self: start;
-      padding-left: 10px;
-      align-self: center;
-      margin-top: 30px;
-      font-size: 15px;
-      grid-area: aa13;
-    }
-    > div:nth-child(14) {
-      //留言三時間
-      padding-left: 10px;
-      font-size: 15px;
-      justify-self: start;
-      align-self: center;
-      grid-area: aa14;
-      @media (max-width: 1650px) {
-        margin-top: 30px;
-      }
-    }
-    > div:nth-child(15) {
-      //留言三留言
-      font-size: 20px;
-      justify-self: start;
-      align-self: center;
-      margin-top: 30px;
-      grid-area: aa15;
-      &::before {
-        content: '';
-        border-left: #a0a0a0 solid 1px;
-        position: relative;
-        right: 10%;
-      }
-      @media (max-width: 1650px) {
-        margin-top: 0px;
-        margin-left: 10px;
-        &::before {
-          display: none;
-        }
-      }
-    }
-    > div:nth-child(16) {
-      //留言三檢舉
-      align-self: center;
-      justify-self: center;
-      margin-top: 30px;
-      grid-area: aa16;
-    }
-    > div:nth-child(17) {
-      //留言區
-      position: relative;
-      grid-area: aa17;
-      margin-top: 40px;
-      text-align: center;
-      &::before {
-        content: '';
-        border-top: solid #a0a0a0 1px;
+      > img:nth-child(2) {
+        width: 50%;
+        z-index: 1;
         position: absolute;
-        top: -6%;
-        left: 3%;
-        width: 100%;
+        top: 6%;
+        left: 35%;
       }
-      > form {
-        // width: 100%;
-        // border: solid red 10px;
-        > label {
-          font-size: 20px;
-          > textarea {
-            width: 80%;
-            height: 100px;
-            margin-bottom: 5%;
-          }
-        }
-        > .blogPost2ButtonMore {
-          width: 20%;
-          font-size: 20px;
-          position: relative;
-          left: 5%;
-        }
-      }
+    }
+    > .blog-post2-msg-card {
+    display: flex;
+    background-color: #fff;
+    width: 50rem;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    >div:nth-child(2){
+      margin-left: 10px;
+    }
+    >div:nth-child(3){
+      margin-left: 20px;
+      font-size: 16px;
+      flex-grow: 1;
+    }
+    >div:nth-child(4){
+      margin-right: 5px;
     }
   }
+  }
+  
 }
 .blog-post-tri {
   //select
-  background: url('../assets/blog-img/post/triangle.png');
+  background: url("../assets/blog-img/post/triangle.png");
   background-repeat: no-repeat;
   background-position: 95% 60%;
   font-size: 15px;
@@ -1011,6 +825,7 @@
   padding-top: 1%;
   width: 95%;
   margin-left: 2.5%;
+  // background-color: #000;
   > div:nth-child(1) {
     // background-color: #000;
     width: 95%;
@@ -1065,6 +880,7 @@
 .blog-post-container2 {
   // border: solid #007552 3px;
   // width: 90%;
+  // background-color: #000;
   // margin-left: 3%;
   display: grid;
   grid-template-columns: 1fr 0.3fr;
@@ -1164,10 +980,10 @@
       border-bottom: #a0a0a0 solid 1px;
       // border: chocolate 3px solid;
       grid-template-areas:
-        'aa1 aa2 aa2 aa2'
-        'aa1 aa3 aa3 aa3'
-        'aa1 aa4 aa5 aa7'
-        'aa1 aa4 aa6 aa7';
+        "aa1 aa2 aa2 aa2"
+        "aa1 aa3 aa3 aa3"
+        "aa1 aa4 aa5 aa7"
+        "aa1 aa4 aa6 aa7";
       > div:nth-child(1) {
         grid-area: aa1;
         font-size: 80px;
@@ -1221,7 +1037,7 @@
     > div:nth-child(1) {
       position: relative;
       &::before {
-        content: '';
+        content: "";
         z-index: 2;
         position: absolute;
         top: 30px;
@@ -1230,7 +1046,7 @@
         width: 80%;
       }
       &::after {
-        content: '';
+        content: "";
         z-index: 2;
         position: absolute;
         bottom: 15%;

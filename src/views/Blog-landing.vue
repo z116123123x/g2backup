@@ -244,6 +244,9 @@
     margin-left: 2.5%;
     display: grid;
     grid-template-columns: 4fr 1fr;
+    @media (max-width: 1500px) {
+      grid-template-columns: 3fr 1fr;
+    }
     @media (max-width: 1300px) {
       grid-template-columns: 2fr 1fr;
       padding-bottom: 1%;
@@ -261,7 +264,8 @@
           width: 70%;
         }
         @media (max-width: 992px) {
-          width: 80%;
+          width: 60%;
+          margin-bottom: 2%;
         }
         @media (max-width: 768px) {
           width: 90%;
@@ -304,17 +308,24 @@
   margin-top: 1%;
   display: grid;
   grid-template-columns: 0.25fr 1fr;
+  @media (max-width: 1600px) {
+    grid-template-columns: 0.3fr 1fr;
+  }
   @media (max-width: 1300px) {
-    & {
+  margin-left: 2%;
       grid-template-columns: 1fr;
       grid-template-rows: 0.04fr 1fr;
-    }
   }
   @media (max-width: 768px) {
-    & {
+  margin-left: 1.5%;
       grid-template-columns: 1fr;
       grid-template-rows: 0.04fr 1fr;
-    }
+  }
+  @media (max-width: 576px) {
+  margin-left: 1%;
+  }
+  @media (max-width: 350px) {
+  margin-left: 0.5%;
   }
   > div:nth-child(1) {
     //會員區1
@@ -332,6 +343,14 @@
       display: grid;
       grid-template-columns: 0.5fr 1.2fr 1fr;
       padding: 30% 50px 0px 50px;
+      @media (max-width: 1500px)  {
+      padding: 30% 10px 0px 10px;
+      }
+      @media (max-width: 1300px)  {
+      border-bottom:solid #007552 2px ;
+      padding: 30% 10px 10px 10px;
+
+      }
       .blog-landing-aunt {
         width: 100%;
       }
@@ -341,7 +360,8 @@
           // background-color: #000;
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-around;
+          justify-content: center;
+          
           .blog-landing-aunt {
             width: 100%;
           }
@@ -503,14 +523,6 @@
         // text-align: center;
         // background-color: #000;
         position: relative;
-        &::before {
-          content: '';
-          border-bottom: solid 2px #007552;
-          width: 70%;
-          position: absolute;
-          bottom: -7%;
-          right: 35%;
-        }
         > img:nth-child(1) {
           //妹妹採水果圖
           width: 70%;
@@ -550,12 +562,12 @@
         > div:nth-child(1),
         div:nth-child(2) {
           //文章一、二區
-          font-size: 20px;
+          font-size: 16px;
           column-count: 2;
           // padding: 10rem 0rem 10rem 10rem;
-          letter-spacing: 1px;
+          letter-spacing: 1.5px;
           line-height: 1.5;
-          column-gap: 12rem;
+          column-gap: 10rem;
           padding-top: 24%;
           padding-right: 15%;
           @media (max-width: 1500px) {
@@ -569,12 +581,39 @@
           //文章一區
           // margin-bottom: 10rem;
           position: relative;
-          &::after {
-            content: '';
+          &::before {
+            content: "";
+            width: 90%;
+            border-bottom: solid #007552 2px;
             position: absolute;
-            bottom: 0%;
-            right: 0%;
-            border-bottom: solid #007552 2000px;
+            top: 5%;
+            right: 20%;
+            @media (max-width: 1500px) {
+              right: 5%;
+              width: 90%;
+            }
+            @media (max-width: 576px) {
+              top: 10px;
+              right: 5%;
+              width: 90%;
+            }
+          }
+          &::after {
+            content: "";
+            width: 75%;
+            border-bottom: solid #007552 2px;
+            position: absolute;
+            bottom: -10%;
+            right: 30%;
+            @media (max-width: 1500px) {
+              right: 5%;
+              width: 90%;
+            }
+            @media (max-width: 576px) {
+              bottom: -10px;
+              right: 5%;
+              width: 90%;
+            }
           }
         }
         > div:nth-child(2) {
@@ -589,29 +628,28 @@
         // padding-top: 10%;
         right: 0%;
         bottom: 15%;
+        @media (max-width: 1700px) {
+            // position: relative;
+            right: -2.5%;
+            bottom: 5%;
+        }
         @media (max-width: 1500px) {
-          & {
             position: relative;
-            right: 0%;
+            right: -2.5%;
             bottom: 0%;
-          }
         }
         > div:nth-child(1) {
           text-align: right;
           // position: relative;
           @media (max-width: 1500px) {
-            & {
               text-align: left;
               // display: none;
-            }
           }
           > img:nth-child(1) {
             // border: solid #000 3px;
             // height: 100%;
-            @media (max-width: 1500px) {
-              & {
+            @media (max-width: 1500px) {//梯形
                 display: none;
-              }
             }
           }
           > div:nth-child(2) {
@@ -648,12 +686,29 @@
     }
     > div:nth-child(3) {
       //讚數區
-      border-top: 5px solid #007552;
-      border-bottom: 5px solid #007552;
+      // border-top: 5px solid #007552;
+      // border-bottom: 5px solid #007552;
       font-size: 20px;
       padding-left: 10%;
       padding-top: 20px;
       padding-bottom: 20px;
+      position: relative;
+      &::after {
+        content: "";
+        width: 90%;
+        border-top: 2px solid #007552;
+        position: absolute;
+        top: 0%;
+        right: 5%;
+      }
+      &::before {
+        content: "";
+        width: 90%;
+        border-top: 2px solid #007552;
+        position: absolute;
+        bottom: 0%;
+        right: 5%;
+      }
       > div:nth-child(1) {
         display: flex;
         align-items: center;
@@ -690,8 +745,8 @@
           grid-template-columns: 15% 75% 10%;
           grid-template-rows: repeat(2, 1fr);
           grid-template-areas:
-            'aa1 aa2 aa4'
-            'aa1 aa3 aa4';
+            "aa1 aa2 aa4"
+            "aa1 aa3 aa4";
         }
         > div:nth-child(1) {
           // background-color: #000;
@@ -713,7 +768,7 @@
             grid-area: aa2;
           }
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             top: 0px;
             right: 10%;
@@ -723,14 +778,18 @@
               display: none;
             }
           }
-          @media (max-width: 992px) {
+          @media (max-width: 576px) {
             &::before {
-              content: '';
+              content: "";
               position: absolute;
               top: 3px;
               left: -10px;
               border-right: solid 1px #a0a0a0;
               height: 30px;
+              @media (max-width: 576px) {
+              left: -5px;
+                
+              }
             }
           }
         }
