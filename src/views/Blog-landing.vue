@@ -243,7 +243,7 @@
     width: 95%;
     margin-left: 2.5%;
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 4fr 1fr;
     @media (max-width: 1300px) {
       grid-template-columns: 2fr 1fr;
       padding-bottom: 1%;
@@ -255,7 +255,7 @@
     > div:nth-child(1) {
       > img:nth-child(1) {
         // border: olive 10px solid;
-        width: 40%;
+        width: 30%;
         // transform: scale(0.4);
         @media (max-width: 1300px) {
           width: 70%;
@@ -272,24 +272,26 @@
     font-size: 20px;
     > div:nth-child(2) {
       // background-color: #000;
-      gap: 10px;
+      // gap: 10px;
       // justify-items: center;
       display: grid;
       position: relative;
-      top: 30%;
-      height: 60%;
-      grid-template-columns: 1fr;
+      // top: 30%;
+      // height: 60%;
+      grid-template-rows: 1fr 1fr;
+      align-self: center;
       > div:nth-child(1) {
         display: flex;
-        // grid-template-columns: 0.9fr 1.4fr 1fr;
+        // background-color: #000;
         text-align: center;
         justify-content: space-around;
-        padding-bottom: 5px;
-        border-bottom: solid #007552 1px;
+        padding-bottom: 10px;
+        border-bottom: solid #007552 3px;
       }
       > div:nth-child(2) {
-        border-bottom: solid #007552 1px;
-        padding-bottom: 5px;
+        // border-bottom: solid #007552 1px;
+        align-self: center;
+        padding-top: 10px;
         text-align: center;
       }
     }
@@ -329,8 +331,7 @@
       text-align: center;
       display: grid;
       grid-template-columns: 0.5fr 1.2fr 1fr;
-      padding: 20px;
-      padding-top: 30%;
+      padding: 30% 50px 0px 50px;
       .blog-landing-aunt {
         width: 100%;
       }
@@ -351,18 +352,23 @@
         }
       }
       > div:nth-child(2) {
+        // background-color: #000;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
         > div:nth-child(1) {
+          align-self: end;
           > span:nth-child(1) {
             //蓬蓬草莓姨span
             padding: 3px;
             font-size: 15px;
-            margin-bottom: 10px;
+            // margin-bottom: 10px;
             display: inline-block;
           }
         }
         > div:nth-child(2) {
+          align-self: start;
           > img {
-            width: 20px; //star
+            width: 15px; //star
           }
         }
       }
@@ -379,6 +385,10 @@
         }
         > div:nth-child(1) {
           align-self: end;
+          > span:nth-child(1) {
+            // background-color: #000;
+            font-size: 16px;
+          }
         }
         > div:nth-child(2) {
           align-self: start;
@@ -386,8 +396,10 @@
       }
       > div:nth-child(3) {
         padding-top: 15px;
+        justify-self: end;
         > span {
-          padding: 5px 10px;
+          //追蹤
+          padding: 3px 15px;
           background-color: #007552;
           border-radius: 20px;
           color: #fff;
@@ -396,7 +408,7 @@
       }
       .blog-landing-greenline {
         border-bottom: 1px solid #007552;
-        padding-top: 10px;
+        padding-top: 20px;
         @media (max-width: 1300px) {
           & {
             display: none;
@@ -425,7 +437,7 @@
         margin-top: 10px;
         text-decoration: none;
         color: black;
-        font-size: 15px;
+        font-size: 16px;
       }
     }
   }
@@ -437,7 +449,7 @@
       display: grid;
       grid-template-columns: 1fr;
       // border: goldenrod 3px solid;
-      padding-left: 5%;
+      padding-left: 10%;
       @media (max-width: 1500px) {
         padding-left: 5%;
         padding-right: 5%;
@@ -455,7 +467,7 @@
           //tags
           font-size: 16px;
           justify-self: end;
-          padding-right: 20%;
+          padding-right: 60%;
           @media (max-width: 1500px) {
             padding-right: 0%;
           }
@@ -480,7 +492,7 @@
         padding-top: 30px;
         //圖片bendingbar2，collection
         > img:nth-child(1) {
-          width: 90%;
+          width: 70%;
           @media (max-width: 1500px) {
             width: 100%;
           }
@@ -489,8 +501,21 @@
       > div:nth-child(5) {
         padding-top: 30px;
         // text-align: center;
+        // background-color: #000;
+        position: relative;
+        &::before {
+          content: '';
+          border-bottom: solid 2px #007552;
+          width: 70%;
+          position: absolute;
+          bottom: -7%;
+          right: 35%;
+        }
         > img:nth-child(1) {
-          width: 90%;
+          //妹妹採水果圖
+          width: 70%;
+          position: relative;
+
           @media (max-width: 1500px) {
             width: 100%;
           }
@@ -502,7 +527,7 @@
       // border: solid rgb(199, 72, 72) 5px;
       // padding-top: 10%;
       padding-bottom: 5%;
-      padding-left: 5%;
+      padding-left: 10%;
       @media (max-width: 1500px) {
         padding-left: 0%;
       }
@@ -528,10 +553,11 @@
           font-size: 20px;
           column-count: 2;
           // padding: 10rem 0rem 10rem 10rem;
-          letter-spacing: 1.5px;
+          letter-spacing: 1px;
           line-height: 1.5;
-          column-gap: 10rem;
-          padding-top: 22%;
+          column-gap: 12rem;
+          padding-top: 24%;
+          padding-right: 15%;
           @media (max-width: 1500px) {
             padding: 10% 5% 0% 5%;
           }
@@ -542,6 +568,14 @@
         > div:nth-child(1) {
           //文章一區
           // margin-bottom: 10rem;
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
+            border-bottom: solid #007552 2000px;
+          }
         }
         > div:nth-child(2) {
           //文章二區
@@ -553,8 +587,8 @@
         // border: solid #000 3px;
         position: absolute;
         // padding-top: 10%;
-        right: -2.5%;
-        bottom: 5%;
+        right: 0%;
+        bottom: 15%;
         @media (max-width: 1500px) {
           & {
             position: relative;
@@ -720,7 +754,7 @@
     }
     > div:nth-child(5) {
       //form
-      padding-top: 50px;
+      padding-top: 100px;
       padding-left: 10%;
       // background-color: #000;
       > form:nth-child(1) {
@@ -728,8 +762,8 @@
           font-size: 20px;
           > textarea:nth-child(1) {
             margin-left: 3%;
-            width: 40%;
-            height: 200px;
+            width: 45%;
+            height: 150px;
             @media (max-width: 992px) {
               width: 70%;
             }
