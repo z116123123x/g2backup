@@ -6,11 +6,9 @@
         <div class="form-content">
           <p class="title">購物籃明細：</p>
           <div v-for="data in arr" :key="data.seller">
-            <p style="font-size:16px;line-height:2;">果農：{{data.seller}}</p>
+            <p class="seller">{{data.seller}}</p>
             <div class="tr head-bar">
-              <div class="td check-box">
-                <input type="checkbox" name="choose" />
-              </div>
+              <div class="td check-box"></div>
               <div class="td img">圖片</div>
               <div class="td name">名稱</div>
               <div class="td price">單價</div>
@@ -20,12 +18,17 @@
             </div>
             <div class="tr" v-for="item in data.item" :key="item.id">
               <div class="td check-box">
-                <input
-                  :value="data.seller + item.id"
-                  v-model="status"
-                  @change="checkbox(data, item)"
-                  type="checkbox"
-                />
+                <div class="input">
+                  <input
+                    :id="'checkbox' + item.id"
+                    class="checkbox"
+                    :value="data.seller + item.id"
+                    v-model="status"
+                    @change="checkbox(data, item)"
+                    type="checkbox"
+                  />
+                  <label :for="'checkbox' + item.id"></label>
+                </div>
               </div>
               <div class="td img">
                 <img src="@/assets/shop/item_001.png" />
@@ -34,7 +37,7 @@
               <div class="td price">$ {{item.price}}</div>
               <div class="td amount">
                 <div class="input">
-                  <input type="number" v-model="item.amount" />
+                  <input type="number" v-model="item.amount" @keydown="setAmount(data, item)" />
                   <div class="button">
                     <button @click="addAmount(data, item)">+</button>
                     <button @click="subAmount(data, item)">-</button>
@@ -91,6 +94,10 @@ export default {
     // }
   },
   methods: {
+    setAmount: function(data, item) {
+
+
+    },
     addAmount: function(data, item) {
       item.amount++;
 
@@ -118,7 +125,6 @@ export default {
       }
     },
     checkbox: function(data, item) {
-
       let index = this.cart.indexOf(item);
 
       if (index < 0) {

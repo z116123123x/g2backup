@@ -1,13 +1,13 @@
 <template>
-    <div class="right">
-        <div class="right_head">
-            <div class="right_head_text">
+    <div class="Registered">
+        <div class="Registered_head">
+            <div class="Registeredt_head_text">
                 <h2>申請成為果農</h2>
             </div>
         </div>
-        <div class="right_bottom">
+        <div class="Registered_bottom">
             <div class="bottom_form">
-                <div class="person_left">
+                <div class="Registered_left">
                     <ul>
                         <li>果粉編號</li>
                         <li>帳號</li>
@@ -24,7 +24,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="person_right">
+                <div class="Registered_right">
                     <p>XXX</p>
                     <p>XXX</p>
                     <p>某某某</p>

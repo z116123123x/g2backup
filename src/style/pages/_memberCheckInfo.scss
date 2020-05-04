@@ -1,0 +1,106 @@
+.form-content {
+
+    @mixin box {
+        
+        border: 3px solid $yellow;
+
+        padding: 1.6rem 5%;
+
+        box-sizing: border-box;
+
+        p {
+            position: relative;
+            display: flex;
+
+            align-items: center;
+
+            margin: 2rem 0;
+
+            width: 50%;
+
+            font-size: 1.6rem;
+            line-height: 1.5;
+
+            @include rwd(medium){
+
+                width: 75%;
+            }
+
+            &.required::before {
+
+                content: "*";
+                position: absolute;
+
+                top: 50%;
+                left: -10px;
+
+                transform: translateY(-60%);
+
+                font-size: 1.6rem;
+                line-height: 2;
+
+                color: red;
+            }
+
+            input[type="text"] {
+
+                flex-grow: 1;
+
+                text-align: center;
+
+                border: 1.5px solid rgba($min-color, .75);
+
+                &:focus {
+
+                    background: rgba($min-color, .2);
+                }
+            }
+
+            .select {
+
+                flex-grow: 1;
+
+                border: 1.5px solid rgba($min-color, .75);
+
+                &:nth-child(2) {
+
+                    margin-left: 2.5%;
+                }
+            }
+        }
+    }
+
+    .info-box {
+
+        flex-grow: 1;
+        max-height: 350px;
+
+        @include box();
+    }
+
+    .pay-box {
+
+        height: 200px;
+
+        @include box();
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        p {
+
+            margin: 1rem 0;
+
+            label {
+
+                margin-right: 2.5%;
+            }
+        }
+    }
+
+    .btn-box {
+
+        height: 40px;
+        line-height: 40px;
+    }
+}

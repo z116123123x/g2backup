@@ -1,11 +1,11 @@
 <template>
-    <div class="right">
-        <div class="right_head">
-            <div class="right_head_text">
+    <div class="information">
+        <div class="information_head">
+            <div class="information_head_text">
                 <h2>個人資料</h2>
             </div>
         </div>
-        <div class="right_bottom">
+        <div class="information_bottom">
             <div class="bottom_form">
                 <div class="person_left">
                     <ul>
@@ -20,7 +20,7 @@
                         <li>e-mail</li>
                     </ul>
                 </div>
-                <div class="person_right">
+                <div class="information_right">
                     <p>XXX</p>
                     <p>fruitee</p>
                     <p>XXXXXXXXXX</p>

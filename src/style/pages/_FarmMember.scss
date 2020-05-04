@@ -48,12 +48,12 @@ div.contain {
             }
         }
 
-        >.info {
+        >.Farminfo {
             margin-bottom: 40px;
 
             >ul {
                 >li {
-                    display: inline-block;
+                    display: block;
                     text-align: start;
                     line-height: 2;
                     margin-left: 45px;
@@ -74,10 +74,16 @@ div.contain {
             padding-top: 10px;
             padding-bottom: 10px;
             padding-left: 10px;
+            padding-right: 10px;
             margin-left: 50px;
             >.farm{
                 text-align: center;
+                >a{
+                    text-decoration: none;
+                            color: white;
+                }
             }
+            
         }
     }
 }
