@@ -4,8 +4,8 @@
     <div class="blog-landing-container">
       <div>
         <div>
-          <!--水果日誌LOGO-->
-          <img src="@/assets/blog-img/blog-logo.png" />
+          <!--果農日誌LOGO-->
+          <img src="@/assets/blog-img/blog_logo.svg" />
         </div>
         <div>
           <div>
@@ -69,12 +69,15 @@
       <div>
         <div>
           <div>
-            <img src="@/assets/blog-img/blog-tag.png" alt="" />
-            <span> 草莓 </span>
-            <img src="@/assets/blog-img/blog-tag.png" alt="" />
-            <span> 旅遊日誌 </span>
+            <div>2020-04-10</div>
+            <div>
+              <img src="@/assets/blog-img/blog-tag.png" />
+              <span> 草莓 </span>
+              <img src="@/assets/blog-img/blog-tag.png" />
+              <span> 旅遊日誌 </span>
+            </div>
           </div>
-          <div>2020-04-10</div>
+          <div></div>
           <div>
             <span>“ 親子輕旅行 台北白石湖採草莓、踏青一日遊”</span>
           </div>
@@ -240,27 +243,32 @@
     width: 95%;
     margin-left: 2.5%;
     display: grid;
-    grid-template-columns: 78% 22%;
+    grid-template-columns: 75% 25%;
+    @media (max-width: 1300px) {
+      grid-template-columns: 2fr 1fr;
+      padding-bottom: 1%;
+    }
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 30px;
+    }
     > div:nth-child(1) {
       > img:nth-child(1) {
         // border: olive 10px solid;
+        width: 40%;
+        // transform: scale(0.4);
+        @media (max-width: 1300px) {
+          width: 70%;
+        }
+        @media (max-width: 992px) {
+          width: 80%;
+        }
         @media (max-width: 768px) {
-          width: 100%;
+          width: 90%;
         }
       }
     }
-    @media (max-width: 1300px) {
-      & {
-        grid-template-columns: 2fr 1fr;
-        padding-bottom: 1%;
-      }
-    }
-    @media (max-width: 768px) {
-      & {
-        grid-template-columns: repeat(1, 1fr);
-        padding-bottom: 10%;
-      }
-    }
+
     font-size: 20px;
     > div:nth-child(2) {
       // background-color: #000;
@@ -312,7 +320,7 @@
     border-right: solid #007552 5px;
     @media (max-width: 1300px) {
       & {
-    border-right: solid #007552 0px;
+        border-right: solid #007552 0px;
         border-bottom: solid #007552 5px;
       }
     }
@@ -436,22 +444,32 @@
       }
       > div:nth-child(1) {
         //tags
-        justify-self: end;
-        padding: 10px 100px 0px 0px;
-        font-size: 16px;
-        // background-color: #000;
-        @media (max-width: 1500px) {
-          padding: 10px 10px 0px 0px;
+        display: grid;
+        padding-top: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        > div:nth-child(1) {
+          //2020-04-10
+          font-size: 16px;
+        }
+        > div:nth-child(2) {
+          //tags
+          font-size: 16px;
+          justify-self: end;
+          padding-right: 20%;
+          @media (max-width: 1500px) {
+            padding-right: 0%;
+          }
         }
       }
-      > div:nth-child(2) {
-        font-size: 16px; //2020-04-10
-      }
+      // > div:nth-child(2) {
+      //   font-size: 16px; //2020-04-10
+      // }
       > div:nth-child(3) {
         padding-top: 10px;
         > span:nth-child(1) {
           font-size: 30px;
           background-color: #ffd3c1; //親子輕旅行 台北白石湖採草莓
+          line-height: 1.5;
           @media (max-width: 768px) {
             font-size: 25px;
           }
