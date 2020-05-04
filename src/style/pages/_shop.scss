@@ -336,6 +336,9 @@ $color5: #ffa978;
 
     .hot-words {
       text-align: left;
+      @include rwd(small) {
+        text-align: center;
+      }
       .hot-words_list {
         padding-left: 10px;
         margin-top: 11px;
@@ -400,7 +403,6 @@ $color5: #ffa978;
 
 //下拉式選單
       .dropdown-box-flex {
-        margin-left: 20px;
         padding: 0 40px;
         .dropdown-box {
           display: inline-block;
@@ -409,7 +411,6 @@ $color5: #ffa978;
           #btnHamburger{
             background-color: transparent;
             border: none;
-            margin-left: -55px;
           }
           .dropdown-content {
             margin-top: 10px;
