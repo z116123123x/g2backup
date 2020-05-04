@@ -1,12 +1,12 @@
 <template>
   <nav id="nav">
     <router-link id="home" to="/main">
-      <img class="logo" src="@/assets/navbar_logo.svg" alt="logo" />
+      <img class="logo" src="@/assets/headerLOGO.svg" alt="logo" />
     </router-link>
     <div class="member_status">
       <span class="farmer_pic"></span>
       <span>果農</span>
-      <span>登出</span>
+      <router-link to="/loginmember">登出</router-link>
     </div>
     <div class="cart">
       <router-link class="page" to="/main/member/shopping"></router-link>
@@ -20,7 +20,7 @@
       <ul>
         <li class="dropdown">
           <div class="title">
-            <router-link class="page" to="/main/book">
+            <router-link class="page" to="/main/book/bookIndex">
               <div class="title_pic">
                 <img src="@/assets/knowledge.svg" alt />
               </div>

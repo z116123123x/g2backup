@@ -520,7 +520,7 @@
   </main>
 </template>
 <script>
-import "../js/shop";
+// import "../js/shop";
 export default {};
 
 function showHideHam() {

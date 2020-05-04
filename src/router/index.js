@@ -3,8 +3,7 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: '/main',
     name: 'Home',
     component: () => import('@/views/Home.vue'),
@@ -13,6 +12,31 @@ const routes = [
     path: '/main/book',
     name: 'Book',
     component: () => import('@/views/Book.vue'),
+    children: [{
+      path: "bookIndex",
+      name: "Index",
+      component: () => import("@/views/BookIndex.vue")
+    }, {
+      path: "bookSpring",
+      name: "BookSpring",
+      component: () => import("@/views/BookSpring.vue")
+    }, {
+      path: "bookSummer",
+      name: "BookSummer",
+      component: () => import("@/views/BookSummer.vue")
+    }, {
+      path: "bookFall",
+      name: "BookFall",
+      component: () => import("@/views/BookFall.vue")
+    }, {
+      path: "bookWinter",
+      name: "BookWinter",
+      component: () => import("@/views/BookWinter.vue")
+    }, {
+      path: "bookYear",
+      name: "BookYear",
+      component: () => import("@/views/BookYear.vue")
+    }]
   },
   {
     path: '/main/blog-landing',
@@ -34,12 +58,18 @@ const routes = [
     name: 'Shop',
     component: () => import('@/views/Shop.vue'),
   },
+
+  {
+    path: '/loginmember',
+    name: 'loginmember',
+    component: () => import('@/views/login.vue'),
+  },
+
   {
     path: '/main/member',
     name: 'Member',
     component: () => import('@/views/Member.vue'),
-    children: [
-      {
+    children: [{
         // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
         path: 'information',
         name: 'Information',
@@ -103,7 +133,27 @@ const routes = [
       name: "Product",
       component: () => import("@/views/FarmMemberProductUpdate.vue"),
     },
-    ]
+    {
+      path: "blog",
+      name: "Blog",
+      component: () => import("@/views/FarmMemberBlog.vue"),
+    },
+    {
+      path: "blogupdate",
+      name: "BlogUpdate",
+      component: () => import("@/views/FarmMemberBlogUpdate.vue"),
+    },
+    {
+      path: "list",
+      name: "List",
+      component: () => import("@/views/FarmMemberList.vue"),
+    },
+    {
+      path: "listupdate",
+      name: "ListUpdate",
+      component: () => import("@/views/FarmMemberListUpdate.vue"),
+    },
+  ]
   },
   {
     path: '/admin',
@@ -114,8 +164,7 @@ const routes = [
     path: '/center',
     name: 'Center',
     component: () => import('@/views/AdminCenter.vue'),
-    children: [
-      {
+    children: [{
         path: 'manage',
         name: 'Manage',
         component: () => import('@/views/AdminManage.vue'),

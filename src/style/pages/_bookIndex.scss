@@ -1,0 +1,275 @@
+.fruit_index {
+    // border: 1px solid blue;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    // padding: 20px;
+    position: relative;
+    //display: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        width: 300px;
+        height: 50px;
+        background-image: url("../assets/book_img/content.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .bk_content {
+        // border: 1px solid red;
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: top;
+        text-align: center;
+        transition: .5s;
+
+        @mixin imgOpacity {
+
+            content: "";
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        &:nth-child(1) {
+            background-color: #f38e8e8a;
+            position: relative;
+            transition: 2s;
+
+            &:hover {
+                background-color: #ff1e1e8a;
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+
+                @include imgOpacity();
+                background-image: url("../assets/book_img/bk_ct_flowers.svg");
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: #f6d16b8a;
+            position: relative;
+
+            &:hover {
+                background-color: #ffbf108a;
+
+                &::after {
+
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+
+                @include imgOpacity();
+                background-image: url("../assets/book_img/bk_ct_binbos.svg");
+            }
+        }
+
+        &:nth-child(3) {
+            background-color: #e19b6b8a;
+            position: relative;
+
+            // transition: ease-in;
+            &:hover {
+                background-color: #ff71138a;
+
+                &::after {
+
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+
+                @include imgOpacity();
+                background-image: url("../assets/book_img/bk_ct_leafs.svg");
+
+            }
+        }
+
+        &:nth-child(4) {
+            background-color: #87b0e78a;
+            position: relative;
+
+            &:hover {
+                background-color: #177bfd8a;
+
+                &::after {
+
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+
+                @include imgOpacity();
+                background-image: url("../assets/book_img/bk_ct_snows.svg");
+            }
+        }
+
+        &:nth-child(5) {
+            background-color: #c4ce7c8a;
+            position: relative;
+
+            &:hover {
+                background-color: #e1fc198a;
+
+                &::after {
+
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+
+                @include imgOpacity();
+                background-image: url("../assets/book_img/bk_ct_leafs_years.svg");
+            }
+        }
+
+        width: 20%;
+        height: 100%;
+
+        h5 {
+            //border: 1px solid red;
+            font-size: 1.6rem;
+            color: $min-color;
+            font-weight: bolder;
+            margin: 50% 0 10% 0;
+        }
+
+        .bk_content_img {
+            //border: 1px solid red;
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        ul {
+            //border: 1px solid green;
+            margin-top: 10%;
+
+            li {
+                // border: 1px solid red;
+                text-align: center;
+                font-size: 1.4rem;
+                font-weight: bolder;
+                padding: 10px;
+                color: #808080;
+
+
+                &:hover {
+                    color: $min-color;
+                    margin: 0 auto;
+                    width: 70px;
+                    background-color: #f3c452;
+                    border-radius: 5px;
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    @include rwd(small) {
+        .bk_content {
+            display: block;
+            width: 100%;
+            height: 20%;
+            text-align: left;
+
+            h5 {
+
+                font-size: 3rem;
+                writing-mode: vertical-lr;
+                margin: 3% 20px;
+                opacity: .5;
+                vertical-align: top;
+                display: inline-block;
+            }
+
+            .bk_content_img {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 5%;
+
+            }
+
+
+            ul {
+                display: inline-block;
+                margin: 5% 20px;
+                vertical-align: middle;
+
+                li {
+                    display: inline-block;
+
+                    &:hover {
+                        width: auto;
+                    }
+
+                }
+            }
+        }
+    }
+
+    @include rwd(mobile) {
+        .bk_content {
+            height: 18%;
+
+            h5 {
+                margin: 10% 20px;
+            }
+            .bk_content_img {
+                margin-top: 15%;
+            }
+            ul {
+                margin: 10% 20px;
+
+                li {
+                    padding: 5px;
+                    margin: 10% 0;
+                }
+            }
+        }
+    }
+}
+
+@include rwd (small) {
+    .fruit_index {
+        &::before {
+            right: 0;
+            top: 10%;
+            transform: rotate(270deg);
+            width: 120px;
+            height: 50px;
+            background-color: #fff;
+        }
+    }
+}
+
+@include rwd (mobile) {
+    .fruit_index {
+        overflow: hidden;
+
+        &::before {
+            display: none;
+        }
+    }
+}

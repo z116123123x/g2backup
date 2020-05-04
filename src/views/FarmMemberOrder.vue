@@ -25,114 +25,84 @@
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
                     <div class="list_td">
                         <p>xxxx</p>
                         <p>慶中秋!台南玉璽文旦...</p>
                         <p>200</p>
                         <p>2020-04-16 11:22</p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
+                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
                     </div>
 
                 </div>

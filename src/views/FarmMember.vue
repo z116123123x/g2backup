@@ -28,7 +28,7 @@
 
       </div>
 
-      <div class="info">
+      <div class="Farminfo">
         <ul>
           <li>
             <router-link to="/farm/update">個人資料修改</router-link>
@@ -37,10 +37,10 @@
             <router-link to="/farm/order">商品管理</router-link>
           </li>
           <li>
-            <router-link to="/member/track">日誌管理</router-link>
+            <router-link to="/farm/blog">日誌管理</router-link>
           </li>
           <li>
-            <router-link to="/member/track">訂單查詢</router-link>
+            <router-link to="/farm/list">訂單查詢</router-link>
           </li>
         </ul>
       </div>

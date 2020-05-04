@@ -5,34 +5,69 @@
   text-align: center;
   perspective: 200px;
   position: relative;
-  .front_LOGO {
+  img {
+    width: 200px;
     padding-top: 100px;
-    padding-bottom: 150px;
-    img {
-      width: 300px;
-    }
   }
-  .front_button {
-    button {
-      color: #666;
-      font-size: 5rem;
-      font-weight: 800;
-      outline: none;
-      border: 3px solid #f7c852;
-      background-color: #ffd4c3;
-      border-radius: 50%;
-      width: 300px;
-      height: 300px;
-    }
-    .back_button {
-      margin-left: 300px;
-    }
+  .front_background {
+    width: 100%;
+    background-image: url("./../assets/index_img/front_background.svg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 25%;
+    z-index: -1;
   }
-  .front_container_cloud {
-    .front_page_cloud {
-      width: 100%;
-      transform: translateZ(100px) translateY(-70px);
-      height: 300px;
+  .btn_left {
+    width: 250px;
+    height: 250px;
+    background-color: #ffd4c3;
+    color: #666;
+    font-weight: 800;
+    border-radius: 50%;
+    font-size: 4rem;
+    border: 2px solid #007453;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    perspective: 100px;
+    overflow: hidden;
+
+    @include rwd(mobile) {
+      width: 150px;
+      height: 150px;
+    }
+
+    // .waterpear_top {
+    //   background-size: cover;
+    //   background-image: url("./../assets/index_img/waterpear_top.svg");
+    //   width: 150px;
+    //   height: 55px;
+    //   position: absolute;
+    //   top: -50px;
+    //   left: 100px;
+
+    //   z-index: -2;
+    // }
+  }
+  .btn_right {
+    width: 250px;
+    height: 250px;
+    background-color: #ffd4c3;
+    color: #666;
+    border-radius: 50%;
+    font-size: 4rem;
+    font-weight: 800;
+    border: 2px solid #007453;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    @include rwd(mobile) {
+      width: 150px;
+      height: 150px;
     }
   }
 }

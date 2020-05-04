@@ -1,0 +1,111 @@
+body{
+    background-color: #FBF8EF;
+}
+
+.login{
+    margin: auto;
+    width: 650px;
+    height: 550px;
+    position: relative;
+}
+
+.welcome{
+    background-color: #62B45A;
+    width: 800px;
+    height: 415px;
+    position: absolute;
+    top: 40%;
+    border-radius: 5px;
+    >.leftbox,.rightbox{
+        position: absolute;
+        width: 50%;
+        transition: 1s all ease;
+        >h1{
+            text-align: center;
+            margin-top: 40%;
+            font-size: 2em;
+        }
+    }
+    
+    >.leftbox{
+        left: -2%;
+        >img.loginbutton{
+            position: absolute;
+            width: 170px;
+            height: 160px;
+            top: 46%;
+            left: 29%;
+        }
+    }
+    
+    >.rightbox{
+        right: -2%;
+        >img.signupbutton{
+            position: absolute;
+            width: 170px;
+            height: 160px;
+            top: 90%;
+            left: 25%;
+        }
+    }
+    >.movebox{
+        position: absolute;
+        top: -10%;
+        left: 5%;
+        background-color: #DCE07A;
+        width: 390px;
+        height: 500px;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+        z-index: 2;
+        >form{
+            display: flex;
+            flex-direction: column;
+        }
+        >.nodisplay{
+            display: none;
+            transition: all .5s ease;
+            text-align: center;
+            background-image: url(../assets/market.png);
+            background-position: left 5%  bottom 5%;
+            background-repeat: no-repeat;
+            background-size: 100px;
+            height: 100%;
+            padding-top: 35px;
+            >img.signuptitle{
+                width: 120px;
+                height: 120px;
+            }
+            >form.less-padding{
+                font-size: 16.8px;
+                line-height: 4.7;
+            }
+        }
+        >.signin{
+            text-align: center;
+            background-image: url(../assets/market.png);
+            background-position: left 5%  bottom 5%;
+            background-repeat: no-repeat;
+            background-size: 100px;
+            height: 100%;
+            >img.logintitle{
+                width: 120px;
+                height: 120px;
+            }
+            >form.more-padding{
+                font-size: 20px;
+                line-height: 4;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

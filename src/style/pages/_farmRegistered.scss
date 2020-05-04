@@ -1,0 +1,74 @@
+div.Registered{
+    display: inline-block;
+    color: #007552;
+    background-color: #FBF8EF;
+    width: 87.2%;
+    height: 100%;
+    vertical-align: top;
+    >.Registered_head{
+        color: #F7C845;
+        margin-top: 40px;
+        margin-left: 40px;
+        font-size: 30px;
+    }
+    >.Registered_bottom{
+        display: block;
+        text-align: center;
+        >.bottom_form{
+            margin-top: 180px;
+            line-height: 2;
+            font-size: 18px;
+            >.Registered_left{
+                vertical-align: top;
+                display: inline-block;
+                background-color: #F7C845;
+                width: 260px;
+                height: 500px;
+                padding: 50px 0px;
+                @include rwd(medium){
+                    width: 200px;
+                }
+                @include rwd(small){
+                    width: 130px;
+                }
+                >ul{
+                    >li{
+                        padding: 10px 0;
+                    }
+                }
+            }
+            >.Registered_right{
+                display: inline-block;
+                position: relative;
+                text-align: start;
+                background-color: white;
+                padding: 50px;
+                padding-right: 145px;
+                height: 500px;
+                width: 260px;
+                line-height: 3.14;
+                @include rwd(medium){
+                    width: 200px;
+                    line-height: 3.3;
+                }
+                @include rwd(small){
+                    width: 200px;
+                    line-height: 3.3;
+                }
+                >label {
+                    margin-right: 10px;
+                }
+                >.submit_button{
+                    position: absolute;
+                    border-radius: 5px;
+                    background-color: #007552;
+                    color: white;
+                    padding: 0px 20px;
+                    right: 30px;
+                    bottom: 10px;
+                    line-height: 2.3;
+                }
+            }
+        }
+    }
+}

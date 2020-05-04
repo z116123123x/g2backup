@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap");
+
 canvas {
   position: fixed;
   top: 0;
@@ -7,7 +9,7 @@ canvas {
 
 #test {
   height: 33000px;
-  main {
+  #home_main {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -18,10 +20,17 @@ canvas {
       position: fixed;
       right: 40px;
       bottom: 40px;
-      background-color: #0e7453;
+      background-color: #666;
+      color: #fbf8ef;
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
+      border: none;
+      font-size: 2rem;
+
+      &:hover {
+        color: #f7c852;
+      }
     }
     #mainLOGO {
       width: 300px;
@@ -31,6 +40,11 @@ canvas {
       left: 50%;
       transform: translate(-50%, -50%);
       display: inline-block;
+
+      @include rwd(mobile) {
+        width: 225px;
+        height: 150px;
+      }
     }
     #mainText {
       position: fixed;
@@ -68,9 +82,12 @@ canvas {
         display: inline-block;
         border-radius: 5px;
         padding: 20px 20px;
-        margin-top: 40px;
+        margin-top: 50px;
         vertical-align: top;
         z-index: 2;
+        @include rwd(mobile) {
+          margin-top: 40px;
+        }
       }
 
       @include rwd(large) {
@@ -96,6 +113,10 @@ canvas {
     width: 320px;
     height: 400px;
   }
+  @include rwd(mobile) {
+    width: 280px;
+    height: 350px;
+  }
 }
 
 // .knowledge_page::before {
@@ -119,6 +140,10 @@ canvas {
   background-color: #efefef;
   border: 1px solid #007453;
   transform: rotateY(15deg);
+  @include rwd(mobile) {
+    height: 96%;
+    top: 2%;
+  }
 }
 
 .knowledge_page_back {
@@ -149,12 +174,20 @@ canvas {
   margin: 0 20px;
   margin-top: 20px;
   position: relative;
+
+  @include rwd(mobile) {
+    height: 60%;
+  }
   p {
     font-size: 2rem;
     line-height: 2.5rem;
     margin-top: 20px;
     box-sizing: border-box;
     padding: 0 10px;
+
+    @include rwd(mobile) {
+      font-size: 1.4rem;
+    }
   }
 
   .knowledge_page_content_spring {
@@ -205,6 +238,10 @@ canvas {
         @include rwd(large) {
           line-height: 70px;
         }
+        @include rwd(mobile) {
+          line-height: 37px;
+          font-size: 1.6rem;
+        }
       }
     }
   }
@@ -218,6 +255,9 @@ canvas {
       width: 50px;
       vertical-align: middle;
       height: 100%;
+      @include rwd(mobile) {
+        width: 30px;
+      }
     }
     span {
       display: inline-block;
@@ -225,6 +265,15 @@ canvas {
       width: unset;
       vertical-align: middle;
       padding-left: 20px;
+      height: 100%;
+      line-height: 87px;
+
+      @include rwd(medium) {
+        line-height: 70px;
+      }
+      @include rwd(mobile) {
+        line-height: 52px;
+      }
     }
   }
 }
@@ -233,7 +282,6 @@ canvas {
   padding: 10px 10px;
   color: #333;
   box-sizing: border-box;
-
   position: absolute;
   top: 0;
   left: 48%;
@@ -245,6 +293,11 @@ canvas {
   outline: none;
   border: 2px solid #666;
   z-index: 2;
+  font-weight: 600;
+  font-family: "Noto Serif TC", serif;
+  @include rwd(mobile) {
+    font-size: 2.5rem;
+  }
 
   &::before {
     position: absolute;
@@ -254,6 +307,7 @@ canvas {
     height: 15px;
     width: 100%;
     left: 7px;
+
     transform: skewX(45deg);
     background-color: #f7c852;
     border: 2px solid #666;
@@ -268,6 +322,7 @@ canvas {
     height: 100%;
     width: 15px;
     bottom: -10px;
+
     transform: skewY(45deg);
     background-color: #f7c852;
     border: 2px solid #666;
@@ -401,6 +456,10 @@ div.knowledge_page.-on {
   box-sizing: border-box;
   border-radius: 5px;
   margin-top: 40px;
+  @include rwd(mobile) {
+    width: 320px;
+    height: 400px;
+  }
 }
 
 .market_pic {
@@ -497,13 +556,21 @@ button.plus_number {
   width: 100%;
   height: 25%;
   text-align: left;
-  margin-top: 10px;
+  margin-top: 50px;
+  @include rwd(mobile) {
+    margin-top: 20px;
+    height: 30%;
+  }
 }
 
 .pay_cart > button:nth-child(2) {
   float: right;
-  background-color: #fca87c;
-  color: #fbf8ef;
+  background-color: #fbf8ef;
+  color: #007453;
+  &:hover {
+    background-color: #fca87c;
+    color: #fbf8ef;
+  }
 }
 
 .pay_cart > button {
@@ -516,6 +583,11 @@ button.plus_number {
   font-weight: 800;
   cursor: pointer;
   outline: none;
+  transition: all 0.5s;
+  &:hover {
+    background-color: #fca87c;
+    color: #fbf8ef;
+  }
 }
 
 #blog_container {
@@ -536,6 +608,9 @@ button.plus_number {
   border-radius: 5px;
   padding: 20px 20px;
   margin-top: 40px;
+  @include rwd(mobile) {
+    margin-top: 30px;
+  }
 }
 
 .blog_tags_area {
@@ -548,6 +623,9 @@ button.plus_number {
   @include rwd(large) {
     width: 320px;
     margin-top: 40px;
+  }
+  @include rwd(mobile) {
+    width: 280px;
   }
 }
 
@@ -563,7 +641,13 @@ button.plus_number {
   width: 100%;
   background-color: #f5c652;
   border-bottom: 1px solid #fbf8ef;
+  position: relative;
+  transition: all 0.5s;
+  left: 0;
   cursor: pointer;
+  &:hover {
+    left: 30px;
+  }
 }
 
 .blog_tags_area > div > img {
@@ -604,5 +688,33 @@ button.plus_number {
   margin: 0 auto;
   @include rwd(large) {
     width: 320px;
+  }
+  @include rwd(mobile) {
+    width: 280px;
+  }
+}
+
+.home_footer {
+  display: none;
+  position: fixed;
+  font-weight: 800;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  @include rwd(large) {
+    width: 80%;
+  }
+  @include rwd(medium) {
+    width: 100%;
+  }
+  p {
+    color: #666;
+    font-size: 2rem;
+    @include rwd(mobile) {
+      font-size: 1rem;
+    }
   }
 }

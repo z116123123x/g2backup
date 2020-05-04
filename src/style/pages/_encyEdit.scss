@@ -1,63 +1,112 @@
-$bgColor: #FBF8EF;
-$maintitleColor: #F7C845;
-$title1Color: #007552;
-$title2Color: #62B45A;
-$title3Color: #FBF8EF;
-
-$sidebarBgColor: #FFD3C1;
-$contentColor: #007552;
-
-$maintitleSize: 18px;
-$title1Size: 16px;
-$title2Size: 14px;
-$contentSize:12px;
-
-
-.msContainer {
-    display: flex;
-    flex-flow: row wrap;
-    background: $bgColor;
-    height: 100vh;
-    max-width: 100%;
+.encyEdit {
     margin: 0 auto;
+    color: $contentColor;
+    display: inline-block;
+    font-size: $contentSize;
+    width: 75%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    position: fixed;
+    left: 25%;
+    overflow: scroll;
+    // border: 1px solid red;
 
-    .msFrame {
-        color: $contentColor;
-        display: flex;
-        // flex-flow: row wrap;
-        max-width: 100%;
-        height: 100%;
-        box-sizing: border-box;
+    // margin: 0 auto;
+    // color: $contentColor;
+    // display: flex;
+    // flex-direction: column;
+    // font-size: $contentSize;
+    // // width: 80%;
+    // width: 100%;
+    // height: 100%;
+    // box-sizing: border-box;
+    // justify-content: center;
+    // position: relative;
+    // left: 10%;
+    // margin-right: 4%;
 
-  
-        .msSideBar {
-            // margin: auto;
-            color: $title1Color;
-            display: flex;
-            background: $sidebarBgColor;
-            width: 220px;
-            height: 100%;
-            box-sizing: border-box;
-            align-items: center;
-            justify-content: center;
-            font-size: $title1Size;
-            line-height: 3rem;
-        }
 
-        .msMainContent {
-            margin: 0 auto; 
+    .encyEditTab {
+        display: inline-block;
+        width: 100%;
+        height: auto; //
+        margin-bottom: 70px; 
+
+        th {
+            width: 15%;
+            padding: 20px 20px;
+            text-align: center;
             color: $contentColor;
-            display: flex;
-            flex-flow: row wrap;
-            font-size: $contentSize;
-            width: 70%;
-            height: 60%;
-            box-sizing: border-box;
-            justify-content: center;
-            left: 280px;
-            top: 200px;
-            
-            border: 1px solid #000;
+            background: $maintitleColor;
+            font-size: $title2Size;
         }
+
+        td {
+            padding: 20px;
+            padding-left: 30px;
+            text-align: left;
+            vertical-align: middle;
+            color: $contentColor;
+            background-color: #fff;
+            // border: 1px solid green;
+
+            .encyEditBtnSec {
+                display: inline-block;
+                margin-left: 70%;
+
+                #encyEditCancel, #ecnyEditSubmit {
+                    color: $btnColor;
+                    border-radius: $btnRadius;
+                    width: 60px;
+                    height: 30px;
+                }
+
+                #encyEditCancel
+                 {
+                    background-color: $title2Color;
+                    margin: 0px 5px;
+                }
+                
+                #ecnyEditSubmit {
+                    background-color: $btnBgcolor;
+                    margin: 0px 5px;
+                  
+                }
+
+            }
+
+
+            #encyTitle {
+                resize: none;
+                font-size: $contentSize;
+                font-family: myFont;
+                width: 90%;
+                height: $contentSize;
+                // letter-spacing: 1px;
+                padding: 10px;
+                
+            }
+
+            #encyContent {
+                resize: none;
+                font-size: $contentSize;
+                font-family: myFont;
+                width: 90%;
+                height: 400px;
+                overflow: scroll;
+                padding: 10px;
+            }
+            
+        }
+
+        .encyTag {
+            border-radius: 25px;
+            background-color: $tagBGcolor;
+            margin: 3px;
+        }
+
     }
+
+
 }

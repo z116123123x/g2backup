@@ -94,6 +94,7 @@ window.addEventListener("load", () => {
       },
     });
   });
+
   //商品效果
   $(".box-top").hover(function () {
     TweenMax.to(".shopItemImg", 0.5, {
