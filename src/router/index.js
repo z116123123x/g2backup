@@ -58,7 +58,11 @@ const routes = [{
     name: 'Shop',
     component: () => import('@/views/Shop.vue'),
   },
-
+  {
+    path: '/main/shopitem',
+    name: 'Shopitem',
+    component: () => import('@/views/ShopItem.vue'),
+  },
   {
     path: '/loginmember',
     name: 'loginmember',
@@ -113,47 +117,47 @@ const routes = [{
     name: "Farm",
     component: () => import("@/views/FarmMember.vue"),
     children: [{
-      path: "info",
-      name: "Info",
-      component: () => import("@/views/FarmMemberInfo.vue"),
+        path: "info",
+        name: "Info",
+        component: () => import("@/views/FarmMemberInfo.vue"),
 
-    },
-    {
-      path: "update",
-      name: "Update",
-      component: () => import("@/views/FarmMemberupdate.vue"),
-    },
-    {
-      path: "order",
-      name: "Order",
-      component: () => import("@/views/FarmMemberOrder.vue"),
-    },
-    {
-      path: "Product",
-      name: "Product",
-      component: () => import("@/views/FarmMemberProductUpdate.vue"),
-    },
-    {
-      path: "blog",
-      name: "Blog",
-      component: () => import("@/views/FarmMemberBlog.vue"),
-    },
-    {
-      path: "blogupdate",
-      name: "BlogUpdate",
-      component: () => import("@/views/FarmMemberBlogUpdate.vue"),
-    },
-    {
-      path: "list",
-      name: "List",
-      component: () => import("@/views/FarmMemberList.vue"),
-    },
-    {
-      path: "listupdate",
-      name: "ListUpdate",
-      component: () => import("@/views/FarmMemberListUpdate.vue"),
-    },
-  ]
+      },
+      {
+        path: "update",
+        name: "Update",
+        component: () => import("@/views/FarmMemberupdate.vue"),
+      },
+      {
+        path: "order",
+        name: "Order",
+        component: () => import("@/views/FarmMemberOrder.vue"),
+      },
+      {
+        path: "Product",
+        name: "Product",
+        component: () => import("@/views/FarmMemberProductUpdate.vue"),
+      },
+      {
+        path: "blog",
+        name: "Blog",
+        component: () => import("@/views/FarmMemberBlog.vue"),
+      },
+      {
+        path: "blogupdate",
+        name: "BlogUpdate",
+        component: () => import("@/views/FarmMemberBlogUpdate.vue"),
+      },
+      {
+        path: "list",
+        name: "List",
+        component: () => import("@/views/FarmMemberList.vue"),
+      },
+      {
+        path: "listupdate",
+        name: "ListUpdate",
+        component: () => import("@/views/FarmMemberListUpdate.vue"),
+      },
+    ]
   },
   {
     path: '/admin',
