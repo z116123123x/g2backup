@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main class="addAdmin">
+    <main class="addAdminMainContent">
       <h1 class="manageTitle">
         管理員管理
         <span class="manageSubTitle">新增管理員</span>
