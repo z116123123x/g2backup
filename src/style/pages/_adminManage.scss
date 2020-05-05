@@ -35,6 +35,7 @@ $tagBGcolor: #E2E2E2;
     // height: 900px;
     // border: 1px solid blue;
     box-sizing: border-box;
+    
     // overflow: scroll;
     
     .msSideBar {
@@ -52,6 +53,7 @@ $tagBGcolor: #E2E2E2;
       font-size: $title1Size;
       line-height: 3rem;
       position: fixed;
+     
 
       li {
         position: relative;
@@ -63,6 +65,7 @@ $tagBGcolor: #E2E2E2;
         // top: 25%;
         text-decoration: none;
         color: $title1Color;
+        outline: none;
 
         &:hover {
           color: $title2Color;
@@ -108,6 +111,7 @@ $tagBGcolor: #E2E2E2;
         background: $btnBgcolor;
         color: $btnColor;
         border-radius: $btnRadius;
+        border: hidden;
         width: auto;
         height: 35px;
         // margin-bottom: 30px;
@@ -116,10 +120,16 @@ $tagBGcolor: #E2E2E2;
           text-decoration: none;
           color: $title3Color;
         }
+        &:hover {
+          position: relative;
+          top: .1rem;
+          left: .1rem;
+          background: $title2Color;
+        }
       }
 
       .tableSection {
-        margin-top: 95px;
+        margin-top: 30px;
         height: 80%;
         
         .amt-header {

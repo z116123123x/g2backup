@@ -16,6 +16,7 @@
         background: $btnBgcolor;
         color: $btnColor;
         border-radius: $btnRadius;
+        border: hidden;
         width: auto;
         height: 35px;
         margin-bottom: 30px;
@@ -23,11 +24,14 @@
         a {
           text-decoration:none;
           color: $title3Color;
-  
-          &:active {
-            text-decoration:none;
-          }
         }
+        &:hover {
+          position: relative;
+          top: .1rem;
+          left: .1rem;
+          background: $title2Color;
+        }
+    
       }
     
       .EncytableSection {
@@ -75,6 +79,13 @@
   
           .editImg {
             width: 15px;
+
+            &:hover {
+              position: relative;
+              top: .1rem;
+              left: .1rem;
+              opacity: .6;
+          }
           }
         }
   
