@@ -1,8 +1,7 @@
 <template>
   <div>
-    <h1 class="manageTitle">果農 管理中心</h1>
-
     <main class="sellerMainContent">
+        <h1 class="manageTitle">果農 管理中心</h1>
       <section class="aSellerTableSection">
         <div class="ast-header">
           <table class="sellerManageTab" cellpadding="0" cellspacing="0" border="0">

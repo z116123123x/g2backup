@@ -25,7 +25,15 @@
           border: 2px solid #F7C845;
           background-color: white;
           text-align: start;
-
+          width: 768px;
+          height: 915px;
+          font-size: 17px;
+          @include rwd(medium){
+            width: 720px;
+          }
+          @include rwd(small){
+            width: 620px;
+          }
           >.list_th {
             display: block;
             background-color: #F7C845;
@@ -36,7 +44,13 @@
 
             >p {
               display: inline-block;
-              padding: 0 20px;
+              padding: 0 58px;
+              @include rwd(medium){
+                padding: 0 53px;
+              }
+              @include rwd(small){
+                padding: 0 40.6px;
+              }
             }
           }
 
@@ -50,7 +64,13 @@
 
             >p {
               display: inline-block;
-              padding: 0 25px;
+              padding: 0 59px;
+              @include rwd(medium){
+                padding: 0 53px;
+              }
+              @include rwd(small){
+                padding: 0 42.9px;
+              }
             }
           }
 
@@ -72,7 +92,13 @@
 
             >p {
               display: inline-block;
-              padding: 0 27px;
+    padding: 0 50.4px;
+              @include rwd(medium){
+                padding: 0 47.5px;
+              }
+              @include rwd(small){
+                padding: 0 37.5px;
+              }
             }
           }
 
@@ -85,11 +111,44 @@
 
             >p {
               display: inline-block;
-              padding: 0 25px;
+              padding: 0 44.8px;
+              @include rwd(medium){
+                padding: 0 39.8px;
+              }
+              @include rwd(small){
+                padding: 0 29.8px;
+              }
+            }
+            >p.td2_price{
+              display: inline-block;
+    padding: 0 30px;
+            }
+            >p.td2_num{
+              display: inline-block;
+              padding: 0 44.8px;
             }
           }
 
-          .list_td2:last-child {
+          .list_td3 {
+            border: 1px solid #F7C845;
+            background-color: white;
+            display: block;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            >p {
+              display: inline-block;
+              padding: 0 44.4px;
+              @include rwd(medium){
+                padding: 0 39.8px;
+              }
+              @include rwd(small){
+                padding: 0 29.8px;
+              }
+            }
+          }
+
+          .list_td3:last-child {
             border: 1px solid #F7C845;
             background-color: white;
             display: block;
@@ -182,6 +241,7 @@
               }
             }
           }
+          
         }
 
       }
@@ -189,6 +249,7 @@
       .pagination_block {
         display: inline-block;
         margin-top: 20px;
+        margin-bottom: 20px;
 
         >ul.pagination {
           list-style: none;
@@ -205,7 +266,6 @@
 
               border: 1px solid #007552;
               /* 留意 */
-              border-right: 0;
               /* 留意：將全部的右邊框都移除 */
 
               text-align: center;
@@ -227,12 +287,26 @@
 
           >li:first-child>a {
             display: inline-block;
-            border-radius: 5px 0 0 5px;
+            margin-right: 10px;
+            background-color: #007552;
+            color: white;
+          }
+
+          >li:first-child>a:hover {
+            background-color: #007552;
+            color: white;
           }
 
           >li:last-child>a {
             border-right: 1px solid #007552;
-            border-radius: 0 5px 5px 0;
+            margin-left: 10px;
+            background-color: #007552;
+            color: white;
+          }
+
+          >li:last-child>a:hover {
+            background-color: #007552;
+            color: white;
           }
         }
       }

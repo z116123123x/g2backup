@@ -1,0 +1,104 @@
+.addAdminMainContent {
+    margin: 0 auto;
+    color: $contentColor;
+    display: inline-block;
+    font-size: $contentSize;
+    width: 75%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    position: fixed;
+    left: 25%;
+    overflow: scroll;
+    // border: 1px solid red;
+
+    .addAdminTab {
+        display: inline-block;
+        width: 100%;
+        height: auto; //
+        margin-bottom: 70px; 
+
+        th {
+            width: 15%;
+            padding: 20px 20px;
+            text-align: center;
+            color: $contentColor;
+            background: $maintitleColor;
+            font-size: $title2Size;
+        }
+
+        td {
+            padding: 20px;
+            padding-left: 30px;
+            text-align: left;
+            vertical-align: middle;
+            color: $contentColor;
+            background-color: #fff;
+            // border: 1px solid green;
+
+            #addAdminName {
+                // resize: none;
+                font-size: $contentSize;
+                font-family: myFont;
+                // width: 90%;
+                height: $contentSize;
+                letter-spacing: 1px;
+                padding: 3px;
+            }
+
+            #addAdminAccount {
+                // resize: none;
+                font-size: $contentSize;
+                font-family: myFont;
+                // width: 90%;
+                height: $contentSize;
+                letter-spacing: 1px;
+                padding: 3px;
+            }
+            #addAdminPSW {
+                // resize: none;
+                font-size: $contentSize;
+                font-family: myFont;
+                // width: 90%;
+                height: $contentSize;
+                letter-spacing: 1px;
+                padding: 3px;
+            }
+
+            .adAdminBtnSec {
+                display: inline-block;
+                margin-left: 50%;
+
+                #addAdminCancel, #addAdminSubmit {
+                    color: $btnColor;
+                    border-radius: $btnRadius;
+                    width: 60px;
+                    height: 30px;
+                    border: hidden;
+
+                    &:hover {
+                        position: relative;
+                        top: .1rem;
+                        left: .1rem;
+                        opacity: .9;
+                    }
+                }
+                #addAdminCancel
+                 {
+                    background-color: $title2Color;
+                    margin: 0px 5px;
+                }
+                
+                #addAdminSubmit {
+                    background-color: $btnBgcolor;
+                    margin: 0px 5px;
+                  
+                }
+
+            }
+
+        }
+    }
+
+
+}

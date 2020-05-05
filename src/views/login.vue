@@ -45,10 +45,6 @@
 </template>
 
 <style>
-nodisplay{
-            display: none;
-            transition: all .5s ease;
-        }
 </style>
 
 <script>

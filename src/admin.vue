@@ -4,5 +4,13 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  // created() {
+  //   const api = "http://localhost/MyServer/login.php";
+
+  //   this.$http.get(api).then(res => {
+  //     console.log(res);
+  //   });
+  // }
+};
 </script>

@@ -24,5 +24,5 @@ window.addEventListener("load", () => {
         reverse: true, //反轉
         duration: 400, //....在這段距離裡完成動畫
 
-    }).setTween(scroll).addTo(controller)
+    }).setTween(scroll).addTo(controller);
 });

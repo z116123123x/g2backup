@@ -8,6 +8,7 @@
 @import "./layout/footer";
 // components
 @import "./components/buttonMore";
+@import "./components/input";
 // pages
 @import "./pages/home";
 
@@ -35,10 +36,13 @@
 @import "./pages/FarmMemberBlogUpdate";
 @import "./pages/FarmMemberList";
 @import "./pages/FarmMemberListUpdate";
+@import "./pages/farmRegistered";
 @import "./pages/memberUpdate";
+@import "./pages/memberinfo";
 @import "./pages/memberOrder";
 @import "./pages/memberTrack";
 @import "./pages/memberShopping";
+@import "./pages/memberCheckInfo";
 
 @import "./pages/adminLogin";
 @import "./pages/adminManage";

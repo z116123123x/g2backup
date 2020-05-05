@@ -1,0 +1,31 @@
+div.input {
+
+    display: flex;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+
+    input {
+
+        &[type="checkbox"].checkbox {
+
+            display: none;
+            visibility: hidden;
+
+            &+label {
+
+                height: 20px;
+                width: 20px;
+
+                border-radius: 50%;
+                border: 2px solid rgba($min-color, .5);
+            }
+
+            &:checked+label {
+
+                background: $min-color;
+            }
+        }
+    }
+}
