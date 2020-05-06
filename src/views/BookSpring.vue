@@ -14,6 +14,7 @@ import after from "@/views/BookSeasonPage2";
 export default {
   data() {
     return {
+        
       currentTab: "before",
       tabs: [
         {
