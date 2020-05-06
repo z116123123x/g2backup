@@ -150,3 +150,35 @@
     </div>-->
     <!-- </div> -->
 </template>
+<script>
+import before from "@/views/BookSpringPage1";
+import after from "@/views/BookSpringPage2";
+export default {
+  data() {
+    return {
+      currentTab: "before",
+      tabs: [
+        {
+          name: "上一頁",
+          index: "before",
+          id: 1
+        },
+        {
+          name: "下一頁",
+          index: "after",
+          id: 2
+        }
+      ]
+    };
+  },
+  methods: {
+    toggleTab: function(tab) {
+      this.currentTab = tab.index;
+    }
+  },
+  components: {
+    before,
+    after
+  }
+};
+</script>

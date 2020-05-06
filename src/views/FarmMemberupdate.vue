@@ -1,11 +1,11 @@
 <template>
-    <div class="right">
-        <div class="right_head">
-            <div class="right_head_text">
+    <div class="farmupdate">
+        <div class="farmupdate_head">
+            <div class="farmupdate_head_text">
                 <h2>個人資料修改</h2>
             </div>
         </div>
-        <div class="right_bottom">
+        <div class="farmupdate_bottom">
             <div class="top_card">
                 <div class="card">
                     <div class="up">

@@ -23,7 +23,7 @@
             padding: 20px 20px;
             text-align: center;
             color: $contentColor;
-            background: $maintitleColor;
+            background: $formTtlBg;
             font-size: $title2Size;
         }
 
@@ -73,14 +73,15 @@
                     color: $btnColor;
                     border-radius: $btnRadius;
                     width: 60px;
-                    height: 30px;
+                    height: 25px;
                     border: hidden;
+                    transition: ease-in-out .3s;
 
                     &:hover {
-                        position: relative;
-                        top: .1rem;
-                        left: .1rem;
-                        opacity: .9;
+                        // position: relative;
+                        // top: .1rem;
+                        // left: .1rem;
+                        background-color: $attention;
                     }
                 }
                 #addAdminCancel

@@ -65,7 +65,7 @@
           <th></th>
           <td>
           <div class="encyEditBtnSec">
-            <input id="encyEditCancel" type="submit" value="取消" />
+            <input id="encyEditCancel" type="button" onClick="javascript:history.back(1)" value="取消" />
             <input id="ecnyEditSubmit" type="submit" value="送出" />
           </div>
             
@@ -75,3 +75,4 @@
     </main>
   </div>
 </template>
+

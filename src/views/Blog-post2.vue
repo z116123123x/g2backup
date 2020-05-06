@@ -128,6 +128,11 @@
                 <buttonMore class="blogPost2ButtonMore" msg="送出"></buttonMore>
               </form>
             </div>
+            <div>
+              <!--接水果動畫-->
+              <img src="@/assets/blog-img/post/someone-catch-fruit.png" />
+              <img src="@/assets/blog-img/post/be-catched-fruit.png" />
+            </div>
           </div>
         </div>
         <div class="blog-post-container2">
@@ -759,9 +764,10 @@
     }
   }
   > div:nth-child(2) {
+    position: relative;
     padding-left: 20%;
     > div:nth-child(1) {
-        position: relative;
+      position: relative;
       //妹妹
       > div:nth-child(1) {
         position: relative;
@@ -786,26 +792,82 @@
       }
     }
     > .blog-post2-msg-card {
-    display: flex;
-    background-color: #fff;
-    width: 50rem;
-    align-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    >div:nth-child(2){
-      margin-left: 10px;
+      display: flex;
+      background-color: #fff;
+      width: 50rem;
+      align-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      > div:nth-child(2) {
+        margin-left: 10px;
+      }
+      > div:nth-child(3) {
+        margin-left: 20px;
+        font-size: 16px;
+        flex-grow: 1;
+      }
+      > div:nth-child(4) {
+        margin-right: 5px;
+      }
     }
-    >div:nth-child(3){
-      margin-left: 20px;
-      font-size: 16px;
-      flex-grow: 1;
+    > div:nth-child(5) {
+      margin-top: 5%;
+      > form:nth-child(1) {
+        // background-color: #000;
+        > label:nth-child(1) {
+          font-size: 16px;
+          > textarea:nth-child(1) {
+            width: 50%;
+            height: 100px;
+          }
+        }
+        .blogPost2ButtonMore {
+          width: 10%;
+          margin-top: 3%;
+          margin-left: 25%;
+        }
+      }
     }
-    >div:nth-child(4){
-      margin-right: 5px;
+    > div:nth-child(6) {
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+      > img:nth-child(1) {
+        position: relative;
+        bottom: 0%;
+        right: 75%;
+        z-index: 5;
+        animation-name: catching;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        @keyframes catching {
+          0%{right: 75%;}
+          25%{right: 50%;}
+          50%{right: 75%;}
+          75%{right: 100%;}
+          90%{right: 70%;}
+        }
+      }
+      > img:nth-child(2) {
+        z-index: 1;
+        position: relative;
+        bottom: 350px;
+        right: 200px;
+        animation-name: falling;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @keyframes falling {
+          0%{right: 200px;bottom: 350px;transform: rotate(0deg);}
+          25%{right: 240px;bottom: 310px;transform: rotate(70deg);}
+          50%{right: 200px;bottom: 260px;transform: rotate(140deg);}
+          75%{right: 160px;bottom: 200px;transform: rotate(210deg);}
+          100%{right: 220px;bottom: 110px;transform: rotate(280deg);}
+        }
+      }
     }
   }
-  }
-  
 }
 .blog-post-tri {
   //select
