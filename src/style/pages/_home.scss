@@ -26,10 +26,74 @@ canvas {
       width: 50px;
       height: 50px;
       border: none;
-      font-size: 2rem;
+      font-size: 1.8rem;
 
       &:hover {
         color: #f7c852;
+      }
+    }
+    #scroll_section {
+      position: fixed;
+      top: 50%;
+      right: 0px;
+      transform: translate(-50%, -50%);
+
+      .scroll_section_btn {
+        background-color: transparent;
+        color: #666;
+        box-sizing: border-box;
+        border: none;
+        width: 100px;
+        font-family: "Noto Serif TC", serif;
+        font-size: 1.6rem;
+        font-weight: 800;
+        display: block;
+        margin-top: 40px;
+        border-radius: 5px;
+        transition: all 0.5s;
+        opacity: 0.3;
+
+        @include rwd(large) {
+          width: 90px;
+          font-size: 1.6rem;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      #scroll_top.scroll_section_btn_add {
+        opacity: 1;
+      }
+      #scroll_knowledge.scroll_section_btn_add {
+        opacity: 1;
+      }
+      #scroll_market.scroll_section_btn_add {
+        opacity: 1;
+      }
+      #scroll_blog.scroll_section_btn_add {
+        opacity: 1;
+      }
+      #scroll_member.scroll_section_btn_add {
+        opacity: 1;
+      }
+      #scroll_footer.scroll_section_btn_add {
+        opacity: 1;
+      }
+
+      & button:nth-child(1) {
+        border-radius: 50% 50%;
+        width: auto;
+        padding: 10px 5px;
+        margin: 0 auto;
+      }
+
+      & button:nth-child(6) {
+        border-radius: 50% 50%;
+        width: auto;
+        padding: 10px 5px;
+        margin: 0 auto;
+        margin-top: 40px;
       }
     }
     #mainLOGO {
@@ -278,6 +342,27 @@ canvas {
   }
 }
 
+@keyframes home_title_animate {
+  100% {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+@keyframes home_title_beforeanimate {
+  100% {
+    bottom: -9px;
+    height: 5px;
+    left: 3px;
+  }
+}
+@keyframes home_title_afteranimate {
+  100% {
+    right: -10px;
+    width: 6px;
+    bottom: -4px;
+  }
+}
+
 .home_title {
   padding: 10px 10px;
   color: #333;
@@ -289,6 +374,11 @@ canvas {
   cursor: pointer;
   font-size: 3.5rem;
   transition: all 0.5s;
+  animation-name: home_title_animate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
   background-color: #fbf8ef;
   outline: none;
   border: 2px solid #666;
@@ -307,7 +397,11 @@ canvas {
     height: 15px;
     width: 100%;
     left: 7px;
-
+    animation-name: home_title_beforeanimate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
     transform: skewX(45deg);
     background-color: #f7c852;
     border: 2px solid #666;
@@ -322,12 +416,26 @@ canvas {
     height: 100%;
     width: 15px;
     bottom: -10px;
-
+    animation-name: home_title_afteranimate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
     transform: skewY(45deg);
     background-color: #f7c852;
     border: 2px solid #666;
     border-left: none;
     border-bottom: none;
+  }
+
+  &:hover {
+    animation: none;
+    &::before {
+      animation: none;
+    }
+    &::after {
+      animation: none;
+    }
   }
 
   &:active {
@@ -658,6 +766,7 @@ button.plus_number {
   font-size: 20px;
   font-weight: 800;
   line-height: 70px;
+  margin-left: 10px;
 }
 
 #member_container {
