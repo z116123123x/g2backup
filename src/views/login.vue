@@ -33,11 +33,11 @@
             </div>
             <div class="leftbox">
                 <h1>已經是果粉了?</h1>
-                    <img class="loginbutton" id="signin" src="@/assets/memberlogin/Group 364.svg" alt="">
+                    <img class="loginbutton" id="signin_button" src="@/assets/memberlogin/Group 364.svg" alt="">
             </div>
             <div class="rightbox">
                 <h1>還不是果粉嗎?</h1>
-                    <img class="signupbutton" id="signup" src="@/assets/memberlogin/Group 365.svg" alt="">
+                    <img class="signupbutton" id="signup_button" src="@/assets/memberlogin/Group 365.svg" alt="">
             </div>
 
         </div>

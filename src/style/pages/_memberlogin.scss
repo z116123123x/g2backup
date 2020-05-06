@@ -62,24 +62,21 @@ body{
             display: flex;
             flex-direction: column;
         }
-        >.nodisplay{
-            display: none;
-            transition: all .5s ease;
+        
+        >.signup{
             text-align: center;
-            background-image: url(../assets/market.png);
-            background-position: left 5%  bottom 5%;
-            background-repeat: no-repeat;
-            background-size: 100px;
-            height: 100%;
-            padding-top: 35px;
             >img.signuptitle{
                 width: 120px;
                 height: 120px;
             }
             >form.less-padding{
-                font-size: 16.8px;
-                line-height: 4.7;
+                font-size: 20px;
+                line-height: 3;
             }
+        }
+        >.nodisplay{
+            display: none;
+            transition: all .5s ease;
         }
         >.signin{
             text-align: center;
