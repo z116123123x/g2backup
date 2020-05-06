@@ -262,7 +262,7 @@ window.addEventListener("load", () => {
 
     let cloud10 = new THREE.Mesh(
       new THREE.PlaneGeometry(360, 240),
-      materialcloud4
+      materialcloud2
     );
     cloud10.position.set(0, 1300, 600);
     scene.add(cloud10);
