@@ -1,5 +1,5 @@
 <template>
-  <div class="contain">
+  <div class="farmcontain">
     <aside class="left">
       <div class="head_portrait">
         <div class="head_img_box">
@@ -31,6 +31,9 @@
       <div class="Farminfo">
         <ul>
           <li>
+            <router-link to="/farm/info">個人資料</router-link>
+          </li>
+          <li>
             <router-link to="/farm/update">個人資料修改</router-link>
           </li>
           <li>
@@ -52,7 +55,13 @@
           </router-link>
         </div>
       </div>
+       <button type="button" class="btn_drawer"> >> </button>
     </aside>
     <router-view />
   </div>
 </template>
+
+<script>
+import "@/js/farmsidebar";
+export default {};
+</script>
