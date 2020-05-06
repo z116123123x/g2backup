@@ -121,7 +121,14 @@
                                             </ul>
                                         </div>
                                     </div>-->
-
+                                    <!-- <div class="change_bookpage">
+                                        <div class="changebuttonleft">
+                                            <button></button>
+                                        </div>
+                                        <div class="changebuttonright">
+                                            <button></button>
+                                        </div>
+                                    </div> -->
                                     <!-- fruit_knowledge -->
                                 </div>
 
