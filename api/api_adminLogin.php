@@ -1,19 +1,20 @@
 <?php
 header('Access-Control-Allow-Origin:*'); //允許所有來源訪問
 header('Access-Control-Allow-Method:POST,GET'); //允許POST、GET訪問方式
+
+session_start();
 try {
     // 登入DB
     require_once("connectDB.php");
     
     // 操作DB
     $sql = "select * from `member` where acc=:acc and psw=:psw";
-    // $sql = "select * from `member` where name=:name and psw=:psw";
     $member = $pdo->prepare($sql);
 
-    $member->bindValue(":acc", $_POST["acc"]);
-    $member->bindValue(":psw", $_POST["psw"]);
-    // $member->bindValue(":acc", "testg2");
-    // $member->bindValue(":psw", "testg2");
+    $memberInfo = json_decode(file_get_contents("php://input"));
+
+    $member->bindValue(":acc", $memberInfo->acc);
+    $member->bindValue(":psw", $memberInfo->psw);
 
     // 返回data
     $member->execute();
@@ -30,7 +31,7 @@ try {
         $_SESSION["email"] = $memRow["email"];
 
         //送出登入者的姓名資料
-        // $member = array("no" => $_SESSION["no"], "name" => $_SESSION["name"], "email" => $_SESSION["email"]);
+        $member = array("no" => $_SESSION["no"], "name" => $_SESSION["name"], "email" => $_SESSION["email"]);
 
         echo json_encode($memRow);
     }
