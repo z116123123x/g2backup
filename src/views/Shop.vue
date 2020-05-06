@@ -1,9 +1,9 @@
 <template>
   <main class="wrapper">
+    <div class="market_header">
+      <div class="market_title"></div>
+    </div>
     <section class="show_item">
-      <div class="market_header">
-        <div class="market_title"></div>
-      </div>
       <div class="show_item-content">
         <div class="shop-imgbox">
           <img src="../assets/shop/market_showImg_behind.svg" alt class="box-bottom" />

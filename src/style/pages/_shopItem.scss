@@ -1,6 +1,123 @@
-//footer
-.footer-box {
-    position: absolute;
-    bottom: -30px;
+.CommodityWrapper{
     width: 100%;
-}//footerEnd
+    height: 3000px;
+    font-size: 0;
+    //商品預覽圖
+    .CommodityContent{
+      width: 100%;
+      display: flex;
+        .CommodityContentImgBox{
+          width: 60%;
+          height: 100%;
+          border: 1px solid #000;
+            .CommodityContentImg{}
+        }
+    }   //商品預覽圖結束
+    //商品資訊
+    .CommodityContenText{
+      width: 40%;
+      height: 100%;
+      border: 1px solid red;
+        .CommodityContenTextBox{
+          margin: 0 10px;
+            .CommodityTitle{
+              margin: 0 20px 30px 20px;
+                h1{
+                  font-size: 30px;
+                  font-weight: 800;
+                }
+            }
+            .CommodityNarrative{
+              margin: 0 20px;
+                p{
+                  font-size: 16px;
+                  line-height: 26px;
+                }
+            }
+            .CommodityInformation{
+              font-size: 16px;
+              line-height: 26px;
+              margin: 0 20px;
+                span{}
+            }
+            .CommodityFocus{
+              margin: 30px 20px;
+                p{
+                  font-size: 16px;
+                  line-height: 26px;
+                }
+                p::before {
+                  content: "✶";
+                  padding: 0 5px;
+                }
+            }
+            .CommodityItemMoneyBox{
+              margin: 40px 20px;
+                .CommodityItemMoney{
+                  font-size: 28px;
+                  color: #5FBC55;
+                }
+                .CommodityItemMoney::before {
+                  content: "NT $";
+                  padding: 0 5px;
+                }
+            }
+            .CommodityItemBuyBox{
+              margin-bottom: 30px;
+              width: 100%;
+              position: relative;
+                .CommodityItemBuyBtn{
+                  margin: 0 20px 50px 20px;
+  
+                  @include shop-btn();
+                  margin-right: 10px;
+                  text-align: center;
+  
+                }
+                .Buynow{
+                  position: relative;
+                  transition: 0.5s;
+                  box-shadow: 5px 5px 0px $color2;
+                  background-color: #ffa978;
+                  color: #404040;
+                  &:hover{
+                    transform: translate(2px,2px);
+                    box-shadow: 0px 0px 0px $color2;
+                    color: $color2;
+                  }
+                }
+                &::before {
+                  // display: inline-block;
+                  position: absolute;
+                  content: "";
+                  height: 10px;
+                  width: 100%;
+                  background-image: url(./../assets/blog_line.svg);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  // transform: translateY(200%);
+                  bottom: 0;
+                }
+            }
+            .CommodityDetailsBox{
+                .CommodityDetailsTitle{
+                    font-size: 28px;
+                    font-weight: 800;
+                    margin: 40px 20px 20px 20px;
+                }
+                p{
+                  font-size: 16px;
+                  line-height: 26px;
+                  margin: 0 20px;
+                }
+                .CommodityDetailsTextBox{
+                  font-size: 16px;
+                  line-height: 26px;
+                  margin: 0 20px;
+                    span{}
+                }
+            }
+        }
+    }   //商品資訊結束
+  }
+  
