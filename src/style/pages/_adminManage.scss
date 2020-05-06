@@ -54,9 +54,19 @@ $tagBGcolor: #E2E2E2;
       font-size: $title1Size;
       line-height: 3.3rem;
       position: fixed;
+      // border: 1px solid red;
 
       .mng_logo {
         margin-top: 30px;
+      }
+
+    
+      .admin_name {
+        color: #62B45A;
+        position: relative;
+        top: 15px;
+        left: 25%;
+        font-size: $title2Size;
       }
 
       li {
