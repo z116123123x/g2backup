@@ -18,5 +18,16 @@ module.exports = {
             entry: "./src/adminPage.js",
             template: "./public/admin.html"
         }
+    },
+    devServer: {
+        disableHostCheck: true,
+        proxy: {
+            '/api': {
+                target: 'http://localhost',
+                ws: true,
+                changeOrigin: true,
+                autoRewrite: true
+            },
+        }
     }
 };

@@ -424,6 +424,7 @@
 
 
     }
+   
 
     .bk_ct_right {
         font-size: 0;
@@ -696,6 +697,11 @@
 
         @include rwd (mobile) {
             height: 100%;
+        }
+    }
+    .bk_ct_summer{
+        &::before{
+            background-color: #f6d16b8a; 
         }
     }
 

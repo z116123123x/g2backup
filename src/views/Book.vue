@@ -46,9 +46,7 @@
                                 <!-- 左切換按鈕 -->
                                 <div class="Change_Button">
                                     <div class="pagepaper"></div>
-                                    <div class="pagepaper">
-                                        <div class="page_button Pbutton_left"></div>
-                                    </div>
+                                    <div class="pagepaper"></div>
                                     <div class="pagepaper"></div>
                                 </div>
 
@@ -130,9 +128,7 @@
                                 <!-- 右切換按鈕 -->
                                 <div class="Change_Button">
                                     <div class="pagepaper"></div>
-                                    <div class="pagepaper">
-                                        <div class="page_button Pbutton_right"></div>
-                                    </div>
+                                    <div class="pagepaper"></div>
                                     <div class="pagepaper"></div>
                                 </div>
                             </div>
