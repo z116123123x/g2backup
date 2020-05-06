@@ -1,15 +1,4 @@
-div.contain {
-
-  aside.left {
-    display: inline-block;
-    color: #007552;
-    width: 12.8%;
-    height: auto;
-    vertical-align: top;
-    background-color: #FFD3C1;
-  }
-
-  div.track {
+div.track {
     display: inline-block;
     background-color: #FBF8EF;
     width: 87.2%;
@@ -26,8 +15,7 @@ div.contain {
       display: block;
       height: auto;
       text-align: center;
-      margin-left: 100px;
-
+      padding-left: 70px;
       >.trackcard {
         display: inline-block;
         margin-top: 40px;
@@ -35,11 +23,28 @@ div.contain {
 
         >.cardfront {
           border: 3px solid #007552;
-          background-color: white;
-          box-shadow: 10px -9px #007552;
-          width: 170px;
-          margin-right: 260px;
-
+    background-color: white;
+    box-shadow: 10px -9px #007552;
+    width: 260px;
+    margin-right: 260px;
+    font-size: 17px;
+          @include rwd(large){
+            width: 170px;
+            margin-right: 167.5px;
+            font-size: 17px;
+          }
+          @include rwd(medium){
+            width: 240px;
+            margin-right: 77px;
+            margin-left: 30px;
+            font-size: 16px;
+          }
+          @include rwd(mobile){
+            width: 220px;
+    margin-right: 60px;
+    margin-left: 60px;
+    font-size: 17px;
+          }
           >.front_top {
             >.closeimg {
               width: 30px;
@@ -137,6 +142,9 @@ div.contain {
           margin: 0;
           padding: 0;
           font-size: 0;
+          @include rwd(mobile){
+            margin-left: 20px;
+          }
 
           >li {
             display: inline-block;
@@ -153,6 +161,9 @@ div.contain {
               padding: 5px 10px;
               font-size: 1rem;
               color: black;
+              @include rwd(mobile){
+                padding: 5px 6px;
+              }
             }
 
             >a.-on {
@@ -211,4 +222,3 @@ div.contain {
   /* 留意: 將最後一個 li 裡的 a，加上圓角 */
 
   /* 留意: 將第一個 li 裡的 a，加上圓角 */
-}

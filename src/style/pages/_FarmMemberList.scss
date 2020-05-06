@@ -1,11 +1,10 @@
-div.contain {
-    height: 100vh;
 
     div.FarmList {
         display: inline-block;
         background-color: #FBF8EF;
         width: 87.2%;
         height: 100vh;
+        font-size: 16px;
 
         .FarmList_head {
             color: #F7C845;
@@ -52,10 +51,9 @@ div.contain {
                     display: inline-block;
                     box-sizing: border-box;
                     background-color: #F7C845;
-                    min-width: 700px;
-                    padding: 10px;
-                    padding-left: 10px;
-                    padding-right: 10px;
+                    width: 740px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
                     color: #007552;
                     margin: auto;
 
@@ -74,19 +72,19 @@ div.contain {
                     >.price {
                         display: inline-block;
                         box-sizing: border-box;
-                        padding: 0 28px;
+                        padding: 0 33.7px;
                     }
 
                     >.time {
                         display: inline-block;
                         box-sizing: border-box;
-                        padding: 0 24px;
+                        padding: 0 18px;
                     }
 
                     >.puton {
                         display: inline-block;
                         box-sizing: border-box;
-                        padding: 0 20px;
+                        padding: 0 16.6px;
                     }
 
                     >.puton2 {
@@ -103,12 +101,12 @@ div.contain {
                     background-color: white;
                     display: inline-block;
                     box-sizing: border-box;
-                    min-width: 700px;
+                    width: 740px;
                     margin: auto;
 
                     >p {
                         display: inline-block;
-                        padding: 10px 23px;
+    padding: 10px 20.2px;
                     }
                     >a{
                         color: black;
@@ -211,4 +209,3 @@ div.contain {
     /* 留意: 將最後一個 li 裡的 a，加上圓角 */
 
     /* 留意: 將第一個 li 裡的 a，加上圓角 */
-}
