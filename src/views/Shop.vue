@@ -1,9 +1,9 @@
 <template>
   <main class="wrapper">
+    <div class="market_header">
+      <div class="market_title"></div>
+    </div>
     <section class="show_item">
-      <div class="market_header">
-        <div class="market_title"></div>
-      </div>
       <div class="show_item-content">
         <div class="shop-imgbox">
           <img src="../assets/shop/market_showImg_behind.svg" alt class="box-bottom" />
@@ -521,16 +521,6 @@
   </main>
 </template>
 <script>
-// import "../js/shop";
+import "../js/shop";
 export default {};
-
-function showHideHam() {
-  let filterPanel = document.getElementById("filterPanel");
-  filterPanel.classList.toggle("hidden");
-}
-function init() {
-  document.getElementById("btnHamburger").onclick = showHideHam;
-  document.getElementById("btnHamburgerclass").onclick = showHideHam;
-}
-window.addEventListener("load", init);
 </script>

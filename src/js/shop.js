@@ -2,10 +2,21 @@ import $ from "jquery";
 import { gsap, TweenMax, Power1, Power3, TimelineMax, Linear } from "gsap";
 
 
-// window.addEventListener("load", init);
 
 
 window.addEventListener("load", () => {
+
+  function showHideHam() {
+    let filterPanel = document.getElementById("filterPanel");
+    filterPanel.classList.toggle("hidden");
+  }
+  // function init() {
+  document.getElementById("btnHamburger").onclick = showHideHam;
+  document.getElementById("btnHamburgerclass").onclick = showHideHam;
+  // }
+  // window.addEventListener("load", init);
+
+
   //觸發明星商品方塊
   $(".hot_commodity_items").hover(function () {
     var tl = $(this);
