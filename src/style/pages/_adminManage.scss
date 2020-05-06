@@ -221,7 +221,7 @@ $tagBGcolor: #E2E2E2;
           }
 
           .statusBtn:checked+.statusBtnLabel {
-            background: #62b45a;
+            background: $btnBgcolor;
           }
 
           .statusBtn:checked+.statusBtnLabel:after {
