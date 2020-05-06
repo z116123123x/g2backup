@@ -53,12 +53,27 @@ $tagBGcolor: #E2E2E2;
       font-size: $title1Size;
       line-height: 3rem;
       position: fixed;
-     
+
+      // ul {
+        // border: 1px solid red;
+        // height: 60vh;
+        // top: 35%;
+        .mng_logo {
+          margin-top: 30px;
+          // height: 50%;
+          // width: 50%;
+          // border: 1px solid orange;
+         
+        }
 
       li {
         position: relative;
-        top: 35%;
+        top: 10%;
+        // border: 1px solid #000;
+        
       }
+     
+    // }
 
       a {
         // position: relative;
@@ -72,6 +87,7 @@ $tagBGcolor: #E2E2E2;
           position: relative;
           top: 1px;
           left: 1px;
+          
         }
 
         &:active {
