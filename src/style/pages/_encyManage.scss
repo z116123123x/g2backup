@@ -11,23 +11,29 @@
   position: fixed;
   left: 25%;
   margin-right: 4%;
+  
 
       .editEncy {
         background: $btnBgcolor;
         color: $btnColor;
         border-radius: $btnRadius;
+        border: hidden;
         width: auto;
-        height: 35px;
+        height: 30px;
         margin-bottom: 30px;
+        transition: ease-in-out .3s;
 
         a {
           text-decoration:none;
           color: $title3Color;
-  
-          &:active {
-            text-decoration:none;
-          }
         }
+        &:hover {
+          position: relative;
+          top: .08rem;
+          left: .08rem;
+          background: $title2Color;
+        }
+    
       }
     
       .EncytableSection {
@@ -75,6 +81,14 @@
   
           .editImg {
             width: 15px;
+            transition: ease-in-out .3s;
+
+            &:hover {
+              position: relative;
+              top: .08rem;
+              left: .08rem;
+              opacity: .5;
+          }
           }
         }
   

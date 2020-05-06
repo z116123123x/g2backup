@@ -243,7 +243,10 @@
     width: 95%;
     margin-left: 2.5%;
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 4fr 1fr;
+    @media (max-width: 1500px) {
+      grid-template-columns: 3fr 1fr;
+    }
     @media (max-width: 1300px) {
       grid-template-columns: 2fr 1fr;
       padding-bottom: 1%;
@@ -255,13 +258,14 @@
     > div:nth-child(1) {
       > img:nth-child(1) {
         // border: olive 10px solid;
-        width: 40%;
+        width: 30%;
         // transform: scale(0.4);
         @media (max-width: 1300px) {
           width: 70%;
         }
         @media (max-width: 992px) {
-          width: 80%;
+          width: 60%;
+          margin-bottom: 2%;
         }
         @media (max-width: 768px) {
           width: 90%;
@@ -272,24 +276,26 @@
     font-size: 20px;
     > div:nth-child(2) {
       // background-color: #000;
-      gap: 10px;
+      // gap: 10px;
       // justify-items: center;
       display: grid;
       position: relative;
-      top: 30%;
-      height: 60%;
-      grid-template-columns: 1fr;
+      // top: 30%;
+      // height: 60%;
+      grid-template-rows: 1fr 1fr;
+      align-self: center;
       > div:nth-child(1) {
         display: flex;
-        // grid-template-columns: 0.9fr 1.4fr 1fr;
+        // background-color: #000;
         text-align: center;
         justify-content: space-around;
-        padding-bottom: 5px;
-        border-bottom: solid #007552 1px;
+        padding-bottom: 10px;
+        border-bottom: solid #007552 3px;
       }
       > div:nth-child(2) {
-        border-bottom: solid #007552 1px;
-        padding-bottom: 5px;
+        // border-bottom: solid #007552 1px;
+        align-self: center;
+        padding-top: 10px;
         text-align: center;
       }
     }
@@ -302,17 +308,24 @@
   margin-top: 1%;
   display: grid;
   grid-template-columns: 0.25fr 1fr;
+  @media (max-width: 1600px) {
+    grid-template-columns: 0.3fr 1fr;
+  }
   @media (max-width: 1300px) {
-    & {
+  margin-left: 2%;
       grid-template-columns: 1fr;
       grid-template-rows: 0.04fr 1fr;
-    }
   }
   @media (max-width: 768px) {
-    & {
+  margin-left: 1.5%;
       grid-template-columns: 1fr;
       grid-template-rows: 0.04fr 1fr;
-    }
+  }
+  @media (max-width: 576px) {
+  margin-left: 1%;
+  }
+  @media (max-width: 350px) {
+  margin-left: 0.5%;
   }
   > div:nth-child(1) {
     //會員區1
@@ -329,8 +342,15 @@
       text-align: center;
       display: grid;
       grid-template-columns: 0.5fr 1.2fr 1fr;
-      padding: 20px;
-      padding-top: 30%;
+      padding: 30% 50px 0px 50px;
+      @media (max-width: 1500px)  {
+      padding: 30% 10px 0px 10px;
+      }
+      @media (max-width: 1300px)  {
+      border-bottom:solid #007552 2px ;
+      padding: 30% 10px 10px 10px;
+
+      }
       .blog-landing-aunt {
         width: 100%;
       }
@@ -340,7 +360,8 @@
           // background-color: #000;
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-around;
+          justify-content: center;
+          
           .blog-landing-aunt {
             width: 100%;
           }
@@ -351,18 +372,23 @@
         }
       }
       > div:nth-child(2) {
+        // background-color: #000;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
         > div:nth-child(1) {
+          align-self: end;
           > span:nth-child(1) {
             //蓬蓬草莓姨span
             padding: 3px;
             font-size: 15px;
-            margin-bottom: 10px;
+            // margin-bottom: 10px;
             display: inline-block;
           }
         }
         > div:nth-child(2) {
+          align-self: start;
           > img {
-            width: 20px; //star
+            width: 15px; //star
           }
         }
       }
@@ -379,6 +405,10 @@
         }
         > div:nth-child(1) {
           align-self: end;
+          > span:nth-child(1) {
+            // background-color: #000;
+            font-size: 16px;
+          }
         }
         > div:nth-child(2) {
           align-self: start;
@@ -386,8 +416,10 @@
       }
       > div:nth-child(3) {
         padding-top: 15px;
+        justify-self: end;
         > span {
-          padding: 5px 10px;
+          //追蹤
+          padding: 3px 15px;
           background-color: #007552;
           border-radius: 20px;
           color: #fff;
@@ -396,7 +428,7 @@
       }
       .blog-landing-greenline {
         border-bottom: 1px solid #007552;
-        padding-top: 10px;
+        padding-top: 20px;
         @media (max-width: 1300px) {
           & {
             display: none;
@@ -425,7 +457,7 @@
         margin-top: 10px;
         text-decoration: none;
         color: black;
-        font-size: 15px;
+        font-size: 16px;
       }
     }
   }
@@ -437,7 +469,7 @@
       display: grid;
       grid-template-columns: 1fr;
       // border: goldenrod 3px solid;
-      padding-left: 5%;
+      padding-left: 10%;
       @media (max-width: 1500px) {
         padding-left: 5%;
         padding-right: 5%;
@@ -455,7 +487,7 @@
           //tags
           font-size: 16px;
           justify-self: end;
-          padding-right: 20%;
+          padding-right: 60%;
           @media (max-width: 1500px) {
             padding-right: 0%;
           }
@@ -480,7 +512,7 @@
         padding-top: 30px;
         //圖片bendingbar2，collection
         > img:nth-child(1) {
-          width: 90%;
+          width: 70%;
           @media (max-width: 1500px) {
             width: 100%;
           }
@@ -489,8 +521,13 @@
       > div:nth-child(5) {
         padding-top: 30px;
         // text-align: center;
+        // background-color: #000;
+        position: relative;
         > img:nth-child(1) {
-          width: 90%;
+          //妹妹採水果圖
+          width: 70%;
+          position: relative;
+
           @media (max-width: 1500px) {
             width: 100%;
           }
@@ -502,7 +539,7 @@
       // border: solid rgb(199, 72, 72) 5px;
       // padding-top: 10%;
       padding-bottom: 5%;
-      padding-left: 5%;
+      padding-left: 10%;
       @media (max-width: 1500px) {
         padding-left: 0%;
       }
@@ -525,13 +562,14 @@
         > div:nth-child(1),
         div:nth-child(2) {
           //文章一、二區
-          font-size: 20px;
+          font-size: 16px;
           column-count: 2;
           // padding: 10rem 0rem 10rem 10rem;
           letter-spacing: 1.5px;
           line-height: 1.5;
           column-gap: 10rem;
-          padding-top: 22%;
+          padding-top: 24%;
+          padding-right: 15%;
           @media (max-width: 1500px) {
             padding: 10% 5% 0% 5%;
           }
@@ -542,6 +580,41 @@
         > div:nth-child(1) {
           //文章一區
           // margin-bottom: 10rem;
+          position: relative;
+          &::before {
+            content: "";
+            width: 90%;
+            border-bottom: solid #007552 2px;
+            position: absolute;
+            top: 5%;
+            right: 20%;
+            @media (max-width: 1500px) {
+              right: 5%;
+              width: 90%;
+            }
+            @media (max-width: 576px) {
+              top: 10px;
+              right: 5%;
+              width: 90%;
+            }
+          }
+          &::after {
+            content: "";
+            width: 75%;
+            border-bottom: solid #007552 2px;
+            position: absolute;
+            bottom: -10%;
+            right: 30%;
+            @media (max-width: 1500px) {
+              right: 5%;
+              width: 90%;
+            }
+            @media (max-width: 576px) {
+              bottom: -10px;
+              right: 5%;
+              width: 90%;
+            }
+          }
         }
         > div:nth-child(2) {
           //文章二區
@@ -553,31 +626,30 @@
         // border: solid #000 3px;
         position: absolute;
         // padding-top: 10%;
-        right: -2.5%;
-        bottom: 5%;
+        right: 0%;
+        bottom: 15%;
+        @media (max-width: 1700px) {
+            // position: relative;
+            right: -2.5%;
+            bottom: 5%;
+        }
         @media (max-width: 1500px) {
-          & {
             position: relative;
-            right: 0%;
+            right: -2.5%;
             bottom: 0%;
-          }
         }
         > div:nth-child(1) {
           text-align: right;
           // position: relative;
           @media (max-width: 1500px) {
-            & {
               text-align: left;
               // display: none;
-            }
           }
           > img:nth-child(1) {
             // border: solid #000 3px;
             // height: 100%;
-            @media (max-width: 1500px) {
-              & {
+            @media (max-width: 1500px) {//梯形
                 display: none;
-              }
             }
           }
           > div:nth-child(2) {
@@ -614,12 +686,29 @@
     }
     > div:nth-child(3) {
       //讚數區
-      border-top: 5px solid #007552;
-      border-bottom: 5px solid #007552;
+      // border-top: 5px solid #007552;
+      // border-bottom: 5px solid #007552;
       font-size: 20px;
       padding-left: 10%;
       padding-top: 20px;
       padding-bottom: 20px;
+      position: relative;
+      &::after {
+        content: "";
+        width: 90%;
+        border-top: 2px solid #007552;
+        position: absolute;
+        top: 0%;
+        right: 5%;
+      }
+      &::before {
+        content: "";
+        width: 90%;
+        border-top: 2px solid #007552;
+        position: absolute;
+        bottom: 0%;
+        right: 5%;
+      }
       > div:nth-child(1) {
         display: flex;
         align-items: center;
@@ -656,8 +745,8 @@
           grid-template-columns: 15% 75% 10%;
           grid-template-rows: repeat(2, 1fr);
           grid-template-areas:
-            'aa1 aa2 aa4'
-            'aa1 aa3 aa4';
+            "aa1 aa2 aa4"
+            "aa1 aa3 aa4";
         }
         > div:nth-child(1) {
           // background-color: #000;
@@ -679,7 +768,7 @@
             grid-area: aa2;
           }
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             top: 0px;
             right: 10%;
@@ -689,14 +778,18 @@
               display: none;
             }
           }
-          @media (max-width: 992px) {
+          @media (max-width: 576px) {
             &::before {
-              content: '';
+              content: "";
               position: absolute;
               top: 3px;
               left: -10px;
               border-right: solid 1px #a0a0a0;
               height: 30px;
+              @media (max-width: 576px) {
+              left: -5px;
+                
+              }
             }
           }
         }
@@ -720,7 +813,7 @@
     }
     > div:nth-child(5) {
       //form
-      padding-top: 50px;
+      padding-top: 100px;
       padding-left: 10%;
       // background-color: #000;
       > form:nth-child(1) {
@@ -728,8 +821,8 @@
           font-size: 20px;
           > textarea:nth-child(1) {
             margin-left: 3%;
-            width: 40%;
-            height: 200px;
+            width: 45%;
+            height: 150px;
             @media (max-width: 992px) {
               width: 70%;
             }

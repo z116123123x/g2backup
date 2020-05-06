@@ -27,18 +27,8 @@ $color5: #ffa978;
   width: 100%;
   margin: 0 auto;
   position: relative;
-}//大本體結束
-
-
-//輪播商品
-.show_item {
-  background-color: #ffd3c1;
-  height: 100vh;
-  width: 100%;
-  @include rwd(small) {
-    text-align: center;
-  }
-  //頁面上面瀏海
+  background-color: $color4;
+   //頁面上面瀏海
   .market_header {
     position: relative;
     background-image: url(./../assets/shop/market_header.svg);
@@ -83,6 +73,18 @@ $color5: #ffa978;
       }
     }
   }//頁面上面瀏海結束
+}//大本體結束
+
+
+//輪播商品
+.show_item {
+  background-color: #ffd3c1;
+  height: 80vh;
+  width: 100%;
+  @include rwd(small) {
+    text-align: center;
+  }
+ 
   .show_item-content {
     height: calc(100% - 150px);
     width: 100%;
@@ -366,18 +368,18 @@ $color5: #ffa978;
   height: 40px;
   background-color: $color4;
   position: relative;
-  &::before {
-    display: block;
-    position: absolute;
-    content: "";
-    height: 100%;
-    min-width: 80%;
-    background-image: url(./../assets/blog_line.svg);
-    background-repeat: no-repeat;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  // &::before {
+  //   display: block;
+  //   position: absolute;
+  //   content: "";
+  //   height: 100%;
+  //   min-width: 60%;
+  //   background-image: url(./../assets/blog_line.svg);
+  //   background-repeat: no-repeat;
+  //   top: 0;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  // }
   @include rwd(small) {
     display: none;
   }
@@ -683,6 +685,7 @@ $color5: #ffa978;
     // box-shadow: 0 0 0 1px white;
     
     border: 1px solid white;
+    border-right: none;
     @include rwd(medium) {
       border-right: none;
     }
@@ -803,3 +806,7 @@ $color5: #ffa978;
   left: -200px;
   transition: left 1s;
 }
+
+
+
+

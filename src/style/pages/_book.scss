@@ -337,96 +337,16 @@
                            width: 33%;
                            height: 100%;
                            position: relative;
-
-                           .Pbutton_left {
-
-                              &:hover {
-                                 background-color: #ffe29e;
-                              }
-
-                              &::before {
-                                 content: "";
-                                 position: absolute;
-                                 top: 50%;
-                                 left: 55%;
-                                 transform: translate(-50%, -50%);
-                                 background-image: url("../assets/book_img/turn_leftpage.svg");
-                                 background-repeat: no-repeat;
-                                 background-size: contain;
-                                 width: 30px;
-                                 height: 40px;
-                              }
-                           }
-
-                           .Pbutton_right {
-
-                              &:hover {
-                                 background-color: #ffe29e;
-                              }
-
-                              &::before {
-                                 content: "";
-                                 position: absolute;
-                                 top: 30%;
-                                 right: 30%;
-
-                                 background-image: url("../assets/book_img/turn_rightpage.svg");
-                                 background-repeat: no-repeat;
-                                 width: 30px;
-                                 height: 40px;
-                                 transform: translateX(50%);
-                              }
-                           }
-
-                           @include rwd(small) {
-                              .Pbutton_left::before {
-                                 width: 18px;
-                                 height: 30px;
-                                 //background-color: #fff;
-                              }
-
-                              .Pbutton_right::before {
-                                 left: -6px;
-                                 width: 18px;
-                                 height: 30px;
-                                 //background-color: #fff;
-
-                              }
-                           }
-
-                           .page_button {
-                              width: 2.5vw;
-                              height: 100px;
-                              border: 2px solid $min-color;
-                              background-color: #f3c352ee;
-                              position: relative;
-                              top: 45%;
-                              transform: translateY(-50%);
-                              left: -1vw;
-                              z-index: 33;
-
-                           }
-
-                           @include rwd(small) {
-                              .page_button {
-                                 width: 20px;
-                                 left: -10px;
-
-                              }
-                           }
                         }
-
                      }
-
-                     @include rwd(mobile) {
-                        .Change_Button {
-                           display: none;
+                     @include rwd(small){
+                        .Change_Button{
+                           height: 100vh;
                         }
                      }
 
                      // bookcontent書籍內容
                      #bk_content {
-
                         // font-size: 0;
                         border: 1px solid $min-color;
                         box-sizing: border-box;
@@ -435,6 +355,7 @@
                         height: 80vh;
                         //max-height: 700px;
                         position: relative;
+                        border: 1px solid red;
 
 
                         //page_top_img
@@ -469,6 +390,55 @@
                            height: 10%;
                            // z-index: -2;
 
+                        }
+
+                        .change_bookpage{
+                           border: 1px solid purple;
+                           position: absolute;
+                           width: 100%;
+                           bottom: 0;
+                           z-index: 2;
+                           .changebuttonleft{
+                              display: inline-block;
+                              position: relative;
+                              left: 10px;
+                              bottom: 0;
+                              button{
+                                 width: 70px;
+                                 height: 30px;
+                                 background: none;
+                                 border: none;
+                                background-image: url("../assets/book_img/frontpage.svg");
+                                background-size: contain;
+                                background-repeat: no-repeat;      
+                                &:hover{
+                                 background-image: url("../assets/book_img/frontpagehover.svg");
+                                 
+                                }
+                              }
+                           }
+
+                           .changebuttonright{
+                              display: inline-block;
+                              position: absolute;
+                              right: 10px;
+                              bottom: 0;
+                              button{
+                                 width: 70px;
+                                 height: 30px;
+                                 background: none;
+                                 border: none;
+                                background-image: url("../assets/book_img/nextpage.svg");
+                                background-size: contain;
+                                background-repeat: no-repeat;      
+                                &:hover{
+                                 background-image: url("../assets/book_img/nextpagehover.svg");
+                                 
+                                }
+                              }
+                           }
+
+         
                         }
 
                         @include rwd (small) {
@@ -519,6 +489,7 @@
                }
             }
          }
+         
       }
 
       #book_footer {

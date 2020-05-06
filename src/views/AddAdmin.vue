@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main class="addAdmin">
+    <main class="addAdminMainContent">
       <h1 class="manageTitle">
         管理員管理
         <span class="manageSubTitle">新增管理員</span>
@@ -11,7 +11,6 @@
           <th>編號</th>
           <td>xxxxxx</td>
         </tr>
-
         <tr>
           <th>
             <label for="addAdminName">姓名</label>
@@ -40,7 +39,7 @@
           <th></th>
           <td>
           <div class="adAdminBtnSec">
-            <input id="addAdminCancel" type="submit" value="取消" />
+            <input id="addAdminCancel" type="button" onClick="javascript:history.back(1)" value="取消" />
             <input id="addAdminSubmit" type="submit" value="送出" />
           </div>
           </td>
