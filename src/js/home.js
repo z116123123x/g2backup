@@ -62,7 +62,7 @@ window.addEventListener("load", () => {
     camera.lookAt(0, 800, 0);
 
     // 渲染器設定
-    renderer = new THREE.WebGLRenderer();
+    renderer = new THREE.WebGLRenderer({ alpha: true });
 
     renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -1014,18 +1014,7 @@ window.addEventListener("load", () => {
         28500
       );
 
-    // Set timeline time to scrollTop
-    function update() {
-      tl.time(window.pageYOffset + triggerOffset);
-      requestId = null;
-    }
-
-    // Only update on animation frames
-    window.addEventListener("scroll", function() {
-      if (!requestId) {
-        requestId = requestAnimationFrame(update);
-      }
-
+    function htmlelement() {
       if (window.pageYOffset > 800 && window.pageYOffset < 1300) {
         $("div#mainText").fadeIn();
       } else {
@@ -1067,8 +1056,45 @@ window.addEventListener("load", () => {
       } else {
         $("#scroll_btn").html("&#9660;");
       }
-    });
+    }
 
+    function scrollsection() {
+      if (window.pageYOffset >= 0 && window.pageYOffset < 5500) {
+        $(".scroll_section_btn").removeClass("scroll_section_btn_add");
+        $("#scroll_top").addClass("scroll_section_btn_add");
+      } else if (window.pageYOffset >= 5500 && window.pageYOffset < 7500) {
+        $(".scroll_section_btn").removeClass("scroll_section_btn_add");
+        $("#scroll_knowledge").addClass("scroll_section_btn_add");
+      } else if (window.pageYOffset >= 7500 && window.pageYOffset < 13000) {
+        $(".scroll_section_btn").removeClass("scroll_section_btn_add");
+        $("#scroll_market").addClass("scroll_section_btn_add");
+      } else if (window.pageYOffset >= 13000 && window.pageYOffset < 19000) {
+        $(".scroll_section_btn").removeClass("scroll_section_btn_add");
+        $("#scroll_blog").addClass("scroll_section_btn_add");
+      } else if (window.pageYOffset >= 19000 && window.pageYOffset < 25000) {
+        $(".scroll_section_btn").removeClass("scroll_section_btn_add");
+        $("#scroll_member").addClass("scroll_section_btn_add");
+      } else {
+        $(".scroll_section_btn").removeClass("scroll_section_btn_add");
+        $("#scroll_footer").addClass("scroll_section_btn_add");
+      }
+    }
+
+    // Set timeline time to scrollTop
+    function update() {
+      tl.time(window.pageYOffset + triggerOffset);
+      requestId = null;
+    }
+
+    // Only update on animation frames
+    window.addEventListener("scroll", function() {
+      if (!requestId) {
+        requestId = requestAnimationFrame(update);
+      }
+      htmlelement();
+      scrollsection();
+    });
+    scrollsection();
     update();
   }
   init();
@@ -1087,10 +1113,26 @@ window.addEventListener("load", () => {
     } else {
       camera.fov = 60;
     }
+
+    if (window.innerWidth <= 767) {
+      $("#scroll_section").css({ display: "none" });
+      $("#scroll_btn").css({ display: "block" });
+    } else {
+      $("#scroll_section").css({ display: "block" });
+      $("#scroll_btn").css({ display: "none" });
+    }
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
+
+  if (window.innerWidth <= 767) {
+    $("#scroll_section").css({ display: "none" });
+    $("#scroll_btn").css({ display: "block" });
+  } else {
+    $("#scroll_section").css({ display: "block" });
+    $("#scroll_btn").css({ display: "none" });
+  }
 
   // const home = document.getElementById("home");
 
@@ -1147,6 +1189,10 @@ window.addEventListener("load", () => {
       $("html").off("scroll mousewheel touchmove", stopScrolling);
     }
 
+    function scrollbtnStop() {
+      $(".scroll_section_btn").attr("disabled", false);
+    }
+
     $("#scroll_btn").on("click", function() {
       $("#scroll_btn").attr("disabled", true);
 
@@ -1193,6 +1239,37 @@ window.addEventListener("load", () => {
         setTimeout(btnStop, 5000);
         $("html").on("scroll mousewheel touchmove", stopScrolling);
       }
+    });
+
+    $("#scroll_top").on("click", function() {
+      $(".scroll_section_btn").attr("disabled", true);
+      $("html").animate({ scrollTop: 0 }, 2000);
+      setTimeout(scrollbtnStop, 2000);
+    });
+    $("#scroll_knowledge").on("click", function() {
+      $(".scroll_section_btn").attr("disabled", true);
+      $("html").animate({ scrollTop: 7400 }, 2000);
+      setTimeout(scrollbtnStop, 2000);
+    });
+    $("#scroll_market").on("click", function() {
+      $(".scroll_section_btn").attr("disabled", true);
+      $("html").animate({ scrollTop: 12900 }, 2000);
+      setTimeout(scrollbtnStop, 2000);
+    });
+    $("#scroll_blog").on("click", function() {
+      $(".scroll_section_btn").attr("disabled", true);
+      $("html").animate({ scrollTop: 18900 }, 2000);
+      setTimeout(scrollbtnStop, 2000);
+    });
+    $("#scroll_member").on("click", function() {
+      $(".scroll_section_btn").attr("disabled", true);
+      $("html").animate({ scrollTop: 24900 }, 2000);
+      setTimeout(scrollbtnStop, 2000);
+    });
+    $("#scroll_footer").on("click", function() {
+      $(".scroll_section_btn").attr("disabled", true);
+      $("html").animate({ scrollTop: 33000 }, 2000);
+      setTimeout(scrollbtnStop, 2000);
     });
   });
 });

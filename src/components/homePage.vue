@@ -2,6 +2,20 @@
   <div id="test" class="hello">
     <main id="home_main">
       <button id="scroll_btn">&#9660;</button>
+      <div id="scroll_section">
+        <button id="scroll_top" class="scroll_section_btn">
+          Top
+        </button>
+        <button id="scroll_knowledge" class="scroll_section_btn">
+          知識百科
+        </button>
+        <button id="scroll_market" class="scroll_section_btn">水果市集</button>
+        <button id="scroll_blog" class="scroll_section_btn">果農日誌</button>
+        <button id="scroll_member" class="scroll_section_btn">會員中心</button>
+        <button id="scroll_footer" class="scroll_section_btn">
+          End
+        </button>
+      </div>
       <div id="mainLOGO">
         <img src="../assets/LOGO.svg" alt />
       </div>
