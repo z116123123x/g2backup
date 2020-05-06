@@ -15,7 +15,7 @@
               autocapitalize="off"
               spellcheck="false"
               data-lpignore="true"
-              v-model="memberAcc"
+              v-model="member.acc"
             />
           </div>
         </div>
@@ -31,7 +31,7 @@
               autocapitalize="off"
               spellcheck="false"
               data-lpignore="true"
-              v-model="memberPsw"
+              v-model="member.psw"
             />
             <button class="adminLoginBtn" type="button" id="eyeball">
               <div class="eye"></div>
@@ -51,17 +51,18 @@ import "@/js/adminLogin";
 export default {
   data() {
     return {
-      memberAcc: "",
-      memberPsw: ""
+      member: {
+        acc: "",
+        psw: ""
+      }
     };
   },
   methods: {
     login: function() {
       const login = "/api/api_login.php";
-      const send = `acc=${this.memberAcc}&psw=${this.memberPsw}`;
 
       this.$http
-        .post(login, send)
+        .post(login, JSON.stringify(this.member))
         .then(res => {
           const data = res.data;
 
