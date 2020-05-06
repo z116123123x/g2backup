@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     login: function() {
-      const login = "/api/api_login.php";
+      const login = "/api/api_adminLogin.php";
 
       this.$http
         .post(login, JSON.stringify(this.member))
@@ -74,6 +74,7 @@ export default {
             this.$router.push("/center/manage");
           }
         })
+        // eslint-disable-next-line no-console
         .catch(err => console.log(err));
     }
   }
