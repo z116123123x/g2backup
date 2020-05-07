@@ -15,6 +15,7 @@
               autocapitalize="off"
               spellcheck="false"
               data-lpignore="true"
+              v-model="member.acc"
             />
           </div>
         </div>
@@ -30,6 +31,7 @@
               autocapitalize="off"
               spellcheck="false"
               data-lpignore="true"
+              v-model="member.psw"
             />
             <button class="adminLoginBtn" type="button" id="eyeball">
               <div class="eye"></div>
@@ -37,8 +39,8 @@
             <div id="beam"></div>
           </div>
         </div>
-        <button class="adminLoginBtn" id="submit">登入</button>
-        <router-link class="adminLoginBtn" to="/center/manage">進入</router-link>
+        <button class="adminLoginBtn" id="submit" @click="login">登入</button>
+        <!-- <router-link class="adminLoginBtn" to="/center/manage">進入</router-link> -->
       </form>
     </div>
   </div>
@@ -46,5 +48,35 @@
 
 <script>
 import "@/js/adminLogin";
-export default {};
+export default {
+  data() {
+    return {
+      member: {
+        acc: "",
+        psw: ""
+      }
+    };
+  },
+  methods: {
+    login: function() {
+      const login = "/api/api_adminLogin.php";
+
+      this.$http
+        .post(login, JSON.stringify(this.member))
+        .then(res => {
+          const data = res.data;
+
+          if (data == "") {
+            alert("帳號或密碼輸入錯誤！");
+          } else {
+            alert(data.name + " 您好！");
+
+            this.$router.push("/center/manage");
+          }
+        })
+        // eslint-disable-next-line no-console
+        .catch(err => console.log(err));
+    }
+  }
+};
 </script>

@@ -1,4 +1,4 @@
-.addAdmin {
+.addAdminMainContent {
     margin: 0 auto;
     color: $contentColor;
     display: inline-block;
@@ -23,7 +23,7 @@
             padding: 20px 20px;
             text-align: center;
             color: $contentColor;
-            background: $maintitleColor;
+            background: $formTtlBg;
             font-size: $title2Size;
         }
 
@@ -44,7 +44,6 @@
                 height: $contentSize;
                 letter-spacing: 1px;
                 padding: 3px;
-                
             }
 
             #addAdminAccount {
@@ -74,8 +73,16 @@
                     color: $btnColor;
                     border-radius: $btnRadius;
                     width: 60px;
-                    height: 30px;
+                    height: 25px;
+                    border: hidden;
+                    transition: ease-in-out .3s;
 
+                    &:hover {
+                        // position: relative;
+                        // top: .1rem;
+                        // left: .1rem;
+                        background-color: $attention;
+                    }
                 }
                 #addAdminCancel
                  {

@@ -31,14 +31,14 @@
         display: inline-block;
         width: 100%;
         height: auto; //
-        margin-bottom: 70px; 
+        margin-bottom: 70px;
 
         th {
             width: 15%;
             padding: 20px 20px;
             text-align: center;
             color: $contentColor;
-            background: $maintitleColor;
+            background: $formTtlBg;
             font-size: $title2Size;
         }
 
@@ -55,23 +55,34 @@
                 display: inline-block;
                 margin-left: 70%;
 
-                #encyEditCancel, #ecnyEditSubmit {
+                #encyEditCancel,
+                #ecnyEditSubmit {
                     color: $btnColor;
                     border-radius: $btnRadius;
                     width: 60px;
-                    height: 30px;
+                    height: 25px;
+                    border: hidden;
+                    transition: ease-in-out .3s;
+
+                    &:hover {
+                        // position: relative;
+                        // top: .08rem;
+                        // left: .08rem;
+                        // opacity: .9;
+                        background-color: $attention;
+                 
+                    }
                 }
 
-                #encyEditCancel
-                 {
+                #encyEditCancel {
                     background-color: $title2Color;
                     margin: 0px 5px;
                 }
-                
+
                 #ecnyEditSubmit {
                     background-color: $btnBgcolor;
                     margin: 0px 5px;
-                  
+
                 }
 
             }
@@ -85,7 +96,7 @@
                 height: $contentSize;
                 // letter-spacing: 1px;
                 padding: 10px;
-                
+
             }
 
             #encyContent {
@@ -97,13 +108,22 @@
                 overflow: scroll;
                 padding: 10px;
             }
-            
+
         }
 
         .encyTag {
             border-radius: 25px;
             background-color: $tagBGcolor;
             margin: 3px;
+            border: hidden;
+            transition: ease-in-out;
+            transition-duration: .3s;
+
+            &:hover {
+                background-color: #666;
+                color: $btnColor;
+
+            }
         }
 
     }

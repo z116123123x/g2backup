@@ -1,11 +1,15 @@
 import Vue from 'vue';
 import App from './admin.vue';
 import router from './router';
-import "@/js/components";
+import axios from "axios";
+// import VueAxios from "vue-axios";
 
+import "@/js/components";
 import "@/style/main.scss";
 
 Vue.config.productionTip = false;
+
+Vue.prototype.$http = axios;
 
 new Vue({
   router,
