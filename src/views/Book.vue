@@ -39,9 +39,7 @@
                 </div>
                 <!-- bookcontent書籍內容 -->
                 <div id="bk_content">
-                  <keep-alive>
-                    <router-view />
-                  </keep-alive>
+                  <router-view />
                   <!-- fruit_knowledge -->
                 </div>
                 <!-- 右切換按鈕 -->
