@@ -3,7 +3,7 @@
     <div class="welcome">
       <div class="movebox">
         <div class="signup nodisplay">
-          <img class="signuptitle" src="@/assets/memberlogin/Group 362.svg" alt />
+          <img class="signuptitle" src="@/assets/memberlogin/Group 362.png" alt />
           <form class="less-padding" autocomplete="off">
               <div class="formarea">
                   <div class="formtext">
@@ -30,7 +30,7 @@
           </form>
         </div>
         <div class="signin">
-          <img class="logintitle" src="@/assets/memberlogin/Group 363.svg" alt />
+          <img class="logintitle" src="@/assets/memberlogin/Group 363.png" alt />
           <form class="more-padding" autocomplete="off">
             <span>帳號:</span>
             <input type="text" placeholder="請輸入帳號" />
@@ -46,11 +46,11 @@
       </div>
       <div class="leftbox">
         <h1>已經是果粉了?</h1>
-        <img class="loginbutton" id="signin" src="@/assets/memberlogin/Group 364.svg" alt />
+        <img class="loginbutton" id="signin" src="@/assets/login.png" alt />
       </div>
       <div class="rightbox">
         <h1>還不是果粉嗎?</h1>
-        <img class="signupbutton" id="signup" src="@/assets/memberlogin/Group 365.svg" alt />
+        <img class="signupbutton" id="signup" src="@/assets/signup.png" alt />
       </div>
     </div>
   </div>

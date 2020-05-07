@@ -87,15 +87,17 @@
                             </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>                              
-                            <p>不想給了</p>
-                            <p>送出</p>
+                            </div>
+                            <div class="Evaluation_submit">
+                                <p>不想給了</p>
+                                <p>送出</p>
+                            </div>
                         </div>
                     </div>
                 </div>

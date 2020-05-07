@@ -35,7 +35,7 @@ div.farmcontain {
         }
 
         @include rwd(mobile) {
-            height: auto;
+            height: 100%;
             position: fixed;
             top: 0px;
             left: 0;
@@ -162,7 +162,7 @@ div.farmcontain {
                 background-color: #FFD3C1;
                 position: absolute;
                 right: 0;
-                top: 36%;
+                top: 20%;
                 transform: translateX(50%);
                 color: black;
                 border: 0;

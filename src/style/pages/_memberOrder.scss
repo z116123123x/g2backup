@@ -32,7 +32,7 @@
          background-color: white;
          text-align: start;
          width: 768px;
-         height: 915px;
+         height: 100%;
          font-size: 17px;
 
          @include rwd(medium) {
@@ -327,22 +327,30 @@
             @include rwd(mobile){
               margin: 5px 20px;
             }
-             >p {
-               text-align: end;
-               display: inline-block;
-               margin-top: 100px;
-               margin-right: 10px;
-               margin-bottom: 10px;
-               padding: 0 10px;
-               background-color: #007552;
-               border-radius: 5px;
-               color: white;
-             }
-
-             >p:hover {
-               background-color: #62B45A;
-               color: white;
-             }
+            >.Evaluation_submit{
+              text-align: end;
+              >p {
+                display: inline-block;
+                margin-top: 100px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                padding: 0 10px;
+                background-color: #007552;
+                border-radius: 5px;
+                color: white;
+                @include rwd(mobile){
+                 margin-top: 100px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+               }
+              }
+ 
+              >p:hover {
+                background-color: #62B45A;
+                color: white;
+              }
+            }
+             
 
              >.starimg {
                display: inline-block;
@@ -397,6 +405,9 @@
              padding: 5px 10px;
              font-size: 1rem;
              color: black;
+             @include rwd(mobile){
+              padding: 5px 6px;
+             }
            }
 
            >a.-on {

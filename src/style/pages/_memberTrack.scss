@@ -1,71 +1,92 @@
 div.track {
-    display: inline-block;
-    background-color: #FBF8EF;
-    width: 87.2%;
+  display: inline-block;
+  background-color: #FBF8EF;
+  width: 87.2%;
+  height: auto;
+
+  .track_head {
+    color: #F7C845;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 30px;
+  }
+
+  .track_bottom {
+    display: block;
     height: auto;
-
-    .track_head {
-      color: #F7C845;
-      margin-top: 40px;
-      margin-left: 40px;
-      font-size: 30px;
+    text-align: center;
+    padding-left: 70px;
+    @include rwd(mobile){
+      padding-left: 5px;
     }
+    >.trackcard {
+      display: inline-block;
+      margin-top: 40px;
+      line-height: 2;
 
-    .track_bottom {
-      display: block;
-      height: auto;
-      text-align: center;
-      padding-left: 70px;
-      >.trackcard {
-        display: inline-block;
-        margin-top: 40px;
-        line-height: 2;
+      >.cardfront {
+        border: 3px solid #007552;
+        background-color: white;
+        box-shadow: 10px -9px #007552;
+        width: 260px;
+        margin-right: 260px;
+        font-size: 17px;
 
-        >.cardfront {
-          border: 3px solid #007552;
-    background-color: white;
-    box-shadow: 10px -9px #007552;
-    width: 260px;
-    margin-right: 260px;
-    font-size: 17px;
-          @include rwd(large){
-            width: 170px;
-            margin-right: 167.5px;
-            font-size: 17px;
-          }
-          @include rwd(medium){
-            width: 240px;
-            margin-right: 77px;
-            margin-left: 30px;
-            font-size: 16px;
-          }
-          @include rwd(mobile){
-            width: 220px;
-    margin-right: 60px;
-    margin-left: 60px;
-    font-size: 17px;
-          }
-          >.front_top {
-            >.closeimg {
-              width: 30px;
-              height: 30px;
-              position: relative;
-              top: 10px;
-              left: 130px;
+        @include rwd(large) {
+          width: 170px;
+          margin-right: 167.5px;
+          font-size: 17px;
+        }
 
-              >.img {
-                width: 100%;
-                height: 100%;
-              }
+        @include rwd(medium) {
+          width: 240px;
+          margin-right: 77px;
+          margin-left: 30px;
+          font-size: 16px;
+        }
+
+        @include rwd(mobile) {
+          width: 220px;
+          margin-right: 60px;
+          margin-left: 60px;
+          font-size: 17px;
+        }
+
+        >.front_top {
+          >.closeimg {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top: 10px;
+            left: 130px;
+
+            >.img {
+              width: 100%;
+              height: 100%;
             }
+          }
 
-            >.frontimg {
-              width: 70px;
-              height: 70px;
-              padding: 30px;
-              padding-bottom: 0;
-              margin: 0 auto;
-              text-align: center;
+          >.frontimg {
+            width: 70px;
+            height: 70px;
+            padding: 30px;
+            padding-bottom: 0;
+            margin: 0 auto;
+            text-align: center;
+
+            >img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          >.star {
+            display: block;
+
+            >.starimg {
+              display: inline-block;
+              width: 10px;
+              height: 10px;
 
               >img {
                 width: 100%;
@@ -73,152 +94,140 @@ div.track {
               }
             }
 
-            >.star {
-              display: block;
-
-              >.starimg {
-                display: inline-block;
-                width: 10px;
-                height: 10px;
-
-                >img {
-                  width: 100%;
-                  height: 100%;
-                }
-              }
-
-              >span {
-                color: #007552;
-              }
-            }
-          }
-
-          >.front_bottom {
-            display: inline-block;
-            text-align: start;
-            padding: 5px 9px;
-          }
-
-          .front_button {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-
-            >p {
-              display: inline-block;
-              padding-right: 20px;
-            }
-          }
-
-          // >.cardinfo{
-          //   display: block;
-          //   border: 3px solid #F7C845;
-          //   background-color: white;
-          //   >.top{
-          //     display: inline-block;
-          //     text-align: start;
-          //     >.imgbox{
-          //       display: inline-block;
-          //       width: 50px;
-          //       height: 50px;
-          //       >img{
-          //         width: 100%;
-          //         height: 100%;
-          //       }
-          //     }
-          //   }
-          // }
-        }
-
-      }
-
-      .pagination_block {
-        display: inline-block;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-        >ul.pagination {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          font-size: 0;
-          @include rwd(mobile){
-            margin-left: 20px;
-          }
-
-          >li {
-            display: inline-block;
-
-            >a {
-              display: inline-block;
-              text-decoration: none;
-
-              border: 1px solid #007552;
-              /* 留意 */
-              /* 留意：將全部的右邊框都移除 */
-
-              text-align: center;
-              padding: 5px 10px;
-              font-size: 1rem;
-              color: black;
-              @include rwd(mobile){
-                padding: 5px 6px;
-              }
-            }
-
-            >a.-on {
-              background-color: #FFD3C1;
-              color: #007552;
-            }
-
-            >a:hover {
-              background-color: #FFD3C1;
+            >span {
               color: #007552;
             }
           }
+        }
 
-          >li:first-child>a {
+        >.front_bottom {
+          display: inline-block;
+          text-align: start;
+          padding: 5px 9px;
+        }
+
+        .front_button {
+          display: block;
+          text-align: center;
+          margin-top: 20px;
+
+          >p {
             display: inline-block;
-            margin-right: 10px;
-            background-color: #007552;
-            color: white;
-          }
-
-          >li:first-child>a:hover {
-            background-color: #007552;
-            color: white;
-          }
-
-          >li:last-child>a {
-            border-right: 1px solid #007552;
-            margin-left: 10px;
-            background-color: #007552;
-            color: white;
-          }
-
-          >li:last-child>a:hover {
-            background-color: #007552;
-            color: white;
+            padding-right: 20px;
           }
         }
+
+        // >.cardinfo{
+        //   display: block;
+        //   border: 3px solid #F7C845;
+        //   background-color: white;
+        //   >.top{
+        //     display: inline-block;
+        //     text-align: start;
+        //     >.imgbox{
+        //       display: inline-block;
+        //       width: 50px;
+        //       height: 50px;
+        //       >img{
+        //         width: 100%;
+        //         height: 100%;
+        //       }
+        //     }
+        //   }
+        // }
       }
 
     }
+
+    .pagination_block {
+      display: inline-block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      >ul.pagination {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+
+        @include rwd(mobile) {
+          margin-left: 20px;
+        }
+
+        >li {
+          display: inline-block;
+
+          >a {
+            display: inline-block;
+            text-decoration: none;
+
+            border: 1px solid #007552;
+            /* 留意 */
+            /* 留意：將全部的右邊框都移除 */
+
+            text-align: center;
+            padding: 5px 10px;
+            font-size: 1rem;
+            color: black;
+
+            @include rwd(mobile) {
+              padding: 5px 6px;
+            }
+          }
+
+          >a.-on {
+            background-color: #FFD3C1;
+            color: #007552;
+          }
+
+          >a:hover {
+            background-color: #FFD3C1;
+            color: #007552;
+          }
+        }
+
+        >li:first-child>a {
+          display: inline-block;
+          margin-right: 10px;
+          background-color: #007552;
+          color: white;
+        }
+
+        >li:first-child>a:hover {
+          background-color: #007552;
+          color: white;
+        }
+
+        >li:last-child>a {
+          border-right: 1px solid #007552;
+          margin-left: 10px;
+          background-color: #007552;
+          color: white;
+        }
+
+        >li:last-child>a:hover {
+          background-color: #007552;
+          color: white;
+        }
+      }
+    }
+
   }
+}
 
-  // div.Order>.Order_bottom>.Orderlist>.list_1>span.triangle{
-  //     display: inline-block;
-  //     // border: 10px solid red;
-  //     border-left: 50px solid blue transparent;
-  //     border-right: 50px solid red transparent;
-  //     border-top: 50px solid #007552;
-  //     border-bottom: 0px solid black;
-  //     width: 0px;
-  //     height: 0px;
-  // }
+// div.Order>.Order_bottom>.Orderlist>.list_1>span.triangle{
+//     display: inline-block;
+//     // border: 10px solid red;
+//     border-left: 50px solid blue transparent;
+//     border-right: 50px solid red transparent;
+//     border-top: 50px solid #007552;
+//     border-bottom: 0px solid black;
+//     width: 0px;
+//     height: 0px;
+// }
 
 
-  /* 留意: 將最後一個 li 裡的 a，右邊框加回來 */
-  /* 留意: 將最後一個 li 裡的 a，加上圓角 */
+/* 留意: 將最後一個 li 裡的 a，右邊框加回來 */
+/* 留意: 將最後一個 li 裡的 a，加上圓角 */
 
-  /* 留意: 將第一個 li 裡的 a，加上圓角 */
+/* 留意: 將第一個 li 裡的 a，加上圓角 */
