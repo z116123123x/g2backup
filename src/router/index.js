@@ -64,9 +64,9 @@ const routes = [{
     component: () => import('@/views/ShopItem.vue'),
   },
   {
-    path: '/loginmember',
-    name: 'loginmember',
-    component: () => import('@/views/login.vue'),
+    path: '/loginMember',
+    name: 'LoginMember',
+    component: () => import('@/views/MemberLogin.vue'),
   },
 
   {
