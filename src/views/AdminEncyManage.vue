@@ -28,7 +28,8 @@
                 <td>我是內容</td>
                 <td>
                   <a href="#">
-                    <img class="editImg" src="@/assets/icon/edit_btn.svg" alt />
+                     <img class="editImg" src="@/assets/icon/edit_btn.svg" alt />
+                    <img class="editImg" src="@/assets/icon/edit_pen.svg" alt />
                   </a>
                 </td>
               </tr>
@@ -39,16 +40,7 @@
                 <td>
                   <a href="#">
                     <img class="editImg" src="@/assets/icon/edit_btn.svg" alt />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>xxxxx</td>
-                <td>我是標題</td>
-                <td>我是內容</td>
-                <td>
-                  <a href="#">
-                    <img class="editImg" src="@/assets/icon/edit_btn.svg" alt />
+                    <img class="editImg" src="@/assets/icon/edit_pen.svg" alt />
                   </a>
                 </td>
               </tr>

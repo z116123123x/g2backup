@@ -67,9 +67,9 @@ export default {
           const data = res.data;
 
           if (data == "") {
-            alert("帳號或密碼輸入錯誤！");
+            alert("痾喔，帳號或密碼輸入錯誤。請重新再試一次！");
           } else {
-            alert(data.name + " 您好！");
+            alert(data.name + " 您好，歡迎回來巡視果園！");
 
             this.$router.push("/center/manage");
           }

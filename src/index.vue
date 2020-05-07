@@ -1,22 +1,9 @@
 <template>
   <div id="app">
     <div id="index_front_container">
-      <div class="frame">
-        <!--
-<div class="plane-container">
-<a href="http://customer.io/" target="_blank">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-width="1131.53px" height="379.304px" viewBox="0 0 1131.53 379.304" enable-background="new 0 0 1131.53 379.304"
-xml:space="preserve" class="plane">
-<polygon fill="#ACD6FF" points="72.008,0 274.113,140.173 274.113,301.804 390.796,221.102 601.682,367.302 1131.53,0.223  "/>
-<polygon fill="#84C1FF" points="1131.53,0.223 274.113,140.173 274.113,301.804 390.796,221.102   "/>
-        </svg></a>-->
 
-        <!-- </div>  end of plane-container -->
-      </div>
-      <!-- end of frame -->
 
-      <div class="clouds">
+ <div class="clouds">
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -38,6 +25,7 @@ C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C2
 S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"
           />
         </svg>
+
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -128,18 +116,22 @@ S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715
       </div>
       <!-- end of clouds -->
 
+
       <div class="front_LOGO">
         <img src="@/assets/headerLOGO.svg" alt />
       </div>
 
-       <button class="btn_left" @click="goIndexPage">前台
-        <!-- <span class="front-link" data-heading="前台" @click="goIndexPage"> 前台 </span>-->
-        <!-- <div class="waterpear_top"></div> --> 
+      <button class="btn_left" @click="goIndexPage">
+        前台
+        <!-- <div class="waterpear_top"></div> -->
       </button>
 
       <button class="btn_right" @click="goAdminPage">後台</button>
 
+
       <div class="front_background"></div>
+
+     
     </div>
   </div>
 </template>
