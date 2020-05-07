@@ -5,6 +5,9 @@ div.information{
     width: 87.2%;
     height: 100vh;
     vertical-align: top;
+    @include rwd(medium){
+        height: 100%;
+    }
     >.information_head{
         color: #F7C845;
         margin-top: 40px;
