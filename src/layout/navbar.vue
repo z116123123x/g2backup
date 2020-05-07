@@ -87,3 +87,26 @@
     </div>
   </nav>
 </template>
+<script>
+export default {
+  data() {
+    return {};
+  },
+  created() {
+    const api = "/api/api_memberStatus.php";
+
+    this.$http
+      .post(api, JSON.stringify(this.member))
+      .then(res => {
+        const data = res.data;
+
+        if (data != "") {
+          // eslint-disable-next-line no-console
+          console.log("已經有登入過");
+        }
+      })
+      // eslint-disable-next-line no-console
+      .catch(err => console.log(err));
+  }
+};
+</script>
