@@ -1,137 +1,43 @@
 <template>
   <div id="app">
     <div id="index_front_container">
-
-
- <div class="clouds">
-        <svg
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          width="762px"
-          height="331px"
-          viewBox="0 0 762 331"
-          enable-background="new 0 0 762 331"
-          xml:space="preserve"
+      <div class="clouds">
+        <img
+          src="@/assets/cloudWhite.png"
           class="cloud big front slowest indexClouds"
-        >
-          <path
-            fill="#FFFFFF"
-            d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
-c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
-C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
-S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"
-          />
-        </svg>
-
-        <svg
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          width="762px"
-          height="331px"
-          viewBox="0 0 762 331"
-          enable-background="new 0 0 762 331"
-          xml:space="preserve"
+        />
+        <img
+          src="@/assets/cloud2White.png"
           class="cloud distant smaller indexClouds"
-        >
-          <path
-            fill="#FFFFFF"
-            d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
-c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
-C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
-S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"
-          />
-        </svg>
+        />
 
-        <svg
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          width="762px"
-          height="331px"
-          viewBox="0 0 762 331"
-          enable-background="new 0 0 762 331"
-          xml:space="preserve"
+        <img
+          src="@/assets/cloudGreen.png"
           class="cloud small slow indexClouds"
-        >
-          <path
-            fill="#FFFFFF"
-            d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
-c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
-C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
-S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"
-          />
-        </svg>
-
-        <svg
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          width="762px"
-          height="331px"
-          viewBox="0 0 762 331"
-          enable-background="new 0 0 762 331"
-          xml:space="preserve"
+        />
+        <img
+          src="@/assets/cloudSkin.png"
           class="cloud distant super-slow massive indexClouds"
-        >
-          <path
-            fill="#FFFFFF"
-            d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
-c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
-C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
-S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"
-          />
-        </svg>
+        />
 
-        <svg
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          width="762px"
-          height="331px"
-          viewBox="0 0 762 331"
-          enable-background="new 0 0 762 331"
-          xml:space="preserve"
-          class="cloud slower indexClouds"
-        >
-          <path
-            fill="#FFFFFF"
-            d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
-c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
-C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
-S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"
-          />
-        </svg>
+        <img src="@/assets/cloudPink.png" class="cloud slower indexClouds" />
       </div>
       <!-- end of clouds -->
-
 
       <div class="front_LOGO">
         <img src="@/assets/headerLOGO.svg" alt />
       </div>
 
-      <button class="btn_left" @click="goIndexPage">
-        前台
-        <!-- <div class="waterpear_top"></div> -->
-      </button>
+      <div id="btn_section">
+        <button class="btn_left" @click="goIndexPage">
+          前台
+          <!-- <div class="waterpear_top"></div> -->
+        </button>
 
-      <button class="btn_right" @click="goAdminPage">後台</button>
-
+        <button class="btn_right" @click="goAdminPage">後台</button>
+      </div>
 
       <div class="front_background"></div>
-
-     
     </div>
   </div>
 </template>
@@ -143,7 +49,7 @@ export default {
     },
     goAdminPage: () => {
       window.location.href = "./admin";
-    }
-  }
+    },
+  },
 };
 </script>
