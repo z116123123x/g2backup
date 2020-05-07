@@ -8,7 +8,7 @@ try {
     require_once("connectDB.php");
     
     // 操作DB
-    $sql = "select * from `member` where acc=:acc and psw=:psw";
+    $sql = "select * from `admin` where acc=:acc and psw=:psw";
     $member = $pdo->prepare($sql);
 
     $memberInfo = json_decode(file_get_contents("php://input"));
@@ -27,11 +27,9 @@ try {
         //寫入session
         $_SESSION["no"] = $memRow["no"];
         $_SESSION["name"] = $memRow["name"];
-        $_SESSION["phone"] = $memRow["phone"];
-        $_SESSION["email"] = $memRow["email"];
 
         //送出登入者的姓名資料
-        $member = array("no" => $_SESSION["no"], "name" => $_SESSION["name"], "email" => $_SESSION["email"]);
+        $member = array("no" => $_SESSION["no"], "name" => $_SESSION["name"]);
 
         echo json_encode($memRow);
     }

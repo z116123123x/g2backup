@@ -1,70 +1,95 @@
 <template>
   <div class="bk_Spring">
-    <div class="bk_season_index">
-      <div class="bk_season">
-        <h5>春季目錄</h5>
-        <div class="bk_season_img">
-          <img src="@/assets/book_img/flower_ct.svg" />
-        </div>
-        <div class="bk_season_img">
-          <img src="@/assets/book_img/flower_ct.svg" />
-        </div>
-        <div class="bk_season_img">
-          <img src="@/assets/book_img/flower_ct.svg" />
-        </div>
-      </div>
-      <div class="bk_season_pic">
-        <div class="bk_season_pic1">
-          <img src="@/assets/book_img/spring/plum/plum04.jpg" alt />
-          <span>梅子</span>
-        </div>
-        <div class="bk_season_pic1">
-          <img src="@/assets/book_img/spring/plum/plum04.jpg" alt />
-          <span>李子</span>
-        </div>
-        <div class="bk_season_pic1">
-          <img src="@/assets/book_img/spring/plum/plum04.jpg" alt />
-          <span>桃子</span>
-        </div>
-        <div class="bk_season_pic1">
-          <img src="@/assets/book_img/spring/plum/plum04.jpg" alt />
-          <span>琵琶</span>
-        </div>
+    <component :page="currentTab.page" :is="currentTab.index"></component>
+    <div class="change_bookpage">
+      <div v-for="tab in tabs" :key="tab.name" :class="'changebutton' + tab.class">
+        <button v-if="tab.status == true" @click="toggleTab(tab)"></button>
       </div>
     </div>
-    <component :is="currentTab"></component>
-    <button v-for="tab in tabs" :key="tab.id" @click="toggleTab(tab)">{{tab.name}}</button>
   </div>
 </template>
 <script>
-import before from "@/views/BookSpringPage1";
-import after from "@/views/BookSpringPage2";
+import index from "@/views/BookSeasonIndex";
+import page1 from "@/views/BookSeasonPage1";
+import page2 from "@/views/BookSeasonPage2";
 export default {
   data() {
     return {
-      currentTab: "before",
+      currentTab: [],
       tabs: [
         {
           name: "上一頁",
-          index: "before",
-          id: 1
+          class: "left",
+          status: false
         },
         {
           name: "下一頁",
-          index: "after",
-          id: 2
+          class: "right",
+          status: true
         }
       ]
     };
   },
+  created() {
+    this.currentTab = {
+      index: "index",
+      page: 0
+    };
+  },
   methods: {
     toggleTab: function(tab) {
-      this.currentTab = tab.index;
+      // 頁面邏輯判斷
+      if (this.currentTab.page == 0) {
+        this.currentTab.index = "page1";
+        this.currentTab.page = 1;
+      } else if (
+        this.currentTab.page > 0 &&
+        this.currentTab.index == "page1" &&
+        tab.name == "下一頁"
+      ) {
+        this.currentTab.index = "page2";
+        this.currentTab.page++;
+      } else if (
+        this.currentTab.page > 0 &&
+        this.currentTab.index == "page2" &&
+        tab.name == "下一頁"
+      ) {
+        this.currentTab.index = "page1";
+        this.currentTab.page++;
+      } else if (
+        this.currentTab.page == 1 &&
+        this.currentTab.index == "page1" &&
+        tab.name == "上一頁"
+      ) {
+        this.currentTab.index = "index";
+        this.currentTab.page--;
+      } else if (
+        this.currentTab.page > 0 &&
+        this.currentTab.index == "page1" &&
+        tab.name == "上一頁"
+      ) {
+        this.currentTab.index = "page2";
+        this.currentTab.page--;
+      } else if (
+        this.currentTab.page > 0 &&
+        this.currentTab.index == "page2" &&
+        tab.name == "上一頁"
+      ) {
+        this.currentTab.index = "page1";
+        this.currentTab.page--;
+      }
+      // 按鈕顯示切換
+      if (this.currentTab.page == 1) {
+        this.tabs[0].status = true;
+      } else if (this.currentTab.page == 0) {
+        this.tabs[0].status = false;
+      }
     }
   },
   components: {
-    before,
-    after
+    index,
+    page1,
+    page2
   }
 };
 </script>

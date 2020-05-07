@@ -5,30 +5,37 @@
         <div class="signup nodisplay">
           <img class="signuptitle" src="@/assets/memberlogin/Group 362.svg" alt />
           <form class="less-padding" autocomplete="off">
-            <span>帳號</span>
-            <input type="text" />
-            <br />
-            <span>密碼</span>
-            <input type="text" />
-            <br />
-            <span>請再輸入一次密碼</span>
-            <input type="text" />
-            <br />
-            <span>e-mail</span>
-            <input type="text" />
-            <br />
+              <div class="formarea">
+                  <div class="formtext">
+                  <label>帳號:</label>
+                  <br>
+                  <label>密碼:</label>
+                  <br>
+                  <label>再次輸入密碼:</label>
+                  <br>
+                  <label>e-mail:</label>
+              </div>
+            <form class="forminputbox">
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+            </form>
+              </div>
+            
+            
             <div class="signupsubmit">
-              <p>登入</p>
+              <p>註冊</p>
             </div>
           </form>
         </div>
         <div class="signin">
           <img class="logintitle" src="@/assets/memberlogin/Group 363.svg" alt />
           <form class="more-padding" autocomplete="off">
-            <span>帳號</span>
+            <span>帳號:</span>
             <input type="text" placeholder="請輸入帳號" />
             <br />
-            <span>密碼</span>
+            <span>密碼:</span>
             <input type="text" placeholder="請輸入密碼" />
             <br />
             <div class="signinsubmit">
@@ -56,19 +63,16 @@
 import $ from "jquery";
 export default {
   mounted() {
-    $(".rightbox").click(function() {
+    $("#signup").click(function() {
       $(".movebox").css("transform", "translateX(80%)");
-      $(".loginbutton").toggleClass("nodisplay");
-      $(".signupbutton").removeClass("nodisplay");
+      $(".signin").toggleClass("nodisplay");
+      $(".signup").removeClass("nodisplay");
     });
 
-    $(".rightbox").click(function() {
-      $(".movebox").css("transform", "translateX(0%)");
-      $(".loginbutton").addClass("nodisplay");
-      $(".signupbutton").removeClass("nodisplay");
-    });
-    $("#signup").click(function() {
-      $(this).hide();
+    $("#signin").click(function() {
+      $(".movebox").css("transform", "translateX(-10%)");
+      $(".signup").addClass("nodisplay");
+      $(".signin").removeClass("nodisplay");
     });
   }
 };

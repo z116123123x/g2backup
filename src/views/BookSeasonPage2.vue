@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="book_layout">
     <!-- knowledge_blog -->
     <div class="bk_ct bk_ct_left_2">
       <a href>
@@ -83,3 +83,13 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: { page: Number },
+  methods: {
+    content: function() {
+      console.log(this.page);
+    }
+  }
+};
+</script>
