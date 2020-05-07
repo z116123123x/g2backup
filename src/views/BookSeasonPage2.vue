@@ -62,9 +62,7 @@
                     <h4>會說話的梅精</h4>
                     <p>$970/罐</p>
                     <br />
-                    <button>
-                        <a href="#">商品詳情</a>
-                    </button>
+                    <a href="#">商品詳情</a>
                 </div>
             </div>
             <div class="bk_product bk_product2">
@@ -72,9 +70,7 @@
                     <h4>會說話的梅精</h4>
                     <p>$970/罐</p>
                     <br />
-                    <button>
-                        <a href="#">商品詳情</a>
-                    </button>
+                    <a href="#">商品詳情</a>
                 </div>
                 <div class="bk_product_img bk_pd2">
                     <img src="@/assets/book_img/pd1.jpg" />
