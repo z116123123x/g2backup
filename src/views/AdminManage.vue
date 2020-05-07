@@ -131,11 +131,7 @@
     </main>
   </div>
 </template>
-
-
-
 <script>
-import "@/js/adminManage";
 export default {
   
 };
