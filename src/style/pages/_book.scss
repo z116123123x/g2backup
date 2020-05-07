@@ -205,7 +205,7 @@
                         left: 5%;
                         width: 70px;
                         height: 35px;
-                        padding: 10px;
+                        padding: 10px 0;
                         text-align: center;
                         font-size: 1.6rem;
                         transition: 0.5s;
@@ -216,7 +216,7 @@
                         }
 
                         .book_link {
-                        
+                           padding: 10px;
                            color: $bg-color;
                            text-decoration: none;
                         }
@@ -235,55 +235,52 @@
                            border-radius: 10px 10px 0 0;
                            width: 70px;
                            height: 35px;
-                           padding: 10px;
+                           padding: 10px 0;
                            text-align: center;
                            transform: translate(0, 10px);
                            font-size: 1.6rem;
                            transition: 0.5s;
 
+                         @mixin taglink {
+                           padding: 10px 20px;
+                           color: black;
+                           text-decoration: none;
+                           @content;
+                         }
+
                            &:nth-child(1) {
                               background-color: #f38e8e;
 
                               .book_link {
-
-                                 color: black;
-                                 text-decoration: none;
+                               @include taglink;
                               }
                            }
 
                            &:nth-child(2) {
                               background-color: #f6d16b;
                               .book_link {
-
-                                 color: black;
-                                 text-decoration: none;
+                                 @include taglink;
                               }
                            }
 
                            &:nth-child(3) {
                               background-color: #e19b6b;
                               .book_link {
-
-                                 color: black;
-                                 text-decoration: none;
+                                 @include taglink;
                               }
                            }
 
                            &:nth-child(4) {
                               background-color: #87b0e7;
                               .book_link {
-
-                                 color: black;
-                                 text-decoration: none;
+                                 @include taglink;
                               }
                            }
 
                            &:nth-child(5) {
                               background-color: #c5ce7c;
-                              .book_link {
-
-                                 color: black;
-                                 text-decoration: none;
+                              .book_link { 
+                                 @include taglink;
                               }
                            }
 
@@ -339,9 +336,9 @@
                            position: relative;
                         }
                      }
-                     @include rwd(small){
+                     @include rwd(mobile){
                         .Change_Button{
-                           height: 100vh;
+                          display: none;
                         }
                      }
 
