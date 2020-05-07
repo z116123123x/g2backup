@@ -7,6 +7,7 @@
       <span class="farmer_pic"></span>
       <span></span>
       <router-link class="login_logout" to="/loginMember">登入/註冊</router-link>
+      <!-- <button class="logout">登出</button> -->
     </div>
     <div class="cart">
       <router-link class="page" to="/main/member/shopping"></router-link>
