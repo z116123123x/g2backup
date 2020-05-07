@@ -10,7 +10,7 @@ div.membercontain {
         height: auto;
     }
     @include rwd(medium) {
-        height: auto;
+        height: 100%;
     }
 
     @include rwd(small) {
