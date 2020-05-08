@@ -90,7 +90,10 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+
+      status: false
+    };
   },
   created() {
     const api = "/api/api_memberStatus.php";
@@ -103,6 +106,8 @@ export default {
         if (data != "") {
           // eslint-disable-next-line no-console
           console.log("已經有登入過");
+          // eslint-disable-next-line no-console
+          console.log(data);
         }
       })
       // eslint-disable-next-line no-console
