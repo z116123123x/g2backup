@@ -5,8 +5,9 @@
     </router-link>
     <div class="member_status">
       <span class="farmer_pic"></span>
-      <span>果農</span>
-      <router-link to="/loginmember">登出</router-link>
+      <span></span>
+      <router-link class="login_logout" to="/loginMember">登入/註冊</router-link>
+      <!-- <button class="logout">登出</button> -->
     </div>
     <div class="cart">
       <router-link class="page" to="/main/member/shopping"></router-link>
@@ -86,3 +87,31 @@
     </div>
   </nav>
 </template>
+<script>
+export default {
+  data() {
+    return {
+
+      status: false
+    };
+  },
+  created() {
+    const api = "/api/api_memberStatus.php";
+
+    this.$http
+      .post(api, JSON.stringify(this.member))
+      .then(res => {
+        const data = res.data;
+
+        if (data != "") {
+          // eslint-disable-next-line no-console
+          console.log("已經有登入過");
+          // eslint-disable-next-line no-console
+          console.log(data);
+        }
+      })
+      // eslint-disable-next-line no-console
+      .catch(err => console.log(err));
+  }
+};
+</script>

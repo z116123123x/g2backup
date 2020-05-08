@@ -61,7 +61,7 @@
                     <p>you_go33@yahoo.com</p>
                     <input type="text">
                     <br>
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <textarea name="" id="" cols="20" rows="5"></textarea>
                     <div class="submit_button">
                         <div class="correct">
                             <p>確定</p>

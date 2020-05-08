@@ -1176,6 +1176,12 @@ window.addEventListener("load", () => {
         $("div.hamburger").removeClass("is-active");
       }
     });
+    $("a.login_logout").on("click", function() {
+      if ($("div.hamburger").hasClass("is-active") == true) {
+        $("div.nav_back").slideToggle();
+        $("div.hamburger").removeClass("is-active");
+      }
+    });
   });
 
   $(function() {

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="206" height="99" viewBox="0 0 206 99">
-  <g id="Group_365" data-name="Group 365" transform="translate(1.5 1.5)">
+  <g id="signup" transform="translate(1.5 1.5)">
     <path id="Path_218" data-name="Path 218" d="M619.754,4576.5l6.746,19.968V4672.5H435.766L423.5,4657.908V4576.5Z" transform="translate(-423.5 -4576.5)" fill="#f7d263" stroke="#485349" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
     <path id="Rectangle_86" data-name="Rectangle 86" d="M0,0H80.671a0,0,0,0,1,0,0V192.284a1.1,1.1,0,0,1-1.1,1.1H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(193.883 0.829) rotate(90)" fill="#fff" stroke="#485349" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
     <text id="註冊" transform="translate(59 53)" font-size="40" font-family="jf-openhuninn-1.1"><tspan x="0" y="0">註冊</tspan></text>
