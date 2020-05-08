@@ -135,7 +135,6 @@
 
 
 <script>
-import "@/js/adminManage";
 export default {
   
 };
