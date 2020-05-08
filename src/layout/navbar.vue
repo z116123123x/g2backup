@@ -94,7 +94,7 @@
 </template>
 <script>
 export default {
-  // 接收父層的 memberStatus 的值
+  // 5. 接收父層的 memberStatus 的值
   props: ["memberStatus"],
   data() {
     return {
@@ -122,7 +122,7 @@ export default {
   computed: {
     reload: function() {
 
-      // 偵聽到 memberStatus 有變動，觸發 login 方法，並回傳值到上面v-if狀態的顯示判斷
+      // 6. 偵聽到 memberStatus 有變動，觸發 login 方法，並回傳值到上面v-if狀態的顯示判斷
       this.login();
       return this.memberStatus;
     }
@@ -136,7 +136,7 @@ export default {
       this.status = false;
       this.userName = "";
 
-      // 傳遞 logout 的值到父層
+      // a. 傳遞 logout 的值到父層
       this.$emit("logout", false);
     },
     login() {
