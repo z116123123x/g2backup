@@ -132,7 +132,8 @@
               <!--接水果動畫-->
               <img src="@/assets/blog-img/post/someone-catch-fruit.png" />
               <img src="@/assets/blog-img/post/be-catched-fruit.png" />
-
+              <img src="@/assets/blog-img/post/be-catched-fruit.png" />
+              <img src="@/assets/blog-img/post/be-catched-fruit.png" />
             </div>
           </div>
         </div>
@@ -734,8 +735,8 @@
   // margin-left: 2.5%;
   // height: 50vw;
   // padding-bottom: 5%;
-  &::before{
-    content: "";
+  &::before {
+    content: '';
     border-bottom: #007552 5px solid;
     width: 105%;
     position: absolute;
@@ -746,10 +747,10 @@
     grid-template-columns: 1fr;
   }
   > div:nth-child(1) {
-    &::before{
-      content: "";
+    &::before {
+      content: '';
       display: inline-block;
-      border-right: #6BAF9B solid 2px;
+      border-right: #6baf9b solid 2px;
       height: 50%;
       position: absolute;
       right: -20%;
@@ -761,7 +762,7 @@
     // padding-right: 10%;
     position: relative;
     display: grid;
-    grid-template-columns: 1.2fr 1.6fr 1.5fr 4.5fr;
+    grid-template-columns: 1.5fr 2fr 1.5fr 3fr;
     grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.4fr 5fr;
     grid-template-areas:
       'aa1 aa1 aa1 aa1'
@@ -805,7 +806,7 @@
       white-space: nowrap;
       font-size: 30px;
       grid-area: aa2;
-      border-bottom: #6BAF9B solid 2px;
+      border-bottom: #6baf9b solid 2px;
       align-self: center;
       padding-bottom: 4%;
       line-height: 1.5;
@@ -986,47 +987,116 @@
         animation-timing-function: linear;
         @keyframes catching {
           0% {
-        right: 100%;
-            
+            right: 100%;
           }
           33% {
-        right: 150%;
-            
+            right: 150%;
           }
           66% {
-        right: 50%;
-            
+            right: 50%;
           }
           100% {
-        right: 100%;
-            
+            right: 100%;
           }
-          
         }
       }
       > img:nth-child(2) {
         z-index: 1;
+        display: inline-block;
         position: absolute;
-        bottom: 160%;
-        right: 150%;
+        bottom: 200%;
+        right: 130%;
         animation-name: falling;
         animation-duration: 3s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         @keyframes falling {
           0% {
-        bottom: 160%;
-            
+            bottom: 200%;
+            opacity: 1;
           }
           50% {
-        bottom: 120%;
-            
+            bottom: 85%;
+            right: 150%;
+            transform: rotate(180deg);
+            display: none;
+            opacity: 1;
+          }
+          51% {
+            opacity: 0;
           }
           100% {
-        bottom: 85%;
-        right: 125%;
-        transform: rotate(180deg);
-            
+            opacity: 0;
+          }
+        }
+      }
+      > img:nth-child(3) {
+        z-index: 1;
+        // background-color: #000;
+        display: inline-block;
+        position: absolute;
+        bottom: 200%;
+        right: 200%;
+        animation-name: falling2;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @keyframes falling2 {
+          0% {
+            opacity: 0;
+          }
+          49% {
+            opacity: 0;
+          }
+          50% {
+            bottom: 200%;
+            opacity: 1;
+          }
+          100% {
+            bottom: 85%;
+            right: 130%;
+            transform: rotate(250deg);
+            display: none;
+            opacity: 1;
+          }
+        }
+      }
+      > img:nth-child(4) {
+        z-index: 1;
+        display: inline-block;
+        position: absolute;
+        bottom: 200%;
+        right: 50%;
+        animation-name: falling3;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @keyframes falling3 {
+          0% {
+            opacity: 0;
+          }
+          28% {
+            opacity: 0;
+          }
+          29% {
+            opacity: 1;
+          }
+          30% {
+            bottom: 200%;
+            opacity: 1;
+          }
+          80% {
+            bottom: 85%;
+            right: 100%;
+            transform: rotate(330deg);
+            display: none;
+            opacity: 1;
+          }
+          81% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 0;
           }
         }
       }
@@ -1093,10 +1163,10 @@
         display: flex;
         text-align: center;
         justify-content: space-around;
-        border-bottom: solid #6BAF9B 2px;
+        border-bottom: solid #6baf9b 2px;
       }
       > div:nth-child(2) {
-        border-bottom: solid #6BAF9B 2px;
+        border-bottom: solid #6baf9b 2px;
         text-align: center;
       }
     }
@@ -1187,7 +1257,7 @@
       flex-direction: column;
       left: 2px;
       top: 1%;
-      > img:nth-child(1){
+      > img:nth-child(1) {
         width: 380px;
       }
       > img:nth-child(2),
