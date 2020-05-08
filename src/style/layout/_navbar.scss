@@ -71,7 +71,7 @@
     span {
       padding: 0px 10px;
       cursor: pointer;
-      display: none;
+      
       @include rwd(small) {
         padding: 0 5px;
       }

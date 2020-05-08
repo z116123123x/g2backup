@@ -14,5 +14,5 @@ if (isset($_SESSION["no"])) {
     );
     echo json_encode($member);
 } else {
-    echo "{}";
+    echo "";
 }

@@ -35,7 +35,7 @@
             <input type="text" placeholder="請輸入帳號" v-model="member.acc" />
             <br />
             <span>密碼:</span>
-            <input type="text" placeholder="請輸入密碼"  v-model="member.psw" />
+            <input type="text" placeholder="請輸入密碼" v-model="member.psw" />
             <br />
             <div class="signinsubmit" @click="login">
               <p>登入</p>
@@ -96,6 +96,13 @@ export default {
           } else {
             alert(data.nick + " 您好，歡迎回來！");
 
+            // 傳遞登入狀態到父層
+            this.$emit("loginStatus", true);
+
+            // 清除表單
+            this.member = { acc: "", psw: "" };
+
+            // 頁面跳轉
             this.$router.push("/main/member/information");
           }
         })
