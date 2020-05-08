@@ -132,6 +132,7 @@
               <!--接水果動畫-->
               <img src="@/assets/blog-img/post/someone-catch-fruit.png" />
               <img src="@/assets/blog-img/post/be-catched-fruit.png" />
+
             </div>
           </div>
         </div>
@@ -726,19 +727,39 @@
   // background-color: #000;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  position: relative;
+  padding-bottom: 5%;
   // column-gap: 10%;
   // width: 95%;
   // margin-left: 2.5%;
   // height: 50vw;
   // padding-bottom: 5%;
+  &::before{
+    content: "";
+    border-bottom: #007552 5px solid;
+    width: 105%;
+    position: absolute;
+    bottom: 0%;
+    right: 2%;
+  }
   @media (max-width: 1300px) {
     grid-template-columns: 1fr;
   }
   > div:nth-child(1) {
+    &::before{
+      content: "";
+      display: inline-block;
+      border-right: #6BAF9B solid 2px;
+      height: 50%;
+      position: absolute;
+      right: -20%;
+      bottom: 9%;
+    }
     // border: 4px solid #000;
     padding-top: 4%;
     // border-right: #000 2px solid;
     // padding-right: 10%;
+    position: relative;
     display: grid;
     grid-template-columns: 1.2fr 1.6fr 1.5fr 4.5fr;
     grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.4fr 5fr;
@@ -784,7 +805,7 @@
       white-space: nowrap;
       font-size: 30px;
       grid-area: aa2;
-      border-bottom: #007552 solid 2px;
+      border-bottom: #6BAF9B solid 2px;
       align-self: center;
       padding-bottom: 4%;
       line-height: 1.5;
@@ -957,7 +978,7 @@
       > img:nth-child(1) {
         position: relative;
         bottom: 0%;
-        right: 75%;
+        right: 100%;
         z-index: 5;
         animation-name: catching;
         animation-duration: 3s;
@@ -965,46 +986,47 @@
         animation-timing-function: linear;
         @keyframes catching {
           0% {
-            right: 75%;
+        right: 100%;
+            
           }
-          25% {
-            right: 50%;
+          33% {
+        right: 150%;
+            
           }
-          50% {
-            right: 75%;
+          66% {
+        right: 50%;
+            
           }
-          75% {
-            right: 100%;
+          100% {
+        right: 100%;
+            
           }
-          90% {
-            right: 70%;
-          }
+          
         }
       }
       > img:nth-child(2) {
         z-index: 1;
-        position: relative;
-        bottom: 350px;
-        right: 200px;
+        position: absolute;
+        bottom: 160%;
+        right: 150%;
         animation-name: falling;
         animation-duration: 3s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         @keyframes falling {
           0% {
-            right: 200px;
-            bottom: 350px;
-            transform: rotate(0deg);
+        bottom: 160%;
+            
           }
           50% {
-            right: 180px;
-            bottom: 260px;
-            transform: rotate(140deg);
+        bottom: 120%;
+            
           }
           100% {
-            right: 220px;
-            bottom: 110px;
-            transform: rotate(280deg);
+        bottom: 85%;
+        right: 125%;
+        transform: rotate(180deg);
+            
           }
         }
       }
@@ -1071,10 +1093,10 @@
         display: flex;
         text-align: center;
         justify-content: space-around;
-        border-bottom: solid #007552 1px;
+        border-bottom: solid #6BAF9B 2px;
       }
       > div:nth-child(2) {
-        border-bottom: solid #007552 1px;
+        border-bottom: solid #6BAF9B 2px;
         text-align: center;
       }
     }
@@ -1165,6 +1187,9 @@
       flex-direction: column;
       left: 2px;
       top: 1%;
+      > img:nth-child(1){
+        width: 380px;
+      }
       > img:nth-child(2),
       img:nth-child(3),
       img:nth-child(4),
@@ -1258,7 +1283,6 @@
         }
         > p:nth-child(3) {
           margin-top: 25px;
-
           > img:nth-child(1) {
           }
           > span:nth-child(2) {
