@@ -618,6 +618,26 @@ export default {
         }
       });
     });
+    //反觸發item按鈕效果
+    $(".item_btn").mouseleave(function() {
+      var ibtn = $(this);
+      TweenMax.to(ibtn, 0.3, {
+        css: {
+          backgroundColor: "#fbf8ef",
+          color: "#007552"
+        }
+      });
+    });
+    //反觸發itembuynow按鈕效果
+    $(".buyNow").mouseleave(function() {
+      var buybtn = $(this);
+      TweenMax.to(buybtn, 0.3, {
+        css: {
+          backgroundColor: "#ffa978",
+          color: "#404040"
+        }
+      });
+    });
 
     //商品效果
     $(".box-top").hover(function() {
