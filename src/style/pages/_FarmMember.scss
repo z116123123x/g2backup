@@ -1,6 +1,6 @@
 div.farmcontain {
     display: flex;
-    height: auto;
+    height: 100vh;
     font-size: 16px;
     @include rwd(large) {
         height: auto;
@@ -31,11 +31,11 @@ div.farmcontain {
         }
     
         @include rwd(small) {
-            height: 100%;
+            height: auto;
         }
 
         @include rwd(mobile) {
-            height: auto;
+            height: 100%;
             position: fixed;
             top: 0px;
             left: 0;

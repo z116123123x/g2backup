@@ -95,8 +95,8 @@
                                 <img src="@/assets/memberstar.svg" alt="">
                             </div>
                             <div class="Evaluation_submit">
-                                <p>不想給了</p>
-                                <p>送出</p>
+                                <a href="#"><p>不想給了</p></a>
+                                <a href=""><p>送出</p></a> 
                             </div>
                         </div>
                     </div>

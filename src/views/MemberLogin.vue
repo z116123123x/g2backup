@@ -17,8 +17,8 @@
               </div>
               <form class="forminputbox">
                 <input type="text" />
-                <input type="text" />
-                <input type="text" />
+                <input type="password" />
+                <input type="password" />
                 <input type="text" />
               </form>
             </div>
@@ -35,7 +35,7 @@
             <input type="text" placeholder="請輸入帳號" v-model="member.acc" />
             <br />
             <span>密碼:</span>
-            <input type="text" placeholder="請輸入密碼"  v-model="member.psw" />
+            <input type="password" placeholder="請輸入密碼"  v-model="member.psw" />
             <br />
             <div class="signinsubmit" @click="login">
               <p>登入</p>

@@ -2,7 +2,7 @@
     <div class="BlogUpdate">
         <div class="BlogUpdate_right_head">
             <div class="BlogUpdate_right_head_text">
-                <span>商品管理</span>
+                <span>日誌管理</span>
                 <span class="new">日誌內容新增/修改</span>
             </div>
         </div>
@@ -21,7 +21,7 @@
                     <p>XXX</p>
                     <input type="text">
                     <br>
-                    <textarea name="" id="" cols="30" rows="6"></textarea>
+                    <textarea name="" id="" cols="20" rows="6"></textarea>
                     <br>
                     <button>選擇檔案</button>
                     <span>未選擇任何檔案</span>
@@ -34,12 +34,18 @@
                         <div class="tap5">xxxxxxxx</div>
                     </div>
                     <div class="submit_button">
-                        <div class="cancel">
+                        <a href="#">
+                            <div class="cancel">
                             <p>取消</p>
                         </div>
-                        <div class="correct">
+                        </a>
+                        
+                        <a href="#">
+                            <div class="correct">
                             <p>送出</p>
                         </div>
+                        </a>
+                        
                     </div>
                 </div>
             </div>
