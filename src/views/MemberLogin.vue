@@ -16,7 +16,7 @@
                 <label>e-mail:</label>
               </div>
               <form class="forminputbox">
-                <input type="text" v-model="form.name" />
+                <input type="text" v-model="form.acc" />
                 <input id="signupPsw" type="password" v-model="form.psw" />
                 <input id="signupRePsw" type="password" v-model="form.rePsw" @blur="checkPsw" />
                 <input type="text" v-model="form.mail" />
@@ -78,7 +78,7 @@ export default {
         psw: ""
       },
       form: {
-        name: "",
+        acc: "",
         psw: "",
         rePsw: "",
         mail: ""
@@ -87,10 +87,10 @@ export default {
   },
   methods: {
     login: function() {
-      const login = "/api/api_memberLogin.php";
+      const api = "/api/api_memberLogin.php";
 
       this.$http
-        .post(login, JSON.stringify(this.member))
+        .post(api, JSON.stringify(this.member))
         .then(res => {
           const data = res.data;
 
@@ -111,16 +111,47 @@ export default {
         .catch(err => console.log(err));
     },
     changeSignin: function() {
-      
       const form = this.form;
 
-      form.name = "";
+      form.acc = "";
       form.psw = "";
       form.rePsw = "";
       form.mail = "";
     },
     signup: function() {
-      //
+      const api = "/api/api_memberSignup.php";
+
+      for (let i in this.form) {
+        if (this.form[i] == "") {
+          alert("請檢查是否所有欄位都有輸入資料");
+          return;
+        }
+      }
+
+      this.$http
+        .post(api, JSON.stringify(this.form))
+        .then(res => {
+          const data = res.data;
+
+          if (data == 0) {
+            alert("註冊完成！");
+
+            const form = this.form;
+
+            form.acc = "";
+            form.psw = "";
+            form.rePsw = "";
+            form.mail = "";
+
+            $(".movebox").css("transform", "translateX(-10%)");
+            $(".signup").addClass("nodisplay");
+            $(".signin").removeClass("nodisplay");
+          } else if (data == 1) {
+            alert("此帳號已經被註冊過！");
+          }
+        })
+        // eslint-disable-next-line no-console
+        .catch(err => console.log(err));
     },
     checkPsw: function() {
       const form = this.form;
