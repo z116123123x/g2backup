@@ -43,19 +43,19 @@ const routes = [{
     }]
   },
   {
-    path: '/main/blog-landing',
-    name: 'Blog-landing',
-    component: () => import('@/views/Blog-landing.vue'),
-  },
-  {
     path: '/main/blog-post',
     name: 'Blog-post',
     component: () => import('@/views/Blog-post.vue'),
   },
   {
-    path: '/main/blog-post2',
+    path: '/main/blog',
     name: 'Blog-post2',
-    component: () => import('@/views/Blog-post2.vue'),
+    component: () => import('@/views/Blog-post2.vue')
+  },
+  {
+    path: '/main/blog/landing',
+    name: 'Blog-landing',
+    component: () => import('@/views/Blog-landing.vue'),
   },
   {
     path: '/main/blog-post3',

@@ -58,7 +58,7 @@
         </li>
         <li class="dropdown">
           <div class="title">
-            <router-link class="page" to="/main/blog-landing">
+            <router-link class="page" to="/main/blog">
               <div class="title_pic">
                 <img src="@/assets/blog.svg" alt />
               </div>
