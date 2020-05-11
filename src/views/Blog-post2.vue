@@ -1,6 +1,7 @@
 <template>
   <div class="blog-post-ousidebox">
-    <img src="@/assets/blog-img/blog-bar.png" /><br />
+    <img src="@/assets/blog-img/blog-bar.png" />
+    <br />
     <div class="blog-landing-container">
       <div>
         <div>
@@ -10,19 +11,19 @@
         <div>
           <div>
             <div>
-              <img src="@/assets/blog-img/blog-dot.png" alt="" />
-              <span> </span>
-              <span> 旅遊</span>
+              <img src="@/assets/blog-img/blog-dot.png" alt />
+              <span></span>
+              <span>旅遊</span>
             </div>
             <div>
-              <img src="@/assets/blog-img/blog-dot.png" alt="" />
-              <span> </span>
-              <span> 水果知識</span>
+              <img src="@/assets/blog-img/blog-dot.png" alt />
+              <span></span>
+              <span>水果知識</span>
             </div>
             <div>
-              <img src="@/assets/blog-img/blog-dot.png" alt="" />
-              <span> </span>
-              <span> 農民樂</span>
+              <img src="@/assets/blog-img/blog-dot.png" alt />
+              <span></span>
+              <span>農民樂</span>
             </div>
           </div>
           <div>
@@ -50,7 +51,9 @@
               <img src="@/assets/blog-img/blog-star.png" />
               <img src="@/assets/blog-img/blog-star.png" />
             </div>
-            <div><span>+追蹤</span></div>
+            <div>
+              <span>+追蹤</span>
+            </div>
             <div>
               <img src="@/assets/blog-img/blog-tag.png" />
               <span>草莓</span>
@@ -62,16 +65,21 @@
               <span>300</span>
             </div>
             <div>
-              白石湖是大台北難得仍保存農業風味的鄉村地區，當地多產白色沉積砂岩石塊故而得名，近年轉型成為休閒農業區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，絡繹不絕的人潮湧入內湖一帶的草莓園。我們一早就來到莓圃休閒農園，是個擁有果園、菜園和庭園咖啡等多元場域，其中溫室草莓園吸引家長帶著孩子體驗採果樂，不用擔心腳底褲管沾到泥巴。<br /><br />
-              特別提醒台北內湖的莓園幾乎是假日上午11點開放，當天採摘到一定數量便掛上「本日已採完」的告示牌，若想採草莓的朋友建議早點排隊。<br /><br />
-              採完草莓不過癮，還可以參加糖霜餅乾手做課程。工作人員拿出台北世大運吉祥物「熊讚」草莓餅乾，孩子們吵著也要做一隻熊讚帶回家。「我們先用軟糖霜劃出外圍形狀，從中間一圈一圈慢慢補滿，擠完糖霜後，餅乾表面可能會不平，再利用牙籤撥勻，或用手掌輕拍均勻」，大家跟著老師依樣畫葫蘆，以牙籤沾芝麻妝點眼睛、白糖霜親手描繪各自作品，創作他們心目中的熊讚。<br /><br />
-              除了草莓，莓圃也提供其他蔬果的體驗，6-11月有百香果、火龍果、番茄；7-8月則有水果玉米、小番茄等，讓小朋友一整年都可以體驗小農夫的樂趣。大人們也可以坐在綠意盎然的庭園休憩用餐，享受田園悠閒的氛圍。
+              白石湖是大台北難得仍保存農業風味的鄉村地區，當地多產白色沉積砂岩石塊故而得名，近年轉型成為休閒農業區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，絡繹不絕的人潮湧入內湖一帶的草莓園。我們一早就來到莓圃休閒農園，是個擁有果園、菜園和庭園咖啡等多元場域，其中溫室草莓園吸引家長帶著孩子體驗採果樂，不用擔心腳底褲管沾到泥巴。
+              <br />
+              <br />特別提醒台北內湖的莓園幾乎是假日上午11點開放，當天採摘到一定數量便掛上「本日已採完」的告示牌，若想採草莓的朋友建議早點排隊。
+              <br />
+              <br />採完草莓不過癮，還可以參加糖霜餅乾手做課程。工作人員拿出台北世大運吉祥物「熊讚」草莓餅乾，孩子們吵著也要做一隻熊讚帶回家。「我們先用軟糖霜劃出外圍形狀，從中間一圈一圈慢慢補滿，擠完糖霜後，餅乾表面可能會不平，再利用牙籤撥勻，或用手掌輕拍均勻」，大家跟著老師依樣畫葫蘆，以牙籤沾芝麻妝點眼睛、白糖霜親手描繪各自作品，創作他們心目中的熊讚。
+              <br />
+              <br />除了草莓，莓圃也提供其他蔬果的體驗，6-11月有百香果、火龍果、番茄；7-8月則有水果玉米、小番茄等，讓小朋友一整年都可以體驗小農夫的樂趣。大人們也可以坐在綠意盎然的庭園休憩用餐，享受田園悠閒的氛圍。
             </div>
           </div>
           <div>
             <div>
-              <div><!--sister--></div>
-              <img src="@/assets/blog-img/post/yello-something.png" alt="" />
+              <div>
+                <!--sister-->
+              </div>
+              <img src="@/assets/blog-img/post/yello-something.png" alt />
             </div>
             <div class="blog-post2-msg-card">
               <div>
@@ -81,9 +89,7 @@
                 <p>howhowhasnofriend</p>
                 <p>2020-4-14 12:00</p>
               </div>
-              <div>
-                炒飯不好吃炒飯不好吃...
-              </div>
+              <div>炒飯不好吃炒飯不好吃...</div>
               <div>
                 <img src="@/assets/blog-img/blog-report.png" />
               </div>
@@ -96,9 +102,7 @@
                 <p>howhowhasnofriend</p>
                 <p>2020-4-14 12:00</p>
               </div>
-              <div>
-                炒飯不好吃炒飯不好吃...
-              </div>
+              <div>炒飯不好吃炒飯不好吃...</div>
               <div>
                 <img src="@/assets/blog-img/blog-report.png" />
               </div>
@@ -111,18 +115,16 @@
                 <p>howhowhasnofriend</p>
                 <p>2020-4-14 12:00</p>
               </div>
-              <div>
-                炒飯不好吃炒飯不好吃...
-              </div>
+              <div>炒飯不好吃炒飯不好吃...</div>
               <div>
                 <img src="@/assets/blog-img/blog-report.png" />
               </div>
             </div>
             <div>
-              <form action="" method="get">
-                <label for=""
-                  >留言:
-                  <textarea name="" id=""></textarea>
+              <form action method="get">
+                <label for>
+                  留言:
+                  <textarea name id></textarea>
                 </label>
                 <br />
                 <buttonMore class="blogPost2ButtonMore" msg="送出"></buttonMore>
@@ -143,12 +145,12 @@
             <div>
               <!--search-->
               <div>
-        <!--籃子圖-->
+                <!--籃子圖-->
                 <img src="@/assets/blog-img/post/basket.png" />
               </div>
               <div>
                 <div>
-                  <form action="" method="get">
+                  <form action method="get">
                     <input placeholder="水果知識" type="text" />
                     <img src="@/assets/blog-img/post/magnifier.png" />
                   </form>
@@ -162,8 +164,8 @@
             </div>
             <img src="@/assets/blog-img/blog-bendingbar2.png" />
             <p>最新日誌</p>
-            <select class="blog-post-tri" name="" id="">
-              <option value="">日誌排序</option>
+            <select class="blog-post-tri" name id>
+              <option value>日誌排序</option>
             </select>
             <!--卡片區-->
             <!--卡片區-->
@@ -171,7 +173,7 @@
             <div class="blog-post2-card-area">
               <div class="blog-post2-long-card">
                 <div>
-                  <img src="" />
+                  <img src />
                 </div>
                 <div>
                   <div>
@@ -185,9 +187,7 @@
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>果農心得</span>
                     </p>
-                    <p>
-                      每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，的草莓園
-                    </p>
+                    <p>每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，的草莓園</p>
                   </div>
                   <div>
                     <div>
@@ -213,6 +213,49 @@
               <!--小卡片-->
               <!--小卡片-->
               <div class="blog-post2-small-card-container">
+                <router-link to="/main/blog/landing">
+                  <div class="blog-post2-small-card">
+                    <div>
+                      <img src="@/assets/blog-img/post/grape.png" />
+                      <div>
+                        <!--讚!!-->
+                        <div>
+                          <img src="@/assets/blog-img/blog-thumb.png" />
+                        </div>
+                        <div>
+                          <span>100</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p>2020-04-08</p>
+                      <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
+                      <div>
+                        <img src="@/assets/blog-img/blog-tag.png" />
+                        <span>知識類</span>
+                      </div>
+                      <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
+                    </div>
+                    <div>
+                      <div>
+                        <img src="@/assets/blog-img/blog-someoneshead.png" />
+                      </div>
+                      <div>
+                        <span>蓬蓬草莓姨</span>
+                        <div>
+                          <img src="@/assets/blog-img/blog-star.png" />
+                          <img src="@/assets/blog-img/blog-star.png" />
+                          <img src="@/assets/blog-img/blog-star.png" />
+                          <img src="@/assets/blog-img/blog-star.png" />
+                          <img src="@/assets/blog-img/blog-star.png" />
+                        </div>
+                      </div>
+                      <div>
+                        <span>+追蹤</span>
+                      </div>
+                    </div>
+                  </div>
+                </router-link>
                 <div class="blog-post2-small-card">
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
@@ -228,16 +271,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -254,9 +293,7 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
                 </div>
@@ -275,16 +312,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -301,9 +334,7 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
                 </div>
@@ -322,16 +353,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -348,9 +375,7 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
                 </div>
@@ -369,16 +394,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -395,9 +416,7 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
                 </div>
@@ -416,16 +435,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -442,9 +457,7 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
                 </div>
@@ -463,16 +476,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -489,9 +498,7 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
                 </div>
@@ -510,16 +517,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -536,56 +539,7 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="blog-post2-small-card">
-                  <div>
-                    <img src="@/assets/blog-img/post/grape.png" />
-                    <div>
-                      <!--讚!!-->
-                      <div>
-                        <img src="@/assets/blog-img/blog-thumb.png" />
-                      </div>
-                      <div>
-                        <span>100</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
-                    <div>
-                      <img src="@/assets/blog-img/blog-tag.png" />
-                      <span>知識類</span>
-                    </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
-                  </div>
-                  <div>
-                    <div>
-                      <img src="@/assets/blog-img/blog-someoneshead.png" />
-                    </div>
-                    <div>
-                      <span>蓬蓬草莓姨</span>
-                      <div>
-                        <img src="@/assets/blog-img/blog-star.png" />
-                        <img src="@/assets/blog-img/blog-star.png" />
-                        <img src="@/assets/blog-img/blog-star.png" />
-                        <img src="@/assets/blog-img/blog-star.png" />
-                        <img src="@/assets/blog-img/blog-star.png" />
-                      </div>
-                    </div>
-                    <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
                 </div>
@@ -604,16 +558,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -630,9 +580,7 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
                 </div>
@@ -670,19 +618,19 @@
           <div>
             <!-- tags&leaderblard-->
             <div>
-              <img src="@/assets/blog-img/post/tags-header.png" alt="" />
-              <img src="@/assets/blog-img/post/experience.png" alt="" />
-              <img src="@/assets/blog-img/post/product.png" alt="" />
-              <img src="@/assets/blog-img/post/log.png" alt="" />
-              <img src="@/assets/blog-img/post/knowledge.png" alt="" />
-              <img src="@/assets/blog-img/post/tag-footer.png" alt="" />
+              <img src="@/assets/blog-img/post/tags-header.png" alt />
+              <img src="@/assets/blog-img/post/experience.png" alt />
+              <img src="@/assets/blog-img/post/product.png" alt />
+              <img src="@/assets/blog-img/post/log.png" alt />
+              <img src="@/assets/blog-img/post/knowledge.png" alt />
+              <img src="@/assets/blog-img/post/tag-footer.png" alt />
             </div>
             <div class="blogPostLeaderBoard">
               <div>1</div>
               <div>2020-04-08</div>
               <div>親子輕旅行 台北白石湖採草莓、 踏青一日遊</div>
               <div>
-                <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+                <img src="@/assets/blog-img/blog-someoneshead.png" alt />
               </div>
               <div>蓬蓬草苺姨</div>
               <div>
@@ -693,9 +641,8 @@
                 <img src="@/assets/blog-img/blog-star.png" />
               </div>
               <div>
-                <img src="@/assets/blog-img/blog-thumb.png" alt="" /><span
-                  >300</span
-                >
+                <img src="@/assets/blog-img/blog-thumb.png" alt />
+                <span>300</span>
               </div>
             </div>
             <div class="blogPostLeaderBoard">
@@ -703,7 +650,7 @@
               <div>2020-04-08</div>
               <div>親子輕旅行 台北白石湖採草莓、 踏青一日遊</div>
               <div>
-                <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+                <img src="@/assets/blog-img/blog-someoneshead.png" alt />
               </div>
               <div>蓬蓬草苺姨</div>
               <div>
@@ -714,9 +661,8 @@
                 <img src="@/assets/blog-img/blog-star.png" />
               </div>
               <div>
-                <img src="@/assets/blog-img/blog-thumb.png" alt="" /><span
-                  >300</span
-                >
+                <img src="@/assets/blog-img/blog-thumb.png" alt />
+                <span>300</span>
               </div>
             </div>
             <div class="blogPostLeaderBoard">
@@ -724,7 +670,7 @@
               <div>2020-04-08</div>
               <div>親子輕旅行 台北白石湖採草莓、 踏青一日遊</div>
               <div>
-                <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+                <img src="@/assets/blog-img/blog-someoneshead.png" alt />
               </div>
               <div>蓬蓬草苺姨</div>
               <div>
@@ -735,9 +681,8 @@
                 <img src="@/assets/blog-img/blog-star.png" />
               </div>
               <div>
-                <img src="@/assets/blog-img/blog-thumb.png" alt="" /><span
-                  >300</span
-                >
+                <img src="@/assets/blog-img/blog-thumb.png" alt />
+                <span>300</span>
               </div>
             </div>
           </div>
@@ -1364,8 +1309,7 @@
   margin-top: 3%;
   position: relative;
   @media (max-width: 1300px) {
-  grid-template-columns: 1fr;
-    
+    grid-template-columns: 1fr;
   }
   > div:nth-child(1) {
     //main
@@ -1376,7 +1320,9 @@
       > div:nth-child(1) {
         // background-color: #000;
         //籃子圖
-        >img{width: 100%;}
+        > img {
+          width: 100%;
+        }
       }
       > div:nth-child(2) {
         //input//search
@@ -1469,11 +1415,11 @@
           width: 400px;
         }
         @media (max-width: 1650px) {
-        &:hover {
-          right: 20px;
-          width: 340px;
+          &:hover {
+            right: 20px;
+            width: 340px;
+          }
         }
-      }
       }
     }
     > div:nth-child(2),
@@ -1542,14 +1488,13 @@
   padding-right: 10%;
   margin-top: 20px;
   @media (max-width: 1300px) {
-  padding-right: 0%;
-    
+    padding-right: 0%;
   }
   > .blog-post2-long-card {
     display: flex;
     border: #007552 solid 2px;
     @media (max-width: 700px) {
-    padding-bottom: 2%;
+      padding-bottom: 2%;
       flex-direction: column;
     }
     > div:nth-child(1) {
@@ -1562,18 +1507,17 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-      @media (max-width:1500px ) {
-      width: 100%;
-        
+      @media (max-width: 1500px) {
+        width: 100%;
       }
-      @media (max-width:1400px ) {
-      width: 150%;
+      @media (max-width: 1400px) {
+        width: 150%;
       }
-      @media (max-width:768px ) {
-      width: 200%;
+      @media (max-width: 768px) {
+        width: 200%;
       }
-      @media (max-width:700px ) {
-      width: 100%;
+      @media (max-width: 700px) {
+        width: 100%;
       }
     }
     > div:nth-child(2) {
@@ -1631,8 +1575,7 @@
           -webkit-line-clamp: 3; /* 限制指定的行數 */
           overflow: hidden;
           @media (max-width: 500px) {
-          padding-right: 0px;
-            
+            padding-right: 0px;
           }
         }
       }
@@ -1834,15 +1777,14 @@
     font-size: 15px;
     padding: 10px;
     @media (max-width: 500px) {
-    padding: 5px;
-      
+      padding: 5px;
     }
   }
   > li:nth-child(1) {
     > img:nth-child(1) {
       width: 95%;
       @media (max-width: 500px) {
-      width: 20px;
+        width: 20px;
       }
     }
   }
@@ -1860,7 +1802,7 @@
     > img:nth-child(1) {
       width: 95%;
       @media (max-width: 500px) {
-          width: 20px;
+        width: 20px;
       }
     }
   }
