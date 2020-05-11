@@ -16,15 +16,15 @@
                 <label>e-mail:</label>
               </div>
               <form class="forminputbox">
-                <input type="text" />
-                <input type="password" />
-                <input type="password" />
-                <input type="text" />
+                <input type="text" v-model="form.name" />
+                <input id="signupPsw" type="password" v-model="form.psw" />
+                <input id="signupRePsw" type="password" v-model="form.rePsw" @blur="checkPsw" />
+                <input type="text" v-model="form.mail" />
               </form>
             </div>
 
             <div class="signupsubmit">
-              <p>註冊</p>
+              <p @click="signup">註冊</p>
             </div>
           </form>
         </div>
@@ -35,7 +35,7 @@
             <input type="text" placeholder="請輸入帳號" v-model="member.acc" />
             <br />
             <span>密碼:</span>
-            <input type="password" placeholder="請輸入密碼"  v-model="member.psw" />
+            <input type="password" placeholder="請輸入密碼" v-model="member.psw" />
             <br />
             <div class="signinsubmit" @click="login">
               <p>登入</p>
@@ -45,7 +45,7 @@
       </div>
       <div class="leftbox">
         <h1>已經是果粉了?</h1>
-        <img class="loginbutton" id="signin" src="@/assets/login.png" alt />
+        <img class="loginbutton" id="signin" src="@/assets/login.png" @click="changeSignin" alt />
       </div>
       <div class="rightbox">
         <h1>還不是果粉嗎?</h1>
@@ -54,12 +54,9 @@
     </div>
   </div>
 </template>
-
-<style>
-</style>
-
 <script>
 import $ from "jquery";
+import { TubeGeometry } from "three";
 export default {
   mounted() {
     $("#signup").click(function() {
@@ -79,6 +76,12 @@ export default {
       member: {
         acc: "",
         psw: ""
+      },
+      form: {
+        name: "",
+        psw: "",
+        rePsw: "",
+        mail: ""
       }
     };
   },
@@ -101,16 +104,34 @@ export default {
 
             // 清除表單
             this.member = { acc: "", psw: "" };
-
-            // 頁面跳轉
-            this.$router.push("/main/member/information");
-
-            console.log(this.prevRoute.path);
-            
+            this.$router.go(-1);
           }
         })
         // eslint-disable-next-line no-console
         .catch(err => console.log(err));
+    },
+    changeSignin: function() {
+      
+      const form = this.form;
+
+      form.name = "";
+      form.psw = "";
+      form.rePsw = "";
+      form.mail = "";
+    },
+    signup: function() {
+      //
+    },
+    checkPsw: function() {
+      const form = this.form;
+
+      if (form.rePsw != form.psw) {
+        document.getElementById("signupPsw").style.backgroundColor = "red";
+        document.getElementById("signupRePsw").style.backgroundColor = "red";
+      } else {
+        document.getElementById("signupPsw").style.backgroundColor = "";
+        document.getElementById("signupRePsw").style.backgroundColor = "";
+      }
     }
   }
 };
