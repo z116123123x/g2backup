@@ -96,6 +96,13 @@ export default {
           } else {
             alert(data.nick + " 您好，歡迎回來！");
 
+            // 1. 傳遞登入狀態到父層
+            this.$emit("loginStatus", true);
+
+            // 清除表單
+            this.member = { acc: "", psw: "" };
+
+            // 頁面跳轉
             this.$router.push("/main/member/information");
           }
         })

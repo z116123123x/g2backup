@@ -132,6 +132,8 @@
               <!--接水果動畫-->
               <img src="@/assets/blog-img/post/someone-catch-fruit.png" />
               <img src="@/assets/blog-img/post/be-catched-fruit.png" />
+              <img src="@/assets/blog-img/post/be-catched-fruit.png" />
+              <img src="@/assets/blog-img/post/be-catched-fruit.png" />
             </div>
           </div>
         </div>
@@ -141,6 +143,7 @@
             <div>
               <!--search-->
               <div>
+        <!--籃子圖-->
                 <img src="@/assets/blog-img/post/basket.png" />
               </div>
               <div>
@@ -168,7 +171,7 @@
             <div class="blog-post2-card-area">
               <div class="blog-post2-long-card">
                 <div>
-                  <img src="@/assets/blog-img/post/kidEatsWatermelon.png" />
+                  <img src="" />
                 </div>
                 <div>
                   <div>
@@ -183,7 +186,7 @@
                       <span>果農心得</span>
                     </p>
                     <p>
-                      每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，的草莓園...
+                      每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，的草莓園
                     </p>
                   </div>
                   <div>
@@ -586,6 +589,53 @@
                     </div>
                   </div>
                 </div>
+                <div class="blog-post2-small-card nine">
+                  <div>
+                    <img src="@/assets/blog-img/post/grape.png" />
+                    <div>
+                      <!--讚!!-->
+                      <div>
+                        <img src="@/assets/blog-img/blog-thumb.png" />
+                      </div>
+                      <div>
+                        <span>100</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>2020-04-08</p>
+                    <p>
+                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
+                    </p>
+                    <div>
+                      <img src="@/assets/blog-img/blog-tag.png" />
+                      <span>知識類</span>
+                    </div>
+                    <p>
+                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
+                    </p>
+                  </div>
+                  <div>
+                    <div>
+                      <img src="@/assets/blog-img/blog-someoneshead.png" />
+                    </div>
+                    <div>
+                      <span>蓬蓬草莓姨</span>
+                      <div>
+                        <img src="@/assets/blog-img/blog-star.png" />
+                        <img src="@/assets/blog-img/blog-star.png" />
+                        <img src="@/assets/blog-img/blog-star.png" />
+                        <img src="@/assets/blog-img/blog-star.png" />
+                        <img src="@/assets/blog-img/blog-star.png" />
+                      </div>
+                    </div>
+                    <div>
+                      <span>
+                        +追蹤
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <!---->
@@ -700,6 +750,7 @@
 <style lang="scss">
 .blog-post-ousidebox {
   padding-top: 60px;
+  // overflow: hidden;
   background-color: #fbf8ef;
   > img:nth-child(1) {
     width: 100%;
@@ -713,8 +764,18 @@
   padding-left: 7%;
   @media (max-width: 1300px) {
     width: 88%;
-    margin-left: 2%;
+    margin-left: 2.5%;
+    padding-left: 3%;
     padding-right: 3%;
+  }
+  @media (max-width: 600px) {
+    margin-left: 2%;
+  }
+  @media (max-width: 400px) {
+    margin-left: 1%;
+  }
+  @media (max-width: 330px) {
+    margin-left: 0%;
   }
 }
 .blogPost2Outer {
@@ -726,32 +787,81 @@
   // background-color: #000;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  position: relative;
+  padding-bottom: 5%;
   // column-gap: 10%;
   // width: 95%;
   // margin-left: 2.5%;
   // height: 50vw;
   // padding-bottom: 5%;
+  &::before {
+    content: "";
+    border-bottom: #007552 5px solid;
+    width: 105%;
+    position: absolute;
+    bottom: 0%;
+    right: 2%;
+    @media (max-width: 1300px) {
+      width: 100%;
+      right: 0%;
+    }
+  }
+  @media (max-width: 1600px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
+  }
   @media (max-width: 1300px) {
     grid-template-columns: 1fr;
   }
   > div:nth-child(1) {
+    &::before {
+      content: "";
+      display: inline-block;
+      border-right: #6baf9b solid 2px;
+      height: 50%;
+      position: absolute;
+      right: -20%;
+      bottom: 9%;
+      @media (max-width: 1600px) {
+        right: -12%;
+      }
+      @media (max-width: 1600px) {
+        display: none;
+      }
+    }
+    &::after {
+      border-bottom: #6baf9b solid 2px;
+      width: 100%;
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      @media (max-width: 1300px) {
+        content: "";
+      }
+    }
     // border: 4px solid #000;
     padding-top: 4%;
     // border-right: #000 2px solid;
     // padding-right: 10%;
+    position: relative;
     display: grid;
-    grid-template-columns: 1.2fr 1.6fr 1.5fr 4.5fr;
+    grid-template-columns: 1.5fr 2fr 1.5fr 3fr;
     grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.4fr 5fr;
     grid-template-areas:
-      'aa1 aa1 aa1 aa1'
-      'aa2 aa2 aa2 aa2 '
-      'aa3 aa4 aa6 aa7'
-      'aa3 aa5 aa6 aa7'
-      'aa8 aa8 aa8 aa8'
-      'aa9 aa9 aa9 aa9';
+      "aa1 aa1 aa1 aa1"
+      "aa2 aa2 aa2 aa2 "
+      "aa3 aa4 aa6 aa7"
+      "aa3 aa5 aa6 aa7"
+      "aa8 aa8 aa8 aa8"
+      "aa9 aa9 aa9 aa9";
+    @media (max-width: 1600px) {
+      // padding-right: 0%;
+      grid-template-columns: 0.9fr 1.3fr 1fr 3fr;
+    }
     @media (max-width: 1300px) {
       padding-right: 0%;
       grid-template-columns: 0.7fr 1fr 1fr 4.5fr;
+      padding-bottom: 4%;
     }
     @media (max-width: 992px) {
       grid-template-columns: 1fr 1.2fr 1fr 4.5fr;
@@ -761,12 +871,12 @@
     }
     @media (max-width: 576px) {
       grid-template-areas:
-        'aa1 aa1 aa1 aa1'
-        'aa2 aa2 aa2 aa2 '
-        'aa3 aa4 aa6 aa6'
-        'aa3 aa5 aa7 aa7'
-        'aa8 aa8 aa8 aa8'
-        'aa9 aa9 aa9 aa9';
+        "aa1 aa1 aa1 aa1"
+        "aa2 aa2 aa2 aa2 "
+        "aa3 aa4 aa6 aa6"
+        "aa3 aa5 aa7 aa7"
+        "aa8 aa8 aa8 aa8"
+        "aa9 aa9 aa9 aa9";
       grid-template-columns: 1fr 1fr 1fr 1fr;
       // border: solid 1px red;
     }
@@ -784,10 +894,18 @@
       white-space: nowrap;
       font-size: 30px;
       grid-area: aa2;
-      border-bottom: #007552 solid 2px;
+      border-bottom: #6baf9b solid 2px;
       align-self: center;
       padding-bottom: 4%;
       line-height: 1.5;
+      // margin-bottom: 2%;
+      @media (max-width: 1300px) {
+        margin-bottom: 2%;
+        padding-bottom: 2%;
+      }
+      @media (max-width: 768px) {
+        white-space: pre-wrap;
+      }
       > span {
         align-self: start;
         background-color: #ffd3c1;
@@ -888,6 +1006,23 @@
   > div:nth-child(2) {
     position: relative;
     padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-end;
+    // flex-wrap: wrap;
+    align-content: flex-end;
+    // align-items: flex-end;
+    // text-align: center;
+    @media (max-width: 1600px) {
+      padding-left: 0%;
+      padding-top: 5%;
+      padding-right: 10%;
+    }
+    @media (max-width: 1300px) {
+      padding-left: 0%;
+      padding-top: 5%;
+      padding-right: 0%;
+    }
     > div:nth-child(1) {
       position: relative;
       //妹妹
@@ -897,13 +1032,24 @@
         z-index: 2;
         width: 70%;
         padding-top: 70%;
-        background: url('../assets/blog-img/post/blog_aabbcc.svg') no-repeat
+        background: url("../assets/blog-img/post/blog_aabbcc.svg") no-repeat
           center center;
         background-size: cover;
-        -webkit-mask: url('../assets/blog-img/post/blog_aabbcc.svg') no-repeat
+        -webkit-mask: url("../assets/blog-img/post/blog_aabbcc.svg") no-repeat
           center center;
-        mask: url('../assets/blog-img/post/blog_aabbcc.svg') no-repeat center
+        mask: url("../assets/blog-img/post/blog_aabbcc.svg") no-repeat center
           center;
+        @media (max-width: 1600px) {
+          width: 100%;
+          padding-top: 100%;
+          margin-bottom: 5%;
+        }
+        @media (max-width: 1300px) {
+          width: 50%;
+          padding-top: 50%;
+          margin-left: 25%;
+          margin-bottom: 5%;
+        }
       }
       > img:nth-child(2) {
         width: 50%;
@@ -911,6 +1057,9 @@
         position: absolute;
         top: 6%;
         left: 35%;
+        @media (max-width: 1600px) {
+          display: none;
+        }
       }
     }
     > .blog-post2-msg-card {
@@ -920,19 +1069,62 @@
       align-content: center;
       align-items: center;
       margin-bottom: 10px;
+      @media (max-width: 1600px) {
+        width: 100%;
+      }
       > div:nth-child(2) {
+        //acc、date
         margin-left: 10px;
+        > p:nth-child(1) {
+          //acc
+        }
+        > p:nth-child(2) {
+          //date
+          color: #a0a0a0;
+        }
       }
       > div:nth-child(3) {
         margin-left: 20px;
         font-size: 16px;
         flex-grow: 1;
+        position: relative;
+        @media (max-width: 1300px) {
+          margin-left: 40px;
+        }
+        @media (max-width: 768px) {
+          margin-left: 20px;
+        }
+        @media (max-width: 576px) {
+          margin-left: 10px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          height: 25px;
+          border-right: #a0a0a0 solid 1px;
+          top: -20%;
+          left: -3%;
+        }
       }
       > div:nth-child(4) {
         margin-right: 5px;
       }
     }
     > div:nth-child(5) {
+      position: relative;
+      //留言表單
+      &::before {
+        content: "";
+        border-top: solid #a0a0a0 1px;
+        width: 50rem;
+        position: absolute;
+        top: -15%;
+        left: 0%;
+        @media (max-width: 1600px) {
+          top: -10%;
+          width: 100%;
+        }
+      }
       margin-top: 5%;
       > form:nth-child(1) {
         // background-color: #000;
@@ -941,12 +1133,18 @@
           > textarea:nth-child(1) {
             width: 50%;
             height: 100px;
+            @media (max-width: 1600px) {
+              width: 85%;
+            }
           }
         }
         .blogPost2ButtonMore {
           width: 10%;
           margin-top: 3%;
           margin-left: 25%;
+          @media (max-width: 1600px) {
+            margin-left: 45%;
+          }
         }
       }
     }
@@ -954,10 +1152,13 @@
       position: absolute;
       bottom: 0%;
       right: 0%;
+      @media (max-width: 1600px) {
+        display: none;
+      }
       > img:nth-child(1) {
         position: relative;
         bottom: 0%;
-        right: 75%;
+        right: 100%;
         z-index: 5;
         animation-name: catching;
         animation-duration: 3s;
@@ -965,46 +1166,116 @@
         animation-timing-function: linear;
         @keyframes catching {
           0% {
-            right: 75%;
-          }
-          25% {
-            right: 50%;
-          }
-          50% {
-            right: 75%;
-          }
-          75% {
             right: 100%;
           }
-          90% {
-            right: 70%;
+          33% {
+            right: 150%;
+          }
+          66% {
+            right: 50%;
+          }
+          100% {
+            right: 100%;
           }
         }
       }
       > img:nth-child(2) {
         z-index: 1;
-        position: relative;
-        bottom: 350px;
-        right: 200px;
+        display: inline-block;
+        position: absolute;
+        bottom: 200%;
+        right: 130%;
         animation-name: falling;
         animation-duration: 3s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         @keyframes falling {
           0% {
-            right: 200px;
-            bottom: 350px;
-            transform: rotate(0deg);
+            bottom: 200%;
+            opacity: 1;
           }
           50% {
-            right: 180px;
-            bottom: 260px;
-            transform: rotate(140deg);
+            bottom: 85%;
+            right: 150%;
+            transform: rotate(180deg);
+            display: none;
+            opacity: 1;
+          }
+          51% {
+            opacity: 0;
           }
           100% {
-            right: 220px;
-            bottom: 110px;
-            transform: rotate(280deg);
+            opacity: 0;
+          }
+        }
+      }
+      > img:nth-child(3) {
+        z-index: 1;
+        // background-color: #000;
+        display: inline-block;
+        position: absolute;
+        bottom: 200%;
+        right: 200%;
+        animation-name: falling2;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @keyframes falling2 {
+          0% {
+            opacity: 0;
+          }
+          49% {
+            opacity: 0;
+          }
+          50% {
+            bottom: 200%;
+            opacity: 1;
+          }
+          100% {
+            bottom: 85%;
+            right: 130%;
+            transform: rotate(250deg);
+            display: none;
+            opacity: 1;
+          }
+        }
+      }
+      > img:nth-child(4) {
+        z-index: 1;
+        display: inline-block;
+        position: absolute;
+        bottom: 200%;
+        right: 50%;
+        animation-name: falling3;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @keyframes falling3 {
+          0% {
+            opacity: 0;
+          }
+          28% {
+            opacity: 0;
+          }
+          29% {
+            opacity: 1;
+          }
+          30% {
+            bottom: 200%;
+            opacity: 1;
+          }
+          80% {
+            bottom: 85%;
+            right: 100%;
+            transform: rotate(330deg);
+            display: none;
+            opacity: 1;
+          }
+          81% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 0;
           }
         }
       }
@@ -1013,7 +1284,7 @@
 }
 .blog-post-tri {
   //select
-  background: url('../assets/blog-img/post/triangle.png');
+  background: url("../assets/blog-img/post/triangle.png");
   background-repeat: no-repeat;
   background-position: 95% 60%;
   font-size: 15px;
@@ -1071,10 +1342,10 @@
         display: flex;
         text-align: center;
         justify-content: space-around;
-        border-bottom: solid #007552 1px;
+        border-bottom: solid #6baf9b 2px;
       }
       > div:nth-child(2) {
-        border-bottom: solid #007552 1px;
+        border-bottom: solid #6baf9b 2px;
         text-align: center;
       }
     }
@@ -1091,6 +1362,11 @@
   // gap: 20px;
   padding-bottom: 2%;
   margin-top: 3%;
+  position: relative;
+  @media (max-width: 1300px) {
+  grid-template-columns: 1fr;
+    
+  }
   > div:nth-child(1) {
     //main
     > div:nth-child(1) {
@@ -1100,6 +1376,7 @@
       > div:nth-child(1) {
         // background-color: #000;
         //籃子圖
+        >img{width: 100%;}
       }
       > div:nth-child(2) {
         //input//search
@@ -1110,17 +1387,19 @@
           // border: solid red 10px;
           //search input
           > form:nth-child(1) {
+            position: relative;
             > input:nth-child(1) {
               padding: 5px 0px 5px 30px;
               border: #007552 solid 2px;
               border-radius: 50px;
               width: 80%;
               font-size: 20px;
+              position: relative;
             }
             > img:nth-child(2) {
-              position: relative;
-              right: 40px;
-              bottom: 3px;
+              position: absolute;
+              right: 20%;
+              bottom: 5px;
             }
           }
         }
@@ -1151,13 +1430,21 @@
     // background-color: #000;
     //tags&leaderboard
     position: sticky;
+    // position: relative;
+    // position: absolute;
+    // position: fixed;
     right: 0%;
     top: 0%;
     // border: steelblue 5px solid;
     display: grid;
+    justify-self: end;
+    // display: none;
     // border: chocolate 3px solid;
     grid-template-rows: 6fr 1fr 1fr 1fr;
     height: 30%;
+    @media (max-width: 1300px) {
+      display: none;
+    }
     > div:nth-child(1) {
       // border: chocolate 3px solid;
       text-align: right;
@@ -1165,6 +1452,12 @@
       flex-direction: column;
       left: 2px;
       top: 1%;
+      width: 380px;
+      @media (max-width: 1650px) {
+        width: 320px;
+      }
+      > img:nth-child(1) {
+      }
       > img:nth-child(2),
       img:nth-child(3),
       img:nth-child(4),
@@ -1173,12 +1466,24 @@
         transition: 0.5s;
         &:hover {
           right: 20px;
+          width: 400px;
         }
+        @media (max-width: 1650px) {
+        &:hover {
+          right: 20px;
+          width: 340px;
+        }
+      }
       }
     }
     > div:nth-child(2),
     > div:nth-child(3),
     > div:nth-child(4) {
+      @media (max-width: 1650px) {
+        width: 320px;
+      }
+      width: 380px;
+      background-color: #fcded4;
       padding-top: 10px;
       padding-bottom: 15px;
       display: grid;
@@ -1188,10 +1493,10 @@
       border-bottom: #a0a0a0 solid 1px;
       // border: chocolate 3px solid;
       grid-template-areas:
-        'aa1 aa2 aa2 aa2'
-        'aa1 aa3 aa3 aa3'
-        'aa1 aa4 aa5 aa7'
-        'aa1 aa4 aa6 aa7';
+        "aa1 aa2 aa2 aa2"
+        "aa1 aa3 aa3 aa3"
+        "aa1 aa4 aa5 aa7"
+        "aa1 aa4 aa6 aa7";
       > div:nth-child(1) {
         grid-area: aa1;
         font-size: 80px;
@@ -1236,15 +1541,43 @@
 .blog-post2-card-area {
   padding-right: 10%;
   margin-top: 20px;
+  @media (max-width: 1300px) {
+  padding-right: 0%;
+    
+  }
   > .blog-post2-long-card {
     display: flex;
     border: #007552 solid 2px;
+    @media (max-width: 700px) {
+    padding-bottom: 2%;
+      flex-direction: column;
+    }
     > div:nth-child(1) {
       border-right: solid #007552 1.5px;
+      position: relative;
       //妹妹假蠵龜
+      width: 80%;
+      padding-top: 310px;
+      background-image: url("../assets/blog-img/post/kidEatsWatermelon.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      @media (max-width:1500px ) {
+      width: 100%;
+        
+      }
+      @media (max-width:1400px ) {
+      width: 150%;
+      }
+      @media (max-width:768px ) {
+      width: 200%;
+      }
+      @media (max-width:700px ) {
+      width: 100%;
+      }
     }
     > div:nth-child(2) {
-      padding: 30px 30px 0px 30px;
+      padding: 3% 3% 0px 3%;
       //右邊
       > div:nth-child(1) {
         //右上
@@ -1254,17 +1587,20 @@
         }
         > p:nth-child(2) {
           margin-top: 5px;
-          font-size: 20px;
+          font-size: 16px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          overflow: hidden;
         }
         > p:nth-child(3) {
           margin-top: 25px;
-
           > img:nth-child(1) {
           }
           > span:nth-child(2) {
             color: #62bc5a;
             padding-right: 100px;
-            font-size: 16px;
+            font-size: 14px;
             position: relative;
             top: 5px;
             margin-left: 10px;
@@ -1272,7 +1608,7 @@
           > img:nth-child(3) {
           }
           > span:nth-child(4) {
-            font-size: 16px;
+            font-size: 14px;
             color: #a0a0a0;
             margin-left: 5px;
           }
@@ -1281,7 +1617,7 @@
           }
           > span:nth-child(6) {
             margin-left: 5px;
-            font-size: 16px;
+            font-size: 14px;
             color: #a0a0a0;
           }
         }
@@ -1289,6 +1625,15 @@
           font-size: 16px;
           margin-top: 20px;
           padding-right: 50px;
+          width: 100%;
+          display: -webkit-box; /* -webkit-box 尚在實驗性的屬性值 */
+          -webkit-box-orient: vertical; /* 用來設定一個元素是水平還是垂直方向排列其內容 */
+          -webkit-line-clamp: 3; /* 限制指定的行數 */
+          overflow: hidden;
+          @media (max-width: 500px) {
+          padding-right: 0px;
+            
+          }
         }
       }
       > div:nth-child(2) {
@@ -1297,7 +1642,7 @@
         margin-top: 70px;
         position: relative;
         &::before {
-          content: '';
+          content: "";
           border-top: solid #007552 1.5px;
           width: 100%;
           top: -15px;
@@ -1338,9 +1683,41 @@
       &.ml {
         margin-left: 10px;
       }
-      margin-top: 10px;
+      &.nine {
+        @media (max-width: 9999px) {
+          display: none;
+        }
+        @media (max-width: 1879px) {
+          display: inline-block;
+        }
+        @media (max-width: 1400px) {
+          display: none;
+        }
+        @media (max-width: 1300px) {
+          display: inline-block;
+        }
+        @media (max-width: 900px) {
+          display: none;
+        }
+      }
+      margin-top: 15px;
       width: 270px;
       border: solid #007552 2px;
+      @media (max-width: 1879px) {
+        width: 32%;
+      }
+      @media (max-width: 1400px) {
+        width: 48%;
+      }
+      @media (max-width: 1300px) {
+        width: 32%;
+      }
+      @media (max-width: 900px) {
+        width: 48%;
+      }
+      @media (max-width: 576px) {
+        width: 100%;
+      }
       > div:nth-child(1) {
         //葡萄圖片
         border-bottom: solid #007552 2px;
@@ -1456,10 +1833,17 @@
   > li {
     font-size: 15px;
     padding: 10px;
+    @media (max-width: 500px) {
+    padding: 5px;
+      
+    }
   }
   > li:nth-child(1) {
     > img:nth-child(1) {
       width: 95%;
+      @media (max-width: 500px) {
+      width: 20px;
+      }
     }
   }
   > li:nth-child(2) {
@@ -1475,6 +1859,9 @@
     border: none;
     > img:nth-child(1) {
       width: 95%;
+      @media (max-width: 500px) {
+          width: 20px;
+      }
     }
   }
   > li:nth-child(2) {
