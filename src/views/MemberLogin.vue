@@ -104,6 +104,9 @@ export default {
 
             // 頁面跳轉
             this.$router.push("/main/member/information");
+
+            console.log(this.prevRoute.path);
+            
           }
         })
         // eslint-disable-next-line no-console
