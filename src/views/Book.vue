@@ -8,7 +8,7 @@
                         <div class="bk_left_img">
                             <img src="@/assets/book_img/bookRighPage_img1t.svg" />
                         </div>
-                        <div class="bk_right_img move_img">
+                        <div class="bk_right_img" id="move_img">
                             <img src="@/assets/book_img/bookRightPage_img2.svg" />
                         </div>
                     </div>
@@ -58,11 +58,11 @@
             </div>
             <!-- <div id="book_footer">
                 <Footer />
-            </div> -->
+            </div>-->
         </section>
         <!-- <div id="book_footer">
                 <Footer />
-            </div> -->
+        </div>-->
     </div>
 </template>
 <script>
@@ -91,8 +91,27 @@ export default {
                     name: "常年",
                     path: "bookYear"
                 }
-            ]
+            ],
+            i: 0
         };
+    },
+    mounted() {
+        window.addEventListener("scroll", this.imgMoveToRight, true);
+    },
+    methods: {
+        imgMoveToRight() {
+
+            this.i++;
+            
+            if (
+                document.body.scrollHeight > 350 ||
+                document.documentElement.scrollHeight > 350
+            ) {
+                document.getElementById("move_img").style = `left:${this.i}px`;
+                console.log("+");
+            }
+        }
     }
 };
 </script>
+
