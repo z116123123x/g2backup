@@ -723,7 +723,7 @@
 
 .blog-post-tri {
   //select
-  background: url("../assets/blog-img/post/triangle.png");
+  background: url('../assets/blog-img/post/triangle.png');
   background-repeat: no-repeat;
   background-position: 95% 60%;
   font-size: 15px;
@@ -909,11 +909,11 @@
           width: 400px;
         }
         @media (max-width: 1650px) {
-        &:hover {
-          right: 20px;
-          width: 340px;
+          &:hover {
+            right: 20px;
+            width: 340px;
+          }
         }
-      }
       }
     }
     > div:nth-child(2),
@@ -933,10 +933,10 @@
       border-bottom: #a0a0a0 solid 1px;
       // border: chocolate 3px solid;
       grid-template-areas:
-        "aa1 aa2 aa2 aa2"
-        "aa1 aa3 aa3 aa3"
-        "aa1 aa4 aa5 aa7"
-        "aa1 aa4 aa6 aa7";
+        'aa1 aa2 aa2 aa2'
+        'aa1 aa3 aa3 aa3'
+        'aa1 aa4 aa5 aa7'
+        'aa1 aa4 aa6 aa7';
       > div:nth-child(1) {
         grid-area: aa1;
         font-size: 80px;
@@ -984,23 +984,71 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media (max-width: 1300px) {
+    padding-right: 0%;
+  }
 
   .woman-small-strawberry {
     display: flex;
     width: 49.15%;
     margin-top: 1%;
     border: #007552 2px solid;
+    @media (max-width: 1879px) {
+      width: 66%;
+    }
+    @media (max-width: 1400px) {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
     > div:nth-child(1) {
       //姊姊聞草莓
       width: 300%;
-      background-image: url("../assets/blog-img/post/woman.png");
+      background-image: url('../assets/blog-img/post/woman.png');
       padding-top: 50%;
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position: 0% 0%;
       background-size: cover;
+      position: relative;
+      @media (max-width: 1400px) {
+        padding-top: 65%;
+      }
+      @media (max-width: 1300px) {
+        width: 100%;
+        padding-top: 40%;
+      }
+      @media (max-width: 992px) {
+        width: 150%;
+        padding-top: 40%;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        padding-top: 100%;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 15.2%;
+        right: 0%;
+        border-top: #f7c845 1px solid;
+        width: 80%;
+        @media (max-width: 1300px) {
+          bottom: 23.1%;
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 15%;
+        left: 0%;
+        border-top: #f7c845 1px solid;
+        width: 80%;
+      }
     }
     > div:nth-child(2) {
-      padding: 3%;
+      padding: 3% 3% 2.5% 3%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -1034,11 +1082,40 @@
           font-size: 16px;
           letter-spacing: 0.5px;
           line-height: 1.5;
+          display: -webkit-box; /* -webkit-box 尚在實驗性的屬性值 */
+          -webkit-box-orient: vertical; /* 用來設定一個元素是水平還是垂直方向排列其內容 */
+          -webkit-line-clamp: 3; /* 限制指定的行數 */
+          overflow: hidden;
+          @media (max-width: 1300px) {
+            padding-top: 1%;
+          }
+          @media (max-width: 992px) {
+            padding-bottom: 10%;
+          }
         }
       }
       > div:nth-child(2) {
         //草莓姨
         display: flex;
+        position: relative;
+        padding-top: 3.5%;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          right: -7%;
+          border-top: #007552 1px solid;
+          width: 114%;
+          @media (max-width: 1300px) {
+            width: 111%;
+            right: -5.5%;
+          }
+          @media (max-width: 768px) {
+            width: 100%;
+            right: 0%;
+          }
+        }
+
         > div:nth-child(1) {
           //阿姨頭貼
           > img:nth-child(1) {
@@ -1089,21 +1166,21 @@
     }
     width: 24%;
     border: solid #007552 2px;
-    // @media (max-width: 1879px) {
-    //   width: 32%;
-    // }
-    // @media (max-width: 1400px) {
-    //   width: 48%;
-    // }
-    // @media (max-width: 1300px) {
-    //   width: 32%;
-    // }
-    // @media (max-width: 900px) {
-    //   width: 48%;
-    // }
-    // @media (max-width: 576px) {
-    //   width: 100%;
-    // }
+    @media (max-width: 1879px) {
+      width: 32%;
+    }
+    @media (max-width: 1400px) {
+      width: 48%;
+    }
+    @media (max-width: 1300px) {
+      width: 32%;
+    }
+    @media (max-width: 900px) {
+      width: 48%;
+    }
+    @media (max-width: 576px) {
+      width: 100%;
+    }
     margin-top: 1%;
     > div:nth-child(1) {
       //葡萄圖片
