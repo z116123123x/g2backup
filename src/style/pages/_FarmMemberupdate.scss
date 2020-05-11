@@ -2,15 +2,31 @@ div.farmupdate {
     display: inline-block;
     color: #007552;
     background-color: #FBF8EF;
-    width: 87.2%;
+    width: 100%;
     height: auto;
     vertical-align: top;
-
+    @include rwd(mobile){
+        width: 95%;
+    }
     .farmupdate_head {
         color: #F7C845;
-        margin-top: 40px;
-        margin-left: 40px;
+        margin-top: 45px;
+        margin-left: 300px;
+        margin-bottom: 10px;
         font-size: 30px;
+        @include rwd(large){
+            margin-left: 160px;
+            margin-bottom: 10px;
+        }
+        @include rwd(medium){
+            margin-left: 130px;
+        }
+        @include rwd(small){
+            margin-left: 90px;
+        }
+        @include rwd(mobile){
+            margin-left: 20px;
+        }
     }
 
     .farmupdate_bottom {
@@ -49,7 +65,7 @@ div.farmupdate {
 
             @include rwd(mobile){
                 width: 330px;
-                height: 530px;
+                height: 577px;
                 }
 
             >.card {
@@ -116,7 +132,7 @@ div.farmupdate {
                 display: flex;
                 width: 100%;
                 margin-top: 40px;
-                padding-left: 23px;
+                padding-left: 13px;
                 line-height: 2;
                 font-size: 16px;
             }
