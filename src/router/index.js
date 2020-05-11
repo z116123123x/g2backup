@@ -4,6 +4,10 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 const routes = [{
+    path: '*',
+    redirect: '/main'
+  },
+  {
     path: '/main',
     name: 'Home',
     component: () => import('@/views/Home.vue'),
@@ -82,6 +86,9 @@ const routes = [{
         // children 指的是 member router（路由）內的"子頁"，例如網址只要符合 /member/information 就會嵌入 Member.vue 樣板及 Information.vue 元件
         path: 'information',
         name: 'Information',
+        meta: {
+          requiresAuth: true
+        },
         component: () => import('@/views/MemberInfo.vue'),
       },
       {

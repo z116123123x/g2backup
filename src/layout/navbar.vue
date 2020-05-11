@@ -138,6 +138,8 @@ export default {
 
       // a. 傳遞 logout 的值到父層
       this.$emit("logout", false);
+
+      this.$router.push("/main");
     },
     login() {
       const api = "/api/api_memberStatus.php";
