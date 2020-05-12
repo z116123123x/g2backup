@@ -93,7 +93,7 @@ div.FarmOrder {
             }
 
             @include rwd(mobile) {
-                margin-left: 5%;
+                margin-left: 4%;
             }
             
             >.Ordernum{
@@ -197,7 +197,7 @@ div.FarmOrder {
                     width: 11.4%;
                 }
                 @include rwd(mobile){
-                    width: 20%;
+                    width: 19%;
                 }
                 >.title{
                     background-color: #F7C845;

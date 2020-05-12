@@ -7,125 +7,136 @@
         </div>
         <div class="FarmList_bottom">
             <div class="list_1">
-                    <div class="list_th">
-                        <p class="num">訂單編號</p>
-                        <p class="name">成立時間</p>
-                        <p class="price">總金額</p>
-                        <p class="time">姓名</p>
-                        <p class="puton">付款狀態</p>
-                        <p class="puton2">訂單狀態</p> 
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                         <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>2020-04-17 13:14</p>
-                        <p>$1380</p>
-                        <p>某某某</p>
-                        <p>已付款</p>
-                        <p>完成</p>
-                        <router-link to="/farm/ListUpdate">詳細資訊</router-link>
-                    </div>
-
+                <div class="Listnum">
+                    <p class="title">訂單編號</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
                 </div>
+                <div class="Listdate">
+                    <p class="title">成立日期</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                    <p>2020-04-17 13:14</p>
+                </div>
+                <div class="Listprice">
+                    <p class="title">總金額</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                    <p>$1380</p>
+                </div>
+                <div class="Listname">
+                    <p class="title">姓名</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                    <p>某某某</p>
+                </div>
+                <div class="Listpay">
+                    <p class="title">付款狀態</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                    <p>已付款</p>
+                </div>
+                <div class="Liststatus">
+                    <p class="title">訂單狀態</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                    <p>已出貨</p>
+                </div>
+                <div class="Listdetail">
+                    <p class="title"></p>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                    <router-link to="/farm/Listupdate">
+                        <p>查看詳情</p>
+                    </router-link>
+                </div>
+            </div>
 
 
             <div class="pagination_block">

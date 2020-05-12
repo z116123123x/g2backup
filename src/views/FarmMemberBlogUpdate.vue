@@ -31,7 +31,7 @@
                         <div class="tap2">xxxxx</div>
                         <div class="tap3">xxxxxx</div>
                         <div class="tap4">xxxxxxx</div>
-                        <div class="tap5">xxxxxxxx</div>
+                        <div class="tap5">xxxxxxx</div>
                     </div>
                     <div class="submit_button">
                         <a href="#">
