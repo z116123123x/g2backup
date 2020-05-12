@@ -23,12 +23,12 @@
                         <p>已付款</p>
                         <p>完成</p>
                     </div>
-                    <span class="triangle"></span>
                     <div class="list_slide">
-                        <p>訂單明細</p>
+                        <img id="ploygon" class="plogon" src="@/assets/Polygon 2.svg" alt="">
+                        <span id="ploygon">訂單明細</span>
                     </div>
-
-                    <div class="list_th2">
+                    <div class="slide display">
+                        <div class="list_th2">
                         <p>商品編號</p>
                         <p>名稱</p>
                         <p>價格</p>
@@ -57,6 +57,7 @@
                         <p class="td3_price">$60</p>
                         <p class="td3_num">10</p>
                         <p>$600</p>
+                    </div>
                     </div>
                     <div class="total">
                         <p>商品金額 $130</p>
@@ -95,8 +96,8 @@
                                 <img src="@/assets/memberstar.svg" alt="">
                             </div>
                             <div class="Evaluation_submit">
-                                <p>不想給了</p>
-                                <p>送出</p>
+                                <a href="#"><p>不想給了</p></a>
+                                <a href=""><p>送出</p></a> 
                             </div>
                         </div>
                     </div>
@@ -123,3 +124,23 @@
         </div>
     </div>
 </template>
+
+<script>
+    import $ from "jquery";
+    export default{
+        mounted(){
+            var i=0;
+            $(".list_slide").click(function(){
+                if(i==0){
+                    $("#ploygon").css("transform","rotateX(180deg)");
+                    i=1;
+                }else{
+                    $("#ploygon").css("transform","rotateX(0deg)");
+                    i=0;
+                }
+                
+                $(".slide").toggleClass("display");
+            });
+        }
+    }
+</script>

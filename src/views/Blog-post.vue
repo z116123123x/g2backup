@@ -74,7 +74,7 @@
         </select>
         <!--row1-->
         <div class="blog-post-section1">
-          <div>
+          <div class="woman-small-strawberry">
             <div>
               <img style="width:100%;" src="@/assets/blog-img/post/woman.png" />
             </div>
@@ -718,7 +718,7 @@
   margin-top: 5%;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  > div:nth-child(1) {
+  > .woman-small-strawberry {
     border: solid #007552 2px;
     display: grid;
     grid-template-columns: 1fr 1fr;

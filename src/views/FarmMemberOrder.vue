@@ -7,105 +7,102 @@
         </div>
         <div class="plusbutton">
             <div class="plus">
-                <router-link to="/farm/product"><p>新增商品</p></router-link>
-                
+                <router-link to="/farm/product">
+                    <p>新增商品</p>
+                </router-link>
+
             </div>
         </div>
         <div class="FarmOrder_bottom">
             <div class="list_1">
-                    <div class="list_th">
-                        <p class="num">商品編號</p>
-                        <p class="name">名稱</p>
-                        <p class="price">價格</p>
-                        <p class="time">上傳時間</p>
-                        <p class="puton">上架狀態</p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>慶中秋!台南玉璽文旦...</p>
-                        <p>200</p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-
+                <div class="Ordernum">
+                    <p class="title">商品編號</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
                 </div>
+                <div class="Ordername">
+                    <p class="title">名稱</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                    <p>慶中秋!台南玉璽文旦...</p>
+                </div>
+                <div class="Orderprice">
+                    <p class="title">價格</p>
+                    <p>200</p>
+                    <p>200</p>
+                    <p>200</p>
+                    <p>200</p>
+                    <p>200</p>
+                    <p>200</p>
+                    <p>200</p>
+                    <p>200</p>
+                    <p>200</p>
+                    <p>200</p>
+                    <p>200</p>
+                    <p>200</p>
+                </div>
+                <div class="Ordertime">
+                    <p class="title">上傳時間</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                </div>
+                <div class="Orderputon">
+                    <p class="title">上架狀態</p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" 
+                    for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                </div>
+            </div>
 
 
             <div class="pagination_block">

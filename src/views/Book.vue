@@ -21,10 +21,10 @@
                             <!-- 標籤 -->
                             <div class="book_tag">
                                 <div class="index">
-                                    <router-link class="book_link" to="/main/book/bookIndex">總目錄</router-link>
+                                    <router-link class="book_link" to="/main/book/bookIndex" @click="changeType(1)">總目錄</router-link>
                                 </div>
                                 <ul class="tag">
-                                    <li v-for="(item, index) in tabs" :id="index" :key="item.id">
+                                    <li v-for="(item, index) in tabs" :id="index" :key="item.id" @click="changeType(item.type)">
                                         <router-link
                                             class="book_link"
                                             :to="'/main/book/'+ item.path"
@@ -73,27 +73,33 @@ export default {
             tabs: [
                 {
                     name: "春季",
+                    type: 1,
                     path: "bookSpring"
                 },
                 {
                     name: "夏季",
+                    type: 2,
                     path: "bookSummer"
                 },
                 {
                     name: "秋季",
+                    type: 3,
                     path: "bookFall"
                 },
                 {
                     name: "冬季",
+                    type: 4,
                     path: "bookWinter"
                 },
                 {
                     name: "常年",
+                    type: 0,
                     path: "bookYear"
                 }
             ],
             i: 0,
-            top: 0
+            top: 0,
+            type: 1
         };
     },
     mounted() {
@@ -125,6 +131,12 @@ export default {
             //     document.documentElement.scrollWidth < 1500){
             //          document.getElementById("move_img").style=`left:${this.i* -2}%`;
             //     }
+        };
+    },
+    methods: {
+
+        changeType: function(t){
+
         }
     }
 };

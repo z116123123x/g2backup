@@ -1,12 +1,12 @@
 div.farmcontain {
     display: flex;
     height: auto;
-    font-size: 16px;
+    font-size: 17px;
     @include rwd(large) {
         height: auto;
     }
     @include rwd(medium) {
-        height: auto;
+        height: 100%;
     }
 
     @include rwd(small) {
@@ -18,16 +18,18 @@ div.farmcontain {
 
     aside.left {
         display: inline-block;
+        position: fixed;
         color: #007552;
         width: 12.8%;
-        height: auto;
+        height: 100%;
         vertical-align: top;
         background-color: #FFD3C1;
+        z-index: 50;
         @include rwd(large) {
-            height: auto;
+            height: 100%;
         }
         @include rwd(medium) {
-            height: auto;
+            height: 100%;
         }
     
         @include rwd(small) {
@@ -35,12 +37,13 @@ div.farmcontain {
         }
 
         @include rwd(mobile) {
-            height: auto;
+            height: 100%;
+            width: 41%;
             position: fixed;
             top: 0px;
             left: 0;
             transform: translateX(-93%);
-            transition: transform 1s cubic-bezier(0.36, 0, 0.66, -0.56);
+            transition: transform 1s cubic-bezier(0.36, 0, 0.66, 0);
         }
         >.head_portrait {
             text-align: center;
@@ -123,7 +126,7 @@ div.farmcontain {
             }
 
             @include rwd(small) {
-                margin-left: 2px;
+                margin-left: 30px;
                 padding-top: 10px;
                 padding-bottom: 10px;
             }
@@ -162,12 +165,12 @@ div.farmcontain {
                 background-color: #FFD3C1;
                 position: absolute;
                 right: 0;
-                top: 20%;
+                top: 50%;
                 transform: translateX(50%);
                 color: black;
                 border: 0;
                 font-size: 1rem;
-                width: 60%;
+                width: 25%;
                 height: 8%;
                 padding: 4px 10px;
                 line-height: 1.6;
@@ -176,6 +179,7 @@ div.farmcontain {
                 border-radius: 50%;
                 text-align: center;
                 outline: none;
+                z-index: 100;
             }
         }
     }

@@ -1,14 +1,26 @@
  div.Order {
    display: inline-block;
    background-color: #FBF8EF;
-   width: 87.2%;
+   width: 100%;
    height: auto;
 
    .Order_head {
      color: #F7C845;
-     margin-top: 40px;
-     margin-left: 40px;
+     margin-top: 50px;
+     margin-left: 300px;
      font-size: 30px;
+     @include rwd(large){
+       margin-left: 170px;
+     }
+     @include rwd(medium){
+      margin-left: 140px;
+    }
+    @include rwd(small){
+      margin-left: 140px;
+    }
+    @include rwd(mobile){
+      margin-left: 20px;
+    }
    }
 
    .Order_bottom {
@@ -18,10 +30,14 @@
 
      >.Orderlist {
        margin-top: 40px;
+       margin-left: 70px;
        line-height: 2;
-
+      @include rwd(small){
+        margin-left: 90px;
+      }
        @include rwd(mobile) {
          margin-top: 40px;
+         margin-left: 0;
          line-height: 2;
          padding-left: 20px;
        }
@@ -34,7 +50,7 @@
          width: 768px;
          height: 100%;
          font-size: 17px;
-
+        transition: .5s ease;
          @include rwd(medium) {
            width: 720px;
            height: auto;
@@ -58,12 +74,14 @@
            margin-top: 20px;
            margin-left: 20px;
            margin-right: 20px;
-          @include rwd(mobile){
-            width: 100%;
-            margin-top: 20px;
-            margin-left: 0px;
-            margin-right: 20px;
-          }
+
+           @include rwd(mobile) {
+             width: 100%;
+             margin-top: 20px;
+             margin-left: 0px;
+             margin-right: 20px;
+           }
+
            >p {
              display: inline-block;
              padding: 0 58px;
@@ -77,7 +95,7 @@
              }
 
              @include rwd(mobile) {
-              padding: 0 8.6px 0 7px;
+               padding: 0 8.6px 0 7px;
              }
            }
          }
@@ -89,11 +107,12 @@
            margin-bottom: 20px;
            margin-left: 20px;
            margin-right: 20px;
-           @include rwd(mobile){
-            width: 99.4%;
-            margin-left: 0px;
-            margin-right: 20px;
-          }
+
+           @include rwd(mobile) {
+             width: 99.4%;
+             margin-left: 0px;
+             margin-right: 20px;
+           }
 
            >p {
              display: inline-block;
@@ -122,147 +141,168 @@
            }
          }
 
-         .list_th2 {
-           display: block;
-           background-color: #F7C845;
-           color: #007552;
-           margin-top: 20px;
-           margin-left: 20px;
-           margin-right: 20px;
-           @include rwd(mobile){
-            width: 100%;
-            margin-left: 0px;
-            margin-right: 20px;
-          }
-           >p {
-             display: inline-block;
-             padding: 0 50.4px;
+         >.list_slide {
+           margin-left: 10px;
 
-             @include rwd(medium) {
-              padding: 0 53px;
-            }
-
-            @include rwd(small) {
-              padding: 0 40.6px;
-            }
-
-            @include rwd(mobile) {
-              padding: 0 15.6px 0 7px;
-            }
+           >img {
+             margin-right: 5px;
+             transition: .5s ease;
            }
          }
 
-         .list_td2 {
-           border: 1px solid #F7C845;
-           background-color: white;
+         
+
+         >.slide {
            display: block;
-           margin-left: 20px;
-           margin-right: 20px;
-           @include rwd(mobile){
-            width: 99.4%;
-            margin-left: 0px;
-            margin-right: 20px;
-          }
-           >p {
-             display: inline-block;
-             padding: 0 44.8px;
-
-             @include rwd(medium) {
-              padding: 0 53px;
-            }
-
-            @include rwd(small) {
-              padding: 0 42.9px;
-            }
-
-            @include rwd(mobile) {
-              font-size: 13px;
-              padding: 0 20px 0 7px;
-            }
-           }
-
-           >p.td2_price {
-             display: inline-block;
-             padding: 0 30px;
-
-             @include rwd(mobile) {
-               padding: 0;
-             }
-           }
-
-           >p.td2_num {
-             display: inline-block;
-             padding: 0 44.8px;
-
-             @include rwd(mobile) {
-              padding: 0px 26px;
-             }
-           }
-
-         }
-
-         .list_td3 {
-           border: 1px solid #F7C845;
-           background-color: white;
-           display: block;
-           margin-left: 20px;
-           margin-right: 20px;
-           @include rwd(mobile){
-            width: 99.4%;
-            margin-left: 0px;
-            margin-right: 20px;
-          }
-           >p {
-             display: inline-block;
-             padding: 0 44.4px;
-
-             @include rwd(medium) {
-              padding: 0 53px;
-            }
-
-            @include rwd(small) {
-              padding: 0 42.9px;
-            }
-
-            @include rwd(mobile) {
-              font-size: 13px;
-              padding: 0 11px 0 7px;
-            }
-           }
-           >p.td3_price {
-            display: inline-block;
-            padding: 0 30px;
-
-            @include rwd(mobile) {
-              padding: 0;
-            }
-          }
-
-          >p.td3_num {
-            display: inline-block;
-            padding: 0 44.8px;
-
-            @include rwd(mobile) {
-              padding: 0px 21px;
-            }
-          }
-         }
-
-         .list_td3:last-child {
-           border: 1px solid #F7C845;
-           background-color: white;
-           display: block;
-           margin-left: 20px;
-           margin-right: 20px;
-         }
-
-         .listnum,
-         .list_slide {
-           >p {
-             padding-left: 10px;
+           >.list_th2 {
+             display: block;
+             background-color: #F7C845;
              color: #007552;
+             margin-top: 20px;
+             margin-left: 20px;
+             margin-right: 20px;
+
+             @include rwd(mobile) {
+               width: 100%;
+               margin-left: 0px;
+               margin-right: 20px;
+             }
+
+             >p {
+               display: inline-block;
+               padding: 0 50.4px;
+
+               @include rwd(medium) {
+                 padding: 0 53px;
+               }
+
+               @include rwd(small) {
+                 padding: 0 40.6px;
+               }
+
+               @include rwd(mobile) {
+                 padding: 0 15.6px 0 7px;
+               }
+             }
+           }
+
+           >.list_td2 {
+             border: 1px solid #F7C845;
+             background-color: white;
+             display: block;
+             margin-left: 20px;
+             margin-right: 20px;
+
+             @include rwd(mobile) {
+               width: 99.4%;
+               margin-left: 0px;
+               margin-right: 20px;
+             }
+
+             >p {
+               display: inline-block;
+               padding: 0 44.8px;
+
+               @include rwd(medium) {
+                 padding: 0 53px;
+               }
+
+               @include rwd(small) {
+                 padding: 0 42.9px;
+               }
+
+               @include rwd(mobile) {
+                 font-size: 13px;
+                 padding: 0 20px 0 7px;
+               }
+             }
+
+             >p.td2_price {
+               display: inline-block;
+               padding: 0 30px;
+
+               @include rwd(mobile) {
+                 padding: 0;
+               }
+             }
+
+             >p.td2_num {
+               display: inline-block;
+               padding: 0 44.8px;
+
+               @include rwd(mobile) {
+                 padding: 0px 26px;
+               }
+             }
+
+           }
+
+           >.list_td3 {
+             border: 1px solid #F7C845;
+             background-color: white;
+             display: block;
+             margin-left: 20px;
+             margin-right: 20px;
+
+             @include rwd(mobile) {
+               width: 99.4%;
+               margin-left: 0px;
+               margin-right: 0px;
+             }
+
+             >p {
+               display: inline-block;
+               padding: 0 44.4px;
+
+               @include rwd(medium) {
+                 padding: 0 53px;
+               }
+
+               @include rwd(small) {
+                 padding: 0 42.9px;
+               }
+
+               @include rwd(mobile) {
+                 font-size: 13px;
+                 padding: 0 11px 0 7px;
+               }
+             }
+
+             >p.td3_price {
+               display: inline-block;
+               padding: 0 30px;
+
+               @include rwd(mobile) {
+                 padding: 0;
+               }
+             }
+
+             >p.td3_num {
+               display: inline-block;
+               padding: 0 44.8px;
+
+               @include rwd(mobile) {
+                 padding: 0px 21px;
+               }
+             }
+
+             &:last-child {
+               border: 1px solid #F7C845;
+               background-color: white;
+               display: block;
+               margin-left: 20px;
+               margin-right: 20px;
+               @include rwd(mobile) {
+                width: 99.4%;
+                margin-left: 0px;
+                margin-right: 0px;
+              }
+             }
            }
          }
+         >.display{
+          display: none;
+        }
 
          .total {
            display: block;
@@ -324,33 +364,40 @@
              background-color: #FBF8EF;
              margin: 10px 30px;
              text-align: start;
-            @include rwd(mobile){
-              margin: 5px 20px;
-            }
-            >.Evaluation_submit{
-              text-align: end;
-              >p {
-                display: inline-block;
-                margin-top: 100px;
-                margin-right: 10px;
-                margin-bottom: 10px;
-                padding: 0 10px;
-                background-color: #007552;
-                border-radius: 5px;
-                color: white;
-                @include rwd(mobile){
-                 margin-top: 100px;
-                margin-right: 10px;
-                margin-bottom: 10px;
+
+             @include rwd(mobile) {
+               margin: 5px 20px;
+             }
+
+             >.Evaluation_submit {
+               text-align: end;
+
+               >a {
+                 >p {
+                   display: inline-block;
+                   margin-top: 100px;
+                   margin-right: 10px;
+                   margin-bottom: 10px;
+                   padding: 0 10px;
+                   background-color: #007552;
+                   border-radius: 5px;
+                   color: white;
+
+                   @include rwd(mobile) {
+                     margin-top: 100px;
+                     margin-right: 10px;
+                     margin-bottom: 10px;
+                   }
+                 }
+
+                 >p:hover {
+                   background-color: #62B45A;
+                   color: white;
+                 }
                }
-              }
- 
-              >p:hover {
-                background-color: #62B45A;
-                color: white;
-              }
-            }
-             
+
+             }
+
 
              >.starimg {
                display: inline-block;
@@ -359,9 +406,11 @@
                padding-top: 30px;
                margin-right: 20px;
                vertical-align: top;
-              @include rwd(mobile){
-                margin-right: 0px;
-              }
+
+               @include rwd(mobile) {
+                 margin-right: 0px;
+               }
+
                >img {
                  width: 100%;
                  height: 100%;
@@ -378,12 +427,14 @@
        display: inline-block;
        margin-top: 20px;
        margin-bottom: 20px;
-      @include rwd(mobile){
-        display: inline-block;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding-left: 42px;
-      }
+
+       @include rwd(mobile) {
+         display: inline-block;
+         margin-top: 20px;
+         margin-bottom: 20px;
+         padding-left: 42px;
+       }
+
        >ul.pagination {
          list-style: none;
          margin: 0;
@@ -405,8 +456,9 @@
              padding: 5px 10px;
              font-size: 1rem;
              color: black;
-             @include rwd(mobile){
-              padding: 5px 6px;
+
+             @include rwd(mobile) {
+               padding: 5px 6px;
              }
            }
 

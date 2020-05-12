@@ -1,6 +1,7 @@
+
 <template>
-  <main class="wrapper">
-    <div class="market_header">
+  <main class="wrapper ItemWrapper">
+    <div class="market_header" style="background-color: #fbf8ef;">
       <div class="market_title"></div>
     </div>
 
@@ -44,10 +45,13 @@
     <section class="CommodityWrapper">
       <div class="CommodityContent">
         <div class="CommodityContentImgBox">
-          <img src alt class="CommodityContentImg" />
-          <img src alt class="CommodityContentImg" />
-          <img src alt class="CommodityContentImg" />
-          <!--  <img src="../assets/shop/market_showImg_front.svg" alt class="commodityContentImg" /> -->
+          <div class="CommodityContentImgMain">
+            <img src="../assets/shop/ia_300000013.jpg" alt class="CommodityContentImg" />
+          </div>
+          <div class="CommodityContentImgChangeBox">
+            <img src="../assets/ia_300000017.jpg" alt class="CommodityContentChangeImg" />
+            <img src="../assets/ia_300000011.jpg" alt class="CommodityContentChangeImg" />
+          </div>
         </div>
         <div class="CommodityContenText">
           <div class="CommodityContenTextBox">
@@ -120,14 +124,146 @@
           </div>
         </div>
       </div>
+      <div class="SellerInformationBox">
+        <div class="SellerInformation">
+          <img
+            src="../assets/shop/BenjaminAidoo.jpg"
+            alt
+            height="60px"
+            width="60px"
+            style="border-radius: 100%;"
+          />
+          <p>Benjamin Aidoo</p>
+          <div class="TrackBtn">＋追蹤</div>
+        </div>
+        <div class="SellerReviewsBox">
+          <div class="SellerReviews">
+            <div class="Reviews">5.0</div>
+            <div class="StarBox">
+              <img src="../assets/icon/star.svg" alt width="20" height="20" />
+              <img src="../assets/icon/star.svg" alt width="20" height="20" />
+              <img src="../assets/icon/star.svg" alt width="20" height="20" />
+              <img src="../assets/icon/star.svg" alt width="20" height="20" />
+              <img src="../assets/icon/star.svg" alt width="20" height="20" />
+            </div>
+          </div>
+        </div>
+        <div class="SellerInformationTextBox">
+          <p>
+            Owner and founder of Nana Otafrija
+            Creator of the Coffin Dance
+            humble and kind person
+          </p>
+        </div>
+      </div>
     </section>
+
+    <!--輪播-->
+    <div id="carouselWrap">
+      <ul id="CommodityCarouselList">
+        <li class="CommodityCarouselConten">
+          <div class="CommodityCarousel commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="CommodityCarousel">
+          <div class="CommodityCarouselConten commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="CommodityCarousel">
+          <div class="CommodityCarouselConten commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--導航按鈕-->
+      <div id="naDiv">
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+      </div>
+      <!--左右按鍵-->
+      <a class="arrow arrow-left" href="javascript:;">&lt;</a>
+      <a class="arrow arrow-right" href="javascript:;">&gt;</a>
+    </div>
 
     <!-- <div class="footer-box">
       <Footer />
     </div>-->
   </main>
 </template>
-// <script>
-// import "../js/shop";
-// export default {};
+
+<script>
+import $ from "jquery";
+import { gsap, TweenMax, Power1, Power3, TimelineMax, Linear } from "gsap";
+export default {
+  mounted() {}
+};
 </script>

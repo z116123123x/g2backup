@@ -469,7 +469,7 @@
                      }
 
                      @include rwd(mobile) {
-                        #bk_content {
+                        .bk_content {
                            width: 100%;
                            height: 85vh; 
                            max-height: none; 
