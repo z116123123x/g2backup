@@ -7,6 +7,12 @@
           <form class="less-padding" autocomplete="off">
             <div class="formarea">
               <div class="formtext">
+                <label>姓名:</label>
+                <br />
+                <label>暱稱:</label>
+                <br />
+                <label>性別:</label>
+                <br />
                 <label>帳號:</label>
                 <br />
                 <label>密碼:</label>
@@ -16,6 +22,16 @@
                 <label>e-mail:</label>
               </div>
               <form class="forminputbox">
+                <input type="text" v-model="form.name" />
+                <input type="text" v-model="form.nick" />
+                <div class="from_gender">
+                  男<input type="radio" name="gender" /> 女<input
+                    type="radio"
+                    name="gender"
+                  />
+                  其他<input type="radio" name="gender" />
+                </div>
+
                 <input type="text" v-model="form.acc" />
                 <input id="signupPsw" type="password" v-model="form.psw" />
                 <input
@@ -36,10 +52,10 @@
         <div class="signin">
           <h1>果粉登入</h1>
           <form class="more-padding" autocomplete="off">
-            <span>帳號:</span>
+            <label>帳號:</label>
             <input type="text" placeholder="請輸入帳號" v-model="member.acc" />
             <br />
-            <span>密碼:</span>
+            <label>密碼:</label>
             <input
               type="password"
               placeholder="請輸入密碼"
@@ -75,13 +91,13 @@ import { TubeGeometry } from "three";
 export default {
   mounted() {
     $("#signup").click(function() {
-      $(".movebox").css("transform", "translateX(80%)");
+      $(".movebox").css("left", "45%");
       $(".signin").toggleClass("nodisplay");
       $(".signup").removeClass("nodisplay");
     });
 
     $("#signin").click(function() {
-      $(".movebox").css("transform", "translateX(-10%)");
+      $(".movebox").css("left", "5%");
       $(".signup").addClass("nodisplay");
       $(".signin").removeClass("nodisplay");
     });
@@ -151,12 +167,12 @@ export default {
           if (data == 0) {
             alert("註冊完成！");
 
-            const form = this.form;
-
-            form.acc = "";
-            form.psw = "";
-            form.rePsw = "";
-            form.mail = "";
+            this.form = {
+              acc: "",
+              psw: "",
+              rePsw: "",
+              mail: "",
+            };
 
             $(".movebox").css("transform", "translateX(-10%)");
             $(".signup").addClass("nodisplay");
