@@ -92,7 +92,8 @@ export default {
                     path: "bookYear"
                 }
             ],
-            i: 0
+            i: 0,
+            top: 0
         };
     },
     mounted() {
@@ -100,16 +101,30 @@ export default {
     },
     methods: {
         imgMoveToRight() {
-
-            this.i++;
+            const el = document.getElementById("Page_horizen").scrollTop;
             
-            if (
-                document.body.scrollHeight > 350 ||
-                document.documentElement.scrollHeight > 350
-            ) {
-                document.getElementById("move_img").style = `left:${this.i}px`;
-                console.log("+");
+            if ( el > this.top) {
+                this.top = el;
+                this.i++;
+                document.getElementById("move_img").style = `left:${this.i}%;`;
+            } else if (el < this.top) {
+                this.top = el;
+                this.i--;
+                document.getElementById("move_img").style = `left:${this.i}%;`;
             }
+
+            // this.i++;
+
+            // if (
+            //     document.body.scrollHeight > 400 ||
+            //     document.documentElement.scrollHeight > 400
+            // ){
+            //     document.getElementById("move_img").style = `left:${this.i*2}%;`;
+            //     //console.log("+");
+            // }else if(document.body.scrollWidth < 1500 ||
+            //     document.documentElement.scrollWidth < 1500){
+            //          document.getElementById("move_img").style=`left:${this.i* -2}%`;
+            //     }
         }
     }
 };
