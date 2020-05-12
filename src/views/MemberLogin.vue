@@ -136,12 +136,12 @@ export default {
           if (data == 0) {
             alert("註冊完成！");
 
-            const form = this.form;
-
-            form.acc = "";
-            form.psw = "";
-            form.rePsw = "";
-            form.mail = "";
+            this.form = {
+              acc: "",
+              psw: "",
+              rePsw: "",
+              mail: ""
+            };
 
             $(".movebox").css("transform", "translateX(-10%)");
             $(".signup").addClass("nodisplay");
