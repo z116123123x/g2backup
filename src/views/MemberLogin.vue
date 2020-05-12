@@ -3,7 +3,7 @@
     <div class="welcome">
       <div class="movebox">
         <div class="signup nodisplay">
-          <img class="signuptitle" src="@/assets/memberlogin/Group 362.png" alt />
+          <h1>果粉註冊</h1>
           <form class="less-padding" autocomplete="off">
             <div class="formarea">
               <div class="formtext">
@@ -18,7 +18,12 @@
               <form class="forminputbox">
                 <input type="text" v-model="form.acc" />
                 <input id="signupPsw" type="password" v-model="form.psw" />
-                <input id="signupRePsw" type="password" v-model="form.rePsw" @blur="checkPsw" />
+                <input
+                  id="signupRePsw"
+                  type="password"
+                  v-model="form.rePsw"
+                  @blur="checkPsw"
+                />
                 <input type="text" v-model="form.mail" />
               </form>
             </div>
@@ -29,13 +34,17 @@
           </form>
         </div>
         <div class="signin">
-          <img class="logintitle" src="@/assets/memberlogin/Group 363.png" alt />
+          <h1>果粉登入</h1>
           <form class="more-padding" autocomplete="off">
             <span>帳號:</span>
             <input type="text" placeholder="請輸入帳號" v-model="member.acc" />
             <br />
             <span>密碼:</span>
-            <input type="password" placeholder="請輸入密碼" v-model="member.psw" />
+            <input
+              type="password"
+              placeholder="請輸入密碼"
+              v-model="member.psw"
+            />
             <br />
             <div class="signinsubmit" @click="login">
               <p>登入</p>
@@ -45,7 +54,13 @@
       </div>
       <div class="leftbox">
         <h1>已經是果粉了?</h1>
-        <img class="loginbutton" id="signin" src="@/assets/login.png" @click="changeSignin" alt />
+        <img
+          class="loginbutton"
+          id="signin"
+          src="@/assets/login.png"
+          @click="changeSignin"
+          alt
+        />
       </div>
       <div class="rightbox">
         <h1>還不是果粉嗎?</h1>
@@ -75,14 +90,14 @@ export default {
     return {
       member: {
         acc: "",
-        psw: ""
+        psw: "",
       },
       form: {
         acc: "",
         psw: "",
         rePsw: "",
-        mail: ""
-      }
+        mail: "",
+      },
     };
   },
   methods: {
@@ -91,7 +106,7 @@ export default {
 
       this.$http
         .post(api, JSON.stringify(this.member))
-        .then(res => {
+        .then((res) => {
           const data = res.data;
 
           if (data == "") {
@@ -108,7 +123,7 @@ export default {
           }
         })
         // eslint-disable-next-line no-console
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     },
     changeSignin: function() {
       const form = this.form;
@@ -130,7 +145,7 @@ export default {
 
       this.$http
         .post(api, JSON.stringify(this.form))
-        .then(res => {
+        .then((res) => {
           const data = res.data;
 
           if (data == 0) {
@@ -151,7 +166,7 @@ export default {
           }
         })
         // eslint-disable-next-line no-console
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     },
     checkPsw: function() {
       const form = this.form;
@@ -163,7 +178,7 @@ export default {
         document.getElementById("signupPsw").style.backgroundColor = "";
         document.getElementById("signupRePsw").style.backgroundColor = "";
       }
-    }
-  }
+    },
+  },
 };
 </script>
