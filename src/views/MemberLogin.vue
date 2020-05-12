@@ -7,6 +7,12 @@
           <form class="less-padding" autocomplete="off">
             <div class="formarea">
               <div class="formtext">
+                <label>姓名</label>
+                <br />
+                <label>暱稱</label>
+                <br />
+                <label>性別</label>
+                <br />
                 <label>帳號:</label>
                 <br />
                 <label>密碼:</label>
@@ -19,6 +25,7 @@
                 <input type="text" v-model="form.acc" />
                 <input id="signupPsw" type="password" v-model="form.psw" />
                 <input id="signupRePsw" type="password" v-model="form.rePsw" @blur="checkPsw" />
+                <input type="password">
                 <input type="text" v-model="form.mail" />
               </form>
             </div>
