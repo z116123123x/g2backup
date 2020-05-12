@@ -8,7 +8,7 @@ if (isset($_SESSION["no"])) {
         "email" => $_SESSION["email"],
         "gender" => $_SESSION["gender"],
         "img" => $_SESSION["img"],
-        "acc" => $_SESSION["psw"],
+        "acc" => $_SESSION["acc"],
         "nick" => $_SESSION["nick"],
         "status" => $_SESSION["status"],
     );
