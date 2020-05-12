@@ -1844,3 +1844,16 @@
   }
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {};
+  },
+  created() {},
+  computed: {},
+  methods: {
+    logout() {},
+  },
+};
+</script>
