@@ -1,6 +1,7 @@
 <template>
   <div class="blog-post-ousidebox">
-    <img src="@/assets/blog-img/blog-bar.png" /><br />
+    <img src="@/assets/blog-img/blog-bar.png" />
+    <br />
     <div class="blog-landing-container">
       <div>
         <div>
@@ -10,19 +11,19 @@
         <div>
           <div>
             <div>
-              <img src="@/assets/blog-img/blog-dot.png" alt="" />
-              <span> </span>
-              <span> 旅遊</span>
+              <img src="@/assets/blog-img/blog-dot.png" alt />
+              <span></span>
+              <span>旅遊</span>
             </div>
             <div>
-              <img src="@/assets/blog-img/blog-dot.png" alt="" />
-              <span> </span>
-              <span> 水果知識</span>
+              <img src="@/assets/blog-img/blog-dot.png" alt />
+              <span></span>
+              <span>水果知識</span>
             </div>
             <div>
-              <img src="@/assets/blog-img/blog-dot.png" alt="" />
-              <span> </span>
-              <span> 農民樂</span>
+              <img src="@/assets/blog-img/blog-dot.png" alt />
+              <span></span>
+              <span>農民樂</span>
             </div>
           </div>
           <div>
@@ -50,7 +51,9 @@
               <img src="@/assets/blog-img/blog-star.png" />
               <img src="@/assets/blog-img/blog-star.png" />
             </div>
-            <div><span>+追蹤</span></div>
+            <div>
+              <span>+追蹤</span>
+            </div>
             <div>
               <img src="@/assets/blog-img/blog-tag.png" />
               <span>草莓</span>
@@ -62,16 +65,21 @@
               <span>300</span>
             </div>
             <div>
-              白石湖是大台北難得仍保存農業風味的鄉村地區，當地多產白色沉積砂岩石塊故而得名，近年轉型成為休閒農業區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，絡繹不絕的人潮湧入內湖一帶的草莓園。我們一早就來到莓圃休閒農園，是個擁有果園、菜園和庭園咖啡等多元場域，其中溫室草莓園吸引家長帶著孩子體驗採果樂，不用擔心腳底褲管沾到泥巴。<br /><br />
-              特別提醒台北內湖的莓園幾乎是假日上午11點開放，當天採摘到一定數量便掛上「本日已採完」的告示牌，若想採草莓的朋友建議早點排隊。<br /><br />
-              採完草莓不過癮，還可以參加糖霜餅乾手做課程。工作人員拿出台北世大運吉祥物「熊讚」草莓餅乾，孩子們吵著也要做一隻熊讚帶回家。「我們先用軟糖霜劃出外圍形狀，從中間一圈一圈慢慢補滿，擠完糖霜後，餅乾表面可能會不平，再利用牙籤撥勻，或用手掌輕拍均勻」，大家跟著老師依樣畫葫蘆，以牙籤沾芝麻妝點眼睛、白糖霜親手描繪各自作品，創作他們心目中的熊讚。<br /><br />
-              除了草莓，莓圃也提供其他蔬果的體驗，6-11月有百香果、火龍果、番茄；7-8月則有水果玉米、小番茄等，讓小朋友一整年都可以體驗小農夫的樂趣。大人們也可以坐在綠意盎然的庭園休憩用餐，享受田園悠閒的氛圍。
+              白石湖是大台北難得仍保存農業風味的鄉村地區，當地多產白色沉積砂岩石塊故而得名，近年轉型成為休閒農業區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，絡繹不絕的人潮湧入內湖一帶的草莓園。我們一早就來到莓圃休閒農園，是個擁有果園、菜園和庭園咖啡等多元場域，其中溫室草莓園吸引家長帶著孩子體驗採果樂，不用擔心腳底褲管沾到泥巴。
+              <br />
+              <br />特別提醒台北內湖的莓園幾乎是假日上午11點開放，當天採摘到一定數量便掛上「本日已採完」的告示牌，若想採草莓的朋友建議早點排隊。
+              <br />
+              <br />採完草莓不過癮，還可以參加糖霜餅乾手做課程。工作人員拿出台北世大運吉祥物「熊讚」草莓餅乾，孩子們吵著也要做一隻熊讚帶回家。「我們先用軟糖霜劃出外圍形狀，從中間一圈一圈慢慢補滿，擠完糖霜後，餅乾表面可能會不平，再利用牙籤撥勻，或用手掌輕拍均勻」，大家跟著老師依樣畫葫蘆，以牙籤沾芝麻妝點眼睛、白糖霜親手描繪各自作品，創作他們心目中的熊讚。
+              <br />
+              <br />除了草莓，莓圃也提供其他蔬果的體驗，6-11月有百香果、火龍果、番茄；7-8月則有水果玉米、小番茄等，讓小朋友一整年都可以體驗小農夫的樂趣。大人們也可以坐在綠意盎然的庭園休憩用餐，享受田園悠閒的氛圍。
             </div>
           </div>
           <div>
             <div>
-              <div><!--sister--></div>
-              <img src="@/assets/blog-img/post/yello-something.png" alt="" />
+              <div>
+                <!--sister-->
+              </div>
+              <img src="@/assets/blog-img/post/yello-something.png" alt />
             </div>
             <div class="blog-post2-msg-card">
               <div>
@@ -81,9 +89,7 @@
                 <p>howhowhasnofriend</p>
                 <p>2020-4-14 12:00</p>
               </div>
-              <div>
-                炒飯不好吃炒飯不好吃...
-              </div>
+              <div>炒飯不好吃炒飯不好吃...</div>
               <div>
                 <img src="@/assets/blog-img/blog-report.png" />
               </div>
@@ -96,9 +102,7 @@
                 <p>howhowhasnofriend</p>
                 <p>2020-4-14 12:00</p>
               </div>
-              <div>
-                炒飯不好吃炒飯不好吃...
-              </div>
+              <div>炒飯不好吃炒飯不好吃...</div>
               <div>
                 <img src="@/assets/blog-img/blog-report.png" />
               </div>
@@ -111,18 +115,16 @@
                 <p>howhowhasnofriend</p>
                 <p>2020-4-14 12:00</p>
               </div>
-              <div>
-                炒飯不好吃炒飯不好吃...
-              </div>
+              <div>炒飯不好吃炒飯不好吃...</div>
               <div>
                 <img src="@/assets/blog-img/blog-report.png" />
               </div>
             </div>
             <div>
-              <form action="" method="get">
-                <label for=""
-                  >留言:
-                  <textarea name="" id=""></textarea>
+              <form action method="get">
+                <label for>
+                  留言:
+                  <textarea name id></textarea>
                 </label>
                 <br />
                 <buttonMore class="blogPost2ButtonMore" msg="送出"></buttonMore>
@@ -132,7 +134,8 @@
               <!--接水果動畫-->
               <img src="@/assets/blog-img/post/someone-catch-fruit.png" />
               <img src="@/assets/blog-img/post/be-catched-fruit.png" />
-
+              <img src="@/assets/blog-img/post/be-catched-fruit.png" />
+              <img src="@/assets/blog-img/post/be-catched-fruit.png" />
             </div>
           </div>
         </div>
@@ -142,11 +145,12 @@
             <div>
               <!--search-->
               <div>
+                <!--籃子圖-->
                 <img src="@/assets/blog-img/post/basket.png" />
               </div>
               <div>
                 <div>
-                  <form action="" method="get">
+                  <form action method="get">
                     <input placeholder="水果知識" type="text" />
                     <img src="@/assets/blog-img/post/magnifier.png" />
                   </form>
@@ -160,8 +164,8 @@
             </div>
             <img src="@/assets/blog-img/blog-bendingbar2.png" />
             <p>最新日誌</p>
-            <select class="blog-post-tri" name="" id="">
-              <option value="">日誌排序</option>
+            <select class="blog-post-tri" name id>
+              <option value>日誌排序</option>
             </select>
             <!--卡片區-->
             <!--卡片區-->
@@ -169,7 +173,7 @@
             <div class="blog-post2-card-area">
               <div class="blog-post2-long-card">
                 <div>
-                  <img src="@/assets/blog-img/post/kidEatsWatermelon.png" />
+                  <img src />
                 </div>
                 <div>
                   <div>
@@ -184,7 +188,7 @@
                       <span>果農心得</span>
                     </p>
                     <p>
-                      每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，的草莓園...
+                      每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草區，區內種植草莓聞名，每年12月至5月的草莓產季來臨，的草莓園
                     </p>
                   </div>
                   <div>
@@ -211,7 +215,10 @@
               <!--小卡片-->
               <!--小卡片-->
               <div class="blog-post2-small-card-container">
-                <div class="blog-post2-small-card">
+                <router-link
+                  to="/main/blog/landing"
+                  class="blog-post2-small-card"
+                >
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
@@ -226,16 +233,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -252,13 +255,14 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
-                </div>
-                <div class="blog-post2-small-card">
+                </router-link>
+                <router-link
+                  to="/main/blog/landing"
+                  class="blog-post2-small-card"
+                >
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
@@ -273,16 +277,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -299,13 +299,14 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
-                </div>
-                <div class="blog-post2-small-card">
+                </router-link>
+                <router-link
+                  to="/main/blog/landing"
+                  class="blog-post2-small-card"
+                >
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
@@ -320,16 +321,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -346,13 +343,14 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
-                </div>
-                <div class="blog-post2-small-card">
+                </router-link>
+                <router-link
+                  to="/main/blog/landing"
+                  class="blog-post2-small-card"
+                >
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
@@ -367,16 +365,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -393,13 +387,14 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
-                </div>
-                <div class="blog-post2-small-card">
+                </router-link>
+                <router-link
+                  to="/main/blog/landing"
+                  class="blog-post2-small-card"
+                >
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
@@ -414,16 +409,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -440,13 +431,14 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
-                </div>
-                <div class="blog-post2-small-card">
+                </router-link>
+                <router-link
+                  to="/main/blog/landing"
+                  class="blog-post2-small-card"
+                >
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
@@ -461,16 +453,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -487,13 +475,14 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
-                </div>
-                <div class="blog-post2-small-card">
+                </router-link>
+                <router-link
+                  to="/main/blog/landing"
+                  class="blog-post2-small-card"
+                >
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
@@ -508,16 +497,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -534,13 +519,14 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
-                </div>
-                <div class="blog-post2-small-card">
+                </router-link>
+                <router-link
+                  to="/main/blog/landing"
+                  class="blog-post2-small-card nine"
+                >
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
@@ -555,16 +541,12 @@
                   </div>
                   <div>
                     <p>2020-04-08</p>
-                    <p>
-                      親子輕旅行 台北白石湖採草莓、 踏青一日遊
-                    </p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>
-                      區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...
-                    </p>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
                   </div>
                   <div>
                     <div>
@@ -581,12 +563,54 @@
                       </div>
                     </div>
                     <div>
-                      <span>
-                        +追蹤
-                      </span>
+                      <span>+追蹤</span>
                     </div>
                   </div>
-                </div>
+                </router-link>
+                <router-link
+                  to="/main/blog/landing"
+                  class="blog-post2-small-card"
+                >
+                  <div>
+                    <img src="@/assets/blog-img/post/grape.png" />
+                    <div>
+                      <!--讚!!-->
+                      <div>
+                        <img src="@/assets/blog-img/blog-thumb.png" />
+                      </div>
+                      <div>
+                        <span>100</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>2020-04-08</p>
+                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
+                    <div>
+                      <img src="@/assets/blog-img/blog-tag.png" />
+                      <span>知識類</span>
+                    </div>
+                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
+                  </div>
+                  <div>
+                    <div>
+                      <img src="@/assets/blog-img/blog-someoneshead.png" />
+                    </div>
+                    <div>
+                      <span>蓬蓬草莓姨</span>
+                      <div>
+                        <img src="@/assets/blog-img/blog-star.png" />
+                        <img src="@/assets/blog-img/blog-star.png" />
+                        <img src="@/assets/blog-img/blog-star.png" />
+                        <img src="@/assets/blog-img/blog-star.png" />
+                        <img src="@/assets/blog-img/blog-star.png" />
+                      </div>
+                    </div>
+                    <div>
+                      <span>+追蹤</span>
+                    </div>
+                  </div>
+                </router-link>
               </div>
             </div>
             <!---->
@@ -621,19 +645,19 @@
           <div>
             <!-- tags&leaderblard-->
             <div>
-              <img src="@/assets/blog-img/post/tags-header.png" alt="" />
-              <img src="@/assets/blog-img/post/experience.png" alt="" />
-              <img src="@/assets/blog-img/post/product.png" alt="" />
-              <img src="@/assets/blog-img/post/log.png" alt="" />
-              <img src="@/assets/blog-img/post/knowledge.png" alt="" />
-              <img src="@/assets/blog-img/post/tag-footer.png" alt="" />
+              <img src="@/assets/blog-img/post/tags-header.png" alt />
+              <img src="@/assets/blog-img/post/experience.png" alt />
+              <img src="@/assets/blog-img/post/product.png" alt />
+              <img src="@/assets/blog-img/post/log.png" alt />
+              <img src="@/assets/blog-img/post/knowledge.png" alt />
+              <img src="@/assets/blog-img/post/tag-footer.png" alt />
             </div>
             <div class="blogPostLeaderBoard">
               <div>1</div>
               <div>2020-04-08</div>
               <div>親子輕旅行 台北白石湖採草莓、 踏青一日遊</div>
               <div>
-                <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+                <img src="@/assets/blog-img/blog-someoneshead.png" alt />
               </div>
               <div>蓬蓬草苺姨</div>
               <div>
@@ -644,9 +668,8 @@
                 <img src="@/assets/blog-img/blog-star.png" />
               </div>
               <div>
-                <img src="@/assets/blog-img/blog-thumb.png" alt="" /><span
-                  >300</span
-                >
+                <img src="@/assets/blog-img/blog-thumb.png" alt />
+                <span>300</span>
               </div>
             </div>
             <div class="blogPostLeaderBoard">
@@ -654,7 +677,7 @@
               <div>2020-04-08</div>
               <div>親子輕旅行 台北白石湖採草莓、 踏青一日遊</div>
               <div>
-                <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+                <img src="@/assets/blog-img/blog-someoneshead.png" alt />
               </div>
               <div>蓬蓬草苺姨</div>
               <div>
@@ -665,9 +688,8 @@
                 <img src="@/assets/blog-img/blog-star.png" />
               </div>
               <div>
-                <img src="@/assets/blog-img/blog-thumb.png" alt="" /><span
-                  >300</span
-                >
+                <img src="@/assets/blog-img/blog-thumb.png" alt />
+                <span>300</span>
               </div>
             </div>
             <div class="blogPostLeaderBoard">
@@ -675,7 +697,7 @@
               <div>2020-04-08</div>
               <div>親子輕旅行 台北白石湖採草莓、 踏青一日遊</div>
               <div>
-                <img src="@/assets/blog-img/blog-someoneshead.png" alt="" />
+                <img src="@/assets/blog-img/blog-someoneshead.png" alt />
               </div>
               <div>蓬蓬草苺姨</div>
               <div>
@@ -686,9 +708,8 @@
                 <img src="@/assets/blog-img/blog-star.png" />
               </div>
               <div>
-                <img src="@/assets/blog-img/blog-thumb.png" alt="" /><span
-                  >300</span
-                >
+                <img src="@/assets/blog-img/blog-thumb.png" alt />
+                <span>300</span>
               </div>
             </div>
           </div>
@@ -701,6 +722,7 @@
 <style lang="scss">
 .blog-post-ousidebox {
   padding-top: 60px;
+  // overflow: hidden;
   background-color: #fbf8ef;
   > img:nth-child(1) {
     width: 100%;
@@ -714,8 +736,18 @@
   padding-left: 7%;
   @media (max-width: 1300px) {
     width: 88%;
-    margin-left: 2%;
+    margin-left: 2.5%;
+    padding-left: 3%;
     padding-right: 3%;
+  }
+  @media (max-width: 600px) {
+    margin-left: 2%;
+  }
+  @media (max-width: 400px) {
+    margin-left: 1%;
+  }
+  @media (max-width: 330px) {
+    margin-left: 0%;
   }
 }
 .blogPost2Outer {
@@ -734,26 +766,50 @@
   // margin-left: 2.5%;
   // height: 50vw;
   // padding-bottom: 5%;
-  &::before{
-    content: "";
+  &::before {
+    content: '';
     border-bottom: #007552 5px solid;
     width: 105%;
     position: absolute;
     bottom: 0%;
     right: 2%;
+    @media (max-width: 1300px) {
+      width: 100%;
+      right: 0%;
+    }
+  }
+  @media (max-width: 1600px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
   }
   @media (max-width: 1300px) {
     grid-template-columns: 1fr;
   }
   > div:nth-child(1) {
-    &::before{
-      content: "";
+    &::before {
+      content: '';
       display: inline-block;
-      border-right: #6BAF9B solid 2px;
+      border-right: #6baf9b solid 2px;
       height: 50%;
       position: absolute;
       right: -20%;
       bottom: 9%;
+      @media (max-width: 1600px) {
+        right: -12%;
+      }
+      @media (max-width: 1600px) {
+        display: none;
+      }
+    }
+    &::after {
+      border-bottom: #6baf9b solid 2px;
+      width: 100%;
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      @media (max-width: 1300px) {
+        content: '';
+      }
     }
     // border: 4px solid #000;
     padding-top: 4%;
@@ -761,7 +817,7 @@
     // padding-right: 10%;
     position: relative;
     display: grid;
-    grid-template-columns: 1.2fr 1.6fr 1.5fr 4.5fr;
+    grid-template-columns: 1.5fr 2fr 1.5fr 3fr;
     grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.4fr 5fr;
     grid-template-areas:
       'aa1 aa1 aa1 aa1'
@@ -770,9 +826,14 @@
       'aa3 aa5 aa6 aa7'
       'aa8 aa8 aa8 aa8'
       'aa9 aa9 aa9 aa9';
+    @media (max-width: 1600px) {
+      // padding-right: 0%;
+      grid-template-columns: 0.9fr 1.3fr 1fr 3fr;
+    }
     @media (max-width: 1300px) {
       padding-right: 0%;
       grid-template-columns: 0.7fr 1fr 1fr 4.5fr;
+      padding-bottom: 4%;
     }
     @media (max-width: 992px) {
       grid-template-columns: 1fr 1.2fr 1fr 4.5fr;
@@ -805,10 +866,18 @@
       white-space: nowrap;
       font-size: 30px;
       grid-area: aa2;
-      border-bottom: #6BAF9B solid 2px;
+      border-bottom: #6baf9b solid 2px;
       align-self: center;
       padding-bottom: 4%;
       line-height: 1.5;
+      // margin-bottom: 2%;
+      @media (max-width: 1300px) {
+        margin-bottom: 2%;
+        padding-bottom: 2%;
+      }
+      @media (max-width: 768px) {
+        white-space: pre-wrap;
+      }
       > span {
         align-self: start;
         background-color: #ffd3c1;
@@ -909,6 +978,23 @@
   > div:nth-child(2) {
     position: relative;
     padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-end;
+    // flex-wrap: wrap;
+    align-content: flex-end;
+    // align-items: flex-end;
+    // text-align: center;
+    @media (max-width: 1600px) {
+      padding-left: 0%;
+      padding-top: 5%;
+      padding-right: 10%;
+    }
+    @media (max-width: 1300px) {
+      padding-left: 0%;
+      padding-top: 5%;
+      padding-right: 0%;
+    }
     > div:nth-child(1) {
       position: relative;
       //妹妹
@@ -925,6 +1011,17 @@
           center center;
         mask: url('../assets/blog-img/post/blog_aabbcc.svg') no-repeat center
           center;
+        @media (max-width: 1600px) {
+          width: 100%;
+          padding-top: 100%;
+          margin-bottom: 5%;
+        }
+        @media (max-width: 1300px) {
+          width: 50%;
+          padding-top: 50%;
+          margin-left: 25%;
+          margin-bottom: 5%;
+        }
       }
       > img:nth-child(2) {
         width: 50%;
@@ -932,6 +1029,9 @@
         position: absolute;
         top: 6%;
         left: 35%;
+        @media (max-width: 1600px) {
+          display: none;
+        }
       }
     }
     > .blog-post2-msg-card {
@@ -941,19 +1041,62 @@
       align-content: center;
       align-items: center;
       margin-bottom: 10px;
+      @media (max-width: 1600px) {
+        width: 100%;
+      }
       > div:nth-child(2) {
+        //acc、date
         margin-left: 10px;
+        > p:nth-child(1) {
+          //acc
+        }
+        > p:nth-child(2) {
+          //date
+          color: #a0a0a0;
+        }
       }
       > div:nth-child(3) {
         margin-left: 20px;
         font-size: 16px;
         flex-grow: 1;
+        position: relative;
+        @media (max-width: 1300px) {
+          margin-left: 40px;
+        }
+        @media (max-width: 768px) {
+          margin-left: 20px;
+        }
+        @media (max-width: 576px) {
+          margin-left: 10px;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          height: 25px;
+          border-right: #a0a0a0 solid 1px;
+          top: -20%;
+          left: -3%;
+        }
       }
       > div:nth-child(4) {
         margin-right: 5px;
       }
     }
     > div:nth-child(5) {
+      position: relative;
+      //留言表單
+      &::before {
+        content: '';
+        border-top: solid #a0a0a0 1px;
+        width: 50rem;
+        position: absolute;
+        top: -15%;
+        left: 0%;
+        @media (max-width: 1600px) {
+          top: -10%;
+          width: 100%;
+        }
+      }
       margin-top: 5%;
       > form:nth-child(1) {
         // background-color: #000;
@@ -962,12 +1105,18 @@
           > textarea:nth-child(1) {
             width: 50%;
             height: 100px;
+            @media (max-width: 1600px) {
+              width: 85%;
+            }
           }
         }
         .blogPost2ButtonMore {
           width: 10%;
           margin-top: 3%;
           margin-left: 25%;
+          @media (max-width: 1600px) {
+            margin-left: 45%;
+          }
         }
       }
     }
@@ -975,6 +1124,9 @@
       position: absolute;
       bottom: 0%;
       right: 0%;
+      @media (max-width: 1600px) {
+        display: none;
+      }
       > img:nth-child(1) {
         position: relative;
         bottom: 0%;
@@ -986,47 +1138,116 @@
         animation-timing-function: linear;
         @keyframes catching {
           0% {
-        right: 100%;
-            
+            right: 100%;
           }
           33% {
-        right: 150%;
-            
+            right: 150%;
           }
           66% {
-        right: 50%;
-            
+            right: 50%;
           }
           100% {
-        right: 100%;
-            
+            right: 100%;
           }
-          
         }
       }
       > img:nth-child(2) {
         z-index: 1;
+        display: inline-block;
         position: absolute;
-        bottom: 160%;
-        right: 150%;
+        bottom: 200%;
+        right: 130%;
         animation-name: falling;
         animation-duration: 3s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         @keyframes falling {
           0% {
-        bottom: 160%;
-            
+            bottom: 200%;
+            opacity: 1;
           }
           50% {
-        bottom: 120%;
-            
+            bottom: 85%;
+            right: 150%;
+            transform: rotate(180deg);
+            display: none;
+            opacity: 1;
+          }
+          51% {
+            opacity: 0;
           }
           100% {
-        bottom: 85%;
-        right: 125%;
-        transform: rotate(180deg);
-            
+            opacity: 0;
+          }
+        }
+      }
+      > img:nth-child(3) {
+        z-index: 1;
+        // background-color: #000;
+        display: inline-block;
+        position: absolute;
+        bottom: 200%;
+        right: 200%;
+        animation-name: falling2;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @keyframes falling2 {
+          0% {
+            opacity: 0;
+          }
+          49% {
+            opacity: 0;
+          }
+          50% {
+            bottom: 200%;
+            opacity: 1;
+          }
+          100% {
+            bottom: 85%;
+            right: 130%;
+            transform: rotate(250deg);
+            display: none;
+            opacity: 1;
+          }
+        }
+      }
+      > img:nth-child(4) {
+        z-index: 1;
+        display: inline-block;
+        position: absolute;
+        bottom: 200%;
+        right: 50%;
+        animation-name: falling3;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @keyframes falling3 {
+          0% {
+            opacity: 0;
+          }
+          28% {
+            opacity: 0;
+          }
+          29% {
+            opacity: 1;
+          }
+          30% {
+            bottom: 200%;
+            opacity: 1;
+          }
+          80% {
+            bottom: 85%;
+            right: 100%;
+            transform: rotate(330deg);
+            display: none;
+            opacity: 1;
+          }
+          81% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 0;
           }
         }
       }
@@ -1093,10 +1314,10 @@
         display: flex;
         text-align: center;
         justify-content: space-around;
-        border-bottom: solid #6BAF9B 2px;
+        border-bottom: solid #6baf9b 2px;
       }
       > div:nth-child(2) {
-        border-bottom: solid #6BAF9B 2px;
+        border-bottom: solid #6baf9b 2px;
         text-align: center;
       }
     }
@@ -1113,6 +1334,10 @@
   // gap: 20px;
   padding-bottom: 2%;
   margin-top: 3%;
+  position: relative;
+  @media (max-width: 1300px) {
+    grid-template-columns: 1fr;
+  }
   > div:nth-child(1) {
     //main
     > div:nth-child(1) {
@@ -1122,6 +1347,9 @@
       > div:nth-child(1) {
         // background-color: #000;
         //籃子圖
+        > img {
+          width: 100%;
+        }
       }
       > div:nth-child(2) {
         //input//search
@@ -1132,17 +1360,19 @@
           // border: solid red 10px;
           //search input
           > form:nth-child(1) {
+            position: relative;
             > input:nth-child(1) {
               padding: 5px 0px 5px 30px;
               border: #007552 solid 2px;
               border-radius: 50px;
               width: 80%;
               font-size: 20px;
+              position: relative;
             }
             > img:nth-child(2) {
-              position: relative;
-              right: 40px;
-              bottom: 3px;
+              position: absolute;
+              right: 20%;
+              bottom: 5px;
             }
           }
         }
@@ -1173,13 +1403,21 @@
     // background-color: #000;
     //tags&leaderboard
     position: sticky;
+    // position: relative;
+    // position: absolute;
+    // position: fixed;
     right: 0%;
     top: 0%;
     // border: steelblue 5px solid;
     display: grid;
+    justify-self: end;
+    // display: none;
     // border: chocolate 3px solid;
     grid-template-rows: 6fr 1fr 1fr 1fr;
     height: 30%;
+    @media (max-width: 1300px) {
+      display: none;
+    }
     > div:nth-child(1) {
       // border: chocolate 3px solid;
       text-align: right;
@@ -1187,8 +1425,11 @@
       flex-direction: column;
       left: 2px;
       top: 1%;
-      > img:nth-child(1){
-        width: 380px;
+      width: 380px;
+      @media (max-width: 1650px) {
+        width: 320px;
+      }
+      > img:nth-child(1) {
       }
       > img:nth-child(2),
       img:nth-child(3),
@@ -1198,12 +1439,24 @@
         transition: 0.5s;
         &:hover {
           right: 20px;
+          width: 400px;
+        }
+        @media (max-width: 1650px) {
+          &:hover {
+            right: 20px;
+            width: 340px;
+          }
         }
       }
     }
     > div:nth-child(2),
     > div:nth-child(3),
     > div:nth-child(4) {
+      @media (max-width: 1650px) {
+        width: 320px;
+      }
+      width: 380px;
+      background-color: #fcded4;
       padding-top: 10px;
       padding-bottom: 15px;
       display: grid;
@@ -1261,15 +1514,41 @@
 .blog-post2-card-area {
   padding-right: 10%;
   margin-top: 20px;
+  @media (max-width: 1300px) {
+    padding-right: 0%;
+  }
   > .blog-post2-long-card {
     display: flex;
     border: #007552 solid 2px;
+    @media (max-width: 700px) {
+      padding-bottom: 2%;
+      flex-direction: column;
+    }
     > div:nth-child(1) {
       border-right: solid #007552 1.5px;
+      position: relative;
       //妹妹假蠵龜
+      width: 80%;
+      padding-top: 310px;
+      background-image: url('../assets/blog-img/post/kidEatsWatermelon.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      @media (max-width: 1500px) {
+        width: 100%;
+      }
+      @media (max-width: 1400px) {
+        width: 150%;
+      }
+      @media (max-width: 768px) {
+        width: 200%;
+      }
+      @media (max-width: 700px) {
+        width: 100%;
+      }
     }
     > div:nth-child(2) {
-      padding: 30px 30px 0px 30px;
+      padding: 3% 3% 0px 3%;
       //右邊
       > div:nth-child(1) {
         //右上
@@ -1279,7 +1558,11 @@
         }
         > p:nth-child(2) {
           margin-top: 5px;
-          font-size: 20px;
+          font-size: 16px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          overflow: hidden;
         }
         > p:nth-child(3) {
           margin-top: 25px;
@@ -1288,7 +1571,7 @@
           > span:nth-child(2) {
             color: #62bc5a;
             padding-right: 100px;
-            font-size: 16px;
+            font-size: 14px;
             position: relative;
             top: 5px;
             margin-left: 10px;
@@ -1296,7 +1579,7 @@
           > img:nth-child(3) {
           }
           > span:nth-child(4) {
-            font-size: 16px;
+            font-size: 14px;
             color: #a0a0a0;
             margin-left: 5px;
           }
@@ -1305,7 +1588,7 @@
           }
           > span:nth-child(6) {
             margin-left: 5px;
-            font-size: 16px;
+            font-size: 14px;
             color: #a0a0a0;
           }
         }
@@ -1313,6 +1596,14 @@
           font-size: 16px;
           margin-top: 20px;
           padding-right: 50px;
+          width: 100%;
+          display: -webkit-box; /* -webkit-box 尚在實驗性的屬性值 */
+          -webkit-box-orient: vertical; /* 用來設定一個元素是水平還是垂直方向排列其內容 */
+          -webkit-line-clamp: 3; /* 限制指定的行數 */
+          overflow: hidden;
+          @media (max-width: 500px) {
+            padding-right: 0px;
+          }
         }
       }
       > div:nth-child(2) {
@@ -1362,9 +1653,43 @@
       &.ml {
         margin-left: 10px;
       }
-      margin-top: 10px;
+      &.nine {
+        @media (max-width: 9999px) {
+          display: none;
+        }
+        @media (max-width: 1879px) {
+          display: inline-block;
+        }
+        @media (max-width: 1400px) {
+          display: none;
+        }
+        @media (max-width: 1300px) {
+          display: inline-block;
+        }
+        @media (max-width: 900px) {
+          display: none;
+        }
+      }
+      text-decoration: none;
+      color: #000;
+      margin-top: 15px;
       width: 270px;
       border: solid #007552 2px;
+      @media (max-width: 1879px) {
+        width: 32%;
+      }
+      @media (max-width: 1400px) {
+        width: 48%;
+      }
+      @media (max-width: 1300px) {
+        width: 32%;
+      }
+      @media (max-width: 900px) {
+        width: 48%;
+      }
+      @media (max-width: 576px) {
+        width: 100%;
+      }
       > div:nth-child(1) {
         //葡萄圖片
         border-bottom: solid #007552 2px;
@@ -1480,10 +1805,16 @@
   > li {
     font-size: 15px;
     padding: 10px;
+    @media (max-width: 500px) {
+      padding: 5px;
+    }
   }
   > li:nth-child(1) {
     > img:nth-child(1) {
       width: 95%;
+      @media (max-width: 500px) {
+        width: 20px;
+      }
     }
   }
   > li:nth-child(2) {
@@ -1499,6 +1830,9 @@
     border: none;
     > img:nth-child(1) {
       width: 95%;
+      @media (max-width: 500px) {
+        width: 20px;
+      }
     }
   }
   > li:nth-child(2) {

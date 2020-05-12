@@ -5,9 +5,14 @@
     </router-link>
     <div class="member_status">
       <span class="farmer_pic"></span>
-      <span></span>
-      <router-link class="login_logout" to="/loginMember">登入/註冊</router-link>
-      <!-- <button class="logout">登出</button> -->
+      <span>{{userName}}</span>
+      <!-- 檢查登入的狀態 -->
+      <router-link
+        class="login_logout"
+        to="/loginMember"
+        v-if="status == false && session != true"
+      >登入/註冊</router-link>
+      <button class="logout" v-else @click="logout">登出</button>
     </div>
     <div class="cart">
       <router-link class="page" to="/main/member/shopping"></router-link>
@@ -53,7 +58,7 @@
         </li>
         <li class="dropdown">
           <div class="title">
-            <router-link class="page" to="/main/blog-landing">
+            <router-link class="page" to="/main/blog">
               <div class="title_pic">
                 <img src="@/assets/blog.svg" alt />
               </div>
@@ -89,29 +94,70 @@
 </template>
 <script>
 export default {
+  // 5. 接收父層的 memberStatus 的值
+  props: ["memberStatus"],
   data() {
     return {
-
-      status: false
+      status: false,
+      userName: ""
     };
   },
-  created() {
+  mounted() {
     const api = "/api/api_memberStatus.php";
 
     this.$http
-      .post(api, JSON.stringify(this.member))
+      .post(api)
       .then(res => {
         const data = res.data;
 
+        // 如果 session 的資料存在（代表有登入），則切換 navbar 果粉狀態
         if (data != "") {
-          // eslint-disable-next-line no-console
-          console.log("已經有登入過");
-          // eslint-disable-next-line no-console
-          console.log(data);
+          this.status = true;
+          this.userName = data.name;
         }
       })
       // eslint-disable-next-line no-console
       .catch(err => console.log(err));
+  },
+  computed: {
+    session: function() {
+      // 6. 偵聽到 memberStatus 有變動，觸發 login 方法，並回傳值到上面v-if狀態的顯示判斷
+
+      this.login();
+      return this.memberStatus;
+    }
+  },
+  methods: {
+    logout() {
+      const api = "/api/api_memberLogout.php";
+
+      this.$http.post(api);
+
+      this.status = false;
+      this.userName = "";
+
+      // a. 傳遞 logout 的值到父層
+      this.$emit("logout", false);
+
+      this.$router.push("/main");
+    },
+    login() {
+      const api = "/api/api_memberStatus.php";
+
+      this.$http
+        .post(api)
+        .then(res => {
+          const data = res.data;
+
+          // 如果 session 的資料存在（代表有登入），則切換 navbar 果粉狀態
+          if (data != "") {
+            this.status = true;
+            this.userName = data.name;
+          }
+        })
+        // eslint-disable-next-line no-console
+        .catch(err => console.log(err));
+    }
   }
 };
 </script>

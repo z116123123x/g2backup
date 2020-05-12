@@ -1,66 +1,105 @@
-div.information{
+div.information {
     display: inline-block;
     color: #007552;
     background-color: #FBF8EF;
-    width: 87.2%;
+    width: 100%;
     height: 100vh;
     vertical-align: top;
-    @include rwd(medium){
+
+    @include rwd(medium) {
         height: 100%;
     }
-    >.information_head{
+    @include rwd(mobile){
+        width: 94%;
+    }
+
+    >.information_head {
         color: #F7C845;
         margin-top: 40px;
-        margin-left: 40px;
+        margin-left: 300px;
         font-size: 30px;
+        @include rwd(large){
+            margin-left: 200px;
+        }
+        @include rwd(medium){
+            margin-left: 140px;
+        }
+        @include rwd(small){
+            margin-left: 100px;
+        }
+        @include rwd(mobile){
+            margin-top: 45px;
+            margin-left: 15px;
+        }
     }
-    >.information_bottom{
+
+    >.information_bottom {
         display: block;
         text-align: center;
-        @include rwd(mobile){
+
+        @include rwd(mobile) {
             display: block;
-    text-align: center;
-    width: 100%;
-    margin-left: 30px;
+            text-align: center;
+            width: 100%;
+            margin-left: 26px;
         }
-        >.bottom_form{
-            margin-top: 180px;
+
+        >.bottom_form {
+            margin-top: 100px;
+            margin-left: 190px;
             line-height: 2;
             font-size: 16px;
-            @include rwd(small){
+            @include rwd(large){
+                margin-top: 90px;
+            }
+            @include rwd(medium){
+                margin-top: 90px;
+                margin-left: 70px;
+            }
+            @include rwd(small) {
                 margin-top: 40px;
+                margin-left: 40px;
                 line-height: 1.8;
             }
-            @include rwd(mobile){
+
+            @include rwd(mobile) {
                 display: flex;
                 width: 100%;
                 margin-top: 40px;
+                margin-left: 0;
+                padding-right: 3px;
                 line-height: 2;
                 font-size: 16px;
             }
-            >.person_left{
+
+            >.person_left {
                 vertical-align: top;
                 display: inline-block;
                 background-color: #F7C845;
                 width: 260px;
                 height: 500px;
                 padding: 50px 0px;
-                @include rwd(medium){
+
+                @include rwd(medium) {
                     width: 200px;
                 }
-                @include rwd(small){
+
+                @include rwd(small) {
                     width: 100px;
                 }
-                @include rwd(mobile){
+
+                @include rwd(mobile) {
                     width: 25%;
                 }
-                >ul{
-                    >li{
+
+                >ul {
+                    >li {
                         padding: 10px 0;
                     }
                 }
             }
-            >.information_right{
+
+            >.information_right {
                 display: inline-block;
                 position: relative;
                 text-align: start;
@@ -69,18 +108,21 @@ div.information{
                 padding-right: 145px;
                 height: 500px;
                 width: 260px;
-                line-height: 3.14;
-                @include rwd(medium){
+                line-height: 3.3;
+
+                @include rwd(medium) {
                     width: 200px;
                     line-height: 3.3;
                 }
-                @include rwd(small){
+
+                @include rwd(small) {
                     padding-right: 120px;
                     width: 143px;
                     height: 500px;
                     line-height: 3.1;
                 }
-                @include rwd(mobile){
+
+                @include rwd(mobile) {
                     padding: 0;
                     padding-right: 84.8px;
                     padding-bottom: 54px;
@@ -89,10 +131,12 @@ div.information{
                     width: 50%;
                     line-height: 3.3;
                 }
+
                 >label {
                     margin-right: 10px;
                 }
-                >.submit_button{
+
+                >.submit_button {
                     position: absolute;
                     border-radius: 5px;
                     background-color: #007552;
@@ -101,6 +145,9 @@ div.information{
                     right: 30px;
                     bottom: 10px;
                     line-height: 2.3;
+                    &:hover{
+                        background-color: #62B45A;
+                    }
                 }
             }
         }

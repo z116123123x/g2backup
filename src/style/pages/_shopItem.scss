@@ -1,23 +1,75 @@
+$color1: #ffd3c1;
+$color2: #007552;
+$color3: #f7c845;
+$color4: #fbf8ef;
+$color5: #ffa978;
+
+.ItemWrapper{
+  width: 100%;
+  height: 100%;
+  // @include rwd(medium) {
+  //   width: 80%;
+  // }
+}
+
 .CommodityWrapper{
-    width: 100%;
-    height: 3000px;
+    width: 1200px;
+    height: 60%;
     font-size: 0;
+    margin: 0 auto;
+    @include rwd(large) {
+      width: 100%;
+    }
     //商品預覽圖
     .CommodityContent{
       width: 100%;
+      height: 100%;
       display: flex;
+      @include rwd(medium) {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+      }
         .CommodityContentImgBox{
           width: 60%;
           height: 100%;
-          border: 1px solid #000;
-            .CommodityContentImg{}
+          display: inline-block;
+          @include rwd(small) {
+            width: 100%;
+          }
+          .CommodityContentImgMain{
+            max-width: 100%;
+            max-height: 100%;
+            margin-top: 0;
+            // height: 50%;
+            .CommodityContentImg{
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .CommodityContentImgChangeBox{
+            width: 100%;
+            @include rwd(medium) {
+              display: none;
+            }
+            .CommodityContentChangeImg{
+              width: 30%;
+              height: auto;
+            }
+          }
         }
-    }   //商品預覽圖結束
-    //商品資訊
+            //商品資訊
     .CommodityContenText{
       width: 40%;
       height: 100%;
-      border: 1px solid red;
+      display: inline-block;
+      // border: 1px solid red;
+      @include rwd(medium) {
+        margin-top: 40px;
+      }
+      @include rwd(small) {
+        width: 100%;
+      }
         .CommodityContenTextBox{
           margin: 0 10px;
             .CommodityTitle{
@@ -119,5 +171,177 @@
             }
         }
     }   //商品資訊結束
+    }   //商品預覽圖結束
+    //賣家資訊開始
+    .SellerInformationBox{
+      width: 100%;
+      height: 100px;
+      display: flex;
+      border-bottom: 2px solid $color2;
+      position: relative;
+      margin: 40px 0;
+      @include rwd(small) {
+        flex-wrap: wrap;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 100%;
+        background-image: url(./../assets/blog_line.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateY(-8px);
+      }
+      .SellerInformation{
+        // border: 1px solid #000;
+        // display: inline-block;
+        // align-items: center;
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+        width: 40%;
+        height: 100%;
+        @include rwd(small) {
+          width: 70%;
+          margin: 30px 0;
+          justify-content: center;
+        }
+        img{
+        }
+        p{
+          font-size: 16px;
+          margin: 0 15px;
+          display: inline-block;
+                    @include rwd(small) {
+            // margin: 0 5px;
+          }
+        }
+        .TrackBtn{
+          display: inline-block;
+          font-size: 16px;
+          background-color:$color2;
+          padding: 5px;
+          border-radius: 16px;
+          color: white;
+          @include rwd(medium) {
+            // margin: 5px 10px;
+          }
+          @include rwd(small) {
+            display: inline-block;
+          }
+        }
+      }
+      .SellerReviewsBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        margin: 15px 0;
+        border-left: 2px solid $color2;
+        border-right: 2px solid $color2;
+        @include rwd(small) {
+          border: none;
+        }
+        .SellerReviews{
+          text-align: center;
+          .Reviews{
+            font-size: 50px;
+            color: $color2;
+          }
+          .StarBox{
+            display: inline-block;
+          }
+        }
+      }
+      .SellerInformationTextBox{
+        width: 40%;
+        margin: 15px;
+        p{
+          font-size: 16px;
+        }
+      }
+    }//賣家資訊結束
+
+
   }
-  
+
+
+  #carouselWrap{
+    width: 1200px; 
+    height: 600px; 
+    margin: 0 auto; 
+    position: relative; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000;
+    @include rwd(large) {
+      width: 100%;
+    }
+    #CommodityCarouselList{
+    list-style: none; 
+    position: absolute; 
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 50px 0;
+    @include rwd(large) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include rwd(small) {
+      grid-template-columns: 1fr;
+    }
+      .CommodityCarouselConten{ 
+        // margin: 0 10px;
+        // border: 1px solid #000;
+      }
+    }
+    #naDiv{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    #naDiv a{
+    float: right;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 100%;
+    opacity: 0.5;
+    margin: 0 5px;
+    }
+    #naDiv a:hover{
+    background-color: darkgray;
+    }
+    .arrow{
+      position: absolute;
+      top: 50%;
+      text-decoration: none;
+      transform: translateY(-50%);   
+      padding: 5px 10px 10px 10px;
+      display: block;
+      z-index: 10; 
+      color: white; 
+      font-family: '宋體'; 
+      font-size: 30px; 
+      background: $color2; 
+    } 
+    .arrow:hover{
+      background-color: darkgray;
+    }
+    .arrow-left{
+      left: 10px;
+    }
+    .arrow-right{ 
+      right: 10px; 
+    }
+
+  }
+
+

@@ -1,14 +1,13 @@
-body {
-    height: auto;
-}
 
 div.membercontain {
     display: flex;
     height: auto;
     font-size: 17px;
+
     @include rwd(large) {
         height: auto;
     }
+
     @include rwd(medium) {
         height: 100%;
     }
@@ -16,34 +15,40 @@ div.membercontain {
     @include rwd(small) {
         height: auto;
     }
+
     @include rwd(mobile) {
         height: 100%;
     }
+
     aside.left {
         display: inline-block;
+        position: fixed;
         color: #007552;
         width: 12.8%;
-        height: auto;
+        height: 100%;
         vertical-align: top;
         background-color: #FFD3C1;
+        z-index: 50;
         @include rwd(large) {
-            height: auto;
+            height: 100%;
         }
+
         @include rwd(medium) {
-            height: auto;
+            height: 100%;
         }
-    
+
         @include rwd(small) {
             height: 100%;
         }
 
         @include rwd(mobile) {
-            height: auto;
+            height: 100%;
+            width: 28%;
             position: fixed;
             top: 0px;
             left: 0;
             transform: translateX(-93%);
-            transition: transform 1s cubic-bezier(0.36, 0, 0.66, -0.56);
+            transition: transform 1s cubic-bezier(0.36, 0, 0.66, 0);
         }
 
         >.head_portrait {
@@ -52,6 +57,7 @@ div.membercontain {
             margin-top: 60px;
             margin-bottom: 40px;
             overflow: hidden;
+
             >.head_img_box {
                 width: 50%;
                 margin: 0 auto;
@@ -66,6 +72,7 @@ div.membercontain {
         >.info {
             margin-bottom: 40px;
             overflow: hidden;
+
             >ul {
                 >li {
                     display: block;
@@ -92,7 +99,7 @@ div.membercontain {
         }
 
         >.member_button {
-            width: 50%;
+            width: 51%;
             color: white;
             background-color: #007552;
             border-radius: 5px;
@@ -114,7 +121,7 @@ div.membercontain {
             }
 
             @include rwd(small) {
-                margin-left: 2px;
+                margin-left: 30px;
                 padding-top: 10px;
                 padding-bottom: 10px;
             }
@@ -170,7 +177,7 @@ div.membercontain {
                 color: black;
                 border: 0;
                 font-size: 1rem;
-                width: 60%;
+                width: 25%;
                 height: 8%;
                 padding: 4px 10px;
                 line-height: 1.6;
@@ -179,6 +186,7 @@ div.membercontain {
                 border-radius: 50%;
                 text-align: center;
                 outline: none;
+                z-index: 100;
             }
         }
     }
