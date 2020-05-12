@@ -8,7 +8,7 @@
                         <div class="bk_left_img">
                             <img src="@/assets/book_img/bookRighPage_img1t.svg" />
                         </div>
-                        <div class="bk_right_img move_img">
+                        <div class="bk_right_img" id="move_img">
                             <img src="@/assets/book_img/bookRightPage_img2.svg" />
                         </div>
                     </div>
@@ -58,11 +58,11 @@
             </div>
             <!-- <div id="book_footer">
                 <Footer />
-            </div> -->
+            </div>-->
         </section>
         <!-- <div id="book_footer">
                 <Footer />
-            </div> -->
+        </div>-->
     </div>
 </template>
 <script>
@@ -97,15 +97,48 @@ export default {
                     path: "bookYear"
                 }
             ],
+            i: 0,
+            top: 0,
             type: 1
+        };
+    },
+    mounted() {
+        window.addEventListener("scroll", this.imgMoveToRight, true);
+    },
+    methods: {
+        imgMoveToRight() {
+            const el = document.getElementById("Page_horizen").scrollTop;
+            
+            if ( el > this.top) {
+                this.top = el;
+                this.i++;
+                document.getElementById("move_img").style = `left:${this.i}%;`;
+            } else if (el < this.top) {
+                this.top = el;
+                this.i--;
+                document.getElementById("move_img").style = `left:${this.i}%;`;
+            }
+
+            // this.i++;
+
+            // if (
+            //     document.body.scrollHeight > 400 ||
+            //     document.documentElement.scrollHeight > 400
+            // ){
+            //     document.getElementById("move_img").style = `left:${this.i*2}%;`;
+            //     //console.log("+");
+            // }else if(document.body.scrollWidth < 1500 ||
+            //     document.documentElement.scrollWidth < 1500){
+            //          document.getElementById("move_img").style=`left:${this.i* -2}%`;
+            //     }
         };
     },
     methods: {
 
         changeType: function(t){
 
-
         }
     }
 };
 </script>
+
