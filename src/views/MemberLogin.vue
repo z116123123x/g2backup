@@ -35,7 +35,7 @@
                 </div>
 
                 <input type="text" v-model="form.acc" />
-                <input id="signupPsw" type="password" v-model="form.psw" />
+                <input id="signupPsw" type="password" v-model="form.psw" @blur="checkPsw" />
                 <input id="signupRePsw" type="password" v-model="form.rePsw" @blur="checkPsw" />
                 <input type="text" v-model="form.mail" />
                 <input type="text" v-model="form.phone" />
@@ -100,7 +100,8 @@ export default {
         acc: "",
         psw: "",
         rePsw: "",
-        mail: ""
+        mail: "",
+        phone: ""
       }
     };
   },
@@ -147,30 +148,36 @@ export default {
         }
       }
 
-      this.$http
-        .post(api, JSON.stringify(this.form))
-        .then(res => {
-          const data = res.data;
+      const sexs = document.getElementsByName("gender");
 
-          if (data == 0) {
-            alert("註冊完成！");
+      console.log(sexs);
+      console.log(this.form);
+      
 
-            this.form = {
-              acc: "",
-              psw: "",
-              rePsw: "",
-              mail: ""
-            };
+      // this.$http
+      //   .post(api, JSON.stringify(this.form))
+      //   .then(res => {
+      //     const data = res.data;
 
-            $(".movebox").css("transform", "translateX(-10%)");
-            $(".signup").addClass("nodisplay");
-            $(".signin").removeClass("nodisplay");
-          } else if (data == 1) {
-            alert("此帳號已經被註冊過！");
-          }
-        })
-        // eslint-disable-next-line no-console
-        .catch(err => console.log(err));
+      //     if (data == 0) {
+      //       alert("註冊完成！");
+
+      //       this.form = {
+      //         acc: "",
+      //         psw: "",
+      //         rePsw: "",
+      //         mail: ""
+      //       };
+
+      //       $(".movebox").css("transform", "translateX(-10%)");
+      //       $(".signup").addClass("nodisplay");
+      //       $(".signin").removeClass("nodisplay");
+      //     } else if (data == 1) {
+      //       alert("此帳號已經被註冊過！");
+      //     }
+      //   })
+      //   // eslint-disable-next-line no-console
+      //   .catch(err => console.log(err));
     },
     checkPsw: function() {
       const form = this.form;
