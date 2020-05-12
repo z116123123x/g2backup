@@ -21,11 +21,7 @@
               <!-- 標籤 -->
               <div class="book_tag">
                 <div class="index">
-                  <router-link
-                    class="book_link"
-                    to="/main/book/bookIndex"
-                    @click="changeType(1)"
-                  >總目錄</router-link>
+                  <router-link class="book_link" to="/main/book/bookIndex">總目錄</router-link>
                 </div>
                 <ul class="tag">
                   <li
@@ -47,7 +43,7 @@
                   <div class="pagepaper"></div>
                 </div>
                 <!-- bookcontent書籍內容 -->
-                <div id="bk_content">
+                <div id="bk_content" :class="type">
                   <router-view />
                   <!-- fruit_knowledge -->
                 </div>
@@ -105,7 +101,7 @@ export default {
       ],
       i: 0,
       top: 0,
-      type: 1
+      type: "spring"
     };
   },
   mounted() {
@@ -138,8 +134,18 @@ export default {
       //          document.getElementById("move_img").style=`left:${this.i* -2}%`;
       //     }
     },
-    methods: {
-      changeType: function(t) {}
+    changeType: function(t) {
+      if (t == 1) {
+        this.type = "spring";
+      } else if (t == 2) {
+        this.type = "summer";
+      } else if (t == 3) {
+        this.type = "full";
+      } else if (t == 4) {
+        this.type = "winter";
+      } else if (t == 0) {
+        this.type = "year";
+      }
     }
   }
 };
