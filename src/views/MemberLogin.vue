@@ -20,6 +20,8 @@
                 <label>再次輸入密碼:</label>
                 <br />
                 <label>e-mail:</label>
+                <br />
+                <label>手機:</label>
               </div>
               <form class="forminputbox">
                 <input type="text" v-model="form.name" />
@@ -41,6 +43,7 @@
                   @blur="checkPsw"
                 />
                 <input type="text" v-model="form.mail" />
+                <input type="text" v-model="form.phone" />
               </form>
             </div>
 
