@@ -123,5 +123,5 @@
                 $(".slide").toggleClass("display");
             });
         }
-    }
+    };
 </script>
