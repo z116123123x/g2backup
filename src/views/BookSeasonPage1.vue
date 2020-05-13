@@ -2,7 +2,7 @@
   <div class="book_layout">
     <div class="bk_ct bk_ct_left">
       <div class="fruit_start">
-        <h1>梅子</h1>
+        <h1>{{content.name}}</h1>
         <div class="fruit_start_img">
           <div class="img_content">
             <img src="@/assets/book_img/spring/plum/plum04.jpg" alt />
@@ -57,9 +57,85 @@
 </template>
 <script>
 export default {
-  props: { page: Number },
-  methods: {
+  props: { page: Number, contentType: Number },
+  data() {
+    return {
+      index: [
+        {
+          item: [
+            {
+              name: "梅子"
+            },
+            {
+              name: "李子"
+            },
+            {
+              name: "桃子"
+            },
+            {
+              name: "琵琶"
+            }
+          ]
+        },
+        {
+          item: [
+            {
+              name: "西瓜"
+            },
+            {
+              name: "芒果"
+            },
+            {
+              name: "火龍果"
+            },
+            {
+              name: "荔枝"
+            }
+          ]
+        },
+        {
+          item: [
+            {
+              name: "西瓜"
+            },
+            {
+              name: "芒果"
+            },
+            {
+              name: "火龍果"
+            },
+            {
+              name: "荔枝"
+            }
+          ]
+        },
+        {
+          item: [
+            {
+              name: "西瓜"
+            },
+            {
+              name: "芒果"
+            },
+            {
+              name: "火龍果"
+            },
+            {
+              name: "荔枝"
+            }
+          ]
+        }
+      ]
+    };
+  },
+  computed: {
     content: function() {
+
+      return this.index[this.contentType].item[Math.floor(this.page/2)];
+    }
+  },
+  methods: {
+    test: function() {
       console.log(this.page);
     }
   }
