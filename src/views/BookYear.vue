@@ -10,7 +10,7 @@
 </template>
 <script>
 import index from "@/views/BookSeasonIndex";
-import page1 from "@/views/BookSeasonPage1";
+import page1 from "@/views/BookSeasonYearPage1";
 import page2 from "@/views/BookSeasonPage2";
 export default {
   data() {

@@ -1,7 +1,6 @@
 $color-green:#5fbc55;
 
 #bk_content {
-
     // 測試用
     &.spring {
 
@@ -10,7 +9,7 @@ $color-green:#5fbc55;
 
     &.summer {
 
-        background: yellow;
+       // background: yellow;
     }
 
     &.full {
@@ -278,6 +277,13 @@ $color-green:#5fbc55;
                         &::before {
                             z-index: -1;
                             background-image: url("../assets/book_img/binbo.svg");
+                        }
+                    }
+                    h1.year_fruit_title{
+                        &::after,
+                        &::before {
+                            z-index: -1;
+                            background-image: url("../assets/book_img/leaf_year.svg");
                         }
                     }
 
@@ -662,6 +668,12 @@ $color-green:#5fbc55;
                     }
 
                 }
+                .fruit_video_year{
+                    >video{
+                        width: auto;
+                        height: 180px;
+                    }
+                }
 
                 @include rwd(small) {
                     .fruit_video {
@@ -690,7 +702,7 @@ $color-green:#5fbc55;
 
                 //農知識
                 .fruit_Q {
-                    //border: 1px solid green;
+                    border: 1px solid green;
                     box-sizing: border-box;
                     width: 100%;
 
@@ -839,6 +851,10 @@ $color-green:#5fbc55;
                     }
 
                 }
+                .fruit_Q_year{
+                    height: 50%;
+                    padding-top: 20px;
+                }
 
                 @include rwd (mobile) {
                     height: 100%;
@@ -851,6 +867,11 @@ $color-green:#5fbc55;
                 }
             }
 
+            .year_bg {
+                &::before {
+                    background-color: #c4ce7c;
+                }
+            }
             //部落格
             .bk_ct_left_2 {
                 //display: none;
