@@ -21,7 +21,7 @@
               <!-- 標籤 -->
               <div class="book_tag">
                 <div class="index">
-                  <router-link class="book_link" to="/main/book/bookIndex">總目錄</router-link>
+                  <p class="book_link" @click="changeType(5)">總目錄</p>
                 </div>
                 <ul class="tag">
                   <li
@@ -45,7 +45,8 @@
                 </div>
                 <!-- bookcontent書籍內容 -->
                 <div id="bk_content" :class="type">
-                  <Content :contentIndex="index"></Content>
+                  <Content v-if="change == false" :contentIndex="index"></Content>
+                  <Index v-if="change == true"></Index>
                   <!-- <router-view /> -->
                   <!-- fruit_knowledge -->
                 </div>
@@ -71,6 +72,7 @@
 </template>
 <script>
 import "@/js/book";
+import Index from "@/views/BookIndex";
 import Content from "@/views/BookContent";
 export default {
   data() {
@@ -100,7 +102,8 @@ export default {
       i: 0,
       top: 0,
       type: "spring",
-      index: 0
+      index: 0,
+      change: false
     };
   },
   mounted() {
@@ -119,41 +122,38 @@ export default {
         this.i--;
         document.getElementById("move_img").style = `left:${this.i}%;`;
       }
-
-      // this.i++;
-
-      // if (
-      //     document.body.scrollHeight > 400 ||
-      //     document.documentElement.scrollHeight > 400
-      // ){
-      //     document.getElementById("move_img").style = `left:${this.i*2}%;`;
-      //     //console.log("+");
-      // }else if(document.body.scrollWidth < 1500 ||
-      //     document.documentElement.scrollWidth < 1500){
-      //          document.getElementById("move_img").style=`left:${this.i* -2}%`;
-      //     }
     },
     changeType: function(t) {
       if (t == 0) {
         this.type = "spring";
         this.index = 0;
+        this.change = false;
       } else if (t == 1) {
         this.type = "summer";
         this.index = 1;
+        this.change = false;
       } else if (t == 2) {
         this.type = "full";
         this.index = 2;
+        this.change = false;
       } else if (t == 3) {
         this.type = "winter";
         this.index = 3;
+        this.change = false;
       } else if (t == 4) {
         this.type = "year";
         this.index = 4;
+        this.change = false;
+      } else if (t == 5) {
+        this.type = "index";
+        this.change = true;
       }
     }
   },
   components: {
-    Content
+    Content,
+    // eslint-disable-next-line vue/no-unused-components
+    Index
   }
 };
 </script>
