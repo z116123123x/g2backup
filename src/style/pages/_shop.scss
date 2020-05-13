@@ -687,7 +687,8 @@ $color5: #ffa978;
 
 //頁面navbar
 .Page_navigation {
-  padding-bottom: 360px;
+  margin-top: 20px;
+  padding-bottom: 10vw;
   background-color: $color4;
   display: flex;
   justify-content: center;
@@ -741,7 +742,7 @@ $color5: #ffa978;
 
 //footer
 .footer-box {
-  position: absolute;
+  // position: absolute;
   bottom: -30px;
   width: 100%;
 }//footerEnd

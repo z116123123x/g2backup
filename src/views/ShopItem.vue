@@ -160,7 +160,89 @@
 
     <!--輪播-->
     <div id="carouselWrap">
+      <h2>相關商品：</h2>
       <ul id="CommodityCarouselList">
+        <li class="CommodityCarouselConten">
+          <div class="CommodityCarousel commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="CommodityCarouselConten">
+          <div class="CommodityCarousel commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="CommodityCarouselConten">
+          <div class="CommodityCarousel commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
         <li class="CommodityCarouselConten">
           <div class="CommodityCarousel commodity">
             <div class="card_img_box">
@@ -243,27 +325,73 @@
           </div>
         </li>
       </ul>
-      <!--導航按鈕-->
-      <div id="naDiv">
-        <a href="javascript:;"></a>
-        <a href="javascript:;"></a>
-        <a href="javascript:;"></a>
-      </div>
       <!--左右按鍵-->
-      <a class="arrow arrow-left" href="javascript:;">&lt;</a>
-      <a class="arrow arrow-right" href="javascript:;">&gt;</a>
+      <input
+        type="button"
+        id="arrowleft"
+        value="<"
+        style="font-weight:bold;font-size:20px"
+        disabled
+      />
+      <input type="button" id="arrowright" value=">" style="font-weight:bold;font-size:20px" />
     </div>
 
-    <!-- <div class="footer-box">
+    <div class="footer-box">
       <Footer />
-    </div>-->
+    </div>
   </main>
+  
 </template>
 
 <script>
+let panelView = -1127;
+let maxIndex = 1;
+window.addEventListener("resize", function() {
+  if (window.innerWidth >= 1200) {
+    panelView = -1127;
+    maxIndex = 1;
+  } else if (window.innerWidth > 991) {
+    panelView = -840;
+    maxIndex = 2;
+  } else if (window.innerWidth > 767) {
+    panelView = -503;
+    maxIndex = 5;
+  } else {
+    panelView = -528;
+    maxIndex = 5;
+  }
+  console.log(panelView);
+});
+
 import $ from "jquery";
 import { gsap, TweenMax, Power1, Power3, TimelineMax, Linear } from "gsap";
 export default {
-  mounted() {}
+  mounted() {
+    function $id(id) {
+      return document.getElementById(id);
+    }
+    let wrap = document.getElementById("CommodityCarouselList");
+    var curIndex = 0;
+    $id("arrowleft").onclick = function() {
+      console.log(panelView);
+      curIndex--;
+      wrap.style.left = panelView * curIndex + "px";
+      $id("arrowright").disabled = false;
+      if (curIndex == 0) {
+        $id("arrowleft").disabled = true;
+      }
+    };
+
+    $id("arrowright").onclick = function() {
+      // console.log(n);
+
+      curIndex++;
+      wrap.style.left = panelView * curIndex + "px";
+      $id("arrowleft").disabled = false;
+      if (curIndex == maxIndex) {
+        $id("arrowright").disabled = true;
+      }
+    };
+  }
 };
 </script>
