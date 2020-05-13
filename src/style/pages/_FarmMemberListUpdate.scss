@@ -76,62 +76,63 @@ div.FarmListUpdate {
           height: auto;
           padding: 0 5px;
         }
-        >.list_th {
-          display: block;
-          background-color: #F7C845;
-          color: #007552;
-          margin-top: 20px;
+        >.farmlist {
+          display: flex;
+          width: 94%;
           margin-left: 20px;
-          margin-right: 20px;
-          @include rwd(mobile) {
-            width: 100%;
-            margin-top: 20px;
-            margin-left: 0px;
-            margin-right: 20px;
-          }
-          >p {
-            display: inline-block;
-            padding: 0 58px;
-            @include rwd(medium) {
-              padding: 0 53px;
-            }
-
-            @include rwd(small) {
-              padding: 0 40.6px;
-            }
-
-            @include rwd(mobile) {
-              padding: 0 8.6px 0 7px;
-            }
-          }
-        }
-
-        >.list_td {
+          text-align: center;
           border: 1px solid #F7C845;
-          background-color: white;
-          display: block;
-          margin-bottom: 20px;
-          margin-left: 20px;
-          margin-right: 20px;
-          @include rwd(mobile) {
-            width: 99.4%;
-            margin-left: 0px;
-            margin-right: 20px;
+         @include rwd(mobile){
+           width: 97%;
+           margin-left: 5px;
+         }
+          >.farmlist_time {
+            width: 30%;
+            text-align: center;
+            background-color: white;
+           @include rwd(mobile){
+             width: 46%;
+           }
+            >.title {
+              background-color: #F7C845;
+              padding: 10px 0px 10px 0px;
+            }
           }
-          >p {
-            display: inline-block;
-            padding: 0 59px;
-            @include rwd(medium) {
-              padding: 0 53px;
-            }
 
-            @include rwd(small) {
-              padding: 0 42.9px;
-            }
+          >.farmlist_price {
+            width: 30%;
+            text-align: center;
+            background-color: white;
 
-            @include rwd(mobile) {
-              font-size: 13px;
-              padding: 0 19px 0 7px
+            >.title {
+              background-color: #F7C845;
+              padding: 10px 0px 10px 0px;
+            }
+          }
+
+          >.farmlist_payment {
+            width: 30%;
+            text-align: center;
+            background-color: white;
+           @include rwd(mobile){
+             width: 33%;
+           }
+            >.title {
+              background-color: #F7C845;
+              padding: 10px 0px 10px 0px;
+            }
+          }
+
+          >.farmlist_status {
+            width: 30%;
+            text-align: center;
+            background-color: white;
+           @include rwd(mobile){
+             width: 32%;
+           }
+            >.title {
+              background-color: #F7C845;
+              padding: 10px 0px 10px 0px;
             }
           }
         }
@@ -158,152 +159,77 @@ div.FarmListUpdate {
          >.slide {
            display: block;
 
-           >.list_th2 {
-             display: block;
-             background-color: #F7C845;
-             color: #007552;
-             margin-top: 20px;
-             margin-left: 20px;
-             margin-right: 20px;
-
-             @include rwd(mobile) {
-               width: 100%;
-               margin-left: 0px;
-               margin-right: 20px;
-             }
-
-             >p {
-               display: inline-block;
-               padding: 0 50.4px;
-
-               @include rwd(medium) {
-                 padding: 0 53px;
-               }
-
-               @include rwd(small) {
-                 padding: 0 40.6px;
-               }
-
-               @include rwd(mobile) {
-                 padding: 0 15.6px 0 7px;
-               }
-             }
+           >.FarmListDetail {
+            display: flex;
+            width: 94%;
+            margin-left: 20px;
+            text-align: center;
+            border: 1px solid #F7C845;
+           @include rwd(mobile){
+             width: 100%;
+             margin-left: 0px;
            }
-
-           >.list_td2 {
-             border: 1px solid #F7C845;
+            >.farmlistdetail_num {
+              width: 30%;
+              text-align: center;
+              background-color: white;
+               @include rwd(small){
+                 width: 34%;
+               }
+              >.title {
+                background-color: #F7C845;
+                padding: 10px 0px 10px 0px;
+              }
+            }
+            >.farmlistdetail_name {
+             width: 30%;
+             text-align: center;
              background-color: white;
-             display: block;
-             margin-left: 20px;
-             margin-right: 20px;
-
-             @include rwd(mobile) {
-               width: 99.4%;
-               margin-left: 0px;
-               margin-right: 20px;
+             @include rwd(small){
+               width: 70%;
              }
-
-             >p {
-               display: inline-block;
-               padding: 0 44.8px;
-
-               @include rwd(medium) {
-                 padding: 0 53px;
-               }
-
-               @include rwd(small) {
-                 padding: 0 42.9px;
-               }
-
-               @include rwd(mobile) {
-                 font-size: 13px;
-                 padding: 0 20px 0 7px;
-               }
+             >.title {
+               background-color: #F7C845;
+               padding: 10px 0px 10px 0px;
              }
-
-             >p.td2_price {
-               display: inline-block;
-               padding: 0 30px;
-
-               @include rwd(mobile) {
-                 padding: 0;
-               }
-             }
-
-             >p.td2_num {
-               display: inline-block;
-               padding: 0 44.8px;
-
-               @include rwd(mobile) {
-                 padding: 0px 26px;
-               }
-             }
-
            }
-
-           >.list_td3 {
-             border: 1px solid #F7C845;
+           >.farmlistdetail_price {
+             width: 30%;
+             text-align: center;
              background-color: white;
-             display: block;
-             margin-left: 20px;
-             margin-right: 20px;
-
-             @include rwd(mobile) {
-               width: 99.4%;
-               margin-left: 0px;
-               margin-right: 0px;
+             @include rwd(small){
+               width: 17%;
              }
-
-             >p {
-               display: inline-block;
-               padding: 0 44.4px;
-
-               @include rwd(medium) {
-                 padding: 0 53px;
-               }
-
-               @include rwd(small) {
-                 padding: 0 42.9px;
-               }
-
-               @include rwd(mobile) {
-                 font-size: 13px;
-                 padding: 0 11px 0 7px;
-               }
-             }
-
-             >p.td3_price {
-               display: inline-block;
-               padding: 0 30px;
-
-               @include rwd(mobile) {
-                 padding: 0;
-               }
-             }
-
-             >p.td3_num {
-               display: inline-block;
-               padding: 0 44.8px;
-
-               @include rwd(mobile) {
-                 padding: 0px 21px;
-               }
-             }
-
-             &:last-child {
-               border: 1px solid #F7C845;
-               background-color: white;
-               display: block;
-               margin-left: 20px;
-               margin-right: 20px;
-
-               @include rwd(mobile) {
-                 width: 99.4%;
-                 margin-left: 0px;
-                 margin-right: 0px;
-               }
+             >.title {
+               background-color: #F7C845;
+               padding: 10px 0px 10px 0px;
              }
            }
+           >.farmlistdetail_amount {
+             width: 30%;
+             text-align: center;
+             background-color: white;
+             @include rwd(small){
+               width: 17%;
+             }
+             >.title {
+               background-color: #F7C845;
+               padding: 10px 0px 10px 0px;
+             }
+           }
+           >.farmlistdetail_subtotal {
+             width: 30%;
+             text-align: center;
+             background-color: white;
+             @include rwd(small){
+               width: 21%;
+             }
+             >.title {
+               background-color: #F7C845;
+               padding: 10px 0px 10px 0px;
+             }
+           }
+          }
          }
 
          >.display {

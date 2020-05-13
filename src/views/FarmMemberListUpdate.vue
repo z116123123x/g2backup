@@ -12,56 +12,70 @@
                     <div class="listnum">
                         <p>訂單編號: xxxxx</p>
                     </div>
-                    <div class="list_th">
-                        <p>成立時間</p>
-                        <p>總金額</p>
-                        <p>付款狀態</p>
-                        <p>訂單狀態</p>
-                    </div>
-                    <div class="list_td">
-                        <p>2020-04-17</p>
-                        <p>$1380</p>
-                        <p>已付款</p>
-                        <select name="country">
+                    <div class="farmlist">
+                        <div class="farmlist_time">
+                            <p class="title">成立時間</p>
+                            <p>2020-04-17</p>
+                        </div>
+                        <div class="farmlist_price">
+                            <p class="title">總金額</p>
+                            <p>$1380</p>
+                        </div>
+                        <div class="farmlist_payment">
+                            <p class="title">付款狀態</p>
+                            <p>已付款</p>
+                        </div>
+                        <div class="farmlist_status">
+                            <p class="title">訂單狀態</p>
+                            <select name="country">
                             <option value="1">完成</option>
                             <option value="2">未完成</option>
                             <option value="3">選項3</option>
                         </select>
+                        </div>
                     </div>
+
                     <div class="list_slide">
                         <img id="ploygon" class="plogon" src="@/assets/Polygon 2.svg" alt="">
                         <span id="ploygon">訂單明細</span>
                     </div>
                     <div class="slide display">
-                        <div class="list_th2">
-                            <p>商品編號</p>
-                            <p>名稱</p>
-                            <p>價格</p>
-                            <p>數量</p>
-                            <p>小計</p>
-                        </div>
-                        <div class="list_td2">
-                            <p>xxxxx</p>
-                            <p>台南麻豆文旦</p>
-                            <p class="td2_price">$50</p>
-                            <p class="td2_num">10</p>
-                            <p>$500</p>
-                        </div>
-
-                        <div class="list_td3">
-                            <p>xxxxx</p>
-                            <p>本月熱賣!屏東香蕉</p>
-                            <p class="td3_price">$50</p>
-                            <p class="td3_num">10</p>
-                            <p>$500</p>
-                        </div>
-
-                        <div class="list_td3">
-                            <p>xxxxx</p>
-                            <p>保證有甜!屏東甘蔗</p>
-                            <p class="td3_price">$60</p>
-                            <p class="td3_num">10</p>
-                            <p>$600</p>
+                        <div class="FarmListDetail">
+                            <div class="farmlistdetail_num">
+                                <p class="title">商品編號</p>
+                                <p>xxxxx</p>
+                                <p>xxxxx</p>
+                                <p>xxxxx</p>
+                                <p>xxxxx</p>
+                            </div>
+                            <div class="farmlistdetail_name">
+                                <p class="title">名稱</p>
+                                <p>台南麻豆文旦</p>
+                                <p>本月熱賣!屏東香蕉</p>
+                                <p>本月熱賣!屏東香蕉</p>
+                                <p>保證有甜!屏東甘蔗</p>
+                            </div>
+                            <div class="farmlistdetail_price">
+                                <p class="title">價格</p>
+                                <p>$50</p>
+                                <p>$50</p>
+                                <p>$50</p>
+                                <p>$60</p>
+                            </div>
+                            <div class="farmlistdetail_amount">
+                                <p class="title">數量</p>
+                                <p>10</p>
+                                <p>10</p>
+                                <p>10</p>
+                                <p>10</p>
+                            </div>
+                            <div class="farmlistdetail_subtotal">
+                                <p class="title">小計</p>
+                                <p>$500</p>
+                                <p>$500</p>
+                                <p>$500</p>
+                                <p>$600</p>
+                            </div>
                         </div>
                     </div>
                     <div class="total">
