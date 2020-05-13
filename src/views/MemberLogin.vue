@@ -150,7 +150,9 @@ export default {
 
       const sexs = document.getElementsByName("gender");
 
+      // eslint-disable-next-line no-console
       console.log(sexs);
+      // eslint-disable-next-line no-console
       console.log(this.form);
       
 

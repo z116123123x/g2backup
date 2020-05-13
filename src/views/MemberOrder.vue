@@ -146,5 +146,5 @@
                 $(".slide").toggleClass("display");
             });
         }
-    }
+    };
 </script>

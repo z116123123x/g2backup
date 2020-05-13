@@ -1,5 +1,5 @@
 <template>
-  <div class="bk_Spring">
+  <div class="bk_All">
     <component :page="currentTab.page" :contentType="pageType" :is="currentTab.index"></component>
     <div class="change_bookpage">
       <div v-for="tab in tabs" :key="tab.name" :class="'changebutton' + tab.class">

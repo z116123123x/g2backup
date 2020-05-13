@@ -2,29 +2,33 @@ $color-green:#5fbc55;
 
 #bk_content {
     // 測試用
-    &.spring {
+    // &.spring {
 
-        background: pink;
-    }
+    //    // background: pink;
+    // }
 
-    &.summer {
+    // &.summer {
 
-       // background: yellow;
-    }
+    //    // background: yellow;
+    // }
 
-    &.full {
+    // &.full {
 
-        background: green;
-    }
+    //    // background: green;
+    // }
     // 測試用 end
 
-    .bk_Spring {
-        //border: 1px solid red;
+    //mixin
+    @mixin baseset(){
         box-sizing: border-box;
         width: 100%;
         height: 100%;
+        @content;   
+    }
 
-        // display: none;
+    .bk_All {
+        @include baseset;
+
         .book_layout {
             //border: 1px solid black;
             box-sizing: border-box;
@@ -33,11 +37,7 @@ $color-green:#5fbc55;
 
             //個別季節目錄
             .bk_season_index {
-
-                //border: 1px solid blue;
-                box-sizing: border-box;
-                width: 100%;
-                height: 100%;
+               @include baseset;
                 position: relative;
                 //display: none;
 
@@ -52,11 +52,9 @@ $color-green:#5fbc55;
                 }
 
                 .bk_season {
-                    //border: 3px solid red;
-                    box-sizing: border-box;
+                    @include baseset;
                     display: inline-block;
                     width: 20%;
-                    height: 100%;
                     background-color: #f38e8ea8;
                     vertical-align: top;
                     text-align: center;
@@ -70,7 +68,6 @@ $color-green:#5fbc55;
                         background-color: #f3c452;
                         width: 40%;
                         padding: 10px;
-
                     }
 
                     .bk_season_img {
@@ -78,7 +75,6 @@ $color-green:#5fbc55;
                         width: 30px;
                         height: 30px;
                         margin: 0 auto 10px;
-
                         img {
                             height: 100%;
                         }
@@ -95,7 +91,6 @@ $color-green:#5fbc55;
                             padding: 5px;
                             margin: 10px auto 5px;
                         }
-
                         .bk_season_img {
                             display: inline-block;
                             margin: 5px;
@@ -128,12 +123,17 @@ $color-green:#5fbc55;
                             position: relative;
                             margin: 5px;
                             transition: 1s;
-
+                            img {
+                                height: 100%;
+                                transition: 1s;
+                            }
+                            span {
+                                display: none;
+                                animation-delay: 2s;
+                            }
                             &:hover img {
                                 height: 120%;
-
                             }
-
                             &:hover span {
                                 position: absolute;
                                 top: 50%;
@@ -143,19 +143,7 @@ $color-green:#5fbc55;
                                 font-size: 2rem;
                                 background-color: #f3c452;
                                 padding: 5px;
-
                             }
-
-                            img {
-                                height: 100%;
-                                transition: 1s;
-                            }
-
-                            span {
-                                display: none;
-                                animation-delay: 2s;
-                            }
-
                         }
                     }
 
@@ -163,12 +151,9 @@ $color-green:#5fbc55;
                         width: 100%;
                         display: block;
                         top: 40%;
-
                     }
                 }
-
             }
-
 
             .bk_ct {
                 // border: 1px solid blue;
@@ -204,26 +189,20 @@ $color-green:#5fbc55;
                 font-size: 0;
 
                 .fruit_start {
-                    //border: 1px solid red;
-                    box-sizing: border-box;
+                  @include baseset;
                     display: inline-block;
-                    width: 100%;
                     height: 45%;
                     min-height: 270px;
-
-
 
                     @keyframes rotation {
                         0% {
                             transform: rotate(0deg);
                         }
-
                         100% {
                             transform: rotate(360deg);
                         }
                     }
-
-
+        
                     h1 {
                         display: inline-block;
                         //border: 1px solid red;
@@ -272,21 +251,26 @@ $color-green:#5fbc55;
                     }
 
                     h1.summer_fruit_title {
-
                         &::after,
                         &::before {
                             z-index: -1;
                             background-image: url("../assets/book_img/binbo.svg");
                         }
                     }
-                    h1.year_fruit_title{
+                    h1.winter_fruit_title{
                         &::after,
                         &::before {
                             z-index: -1;
-                            background-image: url("../assets/book_img/leaf_year.svg");
+                            background-image: url("../assets/book_img/snow.svg");
                         }
                     }
-
+                    h1.fall_fruit_title{
+                        &::after,
+                        &::before {
+                            z-index: -1;
+                            background-image: url("../assets/book_img/leaf.svg");
+                        }
+                    }
                     @mixin pic_center {
                         width: 120%;
                         height: auto;
@@ -304,7 +288,6 @@ $color-green:#5fbc55;
 
                     //夏天
                     .summer_pic {
-                        //border: 1px solid green;
                         box-sizing: border-box;
                         width: 70%;
                         height: 250px;
@@ -315,16 +298,12 @@ $color-green:#5fbc55;
                         vertical-align: top;
 
                         div {
-                            box-sizing: border-box;
-                            //border: 1px solid red;
-                            width: 100%;
+                           @include baseset;
                             height: 75%;
                             border-radius: 10px;
                             overflow: hidden;
-
                             img {
                                 @include pic_center;
-
                             }
                         }
 
@@ -336,14 +315,11 @@ $color-green:#5fbc55;
                             height: 20%;
                             width: 100%;
 
-
                             li {
-                                box-sizing: border-box;
+                                @include baseset;
                                 display: inline-block;
-                                //border: 1px solid green;
                                 border-radius: 10px;
                                 width: 20%;
-                                height: 100%;
                                 margin: 5px;
                                 overflow: hidden;
 
@@ -355,7 +331,7 @@ $color-green:#5fbc55;
                     }
 
                     .fruit_start_img {
-                        // border: 1px solid red;
+                       //border: 1px solid red;
                         display: inline-block;
                         width: 180px;
                         height: 170px;
@@ -368,27 +344,16 @@ $color-green:#5fbc55;
                         top: 55%;
                         transform: translate(-50%, -50%);
                         transition: .5s;
-
-
-
                         &:hover {
                             width: 170px;
                             height: 160px;
-                        }
-
-
-                        &:hover .img_content {
-                            width: 140px;
-                            padding-top: 140px;
-                        }
-
-
-
-
-
+                            .img_content {
+                                width: 140px;
+                                padding-top: 140px;
+                            }
+                        }                      
                         .img_content {
-                            // border: 1px solid red;
-                            display: block;
+
                             width: 130px;
                             padding-top: 130px;
                             border-radius: 50%;
@@ -403,42 +368,46 @@ $color-green:#5fbc55;
                                 position: absolute;
                                 top: 0;
                                 height: 100%;
-
                             }
-
                         }
 
                         @include rwd(medium) {
-                            &:hover .img_content {
-                                width: 110px;
-                                padding-top: 110px;
-                            }
-
                             .img_content {
                                 width: 105px;
                                 padding-top: 105px;
+                                &:hover{
+                                    width: 110px;
+                                    padding-top: 110px;
+                                }
                             }
                         }
 
                         @include rwd(small) {
-                            &:hover .img_content {
-                                width: 130px;
-                                padding-top: 130px;
-                            }
-
                             .img_content {
                                 width: 120px;
                                 padding-top: 120px;
+                                &:hover{
+                                    width: 130px;
+                                    padding-top: 130px;
+                                }
                             }
                         }
-
+                    }
+                    //秋天
+                    .fruit_start_img_fall{
+                        background-image: none;
+                       
+                        .img_content{
+                            left: 50%;
+                            width: 180px;
+                         border-radius: 10px;
+                        }
                     }
 
                     @include rwd(medium) {
                         .fruit_start_img {
                             width: 150px;
                             height: 140px;
-
                             &:hover {
                                 width: 140px;
                                 height: 130px;
@@ -450,7 +419,6 @@ $color-green:#5fbc55;
                         .fruit_start_img {
                             width: 180px;
                             height: 170px;
-
                             &:hover {
                                 width: 170px;
                                 height: 160px;
@@ -461,7 +429,6 @@ $color-green:#5fbc55;
                     @include rwd(mobile) {
                         .fruit_start_img {
                             bottom: 0;
-
                             &:hover {
                                 width: 170px;
                                 height: 160px;
@@ -475,7 +442,6 @@ $color-green:#5fbc55;
                         position: relative;
                         height: 50%;
                         padding: 20px;
-
                         &::before {
                             content: "";
                             width: 100%;
@@ -489,7 +455,6 @@ $color-green:#5fbc55;
                         }
                     }
                 }
-
                 @include rwd(mobile) {
                     .fruit_start {
                         position: relative;
@@ -499,20 +464,14 @@ $color-green:#5fbc55;
                 }
 
                 .fruit_intro {
-                    //border: 1px solid red;
-                    box-sizing: border-box;
-                    display: block;
-                    width: 100%;
-                    height: 55%;
-
+                @include baseset();
+                    height: 50%;
                     p {
                         //border: 1px solid blue;
                         font-size: 1.4rem;
                         padding: 15px;
                         white-space: pre-wrap;
                         line-height: 1.8;
-                        // 欄寬
-                        //column-width: 15rem;
                         column-count: 2;
                         overflow-x: auto;
                         white-space: break-all;
@@ -702,7 +661,7 @@ $color-green:#5fbc55;
 
                 //農知識
                 .fruit_Q {
-                    border: 1px solid green;
+                    //border: 1px solid green;
                     box-sizing: border-box;
                     width: 100%;
 
@@ -762,6 +721,9 @@ $color-green:#5fbc55;
                             padding-left: 15px;
                             overflow-y: scroll;
                             // 欄寬
+                            &::-webkit-scrollbar {
+                                display: none;
+                             }
 
                             box-sizing: border-box;
                             display: inline-block;
@@ -886,4 +848,19 @@ $color-green:#5fbc55;
             }
         }
     }
+
+    // .year {
+    //     .bk_All{
+    //         .book_layout{
+    //             .bk_ct_left{
+    //                 .fruit_start{
+    //                     h1{
+    //                         color: yellowgreen;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+        
+    // }
 }
