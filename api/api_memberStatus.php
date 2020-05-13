@@ -16,3 +16,5 @@ if (isset($_SESSION["no"])) {
 } else {
     echo "";
 }
+
+?>
