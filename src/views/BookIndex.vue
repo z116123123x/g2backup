@@ -1,6 +1,6 @@
 <template>
     <div class="fruit_index">
-        <div class="bk_content">
+        <div class="bk_content1">
             <h5>春季</h5>
             <div class="bk_content_img">
                 <img src="@/assets/book_img/flower_ct.svg" />
@@ -12,7 +12,7 @@
                 <li>琵琶</li>
             </ul>
         </div>
-        <div class="bk_content">
+        <div class="bk_content1">
             <h5>夏季</h5>
             <div class="bk_content_img">
                 <img src="@/assets/book_img/binbo.svg" />
@@ -24,7 +24,7 @@
                 <li>芒果</li>
             </ul>
         </div>
-        <div class="bk_content">
+        <div class="bk_content1">
             <h5>秋季</h5>
             <div class="bk_content_img">
                 <img src="@/assets/book_img/leaf.svg" />
@@ -36,7 +36,7 @@
                 <li>梨子</li>
             </ul>
         </div>
-        <div class="bk_content">
+        <div class="bk_content1">
             <h5>冬季</h5>
             <div class="bk_content_img">
                 <img src="@/assets/book_img/snow.svg" />
@@ -48,7 +48,7 @@
                 <li>番茄</li>
             </ul>
         </div>
-        <div class="bk_content">
+        <div class="bk_content1">
             <h5>常年</h5>
             <div class="bk_content_img">
                 <img src="@/assets/book_img/leaf_year.svg" />
