@@ -71,7 +71,7 @@
 </template>
 <script>
 import "@/js/book";
-import Content from "@/views/BookSpring";
+import Content from "@/views/BookContent";
 export default {
   data() {
     return {
