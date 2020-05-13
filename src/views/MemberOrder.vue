@@ -29,35 +29,35 @@
                     </div>
                     <div class="slide display">
                         <div class="list_th2">
-                        <p>商品編號</p>
-                        <p>名稱</p>
-                        <p>價格</p>
-                        <p>數量</p>
-                        <p>小計</p>
-                    </div>
-                    <div class="list_td2">
-                        <p>xxxxx</p>
-                        <p>台南麻豆文旦</p>
-                        <p class="td2_price">$50</p>
-                        <p class="td2_num">10</p>
-                        <p>$500</p>
-                    </div>
+                            <p>商品編號</p>
+                            <p>名稱</p>
+                            <p>價格</p>
+                            <p>數量</p>
+                            <p>小計</p>
+                        </div>
+                        <div class="list_td2">
+                            <p>xxxxx</p>
+                            <p>台南麻豆文旦</p>
+                            <p class="td2_price">$50</p>
+                            <p class="td2_num">10</p>
+                            <p>$500</p>
+                        </div>
 
-                    <div class="list_td3">
-                        <p>xxxxx</p>
-                        <p>本月熱賣!屏東香蕉</p>
-                        <p class="td3_price">$50</p>
-                        <p class="td3_num">10</p>
-                        <p>$500</p>
-                    </div>
+                        <div class="list_td3">
+                            <p>xxxxx</p>
+                            <p>本月熱賣!屏東香蕉</p>
+                            <p class="td3_price">$50</p>
+                            <p class="td3_num">10</p>
+                            <p>$500</p>
+                        </div>
 
-                    <div class="list_td3">
-                        <p>xxxxx</p>
-                        <p>保證有甜!屏東甘蔗</p>
-                        <p class="td3_price">$60</p>
-                        <p class="td3_num">10</p>
-                        <p>$600</p>
-                    </div>
+                        <div class="list_td3">
+                            <p>xxxxx</p>
+                            <p>保證有甜!屏東甘蔗</p>
+                            <p class="td3_price">$60</p>
+                            <p class="td3_num">10</p>
+                            <p>$600</p>
+                        </div>
                     </div>
                     <div class="total">
                         <p>商品金額 $130</p>
@@ -96,8 +96,12 @@
                                 <img src="@/assets/memberstar.svg" alt="">
                             </div>
                             <div class="Evaluation_submit">
-                                <a href="#"><p>不想給了</p></a>
-                                <a href=""><p>送出</p></a> 
+                                <a href="#">
+                                    <p>不想給了</p>
+                                </a>
+                                <a href="">
+                                    <p>送出</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -127,18 +131,18 @@
 
 <script>
     import $ from "jquery";
-    export default{
-        mounted(){
-            var i=0;
-            $(".list_slide").click(function(){
-                if(i==0){
-                    $("#ploygon").css("transform","rotateX(180deg)");
-                    i=1;
-                }else{
-                    $("#ploygon").css("transform","rotateX(0deg)");
-                    i=0;
+    export default {
+        mounted() {
+            var i = 0;
+            $(".list_slide").click(function () {
+                if (i == 0) {
+                    $("#ploygon").css("transform", "rotateX(180deg)");
+                    i = 1;
+                } else {
+                    $("#ploygon").css("transform", "rotateX(0deg)");
+                    i = 0;
                 }
-                
+
                 $(".slide").toggleClass("display");
             });
         }
