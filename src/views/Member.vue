@@ -55,6 +55,7 @@ import $ from "jquery";
 export default {
   mounted() {
     if (window.innerWidth < 768) {
+      $("aside.left").addClass("popover");
       $("button.btn_drawer").on("click", function() {
         $("aside.left").toggleClass("popover");
       });
@@ -62,6 +63,7 @@ export default {
 
     $(window).resize(function() {
       if (window.innerWidth < 768) {
+        $("aside.left").addClass("popover");
         $("button.btn_drawer").on("click", function() {
           $("aside.left").toggleClass("popover");
         });
