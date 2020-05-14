@@ -57,7 +57,7 @@ export default {
     };
   },
   created(){
-    const api ="/api/api_adminSellerManage.php";
+    const api ="./api/api_adminSellerManage.php";
 
     this.$http
     .post(api) // 將api承接到的資料post出去

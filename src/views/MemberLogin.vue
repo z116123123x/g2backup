@@ -107,7 +107,7 @@ export default {
   },
   methods: {
     login: function() {
-      const api = "/api/api_memberLogin.php";
+      const api = "./api/api_memberLogin.php";
 
       this.$http
         .post(api, JSON.stringify(this.member))
@@ -139,7 +139,7 @@ export default {
       form.mail = "";
     },
     signup: function() {
-      const api = "/api/api_memberSignup.php";
+      const api = "./api/api_memberSignup.php";
 
       for (let i in this.form) {
         if (this.form[i] == "") {
