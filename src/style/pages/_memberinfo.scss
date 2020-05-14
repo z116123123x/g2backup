@@ -33,7 +33,7 @@ div.information {
     @include rwd(medium) {
       display: block;
       width: 100%;
-      padding-top: 30%;
+      padding-top: 10%;
     }
 
     > .bottom_form {
@@ -74,7 +74,7 @@ div.information {
       > .information_right {
         display: inline-block;
         text-align: start;
-        float: right;
+
         background-color: white;
         box-sizing: border-box;
         padding-top: 50px;
@@ -107,7 +107,6 @@ div.information {
           }
         }
         > .submit_button {
-          float: right;
           margin-top: 20px;
           display: inline-block;
           border-radius: 5px;
