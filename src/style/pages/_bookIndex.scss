@@ -1,9 +1,7 @@
 .fruit_index {
-    // border: 1px solid blue;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    // padding: 20px;
     position: relative;
     //display: none;
 
@@ -18,7 +16,7 @@
         background-size: contain;
     }
 
-    .bk_content {
+    .bk_content1 {
         // border: 1px solid red;
         display: inline-block;
         box-sizing: border-box;
@@ -188,7 +186,7 @@
     }
 
     @include rwd(small) {
-        .bk_content {
+        .bk_content1 {
             display: block;
             width: 100%;
             height: 20%;
@@ -230,14 +228,13 @@
     }
 
     @include rwd(mobile) {
-        .bk_content {
-            height: 18%;
+        .bk_content1 {
 
             h5 {
-                margin: 10% 20px;
+                margin: 5% 20px;
             }
             .bk_content_img {
-                margin-top: 15%;
+                margin-top: 5%;
             }
             ul {
                 margin: 10% 20px;
@@ -254,12 +251,7 @@
 @include rwd (small) {
     .fruit_index {
         &::before {
-            right: 0;
-            top: 10%;
-            transform: rotate(270deg);
-            width: 120px;
-            height: 50px;
-            background-color: #fff;
+            display: none;
         }
     }
 }
@@ -267,9 +259,7 @@
 @include rwd (mobile) {
     .fruit_index {
         overflow: hidden;
-
-        &::before {
-            display: none;
-        }
+        // display: none;
+        width: 100%;
     }
 }

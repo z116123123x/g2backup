@@ -7,9 +7,6 @@ $color5: #ffa978;
 .ItemWrapper{
   width: 100%;
   height: 100%;
-  // @include rwd(medium) {
-  //   width: 80%;
-  // }
 }
 
 .CommodityWrapper{
@@ -41,7 +38,6 @@ $color5: #ffa978;
             max-width: 100%;
             max-height: 100%;
             margin-top: 0;
-            // height: 50%;
             .CommodityContentImg{
               width: 100%;
               height: 100%;
@@ -63,7 +59,6 @@ $color5: #ffa978;
       width: 40%;
       height: 100%;
       display: inline-block;
-      // border: 1px solid red;
       @include rwd(medium) {
         margin-top: 40px;
       }
@@ -90,7 +85,6 @@ $color5: #ffa978;
               font-size: 16px;
               line-height: 26px;
               margin: 0 20px;
-                span{}
             }
             .CommodityFocus{
               margin: 30px 20px;
@@ -139,7 +133,6 @@ $color5: #ffa978;
                   }
                 }
                 &::before {
-                  // display: inline-block;
                   position: absolute;
                   content: "";
                   height: 10px;
@@ -147,7 +140,6 @@ $color5: #ffa978;
                   background-image: url(./../assets/blog_line.svg);
                   background-repeat: no-repeat;
                   background-size: cover;
-                  // transform: translateY(200%);
                   bottom: 0;
                 }
             }
@@ -166,7 +158,6 @@ $color5: #ffa978;
                   font-size: 16px;
                   line-height: 26px;
                   margin: 0 20px;
-                    span{}
                 }
             }
         }
@@ -197,9 +188,6 @@ $color5: #ffa978;
         transform: translateY(-8px);
       }
       .SellerInformation{
-        // border: 1px solid #000;
-        // display: inline-block;
-        // align-items: center;
         margin: 0 15px;
         display: flex;
         align-items: center;
@@ -210,14 +198,11 @@ $color5: #ffa978;
           margin: 30px 0;
           justify-content: center;
         }
-        img{
-        }
         p{
           font-size: 16px;
           margin: 0 15px;
           display: inline-block;
                     @include rwd(small) {
-            // margin: 0 5px;
           }
         }
         .TrackBtn{
@@ -227,9 +212,6 @@ $color5: #ffa978;
           padding: 5px;
           border-radius: 16px;
           color: white;
-          @include rwd(medium) {
-            // margin: 5px 10px;
-          }
           @include rwd(small) {
             display: inline-block;
           }
@@ -276,50 +258,60 @@ $color5: #ffa978;
     margin: 0 auto; 
     position: relative; 
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    border: 1px solid #000;
     @include rwd(large) {
-      width: 100%;
+      width: 900px;
+    }
+    @include rwd(medium) {
+      width: 700px;
+    }
+    @include rwd(small) {
+      width: 550px;
+      height: 400px;
+    }
+    @include rwd(mobile) {
+      display: none;
+    }
+    h2{
+      font-size: 20px;
     }
     #CommodityCarouselList{
     list-style: none; 
     position: absolute; 
-    padding: 0 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    padding: 0 0 0 37.5px;
+    left: 0;
     margin: 50px 0;
+    width: 3000px;
+    transition: left 1s;
     @include rwd(large) {
-      grid-template-columns: 1fr 1fr;
+      width: 6000px;
+      padding: 0 0 0 30px;
+    }
+    @include rwd(medium) {
+      padding: 0 0 0 100px;
     }
     @include rwd(small) {
-      grid-template-columns: 1fr;
+      padding: 0 0 0 12.5px ;
     }
       .CommodityCarouselConten{ 
-        // margin: 0 10px;
-        // border: 1px solid #000;
+        margin: 0 37.5px;
+        width: 300px;
+        float: left;
+        @include rwd(large) {
+          margin: 0 60px;
+        }
+        @include rwd(medium) {
+          margin: 0 101px;
+        }
+        @include rwd(small) {
+          margin: 13.5px;
+          width: 500px;
+        }
+        .CommodityCarousel{
+          margin: 0;
+        }
       }
     }
-    #naDiv{
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    }
-    #naDiv a{
-    float: right;
-    width: 15px;
-    height: 15px;
-    background-color: black;
-    border-radius: 100%;
-    opacity: 0.5;
-    margin: 0 5px;
-    }
-    #naDiv a:hover{
-    background-color: darkgray;
-    }
-    .arrow{
+    #arrowright,#arrowleft{
       position: absolute;
       top: 50%;
       text-decoration: none;
@@ -332,13 +324,13 @@ $color5: #ffa978;
       font-size: 30px; 
       background: $color2; 
     } 
-    .arrow:hover{
+    .arrowright:hover{
       background-color: darkgray;
     }
-    .arrow-left{
+    #arrowleft{
       left: 10px;
     }
-    .arrow-right{ 
+    #arrowright{ 
       right: 10px; 
     }
 

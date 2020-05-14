@@ -1848,12 +1848,47 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      member: {
+        memId: '1',
+        memPsw: '123',
+      },
+    };
   },
-  created() {},
+  created() {
+    const api = '/api/api_blog.php';
+    // let xhr = new XMLHttpRequest();
+    // xhr.open('Post', 'http://localhost/api/api_blog.php', true);
+    // xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+
+    // let dataInfo = `${JSON.stringify(member)}`;
+    // // console.log(dataInfo);
+    // xhr.send(dataInfo);
+    // xhr.onload = function() {
+    //   if (xhr.status == 200) {
+    //     console.log(xhr.responseText);
+    //   }
+    // };
+
+    this.$http
+      .post(api, JSON.stringify(this.member))
+      .then((res) => {
+        if (res.data != '') {
+          // console.log(res.data);
+
+          sessionStorage.setItem('abc', JSON.stringify(res.data));
+          // sessionStorage.clear();
+          let abc = sessionStorage.getItem('abc');
+          console.log(JSON.parse(abc));
+        } else {
+          console.log(res.error);
+        }
+      })
+      .catch((err) => console.log(err));
+
+    // console.log(aa);
+  },
   computed: {},
-  methods: {
-    logout() {},
-  },
+  methods: {},
 };
 </script>
