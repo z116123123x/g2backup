@@ -55,7 +55,7 @@ export default {
     };
   },
   mounted() {
-    const api = "./api/api_memberStatus.php";
+    const api = "/api/api_memberStatus.php";
 
     this.$http
       .post(api)
