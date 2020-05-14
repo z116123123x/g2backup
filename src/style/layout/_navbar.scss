@@ -5,10 +5,12 @@
   justify-content: flex-end;
   box-sizing: border-box;
   padding: 0px 1%;
-
+  transition: all 0.5s;
   height: 60px;
   width: 100%;
   z-index: 999;
+  // background-color: whitesmoke;
+  // opacity: 0.9;
 
   #home {
     position: absolute;
@@ -71,7 +73,7 @@
     span {
       padding: 0px 10px;
       cursor: pointer;
-      
+
       @include rwd(small) {
         padding: 0 5px;
       }
