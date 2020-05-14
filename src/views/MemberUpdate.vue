@@ -97,7 +97,7 @@ export default {
   },
   methods: {
     update: function() {
-      const api = "./api/api_memberUpdate.php";
+      const api = "/api/api_memberUpdate.php";
 
       this.$http
         .post(api, JSON.stringify(this.member))
@@ -114,7 +114,7 @@ export default {
         .catch(err => console.log(err));
     },
     updateSession: function() {
-      const api = "./api/api_memberUpdateSession.php";
+      const api = "/api/api_memberUpdateSession.php";
 
       this.$http
         .post(api, JSON.stringify(this.member))
