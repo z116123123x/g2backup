@@ -4,23 +4,26 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap");
 
 .login {
-  position: fixed;
-  top: 0;
-  left: 0;
   font-family: jf open 粉圓1.1;
+  position: fixed;
   width: 100%;
   height: 100%;
 }
 
 .welcome {
   background-color: #62b45a;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 150px 30px;
   border-radius: 5px;
   width: 800px;
+  @include rwd(small) {
+    padding: 0;
+    width: 300px;
+    padding: 10px;
+  }
 
   > .leftbox,
   .rightbox {
@@ -28,6 +31,9 @@ body {
     transition: 1s all ease;
     text-align: center;
     display: inline-block;
+    @include rwd(small) {
+      display: none;
+    }
 
     > h1 {
       color: #666;
@@ -65,6 +71,11 @@ body {
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
     z-index: 2;
+    @include rwd(small) {
+      position: static;
+      width: 300px;
+      margin: 0 auto;
+    }
 
     > form {
       display: flex;
@@ -73,7 +84,6 @@ body {
 
     > .signup {
       text-align: center;
-      height: 100%;
 
       > h1 {
         color: #333;
@@ -82,14 +92,8 @@ body {
       }
 
       > form.less-padding {
-        font-size: 20px;
         line-height: 2;
         text-align: center;
-
-        label {
-          color: #666;
-          font-size: 1.6rem;
-        }
 
         > .formarea {
           margin-top: 30px;
@@ -99,37 +103,86 @@ body {
           > .formtext {
             text-align: end;
             line-height: 2;
-            width: 120px;
+            width: 140px;
+            @include rwd(small) {
+              width: 120px;
+            }
+            label {
+              color: #666;
+              font-size: 2rem;
+              @include rwd(small) {
+                font-size: 1.4rem;
+              }
+            }
           }
 
           > form.forminputbox {
-            width: 300px;
+            width: 280px;
+            line-height: 3.2;
+            @include rwd(small) {
+              width: 260px;
+              line-height: 2.4;
+            }
+
+            input {
+              font-size: 1.6rem;
+            }
+
             .from_gender {
               line-height: 2.7;
               margin: 0 auto;
-              font-size: 1.6rem;
+              font-size: 2rem;
               color: #666;
               text-align: left;
-              width: 247px;
+              width: 150px;
+              @include rwd(small) {
+                line-height: 2;
+                font-size: 1.6rem;
+              }
             }
           }
         }
 
         > .signupsubmit {
-          margin-top: 20px;
           background-color: white;
           box-shadow: 10px 7px #007552;
-          margin-left: 140px;
+          margin: 0 auto;
+          margin-top: 20px;
           width: 30%;
           height: 60px;
           z-index: 3;
-          font-size: 16px;
+          transition: 0.3s ease;
+          border: 2px solid #007552;
+          cursor: pointer;
+
           transition: 0.3s ease;
           cursor: pointer;
+          @include rwd(small) {
+            width: 100px;
+            height: 60px;
+          }
           > p {
             display: inline-block;
             line-height: 60px;
             font-size: 2rem;
+          }
+        }
+
+        .switch_btn {
+          margin-top: 20px;
+          display: none;
+          @include rwd(small) {
+            display: block;
+          }
+          span {
+            font-size: 1.6rem;
+            color: #333;
+          }
+          #switch_signup {
+            font-size: 1.6rem;
+            text-decoration: underline;
+            cursor: pointer;
+            color: #007552;
           }
         }
 
@@ -150,7 +203,6 @@ body {
 
     > .signin {
       text-align: center;
-      height: 100%;
 
       > h1 {
         color: #333;
@@ -163,27 +215,42 @@ body {
         margin-top: 30px;
         width: 420px;
         line-height: 3;
+        padding-bottom: 171px;
+        @include rwd(small) {
+          width: auto;
+          padding-bottom: 100px;
+        }
         label {
           color: #666;
           line-height: 3;
           font-size: 1.6rem;
           width: 120px;
+          @include rwd(small) {
+            width: 60px;
+          }
         }
         input {
           margin-left: 20px;
+          @include rwd(small) {
+            width: 200px;
+          }
         }
 
         > .signinsubmit {
           background-color: white;
           box-shadow: 10px 7px #007552;
           margin: 0 auto;
-          margin-top: 30px;
+          margin-top: 20px;
           width: 30%;
           height: 60px;
           z-index: 3;
           transition: 0.3s ease;
           border: 2px solid #007552;
           cursor: pointer;
+          @include rwd(small) {
+            width: 100px;
+            height: 60px;
+          }
           > p {
             display: inline-block;
             font-size: 2rem;
@@ -196,7 +263,30 @@ body {
           transform: translate(10px, 7px);
           box-shadow: 0 0 0 0 #007552;
         }
+
+        .switch_btn {
+          margin-top: 20px;
+          display: none;
+          @include rwd(small) {
+            display: block;
+          }
+          span {
+            font-size: 1.6rem;
+            color: #333;
+          }
+          #switch_signin {
+            font-size: 1.6rem;
+            text-decoration: underline;
+            cursor: pointer;
+            color: #007552;
+          }
+        }
       }
     }
   }
+}
+
+.nodisplayblock {
+  display: block;
+  // transition: all .5s ease;
 }
