@@ -103,7 +103,7 @@ export default {
       top: 0,
       type: "spring",
       index: 0,
-      change: false
+      change: true
     };
   },
   mounted() {
