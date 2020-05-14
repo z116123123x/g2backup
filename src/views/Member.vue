@@ -44,7 +44,7 @@
           <router-link to="/farm/info"> </router-link>
         </div>
       </div>
-      <button type="button" class="btn_drawer">>></button>
+      <button type="button" class="btn_drawer">&#9658;</button>
     </aside>
     <router-view @update="update" />
   </div>
@@ -54,18 +54,21 @@
 import $ from "jquery";
 export default {
   mounted() {
-    if (window.innerWidth < 767) {
-      $("aside.left").css("transform", "translateX(-93%)");
+    if (window.innerWidth < 768) {
       $("button.btn_drawer").on("click", function() {
-        var x = 0;
-        if (x == 0) {
-          $("aside.left").css("transform", "translateX(0%)");
-          x = 1;
-        } else {
-          $("aside.left").css("transform", "translateX(-93%)");
-        }
+        $("aside.left").toggleClass("popover");
       });
     }
+
+    $(window).resize(function() {
+      if (window.innerWidth < 768) {
+        $("button.btn_drawer").on("click", function() {
+          $("aside.left").toggleClass("popover");
+        });
+      } else {
+        $("aside.left").removeClass("popover");
+      }
+    });
   },
   methods: {
     update: function(s) {
