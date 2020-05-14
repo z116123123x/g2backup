@@ -24,12 +24,7 @@
 </template>
 <script>
 export default {
-  data() {
-
-    return{
-      name
-    }
-  },
+ 
   methods: {
     changeImg: function(e) {
       const path = e.target.src;
