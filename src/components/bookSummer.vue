@@ -24,7 +24,7 @@
 </template>
 <script>
 export default {
- 
+  props: { type: Number, page: Number },
   methods: {
     changeImg: function(e) {
       const path = e.target.src;
