@@ -182,7 +182,7 @@
 
               <div class="card_content">
                 <div class="commodity_title">
-                  <div class="commodity_title_text">蜜蕉乾 零添加</div>
+                  <div class="commodity_title_text">{{item.itemName}}</div>
                 </div>
 
                 <div class="card_tag">
@@ -191,7 +191,7 @@
                 </div>
 
                 <div class="card_price">
-                  <span class="money">550</span>
+                  <span class="money">{{item.money}}</span>
                 </div>
 
                 <div class="buy">
@@ -524,6 +524,14 @@
 import $ from "jquery";
 import { gsap, TweenMax, Power1, Power3, TimelineMax, Linear } from "gsap";
 export default {
+  data() {
+    return {
+      item: {
+        money: 0,
+        itemName: ""
+      }
+    };
+  },
   mounted() {
     function showHideHam() {
       let filterPanel = document.getElementById("filterPanel");
@@ -651,6 +659,17 @@ export default {
         y: 0
       });
     });
+
+    const api = "/api/api_item.php";
+
+    this.$http
+      .post(api)
+      .then(res => {
+        const data = res.data;
+        this.item.itemName = data.name;
+        this.item.money = data.price;
+      })
+      .catch(err => console.log(err));
   }
 };
 </script>

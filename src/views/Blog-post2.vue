@@ -215,14 +215,13 @@
               <!--小卡片-->
               <!--小卡片-->
               <div class="blog-post2-small-card-container">
-                <router-link
+                <!--<router-link
                   to="/main/blog/landing"
                   class="blog-post2-small-card"
                 >
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
-                      <!--讚!!-->
                       <div>
                         <img src="@/assets/blog-img/blog-thumb.png" />
                       </div>
@@ -266,7 +265,6 @@
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
-                      <!--讚!!-->
                       <div>
                         <img src="@/assets/blog-img/blog-thumb.png" />
                       </div>
@@ -310,7 +308,6 @@
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
-                      <!--讚!!-->
                       <div>
                         <img src="@/assets/blog-img/blog-thumb.png" />
                       </div>
@@ -354,7 +351,6 @@
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
-                      <!--讚!!-->
                       <div>
                         <img src="@/assets/blog-img/blog-thumb.png" />
                       </div>
@@ -398,7 +394,6 @@
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
-                      <!--讚!!-->
                       <div>
                         <img src="@/assets/blog-img/blog-thumb.png" />
                       </div>
@@ -442,7 +437,6 @@
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
-                      <!--讚!!-->
                       <div>
                         <img src="@/assets/blog-img/blog-thumb.png" />
                       </div>
@@ -486,7 +480,6 @@
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
-                      <!--讚!!-->
                       <div>
                         <img src="@/assets/blog-img/blog-thumb.png" />
                       </div>
@@ -530,7 +523,6 @@
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
-                      <!--讚!!-->
                       <div>
                         <img src="@/assets/blog-img/blog-thumb.png" />
                       </div>
@@ -566,15 +558,16 @@
                       <span>+追蹤</span>
                     </div>
                   </div>
-                </router-link>
+                </router-link>-->
                 <router-link
                   to="/main/blog/landing"
                   class="blog-post2-small-card"
+                  v-for="(i, index) in aa"
+                  :key="index"
                 >
                   <div>
                     <img src="@/assets/blog-img/post/grape.png" />
                     <div>
-                      <!--讚!!-->
                       <div>
                         <img src="@/assets/blog-img/blog-thumb.png" />
                       </div>
@@ -1850,9 +1843,9 @@ export default {
   data() {
     return {
       member: {
-        memId: '1',
-        memPsw: '123',
+        no: [1, 2, 3],
       },
+      aa: null,
     };
   },
   created() {
@@ -1876,10 +1869,14 @@ export default {
         if (res.data != '') {
           // console.log(res.data);
 
-          sessionStorage.setItem('abc', JSON.stringify(res.data));
+          // sessionStorage.setItem('abc', JSON.stringify(res.data));
           // sessionStorage.clear();
-          let abc = sessionStorage.getItem('abc');
-          console.log(JSON.parse(abc));
+          // let abc = sessionStorage.getItem('abc');
+          this.aa = res.data;
+          // console.log(this.aa[0].content);
+          // console.log(this.aa[1].content);
+
+          console.log(this.aa);
         } else {
           console.log(res.error);
         }

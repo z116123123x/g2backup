@@ -29,6 +29,7 @@
                     :id="index"
                     :key="item.id"
                     @click="changeType(item.type)"
+                    class="book_link"
                   >
                     {{item.name}}
                     <!-- <router-link class="book_link" :to="'/main/book/'+ item.path">{{item.name}}</router-link> -->
@@ -133,7 +134,7 @@ export default {
         this.index = 1;
         this.change = false;
       } else if (t == 2) {
-        this.type = "full";
+        this.type = "fall";
         this.index = 2;
         this.change = false;
       } else if (t == 3) {
