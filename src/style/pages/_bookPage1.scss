@@ -371,17 +371,6 @@ $color-green:#5fbc55;
                         }
                     }
 
-                    //秋天
-                    .fruit_start_img_fall {
-                        background-image: none;
-
-                        .img_content {
-                            left: 50%;
-                            width: 180px;
-                            border-radius: 10px;
-                        }
-                    }
-
                     @include rwd(medium) {
                         .fruit_start_img {
                             width: 150px;
@@ -418,26 +407,6 @@ $color-green:#5fbc55;
                     }
                 }
 
-                @include rwd(small) {
-                    .fruit_start {
-                        position: relative;
-                        height: 50%;
-                        padding: 20px;
-
-                        &::before {
-                            content: "";
-                            width: 100%;
-                            height: 100%;
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            -webkit-clip-path: polygon(56% 0, 100% 0, 100% 100%, 0% 100%);
-                            clip-path: polygon(56% 0, 100% 0, 100% 100%, 0% 100%);
-                            background-color: rgba(255, 208, 191, .8);
-                        }
-                    }
-                }
-
                 @include rwd(mobile) {
                     .fruit_start {
                         position: relative;
@@ -445,7 +414,6 @@ $color-green:#5fbc55;
                         padding: 20px;
                     }
                 }
-
                 .fruit_intro {
                     @include baseset();
                     height: 50%;
@@ -577,19 +545,6 @@ $color-green:#5fbc55;
 
                 }
 
-                .summer_fruit_time {
-                    background-color: #b1840a;
-
-                    ul {
-                        li {
-                            background-color: #f6d16b;
-                        }
-                    }
-
-                    .fruit_timeline {
-                        background-color: #f6d16b;
-                    }
-                }
 
                 @include rwd(small) {
                     .fruit_time {
@@ -614,7 +569,7 @@ $color-green:#5fbc55;
 
                 .fruit_video_year {
                     >video {
-                        width: auto;
+                        width: 280px;
                         height: 180px;
                     }
                 }
@@ -840,8 +795,25 @@ $color-green:#5fbc55;
                 .bk_ct_left {
 
                     .fruit_start {
-
                         @content;
+
+                        @include rwd(small) {
+                            position: relative;
+                            height: 50%;
+                            padding: 20px;
+                            &::before {
+                                content: "";
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                -webkit-clip-path: polygon(56% 0, 100% 0, 100% 100%, 0% 100%);
+                                clip-path: polygon(56% 0, 100% 0, 100% 100%, 0% 100%);
+                                background-color: rgba(255, 208, 191, .8);
+                                @content;
+                            }
+                        }
                     }
                 }
             }
@@ -853,8 +825,10 @@ $color-green:#5fbc55;
         @include path {
 
             h1 {
-                color:#c4ce7c;
-                &::before,&::after{
+                color: #c4ce7c;
+
+                &::before,
+                &::after {
                     z-index: -1;
                     background-image: url("../assets/book_img/leaf_year.svg");
                 }
@@ -862,12 +836,13 @@ $color-green:#5fbc55;
         }
 
     }
+
     &.summer {
-
-        @include path {
-
+        
+      @include path {
             h1 {
-                color:#f6d16b;             
+                color: #f6d16b;
+
                 &::after,
                 &::before {
                     z-index: -1;
@@ -876,27 +851,50 @@ $color-green:#5fbc55;
             }
         }
     }
+
     &.fall {
 
         @include path {
 
             h1 {
-                color:#e19b6b;             
+                color: #d89f79;
+
                 &::after,
                 &::before {
                     z-index: -1;
                     background-image: url("../assets/book_img/leaf.svg");
                 }
             }
+
+            .fruit_start_img {
+                background-image: none;
+
+                .img_content {
+                    left: 50%;
+                    width: 180px;
+                    border-radius: 10px;
+                    &:hover{
+                        width: 180px;
+                    }
+                    @include rwd(mobile){
+                        width: 220px;
+                        padding-top: 200px;
+                        top:100%;
+                    }
+                }
+            }
+
         }
 
     }
+
     &.winter {
 
         @include path {
 
             h1 {
-                color:#87b0e7;             
+                color: #87b0e7;
+
                 &::after,
                 &::before {
                     z-index: -1;
@@ -906,50 +904,83 @@ $color-green:#5fbc55;
         }
 
     }
-    
+
     //page2-rightother
-    @mixin pathRight{
+    @mixin pathRight {
         .bk_All {
-            .book_layout{
-                .bk_ct_right{
+            .book_layout {
+                .bk_ct_right {
                     @content;
                 }
             }
         }
     }
-    &.summer{
-        @include pathRight{
-            &::before{
+
+    &.summer {
+        @include pathRight {
+            &::before {
                 background-color: #ffe398;
             }
-            .fruit_time{
-                background-color:#dd7c0d;
-                ul{
-                    li{
+
+            .fruit_time {
+                background-color: #dd7c0d;
+
+                ul {
+                    li {
                         background-color: #f3c452;
                     }
                 }
-                .fruit_timeline{
+
+                .fruit_timeline {
                     background-color: rgb(80, 41, 9);
                 }
             }
         }
 
     }
-    &.fall{
-        @include pathRight{
-            &::before{
-                background-color: #e19b6b;
+
+    &.fall {
+        @include pathRight {
+            &::before {
+                background-color: #f0a97a;
             }
-            .fruit_time{
-                background-color:#dd7c0d;
-                ul{
-                    li{
-                        background-color: #f3c452;
+
+            .fruit_time {
+                background-color: #dd7c0d;
+
+                ul {
+                    li {
+                        background-color: #5a3410;
                     }
                 }
-                .fruit_timeline{
-                    background-color: rgb(80, 41, 9);
+
+                .fruit_timeline {
+                    background-color: rgb(133, 59, 16);
+                }
+            }
+        }
+
+    }
+
+    &.winter {
+        @include pathRight {
+            &::before {
+                background-color: #97c4ff;
+                width: 80%;
+                height: 100%;
+            }
+
+            .fruit_time {
+                background-color: #105bbd;
+
+                ul {
+                    li {
+                        background-color: #07144d;
+                    }
+                }
+
+                .fruit_timeline {
+                    background-color: #97c4ff;
                 }
             }
         }
