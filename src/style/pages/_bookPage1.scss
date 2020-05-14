@@ -241,33 +241,6 @@ $color-green:#5fbc55;
                         }
                     }
 
-                    h1.summer_fruit_title {
-
-                        &::after,
-                        &::before {
-                            z-index: -1;
-                            background-image: url("../assets/book_img/binbo.svg");
-                        }
-                    }
-
-                    h1.winter_fruit_title {
-
-                        &::after,
-                        &::before {
-                            z-index: -1;
-                            background-image: url("../assets/book_img/snow.svg");
-                        }
-                    }
-
-                    h1.fall_fruit_title {
-
-                        &::after,
-                        &::before {
-                            z-index: -1;
-                            background-image: url("../assets/book_img/leaf.svg");
-                        }
-                    }
-
                     @mixin pic_center {
                         width: 120%;
                         height: auto;
@@ -328,6 +301,7 @@ $color-green:#5fbc55;
                         }
                     }
 
+                    //春天
                     .fruit_start_img {
                         //border: 1px solid red;
                         display: inline-block;
@@ -598,7 +572,7 @@ $color-green:#5fbc55;
                         width: 100px;
                         height: 10px;
                         position: relative;
-                        top: 25%;
+                        top: 20%;
                     }
 
                 }
@@ -836,12 +810,6 @@ $color-green:#5fbc55;
                 }
             }
 
-            .summer_bg {
-                &::before {
-                    background-color: #ffe6a2;
-                }
-            }
-
             .year_bg {
                 &::before {
                     background-color: #c4ce7c;
@@ -862,6 +830,7 @@ $color-green:#5fbc55;
         }
     }
 
+    //page1-left
     @mixin path {
 
         .bk_All {
@@ -879,15 +848,113 @@ $color-green:#5fbc55;
         }
     }
 
+    &.year {
+
+        @include path {
+
+            h1 {
+                color:#c4ce7c;
+                &::before,&::after{
+                    z-index: -1;
+                    background-image: url("../assets/book_img/leaf_year.svg");
+                }
+            }
+        }
+
+    }
     &.summer {
 
         @include path {
 
             h1 {
-
-                color: yellow;
+                color:#f6d16b;             
+                &::after,
+                &::before {
+                    z-index: -1;
+                    background-image: url("../assets/book_img/binbo.svg");
+                }
             }
         }
 
     }
+    &.fall {
+
+        @include path {
+
+            h1 {
+                color:#e19b6b;             
+                &::after,
+                &::before {
+                    z-index: -1;
+                    background-image: url("../assets/book_img/leaf.svg");
+                }
+            }
+        }
+
+    }
+    &.winter {
+
+        @include path {
+
+            h1 {
+                color:#87b0e7;             
+                &::after,
+                &::before {
+                    z-index: -1;
+                    background-image: url("../assets/book_img/snow.svg");
+                }
+            }
+        }
+
+    }
+    
+    //page2-rightother
+    @mixin pathRight{
+        .bk_All {
+            .book_layout{
+                .bk_ct_right{
+                    @content;
+                }
+            }
+        }
+    }
+    &.summer{
+        @include pathRight{
+            &::before{
+                background-color: #ffe398;
+            }
+            .fruit_time{
+                background-color:#dd7c0d;
+                ul{
+                    li{
+                        background-color: #f3c452;
+                    }
+                }
+                .fruit_timeline{
+                    background-color: rgb(80, 41, 9);
+                }
+            }
+        }
+
+    }
+    &.fall{
+        @include pathRight{
+            &::before{
+                background-color: #e19b6b;
+            }
+            .fruit_time{
+                background-color:#dd7c0d;
+                ul{
+                    li{
+                        background-color: #f3c452;
+                    }
+                }
+                .fruit_timeline{
+                    background-color: rgb(80, 41, 9);
+                }
+            }
+        }
+
+    }
+
 }
