@@ -103,7 +103,7 @@ export default {
     };
   },
   mounted() {
-    const api = "./api/api_memberStatus.php";
+    const api = "/api/api_memberStatus.php";
 
     this.$http
       .post(api)
@@ -129,7 +129,7 @@ export default {
   },
   methods: {
     logout() {
-      const api = "./api/api_memberLogout.php";
+      const api = "/api/api_memberLogout.php";
 
       this.$http.post(api);
 
@@ -142,7 +142,7 @@ export default {
       this.$router.push("/main");
     },
     login() {
-      const api = "./api/api_memberStatus.php";
+      const api = "/api/api_memberStatus.php";
 
       this.$http
         .post(api)

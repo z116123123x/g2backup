@@ -59,7 +59,7 @@ export default {
     },
     methods: {
         login: function() {
-            const login = "./api/api_adminLogin.php";
+            const login = "/api/api_adminLogin.php";
 
             this.$http
                 .post(login, JSON.stringify(this.member))
