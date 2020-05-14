@@ -1,21 +1,33 @@
 div.track {
   display: inline-block;
   background-color: #FBF8EF;
-  width: 87.2%;
+  width: 100%;
   height: auto;
 
   .track_head {
     color: #F7C845;
-    margin-top: 40px;
-    margin-left: 40px;
+    margin-top: 45px;
+    margin-left: 300px;
     font-size: 30px;
+    @include rwd(large){
+      margin-left: 180px;
+    }
+    @include rwd(medium){
+      margin-left: 130px;
+    }
+    @include rwd(small){
+      margin-left: 100px;
+    }
+    @include rwd(mobile){
+      margin-left: 20px;
+    }
   }
 
   .track_bottom {
     display: block;
     height: auto;
     text-align: center;
-    padding-left: 70px;
+    padding-left: 17%;
     @include rwd(mobile){
       padding-left: 5px;
     }
@@ -29,26 +41,26 @@ div.track {
         background-color: white;
         box-shadow: 10px -9px #007552;
         width: 260px;
-        margin-right: 260px;
+        margin-right: 173px;
         font-size: 17px;
-
+        
         @include rwd(large) {
-          width: 170px;
-          margin-right: 167.5px;
+          width: 260px;
+          margin-right: 40px;
           font-size: 17px;
         }
 
         @include rwd(medium) {
           width: 240px;
-          margin-right: 77px;
+          margin-right: 110px;
           margin-left: 30px;
           font-size: 16px;
         }
 
         @include rwd(mobile) {
-          width: 220px;
-          margin-right: 60px;
-          margin-left: 60px;
+          width: 260px;
+          margin-right: 0px;
+          margin-left: 0px;
           font-size: 17px;
         }
 
@@ -58,7 +70,7 @@ div.track {
             height: 30px;
             position: relative;
             top: 10px;
-            left: 130px;
+            left: 80%;
 
             >.img {
               width: 100%;
@@ -103,19 +115,215 @@ div.track {
         >.front_bottom {
           display: inline-block;
           text-align: start;
-          padding: 5px 9px;
-        }
+          margin-bottom: 20%;
+          padding: 5px 9px 0px 9px;
+          >.frontbutton{
+            position: relative;
+            top: 0;
+            left: 20%;
+            @include rwd(mobile){
+              top: 0%;
+              left: 22%;
+            }
+            >.track_button {
+              padding: 0px 10px;
+              color: #333;
+              box-sizing: border-box;
+              position: absolute;
+              top: 0;
+              left: 0%;
+              margin-top: 0%;
+              margin-left: 0%;
+              transform: translateX(-50%);
+              cursor: pointer;
+              font-size: 17px;
+              transition: all 0.5s;
 
-        .front_button {
-          display: block;
-          text-align: center;
-          margin-top: 20px;
-
-          >p {
-            display: inline-block;
-            padding-right: 20px;
+              // animation-name: home_title_animate;
+              // animation-duration: 1.5s;
+              // animation-iteration-count: infinite;
+              // animation-direction: alternate;
+              // animation-fill-mode: both;
+              background-color: #fbf8ef;
+              outline: none;
+              border: 2px solid #666;
+              z-index: 2;
+              font-weight: 600;
+              font-family: "Noto Serif TC", serif;
+              @include rwd(mobile) {
+                font-size: 17px;
+              }
+            
+              &::before {
+                position: absolute;
+                content: "";
+                transition: all 0.5s;
+                bottom: -14px;
+                height: 10px;
+                width: 100%;
+                left: 4px;
+                // animation-name: home_title_beforeanimate;
+                // animation-duration: 1.5s;
+                // animation-iteration-count: infinite;
+                // animation-direction: alternate;
+                // animation-fill-mode: both;
+                transform: skewX(45deg);
+                background-color: #f7c852;
+                border: 2px solid #666;
+                border-top: none;
+              }
+            
+              &::after {
+                position: absolute;
+                content: "";
+                transition: all 0.5s;
+                right: -13px;
+                height: 100%;
+                width: 9px;
+                bottom: -7px;
+                
+                // animation-name: home_title_afteranimate;
+                // animation-duration: 1.5s;
+                // animation-iteration-count: infinite;
+                // animation-direction: alternate;
+                // animation-fill-mode: both;
+                transform: skewY(45deg);
+                background-color: #f7c852;
+                border: 2px solid #666;
+                border-left: none;
+                border-bottom: none;
+              }
+            
+              // &:hover {
+              //   animation: none;
+              //   &::before {
+              //     animation: none;
+              //   }
+              //   &::after {
+              //     animation: none;
+              //   }
+              // }
+            
+              &:active {
+                margin-left: 10px;
+                margin-top: 10px;
+                &::before {
+                  bottom: -9px;
+                  height: 5px;
+                  left: 3px;
+                }
+            
+                &::after {
+                  right: -10px;
+                  width: 6px;
+                  bottom: -4px;
+                }
+              }
+            }
           }
+          >.frontbutton2{
+            position: relative;
+            top: 0%;
+            left: 26%;
+            >.track_button2 {
+              padding: 0px 10px;
+              color: #333;
+              box-sizing: border-box;
+              position: absolute;
+              top: 0;
+              left: 48%;
+              margin-top: 0%;
+              margin-left: 0%;
+              transform: translateX(-50%);
+              cursor: pointer;
+              font-size: 17px;
+              transition: all 0.5s;
+              // animation-name: home_title_animate;
+              // animation-duration: 1.5s;
+              // animation-iteration-count: infinite;
+              // animation-direction: alternate;
+              // animation-fill-mode: both;
+              background-color: #fbf8ef;
+              outline: none;
+              border: 2px solid #666;
+              z-index: 2;
+              font-weight: 600;
+              font-family: "Noto Serif TC", serif;
+              @include rwd(mobile) {
+                font-size: 17px;
+              }
+            
+              &::before {
+                position: absolute;
+                content: "";
+                transition: all 0.5s;
+                bottom: -14px;
+                height: 10px;
+                width: 100%;
+                left: 4px;
+                // animation-name: home_title_beforeanimate;
+                // animation-duration: 1.5s;
+                // animation-iteration-count: infinite;
+                // animation-direction: alternate;
+                // animation-fill-mode: both;
+                transform: skewX(45deg);
+                background-color: #f7c852;
+                border: 2px solid #666;
+                border-top: none;
+              }
+            
+              &::after {
+                position: absolute;
+                content: "";
+                transition: all 0.5s;
+                right: -13px;
+                height: 100%;
+                width: 9px;
+                bottom: -7px;
+                // animation-name: home_title_afteranimate;
+                // animation-duration: 1.5s;
+                // animation-iteration-count: infinite;
+                // animation-direction: alternate;
+                // animation-fill-mode: both;
+                transform: skewY(45deg);
+                background-color: #f7c852;
+                border: 2px solid #666;
+                border-left: none;
+                border-bottom: none;
+              }
+            
+              // &:hover {
+              //   animation: none;
+              //   &::before {
+              //     animation: none;
+              //   }
+              //   &::after {
+              //     animation: none;
+              //   }
+              // }
+            
+              &:active {
+                margin-left: 10px;
+                margin-top: 10px;
+                &::before {
+                  bottom: -9px;
+                  height: 5px;
+                  left: 3px;
+                }
+            
+                &::after {
+                  right: -10px;
+                  width: 6px;
+                  bottom: -4px;
+                }
+              }
+            }
+          }
+            
+
         }
+
+        
 
         // >.cardinfo{
         //   display: block;

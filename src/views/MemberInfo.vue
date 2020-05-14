@@ -11,8 +11,8 @@
           <ul>
             <li>果粉編號</li>
             <li>帳號</li>
-            <li>密碼</li>
-            <li>修改密碼</li>
+            <!-- <li>密碼</li> -->
+            <!-- <li>修改密碼</li> -->
             <li>果粉姓名</li>
             <li>暱稱</li>
             <li>性別</li>
@@ -23,13 +23,13 @@
         <div class="information_right">
           <p>{{no}}</p>
           <p>{{acc}}</p>
-          <p>XXXXXXXXXX</p>
-          <input type="text" />
-          <br />
+          <!-- <p>XXXXXXXXXX</p> -->
+          <!-- <input type="text" /> -->
+          <!-- <br /> -->
           <p>{{name}}</p>
           <p>{{nick}}</p>
           <p>{{gender}}</p>
-          <p>{{phone}}</p>
+          <p>0{{phone}}</p>
           <p>{{email}}</p>
           <div class="submit_button">
             <div class="correct">
@@ -54,8 +54,8 @@ export default {
       email: ""
     };
   },
-  created() {
-    const api = "/api/api_memberStatus.php";
+  mounted() {
+    const api = "./api/api_memberStatus.php";
 
     this.$http
       .post(api)

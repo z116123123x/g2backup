@@ -1,6 +1,7 @@
+
 <template>
-  <main class="wrapper">
-    <div class="market_header">
+  <main class="wrapper ItemWrapper">
+    <div class="market_header" style="background-color: #fbf8ef;">
       <div class="market_title"></div>
     </div>
 
@@ -44,10 +45,13 @@
     <section class="CommodityWrapper">
       <div class="CommodityContent">
         <div class="CommodityContentImgBox">
-          <img src alt class="CommodityContentImg" />
-          <img src alt class="CommodityContentImg" />
-          <img src alt class="CommodityContentImg" />
-          <!--  <img src="../assets/shop/market_showImg_front.svg" alt class="commodityContentImg" /> -->
+          <div class="CommodityContentImgMain">
+            <img src="../assets/shop/ia_300000013.jpg" alt class="CommodityContentImg" />
+          </div>
+          <div class="CommodityContentImgChangeBox">
+            <img src="../assets/ia_300000017.jpg" alt class="CommodityContentChangeImg" />
+            <img src="../assets/ia_300000011.jpg" alt class="CommodityContentChangeImg" />
+          </div>
         </div>
         <div class="CommodityContenText">
           <div class="CommodityContenTextBox">
@@ -120,14 +124,274 @@
           </div>
         </div>
       </div>
+      <div class="SellerInformationBox">
+        <div class="SellerInformation">
+          <img
+            src="../assets/shop/BenjaminAidoo.jpg"
+            alt
+            height="60px"
+            width="60px"
+            style="border-radius: 100%;"
+          />
+          <p>Benjamin Aidoo</p>
+          <div class="TrackBtn">＋追蹤</div>
+        </div>
+        <div class="SellerReviewsBox">
+          <div class="SellerReviews">
+            <div class="Reviews">5.0</div>
+            <div class="StarBox">
+              <img src="../assets/icon/star.svg" alt width="20" height="20" />
+              <img src="../assets/icon/star.svg" alt width="20" height="20" />
+              <img src="../assets/icon/star.svg" alt width="20" height="20" />
+              <img src="../assets/icon/star.svg" alt width="20" height="20" />
+              <img src="../assets/icon/star.svg" alt width="20" height="20" />
+            </div>
+          </div>
+        </div>
+        <div class="SellerInformationTextBox">
+          <p>
+            Owner and founder of Nana Otafrija
+            Creator of the Coffin Dance
+            humble and kind person
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- <div class="footer-box">
+    <!--輪播-->
+    <div id="carouselWrap">
+      <h2>相關商品：</h2>
+      <ul id="CommodityCarouselList">
+        <li class="CommodityCarouselConten">
+          <div class="CommodityCarousel commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="CommodityCarouselConten">
+          <div class="CommodityCarousel commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="CommodityCarouselConten">
+          <div class="CommodityCarousel commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="CommodityCarouselConten">
+          <div class="CommodityCarousel commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="CommodityCarousel">
+          <div class="CommodityCarouselConten commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="CommodityCarousel">
+          <div class="CommodityCarouselConten commodity">
+            <div class="card_img_box">
+              <img src="../assets/ia_300000017.jpg" width="100%" height="100%" title="蜜蕉乾 零添加" />
+            </div>
+
+            <div class="card_content">
+              <div class="commodity_title">
+                <div class="commodity_title_text">蜜蕉乾 零添加</div>
+              </div>
+
+              <div class="card_tag">
+                <img src="../assets/icon/tag.svg" alt width="16px" height="16px" class="tag_icon" />
+                <span class="card_tag_text">24hr宅配到府</span>
+              </div>
+
+              <div class="card_price">
+                <span class="money">550</span>
+              </div>
+
+              <div class="buy">
+                <a href="#" class="card_btn">加入購物籃</a>
+                <a href="#" class="card_btn">直接購買</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--左右按鍵-->
+      <input
+        type="button"
+        id="arrowleft"
+        value="<"
+        style="font-weight:bold;font-size:20px"
+        disabled
+      />
+      <input type="button" id="arrowright" value=">" style="font-weight:bold;font-size:20px" />
+    </div>
+
+    <div class="footer-box">
       <Footer />
-    </div>-->
+    </div>
   </main>
+  
 </template>
-// <script>
-// import "../js/shop";
-// export default {};
+
+<script>
+let panelView = -1127;
+let maxIndex = 1;
+window.addEventListener("resize", function() {
+  if (window.innerWidth >= 1200) {
+    panelView = -1127;
+    maxIndex = 1;
+  } else if (window.innerWidth > 991) {
+    panelView = -840;
+    maxIndex = 2;
+  } else if (window.innerWidth > 767) {
+    panelView = -503;
+    maxIndex = 5;
+  } else {
+    panelView = -528;
+    maxIndex = 5;
+  }
+  console.log(panelView);
+});
+
+import $ from "jquery";
+import { gsap, TweenMax, Power1, Power3, TimelineMax, Linear } from "gsap";
+export default {
+  mounted() {
+    function $id(id) {
+      return document.getElementById(id);
+    }
+    let wrap = document.getElementById("CommodityCarouselList");
+    var curIndex = 0;
+    $id("arrowleft").onclick = function() {
+      console.log(panelView);
+      curIndex--;
+      wrap.style.left = panelView * curIndex + "px";
+      $id("arrowright").disabled = false;
+      if (curIndex == 0) {
+        $id("arrowleft").disabled = true;
+      }
+    };
+
+    $id("arrowright").onclick = function() {
+      // console.log(n);
+
+      curIndex++;
+      wrap.style.left = panelView * curIndex + "px";
+      $id("arrowleft").disabled = false;
+      if (curIndex == maxIndex) {
+        $id("arrowright").disabled = true;
+      }
+    };
+  }
+};
 </script>

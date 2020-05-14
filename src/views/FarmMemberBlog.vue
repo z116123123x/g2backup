@@ -7,106 +7,103 @@
         </div>
         <div class="plusbutton">
             <div class="plus">
-                <router-link to="/farm/blogupdate"><p>新增商品</p></router-link>
-                
+                <router-link to="/farm/blogupdate">
+                    <p>新增商品</p>
+                </router-link>
+
             </div>
         </div>
         <div class="FarmBlog_bottom">
             <div class="list_1">
-                    <div class="list_th">
-                        <p class="num">日誌編號</p>
-                        <p class="name">標題</p>
-                        <p class="price">內容</p>
-                        <p class="time">發文時間</p>
-                        <p class="puton">狀態</p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-                    <div class="list_td">
-                        <p>xxxx</p>
-                        <p>出發囉！賞螢採梅尋浪...  </p>
-                        <p>台南梅嶺，這是一個有... </p>
-                        <p>2020-04-16 11:22</p>
-                        <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable" for="switch">Toggle</label></p>
-                    </div>
-
+                <div class="Blognum">
+                    <p class="title">商品編號</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
+                    <p>xxxx</p>
                 </div>
+                <div class="Blogname">
+                    <p class="title">名稱</p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                    <p>出發囉！賞螢採梅尋浪... </p>
+                </div>
+                <div class="Blogcontent">
+                    <p class="title">內容</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                    <p>台南梅嶺，這是一個有...</p>
+                </div>
+                <div class="Blogtime">
+                    <p class="title">發文時間</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                    <p>2020-04-16 11:22</p>
+                </div>
+                <div class="Blogputon">
+                    <p class="title">上架狀態</p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                    <p><input class="statusBtn" type="checkbox" id="switch" /><label class="statuslable"
+                            for="switch">Toggle</label></p>
+                </div>
+
+            </div>
 
 
             <div class="pagination_block">

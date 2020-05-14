@@ -1,6 +1,6 @@
 <template>
-  <div class="bk_Spring">
-    <component :page="currentTab.page" :is="currentTab.index"></component>
+  <div class="bk_All">
+    <component :page="currentTab.page" :contentType="pageType" :is="currentTab.index"></component>
     <div class="change_bookpage">
       <div v-for="tab in tabs" :key="tab.name" :class="'changebutton' + tab.class">
         <button v-if="tab.status == true" @click="toggleTab(tab)"></button>
@@ -13,6 +13,7 @@ import index from "@/views/BookSeasonIndex";
 import page1 from "@/views/BookSeasonPage1";
 import page2 from "@/views/BookSeasonPage2";
 export default {
+  props: ["contentIndex"],
   data() {
     return {
       currentTab: [],
@@ -35,6 +36,12 @@ export default {
       index: "index",
       page: 0
     };
+  },
+  computed: {
+    pageType: function() {
+      this.rePage();
+      return this.contentIndex;
+    }
   },
   methods: {
     toggleTab: function(tab) {
@@ -84,6 +91,12 @@ export default {
       } else if (this.currentTab.page == 0) {
         this.tabs[0].status = false;
       }
+    },
+    rePage: function() {
+      this.currentTab = {
+        index: "index",
+        page: 0
+      };
     }
   },
   components: {

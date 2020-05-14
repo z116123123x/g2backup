@@ -1,7 +1,7 @@
 div.FarmList {
     display: inline-block;
     background-color: #FBF8EF;
-    width: 87.2%;
+    width: 100%;
     height: 100%;
     font-size: 16px;
     @include rwd(large) {
@@ -21,15 +21,44 @@ div.FarmList {
     }
     .FarmList_head {
         color: #F7C845;
-        margin-top: 40px;
-        margin-left: 40px;
+        margin-top: 45px;
+        margin-left: 300px;
         font-size: 30px;
+        @include rwd(large) {
+            margin-left: 180px;
+        }
+
+        @include rwd(medium) {
+            margin-left: 140px;
+        }
+
+        @include rwd(small) {
+            margin-left: 120px;
+        }
+
+        @include rwd(mobile) {
+            margin-left: 20px;
+        }
     }
 
     .plusbutton {
         display: block;
-        margin: 20px 0px 20px 40px;
+        margin: 20px 0px 20px 300px;
+        @include rwd(large) {
+            margin: 20px 0px 20px 180px;
+        }
 
+        @include rwd(medium) {
+            margin: 20px 0px 20px 140px;
+        }
+
+        @include rwd(small) {
+            margin: 20px 0px 20px 120px;
+        }
+
+        @include rwd(mobile) {
+            margin: 20px 0px 20px 20px;
+        }
         >.plus {
             display: inline-block;
             border: 1px solid #007552;
@@ -49,188 +78,347 @@ div.FarmList {
     .FarmList_bottom {
         display: block;
         height: auto;
+        width: 100%;
         text-align: center;
-        margin-top: 140px;
 
         >.list_1 {
 
-            display: block;
-            width: 800px;
+            display: flex;
             height: auto;
             text-align: start;
-            margin: auto;
+            margin-left: 30%;
+            @include rwd(large) {
+                margin-left: 13%;
+            }
+
             @include rwd(medium) {
-                width: 81%;
-                margin-left: 130px;
+                margin-left: 13%;
             }
 
             @include rwd(small) {
-                width: 92%;
-                margin-left: 50px;
+                margin-left: 13%;
             }
 
             @include rwd(mobile) {
-                width: 111%;
-                margin-left: 8px;
+                margin-left: 4%;
             }
-            >.list_th {
-                display: inline-block;
-                box-sizing: border-box;
-                background-color: #F7C845;
-                width: 778px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                color: #007552;
-                margin: auto;
-                @include rwd(medium) {
-                    width: 92%;
-                }
-
-                @include rwd(small) {
-                    width: 92%;
-                }
-
-                @include rwd(mobile) {
-                    width: 100%;
-                }
-                >.num {
-                    display: inline-block;
-                    box-sizing: border-box;
-                    padding: 0 24px;
-                    @include rwd(medium) {
-                        padding: 0 10px;
-                    }
-
-                    @include rwd(small) {
-                        padding: 0 16px;
-                    }
-
-                    @include rwd(mobile) {
-                        padding: 0 5px;
-                    }
-                }
-
-                >.name {
-                    display: inline-block;
-                    box-sizing: border-box;
-                    padding: 0 33px;
-                    @include rwd(medium) {
-                        padding: 0 29px;
-                    }
-
-                    @include rwd(small) {
-                        padding: 0 43px;
-                    }
-
-                    @include rwd(mobile) {
-                        padding: 0 31px;
-                    }
-                }
-
-                >.price {
-                    display: inline-block;
-                    box-sizing: border-box;
-                    padding: 0 48px;
-                    @include rwd(medium) {
-                        padding: 0 50px;
-                    }
-
-                    @include rwd(small) {
-                        padding: 0 50px;
-                    }
-
-                    @include rwd(mobile) {
-                        padding: 0 5px;
-                    }
-                }
-
-                >.time {
-                    display: inline-block;
-                    box-sizing: border-box;
-                    padding: 0 12px;
-                    @include rwd(medium) {
-                        padding: 0 4px;
-                    }
-
-                    @include rwd(small) {
-                        padding: 0 22px;
-                    }
-
-                    @include rwd(mobile) {
-                        padding: 0 5px;
-                    }
-                }
-
-                >.puton {
-                    display: inline-block;
-                    box-sizing: border-box;
-                    padding: 0 25px;
-                    @include rwd(medium) {
-                        padding: 0 10px;
-                    }
-
-                    @include rwd(small) {
-                        padding: 0 10px;
-                    }
-
-                    @include rwd(mobile) {
-                        padding: 0 5px;
-                    }
-                }
-
-                >.puton2 {
-                    display: inline-block;
-                    box-sizing: border-box;
-                    padding: 0 10px;
-                }
-            }
-
-            >.list_td {
-                border: 1px solid #F7C845;
-                border-bottom: 0px;
-                border-top: 0px;
+            >.Listnum {
+                width: 10%;
+                text-align: center;
                 background-color: white;
-                display: inline-block;
-                box-sizing: border-box;
-                width: 778px;
-                margin: auto;
-                @include rwd(medium) {
-                    width: 92%;
+                @include rwd(small){
+                    width: 16%;
                 }
-
-                @include rwd(small) {
-                    width: 92%;
-                }
-
                 @include rwd(mobile) {
-                    width: 100%;
+                    width: 13%;
                 }
-                >p {
-                    display: inline-block;
-                    padding: 10px 23.4px;
-                    @include rwd(medium) {
-                        padding: 10px 5.6px;
-                    }
 
-                    @include rwd(small) {
-                        padding: 10px 13.7px;
-                    }
-
+                >.title {
+                    background-color: #F7C845;
+                    padding: 20px 0px 20px 0px;
+                    margin-bottom: 44px;
                     @include rwd(mobile) {
-                        padding: 10px 5.3px;
-                        font-size: 12px;
+                        margin-bottom: 44px;
+                        padding: 20px 0px 20px 0px;
                     }
                 }
 
-                >a {
-                    color: black;
-                    text-decoration: none;
-                    margin: 0px 40px;
+                >p {
+                    padding: 20px 0px 36px 0px;
+                    @include rwd(large){
+                        padding: 0px 0px 36.8px 0px; 
+                    }
+                    @include rwd(medium){
+                        padding: 0px 0px 54.1px 0px;
+                    }
+                    @include rwd(small){
+                        padding: 0px 0px 70px 0px;
+                    }
+                    @include rwd(mobile) {
+                        padding: 0px 0px 123px 0px;
+                    }
                 }
             }
 
-            >.list_td:last-child {
-                border-bottom: 1px solid #F7C845;
+            >.Listdate {
+                width: 12%;
+                text-align: center;
+                background-color: white;
+
+                @include rwd(large) {
+                    width: 19.3%;
+                }
+
+                @include rwd(medium) {
+                    width: 23.4%;
+                }
+
+                @include rwd(small) {
+                    width: 28.5%;
+                }
+
+                @include rwd(mobile) {
+                    width: 13%;
+                }
+
+                >.title {
+                    background-color: #F7C845;
+                    padding: 20px 0px 20px 0px;
+                    margin-bottom: 66px;
+                    @include rwd(medium){
+                        padding: 20px 0px 20px 0px;
+                    }
+                    @include rwd(mobile) {
+                        margin-bottom: 28px;
+                        padding: 20px 0px 20px 0px;
+                    }
+                }
+
+                >p {
+                    padding: 0px 0px 56px 0px;
+                    @include rwd(large){
+                        padding: 0px 0px 37px 0px;
+                    }
+                    @include rwd(medium){
+                        padding: 0px 0px 54.1px 0px;
+                    }
+                    @include rwd(small){
+                        padding: 0px 0px 54.1px 0px;
+                    }
+                    @include rwd(mobile){
+                        padding: 0px 0px 91px 0px;
+                    }
+                }
+            }
+
+            >.Listprice {
+                width: 10%;
+                text-align: center;
+                background-color: white;
+
+                @include rwd(mobile) {
+                    width: 14%;
+                }
+
+                >.title {
+                    background-color: #F7C845;
+                    padding: 20px 0px 20px 0px;
+                    margin-bottom: 66px;
+                    @include rwd(mobile) {
+                        padding: 28px 0px 28px 0px;
+                        margin-bottom: 44px;
+                    }
+                }
+
+                >p {
+                    padding: 0px 0px 56px 0px;
+                    @include rwd(large){
+                        padding: 0px 0px 37px 0px;
+                    }
+                    @include rwd(medium){
+                        padding: 0px 0px 54.1px 0px;
+                    }
+                    @include rwd(small){
+                        padding: 0px 0px 70px 0px;
+                    }
+                    @include rwd(mobile) {
+                        padding: 0px 0px 123px 0px;
+                    }
+                }
+            }
+
+            >.Listname {
+                width: 10%;
+                text-align: center;
+                background-color: white;
+
+                @include rwd(large) {
+                    width: 16.8%;
+                }
+
+                @include rwd(medium) {
+                    width: 20.3%;
+                }
+
+                @include rwd(small) {
+                    width: 24.7%;
+                }
+
+                @include rwd(mobile) {
+                    width: 14%;
+                }
+
+                >.title {
+                    background-color: #F7C845;
+                    padding: 20px 0px 20px 0px;
+                    margin-bottom: 66px;
+                    @include rwd(mobile) {
+                        padding: 28px 0px 28px 0px;
+                        margin-bottom: 44px;
+                    }
+                }
+
+                >p {
+                    padding: 0px 0px 56px 0px;
+                    @include rwd(large){
+                        padding: 0px 0px 37px 0px;
+                    }
+                    @include rwd(medium){
+                        padding: 0px 0px 54.1px 0px;
+                    }
+                    @include rwd(small){
+                        padding: 0px 0px 70px 0px;
+                    }
+                    @include rwd(mobile){
+                        padding: 0px 0px 123px 0px;
+                    }
+                }
+            }
+            >.Listpay {
+                width: 10%;
+                text-align: center;
+                background-color: white;
+
+                @include rwd(large) {
+                    width: 16.8%;
+                }
+
+                @include rwd(medium) {
+                    width: 20.3%;
+                }
+
+                @include rwd(small) {
+                    width: 24.7%;
+                }
+
+                @include rwd(mobile) {
+                    width: 13%;
+                }
+
+                >.title {
+                    background-color: #F7C845;
+                    padding: 20px 0px 20px 0px;
+                    margin-bottom: 66px;
+                    @include rwd(mobile) {
+                        padding: 20px 0px 20px 0px;
+                        margin-bottom: 36px;
+                    }
+                }
+
+                >p {
+                    padding: 0px 0px 56px 0px;
+                    @include rwd(large){
+                        padding: 0px 0px 37px 0px;
+                    }
+                    @include rwd(medium){
+                        padding: 0px 0px 54.1px 0px;
+                    }
+                    @include rwd(small){
+                        padding: 0px 0px 70px 0px;
+                    }
+                    @include rwd(mobile){
+                        padding: 0px 0px 107px 0px;
+                    }
+                }
+            }
+            >.Liststatus {
+                width: 10%;
+                text-align: center;
+                background-color: white;
+
+                @include rwd(large) {
+                    width: 16.8%;
+                }
+
+                @include rwd(medium) {
+                    width: 20.3%;
+                }
+
+                @include rwd(small) {
+                    width: 24.7%;
+                }
+
+                @include rwd(mobile) {
+                    width: 13%;
+                }
+
+                >.title {
+                    background-color: #F7C845;
+                    padding: 20px 0px 20px 0px;
+                    margin-bottom: 66px;
+                    @include rwd(mobile) {
+                        padding: 20px 0px 20px 0px;
+                        margin-bottom: 36px;
+                    }
+                }
+
+                >p {
+                    padding: 0px 0px 56px 0px;
+                    @include rwd(large){
+                        padding: 0px 0px 37px 0px;
+                    }
+                    @include rwd(medium){
+                        padding: 0px 0px 54.1px 0px;
+                    }
+                    @include rwd(small){
+                        padding: 0px 0px 70px 0px;
+                    }
+                    @include rwd(mobile){
+                        padding: 0px 0px 107px 0px;
+                    }
+                }
+            }
+            >.Listdetail {
+                width: 15%;
+                text-align: center;
+                background-color: white;
+
+                @include rwd(large) {
+                    width: 16.8%;
+                }
+
+                @include rwd(medium) {
+                    width: 20.3%;
+                }
+
+                @include rwd(small) {
+                    width: 24.7%;
+                }
+
+                @include rwd(mobile) {
+                    width: 18.6%;
+                }
+
+                >.title {
+                    background-color: #F7C845;
+                    padding: 20px 0px 36px 0px;
+                    margin-bottom: 66px;
+                    @include rwd(mobile) {
+                        padding: 20px 0px 52px 0px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                >a{
+                    text-decoration: none;
+                    color: black;
+                    >p {
+                        padding: 0px 0px 56px 0px;
+                        @include rwd(large){
+                            padding: 20px 0px 37px 0px;
+                        }
+                        @include rwd(medium){
+                            padding: 20px 0px 54.1px 0px;
+                        }
+                        @include rwd(small){
+                            padding: 20px 0px 70px 0px;
+                        }
+                        @include rwd(mobile){
+                            padding: 47px 0px 76px 0px;
+                        }
+                    }
+                }
+                
             }
 
         }
@@ -240,7 +428,7 @@ div.FarmList {
             display: block;
             margin: auto;
             margin-top: 20px;
-            margin-left: 10px;
+            margin-left: 13%;
             @include rwd(medium) {
                 margin-left: 0px;
                 margin-bottom: 10px;
@@ -249,6 +437,9 @@ div.FarmList {
             @include rwd(mobile) {
                 text-align: center;
                 margin-left: 30px;
+            }
+            @include rwd(small){
+                margin-left: 13%;
             }
             >ul.pagination {
                 list-style: none;

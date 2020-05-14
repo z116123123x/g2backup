@@ -10,7 +10,7 @@
       <router-link
         class="login_logout"
         to="/loginMember"
-        v-if="status == false && reload != true"
+        v-if="status == false && session != true"
       >登入/註冊</router-link>
       <button class="logout" v-else @click="logout">登出</button>
     </div>
@@ -102,8 +102,8 @@ export default {
       userName: ""
     };
   },
-  created() {
-    const api = "/api/api_memberStatus.php";
+  mounted() {
+    const api = "./api/api_memberStatus.php";
 
     this.$http
       .post(api)
@@ -120,16 +120,16 @@ export default {
       .catch(err => console.log(err));
   },
   computed: {
-    reload: function() {
-
+    session: function() {
       // 6. 偵聽到 memberStatus 有變動，觸發 login 方法，並回傳值到上面v-if狀態的顯示判斷
+
       this.login();
       return this.memberStatus;
     }
   },
   methods: {
     logout() {
-      const api = "/api/api_memberLogout.php";
+      const api = "./api/api_memberLogout.php";
 
       this.$http.post(api);
 
@@ -142,7 +142,7 @@ export default {
       this.$router.push("/main");
     },
     login() {
-      const api = "/api/api_memberStatus.php";
+      const api = "./api/api_memberStatus.php";
 
       this.$http
         .post(api)

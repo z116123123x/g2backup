@@ -2,17 +2,26 @@ div.product {
     display: inline-block;
     color: #007552;
     background-color: #FBF8EF;
-    width: 87.2%;
+    width: 100%;
     height: 100vh;
     vertical-align: top;
 
     .product_right_head {
         color: #F7C845;
-        margin-top: 40px;
-        margin-left: 40px;
+        margin-top: 45px;
+        margin-left: 300px;
         font-size: 30px;
+        @include rwd(large){
+            margin-left: 160px;
+        }
+        @include rwd(medium){
+            margin-left: 130px;
+        }
+        @include rwd(small){
+            margin-left: 100px;
+        }
         @include rwd(mobile){
-            margin-left: 28px;
+            margin-left: 15px;
         }
         >.product_right_head_text {
             span.new {
@@ -27,12 +36,11 @@ div.product {
         display: block;
         height: auto;
         text-align: center;
-
+        @include rwd(medium){
+            margin-left: 78px;
+        }
         @include rwd(mobile) {
-            display: block;
-            text-align: center;
-            width: 100%;
-            margin-left: 30px;
+            margin-left: 20px;
         }
 
         >.bottom_form {
@@ -41,7 +49,7 @@ div.product {
             line-height: 3;
 
             @include rwd(small) {
-                margin-top: 40px;
+                margin-top: 120px;
                 line-height: 1.8;
             }
 
@@ -62,11 +70,11 @@ div.product {
                 padding: 50px 0px;
 
                 @include rwd(medium) {
-                    width: 200px;
+                    width: 25%;
                 }
 
                 @include rwd(small) {
-                    width: 100px;
+                    width: 25%;
                 }
 
                 @include rwd(mobile) {
@@ -86,12 +94,19 @@ div.product {
 
                     >.p_num {
                         padding-top: 5px;
+                        @include rwd(medium){
+                            padding-top: 5px;
+                            padding-bottom: 16px;
+                        }
                         @include rwd(mobile){
                             padding-top: 5px;
                             padding-bottom: 16px;
                         }
                     }
                     >.p_name{
+                        @include rwd(medium){
+                            padding-bottom: 27px;
+                        }
                         @include rwd(mobile){
                             padding-bottom: 27px;
                         }
@@ -99,11 +114,17 @@ div.product {
 
                     >.p_text {
                         padding-bottom: 80px;
+                        @include rwd(medium){
+                            padding-bottom: 108px;
+                        }
                         @include rwd(mobile){
                             padding-bottom: 108px;
                         }
                     }
                     >.p_img{
+                        @include rwd(medium){
+                            padding-bottom: 18px;
+                        }
                         @include rwd(mobile){
                             padding-bottom: 18px;
                         }
@@ -111,6 +132,9 @@ div.product {
 
                     >.p_tag {
                         padding-bottom: 56px;
+                        @include rwd(medium){
+                            padding-bottom: 0;
+                        }
                         @include rwd(mobile){
                             padding-bottom: 0;
                         }
@@ -132,13 +156,13 @@ div.product {
                 line-height: 3.14;
 
                 @include rwd(medium) {
-                    width: 200px;
+                    width: 42%;
                     line-height: 3.3;
                 }
 
                 @include rwd(small) {
                     padding-right: 120px;
-                    width: 143px;
+                    width: 40%;
                     height: 500px;
                     line-height: 3.1;
                 }
@@ -149,7 +173,7 @@ div.product {
                     padding-bottom: 77px;
                     padding-top: 47px;
                     padding-left: 5px;
-                    width: 60%;
+                    width: 55%;
                     line-height: 3.3;
                 }
 
@@ -213,6 +237,9 @@ div.product {
                         padding: 0;
                         margin-right: 4px;
                         margin-bottom: 10px;
+                        @include rwd(medium){
+                            width: 74px;
+                        }
                     }
                 }
 
@@ -220,7 +247,7 @@ div.product {
                     position: absolute;
                     right: 30px;
                     bottom: 10px;
-
+                    line-height: 2;
                     >.cancel {
                         display: inline-block;
                         border-radius: 10px;
