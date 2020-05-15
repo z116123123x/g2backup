@@ -214,6 +214,7 @@
               <!--小卡片-->
               <!--小卡片-->
               <!--小卡片-->
+
               <div class="blog-post2-small-card-container">
                 <!--<router-link
                   to="/main/blog/landing"
@@ -562,7 +563,7 @@
                 <router-link
                   to="/main/blog/landing"
                   class="blog-post2-small-card"
-                  v-for="(i, index) in aa"
+                  v-for="(i, index) in blogArrFilter"
                   :key="index"
                 >
                   <div>
@@ -577,13 +578,13 @@
                     </div>
                   </div>
                   <div>
-                    <p>2020-04-08</p>
-                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
+                    <p>{{ i.date }}</p>
+                    <p>{{ i.title }}</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
+                    <p>{{ i.content }}</p>
                   </div>
                   <div>
                     <div>
@@ -1556,6 +1557,7 @@
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 1;
           overflow: hidden;
+          // background-color:#000;
         }
         > p:nth-child(3) {
           margin-top: 25px;
@@ -1742,11 +1744,18 @@
           font-size: 14px;
         }
         > p:nth-child(4) {
+          //內文
           margin-top: 10px;
           padding-bottom: 10px;
-          line-height: 1.2;
+          line-height: 1.3;
           font-size: 16px;
-          //內文
+          // background-color:#000;
+          overflow: hidden;
+          height: 92px;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 5;
         }
       }
       > div:nth-child(3) {
@@ -1839,23 +1848,35 @@
 </style>
 
 <script>
+import $ from 'jquery';
 export default {
   data() {
     return {
       member: {
         no: [1, 2, 3],
       },
-      aa: null,
+      blogArr: null,
+      blogArrFilter: [],
     };
   },
+  beforeMount() {
+    // this.findclass();
+  },
+  updated() {
+    let bb = document.getElementsByClassName('blog-post2-small-card')[5];
+    // console.log(bb[8]);
+    // bb.setAttribute('class', 'blog-post2-small-card nine');
+    bb.classList.add('nine');
+  },
   created() {
+    // this.bb = 1;
     const api = '/api/api_blog.php';
     // let xhr = new XMLHttpRequest();
     // xhr.open('Post', 'http://localhost/api/api_blog.php', true);
     // xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
 
     // let dataInfo = `${JSON.stringify(member)}`;
-    // // console.log(dataInfo);
+    //  console.log(dataInfo);
     // xhr.send(dataInfo);
     // xhr.onload = function() {
     //   if (xhr.status == 200) {
@@ -1872,20 +1893,34 @@ export default {
           // sessionStorage.setItem('abc', JSON.stringify(res.data));
           // sessionStorage.clear();
           // let abc = sessionStorage.getItem('abc');
-          this.aa = res.data;
+          this.blogArr = res.data;
           // console.log(this.aa[0].content);
           // console.log(this.aa[1].content);
-
-          console.log(this.aa);
+          // console.log(this.aa);
+          for (var i = 1; i < 10; i++) {
+            console.log(this.blogArr[i]);
+            this.blogArrFilter.push(this.blogArr[i]);
+          }
         } else {
           console.log(res.error);
         }
       })
       .catch((err) => console.log(err));
-
-    // console.log(aa);
   },
   computed: {},
+
   methods: {},
 };
+// $(window).ready(function() {
+//   var bb = document.getElementsByClassName('blog-post2-small-card')[0];
+//   setInterval(function() {
+//     console.log(bb);
+//   }, 100);
+// });
+// var bb = document.getElementsByClassName('blog-post2-small-card')[0];
+// setInterval(function() {
+//   console.log(bb);
+// }, 500);
+
+// bb.style.display = 'none';
 </script>
