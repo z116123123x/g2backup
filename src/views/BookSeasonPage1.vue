@@ -20,6 +20,7 @@ import PageLeftWinter from "@/components/bookWinter";
 import PageLeftYear from "@/components/bookSpring";
 
 export default {
+  // 8. 接收到父元件的自定義變數 contentType 的值，更新上面的內容顯示
   props: { page: Number, contentType: Number },
   data() {
     return {
