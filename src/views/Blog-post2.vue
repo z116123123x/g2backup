@@ -1657,7 +1657,7 @@
         @media (max-width: 9999px) {
           display: none;
         }
-        @media (max-width: 1879px) {
+        @media (max-width: 1896px) {
           display: inline-block;
         }
         @media (max-width: 1400px) {
