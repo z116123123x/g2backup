@@ -93,6 +93,10 @@ export default {
       left: "Spring"
     };
   },
+  created(){
+
+    this.changeContent();
+  },
   computed: {
     content: function() {
       this.changeContent();

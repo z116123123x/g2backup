@@ -1,6 +1,6 @@
 <template>
   <div class="fruit_start">
-    <h1 style="color:#f6d16b;" class="summer_fruit_title">西瓜</h1>
+    <h1>西瓜{{name}}</h1>
     <div class="summer_pic">
       <div>
         <img id="big" src="@/assets/book_img/spring/plum/plum01.jpg" />
