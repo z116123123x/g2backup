@@ -62,9 +62,7 @@
 
             &:hover {
                 background-color: #ffbf108a;
-
                 &::after {
-
                     opacity: 1;
                 }
             }
@@ -216,6 +214,7 @@
 
                 li {
                     display: inline-block;
+                    padding: 10px;
 
                     &:hover {
                         width: auto;
