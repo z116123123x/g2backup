@@ -1088,6 +1088,13 @@ window.addEventListener("load", () => {
 
     // Only update on animation frames
     window.addEventListener("scroll", function() {
+      // $(function() {
+      //   if ($(window).scrollTop() > 0 || $(window).scrollLeft() > 0) {
+      //     $("#nav").css({ "background-color": "whitesmoke", opacity: "0.9" });
+      //   } else {
+      //     $("#nav").css({ "background-color": "transparent" });
+      //   }
+      // });
       if (!requestId) {
         requestId = requestAnimationFrame(update);
       }
@@ -1190,6 +1197,7 @@ window.addEventListener("load", () => {
       e.stopPropagation();
       return false;
     }
+
     function btnStop() {
       $("#scroll_btn").attr("disabled", false);
       $("html").off("scroll mousewheel touchmove", stopScrolling);

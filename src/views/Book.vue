@@ -24,14 +24,15 @@
                   <p class="book_link" @click="changeType(5)">總目錄</p>
                 </div>
                 <ul class="tag">
+                  <!-- 1. 點選季節標籤，發送來自 item(tabs) 的 type 值給 changeType() -->
                   <li
                     v-for="(item, index) in tabs"
                     :id="index"
                     :key="item.id"
                     @click="changeType(item.type)"
+                    class="book_link"
                   >
                     {{item.name}}
-                    <!-- <router-link class="book_link" :to="'/main/book/'+ item.path">{{item.name}}</router-link> -->
                   </li>
                 </ul>
               </div>
@@ -44,10 +45,12 @@
                   <div class="pagepaper"></div>
                 </div>
                 <!-- bookcontent書籍內容 -->
+                <!-- 4. 傳 data 的 type 值給 class 屬性去動態切換 class -->
                 <div id="bk_content" :class="type">
+                  <!-- 4. 偵測到 data 的更新，傳 data 的 change 值給 v-if 判斷要顯示哪一個元件 -->
+                  <!-- 4. 傳 data 的 index 值給子元件(BookContent.vue)的自定義名稱 -> contentIndex -->
                   <Content v-if="change == false" :contentIndex="index"></Content>
                   <Index v-if="change == true"></Index>
-                  <!-- <router-view /> -->
                   <!-- fruit_knowledge -->
                 </div>
                 <!-- 右切換按鈕 -->
@@ -61,13 +64,7 @@
           </div>
         </div>
       </div>
-      <!-- <div id="book_footer">
-                <Footer />
-      </div>-->
     </section>
-    <!-- <div id="book_footer">
-                <Footer />
-    </div>-->
   </div>
 </template>
 <script>
@@ -101,9 +98,10 @@ export default {
       ],
       i: 0,
       top: 0,
+      // 3. 接收到 changeType() 的更新
       type: "spring",
       index: 0,
-      change: false
+      change: true
     };
   },
   mounted() {
@@ -123,6 +121,7 @@ export default {
         document.getElementById("move_img").style = `left:${this.i}%;`;
       }
     },
+    // 2. t 接收到 type 值，並更新 this(data) 的 type、index、change 值
     changeType: function(t) {
       if (t == 0) {
         this.type = "spring";
@@ -133,7 +132,7 @@ export default {
         this.index = 1;
         this.change = false;
       } else if (t == 2) {
-        this.type = "full";
+        this.type = "fall";
         this.index = 2;
         this.change = false;
       } else if (t == 3) {
