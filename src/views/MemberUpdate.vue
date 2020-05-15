@@ -21,8 +21,8 @@
           </ul>
         </div>
         <div class="update_right">
-          <p>{{member.no}}</p>
-          <p>{{member.acc}}</p>
+          <p>{{ member.no }}</p>
+          <p>{{ member.acc }}</p>
           <!-- <input type="text">
           <br>-->
           <button type="button">修改密碼</button>
@@ -31,7 +31,28 @@
           <br />
           <input type="text" v-model="member.nick" />
           <br />
-          <p>{{member.gender}}</p>
+          <div>
+            <input
+              type="radio"
+              v-model="member.gender"
+              value="男"
+              name="gender"
+            />男
+            <input
+              type="radio"
+              v-model="member.gender"
+              value="女"
+              name="gender"
+            />女
+            <input
+              type="radio"
+              v-model="member.gender"
+              value="其它"
+              name="gender"
+            />其它
+          </div>
+
+          <!-- <p>{{ member.gender }}</p>-->
           <!-- <label for=""><input type="radio">男</label>
                     <label for=""><input type="radio">女</label>
           <label for=""><input type="radio">其他</label>-->
@@ -61,8 +82,8 @@ export default {
         nick: "",
         gender: "",
         phone: "",
-        email: ""
-      }
+        email: "",
+      },
     };
   },
   created() {
@@ -70,7 +91,7 @@ export default {
 
     this.$http
       .post(api)
-      .then(res => {
+      .then((res) => {
         const data = res.data;
 
         if (data != "") {
@@ -80,7 +101,7 @@ export default {
             name: data.name,
             nick: data.nick,
             phone: 0 + data.phone,
-            email: data.email
+            email: data.email,
           };
 
           if (data.gender == 1) {
@@ -93,7 +114,7 @@ export default {
         }
       })
       // eslint-disable-next-line no-console
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   },
   methods: {
     update: function() {
@@ -101,7 +122,7 @@ export default {
 
       this.$http
         .post(api, JSON.stringify(this.member))
-        .then(res => {
+        .then((res) => {
           const data = res.data;
 
           if (data == "1") {
@@ -111,14 +132,14 @@ export default {
           }
         })
         // eslint-disable-next-line no-console
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     },
     updateSession: function() {
       const api = "/api/api_memberUpdateSession.php";
 
       this.$http
         .post(api, JSON.stringify(this.member))
-        .then(res => {
+        .then((res) => {
           const data = res.data;
 
           if (data != "") {
@@ -126,8 +147,8 @@ export default {
           }
         })
         // eslint-disable-next-line no-console
-        .catch(err => console.log(err));
-    }
-  }
+        .catch((err) => console.log(err));
+    },
+  },
 };
 </script>
