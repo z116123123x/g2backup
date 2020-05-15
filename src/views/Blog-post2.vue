@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-post-ousidebox" @click="findclass">
+  <div class="blog-post-ousidebox">
     <img src="@/assets/blog-img/blog-bar.png" />
     <br />
     <div class="blog-landing-container">
@@ -563,7 +563,7 @@
                 <router-link
                   to="/main/blog/landing"
                   class="blog-post2-small-card"
-                  v-for="(i, index) in aa"
+                  v-for="(i, index) in blogArrFilter"
                   :key="index"
                 >
                   <div>
@@ -1751,7 +1751,7 @@
           font-size: 16px;
           // background-color:#000;
           overflow: hidden;
-          height: 90px;
+          height: 92px;
           text-overflow: ellipsis;
           display: -webkit-box;
           -webkit-box-orient: vertical;
@@ -1855,8 +1855,8 @@ export default {
       member: {
         no: [1, 2, 3],
       },
-      aa: null,
-      bb: 0,
+      blogArr: null,
+      blogArrFilter: [],
     };
   },
   beforeMount() {
@@ -1869,14 +1869,14 @@ export default {
     bb.classList.add('nine');
   },
   created() {
-    this.bb = 1;
+    // this.bb = 1;
     const api = '/api/api_blog.php';
     // let xhr = new XMLHttpRequest();
     // xhr.open('Post', 'http://localhost/api/api_blog.php', true);
     // xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
 
     // let dataInfo = `${JSON.stringify(member)}`;
-    // // console.log(dataInfo);
+    //  console.log(dataInfo);
     // xhr.send(dataInfo);
     // xhr.onload = function() {
     //   if (xhr.status == 200) {
@@ -1893,25 +1893,23 @@ export default {
           // sessionStorage.setItem('abc', JSON.stringify(res.data));
           // sessionStorage.clear();
           // let abc = sessionStorage.getItem('abc');
-          this.aa = res.data;
+          this.blogArr = res.data;
           // console.log(this.aa[0].content);
           // console.log(this.aa[1].content);
-
           // console.log(this.aa);
+          for (var i = 1; i < 10; i++) {
+            console.log(this.blogArr[i]);
+            this.blogArrFilter.push(this.blogArr[i]);
+          }
         } else {
           console.log(res.error);
         }
       })
       .catch((err) => console.log(err));
   },
-
   computed: {},
 
-  methods: {
-    findclass() {
-      console.log(this.aa[8]);
-    },
-  },
+  methods: {},
 };
 // $(window).ready(function() {
 //   var bb = document.getElementsByClassName('blog-post2-small-card')[0];
