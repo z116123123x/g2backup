@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="msContainer">
     <main class="AdminMainContent">
       <h1 class="manageTitle">管理員 管理中心</h1>
 

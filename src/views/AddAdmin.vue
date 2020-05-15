@@ -80,6 +80,8 @@ export default {
         .post(api, JSON.stringify(this.addAdmin))
         .then(res => {
           this.data = res.data;
+          alert(" 資料新增完成 ٩(･ิᴗ･ิ๑)۶ ");
+          this.$router.go(-1);
         })
         .catch(err => console.log(err));
     }
