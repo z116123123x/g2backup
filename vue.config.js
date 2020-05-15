@@ -1,6 +1,6 @@
 module.exports = {
     // publicPath: "/demo-projects/DD106/DD106G2/",
-    // productionSourceMap: false,
+    productionSourceMap: false,
     pages: {
 
         main: {
