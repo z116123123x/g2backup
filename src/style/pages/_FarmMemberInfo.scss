@@ -1,40 +1,39 @@
 div.farminfo {
     display: inline-block;
-    color: #007552;
-    background-color: #FBF8EF;
-    width: 100%;
-    height: auto;
-    vertical-align: top;
-    @include rwd(mobile){
-        width: 95%;
-    }
+  color: #007552;
+  background-color: #fbf8ef;
+  width: calc(100% - 250px);
+  height: 100vh;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 60px 40px;
+
+  @include rwd(medium) {
+    float: right;
+    width: calc(100% - 200px);
+  }
+
+  @include rwd(small) {
+    float: none;
+    width: 100vw;
+    padding: 10% 5%;
+  }
     .farminfo_head {
-        color: #F7C845;
-        margin-top: 45px;
-        margin-left: 300px;
-        font-size: 30px;
-        @include rwd(large){
-            margin-left: 160px;
-            margin-bottom: 10px;
-        }
-        @include rwd(medium){
-            margin-left: 130px;
-        }
-        @include rwd(small){
-            margin-left: 90px;
-        }
-        @include rwd(mobile){
-            margin-left: 20px;
-        }
+        color: #f7c845;
+    font-size: 3rem;
     }
 
     .farminfo_bottom {
         display: block;
-        height: auto;
-        text-align: center;
-        @include rwd(mobile){
-            padding-left: 20px;
-        }
+    text-align: center;
+    padding-top: 100px;
+    margin: 0 auto;
+
+    @include rwd(medium) {
+        display: block;
+        width: 100%;
+        padding-top: 10%;
+      }
         >.top_card {
             display: inline-block;
             border: 3px solid #007552;

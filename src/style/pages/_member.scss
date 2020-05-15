@@ -115,22 +115,13 @@ div.membercontain {
       margin: 0 auto;
       padding-top: 50px;
       border-radius: 5px;
-      > .befarm {
+      > .befarm,.changefarm {
         a {
           text-decoration: none;
-          .become_farmer {
+          .become_farmer,.goto_farmer {
             width: 100px;
             font-weight: 800;
           }
-        }
-      }
-
-      > .changefarm {
-        text-align: center;
-        margin-top: 60px;
-
-        > a {
-          text-decoration: none;
         }
       }
     }
