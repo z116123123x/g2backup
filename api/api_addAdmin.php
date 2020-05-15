@@ -16,13 +16,10 @@ try {
     
     echo json_encode($addAdminInfo);
 
-    function showMsg() {
-        $message = "資料新增完成 ٩(･ิᴗ･ิ๑)۶";
-        echo "<script type='text/javascript'>alert('$message');</script>";
-        header("Location:./AdminManage.vue");
-      }
-      
-    showMsg();
+
+        // echo "<script> alert('資料新增完成 ٩(･ิᴗ･ิ๑)۶');parent.location.href='/AdminManage.vue'; </script>"; 
+
+
 
    
 
