@@ -27,12 +27,13 @@ try {
 
         for ($i = 0; $i < count($item); $i++) {
 
-            $_SESSION[$item[$i]] = $memRow[$item[$i]];
+            $_SESSION["member_" . $item[$i]] = $memRow[$item[$i]];
         }
 
-        $member = array("name" => $_SESSION["name"], "nick" => $_SESSION["nick"], "status" => $_SESSION["status"]);
+        // $member = array("name" => $_SESSION["member_name"], "nick" => $_SESSION["member_nick"], "status" => $_SESSION["member_status"]);
 
-        echo json_encode($memRow);
+        // echo json_encode($memRow);
+        echo "1";
     }
 } catch (PDOException $e) {
     $error = ["error" => $e->getMessage()];
