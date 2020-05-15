@@ -258,6 +258,7 @@ $color-green:#5fbc55;
 
                     //夏天
                     .summer_pic {
+                        //border: 1px solid red;
                         box-sizing: border-box;
                         width: 70%;
                         height: 250px;
@@ -301,7 +302,7 @@ $color-green:#5fbc55;
                         }
                     }
 
-                    //春天
+                    //春天//常年
                     .fruit_start_img {
                         //border: 1px solid red;
                         display: inline-block;
@@ -421,44 +422,27 @@ $color-green:#5fbc55;
 
                     p {
                         //border: 1px solid blue;
+                        @include baseset;
                         font-size: 1.4rem;
                         padding: 15px;
                         white-space: pre-wrap;
                         line-height: 1.8;
                         column-count: 2;
                         overflow-x: auto;
-                        white-space: break-all;
-
-                        box-sizing: border-box;
-                        display: inline-block;
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                    @include rwd (medium) {
-                        p {
-                            column-count: 1;
-
+                        white-space: break-all;           
+                        display: inline-block;   
+                        @include rwd (medium){
+                            column-count: 1; 
                         }
-                    }
-
-                    @include rwd (small) {
-                        p {
+                        @include rwd (small){
                             column-count: 2;
                             overflow-y: scroll;
                             font-size: 1.6rem;
-
-
                         }
-                    }
-
-                    @include rwd (mobile) {
-                        p {
+                        @include rwd (mobile){
                             column-count: 1;
                             overflow-y: scroll;
                             font-size: 1.6rem;
-
-
                         }
                     }
                 }
@@ -467,29 +451,15 @@ $color-green:#5fbc55;
                     .fruit_intro {
                         height: 50%;
                         padding: 10px;
-                        background-color: rgba(255, 208, 191, .8);
+                        // background-color: rgba(255, 208, 191, .8);
 
                     }
                 }
             }
 
+            //右page
             .bk_ct_right {
                 font-size: 0;
-                //  display: none; /////這裏
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: 150%;
-                    height: 100%;
-                    z-index: -1;
-                    -webkit-clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
-                    clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
-                    background-color: rgba(255, 208, 191, 1);
-                }
-
                 h2 {
                     //border: 1px solid red;
                     font-size: 1.6rem;
@@ -497,10 +467,7 @@ $color-green:#5fbc55;
                     color: $min-color;
                     margin: 20px 0 10px;
                     padding-left: 15px;
-                }
-
-                @include rwd(small) {
-                    h2 {
+                    @include rwd(small){
                         font-size: 1.8rem;
                     }
                 }
@@ -527,11 +494,9 @@ $color-green:#5fbc55;
                             height: 10px;
                             font-size: 1.2rem;
                             text-align: center;
-                        }
-
-                        @include rwd (medium) {
-                            font-size: 11px;
-
+                            @include rwd (medium){
+                                font-size: 1.1rem;
+                            }
                         }
                     }
 
@@ -545,12 +510,9 @@ $color-green:#5fbc55;
                     }
 
                 }
-
-
                 @include rwd(small) {
                     .fruit_time {
                         height: 60px;
-
                     }
                 }
 
@@ -567,7 +529,6 @@ $color-green:#5fbc55;
                     }
 
                 }
-
                 .fruit_video_year {
                     >video {
                         width: 280px;
@@ -605,9 +566,7 @@ $color-green:#5fbc55;
                     //border: 1px solid green;
                     box-sizing: border-box;
                     width: 100%;
-
                     .fruit_question {
-                        //border: 1px solid red;
                         box-sizing: border-box;
                         padding: 0;
 
@@ -616,22 +575,13 @@ $color-green:#5fbc55;
                             font-weight: bolder;
                             display: inline-block;
                             margin-top: 20px;
-
-                        }
-
-                        @include rwd (medium) {
-                            h2 {
+                            @include rwd (medium) {
                                 display: block;
                                 margin: 5px;
-
                             }
-                        }
-
-                        @include rwd (small) {
-                            h2 {
+                            @include rwd (small){
                                 display: block;
                                 margin: 5px 0 0 0;
-
                             }
                         }
                     }
@@ -642,13 +592,9 @@ $color-green:#5fbc55;
                         }
                     }
 
-
                     .fruit_A {
-                        // border: 1px solid red;
-                        box-sizing: border-box;
-                        width: 100%;
+                     @include baseset;
                         max-height: 100%;
-
                         display: flex;
                         flex-wrap: nowrap;
 
@@ -661,38 +607,22 @@ $color-green:#5fbc55;
                             vertical-align: top;
                             padding-left: 15px;
                             overflow-y: scroll;
-
-                            // 欄寬
                             &::-webkit-scrollbar {
                                 display: none;
                             }
-
                             box-sizing: border-box;
                             display: inline-block;
                             width: 50%;
-
-                        }
-
-                        @include rwd(medium) {
-                            p {
+                            @include rwd(medium){
                                 width: 100%;
-                                overflow-x: hidden;
+                                overflow-x:auto;
                                 column-count: 1;
                                 padding: 10px;
-
                             }
-                        }
-
-                        @include rwd(small) {
-                            p {
+                            @include rwd(small){
                                 font-size: 1.6rem;
-
-
                             }
-                        }
-
-                        @include rwd(mobile) {
-                            p {
+                            @include rwd(mobile){
                                 width: 100%;
                                 column-count: 1;
                                 display: block;
@@ -790,33 +720,18 @@ $color-green:#5fbc55;
                 .bk_ct_left {
 
                     .fruit_start {
+                        border: 1px solid rgba(0, 0, 0, 0);
 
                         @include rwd(small) {
                             position: relative;
                             height: 50%;
-                            padding:150px 20px 0;
-                           
-                            &::before {
-                                content: "";
-                                width: 100%;
-                                height: 100%;
-                                position: absolute;
+                            padding: 150px 20px 0;
+
+                            h1 {
                                 top: 0;
-                                right: 0;
-                                -webkit-clip-path: polygon(56% 0, 100% 0, 100% 100%, 0% 100%);
-                                clip-path: polygon(56% 0, 100% 0, 100% 100%, 0% 100%);
-                                background-color: rgba(255, 208, 191, .8);
-                                @content;
                             }
                         }
 
-                        @content;
-                    }
-                    .fruit_intro {
-
-                        @include rwd(small) {
-                            background-color: rgba(255, 208, 191, 0.8);
-                        }
                         @content;
                     }
                 }
@@ -825,7 +740,14 @@ $color-green:#5fbc55;
     }
 
     &.spring {
-        @include path;
+        @include path {
+            @include rwd(small) {
+                .fruit_start_img {
+                    top: 0;
+                }
+            }
+        }
+
     }
 
     &.summer {
@@ -833,22 +755,30 @@ $color-green:#5fbc55;
         @include path {
             h1 {
                 color: #f6d16b;
+                top: 50%;
 
                 &::after,
                 &::before {
                     z-index: -1;
                     background-image: url("../assets/book_img/binbo.svg");
                 }
+
+                @include rwd(small) {
+                    top: 40%;
+                }
+            }
+
+            .summer_pic {
+                @include rwd(small) {
+                    top: 0;
+                }
             }
 
             @include rwd(small) {
-                padding-top: 50px;
-                &::before {
-                    background-color: #ffe398;
-                }
-            }      
+                padding-top: 30px;
+            }
 
-        }    
+        }
 
     }
 
@@ -857,12 +787,16 @@ $color-green:#5fbc55;
         @include path {
 
             h1 {
-                color: #d89f79;
+                color: #d88853;
 
                 &::after,
                 &::before {
                     z-index: -1;
                     background-image: url("../assets/book_img/leaf.svg");
+                }
+
+                @include rwd(small) {
+                    top: -20px;
                 }
             }
 
@@ -871,6 +805,7 @@ $color-green:#5fbc55;
 
                 .img_content {
                     left: 50%;
+                    top: 50%;
                     width: 180px;
                     border-radius: 10px;
 
@@ -878,18 +813,17 @@ $color-green:#5fbc55;
                         width: 180px;
                     }
 
+                    @include rwd(small) {
+                        top: 0;
+                        width: 220px;
+                        padding-top: 180px;
+                    }
+
                     @include rwd(mobile) {
                         width: 220px;
                         padding-top: 200px;
                         top: 100%;
                     }
-                }
-            }
-
-            @include rwd(small) {
-                padding: 60px 20px;
-                &::before {
-                    background-color: #f0a97a;
                 }
             }
         }
@@ -909,13 +843,21 @@ $color-green:#5fbc55;
                     z-index: -1;
                     background-image: url("../assets/book_img/snow.svg");
                 }
+
+                @include rwd(small) {
+                    top: 40%;
+                }
+            }
+
+            .summer_pic {
+                @include rwd(small) {
+                    top: 0;
+                }
+
             }
 
             @include rwd(small) {
-                padding-top: 50px;
-                &::before {
-                    background-color: #97c4ff;
-                }
+                padding-top: 30px;
             }
         }
 
@@ -932,34 +874,103 @@ $color-green:#5fbc55;
                     z-index: -1;
                     background-image: url("../assets/book_img/leaf_year.svg");
                 }
+
+                @include rwd(small) {
+                    top: 35%;
+                }
             }
 
             @include rwd(small) {
-                &::before {
-                    background-color: #f0faa7;
+                padding: 0;
+
+                .fruit_start_img {
+                    top: 45%;
                 }
             }
-        }
 
-        @include rwd(small) {
-            .fruit_intro {
-                background-color: #f0faa7;
+            @include rwd(mobile) {
+
+                height: 350px;
             }
         }
 
     }
+
+    //page1-left-rwd(small)
+
+    @mixin pathBGC {
+        .bk_All {
+            .book_layout {
+                .bk_ct_left {
+                    @include rwd(small) {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            z-index: -1;
+                            -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 48%);
+                            clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 48%);                            
+                            background-color:rgba(255, 208, 191, 0.8) ;
+                            @content;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.spring{
+        @include pathBGC;
+    } 
+    &.summer{
+        @include pathBGC{
+           background-color: #fce6ac;
+        }
+    } 
+    &.fall{
+        @include pathBGC{
+          background-color: #ffcba8;
+        }
+    } 
+    &.winter{
+        @include pathBGC{
+            background-color:#d1e5ff;
+        }
+    } 
+    &.year{
+        @include pathBGC{
+            background-color:#f0faa7;
+        }
+    } 
+
 
     //page2-rightother
     @mixin pathRight {
         .bk_All {
             .book_layout {
                 .bk_ct_right {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 150%;
+                        height: 100%;
+                        z-index: -1;
+                        -webkit-clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
+                        clip-path: polygon(34% 0%, 100% 0, 100% 100%, 0 100%);
+                        background-color: rgba(255, 208, 191, 1);
+                    }
                     @content;
                 }
             }
         }
     }
 
+    &.spring {
+        @include pathRight;
+    }
     &.summer {
         @include pathRight {
             &::before {
@@ -982,7 +993,6 @@ $color-green:#5fbc55;
         }
 
     }
-
     &.fall {
         @include pathRight {
             &::before {
