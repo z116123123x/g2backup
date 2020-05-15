@@ -414,6 +414,7 @@ $color-green:#5fbc55;
                         padding: 20px;
                     }
                 }
+
                 .fruit_intro {
                     @include baseset();
                     height: 50%;
@@ -765,12 +766,6 @@ $color-green:#5fbc55;
                 }
             }
 
-            .year_bg {
-                &::before {
-                    background-color: #c4ce7c;
-                }
-            }
-
             @include rwd(small) {
                 .bk_ct_right {
                     padding: 10px;
@@ -795,12 +790,12 @@ $color-green:#5fbc55;
                 .bk_ct_left {
 
                     .fruit_start {
-                        @content;
 
                         @include rwd(small) {
                             position: relative;
                             height: 50%;
-                            padding: 20px;
+                            padding:150px 20px 0;
+                           
                             &::before {
                                 content: "";
                                 width: 100%;
@@ -814,32 +809,28 @@ $color-green:#5fbc55;
                                 @content;
                             }
                         }
+
+                        @content;
+                    }
+                    .fruit_intro {
+
+                        @include rwd(small) {
+                            background-color: rgba(255, 208, 191, 0.8);
+                        }
+                        @content;
                     }
                 }
             }
         }
     }
 
-    &.year {
-
-        @include path {
-
-            h1 {
-                color: #c4ce7c;
-
-                &::before,
-                &::after {
-                    z-index: -1;
-                    background-image: url("../assets/book_img/leaf_year.svg");
-                }
-            }
-        }
-
+    &.spring {
+        @include path;
     }
 
     &.summer {
-        
-      @include path {
+
+        @include path {
             h1 {
                 color: #f6d16b;
 
@@ -849,7 +840,16 @@ $color-green:#5fbc55;
                     background-image: url("../assets/book_img/binbo.svg");
                 }
             }
-        }
+
+            @include rwd(small) {
+                padding-top: 50px;
+                &::before {
+                    background-color: #ffe398;
+                }
+            }      
+
+        }    
+
     }
 
     &.fall {
@@ -873,18 +873,27 @@ $color-green:#5fbc55;
                     left: 50%;
                     width: 180px;
                     border-radius: 10px;
-                    &:hover{
+
+                    &:hover {
                         width: 180px;
                     }
-                    @include rwd(mobile){
+
+                    @include rwd(mobile) {
                         width: 220px;
                         padding-top: 200px;
-                        top:100%;
+                        top: 100%;
                     }
                 }
             }
 
+            @include rwd(small) {
+                padding: 60px 20px;
+                &::before {
+                    background-color: #f0a97a;
+                }
+            }
         }
+
 
     }
 
@@ -900,6 +909,41 @@ $color-green:#5fbc55;
                     z-index: -1;
                     background-image: url("../assets/book_img/snow.svg");
                 }
+            }
+
+            @include rwd(small) {
+                padding-top: 50px;
+                &::before {
+                    background-color: #97c4ff;
+                }
+            }
+        }
+
+    }
+
+    &.year {
+        @include path {
+
+            h1 {
+                color: #c4ce7c;
+
+                &::before,
+                &::after {
+                    z-index: -1;
+                    background-image: url("../assets/book_img/leaf_year.svg");
+                }
+            }
+
+            @include rwd(small) {
+                &::before {
+                    background-color: #f0faa7;
+                }
+            }
+        }
+
+        @include rwd(small) {
+            .fruit_intro {
+                background-color: #f0faa7;
             }
         }
 
@@ -983,6 +1027,16 @@ $color-green:#5fbc55;
                     background-color: #97c4ff;
                 }
             }
+        }
+
+    }
+
+    &.year {
+        @include pathRight {
+            &::before {
+                background-color: #f0faa7;
+            }
+
         }
 
     }

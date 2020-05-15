@@ -49,7 +49,6 @@
                   <Content v-if="change == false" :contentIndex="index"></Content>
                   <Index v-if="change == true"></Index>
                   <!-- <router-view /> -->
-                  <!-- fruit_knowledge -->
                 </div>
                 <!-- 右切換按鈕 -->
                 <div class="page_decoration">

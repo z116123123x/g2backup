@@ -61,10 +61,12 @@
         //border: 1px solid red;
         box-sizing: border-box;
         width: 100%;
-        // height: auto;
         display: flex;
         flex-wrap: wrap;
         overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+         }
 
 
         p {
@@ -387,30 +389,20 @@
             vertical-align: top;
             //欄位數
             column-count: 2;
-        }
-
-        @include rwd (medium) {
-            p {
+            @include rwd (medium) {
                 column-count: 1;
             }
-        }
-
-        @include rwd (small) {
-            p {
+            @include rwd (small) {
                 width: 100%;
                 font-size: 1.6rem;
                 column-count: 2;
                 height: auto;
                 padding: 15px;
             }
-        }
-
-        @include rwd (mobile) {
-            p {
+            @include rwd (mobile){
                 column-count: 1;
             }
         }
-
     }
 
     @include rwd(medium) {
@@ -426,19 +418,21 @@
         }
     }
 }
-
 @include rwd(small) {
     .bk_ct_left_2 {
         width: 100%;
         height: auto;
+        margin-bottom: 90px;
+        &::after{
+            bottom:-90px;
+        }
     }
 
 }
 
 //市集
 .bk_ct_right_2 {
-    //display: none;
-    //border: 1px solid blue;
+   // border: 1px solid blue;
     box-sizing: border-box;
     width: 50%;
     position: relative;
@@ -723,13 +717,14 @@
 
     @include rwd(small) {
         .bk_product {
-            padding: 0;
+            padding: 0px;
+            height: 200px;
 
         }
     }
 
     .bk_product2 {
-        margin-top: 50px;
+        margin-top: 80px;
         justify-content: flex-end;
     }
 
@@ -737,18 +732,19 @@
 
 @include rwd(small) {
     .bk_ct_right_2 {
+        margin-top: 100px;
         width: 100%;
         padding: 20px 25px 30px;
         height: auto;
-
+        &::after{
+            display: none;
+        }
     }
 }
 
 @include rwd(mobile) {
     .bk_ct_right_2 {
         width: 100%;
-        padding: 20px 25px 140px;
-        height: auto;
-
+        padding: 20px 25px 180px;     
     }
 }
