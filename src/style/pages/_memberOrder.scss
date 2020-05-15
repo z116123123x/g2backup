@@ -1,37 +1,32 @@
  div.Order {
    display: inline-block;
    background-color: #FBF8EF;
-   width: 100%;
-   height: auto;
+   width: calc(100% - 250px);
+   height: 100vh;
+   vertical-align: top;
+   box-sizing: border-box;
+   padding: 60px 40px;
+   padding-top: 20px;
+   @include rwd(medium) {
+    float: right;
+    width: calc(100% - 200px);
+  }
 
+  @include rwd(small) {
+    float: none;
+    width: 100vw;
+    padding: 10% 5%;
+  }
    .Order_head {
      color: #F7C845;
-     margin-top: 50px;
-     margin-left: 300px;
-     font-size: 30px;
-
-     @include rwd(large) {
-       margin-left: 170px;
-     }
-
-     @include rwd(medium) {
-       margin-left: 140px;
-     }
-
-     @include rwd(small) {
-       margin-left: 140px;
-     }
-
-     @include rwd(mobile) {
-       margin-left: 20px;
-     }
+     font-size: 3rem;
    }
 
    .Order_bottom {
      display: block;
-     height: auto;
      text-align: center;
-
+     padding-top: 100px;
+     margin: 0 auto;
      >.Orderlist {
        margin-top: 40px;
        margin-left: 70px;
@@ -74,68 +69,63 @@
            padding: 0 5px;
          }
 
-         >.list_th {
-           display: block;
-           background-color: #F7C845;
-           color: #007552;
-           margin-top: 20px;
+         >.memberorder {
+           display: flex;
+           width: 94%;
            margin-left: 20px;
-           margin-right: 20px;
-
-           @include rwd(mobile) {
-             width: 100%;
-             margin-top: 20px;
-             margin-left: 0px;
-             margin-right: 20px;
-           }
-
-           >p {
-             display: inline-block;
-             padding: 0 58px;
-
-             @include rwd(medium) {
-               padding: 0 53px;
-             }
-
-             @include rwd(small) {
-               padding: 0 40.6px;
-             }
-
-             @include rwd(mobile) {
-               padding: 0 8.6px 0 7px;
-             }
-           }
-         }
-
-         >.list_td {
+           text-align: center;
            border: 1px solid #F7C845;
-           background-color: white;
-           display: block;
-           margin-bottom: 20px;
-           margin-left: 20px;
-           margin-right: 20px;
-
-           @include rwd(mobile) {
-             width: 99.4%;
-             margin-left: 0px;
-             margin-right: 20px;
+          @include rwd(mobile){
+            width: 97%;
+            margin-left: 5px;
+          }
+           >.memberOrder_time {
+             width: 30%;
+             text-align: center;
+             background-color: white;
+            @include rwd(mobile){
+              width: 46%;
+            }
+             >.title {
+               background-color: #F7C845;
+               padding: 10px 0px 10px 0px;
+             }
            }
 
-           >p {
-             display: inline-block;
-             padding: 0 59px;
+           >.memberOrder_price {
+             width: 30%;
+             text-align: center;
+             background-color: white;
 
-             @include rwd(medium) {
-               padding: 0 53px;
+             >.title {
+               background-color: #F7C845;
+               padding: 10px 0px 10px 0px;
              }
+           }
 
-             @include rwd(small) {
-               padding: 0 42.9px;
+           >.memberOrder_payment {
+             width: 30%;
+             text-align: center;
+             background-color: white;
+            @include rwd(mobile){
+              width: 33%;
+            }
+             >.title {
+               background-color: #F7C845;
+               padding: 10px 0px 10px 0px;
              }
+           }
 
-             @include rwd(mobile) {
-               font-size: 13px;
-               padding: 0 24px 0 7px;
+           >.memberOrder_status {
+             width: 30%;
+             text-align: center;
+             background-color: white;
+            @include rwd(mobile){
+              width: 32%;
+            }
+             >.title {
+               background-color: #F7C845;
+               padding: 10px 0px 10px 0px;
              }
            }
          }
@@ -162,151 +152,76 @@
          >.slide {
            display: block;
 
-           >.list_th2 {
-             display: block;
-             background-color: #F7C845;
-             color: #007552;
-             margin-top: 20px;
+           >.OrderDetail {
+             display: flex;
+             width: 94%;
              margin-left: 20px;
-             margin-right: 20px;
-
-             @include rwd(mobile) {
-               width: 100%;
-               margin-left: 0px;
-               margin-right: 20px;
-             }
-
-             >p {
-               display: inline-block;
-               padding: 0 50.4px;
-
-               @include rwd(medium) {
-                 padding: 0 53px;
-               }
-
-               @include rwd(small) {
-                 padding: 0 40.6px;
-               }
-
-               @include rwd(mobile) {
-                 padding: 0 15.6px 0 7px;
-               }
-             }
-           }
-
-           >.list_td2 {
+             text-align: center;
              border: 1px solid #F7C845;
-             background-color: white;
-             display: block;
-             margin-left: 20px;
-             margin-right: 20px;
-
-             @include rwd(mobile) {
-               width: 99.4%;
-               margin-left: 0px;
-               margin-right: 20px;
-             }
-
-             >p {
-               display: inline-block;
-               padding: 0 44.8px;
-
-               @include rwd(medium) {
-                 padding: 0 53px;
-               }
-
-               @include rwd(small) {
-                 padding: 0 42.9px;
-               }
-
-               @include rwd(mobile) {
-                 font-size: 13px;
-                 padding: 0 20px 0 7px;
-               }
-             }
-
-             >p.td2_price {
-               display: inline-block;
-               padding: 0 30px;
-
-               @include rwd(mobile) {
-                 padding: 0;
-               }
-             }
-
-             >p.td2_num {
-               display: inline-block;
-               padding: 0 44.8px;
-
-               @include rwd(mobile) {
-                 padding: 0px 26px;
-               }
-             }
-
-           }
-
-           >.list_td3 {
-             border: 1px solid #F7C845;
-             background-color: white;
-             display: block;
-             margin-left: 20px;
-             margin-right: 20px;
-
-             @include rwd(mobile) {
-               width: 99.4%;
-               margin-left: 0px;
-               margin-right: 0px;
-             }
-
-             >p {
-               display: inline-block;
-               padding: 0 44.4px;
-
-               @include rwd(medium) {
-                 padding: 0 53px;
-               }
-
-               @include rwd(small) {
-                 padding: 0 42.9px;
-               }
-
-               @include rwd(mobile) {
-                 font-size: 13px;
-                 padding: 0 11px 0 7px;
-               }
-             }
-
-             >p.td3_price {
-               display: inline-block;
-               padding: 0 30px;
-
-               @include rwd(mobile) {
-                 padding: 0;
-               }
-             }
-
-             >p.td3_num {
-               display: inline-block;
-               padding: 0 44.8px;
-
-               @include rwd(mobile) {
-                 padding: 0px 21px;
-               }
-             }
-
-             &:last-child {
-               border: 1px solid #F7C845;
+            @include rwd(mobile){
+              width: 100%;
+              margin-left: 0px;
+            }
+             >.orderdetail_num {
+               width: 30%;
+               text-align: center;
                background-color: white;
-               display: block;
-               margin-left: 20px;
-               margin-right: 20px;
-
-               @include rwd(mobile) {
-                 width: 99.4%;
-                 margin-left: 0px;
-                 margin-right: 0px;
+                @include rwd(small){
+                  width: 34%;
+                }
+               >.title {
+                 background-color: #F7C845;
+                 padding: 10px 0px 10px 0px;
                }
              }
+             >.orderdetail_name {
+              width: 30%;
+              text-align: center;
+              background-color: white;
+              @include rwd(small){
+                width: 70%;
+              }
+              >.title {
+                background-color: #F7C845;
+                padding: 10px 0px 10px 0px;
+              }
+            }
+            >.orderdetail_price {
+              width: 30%;
+              text-align: center;
+              background-color: white;
+              @include rwd(small){
+                width: 17%;
+              }
+              >.title {
+                background-color: #F7C845;
+                padding: 10px 0px 10px 0px;
+              }
+            }
+            >.orderdetail_amount {
+              width: 30%;
+              text-align: center;
+              background-color: white;
+              @include rwd(small){
+                width: 17%;
+              }
+              >.title {
+                background-color: #F7C845;
+                padding: 10px 0px 10px 0px;
+              }
+            }
+            >.orderdetail_subtotal {
+              width: 30%;
+              text-align: center;
+              background-color: white;
+              @include rwd(small){
+                width: 21%;
+              }
+              >.title {
+                background-color: #F7C845;
+                padding: 10px 0px 10px 0px;
+              }
+            }
            }
          }
 

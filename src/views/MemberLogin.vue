@@ -28,22 +28,31 @@
                 <input type="text" v-model="form.nick" />
                 <div class="from_gender">
                   男
-                  <input type="radio" name="gender" value="2" /> 女
-                  <input type="radio" name="gender" value="1" />
+                  <input type="radio" name="gender" v-model="form.gender" value="1" /> 女
+                  <input type="radio" name="gender" v-model="form.gender" value="2" />
                   其他
-                  <input type="radio" name="gender" value="0" />
+                  <input
+                    type="radio"
+                    name="gender"
+                    v-model="form.gender"
+                    value="0"
+                  />
                 </div>
 
                 <input type="text" v-model="form.acc" />
                 <input id="signupPsw" type="password" v-model="form.psw" @blur="checkPsw" />
                 <input id="signupRePsw" type="password" v-model="form.rePsw" @blur="checkPsw" />
-                <input type="text" v-model="form.mail" />
+                <input type="text" v-model="form.email" />
                 <input type="text" v-model="form.phone" />
               </form>
             </div>
 
             <div class="signupsubmit">
               <p @click="signup">註冊</p>
+            </div>
+            <div class="switch_btn">
+              <span>已經是果粉了?</span>
+              <span id="switch_signup">登入</span>
             </div>
           </form>
         </div>
@@ -58,6 +67,10 @@
             <br />
             <div class="signinsubmit" @click="login">
               <p>登入</p>
+            </div>
+            <div class="switch_btn">
+              <span>還不是果粉嗎?</span>
+              <span id="switch_signin">註冊</span>
             </div>
           </form>
         </div>
@@ -75,20 +88,65 @@
 </template>
 <script>
 import $ from "jquery";
-import { TubeGeometry } from "three";
 export default {
   mounted() {
-    $("#signup").click(function() {
-      $(".movebox").css("left", "45%");
-      $(".signin").toggleClass("nodisplay");
-      $(".signup").removeClass("nodisplay");
-    });
+    $(window).resize(function() {
+      if (window.innerWidth > 767) {
+        if ($(".signin").hasClass("nodisplay") == false) {
+          $(".movebox").css("left", "5%");
+        } else {
+          $(".movebox").css("left", "45%");
+        }
+        $("#signup").click(function() {
+          $(".movebox").css("left", "45%");
+          $(".signin").addClass("nodisplay");
+          $(".signup").removeClass("nodisplay");
+        });
 
-    $("#signin").click(function() {
-      $(".movebox").css("left", "5%");
-      $(".signup").addClass("nodisplay");
-      $(".signin").removeClass("nodisplay");
+        $("#signin").click(function() {
+          $(".movebox").css("left", "5%");
+          $(".signup").addClass("nodisplay");
+          $(".signin").removeClass("nodisplay");
+        });
+      } else {
+        $(".movebox").css("left", "0");
+
+        $("#switch_signin").click(function() {
+          $(".signin").addClass("nodisplay");
+          $(".signup").removeClass("nodisplay");
+        });
+
+        $("#switch_signup").click(function() {
+          $(".signup").addClass("nodisplay");
+          $(".signin").removeClass("nodisplay");
+        });
+      }
     });
+    if (window.innerWidth > 767) {
+      $("#signup").click(function() {
+        $(".movebox").css("left", "45%");
+        $(".signin").toggleClass("nodisplay");
+        $(".signup").removeClass("nodisplay");
+      });
+
+      $("#signin").click(function() {
+        $(".movebox").css("left", "5%");
+        $(".signup").addClass("nodisplay");
+        $(".signin").removeClass("nodisplay");
+      });
+    } else {
+      $(".movebox").css("left", "0");
+
+      $("#switch_signin").click(function() {
+        $(".signin").addClass("nodisplay");
+        $(".signup").removeClass("nodisplay");
+      });
+
+      $("#switch_signup").click(function() {
+        $(".signup").addClass("nodisplay");
+        $(".signin").removeClass("nodisplay");
+      });
+    }
   },
   data() {
     return {
@@ -97,11 +155,14 @@ export default {
         psw: ""
       },
       form: {
+        name: "",
+        nick: "",
         acc: "",
         psw: "",
         rePsw: "",
-        mail: "",
-        phone: ""
+        email: "",
+        phone: "",
+        gender: ""
       }
     };
   },
@@ -131,12 +192,16 @@ export default {
         .catch(err => console.log(err));
     },
     changeSignin: function() {
-      const form = this.form;
-
-      form.acc = "";
-      form.psw = "";
-      form.rePsw = "";
-      form.mail = "";
+      this.form = {
+        name: "",
+        nick: "",
+        acc: "",
+        psw: "",
+        rePsw: "",
+        email: "",
+        phone: "",
+        gender: ""
+      };
     },
     signup: function() {
       const api = "/api/api_memberSignup.php";
@@ -147,37 +212,39 @@ export default {
           return;
         }
       }
-
-      const sexs = document.getElementsByName("gender");
-
-      console.log(sexs);
-      console.log(this.form);
       
+      this.$http
+        .post(api, JSON.stringify(this.form))
+        .then(res => {
+          const data = res.data;
 
-      // this.$http
-      //   .post(api, JSON.stringify(this.form))
-      //   .then(res => {
-      //     const data = res.data;
+          if(data.error){
 
-      //     if (data == 0) {
-      //       alert("註冊完成！");
+            // eslint-disable-next-line no-console
+            console.log(data.error);
+          }
 
-      //       this.form = {
-      //         acc: "",
-      //         psw: "",
-      //         rePsw: "",
-      //         mail: ""
-      //       };
+          if (data == 0) {
+            alert("註冊完成！");
 
-      //       $(".movebox").css("transform", "translateX(-10%)");
-      //       $(".signup").addClass("nodisplay");
-      //       $(".signin").removeClass("nodisplay");
-      //     } else if (data == 1) {
-      //       alert("此帳號已經被註冊過！");
-      //     }
-      //   })
-      //   // eslint-disable-next-line no-console
-      //   .catch(err => console.log(err));
+            this.form = {
+              name: "",
+              nick: "",
+              acc: "",
+              psw: "",
+              rePsw: "",
+              email: "",
+              phone: "",
+              gender: ""
+            };
+
+            $(".movebox").css("transform", "translateX(-10%)");
+            $(".signup").addClass("nodisplay");
+            $(".signin").removeClass("nodisplay");
+          } else if (data == 1) {
+            alert("此帳號已經被註冊過！");
+          }
+        });
     },
     checkPsw: function() {
       const form = this.form;
