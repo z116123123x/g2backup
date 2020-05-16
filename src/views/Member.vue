@@ -47,8 +47,10 @@
       </div>
       <div class="member_button">
         <div class="changefarm">
-          切換果農
-          <router-link to="/farm/info"> </router-link>
+          
+          <router-link to="/farm/info">
+             <button-more class="goto_farmer" msg="切換果農"></button-more>
+           </router-link>
         </div>
       </div>
       <button type="button" class="btn_drawer">&#9658;</button>
