@@ -17,8 +17,6 @@ try {
     $member->bindValue(":img", $memberInfo->img);
     // 回傳資料
     $member->execute();
-    // 提出每一筆資料
-    $memRow = $member->fetch(PDO::FETCH_ASSOC);
 
     // 檢查有無修改成功 ( rowCount 代表影響的筆數)
     if ($member->rowCount() == 0) {

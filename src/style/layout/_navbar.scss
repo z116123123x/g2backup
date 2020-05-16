@@ -16,6 +16,7 @@
     position: absolute;
     display: inline-block;
     left: 1%;
+
     .logo {
       display: inline-flex;
       float: left;
@@ -26,6 +27,7 @@
 
   div.cart {
     padding: 0px 10px;
+
     @include rwd(small) {
       padding: 0 5px;
     }
@@ -56,6 +58,36 @@
       font-size: 1.4rem;
     }
 
+    .member_link {
+
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+
+      font-size: 1.6rem;
+      line-height: 2;
+
+      .member_pic {
+        
+        display: inline-block;
+        vertical-align: bottom;
+
+        height: 30px;
+        width: 30px;
+
+        border-radius: 50%;
+      }
+    }
+
+    .logout {
+
+      border: 0;
+      background: transparent;
+
+      font-size: 1.6rem;
+      font: inherit;
+    }
+
     span:nth-child(1) {
       display: inline-block;
       width: 30px;
@@ -64,6 +96,7 @@
       background-size: cover;
       background-image: url("./../assets/headFarmer.svg");
       display: none;
+
       @include rwd(small) {
         width: 20px;
         height: 20px;
@@ -78,7 +111,8 @@
         padding: 0 5px;
       }
     }
-    > a {
+
+    >a {
       color: black;
       text-decoration: none;
     }
@@ -109,11 +143,13 @@
         @include rwd(large) {
           height: 250px;
         }
+
         @include rwd(medium) {
           width: 80%;
           height: 200px;
           padding: 20px 0;
         }
+
         @include rwd(small) {
           width: 100%;
           height: 170px;
@@ -153,10 +189,12 @@
                 width: 50%;
                 height: 100%;
               }
+
               @include rwd(medium) {
                 width: 35%;
                 height: 100%;
               }
+
               @include rwd(small) {
                 width: 45%;
               }
@@ -179,11 +217,13 @@
               @include rwd(large) {
                 width: 50%;
               }
+
               @include rwd(medium) {
                 width: 60%;
                 padding-left: 10px;
                 box-sizing: border-box;
               }
+
               @include rwd(small) {
                 width: 50%;
                 padding-left: 10px;
@@ -199,6 +239,7 @@
                 padding: 6px 5px;
                 display: inline-block;
                 transition: all 0.5s;
+
                 @include rwd(small) {
                   font-size: 2rem;
                 }
@@ -217,6 +258,7 @@
                 margin: 0;
                 display: inline-block;
                 transition: all 0.5s;
+
                 @include rwd(small) {
                   font-size: 1rem;
                   line-height: 1rem;
@@ -253,9 +295,11 @@
       @include rwd(large) {
         height: 300px;
       }
+
       @include rwd(medium) {
         height: 200px;
       }
+
       @include rwd(small) {
         height: 100px;
       }
@@ -314,6 +358,7 @@
     line-height: 60px;
     padding: 0 20px;
     padding-left: 10px;
+
     @include rwd(small) {
       padding: 0 5px;
     }
@@ -328,6 +373,7 @@
   }
 
   .hamburger.is-active {
+
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
@@ -363,6 +409,7 @@
     transition-property: transform;
     transition-duration: 0.15s;
     transition-timing-function: ease;
+
     @include rwd(small) {
       width: 30px;
       height: 3px;
