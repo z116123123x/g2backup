@@ -64,7 +64,7 @@
       <h5>春季</h5>
       <div class="bk_content_img">
         <!-- <img :src="'../assets/book_img/' + i.img" /> -->
-        <img src="@/assets/book_img/flower_ct.svg" />
+        <img :src="require('@/assets/book_img/' + i.img)" />
       </div>
       <ul>
         <li v-for="(j, index) in i.item" :key="index">{{j.name}}</li>
