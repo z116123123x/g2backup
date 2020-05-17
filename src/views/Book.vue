@@ -31,7 +31,9 @@
                     :key="item.id"
                     @click="changeType(item.type)"
                     class="book_link"
-                  >{{item.name}}</li>
+                  >
+                    {{ item.name }}
+                  </li>
                 </ul>
               </div>
               <!-- book本體 -->
@@ -70,6 +72,8 @@
     </section>
   </div>
 </template>
+
+<style></style>
 <script>
 import "@/js/book";
 import Index from "@/views/BookIndex";
@@ -80,24 +84,24 @@ export default {
       tabs: [
         {
           name: "春季",
-          type: 0
+          type: 0,
         },
         {
           name: "夏季",
-          type: 1
+          type: 1,
         },
         {
           name: "秋季",
-          type: 2
+          type: 2,
         },
         {
           name: "冬季",
-          type: 3
+          type: 3,
         },
         {
           name: "常年",
-          type: 4
-        }
+          type: 4,
+        },
       ],
       i: 0,
       top: 0,
@@ -166,4 +170,3 @@ export default {
   }
 };
 </script>
-

@@ -32,7 +32,7 @@
       padding: 0 5px;
     }
 
-    .page {
+    .pages {
       display: inline-block;
       width: 40px;
       padding-bottom: 30px;
@@ -59,7 +59,6 @@
     }
 
     .member_link {
-
       display: inline-block;
       text-decoration: none;
       color: black;
@@ -68,7 +67,6 @@
       line-height: 2;
 
       .member_pic {
-        
         display: inline-block;
         vertical-align: bottom;
 
@@ -80,7 +78,6 @@
     }
 
     .logout {
-
       border: 0;
       background: transparent;
 
@@ -112,7 +109,7 @@
       }
     }
 
-    >a {
+    > a {
       color: black;
       text-decoration: none;
     }
@@ -264,6 +261,15 @@
                   line-height: 1rem;
                 }
               }
+
+              .pactive {
+                background-color: #666;
+                color: #fbf8ef;
+              }
+
+              .h1active {
+                background-color: #ffd4c3;
+              }
             }
           }
         }
@@ -373,7 +379,6 @@
   }
 
   .hamburger.is-active {
-
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
