@@ -3,12 +3,23 @@
     <aside class="left">
       <div class="head_portrait">
         <div class="head_img_box">
-          <img src="../assets/navbar_account_img.svg" alt />
+          <img id="MemberPic" :src="member.img" />
         </div>
         <ul>
-          <li>設定頭像</li>
-          <li class="nick">暱稱</li>
-          <li class="fans">身分別:果粉</li>
+          <li>
+            <label for="upMemberPic" @change="changeMemPic">
+              設定頭像
+              <input type="file" id="upMemberPic" style="display: none;" />
+            </label>
+          </li>
+          <li class="nick">
+            暱稱:
+            <span>{{ member.nick }}</span>
+          </li>
+          <li class="fans">
+            身分別:
+            <span>果粉</span>
+          </li>
         </ul>
       </div>
 
@@ -34,41 +45,127 @@
       <div class="member_button">
         <div class="befarm">
           <router-link to="/main/member/farmRegistered">
-            <p>成為果農</p>
+            <button-more class="become_farmer" msg="成為果農"></button-more>
           </router-link>
         </div>
       </div>
       <div class="member_button">
         <div class="changefarm">
           <router-link to="/farm/info">
-            <p>切換果農</p>
+            <button-more class="goto_farmer" msg="切換果農"></button-more>
           </router-link>
         </div>
       </div>
-      <button type="button" class="btn_drawer">>></button>
+      <button type="button" class="btn_drawer">&#9658;</button>
     </aside>
-    <router-view @update="update" />
+    <router-view />
   </div>
 </template>
 
 <script>
 import $ from "jquery";
 export default {
+  data() {
+    return {
+      formData: new FormData(),
+      member: {
+        no: "",
+        acc: "",
+        name: "",
+        nick: "",
+        gender: "",
+        phone: "",
+        email: "",
+        img: "",
+      },
+    };
+  },
+  created() {
+    const api = "/api/api_memberStatus.php";
+
+    this.$http.post(api).then((res) => {
+      const data = res.data;
+
+      if (data != "") {
+        this.member = {
+          no: data.no,
+          acc: data.acc,
+          name: data.name,
+          nick: data.nick,
+          phone: 0 + data.phone,
+          email: data.email,
+          gender: data.gender,
+        };
+
+        if (data.img == "") {
+          this.member.img = require("@/assets/waterpear.png");
+        } else {
+          this.member.img = data.img;
+        }
+      }
+    });
+  },
   mounted() {
-    var x = 0;
-    $("button.btn_drawer").on("click", function() {
-      if (x == 0) {
-        $("aside.left").css("transform", "translateX(0%)");
-        x = 1;
+    if (window.innerWidth < 768) {
+      $("aside.left").addClass("popover");
+      $("button.btn_drawer").on("click", function() {
+        $("aside.left").toggleClass("popover");
+      });
+    }
+
+    $(window).resize(function() {
+      if (window.innerWidth < 768) {
+        $("aside.left").addClass("popover");
+        $("button.btn_drawer").on("click", function() {
+          $("aside.left").toggleClass("popover");
+        });
       } else {
-        $("aside.left").css("transform", "translateX(-93%)");
-        x = 0;
+        $("aside.left").removeClass("popover");
       }
     });
   },
   methods: {
-    update: function(s) {
-      // this.$emit("loginStatus", s);
+    changeMemPic: function(e) {
+      let reader = new FileReader();
+      const img = e.target;
+
+      reader.onload = function(e) {
+        document.getElementById("MemberPic").src = e.target.result;
+      };
+
+      reader.readAsDataURL(img.files[0]);
+
+      this.formData.append("file", img.files[0]);
+      this.member.img = "../../api/MemPic/member" + img.files[0].name;
+
+      this.$http
+        .post("/api/api_changeMemPic.php", this.formData)
+        .then((res) => {
+          const data = res.data;
+
+          // 如果上傳成功
+          if (data == 0) {
+            this.$http
+              .post("/api/api_getMemPic.php", JSON.stringify(this.member))
+              .then((res) => {
+                const r = res.data;
+
+                // 如果更新成功
+                if (r == 0) {
+                  const api = "/api/api_memberUpdateSession.php";
+                  
+                // 觸發更新 session 的API
+                this.$http.post(api, JSON.stringify(this.member));
+                alert("上傳成功！");
+                this.$router.go(0);
+              } else if (r == 1) {
+                alert("資料庫更新錯誤");
+              }
+            });
+        } else if (data == 1) {
+          alert("上傳失敗！");
+        }
+      });
     }
   }
 };

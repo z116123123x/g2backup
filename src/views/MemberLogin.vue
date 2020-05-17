@@ -28,22 +28,52 @@
                 <input type="text" v-model="form.nick" />
                 <div class="from_gender">
                   男
-                  <input type="radio" name="gender" value="2" /> 女
-                  <input type="radio" name="gender" value="1" />
+                  <input
+                    type="radio"
+                    name="gender"
+                    v-model="form.gender"
+                    value="1"
+                  />
+                  女
+                  <input
+                    type="radio"
+                    name="gender"
+                    v-model="form.gender"
+                    value="2"
+                  />
                   其他
-                  <input type="radio" name="gender" value="0" />
+                  <input
+                    type="radio"
+                    name="gender"
+                    v-model="form.gender"
+                    value="0"
+                  />
                 </div>
 
                 <input type="text" v-model="form.acc" />
-                <input id="signupPsw" type="password" v-model="form.psw" @blur="checkPsw" />
-                <input id="signupRePsw" type="password" v-model="form.rePsw" @blur="checkPsw" />
-                <input type="text" v-model="form.mail" />
+                <input
+                  id="signupPsw"
+                  type="password"
+                  v-model="form.psw"
+                  @blur="checkPsw"
+                />
+                <input
+                  id="signupRePsw"
+                  type="password"
+                  v-model="form.rePsw"
+                  @blur="checkPsw"
+                />
+                <input type="text" v-model="form.email" />
                 <input type="text" v-model="form.phone" />
               </form>
             </div>
 
             <div class="signupsubmit">
               <p @click="signup">註冊</p>
+            </div>
+            <div class="switch_btn">
+              <span>已經是果粉了?</span>
+              <span id="switch_signup">登入</span>
             </div>
           </form>
         </div>
@@ -54,17 +84,31 @@
             <input type="text" placeholder="請輸入帳號" v-model="member.acc" />
             <br />
             <label>密碼:</label>
-            <input type="password" placeholder="請輸入密碼" v-model="member.psw" />
+            <input
+              type="password"
+              placeholder="請輸入密碼"
+              v-model="member.psw"
+            />
             <br />
             <div class="signinsubmit" @click="login">
               <p>登入</p>
+            </div>
+            <div class="switch_btn">
+              <span>還不是果粉嗎?</span>
+              <span id="switch_signin">註冊</span>
             </div>
           </form>
         </div>
       </div>
       <div class="leftbox">
         <h1>已經是果粉了?</h1>
-        <img class="loginbutton" id="signin" src="@/assets/login.png" @click="changeSignin" alt />
+        <img
+          class="loginbutton"
+          id="signin"
+          src="@/assets/login.png"
+          @click="changeSignin"
+          alt
+        />
       </div>
       <div class="rightbox">
         <h1>還不是果粉嗎?</h1>
@@ -75,34 +119,82 @@
 </template>
 <script>
 import $ from "jquery";
-import { TubeGeometry } from "three";
 export default {
   mounted() {
-    $("#signup").click(function() {
-      $(".movebox").css("left", "45%");
-      $(".signin").toggleClass("nodisplay");
-      $(".signup").removeClass("nodisplay");
-    });
+    $(window).resize(function() {
+      if (window.innerWidth > 767) {
+        if ($(".signin").hasClass("nodisplay") == false) {
+          $(".movebox").css("left", "5%");
+        } else {
+          $(".movebox").css("left", "45%");
+        }
+        $("#signup").click(function() {
+          $(".movebox").css("left", "45%");
+          $(".signin").addClass("nodisplay");
+          $(".signup").removeClass("nodisplay");
+        });
 
-    $("#signin").click(function() {
-      $(".movebox").css("left", "5%");
-      $(".signup").addClass("nodisplay");
-      $(".signin").removeClass("nodisplay");
+        $("#signin").click(function() {
+          $(".movebox").css("left", "5%");
+          $(".signup").addClass("nodisplay");
+          $(".signin").removeClass("nodisplay");
+        });
+      } else {
+        $(".movebox").css("left", "0");
+
+        $("#switch_signin").click(function() {
+          $(".signin").addClass("nodisplay");
+          $(".signup").removeClass("nodisplay");
+        });
+
+        $("#switch_signup").click(function() {
+          $(".signup").addClass("nodisplay");
+          $(".signin").removeClass("nodisplay");
+        });
+      }
     });
+    if (window.innerWidth > 767) {
+      $("#signup").click(function() {
+        $(".movebox").css("left", "45%");
+        $(".signin").toggleClass("nodisplay");
+        $(".signup").removeClass("nodisplay");
+      });
+
+      $("#signin").click(function() {
+        $(".movebox").css("left", "5%");
+        $(".signup").addClass("nodisplay");
+        $(".signin").removeClass("nodisplay");
+      });
+    } else {
+      $(".movebox").css("left", "0");
+
+      $("#switch_signin").click(function() {
+        $(".signin").addClass("nodisplay");
+        $(".signup").removeClass("nodisplay");
+      });
+
+      $("#switch_signup").click(function() {
+        $(".signup").addClass("nodisplay");
+        $(".signin").removeClass("nodisplay");
+      });
+    }
   },
   data() {
     return {
       member: {
         acc: "",
-        psw: ""
+        psw: "",
       },
       form: {
+        name: "",
+        nick: "",
         acc: "",
         psw: "",
         rePsw: "",
-        mail: "",
-        phone: ""
-      }
+        email: "",
+        phone: "",
+        gender: "",
+      },
     };
   },
   methods: {
@@ -111,7 +203,7 @@ export default {
 
       this.$http
         .post(api, JSON.stringify(this.member))
-        .then(res => {
+        .then((res) => {
           const data = res.data;
 
           if (data == "") {
@@ -128,15 +220,19 @@ export default {
           }
         })
         // eslint-disable-next-line no-console
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     },
     changeSignin: function() {
-      const form = this.form;
-
-      form.acc = "";
-      form.psw = "";
-      form.rePsw = "";
-      form.mail = "";
+      this.form = {
+        name: "",
+        nick: "",
+        acc: "",
+        psw: "",
+        rePsw: "",
+        email: "",
+        phone: "",
+        gender: "",
+      };
     },
     signup: function() {
       const api = "/api/api_memberSignup.php";
@@ -148,36 +244,35 @@ export default {
         }
       }
 
-      const sexs = document.getElementsByName("gender");
+      this.$http.post(api, JSON.stringify(this.form)).then((res) => {
+        const data = res.data;
 
-      console.log(sexs);
-      console.log(this.form);
-      
+        if (data.error) {
+          // eslint-disable-next-line no-console
+          console.log(data.error);
+        }
 
-      // this.$http
-      //   .post(api, JSON.stringify(this.form))
-      //   .then(res => {
-      //     const data = res.data;
+        if (data == 0) {
+          alert("註冊完成！");
 
-      //     if (data == 0) {
-      //       alert("註冊完成！");
+          this.form = {
+            name: "",
+            nick: "",
+            acc: "",
+            psw: "",
+            rePsw: "",
+            email: "",
+            phone: "",
+            gender: "",
+          };
 
-      //       this.form = {
-      //         acc: "",
-      //         psw: "",
-      //         rePsw: "",
-      //         mail: ""
-      //       };
-
-      //       $(".movebox").css("transform", "translateX(-10%)");
-      //       $(".signup").addClass("nodisplay");
-      //       $(".signin").removeClass("nodisplay");
-      //     } else if (data == 1) {
-      //       alert("此帳號已經被註冊過！");
-      //     }
-      //   })
-      //   // eslint-disable-next-line no-console
-      //   .catch(err => console.log(err));
+          $(".movebox").css("transform", "translateX(-10%)");
+          $(".signup").addClass("nodisplay");
+          $(".signin").removeClass("nodisplay");
+        } else if (data == 1) {
+          alert("此帳號已經被註冊過！");
+        }
+      });
     },
     checkPsw: function() {
       const form = this.form;
@@ -189,7 +284,7 @@ export default {
         document.getElementById("signupPsw").style.backgroundColor = "";
         document.getElementById("signupRePsw").style.backgroundColor = "";
       }
-    }
-  }
+    },
+  },
 };
 </script>

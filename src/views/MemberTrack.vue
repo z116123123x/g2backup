@@ -21,14 +21,14 @@
                             </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
-                            <span>(2134)</span>                            
+                            </div>
+                            <span>(2134)</span>
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -41,9 +41,15 @@
                                 農作物生長，品質良好，廣受好
                                 評...</p>
                         </div>
-                        <div class="front_button">
-                            <p>查看市集</p>
-                            <p>查看日誌</p>
+                        <div class="frontbutton">
+                            <div class="track_button">
+                                <p>查看市集</p>
+                            </div>
+                        </div>
+                        <div class="frontbutton2">
+                            <div class="track_button2">
+                                <p>查看日誌</p>
+                            </div>
                         </div>
                     </div>
                     <!-- <div class="cardinfo">
@@ -79,14 +85,14 @@
                             </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div> 
-                            <span>(2134)</span>                             
+                            </div>
+                            <span>(2134)</span>
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -99,9 +105,15 @@
                                 農作物生長，品質良好，廣受好
                                 評...</p>
                         </div>
-                        <div class="front_button">
-                            <p>查看市集</p>
-                            <p>查看日誌</p>
+                        <div class="frontbutton">
+                            <div class="track_button">
+                                <p>查看市集</p>
+                            </div>
+                        </div>
+                        <div class="frontbutton2">
+                            <div class="track_button2">
+                                <p>查看日誌</p>
+                            </div>
                         </div>
                     </div>
 
@@ -123,14 +135,14 @@
                             </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
                             </div>
-                            <span>(2134)</span>                              
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -143,9 +155,15 @@
                                 農作物生長，品質良好，廣受好
                                 評...</p>
                         </div>
-                        <div class="front_button">
-                            <p>查看市集</p>
-                            <p>查看日誌</p>
+                        <div class="frontbutton">
+                            <div class="track_button">
+                                <p>查看市集</p>
+                            </div>
+                        </div>
+                        <div class="frontbutton2">
+                            <div class="track_button2">
+                                <p>查看日誌</p>
+                            </div>
                         </div>
                     </div>
 
@@ -167,14 +185,14 @@
                             </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
                             </div>
-                            <span>(2134)</span>                              
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -187,9 +205,15 @@
                                 農作物生長，品質良好，廣受好
                                 評...</p>
                         </div>
-                        <div class="front_button">
-                            <p>查看市集</p>
-                            <p>查看日誌</p>
+                        <div class="frontbutton">
+                            <div class="track_button">
+                                <p>查看市集</p>
+                            </div>
+                        </div>
+                        <div class="frontbutton2">
+                            <div class="track_button2">
+                                <p>查看日誌</p>
+                            </div>
                         </div>
                     </div>
 
@@ -211,14 +235,14 @@
                             </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
                             </div>
-                            <span>(2134)</span>                              
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -231,9 +255,15 @@
                                 農作物生長，品質良好，廣受好
                                 評...</p>
                         </div>
-                        <div class="front_button">
-                            <p>查看市集</p>
-                            <p>查看日誌</p>
+                        <div class="frontbutton">
+                            <div class="track_button">
+                                <p>查看市集</p>
+                            </div>
+                        </div>
+                        <div class="frontbutton2">
+                            <div class="track_button2">
+                                <p>查看日誌</p>
+                            </div>
                         </div>
                     </div>
 
@@ -255,14 +285,14 @@
                             </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
                             </div>
-                            <span>(2134)</span>                              
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -275,12 +305,18 @@
                                 農作物生長，品質良好，廣受好
                                 評...</p>
                         </div>
-                        <div class="front_button">
-                            <p>查看市集</p>
-                            <p>查看日誌</p>
+                        <div class="frontbutton">
+                            <div class="track_button">
+                                <p>查看市集</p>
+                            </div>
+                        </div>
+                        <div class="frontbutton2">
+                            <div class="track_button2">
+                                <p>查看日誌</p>
+                            </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -299,14 +335,14 @@
                             </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
                             </div>
-                            <span>(2134)</span>                              
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -319,12 +355,18 @@
                                 農作物生長，品質良好，廣受好
                                 評...</p>
                         </div>
-                        <div class="front_button">
-                            <p>查看市集</p>
-                            <p>查看日誌</p>
+                        <div class="frontbutton">
+                            <div class="track_button">
+                                <p>查看市集</p>
+                            </div>
+                        </div>
+                        <div class="frontbutton2">
+                            <div class="track_button2">
+                                <p>查看日誌</p>
+                            </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -343,14 +385,14 @@
                             </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
                             </div>
-                            <span>(2134)</span>                              
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -363,12 +405,18 @@
                                 農作物生長，品質良好，廣受好
                                 評...</p>
                         </div>
-                        <div class="front_button">
-                            <p>查看市集</p>
-                            <p>查看日誌</p>
+                        <div class="frontbutton">
+                            <div class="track_button">
+                                <p>查看市集</p>
+                            </div>
+                        </div>
+                        <div class="frontbutton2">
+                            <div class="track_button2">
+                                <p>查看日誌</p>
+                            </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -387,14 +435,14 @@
                             </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
-                            <div class="starimg">
-                                <img src="@/assets/memberstar.svg" alt="">
-                            </div>  
+                            </div>
                             <div class="starimg">
                                 <img src="@/assets/memberstar.svg" alt="">
                             </div>
-                            <span>(2134)</span>                              
+                            <div class="starimg">
+                                <img src="@/assets/memberstar.svg" alt="">
+                            </div>
+                            <span>(2134)</span>
                         </div>
                         <span>蓬蓬草莓姨</span>
                     </div>
@@ -407,12 +455,18 @@
                                 農作物生長，品質良好，廣受好
                                 評...</p>
                         </div>
-                        <div class="front_button">
-                            <p>查看市集</p>
-                            <p>查看日誌</p>
+                        <div class="frontbutton">
+                            <div class="track_button">
+                                <p>查看市集</p>
+                            </div>
+                        </div>
+                        <div class="frontbutton2">
+                            <div class="track_button2">
+                                <p>查看日誌</p>
+                            </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="pagination_block">
