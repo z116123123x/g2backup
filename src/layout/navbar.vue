@@ -135,7 +135,6 @@ export default {
       .catch((err) => console.log(err));
 
     $("div.title").click(function(e) {
-      console.log(e);
       $("div.title")
         .find("h1")
         .removeClass("h1active");
@@ -146,6 +145,21 @@ export default {
         .find("h1")
         .addClass("h1active");
       $(e.currentTarget)
+        .find("p")
+        .addClass("pactive");
+    });
+
+    $(".member_status").click(function() {
+      $("div.title")
+        .find("h1")
+        .removeClass("h1active");
+      $("div.title")
+        .find("p")
+        .removeClass("pactive");
+      $("ul li:nth-child(4)")
+        .find("h1")
+        .addClass("h1active");
+      $("ul li:nth-child(4)")
         .find("p")
         .addClass("pactive");
     });
@@ -200,6 +214,12 @@ export default {
         $("div.nav_back").slideToggle();
         $("div.hamburger").removeClass("is-active");
       }
+      $("div.title")
+        .find("h1")
+        .removeClass("h1active");
+      $("div.title")
+        .find("p")
+        .removeClass("pactive");
     },
     hamclick() {
       $("div.hamburger").toggleClass("is-active");
@@ -217,6 +237,18 @@ export default {
         $("div.nav_back").slideToggle();
         $("div.hamburger").removeClass("is-active");
       }
+      $("div.title")
+        .find("h1")
+        .removeClass("h1active");
+      $("div.title")
+        .find("p")
+        .removeClass("pactive");
+      $("ul li:nth-child(4)")
+        .find("h1")
+        .addClass("h1active");
+      $("ul li:nth-child(4)")
+        .find("p")
+        .addClass("pactive");
     },
   },
 };
