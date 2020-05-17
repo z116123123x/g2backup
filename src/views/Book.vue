@@ -32,7 +32,7 @@
                     @click="changeType(item.type)"
                     class="book_link"
                   >
-                    {{item.name}}
+                    {{ item.name }}
                   </li>
                 </ul>
               </div>
@@ -49,8 +49,13 @@
                 <div id="bk_content" :class="type">
                   <!-- 4. 偵測到 data 的更新，傳 data 的 change 值給 v-if 判斷要顯示哪一個元件 -->
                   <!-- 4. 傳 data 的 index 值給子元件(BookContent.vue)的自定義名稱 -> contentIndex -->
-                  <Content v-if="change == false" :contentIndex="index"></Content>
-                  <Index v-if="change == true"></Index>
+                  <Content
+                    v-if="change == false"
+                    :contentIndex="index"
+                    :pageId="page"
+                    @addType="addIndex"
+                  ></Content>
+                  <Index v-if="change == true" @changePage="changePage"></Index>
                   <!-- fruit_knowledge -->
                 </div>
                 <!-- 右切換按鈕 -->
@@ -67,6 +72,8 @@
     </section>
   </div>
 </template>
+
+<style></style>
 <script>
 import "@/js/book";
 import Index from "@/views/BookIndex";
@@ -77,31 +84,32 @@ export default {
       tabs: [
         {
           name: "春季",
-          type: 0
+          type: 0,
         },
         {
           name: "夏季",
-          type: 1
+          type: 1,
         },
         {
           name: "秋季",
-          type: 2
+          type: 2,
         },
         {
           name: "冬季",
-          type: 3
+          type: 3,
         },
         {
           name: "常年",
-          type: 4
-        }
+          type: 4,
+        },
       ],
       i: 0,
       top: 0,
       // 3. 接收到 changeType() 的更新
       type: "spring",
       index: 0,
-      change: true
+      change: true,
+      page: 0
     };
   },
   mounted() {
@@ -147,13 +155,18 @@ export default {
         this.type = "index";
         this.change = true;
       }
+    },
+    changePage: function(p) {
+      this.changeType(p.type);
+      this.page = p.id;
+    },
+    addIndex: function(n) {
+      this.changeType(this.index + n);
     }
   },
   components: {
     Content,
-    // eslint-disable-next-line vue/no-unused-components
     Index
   }
 };
 </script>
-

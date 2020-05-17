@@ -28,8 +28,19 @@
                 <input type="text" v-model="form.nick" />
                 <div class="from_gender">
                   男
-                  <input type="radio" name="gender" v-model="form.gender" value="1" /> 女
-                  <input type="radio" name="gender" v-model="form.gender" value="2" />
+                  <input
+                    type="radio"
+                    name="gender"
+                    v-model="form.gender"
+                    value="1"
+                  />
+                  女
+                  <input
+                    type="radio"
+                    name="gender"
+                    v-model="form.gender"
+                    value="2"
+                  />
                   其他
                   <input
                     type="radio"
@@ -40,8 +51,18 @@
                 </div>
 
                 <input type="text" v-model="form.acc" />
-                <input id="signupPsw" type="password" v-model="form.psw" @blur="checkPsw" />
-                <input id="signupRePsw" type="password" v-model="form.rePsw" @blur="checkPsw" />
+                <input
+                  id="signupPsw"
+                  type="password"
+                  v-model="form.psw"
+                  @blur="checkPsw"
+                />
+                <input
+                  id="signupRePsw"
+                  type="password"
+                  v-model="form.rePsw"
+                  @blur="checkPsw"
+                />
                 <input type="text" v-model="form.email" />
                 <input type="text" v-model="form.phone" />
               </form>
@@ -63,7 +84,11 @@
             <input type="text" placeholder="請輸入帳號" v-model="member.acc" />
             <br />
             <label>密碼:</label>
-            <input type="password" placeholder="請輸入密碼" v-model="member.psw" />
+            <input
+              type="password"
+              placeholder="請輸入密碼"
+              v-model="member.psw"
+            />
             <br />
             <div class="signinsubmit" @click="login">
               <p>登入</p>
@@ -77,7 +102,13 @@
       </div>
       <div class="leftbox">
         <h1>已經是果粉了?</h1>
-        <img class="loginbutton" id="signin" src="@/assets/login.png" @click="changeSignin" alt />
+        <img
+          class="loginbutton"
+          id="signin"
+          src="@/assets/login.png"
+          @click="changeSignin"
+          alt
+        />
       </div>
       <div class="rightbox">
         <h1>還不是果粉嗎?</h1>
@@ -152,7 +183,7 @@ export default {
     return {
       member: {
         acc: "",
-        psw: ""
+        psw: "",
       },
       form: {
         name: "",
@@ -162,8 +193,8 @@ export default {
         rePsw: "",
         email: "",
         phone: "",
-        gender: ""
-      }
+        gender: "",
+      },
     };
   },
   methods: {
@@ -172,7 +203,7 @@ export default {
 
       this.$http
         .post(api, JSON.stringify(this.member))
-        .then(res => {
+        .then((res) => {
           const data = res.data;
 
           if (data == "") {
@@ -189,7 +220,7 @@ export default {
           }
         })
         // eslint-disable-next-line no-console
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     },
     changeSignin: function() {
       this.form = {
@@ -200,7 +231,7 @@ export default {
         rePsw: "",
         email: "",
         phone: "",
-        gender: ""
+        gender: "",
       };
     },
     signup: function() {
@@ -212,39 +243,36 @@ export default {
           return;
         }
       }
-      
-      this.$http
-        .post(api, JSON.stringify(this.form))
-        .then(res => {
-          const data = res.data;
 
-          if(data.error){
+      this.$http.post(api, JSON.stringify(this.form)).then((res) => {
+        const data = res.data;
 
-            // eslint-disable-next-line no-console
-            console.log(data.error);
-          }
+        if (data.error) {
+          // eslint-disable-next-line no-console
+          console.log(data.error);
+        }
 
-          if (data == 0) {
-            alert("註冊完成！");
+        if (data == 0) {
+          alert("註冊完成！");
 
-            this.form = {
-              name: "",
-              nick: "",
-              acc: "",
-              psw: "",
-              rePsw: "",
-              email: "",
-              phone: "",
-              gender: ""
-            };
+          this.form = {
+            name: "",
+            nick: "",
+            acc: "",
+            psw: "",
+            rePsw: "",
+            email: "",
+            phone: "",
+            gender: "",
+          };
 
-            $(".movebox").css("transform", "translateX(-10%)");
-            $(".signup").addClass("nodisplay");
-            $(".signin").removeClass("nodisplay");
-          } else if (data == 1) {
-            alert("此帳號已經被註冊過！");
-          }
-        });
+          $(".movebox").css("transform", "translateX(-10%)");
+          $(".signup").addClass("nodisplay");
+          $(".signin").removeClass("nodisplay");
+        } else if (data == 1) {
+          alert("此帳號已經被註冊過！");
+        }
+      });
     },
     checkPsw: function() {
       const form = this.form;
@@ -256,7 +284,7 @@ export default {
         document.getElementById("signupPsw").style.backgroundColor = "";
         document.getElementById("signupRePsw").style.backgroundColor = "";
       }
-    }
-  }
+    },
+  },
 };
 </script>
