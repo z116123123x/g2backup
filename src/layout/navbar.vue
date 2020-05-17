@@ -99,7 +99,7 @@
 <script>
 export default {
   // 5. 接收父層的 memberStatus 的值
-  props: ["memberStatus"],
+  props: { memberStatus: Boolean, memberImg: String },
   data() {
     return {
       status: false,
@@ -119,6 +119,7 @@ export default {
         if (data != "") {
           this.status = true;
           this.userName = data.name;
+          this.img = data.img;
         }
       })
       // eslint-disable-next-line no-console

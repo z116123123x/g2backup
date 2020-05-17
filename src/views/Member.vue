@@ -98,7 +98,7 @@ export default {
         };
 
         if (data.img == "") {
-          this.member.img = "";
+          this.member.img = require("@/assets/waterpear.png");
         } else {
           this.member.img = data.img;
         }
@@ -155,6 +155,7 @@ export default {
                 // 觸發更新 session 的API
                 this.$http.post(api, JSON.stringify(this.member));
                 alert("上傳成功！");
+                this.$router.go(0);
               } else if (r == 1) {
                 alert("資料庫更新錯誤");
               }
