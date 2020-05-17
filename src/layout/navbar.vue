@@ -4,15 +4,19 @@
       <img class="logo" src="@/assets/headerLOGO.svg" alt="logo" />
     </router-link>
     <div class="member_status">
-      <span class="farmer_pic"></span>
-      <span>{{userName}}</span>
       <!-- 檢查登入的狀態 -->
       <router-link
         class="login_logout"
         to="/loginMember"
         v-if="status == false && session != true"
       >登入/註冊</router-link>
-      <button class="logout" v-else @click="logout">登出</button>
+      <div v-else>
+        <router-link class="member_link" to="/main/member/information">
+          <span class="member_pic" :style="'background-image: url(' + img + ')'"></span>
+          {{userName}}
+        </router-link>
+        <button class="logout" @click="logout">登出</button>
+      </div>
     </div>
     <div class="cart">
       <router-link class="page" to="/main/member/shopping"></router-link>
@@ -95,11 +99,12 @@
 <script>
 export default {
   // 5. 接收父層的 memberStatus 的值
-  props: ["memberStatus"],
+  props: { memberStatus: Boolean, memberImg: String },
   data() {
     return {
       status: false,
-      userName: ""
+      userName: "",
+      img: ""
     };
   },
   mounted() {
@@ -114,6 +119,7 @@ export default {
         if (data != "") {
           this.status = true;
           this.userName = data.name;
+          this.img = data.img;
         }
       })
       // eslint-disable-next-line no-console
@@ -153,6 +159,12 @@ export default {
           if (data != "") {
             this.status = true;
             this.userName = data.name;
+
+            if (data.img == "") {
+              this.img = require("@/assets/waterpear.png");
+            } else {
+              this.img = data.img;
+            }
           }
         })
         // eslint-disable-next-line no-console

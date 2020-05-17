@@ -14,7 +14,6 @@ try {
     $member->bindValue(":acc", $memberInfo->acc);
     $member->bindValue(":no", $memberInfo->no);
 
-    // 返回data
     $member->execute();
 
     if ($member->rowCount() == 0) {
@@ -30,9 +29,6 @@ try {
             $_SESSION["member_" . $item[$i]] = $memRow[$item[$i]];
         }
 
-        // $member = array("name" => $_SESSION["member_name"], "nick" => $_SESSION["member_nick"], "status" => $_SESSION["member_status"]);
-
-        // echo json_encode($memRow);
         echo "1";
     }
 } catch (PDOException $e) {

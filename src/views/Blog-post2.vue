@@ -214,6 +214,7 @@
               <!--小卡片-->
               <!--小卡片-->
               <!--小卡片-->
+
               <div class="blog-post2-small-card-container">
                 <!--<router-link
                   to="/main/blog/landing"
@@ -562,7 +563,7 @@
                 <router-link
                   to="/main/blog/landing"
                   class="blog-post2-small-card"
-                  v-for="(i, index) in aa"
+                  v-for="(i, index) in blogArrFilter"
                   :key="index"
                 >
                   <div>
@@ -577,13 +578,13 @@
                     </div>
                   </div>
                   <div>
-                    <p>2020-04-08</p>
-                    <p>親子輕旅行 台北白石湖採草莓、 踏青一日遊</p>
+                    <p>{{ i.date }}</p>
+                    <p>{{ i.title }}</p>
                     <div>
                       <img src="@/assets/blog-img/blog-tag.png" />
                       <span>知識類</span>
                     </div>
-                    <p>區內種植草莓聞名，每年12月至5月的草莓產季來臨，的...</p>
+                    <p>{{ i.content }}</p>
                   </div>
                   <div>
                     <div>
@@ -760,7 +761,7 @@
   // height: 50vw;
   // padding-bottom: 5%;
   &::before {
-    content: '';
+    content: "";
     border-bottom: #007552 5px solid;
     width: 105%;
     position: absolute;
@@ -780,7 +781,7 @@
   }
   > div:nth-child(1) {
     &::before {
-      content: '';
+      content: "";
       display: inline-block;
       border-right: #6baf9b solid 2px;
       height: 50%;
@@ -801,7 +802,7 @@
       bottom: 0%;
       left: 0%;
       @media (max-width: 1300px) {
-        content: '';
+        content: "";
       }
     }
     // border: 4px solid #000;
@@ -813,12 +814,12 @@
     grid-template-columns: 1.5fr 2fr 1.5fr 3fr;
     grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.4fr 5fr;
     grid-template-areas:
-      'aa1 aa1 aa1 aa1'
-      'aa2 aa2 aa2 aa2 '
-      'aa3 aa4 aa6 aa7'
-      'aa3 aa5 aa6 aa7'
-      'aa8 aa8 aa8 aa8'
-      'aa9 aa9 aa9 aa9';
+      "aa1 aa1 aa1 aa1"
+      "aa2 aa2 aa2 aa2 "
+      "aa3 aa4 aa6 aa7"
+      "aa3 aa5 aa6 aa7"
+      "aa8 aa8 aa8 aa8"
+      "aa9 aa9 aa9 aa9";
     @media (max-width: 1600px) {
       // padding-right: 0%;
       grid-template-columns: 0.9fr 1.3fr 1fr 3fr;
@@ -836,12 +837,12 @@
     }
     @media (max-width: 576px) {
       grid-template-areas:
-        'aa1 aa1 aa1 aa1'
-        'aa2 aa2 aa2 aa2 '
-        'aa3 aa4 aa6 aa6'
-        'aa3 aa5 aa7 aa7'
-        'aa8 aa8 aa8 aa8'
-        'aa9 aa9 aa9 aa9';
+        "aa1 aa1 aa1 aa1"
+        "aa2 aa2 aa2 aa2 "
+        "aa3 aa4 aa6 aa6"
+        "aa3 aa5 aa7 aa7"
+        "aa8 aa8 aa8 aa8"
+        "aa9 aa9 aa9 aa9";
       grid-template-columns: 1fr 1fr 1fr 1fr;
       // border: solid 1px red;
     }
@@ -997,12 +998,12 @@
         z-index: 2;
         width: 70%;
         padding-top: 70%;
-        background: url('../assets/blog-img/post/blog_aabbcc.svg') no-repeat
+        background: url("../assets/blog-img/post/blog_aabbcc.svg") no-repeat
           center center;
         background-size: cover;
-        -webkit-mask: url('../assets/blog-img/post/blog_aabbcc.svg') no-repeat
+        -webkit-mask: url("../assets/blog-img/post/blog_aabbcc.svg") no-repeat
           center center;
-        mask: url('../assets/blog-img/post/blog_aabbcc.svg') no-repeat center
+        mask: url("../assets/blog-img/post/blog_aabbcc.svg") no-repeat center
           center;
         @media (max-width: 1600px) {
           width: 100%;
@@ -1063,7 +1064,7 @@
           margin-left: 10px;
         }
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           height: 25px;
           border-right: #a0a0a0 solid 1px;
@@ -1079,7 +1080,7 @@
       position: relative;
       //留言表單
       &::before {
-        content: '';
+        content: "";
         border-top: solid #a0a0a0 1px;
         width: 50rem;
         position: absolute;
@@ -1249,7 +1250,7 @@
 }
 .blog-post-tri {
   //select
-  background: url('../assets/blog-img/post/triangle.png');
+  background: url("../assets/blog-img/post/triangle.png");
   background-repeat: no-repeat;
   background-position: 95% 60%;
   font-size: 15px;
@@ -1459,10 +1460,10 @@
       border-bottom: #a0a0a0 solid 1px;
       // border: chocolate 3px solid;
       grid-template-areas:
-        'aa1 aa2 aa2 aa2'
-        'aa1 aa3 aa3 aa3'
-        'aa1 aa4 aa5 aa7'
-        'aa1 aa4 aa6 aa7';
+        "aa1 aa2 aa2 aa2"
+        "aa1 aa3 aa3 aa3"
+        "aa1 aa4 aa5 aa7"
+        "aa1 aa4 aa6 aa7";
       > div:nth-child(1) {
         grid-area: aa1;
         font-size: 80px;
@@ -1523,7 +1524,7 @@
       //妹妹假蠵龜
       width: 80%;
       padding-top: 310px;
-      background-image: url('../assets/blog-img/post/kidEatsWatermelon.png');
+      background-image: url("../assets/blog-img/post/kidEatsWatermelon.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -1556,6 +1557,7 @@
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 1;
           overflow: hidden;
+          // background-color:#000;
         }
         > p:nth-child(3) {
           margin-top: 25px;
@@ -1605,7 +1607,7 @@
         margin-top: 70px;
         position: relative;
         &::before {
-          content: '';
+          content: "";
           border-top: solid #007552 1.5px;
           width: 100%;
           top: -15px;
@@ -1742,11 +1744,18 @@
           font-size: 14px;
         }
         > p:nth-child(4) {
+          //內文
           margin-top: 10px;
           padding-bottom: 10px;
-          line-height: 1.2;
+          line-height: 1.3;
           font-size: 16px;
-          //內文
+          // background-color:#000;
+          overflow: hidden;
+          height: 92px;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 5;
         }
       }
       > div:nth-child(3) {
@@ -1839,23 +1848,35 @@
 </style>
 
 <script>
+import $ from 'jquery';
 export default {
   data() {
     return {
       member: {
         no: [1, 2, 3],
       },
-      aa: null,
+      blogArr: null,
+      blogArrFilter: [],
     };
   },
+  beforeMount() {
+    // this.findclass();
+  },
+  updated() {
+    let bb = document.getElementsByClassName('blog-post2-small-card')[5];
+    // console.log(bb[8]);
+    // bb.setAttribute('class', 'blog-post2-small-card nine');
+    bb.classList.add('nine');
+  },
   created() {
+    // this.bb = 1;
     const api = '/api/api_blog.php';
     // let xhr = new XMLHttpRequest();
     // xhr.open('Post', 'http://localhost/api/api_blog.php', true);
     // xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
 
     // let dataInfo = `${JSON.stringify(member)}`;
-    // // console.log(dataInfo);
+    //  console.log(dataInfo);
     // xhr.send(dataInfo);
     // xhr.onload = function() {
     //   if (xhr.status == 200) {
@@ -1866,26 +1887,40 @@ export default {
     this.$http
       .post(api, JSON.stringify(this.member))
       .then((res) => {
-        if (res.data != '') {
+        if (res.data != "") {
           // console.log(res.data);
 
           // sessionStorage.setItem('abc', JSON.stringify(res.data));
           // sessionStorage.clear();
           // let abc = sessionStorage.getItem('abc');
-          this.aa = res.data;
+          this.blogArr = res.data;
           // console.log(this.aa[0].content);
           // console.log(this.aa[1].content);
-
-          console.log(this.aa);
+          // console.log(this.aa);
+          for (var i = 1; i < 10; i++) {
+            console.log(this.blogArr[i]);
+            this.blogArrFilter.push(this.blogArr[i]);
+          }
         } else {
-          console.log(res.error);
+          // console.log(res.error);
         }
       })
       .catch((err) => console.log(err));
-
-    // console.log(aa);
   },
   computed: {},
+
   methods: {},
 };
+// $(window).ready(function() {
+//   var bb = document.getElementsByClassName('blog-post2-small-card')[0];
+//   setInterval(function() {
+//     console.log(bb);
+//   }, 100);
+// });
+// var bb = document.getElementsByClassName('blog-post2-small-card')[0];
+// setInterval(function() {
+//   console.log(bb);
+// }, 500);
+
+// bb.style.display = 'none';
 </script>
