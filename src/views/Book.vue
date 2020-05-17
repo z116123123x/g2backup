@@ -31,9 +31,7 @@
                     :key="item.id"
                     @click="changeType(item.type)"
                     class="book_link"
-                  >
-                    {{item.name}}
-                  </li>
+                  >{{item.name}}</li>
                 </ul>
               </div>
               <!-- book本體 -->
@@ -49,8 +47,13 @@
                 <div id="bk_content" :class="type">
                   <!-- 4. 偵測到 data 的更新，傳 data 的 change 值給 v-if 判斷要顯示哪一個元件 -->
                   <!-- 4. 傳 data 的 index 值給子元件(BookContent.vue)的自定義名稱 -> contentIndex -->
-                  <Content v-if="change == false" :contentIndex="index"></Content>
-                  <Index v-if="change == true"></Index>
+                  <Content
+                    v-if="change == false"
+                    :contentIndex="index"
+                    :pageId="page"
+                    @addType="addIndex"
+                  ></Content>
+                  <Index v-if="change == true" @changePage="changePage"></Index>
                   <!-- fruit_knowledge -->
                 </div>
                 <!-- 右切換按鈕 -->
@@ -101,7 +104,8 @@ export default {
       // 3. 接收到 changeType() 的更新
       type: "spring",
       index: 0,
-      change: true
+      change: true,
+      page: 0
     };
   },
   mounted() {
@@ -147,11 +151,17 @@ export default {
         this.type = "index";
         this.change = true;
       }
+    },
+    changePage: function(p) {
+      this.changeType(p.type);
+      this.page = p.id;
+    },
+    addIndex: function(n) {
+      this.changeType(this.index + n);
     }
   },
   components: {
     Content,
-    // eslint-disable-next-line vue/no-unused-components
     Index
   }
 };

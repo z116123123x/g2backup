@@ -107,28 +107,23 @@ export default {
       img: ""
     };
   },
-  mounted() {
+  created() {
     const api = "/api/api_memberStatus.php";
 
-    this.$http
-      .post(api)
-      .then(res => {
-        const data = res.data;
+    this.$http.post(api).then(res => {
+      const data = res.data;
 
-        // 如果 session 的資料存在（代表有登入），則切換 navbar 果粉狀態
-        if (data != "") {
-          this.status = true;
-          this.userName = data.name;
-          this.img = data.img;
-        }
-      })
-      // eslint-disable-next-line no-console
-      .catch(err => console.log(err));
+      // 如果 session 的資料存在（代表有登入），則切換 navbar 果粉狀態
+      if (data != "") {
+        this.status = true;
+        this.userName = data.name;
+        this.img = data.img;
+      }
+    });
   },
   computed: {
     session: function() {
       // 6. 偵聽到 memberStatus 有變動，觸發 login 方法，並回傳值到上面v-if狀態的顯示判斷
-
       this.login();
       return this.memberStatus;
     }
@@ -150,25 +145,21 @@ export default {
     login() {
       const api = "/api/api_memberStatus.php";
 
-      this.$http
-        .post(api)
-        .then(res => {
-          const data = res.data;
+      this.$http.post(api).then(res => {
+        const data = res.data;
 
-          // 如果 session 的資料存在（代表有登入），則切換 navbar 果粉狀態
-          if (data != "") {
-            this.status = true;
-            this.userName = data.name;
+        // 如果 session 的資料存在（代表有登入），則切換 navbar 果粉狀態
+        if (data != "") {
+          this.status = true;
+          this.userName = data.name;
 
-            if (data.img == "") {
-              this.img = require("@/assets/waterpear.png");
-            } else {
-              this.img = data.img;
-            }
+          if (data.img == "") {
+            this.img = require("@/assets/waterpear.png");
+          } else {
+            this.img = data.img;
           }
-        })
-        // eslint-disable-next-line no-console
-        .catch(err => console.log(err));
+        }
+      });
     }
   }
 };
